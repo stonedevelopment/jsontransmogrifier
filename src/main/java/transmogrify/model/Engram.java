@@ -1,24 +1,26 @@
 package transmogrify.model;
 
+import java.util.Date;
+
 /**
- *                   "name": "Cloth Boots",
- *                   "description": "Hide-soled shoes provide some protection from the heat and cold, but only minimal protection from injuries.",
- *                   "image_file": "cloth_boots.webp",
- *                   "level": 3,
- *                   "yield": 1,
- *                   "points": 0,
- *                   "xp": 0,
- *                   "crafting_time": 0,
- *                   "composition": [
- *                     {
- *                       "name": "Fiber",
- *                       "quantity": 25
- *                     },
- *                     {
- *                       "name": "Hide",
- *                       "quantity": 6
- *                     }
- *                   ]
+ * "name": "Cloth Boots",
+ * "description": "Hide-soled shoes provide some protection from the heat and cold, but only minimal protection from injuries.",
+ * "image_file": "cloth_boots.webp",
+ * "level": 3,
+ * "yield": 1,
+ * "points": 0,
+ * "xp": 0,
+ * "crafting_time": 0,
+ * "composition": [
+ * {
+ * "name": "Fiber",
+ * "quantity": 25
+ * },
+ * {
+ * "name": "Hide",
+ * "quantity": 6
+ * }
+ * ]
  */
 public class Engram {
     private final String uuid;
@@ -30,8 +32,9 @@ public class Engram {
     private final int points;
     private final int xp;
     private final int craftingTime;
+    private final Date lastUpdated;
 
-    public Engram(String uuid, String name, String description, String imageFile, int level, int yield, int points, int xp, int craftingTime) {
+    public Engram(String uuid, String name, String description, String imageFile, int level, int yield, int points, int xp, int craftingTime, Date lastUpdated) {
         this.uuid = uuid;
         this.name = name;
         this.description = description;
@@ -41,6 +44,7 @@ public class Engram {
         this.points = points;
         this.xp = xp;
         this.craftingTime = craftingTime;
+        this.lastUpdated = lastUpdated;
     }
 
     public String getUuid() {
@@ -78,5 +82,9 @@ public class Engram {
 
     public int getCraftingTime() {
         return craftingTime;
+    }
+
+    public Date getLastUpdated() {
+        return lastUpdated;
     }
 }

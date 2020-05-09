@@ -1,5 +1,6 @@
 package transmogrify.model;
 
+import java.util.Date;
 import java.util.List;
 
 public class Composition {
@@ -12,4 +13,6 @@ public class Composition {
     //  list of composites for this composition
     public List<Composite> compositeList;
 
+    //  date of when this composition was last updated
+    public Date lastUpdated;
 }

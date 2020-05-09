@@ -119,7 +119,8 @@ public abstract class GameData {
                 String name = jsonResource.name;
                 String description = "";
                 String imageFile = jsonResource.image_file;
-                Resource resource = new Resource(uuid, name, description, imageFile);
+                Date lastUpdated = new Date();
+                Resource resource = new Resource(uuid, name, description, imageFile, lastUpdated);
 
                 resourceMap.put(jsonResource.name, resource);
             }
@@ -141,7 +142,8 @@ public abstract class GameData {
                 int points = jsonEngram.points;
                 int xp = jsonEngram.xp;
                 int craftingTime = 0;
-                Engram engram = new Engram(uuid, name, description, imageFile, level, yield, points, xp, craftingTime);
+                Date lastUpdated = new Date();
+                Engram engram = new Engram(uuid, name, description, imageFile, level, yield, points, xp, craftingTime, lastUpdated);
 
                 engramMap.put(jsonEngram.name, engram);
             }
@@ -157,7 +159,8 @@ public abstract class GameData {
                 String uuid = !cDebug ? generateUUID() : jsonStation.name;
                 String name = jsonStation.name;
                 String engramId = getEngramUUID(jsonStation.name);
-                Station station = new Station(uuid, name, engramId);
+                Date lastUpdated = new Date();
+                Station station = new Station(uuid, name, engramId, lastUpdated);
 
                 stationMap.put(name, station);
             }
@@ -174,6 +177,7 @@ public abstract class GameData {
                 composition.uuid = !cDebug ? generateUUID() : jsonEngram.name;
                 composition.compositeList = convertJsonComposition(jsonEngram.composition);
                 composition.engramId = getEngramUUID(jsonEngram.name);
+                composition.lastUpdated = new Date();
 
                 compositionMap.put(jsonEngram.name, composition);
             }

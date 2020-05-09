@@ -1,5 +1,7 @@
 package transmogrify.model;
 
+import java.util.Date;
+
 /**
  * "name": "Absorbent Substrate",
  * "description": "",
@@ -10,12 +12,14 @@ public class Resource {
     private final String name;
     private final String description;
     private final String imageFile;
+    private final Date lastUpdated;
 
-    public Resource(String uuid, String name, String description, String imageFile) {
+    public Resource(String uuid, String name, String description, String imageFile, Date lastUpdated) {
         this.uuid = uuid;
         this.name = name;
         this.description = description;
         this.imageFile = imageFile;
+        this.lastUpdated = lastUpdated;
     }
 
     public String getUuid() {
@@ -32,5 +36,9 @@ public class Resource {
 
     public String getImageFile() {
         return imageFile;
+    }
+
+    public Date getLastUpdated() {
+        return lastUpdated;
     }
 }

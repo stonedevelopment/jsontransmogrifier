@@ -1,14 +1,18 @@
 package transmogrify.model;
 
+import java.util.Date;
+
 public class Station {
     private final String uuid;
     private final String name;
     private final String engramId;
+    private final Date lastUpdated;
 
-    public Station(String uuid, String name, String engramId) {
+    public Station(String uuid, String name, String engramId, Date lastUpdated) {
         this.uuid = uuid;
         this.name = name;
         this.engramId = engramId;
+        this.lastUpdated = lastUpdated;
     }
 
     public String getUuid() {
@@ -22,5 +26,9 @@ public class Station {
 
     public String getEngramId() {
         return engramId;
+    }
+
+    public Date getLastUpdated() {
+        return lastUpdated;
     }
 }
