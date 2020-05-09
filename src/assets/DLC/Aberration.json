@@ -1,0 +1,2023 @@
+{
+  "uuid": "dfb10aac-b3e7-4211-89d7-90d879ee8f6f",
+  "name": "Aberration",
+  "description": "Waking up on â€˜Aberrationâ€™, a derelict, malfunctioning ARK with an elaborate underground biome system, survivors face exotic new challenges unlike anything before: extreme radioactive sunlight and environmental hazards, ziplines, wingsuits, climbing gear, cave dwellings, charge-batteries, and far more, along with a stable of extraordinary new creatures await within the mysterious depths. But beware the â€˜Namelessâ€™: unrelenting, Element-infused humanoids which have evolved into vicious light-hating monstrosities! On Aberration, survivors will uncover the ultimate secrets of the ARKs, and discover what the future holds in store for those strong and clever enough to survive!",
+  "filePath": "DLC/Aberration/",
+  "logoFile": "logo.webp",
+  "folderFile": "folder.webp",
+  "backFolderFile": "backFolder.webp",
+  "totalConversion": false,
+  "resources": [
+    {
+      "uuid": "7908b392-4ba9-4983-8990-2b7454ae1130",
+      "name": "Aggeravic Mushroom",
+      "description": "",
+      "imageFile": "aggeravic_mushroom.webp"
+    },
+    {
+      "uuid": "d5f1f585-de8e-40a5-a66b-f33304772496",
+      "name": "Alpha Basilisk Fang",
+      "description": "",
+      "imageFile": "alpha_basilisk_fang.webp"
+    },
+    {
+      "uuid": "2e62bf5b-663a-4130-9b86-35cea5607df2",
+      "name": "Alpha Karkinos Claw",
+      "description": "",
+      "imageFile": "alpha_karkinos_claw.webp"
+    },
+    {
+      "uuid": "cffd6b74-fb23-463f-887f-b8cb0f4fcac1",
+      "name": "Alpha Reaper King Barb",
+      "description": "",
+      "imageFile": "alpha_reaper_king_barb.webp"
+    },
+    {
+      "uuid": "9ff7ed81-00c3-4465-a672-a6e451c54926",
+      "name": "Aquatic Mushroom",
+      "description": "",
+      "imageFile": "aquatic_mushroom.webp"
+    },
+    {
+      "uuid": "255f90a4-2e18-4576-9e37-1900dd126dea",
+      "name": "Artifact of the Depths",
+      "description": "",
+      "imageFile": "artifact_of_the_depths.webp"
+    },
+    {
+      "uuid": "ee77e8d8-936c-44bf-ae4f-9b29bb596717",
+      "name": "Artifact of the Shadows",
+      "description": "",
+      "imageFile": "artifact_of_the_shadows.webp"
+    },
+    {
+      "uuid": "3ac3dac9-3619-479f-acab-5eb6ba24b056",
+      "name": "Artifact of the Stalker",
+      "description": "",
+      "imageFile": "artifact_of_the_stalker.webp"
+    },
+    {
+      "uuid": "0f10d697-2569-4440-a50e-9b804f972789",
+      "name": "Ascerbic Mushroom",
+      "description": "",
+      "imageFile": "ascerbic_mushroom.webp"
+    },
+    {
+      "uuid": "875af064-ddcb-4e0f-bc3c-d5689e79b305",
+      "name": "Auric Mushroom",
+      "description": "",
+      "imageFile": "auric_mushroom.webp"
+    },
+    {
+      "uuid": "3fd24099-4340-4e37-90fc-02053209ee2e",
+      "name": "Basilisk Egg",
+      "description": "",
+      "imageFile": "basilisk_egg.webp"
+    },
+    {
+      "uuid": "ffa948d0-fcd9-4d54-9660-366bfb01e3e4",
+      "name": "Basilisk Scale",
+      "description": "",
+      "imageFile": "basilisk_scale.webp"
+    },
+    {
+      "uuid": "1f9b4906-8ad6-43eb-abb6-0dba2f04aef8",
+      "name": "Blue Gem",
+      "description": "",
+      "imageFile": "blue_gem.webp"
+    },
+    {
+      "uuid": "062522cd-f041-408f-bf38-ce11203f2c18",
+      "name": "Congealed Gas Ball",
+      "description": "",
+      "imageFile": "congealed_gas_ball.webp"
+    },
+    {
+      "uuid": "8c1f8285-ef13-4e7c-8dfc-c4aa40025d78",
+      "name": "Element Ore",
+      "description": "",
+      "imageFile": "element_ore.webp"
+    },
+    {
+      "uuid": "2aa12612-d887-4905-810b-7bbfd04316da",
+      "name": "Featherlight Egg",
+      "description": "",
+      "imageFile": "featherlight_egg.webp"
+    },
+    {
+      "uuid": "291a36db-f87f-49fe-aac0-ee748e394736",
+      "name": "Fungal Wood",
+      "description": "",
+      "imageFile": "fungal_wood.webp"
+    },
+    {
+      "uuid": "3d0a1acd-1d2c-4e9b-a385-ca2b6285c664",
+      "name": "Glow Stick",
+      "description": "",
+      "imageFile": "glow_stick.webp"
+    },
+    {
+      "uuid": "4b316c4f-509b-443c-8fb0-07084cd50a07",
+      "name": "Glowtail Egg",
+      "description": "",
+      "imageFile": "glowtail_egg.webp"
+    },
+    {
+      "uuid": "cb28412a-9986-4d20-a597-042d6f773293",
+      "name": "Green Gem",
+      "description": "",
+      "imageFile": "green_gem.webp"
+    },
+    {
+      "uuid": "35669dbd-3a41-4e38-8c32-c8f5fd97c337",
+      "name": "Nameless Venom",
+      "description": "",
+      "imageFile": "nameless_venom.webp"
+    },
+    {
+      "uuid": "2cd9bfba-c7f8-4cff-a9b2-ef606182a2e1",
+      "name": "Plant Species Z Seed",
+      "description": "",
+      "imageFile": "plant_species_z_seed.webp"
+    },
+    {
+      "uuid": "2a9ec622-ca51-40aa-b659-3cb036559726",
+      "name": "Reaper Pheromone Gland",
+      "description": "",
+      "imageFile": "reaper_pheromone_gland.webp"
+    },
+    {
+      "uuid": "961a2537-b8eb-40cd-b4dd-ca44614a5799",
+      "name": "Red Gem",
+      "description": "",
+      "imageFile": "red_gem.webp"
+    },
+    {
+      "uuid": "9b6f059a-85f2-4ed5-9e7b-21cf6e587fc4",
+      "name": "Rock Drake Egg",
+      "description": "",
+      "imageFile": "rock_drake_egg.webp"
+    },
+    {
+      "uuid": "3a8355ea-853a-437a-9ba5-d3181ecf04e7",
+      "name": "Rock Drake Feather",
+      "description": "",
+      "imageFile": "rock_drake_feather.webp"
+    },
+    {
+      "uuid": "8c28abe5-3141-4289-873c-94b662041d91",
+      "name": "Rockwell Flag",
+      "description": "",
+      "imageFile": "rockwell_flag.webp"
+    },
+    {
+      "uuid": "c0524eda-5a85-4e9f-b787-8889e61c03e6",
+      "name": "Rockwell Trophy",
+      "description": "",
+      "imageFile": "rockwell_trophy.webp"
+    }
+  ],
+  "stations": [
+    {
+      "uuid": "1749fd36-5d8d-418f-a6dd-961e3954e466",
+      "name": "Charge Node",
+      "engramId": null
+    }
+  ],
+  "folders": [
+    {
+      "uuid": "0b5bdcb3-b306-4d31-966a-6590fb3e9dac",
+      "name": "Gas Collector"
+    },
+    {
+      "uuid": "50509ed4-5538-4734-9ee4-dedbd3e00d79",
+      "name": "Elevators"
+    },
+    {
+      "uuid": "c7c92cfc-d3dd-4889-8833-1de20ea72073",
+      "name": "Cliff"
+    },
+    {
+      "uuid": "a901f89f-58bc-4976-b75b-8cc7452cbe68",
+      "name": "Attachments"
+    },
+    {
+      "uuid": "6dfe5403-5774-400d-9d42-ba5a946e562e",
+      "name": "Hazard"
+    },
+    {
+      "uuid": "984d6aa0-041e-473d-9d86-b469465d1892",
+      "name": "Decorative"
+    }
+  ],
+  "engrams": [
+    {
+      "uuid": "80f82956-6a6c-4071-963d-da8c93dde8c4",
+      "name": "Basilisk Saddle",
+      "description": "Equip a Basilisk with this to ride it.",
+      "imageFile": "basilisk_saddle.webp",
+      "level": 85,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0
+    },
+    {
+      "uuid": "44c33851-4ffc-4dcb-ad40-a505c834a932",
+      "name": "Charge Battery",
+      "description": "Stores Charge from Power Nodes, and can be placed in various Electrical Devices to power them.",
+      "imageFile": "charge_battery.webp",
+      "level": 71,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0
+    },
+    {
+      "uuid": "8ad18bd8-38e8-4780-bf3a-e3823c3819ff",
+      "name": "Charge Lantern",
+      "description": "Weaponized Charge Light that damages and stuns lifeforms. Place down to ward off dangers in an area. Uses Charge Batteries as fuel.",
+      "imageFile": "charge_lantern.webp",
+      "level": 80,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0
+    },
+    {
+      "uuid": "175ee77b-cb07-4880-91ab-97d61306bc35",
+      "name": "Climbing Pick",
+      "description": "Climb up and hang from nearly any surface with these!",
+      "imageFile": "climbing_pick.webp",
+      "level": 34,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0
+    },
+    {
+      "uuid": "451409a2-0fbb-4f18-b74f-83b7d3b3d6ef",
+      "name": "Element",
+      "description": "A strange, highly advanced material humming with energy. It dissolves when transferred across ARKs.",
+      "imageFile": "element.webp",
+      "level": 1,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0
+    },
+    {
+      "uuid": "1e67d515-7efd-43c1-86c2-dfd25935516d",
+      "name": "Fish Basket",
+      "description": "Trap certain fish in this basket to tame and transport them!",
+      "imageFile": "fish_basket.webp",
+      "level": 13,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0
+    },
+    {
+      "uuid": "3adc9ba9-8f30-4a49-9e21-55d91cacdc46",
+      "name": "Gas Collector",
+      "description": "Place on a Gas Vent to extract Congealed Gas Balls over time.",
+      "imageFile": "gas_collector.webp",
+      "level": 40,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0
+    },
+    {
+      "uuid": "414c8b4b-5129-40d7-b5fe-d79a8b096df8",
+      "name": "Generate Aberration (Alpha) Portal",
+      "description": "Use this to generate a portal to Aberration's Guardian.",
+      "imageFile": "alpha_aberration_portal.webp",
+      "level": 100,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0
+    },
+    {
+      "uuid": "7bba67c5-10d8-475e-8e7b-0f096cd41e6c",
+      "name": "Generate Aberration (Beta) Portal",
+      "description": "Use this to generate a portal to Aberration's Guardian.",
+      "imageFile": "beta_aberration_portal.webp",
+      "level": 75,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0
+    },
+    {
+      "uuid": "9a4e591d-1eb7-47c1-b2c1-0a87092cedec",
+      "name": "Generate Aberration (Gamma) Portal",
+      "description": "Use this to generate a portal to Aberration's Guardian.",
+      "imageFile": "gamma_aberration_portal.webp",
+      "level": 60,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0
+    },
+    {
+      "uuid": "848624bd-74d1-45e1-b398-2ce9dd72baba",
+      "name": "Glider Suit Skin",
+      "description": "When attached to a Chest Armor, the Glider Suit enables sailing through the air by double-tapping jump, while gaining speed by running and diving!",
+      "imageFile": "glider_suit_skin.webp",
+      "level": 62,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0
+    },
+    {
+      "uuid": "d9d0eb57-aea9-426e-b3a2-987f0f6a2e67",
+      "name": "Glow Stick",
+      "description": "Glow Sticks generate light in a radius around them. Throw it and it will stick immediately to the location they first impact.",
+      "imageFile": "glow_stick.webp",
+      "level": 10,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0
+    },
+    {
+      "uuid": "88f6a762-e848-417e-a033-85c20356fbe0",
+      "name": "Hazard Suit Boots",
+      "description": "Boots made from a unique combination of materials that protect the wearer from environmental contaminants.",
+      "imageFile": "hazard_suit_boots.webp",
+      "level": 68,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0
+    },
+    {
+      "uuid": "0a25cf7a-00af-495b-a3b9-89d38ffd861b",
+      "name": "Hazard Suit Gloves",
+      "description": "Gloves made from a unique combination of materials that protect the wearer from environmental contaminants.",
+      "imageFile": "hazard_suit_gloves.webp",
+      "level": 68,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0
+    },
+    {
+      "uuid": "399317b4-81e2-4196-a86b-13000fa0e76c",
+      "name": "Hazard Suit Hat",
+      "description": "A helmet made from a unique combination of materials that protect the wearer from environmental contaminants.",
+      "imageFile": "hazard_suit_hat.webp",
+      "level": 68,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0
+    },
+    {
+      "uuid": "d5e882d9-bafa-4ae4-b3ef-3efb63a0bba5",
+      "name": "Hazard Suit Pants",
+      "description": "Pants made from a unique combination of materials that protect the wearer from environmental contaminants.",
+      "imageFile": "hazard_suit_pants.webp",
+      "level": 68,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0
+    },
+    {
+      "uuid": "3546110f-89c5-4841-b67b-563ef229c693",
+      "name": "Hazard Suit Shirt",
+      "description": "A shirt made from a unique combination of materials that protect the wearer from environmental contaminants.",
+      "imageFile": "hazard_suit_shirt.webp",
+      "level": 68,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0
+    },
+    {
+      "uuid": "3a98a34b-23ad-411f-91c6-68794593b1c7",
+      "name": "Karkinos Saddle",
+      "description": "Equip a Karkinos with this to ride it.",
+      "imageFile": "karkinos_saddle.webp",
+      "level": 65,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0
+    },
+    {
+      "uuid": "7775af36-20b0-4c44-a382-b8ff934e9caa",
+      "name": "Large Wood Elevator Platform",
+      "description": "Attach to an Elevator Track to lift a large amount of weight.",
+      "imageFile": "large_wood_elevator_platform.webp",
+      "level": 30,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0
+    },
+    {
+      "uuid": "73a67d2b-4927-4035-a1e8-63c994bcad7c",
+      "name": "Medium Wood Elevator Platform",
+      "description": "Attach to an Elevator Track to lift a medium amount of weight.",
+      "imageFile": "medium_wood_elevator_platform.webp",
+      "level": 23,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0
+    },
+    {
+      "uuid": "5f479b2a-d46e-4690-ad29-e2e87ca635ab",
+      "name": "Metal Cliff Platform",
+      "description": "A Cliff Platform is required to build structures extending from a cliff. This one is made from shiny metal.",
+      "imageFile": "metal_cliff_platform.webp",
+      "level": 51,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0
+    },
+    {
+      "uuid": "33ff572c-3ed3-46e1-9b43-b2c24f4c0792",
+      "name": "Mushroom Brew",
+      "description": "Double, double, toil and trouble, fire burn and cauldron bubble... this is a lovely mushroom brew, a healthy syrup to protect your pets from radiation!",
+      "imageFile": "mushroom_brew.webp",
+      "level": 1,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0
+    },
+    {
+      "uuid": "8010bc85-db07-45e3-81b7-52c5aebf4e3b",
+      "name": "Pliers",
+      "description": "Use on a Smithy-crafted item in need of repairing and you can repair it on the go within any inventory, at a higher cost of resources.",
+      "imageFile": "pliers.webp",
+      "level": 45,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0
+    },
+    {
+      "uuid": "d3c28454-0ac6-4430-ab20-4a51df85ec39",
+      "name": "Portable Rope Ladder",
+      "description": "A portable ladder that can be used to climb up or down. Place onto structures or terrain at waist height or lower.",
+      "imageFile": "portable_rope_ladder.webp",
+      "level": 15,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0
+    },
+    {
+      "uuid": "9f540b7c-4ba5-4ae5-9b25-5df604f46d23",
+      "name": "Ravager Saddle",
+      "description": "Equip a Ravager with this to ride it.",
+      "imageFile": "ravager_saddle.webp",
+      "level": 47,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0
+    },
+    {
+      "uuid": "7b741a8b-0362-47a3-84fb-3481e4ee74ca",
+      "name": "Rock Drake Saddle",
+      "description": "Equip a Rock Drake with this to ride it.",
+      "imageFile": "rock_drake_saddle.webp",
+      "level": 75,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0
+    },
+    {
+      "uuid": "545f5760-7dad-4116-9720-92fcdb6454ed",
+      "name": "Rock Drake Tek Saddle",
+      "description": "Equip a Rock Drake with this to ride it, enabling the rider to fire plasma projectiles. Using requires learning this Tekgram.",
+      "imageFile": "rock_drake_tek_saddle.webp",
+      "level": 1,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0
+    },
+    {
+      "uuid": "6a6c1d97-a8ef-4439-9f2f-3f2580c4f575",
+      "name": "Roll Rat Saddle",
+      "description": "Equip a Roll Rat with this to ride it. Provides protection to passengers while rolling.",
+      "imageFile": "roll_rat_saddle.webp",
+      "level": 58,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0
+    },
+    {
+      "uuid": "007e89c8-2101-4d6b-9f7a-43108ff4a590",
+      "name": "Shag Rug",
+      "description": "A decorative, paintable rug with a shaggy appearance, which dulls the sound of footsteps.",
+      "imageFile": "shag_rug.webp",
+      "level": 17,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0
+    },
+    {
+      "uuid": "c6377f83-96ac-4dbc-9f84-c091fd7cc977",
+      "name": "Small Wood Elevator Platform",
+      "description": "Attach to an Elevator Track to lift a small amount of weight.",
+      "imageFile": "small_wood_elevator_platform.webp",
+      "level": 20,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0
+    },
+    {
+      "uuid": "35a36aea-984b-4996-973b-aa9dab48c5d5",
+      "name": "Stone Cliff Platform",
+      "description": "A Cliff Platform is required to build structures extending from a cliff. This one is made from heavy stone.",
+      "imageFile": "stone_cliff_platform.webp",
+      "level": 37,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0
+    },
+    {
+      "uuid": "50ee9ed1-ecd5-48b3-9222-ead65e5215e4",
+      "name": "Tek Railgun",
+      "description": "Shoots explosive plasma bolts, with an infrared zoomable scope. Equipping requires learning this Tekgram.",
+      "imageFile": "tek_railgun.webp",
+      "level": 1,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0
+    },
+    {
+      "uuid": "2b73a157-5a0f-4cf7-8e71-b3f72f32b4ac",
+      "name": "Tek Sleeping Pod",
+      "description": "This Tek-powered Chamber lets you rapidly recover vitals, and slowly gain XP even when sleeping. You can also sleep soundly within it, protected even while on a moving platform!",
+      "imageFile": "tek_sleeping_pod.webp",
+      "level": 1,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0
+    },
+    {
+      "uuid": "7d97f3a2-85b2-4187-951f-f00ab161a2e8",
+      "name": "Wood Elevator Top Switch",
+      "description": "Attach to the top of a Wood Elevator Track to complete an Elevator!",
+      "imageFile": "wood_elevator_top_switch.webp",
+      "level": 20,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0
+    },
+    {
+      "uuid": "a0635511-d9ce-41a3-a6cc-4fb283e21407",
+      "name": "Wood Elevator Track",
+      "description": "Attach a Wood Elevator Platform to these to complete an elevator!",
+      "imageFile": "wood_elevator_track.webp",
+      "level": 20,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0
+    },
+    {
+      "uuid": "0ff0ecbc-2e64-4b1d-a326-facad39c93d0",
+      "name": "Zip-Line Anchor",
+      "description": "Apply onto a Crossbow to fire Zip-Line anchor points. Use two anchor points to complete a Zip-Line, which you can then grab onto [sic]",
+      "imageFile": "zip-line_anchor.webp",
+      "level": 31,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0
+    },
+    {
+      "uuid": "041eb078-dbf5-48c6-bbe5-1ae099cf06a9",
+      "name": "Zip-Line Motor Attachment Skin",
+      "description": "Equip onto pants and combine with Gasoline to power yourself up a Zip-Line.",
+      "imageFile": "zip-line_motor_attachment_skin.webp",
+      "level": 54,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0
+    }
+  ],
+  "composition": [
+    {
+      "uuid": "cd8879d8-f56b-4f94-baf1-db18a1f43f35",
+      "engramId": "80f82956-6a6c-4071-963d-da8c93dde8c4",
+      "compositeList": [
+        {
+          "resourceId": null,
+          "quantity": 425,
+          "engramId": "ad5080cb-207e-4741-a904-f11c462a07ce"
+        },
+        {
+          "resourceId": "d02f8975-4a63-4f84-a362-b339204bb799",
+          "quantity": 270,
+          "engramId": null
+        },
+        {
+          "resourceId": "00a9970e-599e-42c1-8f2b-259dd251dd9f",
+          "quantity": 150,
+          "engramId": null
+        },
+        {
+          "resourceId": null,
+          "quantity": 85,
+          "engramId": "490c0d82-153c-4a84-a26b-5065a8893ff1"
+        },
+        {
+          "resourceId": "cb28412a-9986-4d20-a597-042d6f773293",
+          "quantity": 45,
+          "engramId": null
+        }
+      ]
+    },
+    {
+      "uuid": "2b57d79d-3bce-4cd6-bfcb-7ec8d367b49c",
+      "engramId": "44c33851-4ffc-4dcb-ad40-a505c834a932",
+      "compositeList": [
+        {
+          "resourceId": null,
+          "quantity": 10,
+          "engramId": "ad5080cb-207e-4741-a904-f11c462a07ce"
+        },
+        {
+          "resourceId": "3968e185-0e58-4bbb-bd64-605f3cf1d38c",
+          "quantity": 4,
+          "engramId": null
+        },
+        {
+          "resourceId": null,
+          "quantity": 15,
+          "engramId": "43a07d8d-bd22-4df5-bce9-84304b0a4f4f"
+        },
+        {
+          "resourceId": "062522cd-f041-408f-bf38-ce11203f2c18",
+          "quantity": 20,
+          "engramId": null
+        }
+      ]
+    },
+    {
+      "uuid": "3be207db-973f-491f-8fc1-248d3bea29b6",
+      "engramId": "8ad18bd8-38e8-4780-bf3a-e3823c3819ff",
+      "compositeList": [
+        {
+          "resourceId": null,
+          "quantity": 130,
+          "engramId": "ad5080cb-207e-4741-a904-f11c462a07ce"
+        },
+        {
+          "resourceId": null,
+          "quantity": 120,
+          "engramId": "43a07d8d-bd22-4df5-bce9-84304b0a4f4f"
+        },
+        {
+          "resourceId": null,
+          "quantity": 120,
+          "engramId": "5fa22e3f-b0cd-4ebd-a322-34156daa241d"
+        },
+        {
+          "resourceId": null,
+          "quantity": 2,
+          "engramId": "44c33851-4ffc-4dcb-ad40-a505c834a932"
+        },
+        {
+          "resourceId": "961a2537-b8eb-40cd-b4dd-ca44614a5799",
+          "quantity": 80,
+          "engramId": null
+        },
+        {
+          "resourceId": "062522cd-f041-408f-bf38-ce11203f2c18",
+          "quantity": 400,
+          "engramId": null
+        }
+      ]
+    },
+    {
+      "uuid": "71c551b4-185d-44cc-ac2c-d5de8ed4df55",
+      "engramId": "175ee77b-cb07-4880-91ab-97d61306bc35",
+      "compositeList": [
+        {
+          "resourceId": null,
+          "quantity": 8,
+          "engramId": "ad5080cb-207e-4741-a904-f11c462a07ce"
+        },
+        {
+          "resourceId": "291a36db-f87f-49fe-aac0-ee748e394736",
+          "quantity": 2,
+          "engramId": null
+        },
+        {
+          "resourceId": "00a9970e-599e-42c1-8f2b-259dd251dd9f",
+          "quantity": 10,
+          "engramId": null
+        },
+        {
+          "resourceId": "cb28412a-9986-4d20-a597-042d6f773293",
+          "quantity": 4,
+          "engramId": null
+        }
+      ]
+    },
+    {
+      "uuid": "04acd5e6-12c9-45f9-a4a1-31950a9d93cd",
+      "engramId": "451409a2-0fbb-4f18-b74f-83b7d3b3d6ef",
+      "compositeList": [
+        {
+          "resourceId": "cb28412a-9986-4d20-a597-042d6f773293",
+          "quantity": 20,
+          "engramId": null
+        },
+        {
+          "resourceId": "1f9b4906-8ad6-43eb-abb6-0dba2f04aef8",
+          "quantity": 15,
+          "engramId": null
+        },
+        {
+          "resourceId": "961a2537-b8eb-40cd-b4dd-ca44614a5799",
+          "quantity": 10,
+          "engramId": null
+        },
+        {
+          "resourceId": null,
+          "quantity": 8,
+          "engramId": "44c33851-4ffc-4dcb-ad40-a505c834a932"
+        },
+        {
+          "resourceId": "062522cd-f041-408f-bf38-ce11203f2c18",
+          "quantity": 50,
+          "engramId": null
+        },
+        {
+          "resourceId": "8c1f8285-ef13-4e7c-8dfc-c4aa40025d78",
+          "quantity": 20,
+          "engramId": null
+        }
+      ]
+    },
+    {
+      "uuid": "c7d2ef9e-218d-4ee6-aed9-f37f1bfbb211",
+      "engramId": "1e67d515-7efd-43c1-86c2-dfd25935516d",
+      "compositeList": [
+        {
+          "resourceId": "291a36db-f87f-49fe-aac0-ee748e394736",
+          "quantity": 60,
+          "engramId": null
+        },
+        {
+          "resourceId": "c5d856c5-85d9-4490-8fe9-b308662f362f",
+          "quantity": 40,
+          "engramId": null
+        },
+        {
+          "resourceId": "00a9970e-599e-42c1-8f2b-259dd251dd9f",
+          "quantity": 120,
+          "engramId": null
+        }
+      ]
+    },
+    {
+      "uuid": "751e3e42-d9df-4ddb-9e72-349c3eae6ebf",
+      "engramId": "3adc9ba9-8f30-4a49-9e21-55d91cacdc46",
+      "compositeList": [
+        {
+          "resourceId": null,
+          "quantity": 75,
+          "engramId": "ad5080cb-207e-4741-a904-f11c462a07ce"
+        },
+        {
+          "resourceId": "3968e185-0e58-4bbb-bd64-605f3cf1d38c",
+          "quantity": 40,
+          "engramId": null
+        },
+        {
+          "resourceId": null,
+          "quantity": 60,
+          "engramId": "490c0d82-153c-4a84-a26b-5065a8893ff1"
+        },
+        {
+          "resourceId": "cb28412a-9986-4d20-a597-042d6f773293",
+          "quantity": 20,
+          "engramId": null
+        }
+      ]
+    },
+    {
+      "uuid": "5e5ecae5-1686-4dd1-90f5-45cbf2646047",
+      "engramId": "414c8b4b-5129-40d7-b5fe-d79a8b096df8",
+      "compositeList": [
+        {
+          "resourceId": "d5f1f585-de8e-40a5-a66b-f33304772496",
+          "quantity": 1,
+          "engramId": null
+        },
+        {
+          "resourceId": "2e62bf5b-663a-4130-9b86-35cea5607df2",
+          "quantity": 1,
+          "engramId": null
+        },
+        {
+          "resourceId": "cffd6b74-fb23-463f-887f-b8cb0f4fcac1",
+          "quantity": 1,
+          "engramId": null
+        },
+        {
+          "resourceId": "ffa948d0-fcd9-4d54-9660-366bfb01e3e4",
+          "quantity": 8,
+          "engramId": null
+        },
+        {
+          "resourceId": "35669dbd-3a41-4e38-8c32-c8f5fd97c337",
+          "quantity": 20,
+          "engramId": null
+        },
+        {
+          "resourceId": "2a9ec622-ca51-40aa-b659-3cb036559726",
+          "quantity": 7,
+          "engramId": null
+        },
+        {
+          "resourceId": "3a8355ea-853a-437a-9ba5-d3181ecf04e7",
+          "quantity": 7,
+          "engramId": null
+        },
+        {
+          "resourceId": "255f90a4-2e18-4576-9e37-1900dd126dea",
+          "quantity": 1,
+          "engramId": null
+        },
+        {
+          "resourceId": "ee77e8d8-936c-44bf-ae4f-9b29bb596717",
+          "quantity": 1,
+          "engramId": null
+        },
+        {
+          "resourceId": "3ac3dac9-3619-479f-acab-5eb6ba24b056",
+          "quantity": 1,
+          "engramId": null
+        }
+      ]
+    },
+    {
+      "uuid": "10afb29c-be39-47f6-a343-d010ca4016d2",
+      "engramId": "7bba67c5-10d8-475e-8e7b-0f096cd41e6c",
+      "compositeList": [
+        {
+          "resourceId": "ffa948d0-fcd9-4d54-9660-366bfb01e3e4",
+          "quantity": 4,
+          "engramId": null
+        },
+        {
+          "resourceId": "35669dbd-3a41-4e38-8c32-c8f5fd97c337",
+          "quantity": 12,
+          "engramId": null
+        },
+        {
+          "resourceId": "2a9ec622-ca51-40aa-b659-3cb036559726",
+          "quantity": 2,
+          "engramId": null
+        },
+        {
+          "resourceId": "3a8355ea-853a-437a-9ba5-d3181ecf04e7",
+          "quantity": 2,
+          "engramId": null
+        },
+        {
+          "resourceId": "255f90a4-2e18-4576-9e37-1900dd126dea",
+          "quantity": 1,
+          "engramId": null
+        },
+        {
+          "resourceId": "ee77e8d8-936c-44bf-ae4f-9b29bb596717",
+          "quantity": 1,
+          "engramId": null
+        },
+        {
+          "resourceId": "3ac3dac9-3619-479f-acab-5eb6ba24b056",
+          "quantity": 1,
+          "engramId": null
+        }
+      ]
+    },
+    {
+      "uuid": "2c037e3b-817a-4c82-944c-7f8afbbdcfa7",
+      "engramId": "9a4e591d-1eb7-47c1-b2c1-0a87092cedec",
+      "compositeList": [
+        {
+          "resourceId": "255f90a4-2e18-4576-9e37-1900dd126dea",
+          "quantity": 1,
+          "engramId": null
+        },
+        {
+          "resourceId": "ee77e8d8-936c-44bf-ae4f-9b29bb596717",
+          "quantity": 1,
+          "engramId": null
+        },
+        {
+          "resourceId": "3ac3dac9-3619-479f-acab-5eb6ba24b056",
+          "quantity": 1,
+          "engramId": null
+        }
+      ]
+    },
+    {
+      "uuid": "0d8ef215-4d24-42fc-ae11-90c0a8e4c6b7",
+      "engramId": "848624bd-74d1-45e1-b398-2ce9dd72baba",
+      "compositeList": [
+        {
+          "resourceId": null,
+          "quantity": 60,
+          "engramId": "ad5080cb-207e-4741-a904-f11c462a07ce"
+        },
+        {
+          "resourceId": "d02f8975-4a63-4f84-a362-b339204bb799",
+          "quantity": 60,
+          "engramId": null
+        },
+        {
+          "resourceId": "00a9970e-599e-42c1-8f2b-259dd251dd9f",
+          "quantity": 100,
+          "engramId": null
+        },
+        {
+          "resourceId": "1f9b4906-8ad6-43eb-abb6-0dba2f04aef8",
+          "quantity": 25,
+          "engramId": null
+        }
+      ]
+    },
+    {
+      "uuid": "a9475a99-916e-4dcc-89c1-a573bc3a0937",
+      "engramId": "d9d0eb57-aea9-426e-b3a2-987f0f6a2e67",
+      "compositeList": [
+        {
+          "resourceId": "3968e185-0e58-4bbb-bd64-605f3cf1d38c",
+          "quantity": 2,
+          "engramId": null
+        },
+        {
+          "resourceId": "cb28412a-9986-4d20-a597-042d6f773293",
+          "quantity": 1,
+          "engramId": null
+        }
+      ]
+    },
+    {
+      "uuid": "c6044918-96b8-4ef8-93e4-47e8f99246e4",
+      "engramId": "88f6a762-e848-417e-a033-85c20356fbe0",
+      "compositeList": [
+        {
+          "resourceId": null,
+          "quantity": 10,
+          "engramId": "43a07d8d-bd22-4df5-bce9-84304b0a4f4f"
+        },
+        {
+          "resourceId": "d02f8975-4a63-4f84-a362-b339204bb799",
+          "quantity": 20,
+          "engramId": null
+        },
+        {
+          "resourceId": "00a9970e-599e-42c1-8f2b-259dd251dd9f",
+          "quantity": 25,
+          "engramId": null
+        },
+        {
+          "resourceId": "3968e185-0e58-4bbb-bd64-605f3cf1d38c",
+          "quantity": 10,
+          "engramId": null
+        },
+        {
+          "resourceId": "062522cd-f041-408f-bf38-ce11203f2c18",
+          "quantity": 15,
+          "engramId": null
+        },
+        {
+          "resourceId": "1f9b4906-8ad6-43eb-abb6-0dba2f04aef8",
+          "quantity": 5,
+          "engramId": null
+        }
+      ]
+    },
+    {
+      "uuid": "63dfd657-8435-40e3-8ff1-05bc8c00b854",
+      "engramId": "0a25cf7a-00af-495b-a3b9-89d38ffd861b",
+      "compositeList": [
+        {
+          "resourceId": null,
+          "quantity": 2,
+          "engramId": "43a07d8d-bd22-4df5-bce9-84304b0a4f4f"
+        },
+        {
+          "resourceId": "d02f8975-4a63-4f84-a362-b339204bb799",
+          "quantity": 15,
+          "engramId": null
+        },
+        {
+          "resourceId": "00a9970e-599e-42c1-8f2b-259dd251dd9f",
+          "quantity": 35,
+          "engramId": null
+        },
+        {
+          "resourceId": "3968e185-0e58-4bbb-bd64-605f3cf1d38c",
+          "quantity": 16,
+          "engramId": null
+        },
+        {
+          "resourceId": "062522cd-f041-408f-bf38-ce11203f2c18",
+          "quantity": 15,
+          "engramId": null
+        },
+        {
+          "resourceId": "1f9b4906-8ad6-43eb-abb6-0dba2f04aef8",
+          "quantity": 8,
+          "engramId": null
+        }
+      ]
+    },
+    {
+      "uuid": "b913a6b1-d932-4481-8557-5abbeb5efe5c",
+      "engramId": "399317b4-81e2-4196-a86b-13000fa0e76c",
+      "compositeList": [
+        {
+          "resourceId": null,
+          "quantity": 20,
+          "engramId": "43a07d8d-bd22-4df5-bce9-84304b0a4f4f"
+        },
+        {
+          "resourceId": "d02f8975-4a63-4f84-a362-b339204bb799",
+          "quantity": 30,
+          "engramId": null
+        },
+        {
+          "resourceId": "00a9970e-599e-42c1-8f2b-259dd251dd9f",
+          "quantity": 45,
+          "engramId": null
+        },
+        {
+          "resourceId": "3968e185-0e58-4bbb-bd64-605f3cf1d38c",
+          "quantity": 50,
+          "engramId": null
+        },
+        {
+          "resourceId": "062522cd-f041-408f-bf38-ce11203f2c18",
+          "quantity": 20,
+          "engramId": null
+        },
+        {
+          "resourceId": "1f9b4906-8ad6-43eb-abb6-0dba2f04aef8",
+          "quantity": 25,
+          "engramId": null
+        }
+      ]
+    },
+    {
+      "uuid": "56f517e1-e069-4106-b680-9d1dede61f77",
+      "engramId": "d5e882d9-bafa-4ae4-b3ef-3efb63a0bba5",
+      "compositeList": [
+        {
+          "resourceId": null,
+          "quantity": 15,
+          "engramId": "43a07d8d-bd22-4df5-bce9-84304b0a4f4f"
+        },
+        {
+          "resourceId": "d02f8975-4a63-4f84-a362-b339204bb799",
+          "quantity": 45,
+          "engramId": null
+        },
+        {
+          "resourceId": "00a9970e-599e-42c1-8f2b-259dd251dd9f",
+          "quantity": 65,
+          "engramId": null
+        },
+        {
+          "resourceId": "3968e185-0e58-4bbb-bd64-605f3cf1d38c",
+          "quantity": 40,
+          "engramId": null
+        },
+        {
+          "resourceId": "062522cd-f041-408f-bf38-ce11203f2c18",
+          "quantity": 30,
+          "engramId": null
+        },
+        {
+          "resourceId": "1f9b4906-8ad6-43eb-abb6-0dba2f04aef8",
+          "quantity": 20,
+          "engramId": null
+        }
+      ]
+    },
+    {
+      "uuid": "d36bfab9-5764-4375-889e-81294cb3e73b",
+      "engramId": "3546110f-89c5-4841-b67b-563ef229c693",
+      "compositeList": [
+        {
+          "resourceId": null,
+          "quantity": 25,
+          "engramId": "43a07d8d-bd22-4df5-bce9-84304b0a4f4f"
+        },
+        {
+          "resourceId": "d02f8975-4a63-4f84-a362-b339204bb799",
+          "quantity": 45,
+          "engramId": null
+        },
+        {
+          "resourceId": "00a9970e-599e-42c1-8f2b-259dd251dd9f",
+          "quantity": 65,
+          "engramId": null
+        },
+        {
+          "resourceId": "3968e185-0e58-4bbb-bd64-605f3cf1d38c",
+          "quantity": 50,
+          "engramId": null
+        },
+        {
+          "resourceId": "062522cd-f041-408f-bf38-ce11203f2c18",
+          "quantity": 45,
+          "engramId": null
+        },
+        {
+          "resourceId": "1f9b4906-8ad6-43eb-abb6-0dba2f04aef8",
+          "quantity": 25,
+          "engramId": null
+        }
+      ]
+    },
+    {
+      "uuid": "bae96528-323b-4f5e-8a24-7e09ebe57391",
+      "engramId": "3a98a34b-23ad-411f-91c6-68794593b1c7",
+      "compositeList": [
+        {
+          "resourceId": "291a36db-f87f-49fe-aac0-ee748e394736",
+          "quantity": 200,
+          "engramId": null
+        },
+        {
+          "resourceId": "d02f8975-4a63-4f84-a362-b339204bb799",
+          "quantity": 170,
+          "engramId": null
+        },
+        {
+          "resourceId": "00a9970e-599e-42c1-8f2b-259dd251dd9f",
+          "quantity": 225,
+          "engramId": null
+        },
+        {
+          "resourceId": "1f9b4906-8ad6-43eb-abb6-0dba2f04aef8",
+          "quantity": 80,
+          "engramId": null
+        }
+      ]
+    },
+    {
+      "uuid": "c9b60a58-735d-4224-89d8-ed959e8461f1",
+      "engramId": "7775af36-20b0-4c44-a382-b8ff934e9caa",
+      "compositeList": [
+        {
+          "resourceId": null,
+          "quantity": 85,
+          "engramId": "ad5080cb-207e-4741-a904-f11c462a07ce"
+        },
+        {
+          "resourceId": "291a36db-f87f-49fe-aac0-ee748e394736",
+          "quantity": 270,
+          "engramId": null
+        },
+        {
+          "resourceId": "00a9970e-599e-42c1-8f2b-259dd251dd9f",
+          "quantity": 600,
+          "engramId": null
+        }
+      ]
+    },
+    {
+      "uuid": "5775a226-f15e-4fc4-9cf4-f97b1d436189",
+      "engramId": "73a67d2b-4927-4035-a1e8-63c994bcad7c",
+      "compositeList": [
+        {
+          "resourceId": null,
+          "quantity": 30,
+          "engramId": "ad5080cb-207e-4741-a904-f11c462a07ce"
+        },
+        {
+          "resourceId": "291a36db-f87f-49fe-aac0-ee748e394736",
+          "quantity": 285,
+          "engramId": null
+        },
+        {
+          "resourceId": "00a9970e-599e-42c1-8f2b-259dd251dd9f",
+          "quantity": 350,
+          "engramId": null
+        }
+      ]
+    },
+    {
+      "uuid": "e0506c4d-c5e6-45db-94fb-f86e858a1f09",
+      "engramId": "5f479b2a-d46e-4690-ad29-e2e87ca635ab",
+      "compositeList": [
+        {
+          "resourceId": null,
+          "quantity": 120,
+          "engramId": "ad5080cb-207e-4741-a904-f11c462a07ce"
+        },
+        {
+          "resourceId": null,
+          "quantity": 800,
+          "engramId": "490c0d82-153c-4a84-a26b-5065a8893ff1"
+        },
+        {
+          "resourceId": "1f9b4906-8ad6-43eb-abb6-0dba2f04aef8",
+          "quantity": 200,
+          "engramId": null
+        }
+      ]
+    },
+    {
+      "uuid": "52d00a5f-3f92-446c-af22-5a83d72cee2d",
+      "engramId": "33ff572c-3ed3-46e1-9b43-b2c24f4c0792",
+      "compositeList": [
+        {
+          "resourceId": "7908b392-4ba9-4983-8990-2b7454ae1130",
+          "quantity": 5,
+          "engramId": null
+        },
+        {
+          "resourceId": "9ff7ed81-00c3-4465-a672-a6e451c54926",
+          "quantity": 5,
+          "engramId": null
+        },
+        {
+          "resourceId": "0f10d697-2569-4440-a50e-9b804f972789",
+          "quantity": 5,
+          "engramId": null
+        },
+        {
+          "resourceId": "875af064-ddcb-4e0f-bc3c-d5689e79b305",
+          "quantity": 5,
+          "engramId": null
+        },
+        {
+          "resourceId": "116fd90f-15d8-45fc-bd98-427b15ced450",
+          "quantity": 3,
+          "engramId": null
+        },
+        {
+          "resourceId": "062522cd-f041-408f-bf38-ce11203f2c18",
+          "quantity": 3,
+          "engramId": null
+        },
+        {
+          "resourceId": "212e0876-e4a9-4ed5-bb4f-17f5169999bd",
+          "quantity": 1,
+          "engramId": null
+        }
+      ]
+    },
+    {
+      "uuid": "18d33571-008b-45f3-be1b-e722e070996c",
+      "engramId": "8010bc85-db07-45e3-81b7-52c5aebf4e3b",
+      "compositeList": [
+        {
+          "resourceId": null,
+          "quantity": 15,
+          "engramId": "ad5080cb-207e-4741-a904-f11c462a07ce"
+        },
+        {
+          "resourceId": "f43920ab-5193-4b02-9f9c-e78f19ef1d3a",
+          "quantity": 70,
+          "engramId": null
+        },
+        {
+          "resourceId": "de59080a-d62a-4681-aa93-2df08db0ae27",
+          "quantity": 10,
+          "engramId": null
+        },
+        {
+          "resourceId": "062522cd-f041-408f-bf38-ce11203f2c18",
+          "quantity": 12,
+          "engramId": null
+        },
+        {
+          "resourceId": "1f9b4906-8ad6-43eb-abb6-0dba2f04aef8",
+          "quantity": 15,
+          "engramId": null
+        }
+      ]
+    },
+    {
+      "uuid": "49860f39-d6d8-428a-8f50-07a75c26e556",
+      "engramId": "d3c28454-0ac6-4430-ab20-4a51df85ec39",
+      "compositeList": [
+        {
+          "resourceId": "291a36db-f87f-49fe-aac0-ee748e394736",
+          "quantity": 15,
+          "engramId": null
+        },
+        {
+          "resourceId": "c5d856c5-85d9-4490-8fe9-b308662f362f",
+          "quantity": 140,
+          "engramId": null
+        },
+        {
+          "resourceId": "00a9970e-599e-42c1-8f2b-259dd251dd9f",
+          "quantity": 180,
+          "engramId": null
+        }
+      ]
+    },
+    {
+      "uuid": "c534a1f3-d157-4e2c-9fb1-459124c67576",
+      "engramId": "9f540b7c-4ba5-4ae5-9b25-5df604f46d23",
+      "compositeList": [
+        {
+          "resourceId": "291a36db-f87f-49fe-aac0-ee748e394736",
+          "quantity": 110,
+          "engramId": null
+        },
+        {
+          "resourceId": "d02f8975-4a63-4f84-a362-b339204bb799",
+          "quantity": 285,
+          "engramId": null
+        },
+        {
+          "resourceId": "00a9970e-599e-42c1-8f2b-259dd251dd9f",
+          "quantity": 125,
+          "engramId": null
+        }
+      ]
+    },
+    {
+      "uuid": "61a2d4ba-4214-4b8b-bd52-e2dc771387ab",
+      "engramId": "7b741a8b-0362-47a3-84fb-3481e4ee74ca",
+      "compositeList": [
+        {
+          "resourceId": null,
+          "quantity": 125,
+          "engramId": "ad5080cb-207e-4741-a904-f11c462a07ce"
+        },
+        {
+          "resourceId": "d02f8975-4a63-4f84-a362-b339204bb799",
+          "quantity": 350,
+          "engramId": null
+        },
+        {
+          "resourceId": "00a9970e-599e-42c1-8f2b-259dd251dd9f",
+          "quantity": 225,
+          "engramId": null
+        },
+        {
+          "resourceId": "961a2537-b8eb-40cd-b4dd-ca44614a5799",
+          "quantity": 85,
+          "engramId": null
+        }
+      ]
+    },
+    {
+      "uuid": "3b6267a7-620b-448e-a859-25e76a91747f",
+      "engramId": "545f5760-7dad-4116-9720-92fcdb6454ed",
+      "compositeList": [
+        {
+          "resourceId": null,
+          "quantity": 2350,
+          "engramId": "ad5080cb-207e-4741-a904-f11c462a07ce"
+        },
+        {
+          "resourceId": null,
+          "quantity": 270,
+          "engramId": "43a07d8d-bd22-4df5-bce9-84304b0a4f4f"
+        },
+        {
+          "resourceId": "3968e185-0e58-4bbb-bd64-605f3cf1d38c",
+          "quantity": 325,
+          "engramId": null
+        },
+        {
+          "resourceId": "67fbef8d-9aa1-4d6e-a4af-1e50ee89bf3d",
+          "quantity": 75,
+          "engramId": "451409a2-0fbb-4f18-b74f-83b7d3b3d6ef"
+        },
+        {
+          "resourceId": "77087528-660d-4f36-8327-ded04331355a",
+          "quantity": 185,
+          "engramId": null
+        }
+      ]
+    },
+    {
+      "uuid": "e42efa07-115e-45f9-89e5-b579f3356cde",
+      "engramId": "6a6c1d97-a8ef-4439-9f2f-3f2580c4f575",
+      "compositeList": [
+        {
+          "resourceId": null,
+          "quantity": 425,
+          "engramId": "ad5080cb-207e-4741-a904-f11c462a07ce"
+        },
+        {
+          "resourceId": "d02f8975-4a63-4f84-a362-b339204bb799",
+          "quantity": 270,
+          "engramId": null
+        },
+        {
+          "resourceId": "00a9970e-599e-42c1-8f2b-259dd251dd9f",
+          "quantity": 150,
+          "engramId": null
+        },
+        {
+          "resourceId": null,
+          "quantity": 85,
+          "engramId": "490c0d82-153c-4a84-a26b-5065a8893ff1"
+        },
+        {
+          "resourceId": "cb28412a-9986-4d20-a597-042d6f773293",
+          "quantity": 45,
+          "engramId": null
+        }
+      ]
+    },
+    {
+      "uuid": "370bb543-3874-489b-9ecc-68687750a45c",
+      "engramId": "007e89c8-2101-4d6b-9f7a-43108ff4a590",
+      "compositeList": [
+        {
+          "resourceId": "291a36db-f87f-49fe-aac0-ee748e394736",
+          "quantity": 10,
+          "engramId": null
+        },
+        {
+          "resourceId": "d02f8975-4a63-4f84-a362-b339204bb799",
+          "quantity": 30,
+          "engramId": null
+        },
+        {
+          "resourceId": "c92df5b5-b0ed-432a-9b23-7728921b6e87",
+          "quantity": 140,
+          "engramId": null
+        }
+      ]
+    },
+    {
+      "uuid": "2d897afa-22ce-45a1-97cc-83aba599ebc5",
+      "engramId": "c6377f83-96ac-4dbc-9f84-c091fd7cc977",
+      "compositeList": [
+        {
+          "resourceId": null,
+          "quantity": 20,
+          "engramId": "ad5080cb-207e-4741-a904-f11c462a07ce"
+        },
+        {
+          "resourceId": "291a36db-f87f-49fe-aac0-ee748e394736",
+          "quantity": 175,
+          "engramId": null
+        },
+        {
+          "resourceId": "00a9970e-599e-42c1-8f2b-259dd251dd9f",
+          "quantity": 175,
+          "engramId": null
+        }
+      ]
+    },
+    {
+      "uuid": "5248fda1-cbeb-4d77-bdda-36daaa66f8ef",
+      "engramId": "35a36aea-984b-4996-973b-aa9dab48c5d5",
+      "compositeList": [
+        {
+          "resourceId": "b4530490-6f7e-48db-a3f6-276ab89bd631",
+          "quantity": 1200,
+          "engramId": null
+        },
+        {
+          "resourceId": "291a36db-f87f-49fe-aac0-ee748e394736",
+          "quantity": 800,
+          "engramId": null
+        },
+        {
+          "resourceId": "00a9970e-599e-42c1-8f2b-259dd251dd9f",
+          "quantity": 600,
+          "engramId": null
+        },
+        {
+          "resourceId": null,
+          "quantity": 250,
+          "engramId": "490c0d82-153c-4a84-a26b-5065a8893ff1"
+        }
+      ]
+    },
+    {
+      "uuid": "c7502e50-9d80-4229-9f96-10de7f548664",
+      "engramId": "50ee9ed1-ecd5-48b3-9222-ead65e5215e4",
+      "compositeList": [
+        {
+          "resourceId": null,
+          "quantity": 450,
+          "engramId": "43a07d8d-bd22-4df5-bce9-84304b0a4f4f"
+        },
+        {
+          "resourceId": null,
+          "quantity": 120,
+          "engramId": "ad5080cb-207e-4741-a904-f11c462a07ce"
+        },
+        {
+          "resourceId": "062522cd-f041-408f-bf38-ce11203f2c18",
+          "quantity": 525,
+          "engramId": null
+        },
+        {
+          "resourceId": "67fbef8d-9aa1-4d6e-a4af-1e50ee89bf3d",
+          "quantity": 20,
+          "engramId": "451409a2-0fbb-4f18-b74f-83b7d3b3d6ef"
+        },
+        {
+          "resourceId": "77087528-660d-4f36-8327-ded04331355a",
+          "quantity": 55,
+          "engramId": null
+        },
+        {
+          "resourceId": "961a2537-b8eb-40cd-b4dd-ca44614a5799",
+          "quantity": 120,
+          "engramId": null
+        }
+      ]
+    },
+    {
+      "uuid": "ff1eddf1-fe80-44a8-b41d-7bbedd24b5e6",
+      "engramId": "2b73a157-5a0f-4cf7-8e71-b3f72f32b4ac",
+      "compositeList": [
+        {
+          "resourceId": null,
+          "quantity": 80,
+          "engramId": "43a07d8d-bd22-4df5-bce9-84304b0a4f4f"
+        },
+        {
+          "resourceId": "c92df5b5-b0ed-432a-9b23-7728921b6e87",
+          "quantity": 200,
+          "engramId": null
+        },
+        {
+          "resourceId": null,
+          "quantity": 320,
+          "engramId": "ad5080cb-207e-4741-a904-f11c462a07ce"
+        },
+        {
+          "resourceId": "d02f8975-4a63-4f84-a362-b339204bb799",
+          "quantity": 120,
+          "engramId": null
+        },
+        {
+          "resourceId": "00a9970e-599e-42c1-8f2b-259dd251dd9f",
+          "quantity": 280,
+          "engramId": null
+        }
+      ]
+    },
+    {
+      "uuid": "35af3d21-f34d-4eae-bea6-6edf16d0af6b",
+      "engramId": "7d97f3a2-85b2-4187-951f-f00ab161a2e8",
+      "compositeList": [
+        {
+          "resourceId": null,
+          "quantity": 35,
+          "engramId": "ad5080cb-207e-4741-a904-f11c462a07ce"
+        },
+        {
+          "resourceId": "291a36db-f87f-49fe-aac0-ee748e394736",
+          "quantity": 125,
+          "engramId": null
+        },
+        {
+          "resourceId": "00a9970e-599e-42c1-8f2b-259dd251dd9f",
+          "quantity": 200,
+          "engramId": null
+        }
+      ]
+    },
+    {
+      "uuid": "6fc32618-4d88-4b4d-97f1-6f048f3a1072",
+      "engramId": "a0635511-d9ce-41a3-a6cc-4fb283e21407",
+      "compositeList": [
+        {
+          "resourceId": null,
+          "quantity": 5,
+          "engramId": "ad5080cb-207e-4741-a904-f11c462a07ce"
+        },
+        {
+          "resourceId": "291a36db-f87f-49fe-aac0-ee748e394736",
+          "quantity": 80,
+          "engramId": null
+        },
+        {
+          "resourceId": "00a9970e-599e-42c1-8f2b-259dd251dd9f",
+          "quantity": 45,
+          "engramId": null
+        }
+      ]
+    },
+    {
+      "uuid": "59fbc817-0a81-430c-b3cc-a03a761776fe",
+      "engramId": "0ff0ecbc-2e64-4b1d-a326-facad39c93d0",
+      "compositeList": [
+        {
+          "resourceId": null,
+          "quantity": 2,
+          "engramId": "eb7915a8-3453-4093-94d8-2fba65eac823"
+        },
+        {
+          "resourceId": null,
+          "quantity": 15,
+          "engramId": "ad5080cb-207e-4741-a904-f11c462a07ce"
+        },
+        {
+          "resourceId": "291a36db-f87f-49fe-aac0-ee748e394736",
+          "quantity": 8,
+          "engramId": null
+        },
+        {
+          "resourceId": "00a9970e-599e-42c1-8f2b-259dd251dd9f",
+          "quantity": 100,
+          "engramId": null
+        }
+      ]
+    },
+    {
+      "uuid": "9ed08440-69f9-47b9-b593-b3d3810c5f11",
+      "engramId": "041eb078-dbf5-48c6-bbe5-1ae099cf06a9",
+      "compositeList": [
+        {
+          "resourceId": null,
+          "quantity": 60,
+          "engramId": "ad5080cb-207e-4741-a904-f11c462a07ce"
+        },
+        {
+          "resourceId": "1f9b4906-8ad6-43eb-abb6-0dba2f04aef8",
+          "quantity": 40,
+          "engramId": null
+        },
+        {
+          "resourceId": null,
+          "quantity": 15,
+          "engramId": "5fa22e3f-b0cd-4ebd-a322-34156daa241d"
+        }
+      ]
+    }
+  ],
+  "directory": [
+    {
+      "station": "f81d221d-712a-444e-a90b-86315edead28",
+      "engrams": [],
+      "folders": [
+        {
+          "uuid": "3963cf41-6be6-4705-a8ea-27ba52238a9f",
+          "engrams": [
+            {
+              "uuid": "d9d0eb57-aea9-426e-b3a2-987f0f6a2e67"
+            }
+          ],
+          "folders": []
+        },
+        {
+          "uuid": "e986795c-8164-4d8a-b55e-1601a38bfb2b",
+          "engrams": [],
+          "folders": [
+            {
+              "uuid": "d733604a-66a1-45dd-84f7-b615b56b78d2",
+              "engrams": [
+                {
+                  "uuid": "d3c28454-0ac6-4430-ab20-4a51df85ec39"
+                }
+              ],
+              "folders": []
+            },
+            {
+              "uuid": "15888146-ec40-48e4-bedf-46b685a50311",
+              "engrams": [
+                {
+                  "uuid": "1e67d515-7efd-43c1-86c2-dfd25935516d"
+                }
+              ],
+              "folders": []
+            },
+            {
+              "uuid": "b962c782-088d-4366-a626-0f191732e39e",
+              "engrams": [],
+              "folders": [
+                {
+                  "uuid": "984d6aa0-041e-473d-9d86-b469465d1892",
+                  "engrams": [
+                    {
+                      "uuid": "007e89c8-2101-4d6b-9f7a-43108ff4a590"
+                    }
+                  ],
+                  "folders": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "station": "60cfea5c-0684-468b-a6eb-6d176e4feead",
+      "engrams": [],
+      "folders": [
+        {
+          "uuid": "3fb11e04-dbd4-4900-8544-ce790d864914",
+          "engrams": [
+            {
+              "uuid": "8ad18bd8-38e8-4780-bf3a-e3823c3819ff"
+            }
+          ],
+          "folders": []
+        },
+        {
+          "uuid": "42bc38b2-f912-412f-8744-ffd38da14518",
+          "engrams": [],
+          "folders": [
+            {
+              "uuid": "a901f89f-58bc-4976-b75b-8cc7452cbe68",
+              "engrams": [
+                {
+                  "uuid": "041eb078-dbf5-48c6-bbe5-1ae099cf06a9"
+                }
+              ],
+              "folders": []
+            },
+            {
+              "uuid": "6dfe5403-5774-400d-9d42-ba5a946e562e",
+              "engrams": [
+                {
+                  "uuid": "88f6a762-e848-417e-a033-85c20356fbe0"
+                },
+                {
+                  "uuid": "0a25cf7a-00af-495b-a3b9-89d38ffd861b"
+                },
+                {
+                  "uuid": "399317b4-81e2-4196-a86b-13000fa0e76c"
+                },
+                {
+                  "uuid": "d5e882d9-bafa-4ae4-b3ef-3efb63a0bba5"
+                },
+                {
+                  "uuid": "3546110f-89c5-4841-b67b-563ef229c693"
+                }
+              ],
+              "folders": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "station": "8e133bbe-c951-4a99-9978-841ffd52b7c3",
+      "engrams": [],
+      "folders": [
+        {
+          "uuid": "3963cf41-6be6-4705-a8ea-27ba52238a9f",
+          "engrams": [
+            {
+              "uuid": "44c33851-4ffc-4dcb-ad40-a505c834a932"
+            },
+            {
+              "uuid": "175ee77b-cb07-4880-91ab-97d61306bc35"
+            },
+            {
+              "uuid": "8010bc85-db07-45e3-81b7-52c5aebf4e3b"
+            }
+          ],
+          "folders": []
+        },
+        {
+          "uuid": "e986795c-8164-4d8a-b55e-1601a38bfb2b",
+          "engrams": [],
+          "folders": [
+            {
+              "uuid": "0b5bdcb3-b306-4d31-966a-6590fb3e9dac",
+              "engrams": [
+                {
+                  "uuid": "3adc9ba9-8f30-4a49-9e21-55d91cacdc46"
+                }
+              ],
+              "folders": []
+            },
+            {
+              "uuid": "50509ed4-5538-4734-9ee4-dedbd3e00d79",
+              "engrams": [
+                {
+                  "uuid": "7775af36-20b0-4c44-a382-b8ff934e9caa"
+                },
+                {
+                  "uuid": "73a67d2b-4927-4035-a1e8-63c994bcad7c"
+                },
+                {
+                  "uuid": "c6377f83-96ac-4dbc-9f84-c091fd7cc977"
+                },
+                {
+                  "uuid": "7d97f3a2-85b2-4187-951f-f00ab161a2e8"
+                },
+                {
+                  "uuid": "a0635511-d9ce-41a3-a6cc-4fb283e21407"
+                }
+              ],
+              "folders": []
+            },
+            {
+              "uuid": "c7c92cfc-d3dd-4889-8833-1de20ea72073",
+              "engrams": [
+                {
+                  "uuid": "5f479b2a-d46e-4690-ad29-e2e87ca635ab"
+                },
+                {
+                  "uuid": "35a36aea-984b-4996-973b-aa9dab48c5d5"
+                }
+              ],
+              "folders": []
+            }
+          ]
+        },
+        {
+          "uuid": "3fb11e04-dbd4-4900-8544-ce790d864914",
+          "engrams": [],
+          "folders": [
+            {
+              "uuid": "a593f667-f19e-4380-8a58-1f8cf92833a7",
+              "engrams": [
+                {
+                  "uuid": "0ff0ecbc-2e64-4b1d-a326-facad39c93d0"
+                }
+              ],
+              "folders": []
+            }
+          ]
+        },
+        {
+          "uuid": "42bc38b2-f912-412f-8744-ffd38da14518",
+          "engrams": [],
+          "folders": [
+            {
+              "uuid": "a901f89f-58bc-4976-b75b-8cc7452cbe68",
+              "engrams": [
+                {
+                  "uuid": "848624bd-74d1-45e1-b398-2ce9dd72baba"
+                }
+              ],
+              "folders": []
+            }
+          ]
+        },
+        {
+          "uuid": "bf1a95ea-11f3-4786-9226-25af8cd2a2c3",
+          "engrams": [
+            {
+              "uuid": "80f82956-6a6c-4071-963d-da8c93dde8c4"
+            },
+            {
+              "uuid": "3a98a34b-23ad-411f-91c6-68794593b1c7"
+            },
+            {
+              "uuid": "9f540b7c-4ba5-4ae5-9b25-5df604f46d23"
+            },
+            {
+              "uuid": "7b741a8b-0362-47a3-84fb-3481e4ee74ca"
+            },
+            {
+              "uuid": "6a6c1d97-a8ef-4439-9f2f-3f2580c4f575"
+            }
+          ],
+          "folders": []
+        }
+      ]
+    },
+    {
+      "station": "35405b44-a14a-47fd-ba53-87861fad6fb9",
+      "engrams": [],
+      "folders": [
+        {
+          "uuid": "3fb11e04-dbd4-4900-8544-ce790d864914",
+          "engrams": [],
+          "folders": [
+            {
+              "uuid": "f0a7a0da-1fb4-4048-a291-699a8af551d0",
+              "engrams": [],
+              "folders": [
+                {
+                  "uuid": "f22438d5-e709-423f-993f-aad38cb6f71d",
+                  "engrams": [
+                    {
+                      "uuid": "50ee9ed1-ecd5-48b3-9222-ead65e5215e4"
+                    }
+                  ],
+                  "folders": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "uuid": "bf1a95ea-11f3-4786-9226-25af8cd2a2c3",
+          "engrams": [],
+          "folders": [
+            {
+              "uuid": "64944145-4664-41f6-a33a-aabb20dd5b96",
+              "engrams": [
+                {
+                  "uuid": "545f5760-7dad-4116-9720-92fcdb6454ed"
+                }
+              ],
+              "folders": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "station": "4bf41483-8b5e-4ce0-b59e-60bc1fc28198",
+      "engrams": [],
+      "folders": [
+        {
+          "uuid": "592bf8a7-10ef-48e0-ab61-c625e11c79e1",
+          "engrams": [
+            {
+              "uuid": "9a4e591d-1eb7-47c1-b2c1-0a87092cedec"
+            },
+            {
+              "uuid": "7bba67c5-10d8-475e-8e7b-0f096cd41e6c"
+            },
+            {
+              "uuid": "414c8b4b-5129-40d7-b5fe-d79a8b096df8"
+            }
+          ],
+          "folders": []
+        }
+      ]
+    },
+    {
+      "station": "1749fd36-5d8d-418f-a6dd-961e3954e466",
+      "engrams": [],
+      "folders": [
+        {
+          "uuid": "3510159c-c69e-4dec-983d-c5745e48ee44",
+          "engrams": [
+            {
+              "uuid": "451409a2-0fbb-4f18-b74f-83b7d3b3d6ef"
+            }
+          ],
+          "folders": []
+        }
+      ]
+    }
+  ],
+  "remove": {
+    "resources": [],
+    "stations": [
+      "45eab1bd-9a64-478f-99d9-7eb05bbb8c9f"
+    ],
+    "folders": [
+      "3a0c60fd-cb7b-471d-a8bc-bb998949a8f6",
+      "4da442aa-2f0a-4680-83bc-cb1e967b12a3",
+      "a032ff79-20c6-4c4f-800d-233e20b27638",
+      "3efcf3ed-1bcb-4388-80a0-ae15a1224033",
+      "1caf3536-50d3-47ed-af53-eaccae1e2be9"
+    ],
+    "engrams": [
+      "fc108a06-296b-4b11-9983-3674492ecc4b",
+      "84b07e8a-a015-4bad-9859-6b0de47fd4a1",
+      "b7dfc0e8-5f3d-4cde-89de-112ff5c6e53d",
+      "12089885-abeb-45f6-a435-d30aa7d32cf5",
+      "05dea487-2156-414d-a732-6a19eb9a5198",
+      "72c50fdf-ee41-4347-b0d2-08e70cde2db0",
+      "d036bbae-0da8-4791-a58d-5608ec18aeb1",
+      "86afb398-7fba-4522-a134-9185a088a54c",
+      "ab8e900f-79b5-4797-be04-de9e4c56cf9e",
+      "7ab5804e-8592-4444-83c3-1c0ec80c9324",
+      "fee71e1e-c598-4485-80c4-9fd3a5b0bde4",
+      "e251dd52-ce9c-4e85-9e91-feb2a565fbfe",
+      "e9d9dd42-037f-4d60-bbca-5fdec517c901",
+      "410a910b-9306-4d33-8310-5192357333e4",
+      "6a9b55f8-f95f-439b-8f6b-b0a7521c6940"
+    ]
+  },
+  "replace": {
+    "resources": [],
+    "stations": [],
+    "folders": [],
+    "engrams": [],
+    "composition": []
+  }
+}
