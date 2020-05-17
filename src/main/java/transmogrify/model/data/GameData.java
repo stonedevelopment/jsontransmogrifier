@@ -6,7 +6,7 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import transmogrify.model.*;
 import transmogrify.model.json.*;
-import transmogrify.model.type.GameType;
+import transmogrify.model.type.Details;
 
 import java.util.*;
 
@@ -18,7 +18,7 @@ public abstract class GameData {
     public List<String> nullifiedResources = new ArrayList<>();
 
     public long dlcId;
-    public GameType gameType;
+    public Details details;
     JsonNode inObject;
     ObjectMapper mapper;
 
@@ -31,12 +31,11 @@ public abstract class GameData {
 
     public GameData(long dlcId, JsonNode inObject, ObjectMapper mapper) {
         this.dlcId = dlcId;
-        this.gameType = createGameTypeObject(dlcId);
         this.inObject = inObject;
         this.mapper = mapper;
     }
 
-    public abstract GameType createGameTypeObject(long dlcId);
+    public abstract Details createDetailsObject(long dlcId);
 
     public String getResourceUUID(String name) {
         Resource resource = getResourceByName(name);
@@ -158,9 +157,10 @@ public abstract class GameData {
             if (isValidDlcId(jsonStation.dlc_id)) {
                 String uuid = !cDebug ? generateUUID() : jsonStation.name;
                 String name = jsonStation.name;
+                String imageFile = jsonStation.image_file;
                 String engramId = getEngramUUID(jsonStation.name);
                 Date lastUpdated = new Date();
-                Station station = new Station(uuid, name, engramId, lastUpdated);
+                Station station = new Station(uuid, name, imageFile, engramId, lastUpdated);
 
                 stationMap.put(name, station);
             }

@@ -7,10 +7,9 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import transmogrify.model.*;
 import transmogrify.model.json.JsonTotalConversion;
 import transmogrify.model.json.JsonTotalConversionResource;
-import transmogrify.model.type.DLCGameType;
-import transmogrify.model.type.GameType;
+import transmogrify.model.type.DLCDetails;
+import transmogrify.model.type.Details;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
@@ -22,10 +21,11 @@ public class DLCGameData extends GameData {
     public DLCGameData(long dlcId, JsonNode inObject, ObjectMapper mapper, PrimaryGameData primaryGameData) {
         super(dlcId, inObject, mapper);
         this.primaryGameData = primaryGameData;
+        this.details = createDetailsObject(dlcId);
     }
 
     private boolean isTotalConversion(long dlcId) {
-        return Arrays.asList(2L).contains(dlcId);
+        return dlcId == 2L;
     }
 
     @Override
@@ -42,8 +42,9 @@ public class DLCGameData extends GameData {
 
     @Override
     public JsonNode generateJson() {
-        //  create dlc json object
-        ObjectNode gameDataObject = mapper.valueToTree(gameType);
+        ObjectNode gameDataObject = mapper.createObjectNode();
+
+        gameDataObject.set("details", mapper.valueToTree(details));
 
         //  add resources, without complex resources
         gameDataObject.set("resources", mapper.valueToTree(resourceMap.values()));
@@ -105,7 +106,7 @@ public class DLCGameData extends GameData {
 
     @Override
     public String buildFilePathForJSONExport() {
-        return String.format("src/assets/DLC/%s.json", gameType.getName());
+        return String.format("src/assets/DLC/%s.json", details.getName());
     }
 
     @Override
@@ -121,7 +122,7 @@ public class DLCGameData extends GameData {
     }
 
     @Override
-    public GameType createGameTypeObject(long dlcId) {
+    public Details createDetailsObject(long dlcId) {
         String uuid = UUID.randomUUID().toString();
         String name = getNameByDlcId(dlcId);
         String description = getDescriptionByDlcId(dlcId);
@@ -130,7 +131,8 @@ public class DLCGameData extends GameData {
         String logoFile = "logo.webp";
         String folderFile = "folder.webp";
         String backFolderFile = "backFolder.webp";
-        return new DLCGameType(uuid, name, description, totalConversion, filePath, logoFile, folderFile, backFolderFile);
+        String gameId = primaryGameData.details.getUuid();
+        return new DLCDetails(uuid, name, description, totalConversion, filePath, logoFile, folderFile, backFolderFile, gameId);
     }
 
     @Override

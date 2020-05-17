@@ -3,14 +3,15 @@ package transmogrify.model.data;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import transmogrify.model.type.GameType;
-import transmogrify.model.type.PrimaryGameType;
+import transmogrify.model.type.Details;
+import transmogrify.model.type.PrimaryDetails;
 
 import java.util.UUID;
 
 public class PrimaryGameData extends GameData {
     public PrimaryGameData(JsonNode inObject, ObjectMapper mapper) {
         super(1, inObject, mapper);
+        this.details = createDetailsObject(1);
     }
 
     @Override
@@ -34,7 +35,7 @@ public class PrimaryGameData extends GameData {
     }
 
     @Override
-    public GameType createGameTypeObject(long dlcId) {
+    public Details createDetailsObject(long dlcId) {
         String uuid = UUID.randomUUID().toString();
         String name = getNameByDlcId(dlcId);
         String description = getDescriptionByDlcId(dlcId);
@@ -42,13 +43,15 @@ public class PrimaryGameData extends GameData {
         String logoFile = "logo.webp";
         String folderFile = "folder.webp";
         String backFolderFile = "backFolder.webp";
-        return new PrimaryGameType(uuid, name, description, filePath, logoFile, folderFile, backFolderFile);
+        return new PrimaryDetails(uuid, name, description, filePath, logoFile, folderFile, backFolderFile);
     }
 
     @Override
     public JsonNode generateJson() {
         //  create dlc json object
-        ObjectNode gameDataObject = mapper.valueToTree(gameType);
+        ObjectNode gameDataObject = mapper.createObjectNode();
+
+        gameDataObject.set("details", mapper.valueToTree(details));
 
         //  add resources, without complex resources
         gameDataObject.set("resources", mapper.valueToTree(resourceMap.values()));

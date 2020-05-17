@@ -2,7 +2,7 @@ package transmogrify.model.type;
 
 import java.util.Date;
 
-public class GameType {
+public class Details {
     private final String uuid;
     private final String name;
     private final String description;
@@ -12,7 +12,7 @@ public class GameType {
     private final String backFolderFile;
     private final Date lastUpdated;
 
-    public GameType(String uuid, String name, String description, String filePath, String logoFile, String folderFile, String backFolderFile) {
+    public Details(String uuid, String name, String description, String filePath, String logoFile, String folderFile, String backFolderFile) {
         this.uuid = uuid;
         this.name = name;
         this.description = description;
