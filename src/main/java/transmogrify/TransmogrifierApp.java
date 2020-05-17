@@ -53,8 +53,4 @@ public class TransmogrifierApp {
     private static void writeJsonToFile(String fileName, JsonNode outNode) throws IOException {
         writeOut(fileName, outNode);
     }
-
-    public static String generateUUID() {
-        return UUID.randomUUID().toString();
-    }
 }

@@ -4,18 +4,19 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import transmogrify.model.*;
-import transmogrify.model.json.JsonTotalConversion;
-import transmogrify.model.json.JsonTotalConversionResource;
-import transmogrify.model.type.DLCDetails;
-import transmogrify.model.type.Details;
+import transmogrify.model.details.DLCDetails;
+import transmogrify.model.dlc.*;
+import transmogrify.model.json.*;
+import transmogrify.model.primary.*;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
 public class DLCGameData extends GameData {
     PrimaryGameData primaryGameData;
+    DLCDetails details;
     TotalConversion totalConversion = new TotalConversion();
 
     public DLCGameData(long dlcId, JsonNode inObject, ObjectMapper mapper, PrimaryGameData primaryGameData) {
@@ -38,6 +39,73 @@ public class DLCGameData extends GameData {
     public void mapGameData() {
         mapTotalConversionFromJson();
         super.mapGameData();
+    }
+
+    @Override
+    public DlcFolder buildFolder(JsonCategory jsonCategory) {
+        String uuid = !cDebug ? generateUUID() : jsonCategory.name;
+        String name = jsonCategory.name;
+        String gameId = details.getGameId();
+        String dlcId = details.getUuid();
+        return new DlcFolder(uuid, name, gameId, dlcId);
+    }
+
+    @Override
+    public DlcResource buildResource(JsonResource jsonResource) {
+        String uuid = !cDebug ? generateUUID() : jsonResource.name;
+        String name = jsonResource.name;
+        String description = "";
+        String imageFile = jsonResource.image_file;
+        Date lastUpdated = new Date();
+        String gameId = details.getGameId();
+        String dlcId = details.getUuid();
+
+        return new DlcResource(uuid, name, description, imageFile, lastUpdated, gameId, dlcId);
+    }
+
+    @Override
+    public DlcEngram buildEngram(JsonEngram jsonEngram) {
+        String uuid = !cDebug ? generateUUID() : jsonEngram.name;
+        String name = jsonEngram.name;
+        String description = jsonEngram.description;
+        String imageFile = jsonEngram.image_file;
+        int level = jsonEngram.level;
+        int yield = jsonEngram.yield;
+        int points = jsonEngram.points;
+        int xp = jsonEngram.xp;
+        int craftingTime = 0;
+        Date lastUpdated = new Date();
+        String gameId = details.getGameId();
+        String dlcId = details.getUuid();
+
+        return new DlcEngram(uuid, name, description, imageFile, level, yield, points, xp, craftingTime, lastUpdated,
+                gameId, dlcId);
+    }
+
+    @Override
+    public DlcStation buildStation(JsonStation jsonStation) {
+        String uuid = !cDebug ? generateUUID() : jsonStation.name;
+        String name = jsonStation.name;
+        String imageFile = jsonStation.image_file;
+        String engramId = getEngramUUID(jsonStation.name);
+        Date lastUpdated = new Date();
+        String gameId = details.getGameId();
+        String dlcId = details.getUuid();
+
+        return new DlcStation(uuid, name, imageFile, engramId, lastUpdated, gameId, dlcId);
+    }
+
+
+    @Override
+    public DlcComposition buildComposition(JsonEngram jsonEngram) {
+        String uuid = !cDebug ? generateUUID() : jsonEngram.name;
+        List<Composite> compositeList = convertJsonComposition(jsonEngram.composition);
+        String engramId = getEngramUUID(jsonEngram.name);
+        Date lastUpdated = new Date();
+        String gameId = details.getGameId();
+        String dlcId = details.getUuid();
+
+        return new DlcComposition(uuid, engramId, compositeList, lastUpdated, gameId, dlcId);
     }
 
     @Override
@@ -122,7 +190,7 @@ public class DLCGameData extends GameData {
     }
 
     @Override
-    public Details createDetailsObject(long dlcId) {
+    public DLCDetails createDetailsObject(long dlcId) {
         String uuid = UUID.randomUUID().toString();
         String name = getNameByDlcId(dlcId);
         String description = getDescriptionByDlcId(dlcId);

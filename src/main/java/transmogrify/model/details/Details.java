@@ -1,4 +1,4 @@
-package transmogrify.model.type;
+package transmogrify.model.details;
 
 import java.util.Date;
 

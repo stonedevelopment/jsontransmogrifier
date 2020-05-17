@@ -1,4 +1,4 @@
-package transmogrify.model;
+package transmogrify.model.dlc;
 
 import java.util.ArrayList;
 import java.util.List;

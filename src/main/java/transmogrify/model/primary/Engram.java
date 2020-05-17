@@ -1,4 +1,4 @@
-package transmogrify.model;
+package transmogrify.model.primary;
 
 import java.util.Date;
 
@@ -33,8 +33,10 @@ public class Engram {
     private final int xp;
     private final int craftingTime;
     private final Date lastUpdated;
+    private final String gameId;
 
-    public Engram(String uuid, String name, String description, String imageFile, int level, int yield, int points, int xp, int craftingTime, Date lastUpdated) {
+    public Engram(String uuid, String name, String description, String imageFile, int level, int yield, int points,
+                  int xp, int craftingTime, Date lastUpdated, String gameId) {
         this.uuid = uuid;
         this.name = name;
         this.description = description;
@@ -45,11 +47,11 @@ public class Engram {
         this.xp = xp;
         this.craftingTime = craftingTime;
         this.lastUpdated = lastUpdated;
+        this.gameId = gameId;
     }
 
     public String getUuid() {
         return uuid;
-//        return name;
     }
 
     public String getName() {
@@ -86,5 +88,9 @@ public class Engram {
 
     public Date getLastUpdated() {
         return lastUpdated;
+    }
+
+    public String getGameId() {
+        return gameId;
     }
 }

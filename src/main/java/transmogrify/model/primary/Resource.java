@@ -1,4 +1,4 @@
-package transmogrify.model;
+package transmogrify.model.primary;
 
 import java.util.Date;
 
@@ -13,13 +13,15 @@ public class Resource {
     private final String description;
     private final String imageFile;
     private final Date lastUpdated;
+    private final String gameId;
 
-    public Resource(String uuid, String name, String description, String imageFile, Date lastUpdated) {
+    public Resource(String uuid, String name, String description, String imageFile, Date lastUpdated, String gameId) {
         this.uuid = uuid;
         this.name = name;
         this.description = description;
         this.imageFile = imageFile;
         this.lastUpdated = lastUpdated;
+        this.gameId = gameId;
     }
 
     public String getUuid() {
@@ -40,5 +42,9 @@ public class Resource {
 
     public Date getLastUpdated() {
         return lastUpdated;
+    }
+
+    public String getGameId() {
+        return gameId;
     }
 }

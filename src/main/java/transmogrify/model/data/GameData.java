@@ -4,21 +4,18 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import transmogrify.model.*;
+import transmogrify.model.details.Details;
 import transmogrify.model.json.*;
-import transmogrify.model.type.Details;
+import transmogrify.model.primary.*;
 
 import java.util.*;
 
-import static transmogrify.TransmogrifierApp.generateUUID;
-
 public abstract class GameData {
-    private static final boolean cDebug = false; // TODO: 4/26/2020 Set to FALSE when finalizing
+    public static final boolean cDebug = false; // TODO: 4/26/2020 Set to FALSE when finalizing
 
     public List<String> nullifiedResources = new ArrayList<>();
 
     public long dlcId;
-    public Details details;
     JsonNode inObject;
     ObjectMapper mapper;
 
@@ -33,6 +30,10 @@ public abstract class GameData {
         this.dlcId = dlcId;
         this.inObject = inObject;
         this.mapper = mapper;
+    }
+
+    public static String generateUUID() {
+        return UUID.randomUUID().toString();
     }
 
     public abstract Details createDetailsObject(long dlcId);
@@ -96,14 +97,12 @@ public abstract class GameData {
             JsonCategory jsonCategory = mapper.convertValue(categoryObject, JsonCategory.class);
 
             if (isValidDlcId(jsonCategory.dlc_id)) {
-                String uuid = !cDebug ? generateUUID() : jsonCategory.name;
-                String name = jsonCategory.name;
-                Folder folder = new Folder(uuid, name);
-
-                folderMap.put(jsonCategory._id, folder);
+                folderMap.put(jsonCategory._id, buildFolder(jsonCategory));
             }
         }
     }
+
+    public abstract Folder buildFolder(JsonCategory jsonCategory);
 
     void mapResourcesFromJson() {
         JsonNode resourceArray = inObject.get("resource");
@@ -114,17 +113,12 @@ public abstract class GameData {
                 //  test if is complex resource, skip if true
                 if (jsonResource.complex_resource) continue;
 
-                String uuid = !cDebug ? generateUUID() : jsonResource.name;
-                String name = jsonResource.name;
-                String description = "";
-                String imageFile = jsonResource.image_file;
-                Date lastUpdated = new Date();
-                Resource resource = new Resource(uuid, name, description, imageFile, lastUpdated);
-
-                resourceMap.put(jsonResource.name, resource);
+                resourceMap.put(jsonResource.name, buildResource(jsonResource));
             }
         }
     }
+
+    public abstract Resource buildResource(JsonResource jsonResource);
 
     void mapEngramsFromJson() {
         JsonNode engramArray = inObject.get("engram");
@@ -132,22 +126,12 @@ public abstract class GameData {
             JsonEngram jsonEngram = mapper.convertValue(engramObject, JsonEngram.class);
 
             if (isValidDlcId(jsonEngram.dlc_id)) {
-                String uuid = !cDebug ? generateUUID() : jsonEngram.name;
-                String name = jsonEngram.name;
-                String description = jsonEngram.description;
-                String imageFile = jsonEngram.image_file;
-                int level = jsonEngram.level;
-                int yield = jsonEngram.yield;
-                int points = jsonEngram.points;
-                int xp = jsonEngram.xp;
-                int craftingTime = 0;
-                Date lastUpdated = new Date();
-                Engram engram = new Engram(uuid, name, description, imageFile, level, yield, points, xp, craftingTime, lastUpdated);
-
-                engramMap.put(jsonEngram.name, engram);
+                engramMap.put(jsonEngram.name, buildEngram(jsonEngram));
             }
         }
     }
+
+    public abstract Engram buildEngram(JsonEngram jsonEngram);
 
     void mapStationsFromJson() {
         JsonNode stationArray = inObject.get("station");
@@ -155,17 +139,12 @@ public abstract class GameData {
             JsonStation jsonStation = mapper.convertValue(stationObject, JsonStation.class);
 
             if (isValidDlcId(jsonStation.dlc_id)) {
-                String uuid = !cDebug ? generateUUID() : jsonStation.name;
-                String name = jsonStation.name;
-                String imageFile = jsonStation.image_file;
-                String engramId = getEngramUUID(jsonStation.name);
-                Date lastUpdated = new Date();
-                Station station = new Station(uuid, name, imageFile, engramId, lastUpdated);
-
-                stationMap.put(name, station);
+                stationMap.put(jsonStation.name, buildStation(jsonStation));
             }
         }
     }
+
+    public abstract Station buildStation(JsonStation jsonStation);
 
     void mapCompositionFromJson() {
         JsonNode engramArray = inObject.get("engram");
@@ -173,16 +152,12 @@ public abstract class GameData {
             JsonEngram jsonEngram = mapper.convertValue(engramObject, JsonEngram.class);
 
             if (isValidDlcId(jsonEngram.dlc_id)) {
-                Composition composition = new Composition();
-                composition.uuid = !cDebug ? generateUUID() : jsonEngram.name;
-                composition.compositeList = convertJsonComposition(jsonEngram.composition);
-                composition.engramId = getEngramUUID(jsonEngram.name);
-                composition.lastUpdated = new Date();
-
-                compositionMap.put(jsonEngram.name, composition);
+                compositionMap.put(jsonEngram.name, buildComposition(jsonEngram));
             }
         }
     }
+
+    public abstract Composition buildComposition(JsonEngram jsonEngram);
 
     public void mapSubstitutesFromResourceMap() {
         for (Resource resource : resourceMap.values()) {
@@ -196,16 +171,14 @@ public abstract class GameData {
         }
     }
 
-    private List<Composite> convertJsonComposition(List<JsonComposite> oldComposition) {
+    List<Composite> convertJsonComposition(List<JsonComposite> oldComposition) {
         List<Composite> newComposition = new ArrayList<>();
         for (JsonComposite oldComposite : oldComposition) {
-            Composite newComposite = new Composite();
+            String resourceId = getResourceUUID(oldComposite.resource_id);
+            int quantity = oldComposite.quantity;
+            String engramId = getEngramUUID(oldComposite.resource_id);
 
-            newComposite.resourceId = getResourceUUID(oldComposite.resource_id);
-            newComposite.quantity = oldComposite.quantity;
-            newComposite.engramId = getEngramUUID(oldComposite.resource_id);
-
-            newComposition.add(newComposite);
+            newComposition.add(new Composite(resourceId, quantity, engramId));
         }
 
         return newComposition;

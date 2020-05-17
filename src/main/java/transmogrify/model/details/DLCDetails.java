@@ -1,4 +1,4 @@
-package transmogrify.model.type;
+package transmogrify.model.details;
 
 public class DLCDetails extends Details {
     private final Boolean totalConversion;

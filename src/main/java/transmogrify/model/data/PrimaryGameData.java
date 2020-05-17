@@ -3,12 +3,20 @@ package transmogrify.model.data;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import transmogrify.model.type.Details;
-import transmogrify.model.type.PrimaryDetails;
+import transmogrify.model.details.PrimaryDetails;
+import transmogrify.model.json.JsonCategory;
+import transmogrify.model.json.JsonEngram;
+import transmogrify.model.json.JsonResource;
+import transmogrify.model.json.JsonStation;
+import transmogrify.model.primary.*;
 
+import java.util.Date;
+import java.util.List;
 import java.util.UUID;
 
 public class PrimaryGameData extends GameData {
+    PrimaryDetails details;
+
     public PrimaryGameData(JsonNode inObject, ObjectMapper mapper) {
         super(1, inObject, mapper);
         this.details = createDetailsObject(1);
@@ -35,7 +43,7 @@ public class PrimaryGameData extends GameData {
     }
 
     @Override
-    public Details createDetailsObject(long dlcId) {
+    public PrimaryDetails createDetailsObject(long dlcId) {
         String uuid = UUID.randomUUID().toString();
         String name = getNameByDlcId(dlcId);
         String description = getDescriptionByDlcId(dlcId);
@@ -44,6 +52,66 @@ public class PrimaryGameData extends GameData {
         String folderFile = "folder.webp";
         String backFolderFile = "backFolder.webp";
         return new PrimaryDetails(uuid, name, description, filePath, logoFile, folderFile, backFolderFile);
+    }
+
+    @Override
+    public Folder buildFolder(JsonCategory jsonCategory) {
+        String uuid = !cDebug ? generateUUID() : jsonCategory.name;
+        String name = jsonCategory.name;
+        String gameId = details.getUuid();
+        return new Folder(uuid, name, gameId);
+    }
+
+    @Override
+    public Resource buildResource(JsonResource jsonResource) {
+        String uuid = !cDebug ? generateUUID() : jsonResource.name;
+        String name = jsonResource.name;
+        String description = "";
+        String imageFile = jsonResource.image_file;
+        Date lastUpdated = new Date();
+        String gameId = details.getUuid();
+
+        return new Resource(uuid, name, description, imageFile, lastUpdated, gameId);
+    }
+
+    @Override
+    public Engram buildEngram(JsonEngram jsonEngram) {
+        String uuid = !cDebug ? generateUUID() : jsonEngram.name;
+        String name = jsonEngram.name;
+        String description = jsonEngram.description;
+        String imageFile = jsonEngram.image_file;
+        int level = jsonEngram.level;
+        int yield = jsonEngram.yield;
+        int points = jsonEngram.points;
+        int xp = jsonEngram.xp;
+        int craftingTime = 0;
+        Date lastUpdated = new Date();
+        String gameId = details.getUuid();
+
+        return new Engram(uuid, name, description, imageFile, level, yield, points, xp, craftingTime, lastUpdated,
+                gameId);
+    }
+
+    @Override
+    public Station buildStation(JsonStation jsonStation) {
+        String uuid = !cDebug ? generateUUID() : jsonStation.name;
+        String name = jsonStation.name;
+        String imageFile = jsonStation.image_file;
+        String engramId = getEngramUUID(jsonStation.name);
+        Date lastUpdated = new Date();
+        String gameId = details.getUuid();
+        return new Station(uuid, name, imageFile, engramId, lastUpdated, gameId);
+    }
+
+    @Override
+    public Composition buildComposition(JsonEngram jsonEngram) {
+        String uuid = !cDebug ? generateUUID() : jsonEngram.name;
+        List<Composite> compositeList = convertJsonComposition(jsonEngram.composition);
+        String engramId = getEngramUUID(jsonEngram.name);
+        Date lastUpdated = new Date();
+        String gameId = details.getUuid();
+
+        return new Composition(uuid, engramId, compositeList, lastUpdated, gameId);
     }
 
     @Override
