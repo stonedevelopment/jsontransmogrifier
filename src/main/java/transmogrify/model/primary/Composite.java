@@ -1,25 +1,37 @@
 package transmogrify.model.primary;
 
 public class Composite {
-    private final String resourceId;
+    private final String uuid;
+    private final String sourceId;
     private final int quantity;
-    private final String engramId;
+    private final boolean isEngram;
+    private final String compositionId;
 
-    public Composite(String resourceId, int quantity, String engramId) {
-        this.resourceId = resourceId;
+    public Composite(String uuid, String sourceId, int quantity, boolean isEngram, String compositionId) {
+        this.uuid = uuid;
+        this.sourceId = sourceId;
         this.quantity = quantity;
-        this.engramId = engramId;
+        this.isEngram = isEngram;
+        this.compositionId = compositionId;
     }
 
-    public String getResourceId() {
-        return resourceId;
+    public String getUuid() {
+        return uuid;
+    }
+
+    public String getSourceId() {
+        return sourceId;
     }
 
     public int getQuantity() {
         return quantity;
     }
 
-    public String getEngramId() {
-        return engramId;
+    public boolean isEngram() {
+        return isEngram;
+    }
+
+    public String getCompositionId() {
+        return compositionId;
     }
 }

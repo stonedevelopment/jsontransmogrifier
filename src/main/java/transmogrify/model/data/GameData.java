@@ -11,11 +11,11 @@ import transmogrify.model.primary.*;
 import java.util.*;
 
 public abstract class GameData {
-    public static final boolean cDebug = false; // TODO: 4/26/2020 Set to FALSE when finalizing
+    public static final boolean cDebug = true; // TODO: 4/26/2020 Set to FALSE when finalizing
 
     public List<String> nullifiedResources = new ArrayList<>();
 
-    public long dlcId;
+    public JsonDlc jsonDlc;
     JsonNode inObject;
     ObjectMapper mapper;
 
@@ -24,10 +24,11 @@ public abstract class GameData {
     Map<String, Engram> engramMap = new TreeMap<>();
     Map<String, Station> stationMap = new TreeMap<>();
     Map<String, Composition> compositionMap = new TreeMap<>();
+    Map<String, Composite> compositeMap = new TreeMap<>();
     Map<String, List<String>> substitutions = new TreeMap<>();
 
-    public GameData(long dlcId, JsonNode inObject, ObjectMapper mapper) {
-        this.dlcId = dlcId;
+    public GameData(JsonDlc jsonDlc, JsonNode inObject, ObjectMapper mapper) {
+        this.jsonDlc = jsonDlc;
         this.inObject = inObject;
         this.mapper = mapper;
     }
@@ -36,7 +37,11 @@ public abstract class GameData {
         return UUID.randomUUID().toString();
     }
 
-    public abstract Details createDetailsObject(long dlcId);
+    public abstract Details createDetailsObject(JsonDlc jsonDlc);
+
+    public long getDlcId() {
+        return jsonDlc._id;
+    }
 
     public String getResourceUUID(String name) {
         Resource resource = getResourceByName(name);
@@ -86,7 +91,6 @@ public abstract class GameData {
         mapEngramsFromJson();
         mapStationsFromJson();
         mapCompositionFromJson();
-//        mapSubstitutesFromResourceMap();  // TODO: 5/5/2020 removing substitutes for now, let's update this app already!
     }
 
     public abstract JsonNode generateJson();
@@ -159,6 +163,23 @@ public abstract class GameData {
 
     public abstract Composition buildComposition(JsonEngram jsonEngram);
 
+    void mapCompositesFromJson(String compositionId, JsonEngram jsonEngram) {
+        for (JsonComposite jsonComposite : jsonEngram.composition) {
+            compositeMap.put(jsonComposite.resource_id, buildComposite(compositionId, jsonComposite));
+        }
+    }
+
+    public Composite buildComposite(String compositionId, JsonComposite jsonComposite) {
+        String uuid = !cDebug ? generateUUID() : jsonComposite.resource_id;
+        String resourceId = getResourceUUID(jsonComposite.resource_id);
+        String engramId = getEngramUUID(jsonComposite.resource_id);
+        boolean isEngram = engramId != null;
+        String sourceId = isEngram ? engramId : resourceId;
+        int quantity = jsonComposite.quantity;
+
+        return new Composite(uuid, sourceId, quantity, isEngram, compositionId);
+    }
+
     public void mapSubstitutesFromResourceMap() {
         for (Resource resource : resourceMap.values()) {
             List<String> subsByName = generateSubsForResource(resource.getName());
@@ -169,19 +190,6 @@ public abstract class GameData {
                 }
             }
         }
-    }
-
-    List<Composite> convertJsonComposition(List<JsonComposite> oldComposition) {
-        List<Composite> newComposition = new ArrayList<>();
-        for (JsonComposite oldComposite : oldComposition) {
-            String resourceId = getResourceUUID(oldComposite.resource_id);
-            int quantity = oldComposite.quantity;
-            String engramId = getEngramUUID(oldComposite.resource_id);
-
-            newComposition.add(new Composite(resourceId, quantity, engramId));
-        }
-
-        return newComposition;
     }
 
     List<String> convertResourceNamesToId(List<String> in) {
@@ -246,7 +254,7 @@ public abstract class GameData {
      * @return if both ids match
      */
     boolean isValidDlcId(long dlcId) {
-        return this.dlcId == dlcId;
+        return jsonDlc._id == dlcId;
     }
 
     /**
@@ -362,57 +370,7 @@ public abstract class GameData {
         return outNode;
     }
 
-    public JsonNode createSubsSection() {
-        ArrayNode outNode = mapper.createArrayNode();
-
-        for (Map.Entry<String, List<String>> entry : substitutions.entrySet()) {
-            String resourceName = entry.getKey();
-            Resource resource = getResourceByName(resourceName);
-
-            List<String> uuidList = entry.getValue();
-
-            ObjectNode subNode = mapper.createObjectNode();
-            subNode.set(resource.getUuid(), mapper.valueToTree(uuidList));
-
-            outNode.add(subNode);
-        }
-
-        return outNode;
-    }
-
     public abstract String buildFilePath(String dlcName);
 
     public abstract String buildFilePathForJSONExport();
-
-    String getNameByDlcId(final long dlcId) {
-        if (dlcId == 1) {
-            return "ARK:Survival Evolved";
-        } else if (dlcId == 2) {
-            return "Primitive Plus";
-        } else if (dlcId == 3) {
-            return "Scorched Earth";
-        } else if (dlcId == 4) {
-            return "Aberration";
-        } else if (dlcId == 5) {
-            return "Extinction";
-        } else {
-            return "UNKNOWN DLC ID: " + dlcId;
-        }
-    }
-
-    String getDescriptionByDlcId(final long dlcId) {
-        if (dlcId == 1) {
-            return "As a man or woman stranded, naked, freezing, and starving on the unforgiving shores of a mysterious island called \"ARK\", use your skill and cunning to kill or tame and ride the plethora of leviathan dinosaurs and other primeval creatures roaming the land. Hunt, harvest resources, craft items, grow crops, research technologies, and build shelters to withstand the elements and store valuables, all while teaming up with (or preying upon) hundreds of other players to survive, dominate... and escape!";
-        } else if (dlcId == 2) {
-            return "Primitive Plus is a free add-on for ARK: Survival Evolved that alters the available tools, weapons and structures in the game to reflect what humans could realistically create using primitive technology and resources. This does not simply remove advanced technology from ARK, but instead replaces it with a multitude of new resources, engrams and systems.";
-        } else if (dlcId == 3) {
-            return "Stranded naked, dehydrated & starving in a vast desert, even the most seasoned ARK survivors must quickly find water, hunt for food, harvest, craft items, and build shelter to have any chance for survival. Use skills honed on ARK's faraway Island to kill, tame, breed, and ride the fantastical new creatures that have evolved to survive the Desert's ultra harsh conditions, including... DRAGONS! Travel back and forth between the Island and the Desert to team up with hundreds of players across both worlds or play locally!";
-        } else if (dlcId == 4) {
-            return "Waking up on ‘Aberration’, a derelict, malfunctioning ARK with an elaborate underground biome system, survivors face exotic new challenges unlike anything before: extreme radioactive sunlight and environmental hazards, ziplines, wingsuits, climbing gear, cave dwellings, charge-batteries, and far more, along with a stable of extraordinary new creatures await within the mysterious depths. But beware the ‘Nameless’: unrelenting, Element-infused humanoids which have evolved into vicious light-hating monstrosities! On Aberration, survivors will uncover the ultimate secrets of the ARKs, and discover what the future holds in store for those strong and clever enough to survive!";
-        } else if (dlcId == 5) {
-            return "Finish your journey through the worlds of ARK in ‘Extinction’, where the story began and ends: on Earth itself! An Element-infested, ravaged planet filled with fantastical creatures both organic & technological, Earth holds both the secrets of the past and the keys to its salvation. As a veteran Survivor who has conquered all previous obstacles, your ultimate challenge awaits: can you defeat the gigantic roaming Titans which dominate the planet, and complete the ARK cycle to save Earth's future?";
-        } else {
-            return "UNKNOWN DLC ID: " + dlcId;
-        }
-    }
 }

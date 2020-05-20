@@ -3,11 +3,12 @@ package transmogrify;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import transmogrify.model.data.DLCGameData;
+import transmogrify.model.data.GameData;
 import transmogrify.model.data.PrimaryGameData;
+import transmogrify.model.json.JsonDlc;
 import util.JSONUtil;
 
 import java.io.IOException;
-import java.util.UUID;
 
 import static util.JSONUtil.writeOut;
 import static util.LogUtil.logf;
@@ -17,7 +18,6 @@ import static util.LogUtil.logf;
  * <p>
  * We want UUIDs to be static so if the User saves a crafting queue, the Engram doesn't change even after an update.
  */
-
 public class TransmogrifierApp {
     static ObjectMapper mapper = new ObjectMapper();
     static PrimaryGameData primaryGameData;
@@ -26,14 +26,22 @@ public class TransmogrifierApp {
         try {
             JsonNode inObject = JSONUtil.parseIn();
 
-            primaryGameData = new PrimaryGameData(inObject, mapper);
-            primaryGameData.mapGameData();
-            writePrimaryJsonToFile();
+            JsonNode dlcArray = inObject.get("dlc");
+            for (JsonNode dlcNode : dlcArray) {
+                GameData gameData;
 
-            for (long dlcId = 2; dlcId <= 5; dlcId++) {
-                DLCGameData gameData = new DLCGameData(dlcId, inObject, mapper, primaryGameData);
+                JsonDlc jsonDlc = mapper.treeToValue(dlcNode, JsonDlc.class);
+                if (jsonDlc.type.equals("primary")) {
+                    gameData = new PrimaryGameData(jsonDlc, inObject, mapper);
+                    primaryGameData = (PrimaryGameData) gameData;
+                } else {
+                    gameData = new DLCGameData(jsonDlc, inObject, mapper, primaryGameData);
+                }
+
+                // TODO: 5/19/2020 Add The Center and Ragnarok engrams and resources
+
                 gameData.mapGameData();
-                writeDLCJsonToFile(gameData);
+                writeGameDataToFile(gameData);
             }
 
             logf("Nullified resources: ", primaryGameData.nullifiedResources.toString());
@@ -42,11 +50,7 @@ public class TransmogrifierApp {
         }
     }
 
-    private static void writePrimaryJsonToFile() throws IOException {
-        writeJsonToFile(primaryGameData.buildFilePathForJSONExport(), primaryGameData.generateJson());
-    }
-
-    private static void writeDLCJsonToFile(DLCGameData gameData) throws IOException {
+    private static void writeGameDataToFile(GameData gameData) throws IOException {
         writeJsonToFile(gameData.buildFilePathForJSONExport(), gameData.generateJson());
     }
 

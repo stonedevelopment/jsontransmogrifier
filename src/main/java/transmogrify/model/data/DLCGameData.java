@@ -19,14 +19,15 @@ public class DLCGameData extends GameData {
     DLCDetails details;
     TotalConversion totalConversion = new TotalConversion();
 
-    public DLCGameData(long dlcId, JsonNode inObject, ObjectMapper mapper, PrimaryGameData primaryGameData) {
-        super(dlcId, inObject, mapper);
+    public DLCGameData(JsonDlc jsonDlc, JsonNode inObject, ObjectMapper mapper,
+                       PrimaryGameData primaryGameData) {
+        super(jsonDlc, inObject, mapper);
         this.primaryGameData = primaryGameData;
-        this.details = createDetailsObject(dlcId);
+        this.details = createDetailsObject(jsonDlc);
     }
 
-    private boolean isTotalConversion(long dlcId) {
-        return dlcId == 2L;
+    private boolean isTotalConversion(String type) {
+        return type.equals("total_conversion");
     }
 
     @Override
@@ -95,17 +96,17 @@ public class DLCGameData extends GameData {
         return new DlcStation(uuid, name, imageFile, engramId, lastUpdated, gameId, dlcId);
     }
 
-
     @Override
     public DlcComposition buildComposition(JsonEngram jsonEngram) {
         String uuid = !cDebug ? generateUUID() : jsonEngram.name;
-        List<Composite> compositeList = convertJsonComposition(jsonEngram.composition);
         String engramId = getEngramUUID(jsonEngram.name);
         Date lastUpdated = new Date();
         String gameId = details.getGameId();
         String dlcId = details.getUuid();
 
-        return new DlcComposition(uuid, engramId, compositeList, lastUpdated, gameId, dlcId);
+        mapCompositesFromJson(uuid, jsonEngram);
+
+        return new DlcComposition(uuid, engramId, lastUpdated, gameId, dlcId);
     }
 
     @Override
@@ -128,6 +129,9 @@ public class DLCGameData extends GameData {
 
         //  add composition
         gameDataObject.set("composition", mapper.valueToTree(compositionMap.values()));
+
+        //  add composites
+        gameDataObject.set("composites", mapper.valueToTree(compositeMap.values()));
 
         //  add substitutions
 //        gameDataObject.set("substitutions", createSubsSection());
@@ -164,7 +168,7 @@ public class DLCGameData extends GameData {
 
     @Override
     public boolean isValidDlcIdForDirectory(long dlcId) {
-        return this.dlcId == dlcId || primaryGameData.isValidDlcIdForDirectory(dlcId);
+        return isValidDlcId(dlcId) || primaryGameData.isValidDlcIdForDirectory(dlcId);
     }
 
     @Override
@@ -190,11 +194,11 @@ public class DLCGameData extends GameData {
     }
 
     @Override
-    public DLCDetails createDetailsObject(long dlcId) {
-        String uuid = UUID.randomUUID().toString();
-        String name = getNameByDlcId(dlcId);
-        String description = getDescriptionByDlcId(dlcId);
-        Boolean totalConversion = isTotalConversion(dlcId);
+    public DLCDetails createDetailsObject(JsonDlc jsonDlc) {
+        String uuid = !cDebug ? UUID.randomUUID().toString() : jsonDlc.name;
+        String name = jsonDlc.name;
+        String description = jsonDlc.description;
+        boolean totalConversion = isTotalConversion(jsonDlc.type);
         String filePath = buildFilePath(name);
         String logoFile = "logo.webp";
         String folderFile = "folder.webp";

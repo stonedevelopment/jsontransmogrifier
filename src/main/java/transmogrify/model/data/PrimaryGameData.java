@@ -4,32 +4,23 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import transmogrify.model.details.PrimaryDetails;
-import transmogrify.model.json.JsonCategory;
-import transmogrify.model.json.JsonEngram;
-import transmogrify.model.json.JsonResource;
-import transmogrify.model.json.JsonStation;
+import transmogrify.model.json.*;
 import transmogrify.model.primary.*;
 
 import java.util.Date;
-import java.util.List;
 import java.util.UUID;
 
 public class PrimaryGameData extends GameData {
     PrimaryDetails details;
 
-    public PrimaryGameData(JsonNode inObject, ObjectMapper mapper) {
-        super(1, inObject, mapper);
-        this.details = createDetailsObject(1);
+    public PrimaryGameData(JsonDlc jsonDlc, JsonNode inObject, ObjectMapper mapper) {
+        super(jsonDlc, inObject, mapper);
+        this.details = createDetailsObject(jsonDlc);
     }
 
     @Override
     public boolean isValidDlcIdForDirectory(long dlcId) {
-        return this.dlcId == dlcId;
-    }
-
-    @Override
-    String getNameByDlcId(long dlcId) {
-        return "ARK:Survival Evolved";
+        return getDlcId() == dlcId;
     }
 
     @Override
@@ -43,10 +34,10 @@ public class PrimaryGameData extends GameData {
     }
 
     @Override
-    public PrimaryDetails createDetailsObject(long dlcId) {
-        String uuid = UUID.randomUUID().toString();
-        String name = getNameByDlcId(dlcId);
-        String description = getDescriptionByDlcId(dlcId);
+    public PrimaryDetails createDetailsObject(JsonDlc jsonDlc) {
+        String uuid = !cDebug ? UUID.randomUUID().toString() : jsonDlc.name;
+        String name = jsonDlc.name;
+        String description = jsonDlc.description;
         String filePath = buildFilePath(name);
         String logoFile = "logo.webp";
         String folderFile = "folder.webp";
@@ -106,12 +97,13 @@ public class PrimaryGameData extends GameData {
     @Override
     public Composition buildComposition(JsonEngram jsonEngram) {
         String uuid = !cDebug ? generateUUID() : jsonEngram.name;
-        List<Composite> compositeList = convertJsonComposition(jsonEngram.composition);
         String engramId = getEngramUUID(jsonEngram.name);
         Date lastUpdated = new Date();
         String gameId = details.getUuid();
 
-        return new Composition(uuid, engramId, compositeList, lastUpdated, gameId);
+        mapCompositesFromJson(uuid, jsonEngram);
+
+        return new Composition(uuid, engramId, lastUpdated, gameId);
     }
 
     @Override
@@ -135,6 +127,9 @@ public class PrimaryGameData extends GameData {
 
         //  add composition
         gameDataObject.set("composition", mapper.valueToTree(compositionMap.values()));
+
+        //  add composites
+        gameDataObject.set("composites", mapper.valueToTree(compositeMap.values()));
 
         //  add substitutions
 //        gameDataObject.set("substitutions", createSubsSection());

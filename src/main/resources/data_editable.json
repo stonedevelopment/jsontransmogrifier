@@ -58,29 +58,46 @@
   },
   "dlc": [
     {
-      "_id": 0,
-      "name": "Hidden"
-    },
-    {
       "_id": 1,
-      "name": "Vanilla"
+      "name": "ARK:Survival Evolved",
+      "description": "As a man or woman stranded, naked, freezing, and starving on the unforgiving shores of a mysterious island called \"ARK\", use your skill and cunning to kill or tame and ride the plethora of leviathan dinosaurs and other primeval creatures roaming the land. Hunt, harvest resources, craft items, grow crops, research technologies, and build shelters to withstand the elements and store valuables, all while teaming up with (or preying upon) hundreds of other players to survive, dominate... and escape!",
+      "type": "primary"
     },
     {
       "_id": 2,
       "name": "Primitive Plus",
-      "total_conversion": true
+      "description": "Primitive Plus is a free add-on for ARK: Survival Evolved that alters the available tools, weapons and structures in the game to reflect what humans could realistically create using primitive technology and resources. This does not simply remove advanced technology from ARK, but instead replaces it with a multitude of new resources, engrams and systems.",
+      "type": "total_conversion"
     },
     {
       "_id": 3,
-      "name": "Scorched Earth"
+      "name": "Scorched Earth",
+      "description": "Stranded naked, dehydrated & starving in a vast desert, even the most seasoned ARK survivors must quickly find water, hunt for food, harvest, craft items, and build shelter to have any chance for survival. Use skills honed on ARK's faraway Island to kill, tame, breed, and ride the fantastical new creatures that have evolved to survive the Desert's ultra harsh conditions, including... DRAGONS! Travel back and forth between the Island and the Desert to team up with hundreds of players across both worlds or play locally!",
+      "type": "map"
     },
     {
       "_id": 4,
-      "name": "Aberration"
+      "name": "Aberration",
+      "description": "Waking up on 'Aberration', a derelict, malfunctioning ARK with an elaborate underground biome system, survivors face exotic new challenges unlike anything before: extreme radioactive sunlight and environmental hazards, ziplines, wingsuits, climbing gear, cave dwellings, charge-batteries, and far more, along with a stable of extraordinary new creatures await within the mysterious depths. But beware the ‘Nameless’: unrelenting, Element-infused humanoids which have evolved into vicious light-hating monstrosities! On Aberration, survivors will uncover the ultimate secrets of the ARKs, and discover what the future holds in store for those strong and clever enough to survive!",
+      "type": "map"
     },
     {
       "_id": 5,
-      "name": "Extinction"
+      "name": "Extinction",
+      "description": "Finish your journey through the worlds of ARK in ‘Extinction’, where the story began and ends: on Earth itself! An Element-infested, ravaged planet filled with fantastical creatures both organic & technological, Earth holds both the secrets of the past and the keys to its salvation. As a veteran Survivor who has conquered all previous obstacles, your ultimate challenge awaits: can you defeat the gigantic roaming Titans which dominate the planet, and complete the ARK cycle to save Earth's future?",
+      "type": "map"
+    },
+    {
+      "_id": 6,
+      "name": "The Center",
+      "description": null,
+      "type": "map"
+    },
+    {
+      "_id": 7,
+      "name": "Ragnarok",
+      "description": null,
+      "type": "map"
     }
   ],
   "station": [
@@ -28614,7 +28631,7 @@
       "xp": 0,
       "steam_id": 0,
       "console_id": 0,
-      "dlc_id": 1,
+      "dlc_id": 6,
       "composition": [
         {
           "resource_id": "Megalodon Tooth",
@@ -28673,7 +28690,7 @@
       "xp": 0,
       "steam_id": 0,
       "console_id": 0,
-      "dlc_id": 1,
+      "dlc_id": 6,
       "composition": [
         {
           "resource_id": "Argentavis Talon",
@@ -28756,7 +28773,7 @@
       "xp": 0,
       "steam_id": 0,
       "console_id": 0,
-      "dlc_id": 1,
+      "dlc_id": 6,
       "composition": [
         {
           "resource_id": "Argentavis Talon",
@@ -28839,7 +28856,7 @@
       "xp": 0,
       "steam_id": 0,
       "console_id": 0,
-      "dlc_id": 1,
+      "dlc_id": 7,
       "composition": [
         {
           "resource_id": "Argentavis Talon",
@@ -28938,7 +28955,7 @@
       "xp": 0,
       "steam_id": 0,
       "console_id": 0,
-      "dlc_id": 1,
+      "dlc_id": 7,
       "composition": [
         {
           "resource_id": "Argentavis Talon",
@@ -29037,7 +29054,7 @@
       "xp": 0,
       "steam_id": 0,
       "console_id": 0,
-      "dlc_id": 1,
+      "dlc_id": 7,
       "composition": [
         {
           "resource_id": "Artifact of the Clever",
@@ -32283,13 +32300,7 @@
         "Generate Megapithecus (Gamma) Portal",
         "Generate Dragon (Alpha) Portal",
         "Generate Dragon (Beta) Portal",
-        "Generate Dragon (Gamma) Portal",
-        "Generate Center (Easy) Portal",
-        "Generate Center (Medium) Portal",
-        "Generate Center (Hard) Portal",
-        "Generate Ragnarok (Easy) Portal",
-        "Generate Ragnarok (Medium) Portal",
-        "Generate Ragnarok (Hard) Portal"
+        "Generate Dragon (Gamma) Portal"
       ]
     },
     {
@@ -32314,13 +32325,7 @@
         "Generate Megapithecus (Gamma) Portal",
         "Generate Dragon (Alpha) Portal",
         "Generate Dragon (Beta) Portal",
-        "Generate Dragon (Gamma) Portal",
-        "Generate Center (Easy) Portal",
-        "Generate Center (Medium) Portal",
-        "Generate Center (Hard) Portal",
-        "Generate Ragnarok (Easy) Portal",
-        "Generate Ragnarok (Medium) Portal",
-        "Generate Ragnarok (Hard) Portal"
+        "Generate Dragon (Gamma) Portal"
       ]
     },
     {
@@ -32333,6 +32338,55 @@
       "category": [
       ],
       "engram": [
+        "Generate Broodmother (Alpha) Portal",
+        "Generate Broodmother (Beta) Portal",
+        "Generate Broodmother (Gamma) Portal",
+        "Generate Megapithecus (Alpha) Portal",
+        "Generate Megapithecus (Beta) Portal",
+        "Generate Megapithecus (Gamma) Portal",
+        "Generate Dragon (Alpha) Portal",
+        "Generate Dragon (Beta) Portal",
+        "Generate Dragon (Gamma) Portal"
+      ]
+    },
+    {
+      "dlc_id": 6,
+      "resource": [],
+      "station": [
+        "Tek Terminal"
+      ],
+      "category": [
+      ],
+      "engram": [
+        "Generate Broodmother (Alpha) Portal",
+        "Generate Broodmother (Beta) Portal",
+        "Generate Broodmother (Gamma) Portal",
+        "Generate Megapithecus (Alpha) Portal",
+        "Generate Megapithecus (Beta) Portal",
+        "Generate Megapithecus (Gamma) Portal",
+        "Generate Dragon (Alpha) Portal",
+        "Generate Dragon (Beta) Portal",
+        "Generate Dragon (Gamma) Portal"
+      ]
+    },
+    {
+      "dlc_id": 7,
+      "resource": [],
+      "station": [
+        "Tek Terminal"
+      ],
+      "category": [
+      ],
+      "engram": [
+        "Generate Broodmother (Alpha) Portal",
+        "Generate Broodmother (Beta) Portal",
+        "Generate Broodmother (Gamma) Portal",
+        "Generate Megapithecus (Alpha) Portal",
+        "Generate Megapithecus (Beta) Portal",
+        "Generate Megapithecus (Gamma) Portal",
+        "Generate Dragon (Alpha) Portal",
+        "Generate Dragon (Beta) Portal",
+        "Generate Dragon (Gamma) Portal"
       ]
     }
   ]

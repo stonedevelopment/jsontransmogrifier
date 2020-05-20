@@ -1,0 +1,280 @@
+{
+  "details": {
+    "uuid": "Ragnarok",
+    "name": "Ragnarok",
+    "description": null,
+    "filePath": "DLC/Ragnarok/",
+    "logoFile": "logo.webp",
+    "folderFile": "folder.webp",
+    "backFolderFile": "backFolder.webp",
+    "lastUpdated": 1589943942763,
+    "totalConversion": false,
+    "gameId": "ARK:Survival Evolved"
+  },
+  "resources": [],
+  "stations": [],
+  "folders": [],
+  "engrams": [
+    {
+      "uuid": "Generate Ragnarok (Easy) Portal",
+      "name": "Generate Ragnarok (Easy) Portal",
+      "description": "Use this to generate a portal to Ragnarok's Guardians.",
+      "imageFile": "gamma_portal.webp",
+      "level": 70,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1589943942767,
+      "gameId": "ARK:Survival Evolved",
+      "dlcId": "Ragnarok"
+    },
+    {
+      "uuid": "Generate Ragnarok (Hard) Portal",
+      "name": "Generate Ragnarok (Hard) Portal",
+      "description": "Use this to generate a portal to Ragnarok's Guardians. (Hard)",
+      "imageFile": "alpha_portal.webp",
+      "level": 90,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1589943942767,
+      "gameId": "ARK:Survival Evolved",
+      "dlcId": "Ragnarok"
+    },
+    {
+      "uuid": "Generate Ragnarok (Medium) Portal",
+      "name": "Generate Ragnarok (Medium) Portal",
+      "description": "Use this to generate a portal to Ragnarok's Guardians. (Medium)",
+      "imageFile": "beta_portal.webp",
+      "level": 80,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1589943942767,
+      "gameId": "ARK:Survival Evolved",
+      "dlcId": "Ragnarok"
+    }
+  ],
+  "composition": [
+    {
+      "uuid": "Generate Ragnarok (Easy) Portal",
+      "engramId": "Generate Ragnarok (Easy) Portal",
+      "lastUpdated": 1589943942769,
+      "gameId": "ARK:Survival Evolved",
+      "dlcId": "Ragnarok"
+    },
+    {
+      "uuid": "Generate Ragnarok (Hard) Portal",
+      "engramId": "Generate Ragnarok (Hard) Portal",
+      "lastUpdated": 1589943942769,
+      "gameId": "ARK:Survival Evolved",
+      "dlcId": "Ragnarok"
+    },
+    {
+      "uuid": "Generate Ragnarok (Medium) Portal",
+      "engramId": "Generate Ragnarok (Medium) Portal",
+      "lastUpdated": 1589943942769,
+      "gameId": "ARK:Survival Evolved",
+      "dlcId": "Ragnarok"
+    }
+  ],
+  "composites": [
+    {
+      "uuid": "Argentavis Talon",
+      "sourceId": "Argentavis Talon",
+      "quantity": 10,
+      "compositionId": "Generate Ragnarok (Medium) Portal",
+      "engram": false
+    },
+    {
+      "uuid": "Artifact of the Clever",
+      "sourceId": "Artifact of the Clever",
+      "quantity": 1,
+      "compositionId": "Generate Ragnarok (Easy) Portal",
+      "engram": false
+    },
+    {
+      "uuid": "Artifact of the Cunning",
+      "sourceId": "Artifact of the Cunning",
+      "quantity": 1,
+      "compositionId": "Generate Ragnarok (Easy) Portal",
+      "engram": false
+    },
+    {
+      "uuid": "Artifact of the Devious",
+      "sourceId": "Artifact of the Devious",
+      "quantity": 1,
+      "compositionId": "Generate Ragnarok (Easy) Portal",
+      "engram": false
+    },
+    {
+      "uuid": "Artifact of the Devourer",
+      "sourceId": "Artifact of the Devourer",
+      "quantity": 1,
+      "compositionId": "Generate Ragnarok (Easy) Portal",
+      "engram": false
+    },
+    {
+      "uuid": "Artifact of the Hunter",
+      "sourceId": "Artifact of the Hunter",
+      "quantity": 1,
+      "compositionId": "Generate Ragnarok (Easy) Portal",
+      "engram": false
+    },
+    {
+      "uuid": "Artifact of the Immune",
+      "sourceId": "Artifact of the Immune",
+      "quantity": 1,
+      "compositionId": "Generate Ragnarok (Easy) Portal",
+      "engram": false
+    },
+    {
+      "uuid": "Artifact of the Massive",
+      "sourceId": "Artifact of the Massive",
+      "quantity": 1,
+      "compositionId": "Generate Ragnarok (Easy) Portal",
+      "engram": false
+    },
+    {
+      "uuid": "Artifact of the Pack",
+      "sourceId": "Artifact of the Pack",
+      "quantity": 1,
+      "compositionId": "Generate Ragnarok (Easy) Portal",
+      "engram": false
+    },
+    {
+      "uuid": "Artifact of the Skylord",
+      "sourceId": "Artifact of the Skylord",
+      "quantity": 1,
+      "compositionId": "Generate Ragnarok (Easy) Portal",
+      "engram": false
+    },
+    {
+      "uuid": "Artifact of the Strong",
+      "sourceId": "Artifact of the Strong",
+      "quantity": 1,
+      "compositionId": "Generate Ragnarok (Easy) Portal",
+      "engram": false
+    },
+    {
+      "uuid": "Basilosaurus Blubber",
+      "sourceId": "Basilosaurus Blubber",
+      "quantity": 10,
+      "compositionId": "Generate Ragnarok (Medium) Portal",
+      "engram": false
+    },
+    {
+      "uuid": "Megalania Toxin",
+      "sourceId": "Megalania Toxin",
+      "quantity": 10,
+      "compositionId": "Generate Ragnarok (Medium) Portal",
+      "engram": false
+    },
+    {
+      "uuid": "Megalodon Tooth",
+      "sourceId": "Megalodon Tooth",
+      "quantity": 10,
+      "compositionId": "Generate Ragnarok (Medium) Portal",
+      "engram": false
+    },
+    {
+      "uuid": "Sarcosuchus Skin",
+      "sourceId": "Sarcosuchus Skin",
+      "quantity": 10,
+      "compositionId": "Generate Ragnarok (Medium) Portal",
+      "engram": false
+    },
+    {
+      "uuid": "Sauropod Vertebra",
+      "sourceId": "Sauropod Vertebra",
+      "quantity": 10,
+      "compositionId": "Generate Ragnarok (Medium) Portal",
+      "engram": false
+    },
+    {
+      "uuid": "Spinosaurus Sail",
+      "sourceId": "Spinosaurus Sail",
+      "quantity": 10,
+      "compositionId": "Generate Ragnarok (Medium) Portal",
+      "engram": false
+    },
+    {
+      "uuid": "Thylacoleo Hook-Claw",
+      "sourceId": "Thylacoleo Hook-Claw",
+      "quantity": 10,
+      "compositionId": "Generate Ragnarok (Medium) Portal",
+      "engram": false
+    },
+    {
+      "uuid": "Titanoboa Venom",
+      "sourceId": "Titanoboa Venom",
+      "quantity": 10,
+      "compositionId": "Generate Ragnarok (Medium) Portal",
+      "engram": false
+    },
+    {
+      "uuid": "Tusoteuthis Tentacle",
+      "sourceId": "Tusoteuthis Tentacle",
+      "quantity": 10,
+      "compositionId": "Generate Ragnarok (Medium) Portal",
+      "engram": false
+    }
+  ],
+  "directory": [
+    {
+      "station": "Obelisk",
+      "engrams": [],
+      "folders": [
+        {
+          "uuid": "Boss Arenas",
+          "engrams": [],
+          "folders": [
+            {
+              "uuid": "Ragnarok Arena",
+              "engrams": [
+                {
+                  "uuid": "Generate Ragnarok (Hard) Portal"
+                },
+                {
+                  "uuid": "Generate Ragnarok (Medium) Portal"
+                },
+                {
+                  "uuid": "Generate Ragnarok (Easy) Portal"
+                }
+              ],
+              "folders": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "remove": {
+    "resources": [],
+    "stations": [
+      "Tek Terminal"
+    ],
+    "folders": [],
+    "engrams": [
+      "Generate Broodmother (Alpha) Portal",
+      "Generate Broodmother (Beta) Portal",
+      "Generate Broodmother (Gamma) Portal",
+      "Generate Megapithecus (Alpha) Portal",
+      "Generate Megapithecus (Beta) Portal",
+      "Generate Megapithecus (Gamma) Portal",
+      "Generate Dragon (Alpha) Portal",
+      "Generate Dragon (Beta) Portal",
+      "Generate Dragon (Gamma) Portal"
+    ]
+  },
+  "replace": {
+    "resources": [],
+    "stations": [],
+    "folders": [],
+    "engrams": [],
+    "composition": []
+  }
+}
