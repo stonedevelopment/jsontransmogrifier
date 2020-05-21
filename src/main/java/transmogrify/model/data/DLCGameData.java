@@ -7,7 +7,10 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import transmogrify.model.details.DLCDetails;
 import transmogrify.model.dlc.*;
 import transmogrify.model.json.*;
-import transmogrify.model.primary.*;
+import transmogrify.model.primary.Engram;
+import transmogrify.model.primary.Folder;
+import transmogrify.model.primary.Resource;
+import transmogrify.model.primary.Station;
 
 import java.util.Date;
 import java.util.List;
@@ -172,11 +175,6 @@ public class DLCGameData extends GameData {
     }
 
     @Override
-    public String buildFilePath(String dlcName) {
-        return String.format("DLC/%s/", dlcName);
-    }
-
-    @Override
     public String buildFilePathForJSONExport() {
         return String.format("src/assets/DLC/%s.json", details.getName());
     }
@@ -199,12 +197,17 @@ public class DLCGameData extends GameData {
         String name = jsonDlc.name;
         String description = jsonDlc.description;
         boolean totalConversion = isTotalConversion(jsonDlc.type);
-        String filePath = buildFilePath(name);
+        String filePath = jsonDlc.filePath;
         String logoFile = "logo.webp";
         String folderFile = "folder.webp";
         String backFolderFile = "backFolder.webp";
         String gameId = primaryGameData.details.getUuid();
         return new DLCDetails(uuid, name, description, totalConversion, filePath, logoFile, folderFile, backFolderFile, gameId);
+    }
+
+    @Override
+    public DLCDetails getDetailsObject() {
+        return details;
     }
 
     @Override

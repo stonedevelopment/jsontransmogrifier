@@ -3,6 +3,7 @@ package transmogrify.model.data;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import transmogrify.model.details.Details;
 import transmogrify.model.details.PrimaryDetails;
 import transmogrify.model.json.*;
 import transmogrify.model.primary.*;
@@ -24,11 +25,6 @@ public class PrimaryGameData extends GameData {
     }
 
     @Override
-    public String buildFilePath(String dlcName) {
-        return "Primary/";
-    }
-
-    @Override
     public String buildFilePathForJSONExport() {
         return "src/assets/Primary/Primary.json";
     }
@@ -38,11 +34,16 @@ public class PrimaryGameData extends GameData {
         String uuid = !cDebug ? UUID.randomUUID().toString() : jsonDlc.name;
         String name = jsonDlc.name;
         String description = jsonDlc.description;
-        String filePath = buildFilePath(name);
+        String filePath = jsonDlc.filePath;
         String logoFile = "logo.webp";
         String folderFile = "folder.webp";
         String backFolderFile = "backFolder.webp";
         return new PrimaryDetails(uuid, name, description, filePath, logoFile, folderFile, backFolderFile);
+    }
+
+    @Override
+    public PrimaryDetails getDetailsObject() {
+        return details;
     }
 
     @Override

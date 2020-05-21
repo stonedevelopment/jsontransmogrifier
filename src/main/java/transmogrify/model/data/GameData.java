@@ -11,7 +11,11 @@ import transmogrify.model.primary.*;
 import java.util.*;
 
 public abstract class GameData {
-    public static final boolean cDebug = true; // TODO: 4/26/2020 Set to FALSE when finalizing
+    public static final boolean cDebug = false; // TODO: 4/26/2020 Set to FALSE when finalizing
+    public static final String cUuid = "uuid";
+    public static final String cName = "name";
+    public static final String cImageFile = "imageFile";
+    public static final String cStation = "station";
 
     public List<String> nullifiedResources = new ArrayList<>();
 
@@ -38,6 +42,8 @@ public abstract class GameData {
     }
 
     public abstract Details createDetailsObject(JsonDlc jsonDlc);
+
+    public abstract Details getDetailsObject();
 
     public long getDlcId() {
         return jsonDlc._id;
@@ -170,14 +176,15 @@ public abstract class GameData {
     }
 
     public Composite buildComposite(String compositionId, JsonComposite jsonComposite) {
-        String uuid = !cDebug ? generateUUID() : jsonComposite.resource_id;
+        String uuid = generateUUID();
         String resourceId = getResourceUUID(jsonComposite.resource_id);
         String engramId = getEngramUUID(jsonComposite.resource_id);
         boolean isEngram = engramId != null;
         String sourceId = isEngram ? engramId : resourceId;
         int quantity = jsonComposite.quantity;
+        String gameId = getDetailsObject().getUuid();
 
-        return new Composite(uuid, sourceId, quantity, isEngram, compositionId);
+        return new Composite(uuid, sourceId, quantity, isEngram, compositionId, gameId);
     }
 
     public void mapSubstitutesFromResourceMap() {
@@ -284,7 +291,9 @@ public abstract class GameData {
 
                 //  create station object
                 ObjectNode stationNode = mapper.createObjectNode();
-                stationNode.put("station", station.getUuid());
+                stationNode.put(cStation, station.getUuid());
+                stationNode.put(cName, station.getName());
+                stationNode.put(cImageFile, station.getImageFile());
 
                 //  add engrams from json
                 JsonNode engramArray = createJsonArrayForEngrams(station, 0);
@@ -322,7 +331,9 @@ public abstract class GameData {
 
                 //  create folder json object
                 ObjectNode folderNode = mapper.createObjectNode();
-                folderNode.put("uuid", folder.getUuid());
+                folderNode.put(cUuid, folder.getUuid());
+                folderNode.put(cName, folder.getName());
+                folderNode.put(cImageFile, getDetailsObject().getFolderFile());
 
                 //  add engrams from json
                 JsonNode engramArray = createJsonArrayForEngrams(station, jsonCategory._id);
@@ -360,7 +371,9 @@ public abstract class GameData {
 
                 //  create engram json object
                 ObjectNode engramNode = mapper.createObjectNode();
-                engramNode.put("uuid", engram.getUuid());
+                engramNode.put(cUuid, engram.getUuid());
+                engramNode.put(cName, engram.getName());
+                engramNode.put(cImageFile, engram.getImageFile());
 
                 //  add engram to array
                 outNode.add(engramNode);
@@ -369,8 +382,6 @@ public abstract class GameData {
 
         return outNode;
     }
-
-    public abstract String buildFilePath(String dlcName);
 
     public abstract String buildFilePathForJSONExport();
 }

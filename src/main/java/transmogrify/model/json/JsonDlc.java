@@ -11,4 +11,5 @@ public class JsonDlc {
     public String name;
     public String description;
     public String type;
+    public String filePath;
 }
