@@ -1358,7 +1358,7 @@
       "_id": 1604,
       "name": "The Center Arena",
       "parent_id": 1600,
-      "dlc_id": 1,
+      "dlc_id": 6,
       "station": [
         "Obelisk"
       ]
@@ -32294,9 +32294,7 @@
       "category": [
         1601,
         1602,
-        1603,
-        1604,
-        1606
+        1603
       ],
       "engram": [
         "Generate Broodmother (Alpha) Portal",
@@ -32319,9 +32317,7 @@
       "category": [
         1601,
         1602,
-        1603,
-        1604,
-        1606
+        1603
       ],
       "engram": [
         "Generate Broodmother (Alpha) Portal",
@@ -32343,6 +32339,9 @@
         "Tek Terminal"
       ],
       "category": [
+        1601,
+        1602,
+        1603
       ],
       "engram": [
         "Generate Broodmother (Alpha) Portal",
@@ -32363,6 +32362,9 @@
         "Tek Terminal"
       ],
       "category": [
+        1601,
+        1602,
+        1603
       ],
       "engram": [
         "Generate Broodmother (Alpha) Portal",
@@ -32383,6 +32385,9 @@
         "Tek Terminal"
       ],
       "category": [
+        1601,
+        1602,
+        1603
       ],
       "engram": [
         "Generate Broodmother (Alpha) Portal",

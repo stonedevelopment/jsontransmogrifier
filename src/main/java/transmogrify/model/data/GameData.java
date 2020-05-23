@@ -2,8 +2,6 @@ package transmogrify.model.data;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ArrayNode;
-import com.fasterxml.jackson.databind.node.ObjectNode;
 import transmogrify.model.details.Details;
 import transmogrify.model.json.*;
 import transmogrify.model.primary.*;
@@ -15,7 +13,7 @@ public abstract class GameData {
     public static final String cUuid = "uuid";
     public static final String cName = "name";
     public static final String cImageFile = "imageFile";
-    public static final String cStation = "station";
+    public static final String cStationId = "stationId";
 
     public List<String> nullifiedResources = new ArrayList<>();
 
@@ -28,8 +26,9 @@ public abstract class GameData {
     Map<String, Engram> engramMap = new TreeMap<>();
     Map<String, Station> stationMap = new TreeMap<>();
     Map<String, Composition> compositionMap = new TreeMap<>();
-    Map<String, Composite> compositeMap = new TreeMap<>();
+    Map<String, List<Composite>> compositeMap = new TreeMap<>();
     Map<String, List<String>> substitutions = new TreeMap<>();
+    Map<String, DirectoryItem> directory = new TreeMap<>();
 
     public GameData(JsonDlc jsonDlc, JsonNode inObject, ObjectMapper mapper) {
         this.jsonDlc = jsonDlc;
@@ -55,10 +54,22 @@ public abstract class GameData {
         return resource != null ? resource.getUuid() : null;
     }
 
+    public String getResourceImageFile(String name) {
+        Resource resource = getResourceByName(name);
+
+        return resource != null ? resource.getImageFile() : null;
+    }
+
     public String getEngramUUID(String name) {
         Engram engram = getEngramByName(name);
 
         return engram != null ? engram.getUuid() : null;
+    }
+
+    public String getEngramImageFile(String name) {
+        Engram engram = getEngramByName(name);
+
+        return engram != null ? engram.getImageFile() : null;
     }
 
     public Resource getResourceByName(String name) {
@@ -97,6 +108,7 @@ public abstract class GameData {
         mapEngramsFromJson();
         mapStationsFromJson();
         mapCompositionFromJson();
+        mapDirectoryFromJson();
     }
 
     public abstract JsonNode generateJson();
@@ -171,20 +183,19 @@ public abstract class GameData {
 
     void mapCompositesFromJson(String compositionId, JsonEngram jsonEngram) {
         for (JsonComposite jsonComposite : jsonEngram.composition) {
-            compositeMap.put(jsonComposite.resource_id, buildComposite(compositionId, jsonComposite));
+            List<Composite> compositeList = compositeMap.get(jsonComposite.resource_id);
+            if (compositeList == null) compositeList = new ArrayList<>();
+            compositeList.add(buildComposite(compositionId, jsonComposite));
+            compositeMap.put(jsonComposite.resource_id, compositeList);
         }
     }
 
-    public Composite buildComposite(String compositionId, JsonComposite jsonComposite) {
-        String uuid = generateUUID();
-        String resourceId = getResourceUUID(jsonComposite.resource_id);
-        String engramId = getEngramUUID(jsonComposite.resource_id);
-        boolean isEngram = engramId != null;
-        String sourceId = isEngram ? engramId : resourceId;
-        int quantity = jsonComposite.quantity;
-        String gameId = getDetailsObject().getUuid();
+    public abstract Composite buildComposite(String compositionId, JsonComposite jsonComposite);
 
-        return new Composite(uuid, sourceId, quantity, isEngram, compositionId, gameId);
+    List<Composite> flattenCompositeMapToList() {
+        List<Composite> composites = new ArrayList<>();
+        compositeMap.values().forEach(composites::addAll);
+        return composites;
     }
 
     public void mapSubstitutesFromResourceMap() {
@@ -198,6 +209,12 @@ public abstract class GameData {
             }
         }
     }
+
+    public abstract int mapStationDirectoryItem(Station station);
+
+    public abstract void mapEngramDirectoryItem(Engram engram, String parentId);
+
+    public abstract int mapFolderDirectoryItem(Station station, Folder folder, long categoryId, String parentId);
 
     List<String> convertResourceNamesToId(List<String> in) {
         List<String> out = new ArrayList<>();
@@ -273,14 +290,18 @@ public abstract class GameData {
     public abstract boolean isValidDlcIdForDirectory(long dlcId);
 
     /**
-     * Creates a hierarchical directory with only UUIDs for app to easily and quickly fill database with parent
-     * information.
-     *
-     * @return JSON object of directory section
+     * directory [
+     * {
+     * uuid
+     * name
+     * imageFile
+     * parentId
+     * sourceId
+     * gameId
+     * }
+     * ]
      */
-    ArrayNode createDirectorySection() {
-        ArrayNode outNode = mapper.createArrayNode();
-
+    void mapDirectoryFromJson() {
         JsonNode stationArray = inObject.get("station");
         for (JsonNode stationObject : stationArray) {
             JsonStation jsonStation = mapper.convertValue(stationObject, JsonStation.class);
@@ -289,31 +310,14 @@ public abstract class GameData {
                 //  get station from map
                 Station station = getStationByName(jsonStation.name);
 
-                //  create station object
-                ObjectNode stationNode = mapper.createObjectNode();
-                stationNode.put(cStation, station.getUuid());
-                stationNode.put(cName, station.getName());
-                stationNode.put(cImageFile, station.getImageFile());
-
-                //  add engrams from json
-                JsonNode engramArray = createJsonArrayForEngrams(station, 0);
-                stationNode.set("engrams", engramArray);
-
-                //  add folders from json
-                JsonNode folderArray = createJsonArrayForFolders(station, 0);
-                stationNode.set("folders", folderArray);
-
-                if (engramArray.size() > 0 || folderArray.size() > 0) {
-                    outNode.add(stationNode);
-                }
+                //  map station object
+                mapStationDirectoryItem(station);
             }
         }
-
-        return outNode;
     }
 
-    private ArrayNode createJsonArrayForFolders(final Station station, final long parentId) {
-        ArrayNode outNode = mapper.createArrayNode();
+    int mapFolderDirectory(final Station station, final long categoryId, final String parentId) {
+        int count = 0;
 
         JsonNode categoryArray = inObject.get("category");
         for (JsonNode categoryObject : categoryArray) {
@@ -324,36 +328,23 @@ public abstract class GameData {
                 if (!jsonCategory.station.contains(station.getName())) continue;
 
                 //  test if both categories share the same parent
-                if (jsonCategory.parent_id != parentId) continue;
+                if (jsonCategory.parent_id != categoryId) continue;
 
                 //  get folder from folderMap
                 Folder folder = getFolderByCategoryId(jsonCategory._id);
 
-                //  create folder json object
-                ObjectNode folderNode = mapper.createObjectNode();
-                folderNode.put(cUuid, folder.getUuid());
-                folderNode.put(cName, folder.getName());
-                folderNode.put(cImageFile, getDetailsObject().getFolderFile());
+                //  map folder object
+                int itemCount = mapFolderDirectoryItem(station, folder, jsonCategory._id, parentId);
 
-                //  add engrams from json
-                JsonNode engramArray = createJsonArrayForEngrams(station, jsonCategory._id);
-                folderNode.set("engrams", engramArray);
-
-                //  add folders from json
-                JsonNode folderArray = createJsonArrayForFolders(station, jsonCategory._id);
-                folderNode.set("folders", folderArray);
-
-                if (engramArray.size() > 0 || folderArray.size() > 0) {
-                    outNode.add(folderNode);
-                }
+                count += itemCount;
             }
         }
 
-        return outNode;
+        return count;
     }
 
-    private JsonNode createJsonArrayForEngrams(final Station station, final long parentId) {
-        ArrayNode outNode = mapper.createArrayNode();
+    int mapEngramDirectory(final Station station, final long categoryId, final String parentId) {
+        int count = 0;
 
         JsonNode engramArray = inObject.get("engram");
         for (JsonNode engramObject : engramArray) {
@@ -364,23 +355,20 @@ public abstract class GameData {
                 if (!jsonEngram.station.contains(station.getName())) continue;
 
                 //  test if engram shares the same parent
-                if (jsonEngram.category_id != parentId) continue;
+                if (jsonEngram.category_id != categoryId) continue;
 
                 //  get engram from engramMap
                 Engram engram = getEngramByName(jsonEngram.name);
 
                 //  create engram json object
-                ObjectNode engramNode = mapper.createObjectNode();
-                engramNode.put(cUuid, engram.getUuid());
-                engramNode.put(cName, engram.getName());
-                engramNode.put(cImageFile, engram.getImageFile());
+                mapEngramDirectoryItem(engram, parentId);
 
-                //  add engram to array
-                outNode.add(engramNode);
+                //  increase count for length validity
+                count++;
             }
         }
 
-        return outNode;
+        return count;
     }
 
     public abstract String buildFilePathForJSONExport();

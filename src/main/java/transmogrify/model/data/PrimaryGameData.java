@@ -3,7 +3,6 @@ package transmogrify.model.data;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import transmogrify.model.details.Details;
 import transmogrify.model.details.PrimaryDetails;
 import transmogrify.model.json.*;
 import transmogrify.model.primary.*;
@@ -108,6 +107,70 @@ public class PrimaryGameData extends GameData {
     }
 
     @Override
+    public Composite buildComposite(String compositionId, JsonComposite jsonComposite) {
+        String uuid = generateUUID();
+        String resourceId = getResourceUUID(jsonComposite.resource_id);
+        String engramId = getEngramUUID(jsonComposite.resource_id);
+        boolean isEngram = engramId != null;
+        String sourceId = isEngram ? engramId : resourceId;
+        String name = jsonComposite.resource_id;
+        String imageFile = isEngram ? getEngramImageFile(name) : getResourceImageFile(name);
+        int quantity = jsonComposite.quantity;
+        String gameId = getDetailsObject().getUuid();
+
+        return new Composite(uuid, name, imageFile, quantity, sourceId, isEngram, compositionId, gameId);
+    }
+
+    @Override
+    public int mapStationDirectoryItem(Station station) {
+        String uuid = !cDebug ? generateUUID() : station.getName();
+        String name = station.getName();
+        String imageFile = station.getImageFile();
+        String sourceId = station.getUuid();
+        String gameId = details.getUuid();
+
+        int engramCount = mapEngramDirectory(station, 0, uuid);
+        int folderCount = mapFolderDirectory(station, 0, uuid);
+        int totalCount = engramCount + folderCount;
+
+        if (totalCount > 0) {
+            directory.put(name, new DirectoryItem(uuid, name, imageFile, null, sourceId, gameId));
+        }
+
+        return totalCount;
+    }
+
+    @Override
+    public void mapEngramDirectoryItem(Engram engram, String parentId) {
+        String uuid = !cDebug ? generateUUID() : engram.getName();
+        String sourceId = engram.getUuid();
+        String name = engram.getName();
+        String imageFile = engram.getImageFile();
+        String gameId = details.getUuid();
+
+        directory.put(name, new DirectoryItem(uuid, name, imageFile, parentId, sourceId, gameId));
+    }
+
+    @Override
+    public int mapFolderDirectoryItem(Station station, Folder folder, long categoryId, String parentId) {
+        String uuid = !cDebug ? generateUUID() : folder.getName();
+        String sourceId = folder.getUuid();
+        String name = folder.getName();
+        String imageFile = details.getFolderFile();
+        String gameId = details.getUuid();
+
+        int engramCount = mapEngramDirectory(station, categoryId, uuid);
+        int folderCount = mapFolderDirectory(station, categoryId, uuid);
+        int totalCount = engramCount + folderCount;
+
+        if (totalCount > 0) {
+            directory.put(name, new DirectoryItem(uuid, name, imageFile, parentId, sourceId, gameId));
+        }
+
+        return totalCount;
+    }
+
+    @Override
     public JsonNode generateJson() {
         //  create dlc json object
         ObjectNode gameDataObject = mapper.createObjectNode();
@@ -130,13 +193,13 @@ public class PrimaryGameData extends GameData {
         gameDataObject.set("composition", mapper.valueToTree(compositionMap.values()));
 
         //  add composites
-        gameDataObject.set("composites", mapper.valueToTree(compositeMap.values()));
+        gameDataObject.set("composites", mapper.valueToTree(flattenCompositeMapToList()));
 
         //  add substitutions
 //        gameDataObject.set("substitutions", createSubsSection());
 
         //  add directory, traverse through tree, fill with uuids
-        gameDataObject.set("directory", createDirectorySection());
+        gameDataObject.set("directory", mapper.valueToTree(directory.values()));
 
         return gameDataObject;
     }
