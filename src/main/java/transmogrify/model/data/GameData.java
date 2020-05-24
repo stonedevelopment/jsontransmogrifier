@@ -14,6 +14,9 @@ public abstract class GameData {
     public static final String cName = "name";
     public static final String cImageFile = "imageFile";
     public static final String cStationId = "stationId";
+    public static final int cStationViewType = 0;
+    public static final int cFolderViewType = 1;
+    public static final int cEngramViewType = 2;
 
     public List<String> nullifiedResources = new ArrayList<>();
 

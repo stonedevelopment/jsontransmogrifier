@@ -184,7 +184,7 @@ public class DLCGameData extends GameData {
         int totalCount = engramCount + folderCount;
 
         if (totalCount > 0) {
-            directory.put(name, new DlcDirectoryItem(uuid, name, imageFile, null, sourceId, gameId, dlcId));
+            directory.put(name, new DlcDirectoryItem(uuid, name, imageFile, cStationViewType, null, sourceId, gameId, dlcId));
         }
 
         return totalCount;
@@ -199,7 +199,7 @@ public class DLCGameData extends GameData {
         String gameId = details.getGameId();
         String dlcId = details.getUuid();
 
-        directory.put(name, new DlcDirectoryItem(uuid, name, imageFile, parentId, sourceId, gameId, dlcId));
+        directory.put(name, new DlcDirectoryItem(uuid, name, imageFile, cEngramViewType, parentId, sourceId, gameId, dlcId));
     }
 
     @Override
@@ -216,7 +216,7 @@ public class DLCGameData extends GameData {
         int totalCount = engramCount + folderCount;
 
         if (totalCount > 0) {
-            directory.put(name, new DlcDirectoryItem(uuid, name, imageFile, parentId, sourceId, gameId, dlcId));
+            directory.put(name, new DlcDirectoryItem(uuid, name, imageFile, cFolderViewType, parentId, sourceId, gameId, dlcId));
         }
 
         return totalCount;

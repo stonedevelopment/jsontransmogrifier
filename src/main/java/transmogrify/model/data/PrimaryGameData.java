@@ -134,7 +134,7 @@ public class PrimaryGameData extends GameData {
         int totalCount = engramCount + folderCount;
 
         if (totalCount > 0) {
-            directory.put(name, new DirectoryItem(uuid, name, imageFile, null, sourceId, gameId));
+            directory.put(name, new DirectoryItem(uuid, name, imageFile, cStationViewType, null, sourceId, gameId));
         }
 
         return totalCount;
@@ -148,7 +148,7 @@ public class PrimaryGameData extends GameData {
         String imageFile = engram.getImageFile();
         String gameId = details.getUuid();
 
-        directory.put(name, new DirectoryItem(uuid, name, imageFile, parentId, sourceId, gameId));
+        directory.put(name, new DirectoryItem(uuid, name, imageFile, cEngramViewType, parentId, sourceId, gameId));
     }
 
     @Override
@@ -164,7 +164,7 @@ public class PrimaryGameData extends GameData {
         int totalCount = engramCount + folderCount;
 
         if (totalCount > 0) {
-            directory.put(name, new DirectoryItem(uuid, name, imageFile, parentId, sourceId, gameId));
+            directory.put(name, new DirectoryItem(uuid, name, imageFile, cFolderViewType, parentId, sourceId, gameId));
         }
 
         return totalCount;

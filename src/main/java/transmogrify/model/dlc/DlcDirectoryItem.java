@@ -14,8 +14,9 @@ import transmogrify.model.primary.DirectoryItem;
 public class DlcDirectoryItem extends DirectoryItem {
     private final String dlcId;
 
-    public DlcDirectoryItem(String uuid, String name, String imageFile, String parentId, String sourceId, String gameId, String dlcId) {
-        super(uuid, name, imageFile, parentId, sourceId, gameId);
+    public DlcDirectoryItem(String uuid, String name, String imageFile, int priority, String parentId, String sourceId,
+                            String gameId, String dlcId) {
+        super(uuid, name, imageFile, priority, parentId, sourceId, gameId);
         this.dlcId = dlcId;
     }
 
