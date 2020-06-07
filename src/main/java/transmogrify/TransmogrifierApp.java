@@ -11,7 +11,7 @@ import util.JSONUtil;
 import java.io.IOException;
 
 import static util.JSONUtil.writeOut;
-import static util.LogUtil.logf;
+import static util.Log.f;
 
 /**
  * Converts old JSON data into separated JSON files with static UUIDs.
@@ -44,7 +44,7 @@ public class TransmogrifierApp {
                 writeGameDataToFile(gameData);
             }
 
-            logf("Nullified resources: ", primaryGameData.nullifiedResources.toString());
+            f("Nullified resources: ", primaryGameData.nullifiedResources.toString());
         } catch (IOException e) {
             e.printStackTrace();
         }

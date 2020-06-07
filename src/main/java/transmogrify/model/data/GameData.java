@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import transmogrify.model.details.Details;
 import transmogrify.model.json.*;
 import transmogrify.model.primary.*;
+import util.Log;
 
 import java.util.*;
 
@@ -24,14 +25,28 @@ public abstract class GameData {
     JsonNode inObject;
     ObjectMapper mapper;
 
-    Map<String, Resource> resourceMap = new TreeMap<>();
-    Map<Long, Folder> folderMap = new TreeMap<>();
-    Map<String, Engram> engramMap = new TreeMap<>();
-    Map<String, Station> stationMap = new TreeMap<>();
-    Map<String, Composition> compositionMap = new TreeMap<>();
-    Map<String, List<Composite>> compositeMap = new TreeMap<>();
-    Map<String, List<String>> substitutions = new TreeMap<>();
-    Map<String, DirectoryItem> directory = new TreeMap<>();
+    //  name, uuid
+    Map<String, String> resourceIdMap = new TreeMap<>();
+    Map<String, String> engramIdMap = new TreeMap<>();
+    Map<String, String> stationIdMap = new TreeMap<>();
+    Map<String, String> compositionIdMap = new TreeMap<>();
+
+    //  name, list<uuid>
+    Map<String, List<String>> compositeIdMap = new TreeMap<>();
+
+    //  oldId, uuid
+    Map<Long, String> folderIdMap = new TreeMap<>();
+
+    //  uuid, object
+    Map<String, Resource> resourceMap = new HashMap<>();
+    Map<String, Folder> folderMap = new HashMap<>();
+    Map<String, Engram> engramMap = new HashMap<>();
+    Map<String, Station> stationMap = new HashMap<>();
+    Map<String, Composition> compositionMap = new HashMap<>();
+    Map<String, Composite> compositeMap = new HashMap<>();
+
+    //  list<object>
+    List<DirectoryItem> directory = new ArrayList<>();
 
     public GameData(JsonDlc jsonDlc, JsonNode inObject, ObjectMapper mapper) {
         this.jsonDlc = jsonDlc;
@@ -51,48 +66,81 @@ public abstract class GameData {
         return jsonDlc._id;
     }
 
-    public String getResourceUUID(String name) {
-        Resource resource = getResourceByName(name);
-
-        return resource != null ? resource.getUuid() : null;
+    public String getResourceUUIDByName(String name) {
+        return resourceIdMap.get(name);
     }
 
-    public String getResourceImageFile(String name) {
-        Resource resource = getResourceByName(name);
-
-        return resource != null ? resource.getImageFile() : null;
+    public String getResourceImageFileByUUID(String uuid) {
+        Resource resource = getResource(uuid);
+        if (resource == null) return null;
+        return resource.getImageFile();
     }
 
-    public String getEngramUUID(String name) {
-        Engram engram = getEngramByName(name);
-
-        return engram != null ? engram.getUuid() : null;
+    public Resource getResource(String uuid) {
+        return resourceMap.get(uuid);
     }
 
-    public String getEngramImageFile(String name) {
-        Engram engram = getEngramByName(name);
-
-        return engram != null ? engram.getImageFile() : null;
+    public String getEngramUUIDByName(String name) {
+        return engramIdMap.get(name);
     }
 
-    public Resource getResourceByName(String name) {
-        return resourceMap.get(name);
-    }
-
-    public Resource getSubstituteResourceByName(String name) {
-        return resourceMap.get(name);
+    public String getEngramImageFileByUUID(String uuid) {
+        Engram engram = getEngram(uuid);
+        if (engram == null) return null;
+        return engram.getImageFile();
     }
 
     public Engram getEngramByName(String name) {
-        return engramMap.get(name);
+        String uuid = getEngramUUIDByName(name);
+        return getEngram(uuid);
+    }
+
+    public Engram getEngram(String uuid) {
+        return engramMap.get(uuid);
+    }
+
+    public String getStationUUIDByName(String name) {
+        return stationIdMap.get(name);
     }
 
     public Station getStationByName(String name) {
-        return stationMap.get(name);
+        String uuid = getStationUUIDByName(name);
+        return getStation(uuid);
+    }
+
+    public Station getStation(String uuid) {
+        return stationMap.get(uuid);
+    }
+
+    public String getFolderUUIDByCategoryId(long id) {
+        return folderIdMap.get(id);
     }
 
     public Folder getFolderByCategoryId(long id) {
-        return folderMap.get(id);
+        String uuid = getFolderUUIDByCategoryId(id);
+        return getFolder(uuid);
+    }
+
+    public Folder getFolder(String uuid) {
+        return folderMap.get(uuid);
+    }
+
+    public String getCompositionUUIDByName(String name) {
+        return compositionIdMap.get(name);
+    }
+
+    public Composition getComposition(String uuid) {
+        return compositionMap.get(uuid);
+    }
+
+    public List<String> getCompositeUUIDListByName(String name) {
+        List<String> uuidList = compositeIdMap.get(name);
+        if (uuidList == null) return new ArrayList<>();
+        return uuidList;
+    }
+
+    public Composite getComposite(String uuid) {
+        return compositeMap.get(uuid);
     }
 
     public void addNullifiedResource(String name) {
@@ -122,12 +170,38 @@ public abstract class GameData {
             JsonCategory jsonCategory = mapper.convertValue(categoryObject, JsonCategory.class);
 
             if (isValidDlcId(jsonCategory.dlc_id)) {
-                folderMap.put(jsonCategory._id, buildFolder(jsonCategory));
+                if (isFolderUnique(jsonCategory)) {
+                    Folder folder = buildFolder(jsonCategory);
+                    addFolderToMap(jsonCategory._id, folder);
+                } else {
+                    Log.d("Duplicate Folder found: " + jsonCategory.toString());
+                }
             }
         }
     }
 
+    private boolean isFolderUnique(JsonCategory jsonCategory) {
+        //  test name for uuid
+        String uuid = folderIdMap.get(jsonCategory._id);
+        if (uuid == null) return true;
+
+        //  test uuid for object
+        Folder folder = getFolder(uuid);
+        if (folder == null) return true;
+
+        //  build testables for uniqueness
+        String name = jsonCategory.name;
+
+        //  return if incoming object equals mapped object
+        return folder.equals(name);
+    }
+
     public abstract Folder buildFolder(JsonCategory jsonCategory);
+
+    private void addFolderToMap(long _id, Folder folder) {
+        folderIdMap.put(_id, folder.getUuid());
+        folderMap.put(folder.getUuid(), folder);
+    }
 
     void mapResourcesFromJson() {
         JsonNode resourceArray = inObject.get("resource");
@@ -138,12 +212,40 @@ public abstract class GameData {
                 //  test if is complex resource, skip if true
                 if (jsonResource.complex_resource) continue;
 
-                resourceMap.put(jsonResource.name, buildResource(jsonResource));
+                if (isResourceUnique(jsonResource)) {
+                    Resource resource = buildResource(jsonResource);
+                    addResourceToMap(resource);
+                } else {
+                    Log.d("Duplicate Resource found: " + jsonResource.toString());
+                }
             }
         }
     }
 
+    private boolean isResourceUnique(JsonResource jsonResource) {
+        //  test name for uuid
+        String uuid = getResourceUUIDByName(jsonResource.name);
+        if (uuid == null) return true;
+
+        //  test uuid for object
+        Resource resource = getResource(uuid);
+        if (resource == null) return true;
+
+        //  build testables for uniqueness
+        String name = jsonResource.name;
+        String description = "";
+        String imageFile = jsonResource.image_file;
+
+        //  return if incoming object equals mapped object
+        return resource.equals(name, description, imageFile);
+    }
+
     public abstract Resource buildResource(JsonResource jsonResource);
+
+    private void addResourceToMap(Resource resource) {
+        resourceIdMap.put(resource.getName(), resource.getUuid());
+        resourceMap.put(resource.getUuid(), resource);
+    }
 
     void mapEngramsFromJson() {
         JsonNode engramArray = inObject.get("engram");
@@ -151,12 +253,44 @@ public abstract class GameData {
             JsonEngram jsonEngram = mapper.convertValue(engramObject, JsonEngram.class);
 
             if (isValidDlcId(jsonEngram.dlc_id)) {
-                engramMap.put(jsonEngram.name, buildEngram(jsonEngram));
+                if (isEngramUnique(jsonEngram)) {
+                    Engram engram = buildEngram(jsonEngram);
+                    addEngramToMap(engram);
+                } else {
+                    Log.d("Duplicate Engram found: " + jsonEngram.toString());
+                }
             }
         }
     }
 
+    private boolean isEngramUnique(JsonEngram jsonEngram) {
+        //  test name for uuid
+        String uuid = getEngramUUIDByName(jsonEngram.name);
+        if (uuid == null) return true;
+
+        //  test uuid for object
+        Engram engram = getEngram(uuid);
+        if (engram == null) return true;
+
+        //  build testables for uniqueness
+        String name = jsonEngram.name;
+        String description = jsonEngram.description;
+        String imageFile = jsonEngram.image_file;
+        int level = jsonEngram.level;
+        int yield = jsonEngram.yield;
+        int points = jsonEngram.points;
+        int xp = jsonEngram.xp;
+
+        //  return if incoming object equals mapped object
+        return engram.equals(name, description, imageFile, level, yield, points, xp);
+    }
+
     public abstract Engram buildEngram(JsonEngram jsonEngram);
+
+    private void addEngramToMap(Engram engram) {
+        engramIdMap.put(engram.getName(), engram.getUuid());
+        engramMap.put(engram.getUuid(), engram);
+    }
 
     void mapStationsFromJson() {
         JsonNode stationArray = inObject.get("station");
@@ -164,12 +298,40 @@ public abstract class GameData {
             JsonStation jsonStation = mapper.convertValue(stationObject, JsonStation.class);
 
             if (isValidDlcId(jsonStation.dlc_id)) {
-                stationMap.put(jsonStation.name, buildStation(jsonStation));
+                if (isStationUnique(jsonStation)) {
+                    Station station = buildStation(jsonStation);
+                    addStationToMap(station);
+                } else {
+                    Log.d("Duplicate Station found: " + jsonStation.toString());
+                }
             }
         }
     }
 
+    private boolean isStationUnique(JsonStation jsonStation) {
+        //  test name for uuid
+        String uuid = getStationUUIDByName(jsonStation.name);
+        if (uuid == null) return true;
+
+        //  test uuid for object
+        Station station = getStation(uuid);
+        if (station == null) return true;
+
+        //  build testables for uniqueness
+        String name = jsonStation.name;
+        String imageFile = jsonStation.image_file;
+        String engramId = getEngramUUIDByName(jsonStation.name);
+
+        //  return if incoming object equals mapped object
+        return !station.equals(name, imageFile, engramId);
+    }
+
     public abstract Station buildStation(JsonStation jsonStation);
+
+    private void addStationToMap(Station station) {
+        stationIdMap.put(station.getName(), station.getUuid());
+        stationMap.put(station.getUuid(), station);
+    }
 
     void mapCompositionFromJson() {
         JsonNode engramArray = inObject.get("engram");
@@ -177,43 +339,90 @@ public abstract class GameData {
             JsonEngram jsonEngram = mapper.convertValue(engramObject, JsonEngram.class);
 
             if (isValidDlcId(jsonEngram.dlc_id)) {
-                compositionMap.put(jsonEngram.name, buildComposition(jsonEngram));
-            }
-        }
-    }
-
-    public abstract Composition buildComposition(JsonEngram jsonEngram);
-
-    void mapCompositesFromJson(String compositionId, JsonEngram jsonEngram) {
-        for (JsonComposite jsonComposite : jsonEngram.composition) {
-            List<Composite> compositeList = compositeMap.get(jsonComposite.resource_id);
-            if (compositeList == null) compositeList = new ArrayList<>();
-            compositeList.add(buildComposite(compositionId, jsonComposite));
-            compositeMap.put(jsonComposite.resource_id, compositeList);
-        }
-    }
-
-    public abstract Composite buildComposite(String compositionId, JsonComposite jsonComposite);
-
-    List<Composite> flattenCompositeMapToList() {
-        List<Composite> composites = new ArrayList<>();
-        compositeMap.values().forEach(composites::addAll);
-        return composites;
-    }
-
-    public void mapSubstitutesFromResourceMap() {
-        for (Resource resource : resourceMap.values()) {
-            List<String> subsByName = generateSubsForResource(resource.getName());
-            if (subsByName.size() > 1) {
-                List<String> subsById = convertResourceNamesToId(subsByName);
-                if (subsById.size() > 1) {
-                    substitutions.put(resource.getName(), subsById);
+                if (isCompositionUnique(jsonEngram)) {
+                    Composition composition = buildComposition(jsonEngram);
+                    addCompositionToMap(jsonEngram.name, composition);
+                } else {
+                    Log.d("Duplicate Composition found: " + jsonEngram.toString());
                 }
             }
         }
     }
 
-    public abstract int mapStationDirectoryItem(Station station);
+    private boolean isCompositionUnique(JsonEngram jsonEngram) {
+        //  test name for uuid
+        String uuid = getCompositionUUIDByName(jsonEngram.name);
+        if (uuid == null) return true;
+
+        //  test uuid for object
+        Composition composition = getComposition(uuid);
+        if (composition == null) return true;
+
+        //  build testables for uniqueness
+        String name = jsonEngram.name;
+        String engramId = getEngramUUIDByName(name);
+
+        //  return if incoming object equals mapped object
+        return !composition.equals(engramId);
+    }
+
+    public abstract Composition buildComposition(JsonEngram jsonEngram);
+
+    private void addCompositionToMap(String name, Composition composition) {
+        compositionIdMap.put(name, composition.getUuid());
+        compositionMap.put(composition.getUuid(), composition);
+    }
+
+    void mapCompositesFromJson(String compositionId, JsonEngram jsonEngram) {
+        for (JsonComposite jsonComposite : jsonEngram.composition) {
+            if (isCompositeUnique(compositionId, jsonComposite.resource_id, jsonComposite)) {
+                Composite composite = buildComposite(compositionId, jsonComposite);
+                addCompositeToMap(composite);
+            }
+        }
+    }
+
+    private boolean isCompositeUnique(String compositionId, String name, JsonComposite jsonComposite) {
+        //  test name for uuid
+        List<String> uuids = getCompositeUUIDListByName(name);
+        if (uuids.isEmpty()) return true;
+
+        for (String uuid : uuids) {
+            //  test uuid for object
+            Composite composite = getComposite(uuid);
+            if (composite == null) continue;
+
+            //  build testables for uniqueness
+            String resourceId = getResourceUUIDByName(name);
+            String engramId = getEngramUUIDByName(name);
+            boolean isEngram = engramId != null;
+            String sourceId = isEngram ? engramId : resourceId;
+            String imageFile = isEngram ? getEngramImageFileByUUID(engramId) : getResourceImageFileByUUID(resourceId);
+            int quantity = jsonComposite.quantity;
+
+            //  return if incoming object equals mapped object
+            if (composite.equals(name, imageFile, quantity, sourceId, isEngram, compositionId)) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    public abstract Composite buildComposite(String compositionId, JsonComposite jsonComposite);
+
+    public void addCompositeToMap(Composite composite) {
+        addCompositeToIdMap(composite.getName(), composite.getUuid());
+        compositeMap.put(composite.getUuid(), composite);
+    }
+
+    public void addCompositeToIdMap(String name, String uuid) {
+        List<String> uuids = getCompositeUUIDListByName(name);
+        uuids.add(uuid);
+        compositeIdMap.put(name, uuids);
+    }
+
+    public abstract void mapStationDirectoryItem(Station station);
 
     public abstract void mapEngramDirectoryItem(Engram engram, String parentId);
 
@@ -223,9 +432,9 @@ public abstract class GameData {
         List<String> out = new ArrayList<>();
 
         for (String resourceName : in) {
-            String uuid = getResourceUUID(resourceName);
+            String uuid = getResourceUUIDByName(resourceName);
             if (uuid == null) {
-                uuid = getEngramUUID(resourceName);
+                uuid = getEngramUUIDByName(resourceName);
                 if (uuid == null) {
                     addNullifiedResource(resourceName);
                     continue;
@@ -327,6 +536,7 @@ public abstract class GameData {
             JsonCategory jsonCategory = mapper.convertValue(categoryObject, JsonCategory.class);
 
             if (isValidDlcIdForDirectory(jsonCategory.dlc_id)) {
+
                 //  test if current station exists for category
                 if (!jsonCategory.station.contains(station.getName())) continue;
 

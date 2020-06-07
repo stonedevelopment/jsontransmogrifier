@@ -93,4 +93,14 @@ public class Engram {
     public String getGameId() {
         return gameId;
     }
+
+    public boolean equals(String name, String description, String imageFile, int level, int yield, int points, int xp) {
+        return getName().equals(name) &&
+                getDescription().equals(description) &&
+                getImageFile().equals(imageFile) &&
+                getLevel() == level &&
+                getYield() == yield &&
+                getPoints() == points &&
+                getXp() == xp;
+    }
 }

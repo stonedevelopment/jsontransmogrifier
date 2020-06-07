@@ -22,4 +22,8 @@ public class Folder {
     public String getGameId() {
         return gameId;
     }
+
+    public boolean equals(String name) {
+        return getName().equals(name);
+    }
 }

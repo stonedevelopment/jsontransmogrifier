@@ -47,4 +47,10 @@ public class Resource {
     public String getGameId() {
         return gameId;
     }
+
+    public boolean equals(String name, String description, String imageFile) {
+        return getName().equals(name) &&
+                getDescription().equals(description) &&
+                getImageFile().equals(imageFile);
+    }
 }

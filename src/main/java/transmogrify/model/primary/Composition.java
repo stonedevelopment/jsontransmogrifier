@@ -30,4 +30,8 @@ public class Composition {
     public String getGameId() {
         return gameId;
     }
+
+    public boolean equals(String engramId) {
+        return getEngramId().equals(engramId);
+    }
 }

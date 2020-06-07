@@ -88,7 +88,7 @@ public class DLCGameData extends GameData {
         String uuid = !cDebug ? generateUUID() : jsonStation.name;
         String name = jsonStation.name;
         String imageFile = jsonStation.image_file;
-        String engramId = getEngramUUID(jsonStation.name);
+        String engramId = getEngramUUIDByName(jsonStation.name);
         Date lastUpdated = new Date();
         String gameId = details.getGameId();
         String dlcId = details.getUuid();
@@ -99,7 +99,7 @@ public class DLCGameData extends GameData {
     @Override
     public DlcComposition buildComposition(JsonEngram jsonEngram) {
         String uuid = !cDebug ? generateUUID() : jsonEngram.name;
-        String engramId = getEngramUUID(jsonEngram.name);
+        String engramId = getEngramUUIDByName(jsonEngram.name);
         Date lastUpdated = new Date();
         String gameId = details.getGameId();
         String dlcId = details.getUuid();
@@ -112,12 +112,16 @@ public class DLCGameData extends GameData {
     @Override
     public Composite buildComposite(String compositionId, JsonComposite jsonComposite) {
         String uuid = generateUUID();
-        String resourceId = getResourceUUID(jsonComposite.resource_id);
-        String engramId = getEngramUUID(jsonComposite.resource_id);
+        String resourceId = getResourceUUIDByName(jsonComposite.resource_id);
+        String engramId = getEngramUUIDByName(jsonComposite.resource_id);
         boolean isEngram = engramId != null;
         String sourceId = isEngram ? engramId : resourceId;
         String name = jsonComposite.resource_id;
-        String imageFile = isEngram ? getEngramImageFile(name) : getResourceImageFile(name);
+        String imageFile = isEngram ? getEngramImageFileByUUID(engramId) : getResourceImageFileByUUID(resourceId);
+        if (imageFile == null) {
+            throw new NullPointerException();
+        }
+
         int quantity = jsonComposite.quantity;
         String gameId = details.getGameId();
         String dlcId = details.getUuid();
@@ -147,13 +151,13 @@ public class DLCGameData extends GameData {
         gameDataObject.set("composition", mapper.valueToTree(compositionMap.values()));
 
         //  add composites
-        gameDataObject.set("composites", mapper.valueToTree(flattenCompositeMapToList()));
+        gameDataObject.set("composites", mapper.valueToTree(compositeMap.values()));
 
         //  add substitutions
 //        gameDataObject.set("substitutions", createSubsSection());
 
         //  add directory, traverse through tree, fill with uuids
-        gameDataObject.set("directory", mapper.valueToTree(directory.values()));
+        gameDataObject.set("directory", mapper.valueToTree(directory));
 
         //  add remove section
         gameDataObject.set("remove", createRemoveSection());
@@ -165,13 +169,7 @@ public class DLCGameData extends GameData {
     }
 
     @Override
-    public void mapSubstitutesFromResourceMap() {
-        super.mapSubstitutesFromResourceMap();
-        mapSubstitutesFromPrimaryResourceMap();
-    }
-
-    @Override
-    public int mapStationDirectoryItem(Station station) {
+    public void mapStationDirectoryItem(Station station) {
         String uuid = !cDebug ? generateUUID() : station.getName();
         String sourceId = station.getUuid();
         String name = station.getName();
@@ -184,10 +182,9 @@ public class DLCGameData extends GameData {
         int totalCount = engramCount + folderCount;
 
         if (totalCount > 0) {
-            directory.put(name, new DlcDirectoryItem(uuid, name, imageFile, cStationViewType, null, sourceId, gameId, dlcId));
+            directory.add(new DlcDirectoryItem(uuid, name, imageFile, cStationViewType, null, sourceId, gameId, dlcId));
         }
 
-        return totalCount;
     }
 
     @Override
@@ -199,7 +196,7 @@ public class DLCGameData extends GameData {
         String gameId = details.getGameId();
         String dlcId = details.getUuid();
 
-        directory.put(name, new DlcDirectoryItem(uuid, name, imageFile, cEngramViewType, parentId, sourceId, gameId, dlcId));
+        directory.add(new DlcDirectoryItem(uuid, name, imageFile, cEngramViewType, parentId, sourceId, gameId, dlcId));
     }
 
     @Override
@@ -216,22 +213,10 @@ public class DLCGameData extends GameData {
         int totalCount = engramCount + folderCount;
 
         if (totalCount > 0) {
-            directory.put(name, new DlcDirectoryItem(uuid, name, imageFile, cFolderViewType, parentId, sourceId, gameId, dlcId));
+            directory.add(new DlcDirectoryItem(uuid, name, imageFile, cFolderViewType, parentId, sourceId, gameId, dlcId));
         }
 
         return totalCount;
-    }
-
-    private void mapSubstitutesFromPrimaryResourceMap() {
-        for (Resource resource : primaryGameData.resourceMap.values()) {
-            List<String> subsByName = generateSubsForResource(resource.getName());
-            if (subsByName.size() > 1) {
-                List<String> subsById = convertResourceNamesToId(subsByName);
-                if (subsById.size() > 1) {
-                    substitutions.put(resource.getName(), subsById);
-                }
-            }
-        }
     }
 
     @Override
@@ -242,18 +227,6 @@ public class DLCGameData extends GameData {
     @Override
     public String buildFilePathForJSONExport() {
         return String.format("src/assets/DLC/%s.json", details.getName());
-    }
-
-    @Override
-    public Engram getEngramByName(String name) {
-        Engram engram = super.getEngramByName(name);
-        return engram != null ? engram : primaryGameData.getEngramByName(name);
-    }
-
-    @Override
-    public Folder getFolderByCategoryId(long id) {
-        Folder folder = super.getFolderByCategoryId(id);
-        return folder != null ? folder : primaryGameData.getFolderByCategoryId(id);
     }
 
     @Override
@@ -276,15 +249,106 @@ public class DLCGameData extends GameData {
     }
 
     @Override
-    public Resource getResourceByName(String name) {
-        Resource resource = super.getResourceByName(name);
-        return resource != null ? resource : primaryGameData.getResourceByName(name);
+    public String getResourceUUIDByName(String name) {
+        String uuid = super.getResourceUUIDByName(name);
+        return uuid != null ? uuid : primaryGameData.getResourceUUIDByName(name);
+    }
+
+    @Override
+    public String getResourceImageFileByUUID(String uuid) {
+        String imageFile = super.getResourceImageFileByUUID(uuid);
+        return imageFile != null ? imageFile : primaryGameData.getResourceImageFileByUUID(uuid);
+    }
+
+    @Override
+    public Resource getResource(String uuid) {
+        Resource resource = super.getResource(uuid);
+        return resource != null ? resource : primaryGameData.getResource(uuid);
+    }
+
+    @Override
+    public String getEngramUUIDByName(String name) {
+        String uuid = super.getEngramUUIDByName(name);
+        return uuid != null ? uuid : primaryGameData.getEngramUUIDByName(name);
+    }
+
+    @Override
+    public String getEngramImageFileByUUID(String uuid) {
+        String imageFile = super.getEngramImageFileByUUID(uuid);
+        return imageFile != null ? imageFile : primaryGameData.getEngramImageFileByUUID(uuid);
+    }
+
+    @Override
+    public Engram getEngramByName(String name) {
+        Engram engram = super.getEngramByName(name);
+        return engram != null ? engram : primaryGameData.getEngramByName(name);
+    }
+
+    @Override
+    public Engram getEngram(String uuid) {
+        Engram engram = super.getEngram(uuid);
+        return engram != null ? engram : primaryGameData.getEngram(uuid);
+    }
+
+    @Override
+    public String getStationUUIDByName(String name) {
+        String uuid = super.getStationUUIDByName(name);
+        return uuid != null ? uuid : primaryGameData.getStationUUIDByName(name);
     }
 
     @Override
     public Station getStationByName(String name) {
         Station station = super.getStationByName(name);
         return station != null ? station : primaryGameData.getStationByName(name);
+    }
+
+    @Override
+    public Station getStation(String uuid) {
+        Station station = super.getStation(uuid);
+        return station != null ? station : primaryGameData.getStation(uuid);
+    }
+
+    @Override
+    public String getFolderUUIDByCategoryId(long id) {
+        String uuid = super.getFolderUUIDByCategoryId(id);
+        return uuid != null ? uuid : primaryGameData.getFolderUUIDByCategoryId(id);
+    }
+
+    @Override
+    public Folder getFolderByCategoryId(long id) {
+        Folder folder = super.getFolderByCategoryId(id);
+        return folder != null ? folder : primaryGameData.getFolderByCategoryId(id);
+    }
+
+    @Override
+    public Folder getFolder(String uuid) {
+        Folder folder = super.getFolder(uuid);
+        return folder != null ? folder : primaryGameData.getFolder(uuid);
+    }
+
+    @Override
+    public String getCompositionUUIDByName(String name) {
+        String uuid = super.getCompositionUUIDByName(name);
+        return uuid != null ? uuid : primaryGameData.getCompositionUUIDByName(name);
+    }
+
+    @Override
+    public Composition getComposition(String uuid) {
+        Composition composition = super.getComposition(uuid);
+        return composition != null ? composition : primaryGameData.getComposition(uuid);
+    }
+
+    @Override
+    public List<String> getCompositeUUIDListByName(String name) {
+        List<String> uuidList = super.getCompositeUUIDListByName(name);
+        uuidList.addAll(primaryGameData.getCompositeUUIDListByName(name));
+        return uuidList;
+    }
+
+    @Override
+    public Composite getComposite(String uuid) {
+        Composite composite = super.getComposite(uuid);
+        return composite != null ? composite : primaryGameData.getComposite(uuid);
     }
 
     private JsonNode createRemoveSection() {

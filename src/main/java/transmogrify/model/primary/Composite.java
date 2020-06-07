@@ -62,4 +62,27 @@ public class Composite {
     public String getGameId() {
         return gameId;
     }
+
+    public boolean equals(String name, String imageFile, int quantity, String sourceId, boolean isEngram, String compositionId) {
+        return getName().equals(name) &&
+                getImageFile().equals(imageFile) &&
+                getQuantity() == quantity &&
+                getSourceId().equals(sourceId) &&
+                isEngram() == isEngram &&
+                getCompositionId().equals(compositionId);
+    }
+
+    @Override
+    public String toString() {
+        return "Composite{" +
+                "uuid='" + uuid + '\'' +
+                ", name='" + name + '\'' +
+                ", imageFile='" + imageFile + '\'' +
+                ", quantity=" + quantity +
+                ", sourceId='" + sourceId + '\'' +
+                ", isEngram=" + isEngram +
+                ", compositionId='" + compositionId + '\'' +
+                ", gameId='" + gameId + '\'' +
+                '}';
+    }
 }

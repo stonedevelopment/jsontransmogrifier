@@ -42,4 +42,10 @@ public class Station {
     public String getGameId() {
         return gameId;
     }
+
+    public boolean equals(String name, String imageFile, String engramId) {
+        return this.name.equals(name) &&
+                this.name.equals(imageFile) &&
+                this.engramId.equals(engramId);
+    }
 }

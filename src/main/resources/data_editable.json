@@ -2,7 +2,7 @@
   "json": {
     "version": "304.4r5",
     "changelog": {
-      "304.4r5": "Split Generic Resource Groups, ex. Feces (Any Kind), into lists of resources for subsitutions. Removed those Groups.",
+      "304.4r5": "Split Generic Resource Groups, ex. Feces (Any Kind), into lists of resources for substitutions. Removed those Groups.",
       "304.4r4": "Added Hidden DLC, set old Kibble recipes and Events recipes to Hidden.",
       "304.4r3": "Updated Kibble Engrams, added Focal Chili and Lazarus Chowder as complex resources.",
       "304.4r2": "Added Titan Terminal Engrams, Corrected City Terminal image.",
@@ -1871,6 +1871,13 @@
     },
     {
       "name": "Small Animal Feces",
+      "image_folder": "Vanilla\/Resources\/",
+      "image_file": "feces.webp",
+      "dlc_id": 1,
+      "complex_resource": false
+    },
+    {
+      "name": "Feces (Any Size)",
       "image_folder": "Vanilla\/Resources\/",
       "image_file": "feces.webp",
       "dlc_id": 1,
