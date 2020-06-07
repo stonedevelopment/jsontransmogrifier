@@ -203,6 +203,15 @@ public abstract class GameData {
         folderMap.put(folder.getUuid(), folder);
     }
 
+    public Collection<Folder> transformFolderMap() {
+        Map<String, Folder> transformedMap = new TreeMap<>();
+        for (String uuid : folderIdMap.values()) {
+            Folder folder = getFolder(uuid);
+            transformedMap.put(folder.getName(), folder);
+        }
+        return transformedMap.values();
+    }
+
     void mapResourcesFromJson() {
         JsonNode resourceArray = inObject.get("resource");
         for (JsonNode resourceObject : resourceArray) {
@@ -245,6 +254,17 @@ public abstract class GameData {
     private void addResourceToMap(Resource resource) {
         resourceIdMap.put(resource.getName(), resource.getUuid());
         resourceMap.put(resource.getUuid(), resource);
+    }
+
+    public Collection<Resource> transformResourceMap() {
+        Map<String, Resource> transformedMap = new TreeMap<>();
+        for (Map.Entry<String, String> resourceEntry : resourceIdMap.entrySet()) {
+            String name = resourceEntry.getKey();
+            String uuid = resourceEntry.getValue();
+            Resource resource = getResource(uuid);
+            transformedMap.put(name, resource);
+        }
+        return transformedMap.values();
     }
 
     void mapEngramsFromJson() {
@@ -292,6 +312,17 @@ public abstract class GameData {
         engramMap.put(engram.getUuid(), engram);
     }
 
+    public Collection<Engram> transformEngramMap() {
+        Map<String, Engram> transformedMap = new TreeMap<>();
+        for (Map.Entry<String, String> entry : engramIdMap.entrySet()) {
+            String name = entry.getKey();
+            String uuid = entry.getValue();
+            Engram engram = getEngram(uuid);
+            transformedMap.put(name, engram);
+        }
+        return transformedMap.values();
+    }
+
     void mapStationsFromJson() {
         JsonNode stationArray = inObject.get("station");
         for (JsonNode stationObject : stationArray) {
@@ -333,6 +364,17 @@ public abstract class GameData {
         stationMap.put(station.getUuid(), station);
     }
 
+    public Collection<Station> transformStationMap() {
+        Map<String, Station> transformedMap = new TreeMap<>();
+        for (Map.Entry<String, String> entry : stationIdMap.entrySet()) {
+            String name = entry.getKey();
+            String uuid = entry.getValue();
+            Station station = getStation(uuid);
+            transformedMap.put(name, station);
+        }
+        return transformedMap.values();
+    }
+
     void mapCompositionFromJson() {
         JsonNode engramArray = inObject.get("engram");
         for (JsonNode engramObject : engramArray) {
@@ -371,6 +413,17 @@ public abstract class GameData {
     private void addCompositionToMap(String name, Composition composition) {
         compositionIdMap.put(name, composition.getUuid());
         compositionMap.put(composition.getUuid(), composition);
+    }
+
+    public Collection<Composition> transformCompositionMap() {
+        Map<String, Composition> transformedMap = new TreeMap<>();
+        for (Map.Entry<String, String> entry : compositionIdMap.entrySet()) {
+            String name = entry.getKey();
+            String uuid = entry.getValue();
+            Composition composition = getComposition(uuid);
+            transformedMap.put(name, composition);
+        }
+        return transformedMap.values();
     }
 
     void mapCompositesFromJson(String compositionId, JsonEngram jsonEngram) {
@@ -420,6 +473,19 @@ public abstract class GameData {
         List<String> uuids = getCompositeUUIDListByName(name);
         uuids.add(uuid);
         compositeIdMap.put(name, uuids);
+    }
+
+    public Collection<Composite> transformCompositeMap() {
+        Map<String, Composite> transformedMap = new TreeMap<>();
+        for (Map.Entry<String, List<String>> entry : compositeIdMap.entrySet()) {
+            String name = entry.getKey();
+            List<String> uuidList = entry.getValue();
+            for (String uuid : uuidList) {
+                Composite composite = getComposite(uuid);
+                transformedMap.put(name, composite);
+            }
+        }
+        return transformedMap.values();
     }
 
     public abstract void mapStationDirectoryItem(Station station);

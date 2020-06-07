@@ -187,22 +187,22 @@ public class PrimaryGameData extends GameData {
         gameDataObject.set("details", mapper.valueToTree(details));
 
         //  add resources, without complex resources
-        gameDataObject.set("resources", mapper.valueToTree(resourceMap.values()));
+        gameDataObject.set("resources", mapper.valueToTree(transformResourceMap()));
 
         //  add stations
-        gameDataObject.set("stations", mapper.valueToTree(stationMap.values()));
+        gameDataObject.set("stations", mapper.valueToTree(transformStationMap()));
 
         //  add folders
-        gameDataObject.set("folders", mapper.valueToTree(folderMap.values()));
+        gameDataObject.set("folders", mapper.valueToTree(transformFolderMap()));
 
         //  add engrams
-        gameDataObject.set("engrams", mapper.valueToTree(engramMap.values()));
+        gameDataObject.set("engrams", mapper.valueToTree(transformEngramMap()));
 
         //  add composition
-        gameDataObject.set("composition", mapper.valueToTree(compositionMap.values()));
+        gameDataObject.set("composition", mapper.valueToTree(transformCompositionMap()));
 
         //  add composites
-        gameDataObject.set("composites", mapper.valueToTree(compositeMap.values()));
+        gameDataObject.set("composites", mapper.valueToTree(transformCompositeMap()));
 
         //  add directory, traverse through tree, fill with uuids
         gameDataObject.set("directory", mapper.valueToTree(directory));

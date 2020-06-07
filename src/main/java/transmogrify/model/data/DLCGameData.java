@@ -136,25 +136,22 @@ public class DLCGameData extends GameData {
         gameDataObject.set("details", mapper.valueToTree(details));
 
         //  add resources, without complex resources
-        gameDataObject.set("resources", mapper.valueToTree(resourceMap.values()));
+        gameDataObject.set("resources", mapper.valueToTree(transformResourceMap()));
 
         //  add stations
-        gameDataObject.set("stations", mapper.valueToTree(stationMap.values()));
+        gameDataObject.set("stations", mapper.valueToTree(transformStationMap()));
 
         //  add folders
-        gameDataObject.set("folders", mapper.valueToTree(folderMap.values()));
+        gameDataObject.set("folders", mapper.valueToTree(transformFolderMap()));
 
         //  add engrams
-        gameDataObject.set("engrams", mapper.valueToTree(engramMap.values()));
+        gameDataObject.set("engrams", mapper.valueToTree(transformEngramMap()));
 
         //  add composition
-        gameDataObject.set("composition", mapper.valueToTree(compositionMap.values()));
+        gameDataObject.set("composition", mapper.valueToTree(transformCompositionMap()));
 
         //  add composites
-        gameDataObject.set("composites", mapper.valueToTree(compositeMap.values()));
-
-        //  add substitutions
-//        gameDataObject.set("substitutions", createSubsSection());
+        gameDataObject.set("composites", mapper.valueToTree(transformCompositeMap()));
 
         //  add directory, traverse through tree, fill with uuids
         gameDataObject.set("directory", mapper.valueToTree(directory));
@@ -361,24 +358,21 @@ public class DLCGameData extends GameData {
         //  add uuids of stations to remove
         ArrayNode stationArray = mapper.createArrayNode();
         for (String stationName : totalConversion.stationsToRemove) {
-            Station stationToRemove = getStationByName(stationName);
-            stationArray.add(stationToRemove.getUuid());
+            stationArray.add(getStationUUIDByName(stationName));
         }
         outNode.set("stations", stationArray);
 
         //  add uuids of folders to remove
         ArrayNode folderArray = mapper.createArrayNode();
         for (long categoryId : totalConversion.foldersToRemove) {
-            Folder folderToRemove = getFolderByCategoryId(categoryId);
-            folderArray.add(folderToRemove.getUuid());
+            folderArray.add(getFolderUUIDByCategoryId(categoryId));
         }
         outNode.set("folders", folderArray);
 
         //  add uuids of engrams to remove
         ArrayNode engramArray = mapper.createArrayNode();
         for (String engramName : totalConversion.engramsToRemove) {
-            Engram engramToRemove = getEngramByName(engramName);
-            engramArray.add(engramToRemove.getUuid());
+            engramArray.add(getEngramUUIDByName(engramName));
         }
         outNode.set("engrams", engramArray);
 
