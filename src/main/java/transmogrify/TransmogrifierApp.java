@@ -2,6 +2,7 @@ package transmogrify;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import transmogrify.model.data.DLCGameData;
 import transmogrify.model.data.GameData;
 import transmogrify.model.data.PrimaryGameData;
@@ -24,16 +25,22 @@ public class TransmogrifierApp {
 
     public static void main(String[] args) {
         try {
+            ObjectNode transObject = mapper.createObjectNode();
+
             JsonNode inObject = JSONUtil.parseIn();
 
             JsonNode dlcArray = inObject.get("dlc");
             for (JsonNode dlcNode : dlcArray) {
                 GameData gameData;
+                JsonNode transmogrifiedNode;
 
                 JsonDlc jsonDlc = mapper.treeToValue(dlcNode, JsonDlc.class);
                 if (jsonDlc.type.equals("primary")) {
                     gameData = new PrimaryGameData(jsonDlc, inObject, mapper);
                     primaryGameData = (PrimaryGameData) gameData;
+
+                    transmogrifiedNode = mapper.valueToTree(primaryGameData.getDetailsObject());
+                    transObject.set("parent", transmogrifiedNode);
                 } else {
                     gameData = new DLCGameData(jsonDlc, inObject, mapper, primaryGameData);
                 }

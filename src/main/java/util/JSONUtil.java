@@ -22,7 +22,7 @@ public class JSONUtil {
     public static void writeOut(String filePath, JsonNode outObject) throws IOException {
         Path path = Paths.get(filePath);
         if (Files.notExists(path)) {
-            Files.createFile(path);
+            Files.createDirectory(path.getParent());
         }
 
         ObjectMapper mapper = new ObjectMapper();

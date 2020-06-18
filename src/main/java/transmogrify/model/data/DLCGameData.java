@@ -223,7 +223,7 @@ public class DLCGameData extends GameData {
 
     @Override
     public String buildFilePathForJSONExport() {
-        return String.format("src/assets/DLC/%s.json", details.getName());
+        return String.format("src/assets/DLC/%s/transmogrified.json", details.getName());
     }
 
     @Override

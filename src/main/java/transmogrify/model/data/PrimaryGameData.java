@@ -26,7 +26,7 @@ public class PrimaryGameData extends GameData {
 
     @Override
     public String buildFilePathForJSONExport() {
-        return "src/assets/Primary/Primary.json";
+        return "src/assets/Primary/transmogrified.json";
     }
 
     @Override
