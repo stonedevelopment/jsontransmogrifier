@@ -21,7 +21,7 @@ public class JSONUtil {
 
     public static void writeOut(String filePath, JsonNode outObject) throws IOException {
         Path path = Paths.get(filePath);
-        if (Files.notExists(path)) {
+        if (Files.notExists(path.getParent())) {
             Files.createDirectory(path.getParent());
         }
 

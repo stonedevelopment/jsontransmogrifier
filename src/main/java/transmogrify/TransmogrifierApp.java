@@ -2,6 +2,7 @@ package transmogrify;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import transmogrify.model.data.DLCGameData;
 import transmogrify.model.data.GameData;
@@ -25,31 +26,23 @@ public class TransmogrifierApp {
 
     public static void main(String[] args) {
         try {
-            ObjectNode transObject = mapper.createObjectNode();
+            ObjectNode outNode = mapper.createObjectNode();
+            ArrayNode outDlcArrayNode = mapper.createArrayNode();
 
-            JsonNode inObject = JSONUtil.parseIn();
-
-            JsonNode dlcArray = inObject.get("dlc");
-            for (JsonNode dlcNode : dlcArray) {
-                GameData gameData;
-                JsonNode transmogrifiedNode;
+            JsonNode inNode = JSONUtil.parseIn();
+            JsonNode inDlcArrayNode = inNode.get("dlc");
+            for (JsonNode dlcNode : inDlcArrayNode) {
 
                 JsonDlc jsonDlc = mapper.treeToValue(dlcNode, JsonDlc.class);
                 if (jsonDlc.type.equals("primary")) {
-                    gameData = new PrimaryGameData(jsonDlc, inObject, mapper);
-                    primaryGameData = (PrimaryGameData) gameData;
-
-                    transmogrifiedNode = mapper.valueToTree(primaryGameData.getDetailsObject());
-                    transObject.set("parent", transmogrifiedNode);
+                    outNode.set("parent", transmogrifyPrimaryGameData(jsonDlc, inNode));
                 } else {
-                    gameData = new DLCGameData(jsonDlc, inObject, mapper, primaryGameData);
+                    outDlcArrayNode.add(transmogrifyDlcGameData(jsonDlc, inNode));
                 }
-
-                // TODO: 5/19/2020 Add The Center and Ragnarok engrams and resources
-
-                gameData.mapGameData();
-                writeGameDataToFile(gameData);
             }
+
+            outNode.set("dlc", outDlcArrayNode);
+            writeTransmogrifyDataToFile(outNode);
 
             f("Nullified resources: ", primaryGameData.nullifiedResources.toString());
         } catch (IOException e) {
@@ -57,8 +50,30 @@ public class TransmogrifierApp {
         }
     }
 
+    static JsonNode transmogrifyPrimaryGameData(JsonDlc jsonDlc, JsonNode inObject) throws IOException {
+        primaryGameData = new PrimaryGameData(jsonDlc, inObject, mapper);
+        primaryGameData.mapGameData();
+        writeGameDataToFile(primaryGameData);
+        return mapper.valueToTree(primaryGameData.getDetailsObject());
+    }
+
+    static JsonNode transmogrifyDlcGameData(JsonDlc jsonDlc, JsonNode inObject) throws IOException {
+        DLCGameData gameData = new DLCGameData(jsonDlc, inObject, mapper, primaryGameData);
+        gameData.mapGameData();
+        writeGameDataToFile(gameData);
+        return mapper.valueToTree(gameData.getDetailsObject());
+    }
+
     private static void writeGameDataToFile(GameData gameData) throws IOException {
         writeJsonToFile(gameData.buildFilePathForJSONExport(), gameData.generateJson());
+    }
+
+    private static void writeTransmogrifyDataToFile(JsonNode outNode) throws IOException {
+        writeJsonToFile(buildFilePathForTransmogrificationFile(), outNode);
+    }
+
+    private static String buildFilePathForTransmogrificationFile() {
+        return "src/assets/transmogrification.json";
     }
 
     private static void writeJsonToFile(String fileName, JsonNode outNode) throws IOException {

@@ -1,0 +1,86 @@
+{
+  "parent": {
+    "uuid": "575ccb42-9d14-4331-b6fb-287a83511577",
+    "name": "ARK:Survival Evolved",
+    "description": "As a man or woman stranded, naked, freezing, and starving on the unforgiving shores of a mysterious island called \"ARK\", use your skill and cunning to kill or tame and ride the plethora of leviathan dinosaurs and other primeval creatures roaming the land. Hunt, harvest resources, craft items, grow crops, research technologies, and build shelters to withstand the elements and store valuables, all while teaming up with (or preying upon) hundreds of other players to survive, dominate... and escape!",
+    "filePath": "Primary/",
+    "logoFile": "logo.webp",
+    "folderFile": "folder.webp",
+    "backFolderFile": "backFolder.webp",
+    "lastUpdated": 1592534022864
+  },
+  "dlc": [
+    {
+      "uuid": "83bd3bff-2d1b-4dde-aa05-6d4766f6b2be",
+      "name": "Primitive Plus",
+      "description": "Primitive Plus is a free add-on for ARK: Survival Evolved that alters the available tools, weapons and structures in the game to reflect what humans could realistically create using primitive technology and resources. This does not simply remove advanced technology from ARK, but instead replaces it with a multitude of new resources, engrams and systems.",
+      "filePath": "DLC/Primitive Plus/",
+      "logoFile": "logo.webp",
+      "folderFile": "folder.webp",
+      "backFolderFile": "backFolder.webp",
+      "lastUpdated": 1592534023817,
+      "totalConversion": true,
+      "gameId": "575ccb42-9d14-4331-b6fb-287a83511577"
+    },
+    {
+      "uuid": "4c99fe4b-bc87-4590-bd1d-82b3276d83d7",
+      "name": "Scorched Earth",
+      "description": "Stranded naked, dehydrated & starving in a vast desert, even the most seasoned ARK survivors must quickly find water, hunt for food, harvest, craft items, and build shelter to have any chance for survival. Use skills honed on ARK's faraway Island to kill, tame, breed, and ride the fantastical new creatures that have evolved to survive the Desert's ultra harsh conditions, including... DRAGONS! Travel back and forth between the Island and the Desert to team up with hundreds of players across both worlds or play locally!",
+      "filePath": "DLC/Scorched Earth/",
+      "logoFile": "logo.webp",
+      "folderFile": "folder.webp",
+      "backFolderFile": "backFolder.webp",
+      "lastUpdated": 1592534025130,
+      "totalConversion": false,
+      "gameId": "575ccb42-9d14-4331-b6fb-287a83511577"
+    },
+    {
+      "uuid": "342b5aea-ae5d-45e4-b14d-dc23101fdb4e",
+      "name": "Aberration",
+      "description": "Waking up on 'Aberration', a derelict, malfunctioning ARK with an elaborate underground biome system, survivors face exotic new challenges unlike anything before: extreme radioactive sunlight and environmental hazards, ziplines, wingsuits, climbing gear, cave dwellings, charge-batteries, and far more, along with a stable of extraordinary new creatures await within the mysterious depths. But beware the ‘Nameless’: unrelenting, Element-infused humanoids which have evolved into vicious light-hating monstrosities! On Aberration, survivors will uncover the ultimate secrets of the ARKs, and discover what the future holds in store for those strong and clever enough to survive!",
+      "filePath": "DLC/Aberration/",
+      "logoFile": "logo.webp",
+      "folderFile": "folder.webp",
+      "backFolderFile": "backFolder.webp",
+      "lastUpdated": 1592534026036,
+      "totalConversion": false,
+      "gameId": "575ccb42-9d14-4331-b6fb-287a83511577"
+    },
+    {
+      "uuid": "155f2ef7-caad-4911-b306-9099e63d9260",
+      "name": "Extinction",
+      "description": "Finish your journey through the worlds of ARK in ‘Extinction’, where the story began and ends: on Earth itself! An Element-infested, ravaged planet filled with fantastical creatures both organic & technological, Earth holds both the secrets of the past and the keys to its salvation. As a veteran Survivor who has conquered all previous obstacles, your ultimate challenge awaits: can you defeat the gigantic roaming Titans which dominate the planet, and complete the ARK cycle to save Earth's future?",
+      "filePath": "DLC/Extinction/",
+      "logoFile": "logo.webp",
+      "folderFile": "folder.webp",
+      "backFolderFile": "backFolder.webp",
+      "lastUpdated": 1592534026614,
+      "totalConversion": false,
+      "gameId": "575ccb42-9d14-4331-b6fb-287a83511577"
+    },
+    {
+      "uuid": "7f89d043-3ce5-4e93-8f83-bdd32ff91679",
+      "name": "The Center",
+      "description": null,
+      "filePath": "DLC/The Center/",
+      "logoFile": "logo.webp",
+      "folderFile": "folder.webp",
+      "backFolderFile": "backFolder.webp",
+      "lastUpdated": 1592534027098,
+      "totalConversion": false,
+      "gameId": "575ccb42-9d14-4331-b6fb-287a83511577"
+    },
+    {
+      "uuid": "8e81cadf-630a-4a62-9d9f-a403902b80e7",
+      "name": "Ragnarok",
+      "description": null,
+      "filePath": "DLC/Ragnarok/",
+      "logoFile": "logo.webp",
+      "folderFile": "folder.webp",
+      "backFolderFile": "backFolder.webp",
+      "lastUpdated": 1592534027583,
+      "totalConversion": false,
+      "gameId": "575ccb42-9d14-4331-b6fb-287a83511577"
+    }
+  ]
+}
