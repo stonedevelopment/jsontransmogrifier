@@ -20,7 +20,7 @@ import static util.Log.f;
  * <p>
  * We want UUIDs to be static so if the User saves a crafting queue, the Engram doesn't change even after an update.
  */
-public class TransmogrifierApp {
+public class TransmogrifyApp {
     static ObjectMapper mapper = new ObjectMapper();
     static PrimaryGameData primaryGameData;
 
