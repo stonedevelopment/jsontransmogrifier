@@ -11,11 +11,11 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class JSONUtil {
-    static String inFileName = "data_editable.json";
 
-    public static JsonNode parseIn() throws IOException {
+
+    public static JsonNode parseIn(String filename) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
-        InputStream inputStream = ClassLoader.getSystemResourceAsStream(inFileName);
+        InputStream inputStream = ClassLoader.getSystemResourceAsStream(filename);
         return mapper.readTree(inputStream);
     }
 

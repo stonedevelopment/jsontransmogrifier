@@ -4,10 +4,10 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import transmogrify.model.data.DLCGameData;
-import transmogrify.model.data.GameData;
-import transmogrify.model.data.PrimaryGameData;
-import transmogrify.model.json.JsonDlc;
+import model.data.DLCGameData;
+import model.data.GameData;
+import model.data.PrimaryGameData;
+import model.json.JsonDlc;
 import util.JSONUtil;
 
 import java.io.IOException;
@@ -21,21 +21,21 @@ import static util.Log.f;
  * We want UUIDs to be static so if the User saves a crafting queue, the Engram doesn't change even after an update.
  */
 public class TransmogrifyApp {
-    static ObjectMapper mapper = new ObjectMapper();
-    static PrimaryGameData primaryGameData;
+    private static final String inFileName = "data_editable.json";
+    private static final ObjectMapper mapper = new ObjectMapper();
+    private static PrimaryGameData primaryGameData;
 
     public static void main(String[] args) {
         try {
             ObjectNode outNode = mapper.createObjectNode();
             ArrayNode outDlcArrayNode = mapper.createArrayNode();
 
-            JsonNode inNode = JSONUtil.parseIn();
+            JsonNode inNode = JSONUtil.parseIn(inFileName);
             JsonNode inDlcArrayNode = inNode.get("dlc");
             for (JsonNode dlcNode : inDlcArrayNode) {
-
                 JsonDlc jsonDlc = mapper.treeToValue(dlcNode, JsonDlc.class);
                 if (jsonDlc.type.equals("primary")) {
-                    outNode.set("parent", transmogrifyPrimaryGameData(jsonDlc, inNode));
+                    outNode.set("primary", transmogrifyPrimaryGameData(jsonDlc, inNode));
                 } else {
                     outDlcArrayNode.add(transmogrifyDlcGameData(jsonDlc, inNode));
                 }
