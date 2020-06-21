@@ -1,6 +1,6 @@
 package model.dlc;
 
-import model.primary.Composition;
+import model.Composition;
 
 import java.util.Date;
 

@@ -1,6 +1,6 @@
 package model.dlc;
 
-import model.primary.Engram;
+import model.Engram;
 
 import java.util.Date;
 

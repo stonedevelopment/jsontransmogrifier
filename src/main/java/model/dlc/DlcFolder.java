@@ -1,6 +1,6 @@
 package model.dlc;
 
-import model.primary.Folder;
+import model.Folder;
 
 public class DlcFolder extends Folder {
     private final String dlcId;

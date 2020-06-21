@@ -1,6 +1,6 @@
 package model.dlc;
 
-import model.primary.DirectoryItem;
+import model.DirectoryItem;
 
 /**
  * "uuid": "",

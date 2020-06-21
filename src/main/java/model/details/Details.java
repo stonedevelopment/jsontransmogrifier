@@ -2,6 +2,8 @@ package model.details;
 
 import java.util.Date;
 
+import static util.Constants.cTransmogFileName;
+
 public class Details {
     private final String uuid;
     private final String name;
@@ -37,6 +39,10 @@ public class Details {
 
     public String getFilePath() {
         return filePath;
+    }
+
+    public String getTransmogFile() {
+        return String.format("$1%s/$2%s", filePath, cTransmogFileName);
     }
 
     public String getLogoFile() {

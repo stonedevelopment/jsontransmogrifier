@@ -1,6 +1,6 @@
 package model.dlc;
 
-import model.primary.Station;
+import model.Station;
 
 import java.util.Date;
 

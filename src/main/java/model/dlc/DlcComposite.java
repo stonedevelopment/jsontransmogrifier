@@ -1,6 +1,6 @@
 package model.dlc;
 
-import model.primary.Composite;
+import model.Composite;
 
 public class DlcComposite extends Composite {
     private final String dlcId;

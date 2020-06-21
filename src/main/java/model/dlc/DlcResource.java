@@ -1,6 +1,6 @@
 package model.dlc;
 
-import model.primary.Resource;
+import model.Resource;
 
 import java.util.Date;
 
