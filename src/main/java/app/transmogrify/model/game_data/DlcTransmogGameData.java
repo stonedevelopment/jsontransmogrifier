@@ -16,13 +16,13 @@ import java.util.UUID;
 
 import static util.Constants.*;
 
-public class DlcGameData extends GameData {
-    PrimaryGameData primaryGameData;
+public class DlcTransmogGameData extends TransmogGameData {
+    PrimaryTransmogGameData primaryGameData;
     DlcDetails details;
     TotalConversion totalConversion = new TotalConversion();
 
-    public DlcGameData(JsonDlc jsonDlc, JsonNode inObject, ObjectMapper mapper,
-                       PrimaryGameData primaryGameData) {
+    public DlcTransmogGameData(JsonDlc jsonDlc, JsonNode inObject, ObjectMapper mapper,
+                               PrimaryTransmogGameData primaryGameData) {
         super(jsonDlc, inObject, mapper);
         this.primaryGameData = primaryGameData;
         this.details = createDetailsObject(jsonDlc);
@@ -39,9 +39,9 @@ public class DlcGameData extends GameData {
     }
 
     @Override
-    public void mapGameData() {
+    public void mapGameDataFromJson() {
         mapTotalConversionFromJson();
-        super.mapGameData();
+        super.mapGameDataFromJson();
     }
 
     @Override
@@ -144,7 +144,7 @@ public class DlcGameData extends GameData {
         gameDataObject.set("stations", mapper.valueToTree(transformStationMap()));
 
         //  add folders
-        gameDataObject.set("folders", mapper.valueToTree(transformFolderMap()));
+        gameDataObject.set("folders", mapper.valueToTree(transformFolderMapByCategoryId()));
 
         //  add engrams
         gameDataObject.set("engrams", mapper.valueToTree(transformEngramMap()));
@@ -199,7 +199,7 @@ public class DlcGameData extends GameData {
     }
 
     @Override
-    public int mapFolderDirectoryItem(Station station, Folder folder, long categoryId, String parentId) {
+    public int mapFolderDirectoryItemByCategoryId(Station station, Folder folder, long categoryId, String parentId) {
         String uuid = !cDebug ? generateUUID() : folder.getName();
         String sourceId = folder.getUuid();
         String name = folder.getName();

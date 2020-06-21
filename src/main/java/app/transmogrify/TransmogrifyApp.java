@@ -5,7 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import model.game_data.DlcGameData;
-import model.game_data.GameData;
+import controller.GameData;
 import model.game_data.PrimaryGameData;
 import app.transmogrify.model.json.JsonDlc;
 import util.JSONUtil;
@@ -52,14 +52,14 @@ public class TransmogrifyApp {
 
     static JsonNode transmogrifyPrimaryGameData(JsonDlc jsonDlc, JsonNode inObject) throws IOException {
         primaryGameData = new PrimaryGameData(jsonDlc, inObject, mapper);
-        primaryGameData.mapGameData();
+        primaryGameData.mapGameDataFromJson();
         writeGameDataToFile(primaryGameData);
         return mapper.valueToTree(primaryGameData.getDetailsObject());
     }
 
     static JsonNode transmogrifyDlcGameData(JsonDlc jsonDlc, JsonNode inObject) throws IOException {
         DlcGameData gameData = new DlcGameData(jsonDlc, inObject, mapper, primaryGameData);
-        gameData.mapGameData();
+        gameData.mapGameDataFromJson();
         writeGameDataToFile(gameData);
         return mapper.valueToTree(gameData.getDetailsObject());
     }

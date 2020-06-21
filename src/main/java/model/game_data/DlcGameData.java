@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import controller.GameData;
 import model.*;
 import model.details.DlcDetails;
 import model.dlc.*;
@@ -39,9 +40,9 @@ public class DlcGameData extends GameData {
     }
 
     @Override
-    public void mapGameData() {
+    public void mapGameDataFromJson() {
         mapTotalConversionFromJson();
-        super.mapGameData();
+        super.mapGameDataFromJson();
     }
 
     @Override

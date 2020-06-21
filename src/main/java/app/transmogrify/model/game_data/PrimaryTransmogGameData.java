@@ -13,10 +13,10 @@ import java.util.UUID;
 
 import static util.Constants.*;
 
-public class PrimaryGameData extends GameData {
+public class PrimaryTransmogGameData extends TransmogGameData {
     private final PrimaryDetails details;
 
-    public PrimaryGameData(JsonDlc jsonDlc, JsonNode inObject, ObjectMapper mapper) {
+    public PrimaryTransmogGameData(JsonDlc jsonDlc, JsonNode inObject, ObjectMapper mapper) {
         super(jsonDlc, inObject, mapper);
         this.details = createDetailsObject(jsonDlc);
     }
@@ -165,7 +165,7 @@ public class PrimaryGameData extends GameData {
     }
 
     @Override
-    public int mapFolderDirectoryItem(Station station, Folder folder, long categoryId, String parentId) {
+    public int mapFolderDirectoryItemByCategoryId(Station station, Folder folder, long categoryId, String parentId) {
         String uuid = !cDebug ? generateUUID() : folder.getName();
         String sourceId = folder.getUuid();
         String name = folder.getName();
@@ -199,7 +199,7 @@ public class PrimaryGameData extends GameData {
         gameDataObject.set("stations", mapper.valueToTree(transformStationMap()));
 
         //  add folders
-        gameDataObject.set("folders", mapper.valueToTree(transformFolderMap()));
+        gameDataObject.set("folders", mapper.valueToTree(transformFolderMapByCategoryId()));
 
         //  add engrams
         gameDataObject.set("engrams", mapper.valueToTree(transformEngramMap()));
