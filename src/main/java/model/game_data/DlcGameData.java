@@ -18,19 +18,17 @@ import java.util.UUID;
 import static util.Constants.*;
 
 public class DlcGameData extends GameData {
-    PrimaryGameData primaryGameData;
-    DlcDetails details;
-    TotalConversion totalConversion = new TotalConversion();
+    private final PrimaryGameData primaryGameData;
+    private DlcDetails details;
 
-    public DlcGameData(JsonDlc jsonDlc, JsonNode inObject, ObjectMapper mapper,
-                       PrimaryGameData primaryGameData) {
-        super(jsonDlc, inObject, mapper);
+    public DlcGameData(JsonNode inObject, PrimaryGameData primaryGameData) {
+        super(inObject);
         this.primaryGameData = primaryGameData;
-        this.details = createDetailsObject(jsonDlc);
+        mapGameDataFromJson();
     }
 
-    private boolean isTotalConversion(String type) {
-        return type.equals("total_conversion");
+    private boolean isTotalConversion() {
+        return details.isTotalConversion();
     }
 
     @Override
@@ -43,129 +41,6 @@ public class DlcGameData extends GameData {
     public void mapGameDataFromJson() {
         mapTotalConversionFromJson();
         super.mapGameDataFromJson();
-    }
-
-    @Override
-    public DlcFolder buildFolder(JsonCategory jsonCategory) {
-        String uuid = !cDebug ? generateUUID() : jsonCategory.name;
-        String name = jsonCategory.name;
-        String gameId = details.getGameId();
-        String dlcId = details.getUuid();
-        return new DlcFolder(uuid, name, gameId, dlcId);
-    }
-
-    @Override
-    public DlcResource buildResource(JsonResource jsonResource) {
-        String uuid = !cDebug ? generateUUID() : jsonResource.name;
-        String name = jsonResource.name;
-        String description = "";
-        String imageFile = jsonResource.image_file;
-        Date lastUpdated = new Date();
-        String gameId = details.getGameId();
-        String dlcId = details.getUuid();
-
-        return new DlcResource(uuid, name, description, imageFile, lastUpdated, gameId, dlcId);
-    }
-
-    @Override
-    public DlcEngram buildEngram(JsonEngram jsonEngram) {
-        String uuid = !cDebug ? generateUUID() : jsonEngram.name;
-        String name = jsonEngram.name;
-        String description = jsonEngram.description;
-        String imageFile = jsonEngram.image_file;
-        int level = jsonEngram.level;
-        int yield = jsonEngram.yield;
-        int points = jsonEngram.points;
-        int xp = jsonEngram.xp;
-        int craftingTime = 0;
-        Date lastUpdated = new Date();
-        String gameId = details.getGameId();
-        String dlcId = details.getUuid();
-
-        return new DlcEngram(uuid, name, description, imageFile, level, yield, points, xp, craftingTime, lastUpdated,
-                gameId, dlcId);
-    }
-
-    @Override
-    public DlcStation buildStation(JsonStation jsonStation) {
-        String uuid = !cDebug ? generateUUID() : jsonStation.name;
-        String name = jsonStation.name;
-        String imageFile = jsonStation.image_file;
-        String engramId = getEngramUUIDByName(jsonStation.name);
-        Date lastUpdated = new Date();
-        String gameId = details.getGameId();
-        String dlcId = details.getUuid();
-
-        return new DlcStation(uuid, name, imageFile, engramId, lastUpdated, gameId, dlcId);
-    }
-
-    @Override
-    public DlcComposition buildComposition(JsonEngram jsonEngram) {
-        String uuid = !cDebug ? generateUUID() : jsonEngram.name;
-        String engramId = getEngramUUIDByName(jsonEngram.name);
-        Date lastUpdated = new Date();
-        String gameId = details.getGameId();
-        String dlcId = details.getUuid();
-
-        mapCompositesFromJson(uuid, jsonEngram);
-
-        return new DlcComposition(uuid, engramId, lastUpdated, gameId, dlcId);
-    }
-
-    @Override
-    public Composite buildComposite(String compositionId, JsonComposite jsonComposite) {
-        String uuid = generateUUID();
-        String resourceId = getResourceUUIDByName(jsonComposite.resource_id);
-        String engramId = getEngramUUIDByName(jsonComposite.resource_id);
-        boolean isEngram = engramId != null;
-        String sourceId = isEngram ? engramId : resourceId;
-        String name = jsonComposite.resource_id;
-        String imageFile = isEngram ? getEngramImageFileByUUID(engramId) : getResourceImageFileByUUID(resourceId);
-        if (imageFile == null) {
-            throw new NullPointerException();
-        }
-
-        int quantity = jsonComposite.quantity;
-        String gameId = details.getGameId();
-        String dlcId = details.getUuid();
-
-        return new DlcComposite(uuid, name, imageFile, quantity, sourceId, isEngram, compositionId, gameId, dlcId);
-    }
-
-    @Override
-    public JsonNode generateJson() {
-        ObjectNode gameDataObject = mapper.createObjectNode();
-
-        gameDataObject.set("details", mapper.valueToTree(details));
-
-        //  add resources, without complex resources
-        gameDataObject.set("resources", mapper.valueToTree(transformResourceMap()));
-
-        //  add stations
-        gameDataObject.set("stations", mapper.valueToTree(transformStationMap()));
-
-        //  add folders
-        gameDataObject.set("folders", mapper.valueToTree(transformFolderMap()));
-
-        //  add engrams
-        gameDataObject.set("engrams", mapper.valueToTree(transformEngramMap()));
-
-        //  add composition
-        gameDataObject.set("composition", mapper.valueToTree(transformCompositionMap()));
-
-        //  add composites
-        gameDataObject.set("composites", mapper.valueToTree(transformCompositeMap()));
-
-        //  add directory, traverse through tree, fill with uuids
-        gameDataObject.set("directory", mapper.valueToTree(directory));
-
-        //  add remove section
-        gameDataObject.set("remove", createRemoveSection());
-
-        //  add replace section
-        gameDataObject.set("replace", createReplaceSection());
-
-        return gameDataObject;
     }
 
     @Override
@@ -417,23 +292,39 @@ public class DlcGameData extends GameData {
         return outNode;
     }
 
-    private void mapTotalConversionFromJson() {
-        JsonNode totalConversionArray = inObject.get("total_conversion");
-        for (JsonNode totalConversionObject : totalConversionArray) {
-            JsonTotalConversion jsonTotalConversion =
-                    mapper.convertValue(totalConversionObject, JsonTotalConversion.class);
+    @Override
+    public JsonNode resolveToJson() {
+        ObjectNode gameDataObject = mapper.createObjectNode();
 
-            if (isValidDlcId(jsonTotalConversion.dlc_id)) {
-                //  add list of resources to replace
-                for (JsonTotalConversionResource resourceConversion : jsonTotalConversion.resource) {
-                    totalConversion.resourcesToReplace.put(resourceConversion.from, resourceConversion.to);
-                }
+        gameDataObject.set("details", mapper.valueToTree(details));
 
-                //  add lists of removals
-                totalConversion.stationsToRemove.addAll(jsonTotalConversion.station);
-                totalConversion.foldersToRemove.addAll(jsonTotalConversion.category);
-                totalConversion.engramsToRemove.addAll(jsonTotalConversion.engram);
-            }
-        }
+        //  add resources, without complex resources
+        gameDataObject.set("resources", mapper.valueToTree(transformResourceMap()));
+
+        //  add stations
+        gameDataObject.set("stations", mapper.valueToTree(transformStationMap()));
+
+        //  add folders
+        gameDataObject.set("folders", mapper.valueToTree(transformFolderMap()));
+
+        //  add engrams
+        gameDataObject.set("engrams", mapper.valueToTree(transformEngramMap()));
+
+        //  add composition
+        gameDataObject.set("composition", mapper.valueToTree(transformCompositionMap()));
+
+        //  add composites
+        gameDataObject.set("composites", mapper.valueToTree(transformCompositeMap()));
+
+        //  add directory, traverse through tree, fill with uuids
+        gameDataObject.set("directory", mapper.valueToTree(directory));
+
+        //  add remove section
+        gameDataObject.set("remove", createRemoveSection());
+
+        //  add replace section
+        gameDataObject.set("replace", createReplaceSection());
+
+        return gameDataObject;
     }
 }

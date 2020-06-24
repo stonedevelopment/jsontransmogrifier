@@ -1,5 +1,9 @@
 package model.details;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import java.util.Date;
 
 import static util.Constants.cTransmogFileName;
@@ -23,6 +27,10 @@ public class Details {
         this.folderFile = folderFile;
         this.backFolderFile = backFolderFile;
         this.lastUpdated = new Date();
+    }
+
+    public static Details from(JsonNode jsonNode) throws JsonProcessingException {
+        return new ObjectMapper().treeToValue(jsonNode, Details.class);
     }
 
     public String getUuid() {

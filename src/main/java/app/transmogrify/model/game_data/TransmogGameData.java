@@ -7,7 +7,12 @@ import model.*;
 import model.details.Details;
 import util.Log;
 
-import java.util.*;
+import java.util.Collection;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
+
+import static util.Constants.*;
 
 public abstract class TransmogGameData extends GameData {
     protected final JsonDlc jsonDlc;
@@ -47,7 +52,7 @@ public abstract class TransmogGameData extends GameData {
 
     @Override
     protected void mapFoldersFromJson() {
-        JsonNode categoryArray = inObject.get("category");
+        JsonNode categoryArray = inObject.get(cJsonCategory);
         for (JsonNode categoryObject : categoryArray) {
             JsonCategory jsonCategory = mapper.convertValue(categoryObject, JsonCategory.class);
 
@@ -64,7 +69,7 @@ public abstract class TransmogGameData extends GameData {
 
     @Override
     protected void mapResourcesFromJson() {
-        JsonNode resourceArray = inObject.get("resource");
+        JsonNode resourceArray = inObject.get(cJsonResource);
         for (JsonNode resourceObject : resourceArray) {
             JsonResource jsonResource = mapper.convertValue(resourceObject, JsonResource.class);
 
@@ -84,7 +89,7 @@ public abstract class TransmogGameData extends GameData {
 
     @Override
     protected void mapEngramsFromJson() {
-        JsonNode engramArray = inObject.get("engram");
+        JsonNode engramArray = inObject.get(cJsonEngram);
         for (JsonNode engramObject : engramArray) {
             JsonEngram jsonEngram = mapper.convertValue(engramObject, JsonEngram.class);
 
@@ -101,7 +106,7 @@ public abstract class TransmogGameData extends GameData {
 
     @Override
     protected void mapStationsFromJson() {
-        JsonNode stationArray = inObject.get("station");
+        JsonNode stationArray = inObject.get(cJsonStation);
         for (JsonNode stationObject : stationArray) {
             JsonStation jsonStation = mapper.convertValue(stationObject, JsonStation.class);
 
@@ -118,7 +123,7 @@ public abstract class TransmogGameData extends GameData {
 
     @Override
     protected void mapCompositionFromJson() {
-        JsonNode engramArray = inObject.get("engram");
+        JsonNode engramArray = inObject.get(cJsonEngram);
         for (JsonNode engramObject : engramArray) {
             JsonEngram jsonEngram = mapper.convertValue(engramObject, JsonEngram.class);
 
@@ -133,7 +138,7 @@ public abstract class TransmogGameData extends GameData {
         }
     }
 
-    void mapCompositesFromJson(String compositionId, JsonEngram jsonEngram) {
+    protected void mapCompositesFromJson(String compositionId, JsonEngram jsonEngram) {
         for (JsonComposite jsonComposite : jsonEngram.composition) {
             if (isCompositeUnique(compositionId, jsonComposite.resource_id, jsonComposite)) {
                 Composite composite = buildComposite(compositionId, jsonComposite);
@@ -144,7 +149,7 @@ public abstract class TransmogGameData extends GameData {
 
     @Override
     protected void mapDirectoryFromJson() {
-        JsonNode stationArray = inObject.get("station");
+        JsonNode stationArray = inObject.get(cJsonStation);
         for (JsonNode stationObject : stationArray) {
             JsonStation jsonStation = mapper.convertValue(stationObject, JsonStation.class);
 
@@ -161,7 +166,7 @@ public abstract class TransmogGameData extends GameData {
     protected int mapFolderDirectory(final Station station, final long categoryId, final String parentId) {
         int count = 0;
 
-        JsonNode categoryArray = inObject.get("category");
+        JsonNode categoryArray = inObject.get(cJsonCategory);
         for (JsonNode categoryObject : categoryArray) {
             JsonCategory jsonCategory = mapper.convertValue(categoryObject, JsonCategory.class);
 
@@ -189,7 +194,7 @@ public abstract class TransmogGameData extends GameData {
     protected int mapEngramDirectory(final Station station, final long categoryId, final String parentId) {
         int count = 0;
 
-        JsonNode engramArray = inObject.get("engram");
+        JsonNode engramArray = inObject.get(cJsonEngram);
         for (JsonNode engramObject : engramArray) {
             JsonEngram jsonEngram = mapper.convertValue(engramObject, JsonEngram.class);
 
@@ -360,27 +365,6 @@ public abstract class TransmogGameData extends GameData {
         return true;
     }
 
-    protected List<String> convertResourceNamesToId(List<String> in) {
-        List<String> out = new ArrayList<>();
-
-        for (String resourceName : in) {
-            String uuid = getResourceUUIDByName(resourceName);
-            if (uuid == null) {
-                uuid = getEngramUUIDByName(resourceName);
-                if (uuid == null) {
-                    addNullifiedResource(resourceName);
-                    continue;
-                }
-            }
-
-            removeNullifiedResource(resourceName);
-
-            out.add(uuid);
-        }
-
-        return out;
-    }
-
     /**
      * Tests if the dlc id provided matches
      *
@@ -398,6 +382,4 @@ public abstract class TransmogGameData extends GameData {
      * @return if dlc id is valid
      */
     protected abstract boolean isValidDlcIdForDirectory(long dlcId);
-
-    protected abstract String buildFilePathForJSONExport();
 }

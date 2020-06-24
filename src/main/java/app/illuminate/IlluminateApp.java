@@ -26,7 +26,7 @@ public class IlluminateApp {
         //  load parent object
         //  convert transmogrified.json file into separate readable json files
         try {
-            JsonNode inNode = parseIn(cTransmogFileName);
+            JsonNode inNode = parseIn(cTransmogDataFileName);
 
             //  illuminatePrimary(inNode.get("primary"));
             primaryDetails = mapper.treeToValue(inNode.get(cPrimary), PrimaryDetails.class);

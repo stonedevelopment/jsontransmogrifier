@@ -1,5 +1,8 @@
 package model;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import java.util.Date;
 
 /**
@@ -22,6 +25,10 @@ public class Resource {
         this.imageFile = imageFile;
         this.lastUpdated = lastUpdated;
         this.gameId = gameId;
+    }
+
+    public static Resource fromJson(JsonNode node) {
+        return new ObjectMapper().convertValue(node, Resource.class);
     }
 
     public String getUuid() {

@@ -20,7 +20,7 @@ public class JSONUtil {
     }
 
     public static void writeOut(String filePath, JsonNode outObject) throws IOException {
-        Path path = Paths.get(filePath);
+        Path path = Paths.get("src/assets/" + filePath);
         if (Files.notExists(path.getParent())) {
             Files.createDirectory(path.getParent());
         }

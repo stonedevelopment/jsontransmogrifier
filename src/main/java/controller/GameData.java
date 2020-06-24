@@ -8,15 +8,12 @@ import model.details.Details;
 import java.util.*;
 
 /**
- * Base controller that will import an injected json file, map the data, and export to a suggested json file
+ * Base controller that will import an injected json object, map the data, and export to a suggested json file
  */
 public abstract class GameData {
     protected static final boolean cDebug = false; // TODO: 4/26/2020 Set to FALSE when finalizing
 
     protected final ObjectMapper mapper;
-
-    protected final List<String> nullifiedResources = new ArrayList<>();
-
     protected final JsonNode inObject;
 
     //  name, uuid
@@ -101,6 +98,15 @@ public abstract class GameData {
         return folderMap.get(uuid);
     }
 
+    protected String getFolderUUIDByName(String name) {
+        return folderIdMap.get(name);
+    }
+
+    protected Folder getFolderByName(String name) {
+        String uuid = getFolderUUIDByName(name);
+        return getFolder(uuid);
+    }
+
     protected Composition getComposition(String uuid) {
         return compositionMap.get(uuid);
     }
@@ -117,16 +123,6 @@ public abstract class GameData {
         List<String> uuidList = compositeIdMap.get(name);
         if (uuidList == null) return new ArrayList<>();
         return uuidList;
-    }
-
-    protected void addNullifiedResource(String name) {
-        if (!nullifiedResources.contains(name)) {
-            nullifiedResources.add(name);
-        }
-    }
-
-    protected void removeNullifiedResource(String name) {
-        nullifiedResources.remove(name);
     }
 
     /**
@@ -168,7 +164,8 @@ public abstract class GameData {
     }
 
     protected void addFolderToMap(Folder folder) {
-
+        folderIdMap.put(folder.getName(), folder.getUuid());
+        folderMap.put(folder.getUuid(), folder);
     }
 
     protected void addStationToMap(Station station) {
@@ -218,6 +215,17 @@ public abstract class GameData {
         return transformedMap.values();
     }
 
+    protected Collection<Folder> transformFolderMap() {
+        Map<String, Folder> transformedMap = new TreeMap<>();
+        for (Map.Entry<String, String> entry : folderIdMap.entrySet()) {
+            String name = entry.getKey();
+            String uuid = entry.getValue();
+            Folder folder = getFolder(uuid);
+            transformedMap.put(name, folder);
+        }
+        return transformedMap.values();
+    }
+
     protected Collection<Station> transformStationMap() {
         Map<String, Station> transformedMap = new TreeMap<>();
         for (Map.Entry<String, String> entry : stationIdMap.entrySet()) {
@@ -253,42 +261,5 @@ public abstract class GameData {
         return transformedMap.values();
     }
 
-    @Deprecated
-    private List<String> generateSubsForResource(String in) {
-        //  add in substitutions
-        String[] substitutes = new String[0];
-        if (in.equals("Leech Blood or Horns")) {
-            //  "Because of the current crafting system, some recipes can use either Leech Blood or Woolly Rhino Horn or Deathworm Horn."
-            substitutes = new String[]{"Leech Blood", "Deathworm Horn", "Woolly Rhino Horn"};
-        } else if (in.equals("Cooked Meat or Fish Meat")) {
-            substitutes = new String[]{"Cooked Meat", "Cooked Fish Meat"};
-        } else if (in.equals("Cooked Meat or Meat Jerky")) {
-            substitutes = new String[]{"Cooked Meat", "Cooked Meat Jerky"};
-        } else if (in.equals("Pelt, Hair, or Wool")) {
-            substitutes = new String[]{"Pelt", "Human Hair", "Wool"};
-        } else if (in.equals("Berries (Any Kind)")) {
-            //  Berries
-            substitutes = new String[]{"Amarberry", "Azulberry", "Mejoberry", "Narcoberry", "Stimberry", "Tintoberry"};
-        } else if (in.equals("Feces (Any Size)")) {
-            //  Poops
-            substitutes = new String[]{"Human Feces", "Small Animal Feces", "Medium Animal Feces", "Large Animal Feces", "Massive Animal Feces"};
-        } else if (in.equals("Extra Small Egg")) {
-            substitutes = new String[]{"Dilo Egg", "Dodo Egg", "Featherlight Egg", "Kairuku Egg", "Lystrosaur Egg", "Parasaur Egg", "Tek Parasaur Egg", "Vulture Egg"};
-        } else if (in.contains(",")) {
-            //  remove "or", convert to list for each ","
-            String newName = in.replace(", or ", ",");
-            newName = newName.replace(", ", ",");
-            substitutes = newName.split(",");
-        } else if (in.contains(" or ")) {
-            //  replace " or " with ","
-            String newName = in.replace(" or ", ",");
-            substitutes = newName.split(",");
-        }
-
-        return new ArrayList<>(Arrays.asList(substitutes));
-    }
-
-    protected abstract String buildFilePathForJSONExport();
-
-    protected abstract JsonNode generateJson();
+    public abstract JsonNode resolveToJson();
 }

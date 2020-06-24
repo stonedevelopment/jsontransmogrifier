@@ -1,5 +1,9 @@
 package model;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 public class Folder {
     private final String uuid;
     private final String name;
@@ -9,6 +13,10 @@ public class Folder {
         this.uuid = uuid;
         this.name = name;
         this.gameId = gameId;
+    }
+
+    public static Folder fromJson(JsonNode node) {
+        return new ObjectMapper().convertValue(node, Folder.class);
     }
 
     public String getUuid() {
