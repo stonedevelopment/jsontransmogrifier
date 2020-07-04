@@ -1,7 +1,5 @@
 package model.details;
 
-import model.details.Details;
-
 public class DlcDetails extends Details {
     private final Boolean totalConversion;
     private final String gameId;

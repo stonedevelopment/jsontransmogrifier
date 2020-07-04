@@ -1,5 +1,6 @@
 package app.transmogrify;
 
+import app.transmogrify.controller.TransmogGameData;
 import app.transmogrify.model.game_data.DlcTransmogGameData;
 import app.transmogrify.model.game_data.PrimaryTransmogGameData;
 import app.transmogrify.model.json.JsonDlc;
@@ -7,7 +8,6 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import controller.GameData;
 import util.JSONUtil;
 
 import java.io.IOException;
@@ -35,9 +35,9 @@ public class TransmogrifyApp {
             for (JsonNode dlcNode : inDlcArrayNode) {
                 JsonDlc jsonDlc = mapper.treeToValue(dlcNode, JsonDlc.class);
                 if (jsonDlc.type.equals(cDlcTypePrimary)) {
-                    outNode.set(cPrimary, transmogrifyPrimaryGameData(jsonDlc, inNode));
+                    outNode.set(cPrimary, transmogrifyPrimaryGameData(inNode, jsonDlc));
                 } else {
-                    outDlcArrayNode.add(transmogrifyDlcGameData(jsonDlc, inNode));
+                    outDlcArrayNode.add(transmogrifyDlcGameData(inNode, jsonDlc));
                 }
             }
 
@@ -48,24 +48,25 @@ public class TransmogrifyApp {
         }
     }
 
-    static JsonNode transmogrifyPrimaryGameData(JsonDlc jsonDlc, JsonNode inObject) throws IOException {
+
+    static JsonNode transmogrifyPrimaryGameData(JsonNode inObject, JsonDlc jsonDlc) throws IOException {
         primaryGameData = new PrimaryTransmogGameData(inObject, jsonDlc);
         writeGameDataToFile(primaryGameData);
         return mapper.valueToTree(primaryGameData.getDetailsObject());
     }
 
-    static JsonNode transmogrifyDlcGameData(JsonDlc jsonDlc, JsonNode inObject) throws IOException {
+    static JsonNode transmogrifyDlcGameData(JsonNode inObject, JsonDlc jsonDlc) throws IOException {
         DlcTransmogGameData gameData = new DlcTransmogGameData(inObject, jsonDlc, primaryGameData);
         writeGameDataToFile(gameData);
         return mapper.valueToTree(gameData.getDetailsObject());
     }
 
-    private static void writeGameDataToFile(GameData gameData) throws IOException {
+    private static void writeGameDataToFile(TransmogGameData gameData) throws IOException {
         writeJsonToFile(gameData.getDetailsObject().getTransmogFile(), gameData.resolveToJson());
     }
 
     private static void writeTransmogrifyDataToFile(JsonNode outNode) throws IOException {
-        writeJsonToFile(cTransmogDataFileName, outNode);
+        writeJsonToFile(cTransmogrificationFileName, outNode);
     }
 
     private static void writeJsonToFile(String fileName, JsonNode outNode) throws IOException {

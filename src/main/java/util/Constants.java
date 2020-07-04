@@ -4,8 +4,8 @@ public class Constants {
     //  json file names
     public static final String cAssetsFilePath = "src/assets/ARK/";
     public static final String cGamesFileName = "games.json";
-    public static final String cTransmogDataFileName = "transmogrification.json";
-    public static final String cTransmogFileName = "transmogrification.json";
+    public static final String cTransmogrificationFileName = "transmogrification.json";
+    public static final String cTransmogrifiedFileName = "transmogrified.json";
     public static final String cLogoFileName = "logo.webp";
     public static final String cFolderFileName = "folder.webp";
     public static final String cBackFolderFileName = "backFolder.webp";

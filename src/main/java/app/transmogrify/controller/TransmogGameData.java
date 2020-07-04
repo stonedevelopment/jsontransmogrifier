@@ -1,5 +1,6 @@
-package app.transmogrify.model.game_data;
+package app.transmogrify.controller;
 
+import app.transmogrify.model.details.TransmogDetails;
 import app.transmogrify.model.json.*;
 import com.fasterxml.jackson.databind.JsonNode;
 import controller.GameData;
@@ -14,6 +15,9 @@ import java.util.TreeMap;
 
 import static util.Constants.*;
 
+/**
+ * Base controller class for Transmogrifying old json data into UUID json data
+ */
 public abstract class TransmogGameData extends GameData {
     protected final JsonDlc jsonDlc;
 
@@ -25,17 +29,20 @@ public abstract class TransmogGameData extends GameData {
         this.jsonDlc = jsonDlc;
     }
 
-    protected abstract Details createDetailsObject(JsonDlc jsonDlc);
+    @Override
+    public TransmogDetails getDetailsObject() {
+        return (TransmogDetails) super.getDetailsObject();
+    }
 
     protected long getDlcId() {
         return jsonDlc._id;
     }
 
-    protected String getFolderUUIDByCategoryId(long id) {
+    public String getFolderUUIDByCategoryId(long id) {
         return categoryIdMap.get(id);
     }
 
-    protected Folder getFolderByCategoryId(long id) {
+    public Folder getFolderByCategoryId(long id) {
         String uuid = getFolderUUIDByCategoryId(id);
         return getFolder(uuid);
     }
@@ -338,7 +345,7 @@ public abstract class TransmogGameData extends GameData {
         return !composition.equals(engramId);
     }
 
-    private boolean isCompositeUnique(String compositionId, String name, JsonComposite jsonComposite) {
+    protected boolean isCompositeUnique(String compositionId, String name, JsonComposite jsonComposite) {
         //  test name for uuid
         List<String> uuids = getCompositeUUIDListByName(name);
         if (uuids.isEmpty()) return true;

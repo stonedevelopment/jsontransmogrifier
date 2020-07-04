@@ -15,6 +15,7 @@ public abstract class GameData {
 
     protected final ObjectMapper mapper;
     protected final JsonNode inObject;
+    protected Details details;
 
     //  name, uuid
     protected Map<String, String> resourceIdMap = new TreeMap<>();
@@ -46,80 +47,84 @@ public abstract class GameData {
         return UUID.randomUUID().toString();
     }
 
-    public abstract Details getDetailsObject();
+    protected abstract void createDetailsObject();
 
-    protected Resource getResource(String uuid) {
+    public Details getDetailsObject() {
+        return details;
+    }
+
+    public Resource getResource(String uuid) {
         return resourceMap.get(uuid);
     }
 
-    protected String getResourceUUIDByName(String name) {
+    public String getResourceUUIDByName(String name) {
         return resourceIdMap.get(name);
     }
 
-    protected String getResourceImageFileByUUID(String uuid) {
+    public String getResourceImageFileByUUID(String uuid) {
         Resource resource = getResource(uuid);
         if (resource == null) return null;
         return resource.getImageFile();
     }
 
-    protected Engram getEngram(String uuid) {
+    public Engram getEngram(String uuid) {
         return engramMap.get(uuid);
     }
 
-    protected String getEngramUUIDByName(String name) {
+    public String getEngramUUIDByName(String name) {
         return engramIdMap.get(name);
     }
 
-    protected String getEngramImageFileByUUID(String uuid) {
+    public String getEngramImageFileByUUID(String uuid) {
         Engram engram = getEngram(uuid);
         if (engram == null) return null;
         return engram.getImageFile();
     }
 
-    protected Engram getEngramByName(String name) {
+    public Engram getEngramByName(String name) {
         String uuid = getEngramUUIDByName(name);
         return getEngram(uuid);
     }
 
-    protected Station getStation(String uuid) {
+    public Station getStation(String uuid) {
         return stationMap.get(uuid);
     }
 
-    protected String getStationUUIDByName(String name) {
+    public String getStationUUIDByName(String name) {
         return stationIdMap.get(name);
     }
 
-    protected Station getStationByName(String name) {
+    public Station getStationByName(String name) {
         String uuid = getStationUUIDByName(name);
         return getStation(uuid);
     }
 
-    protected Folder getFolder(String uuid) {
+    public Folder getFolder(String uuid) {
         return folderMap.get(uuid);
     }
 
-    protected String getFolderUUIDByName(String name) {
+    public String getFolderUUIDByName(String name) {
         return folderIdMap.get(name);
     }
 
-    protected Folder getFolderByName(String name) {
+    public Folder getFolderByName(String name) {
         String uuid = getFolderUUIDByName(name);
         return getFolder(uuid);
     }
 
-    protected Composition getComposition(String uuid) {
+    public Composition getComposition(String uuid) {
         return compositionMap.get(uuid);
     }
 
-    protected String getCompositionUUIDByName(String name) {
+    public String getCompositionUUIDByName(String name) {
         return compositionIdMap.get(name);
     }
 
-    protected Composite getComposite(String uuid) {
+    public Composite getComposite(String uuid) {
         return compositeMap.get(uuid);
     }
 
-    protected List<String> getCompositeUUIDListByName(String name) {
+    public List<String> getCompositeUUIDListByName(String name) {
         List<String> uuidList = compositeIdMap.get(name);
         if (uuidList == null) return new ArrayList<>();
         return uuidList;
@@ -140,15 +145,11 @@ public abstract class GameData {
 
     protected abstract void mapCompositionFromJson();
 
-    protected abstract void mapCompositesFromJson();
-
     protected abstract void mapDirectoryFromJson();
 
     protected abstract void mapStationDirectoryItem(Station station);
 
     protected abstract void mapEngramDirectoryItem(Engram engram, String parentId);
-
-    protected abstract int mapFolderDirectoryItem(Station station, Folder folder, String parentId);
 
     /**
      * Add objects to maps

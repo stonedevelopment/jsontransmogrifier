@@ -1,17 +1,70 @@
 package app.illuminate.model;
 
-import model.Folder;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
 import controller.GameData;
-
-import java.util.Map;
-import java.util.TreeMap;
+import model.Engram;
+import model.Folder;
+import model.Station;
 
 public class IlluminateGameData extends GameData {
+    public IlluminateGameData(JsonNode inObject) throws JsonProcessingException {
+        super(inObject);
+    }
 
-    private final Map<String, String> folderIdMap = new TreeMap<>();
+    @Override
+    protected void createDetailsObject() {
 
-    public String getFolderUUIDByName(String name) {
-        return folderIdMap.get(name);
+    }
+
+    @Override
+    protected void mapGameDataFromJson() {
+
+    }
+
+    @Override
+    protected void mapFoldersFromJson() {
+
+    }
+
+    @Override
+    protected void mapResourcesFromJson() {
+
+    }
+
+    @Override
+    protected void mapEngramsFromJson() {
+
+    }
+
+    @Override
+    protected void mapStationsFromJson() {
+
+    }
+
+    @Override
+    protected void mapCompositionFromJson() {
+
+    }
+
+    @Override
+    protected void mapDirectoryFromJson() {
+
+    }
+
+    @Override
+    protected void mapStationDirectoryItem(Station station) {
+
+    }
+
+    @Override
+    protected void mapEngramDirectoryItem(Engram engram, String parentId) {
+
+    }
+
+    @Override
+    public JsonNode resolveToJson() {
+        return null;
     }
 
     private boolean isFolderUnique(String name) {

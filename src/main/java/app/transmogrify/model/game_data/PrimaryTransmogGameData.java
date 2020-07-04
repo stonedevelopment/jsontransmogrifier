@@ -1,29 +1,31 @@
 package app.transmogrify.model.game_data;
 
+import app.transmogrify.controller.TransmogGameData;
+import app.transmogrify.model.details.TransmogDetails;
 import app.transmogrify.model.json.*;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import model.*;
-import model.details.PrimaryDetails;
 import util.Log;
 
 import java.util.Date;
-import java.util.List;
-import java.util.UUID;
 
 import static util.Constants.*;
 
 public class PrimaryTransmogGameData extends TransmogGameData {
-    private final PrimaryDetails details;
-
     public PrimaryTransmogGameData(JsonNode inObject, JsonDlc jsonDlc) {
         super(inObject, jsonDlc);
-        this.details = createDetailsObject(jsonDlc);
+        createDetailsObject();
         mapGameDataFromJson();
     }
 
+    @Override
+    protected void createDetailsObject() {
+        this.details = TransmogDetails.from(jsonDlc);
+    }
+
     public String getUuid() {
-        return details.getUuid();
+        return getDetailsObject().getUuid();
     }
 
     @Override
@@ -32,112 +34,10 @@ public class PrimaryTransmogGameData extends TransmogGameData {
     }
 
     @Override
-    public PrimaryDetails createDetailsObject(JsonDlc jsonDlc) {
-        String uuid = !cDebug ? UUID.randomUUID().toString() : jsonDlc.name;
-        String name = jsonDlc.name;
-        String description = jsonDlc.description;
-        String filePath = jsonDlc.filePath;
-        String logoFile = "logo.webp";
-        String folderFile = "folder.webp";
-        String backFolderFile = "backFolder.webp";
-        return new PrimaryDetails(uuid, name, description, filePath, logoFile, folderFile, backFolderFile);
-    }
-
-    @Override
-    public PrimaryDetails getDetailsObject() {
-        return details;
-    }
-
-    @Override
-    protected String getResourceUUIDByName(String name) {
-        return super.getResourceUUIDByName(name);
-    }
-
-    @Override
-    protected String getResourceImageFileByUUID(String uuid) {
-        return super.getResourceImageFileByUUID(uuid);
-    }
-
-    @Override
-    protected Resource getResource(String uuid) {
-        return super.getResource(uuid);
-    }
-
-    @Override
-    protected String getEngramUUIDByName(String name) {
-        return super.getEngramUUIDByName(name);
-    }
-
-    @Override
-    protected String getEngramImageFileByUUID(String uuid) {
-        return super.getEngramImageFileByUUID(uuid);
-    }
-
-    @Override
-    protected Engram getEngramByName(String name) {
-        return super.getEngramByName(name);
-    }
-
-    @Override
-    protected Engram getEngram(String uuid) {
-        return super.getEngram(uuid);
-    }
-
-    @Override
-    protected String getStationUUIDByName(String name) {
-        return super.getStationUUIDByName(name);
-    }
-
-    @Override
-    protected Station getStationByName(String name) {
-        return super.getStationByName(name);
-    }
-
-    @Override
-    protected Station getStation(String uuid) {
-        return super.getStation(uuid);
-    }
-
-    @Override
-    protected String getFolderUUIDByCategoryId(long id) {
-        return super.getFolderUUIDByCategoryId(id);
-    }
-
-    @Override
-    protected Folder getFolderByCategoryId(long id) {
-        return super.getFolderByCategoryId(id);
-    }
-
-    @Override
-    protected Folder getFolder(String uuid) {
-        return super.getFolder(uuid);
-    }
-
-    @Override
-    protected String getCompositionUUIDByName(String name) {
-        return super.getCompositionUUIDByName(name);
-    }
-
-    @Override
-    protected Composition getComposition(String uuid) {
-        return super.getComposition(uuid);
-    }
-
-    @Override
-    protected List<String> getCompositeUUIDListByName(String name) {
-        return super.getCompositeUUIDListByName(name);
-    }
-
-    @Override
-    protected Composite getComposite(String uuid) {
-        return super.getComposite(uuid);
-    }
-
-    @Override
     protected Folder buildFolder(JsonCategory jsonCategory) {
         String uuid = !cDebug ? generateUUID() : jsonCategory.name;
         String name = jsonCategory.name;
-        String gameId = details.getUuid();
+        String gameId = getDetailsObject().getUuid();
         return new Folder(uuid, name, gameId);
     }
 
@@ -148,7 +48,7 @@ public class PrimaryTransmogGameData extends TransmogGameData {
         String description = "";
         String imageFile = jsonResource.image_file;
         Date lastUpdated = new Date();
-        String gameId = details.getUuid();
+        String gameId = getDetailsObject().getUuid();
 
         return new Resource(uuid, name, description, imageFile, lastUpdated, gameId);
     }
@@ -165,7 +65,7 @@ public class PrimaryTransmogGameData extends TransmogGameData {
         int xp = jsonEngram.xp;
         int craftingTime = 0;
         Date lastUpdated = new Date();
-        String gameId = details.getUuid();
+        String gameId = getDetailsObject().getUuid();
 
         return new Engram(uuid, name, description, imageFile, level, yield, points, xp, craftingTime, lastUpdated,
                 gameId);
@@ -178,7 +78,7 @@ public class PrimaryTransmogGameData extends TransmogGameData {
         String imageFile = jsonStation.image_file;
         String engramId = getEngramUUIDByName(jsonStation.name);
         Date lastUpdated = new Date();
-        String gameId = details.getUuid();
+        String gameId = getDetailsObject().getUuid();
         return new Station(uuid, name, imageFile, engramId, lastUpdated, gameId);
     }
 
@@ -187,9 +87,14 @@ public class PrimaryTransmogGameData extends TransmogGameData {
         String uuid = !cDebug ? generateUUID() : jsonEngram.name;
         String engramId = getEngramUUIDByName(jsonEngram.name);
         Date lastUpdated = new Date();
-        String gameId = details.getUuid();
+        String gameId = getDetailsObject().getUuid();
 
-        mapCompositesFromJson(uuid, jsonEngram);
+        for (JsonComposite jsonComposite : jsonEngram.composition) {
+            if (isCompositeUnique(uuid, jsonComposite.resource_id, jsonComposite)) {
+                Composite composite = buildComposite(uuid, jsonComposite);
+                addCompositeToMap(composite);
+            }
+        }
 
         return new Composition(uuid, engramId, lastUpdated, gameId);
     }
@@ -220,7 +125,7 @@ public class PrimaryTransmogGameData extends TransmogGameData {
         String name = station.getName();
         String imageFile = station.getImageFile();
         String sourceId = station.getUuid();
-        String gameId = details.getUuid();
+        String gameId = getDetailsObject().getUuid();
 
         int engramCount = mapEngramDirectory(station, 0, uuid);
         int folderCount = mapFolderDirectory(station, 0, uuid);
@@ -240,7 +145,7 @@ public class PrimaryTransmogGameData extends TransmogGameData {
         String sourceId = engram.getUuid();
         String name = engram.getName();
         String imageFile = engram.getImageFile();
-        String gameId = details.getUuid();
+        String gameId = getDetailsObject().getUuid();
 
         directory.add(new DirectoryItem(uuid, name, imageFile, cEngramViewType, parentId, sourceId, gameId));
     }
@@ -250,8 +155,8 @@ public class PrimaryTransmogGameData extends TransmogGameData {
         String uuid = !cDebug ? generateUUID() : folder.getName();
         String sourceId = folder.getUuid();
         String name = folder.getName();
-        String imageFile = details.getFolderFile();
-        String gameId = details.getUuid();
+        String imageFile = getDetailsObject().getFolderFile();
+        String gameId = getDetailsObject().getUuid();
 
         int engramCount = mapEngramDirectory(station, categoryId, uuid);
         int folderCount = mapFolderDirectory(station, categoryId, uuid);
@@ -271,7 +176,7 @@ public class PrimaryTransmogGameData extends TransmogGameData {
         //  create game data node
         ObjectNode gameDataNode = mapper.createObjectNode();
 
-        gameDataNode.set(cDetails, mapper.valueToTree(details));
+        gameDataNode.set(cDetails, mapper.valueToTree(getDetailsObject()));
 
         //  add resources, without complex resources
         gameDataNode.set(cResources, mapper.valueToTree(transformResourceMap()));
