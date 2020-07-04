@@ -185,9 +185,9 @@ public abstract class GameData {
     }
 
     protected void addCompositeToIdMap(String name, String uuid) {
-        List<String> uuids = getCompositeUUIDListByName(name);
-        uuids.add(uuid);
-        compositeIdMap.put(name, uuids);
+        List<String> uuidList = getCompositeUUIDListByName(name);
+        uuidList.add(uuid);
+        compositeIdMap.put(name, uuidList);
     }
 
     /**
@@ -249,14 +249,19 @@ public abstract class GameData {
         return transformedMap.values();
     }
 
-    protected Collection<Composite> transformCompositeMap() {
-        Map<String, Composite> transformedMap = new TreeMap<>();
+    protected Collection<List<Composite>> transformCompositeMap() {
+        Map<String, List<Composite>> transformedMap = new TreeMap<>();
         for (Map.Entry<String, List<String>> entry : compositeIdMap.entrySet()) {
             String name = entry.getKey();
             List<String> uuidList = entry.getValue();
             for (String uuid : uuidList) {
                 Composite composite = getComposite(uuid);
-                transformedMap.put(name, composite);
+                List<Composite> compositeList = transformedMap.get(name);
+                if (compositeList == null) {
+                    compositeList = new ArrayList<>();
+                }
+                compositeList.add(composite);
+                transformedMap.put(name, compositeList);
             }
         }
         return transformedMap.values();
