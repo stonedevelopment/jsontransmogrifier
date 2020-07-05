@@ -12,11 +12,10 @@ import java.nio.file.Paths;
 import static util.Constants.cAssetsFilePath;
 
 public class JSONUtil {
+    public static JsonNode parseIn(String filePath) throws IOException {
+        InputStream inputStream = ClassLoader.getSystemResourceAsStream(filePath);
 
-
-    public static JsonNode parseIn(String filename) throws IOException {
         ObjectMapper mapper = new ObjectMapper();
-        InputStream inputStream = ClassLoader.getSystemResourceAsStream(filename);
         return mapper.readTree(inputStream);
     }
 
@@ -25,6 +24,7 @@ public class JSONUtil {
         if (Files.notExists(path.getParent())) {
             Files.createDirectory(path.getParent());
         }
+
         ObjectMapper mapper = new ObjectMapper();
         mapper.writeValue(path.toFile(), outObject);
     }

@@ -27,8 +27,13 @@ public class Details {
         this.lastUpdated = new Date();
     }
 
-    public static Details from(JsonNode jsonNode) throws JsonProcessingException {
-        return new ObjectMapper().treeToValue(jsonNode, Details.class);
+    public static Details from(JsonNode jsonNode) {
+        try {
+            return new ObjectMapper().treeToValue(jsonNode, Details.class);
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
     public String getUuid() {

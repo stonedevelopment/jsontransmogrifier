@@ -14,7 +14,7 @@ public abstract class GameData {
     protected static final boolean cDebug = false; // TODO: 4/26/2020 Set to FALSE when finalizing
 
     protected final ObjectMapper mapper;
-    protected final JsonNode inObject;
+    protected final JsonNode inNode;
     protected Details details;
 
     //  name, uuid
@@ -35,11 +35,14 @@ public abstract class GameData {
     protected Map<String, Composition> compositionMap = new HashMap<>();
     protected Map<String, Composite> compositeMap = new HashMap<>();
 
+    //  parent uuid, list<object>
+    protected Map<String, List<DirectoryItem>> directoryMap = new TreeMap<>();
+
     //  list<object>
     protected List<DirectoryItem> directory = new ArrayList<>();
 
-    public GameData(JsonNode inObject) {
-        this.inObject = inObject;
+    public GameData(JsonNode inNode) {
+        this.inNode = inNode;
         this.mapper = new ObjectMapper();
     }
 
@@ -71,8 +74,17 @@ public abstract class GameData {
         return engramMap.get(uuid);
     }
 
+    public Engram getEngramByName(String name) {
+        String uuid = getEngramUUIDByName(name);
+        return getEngram(uuid);
+    }
+
     public String getEngramUUIDByName(String name) {
         return engramIdMap.get(name);
+    }
+
+    public String getEngramNameByUUID(String uuid) {
+        return getEngram(uuid).getName();
     }
 
     public String getEngramImageFileByUUID(String uuid) {
@@ -81,17 +93,8 @@ public abstract class GameData {
         return engram.getImageFile();
     }
 
-    public Engram getEngramByName(String name) {
-        String uuid = getEngramUUIDByName(name);
-        return getEngram(uuid);
-    }
-
     public Station getStation(String uuid) {
         return stationMap.get(uuid);
-    }
-
-    public String getStationUUIDByName(String name) {
-        return stationIdMap.get(name);
     }
 
     public Station getStationByName(String name) {
@@ -99,17 +102,21 @@ public abstract class GameData {
         return getStation(uuid);
     }
 
-    public Folder getFolder(String uuid) {
-        return folderMap.get(uuid);
+    public String getStationUUIDByName(String name) {
+        return stationIdMap.get(name);
     }
 
-    public String getFolderUUIDByName(String name) {
-        return folderIdMap.get(name);
+    public Folder getFolder(String uuid) {
+        return folderMap.get(uuid);
     }
 
     public Folder getFolderByName(String name) {
         String uuid = getFolderUUIDByName(name);
         return getFolder(uuid);
+    }
+
+    public String getFolderUUIDByName(String name) {
+        return folderIdMap.get(name);
     }
 
     public Composition getComposition(String uuid) {
@@ -128,6 +135,12 @@ public abstract class GameData {
         List<String> uuidList = compositeIdMap.get(name);
         if (uuidList == null) return new ArrayList<>();
         return uuidList;
+    }
+
+    public List<DirectoryItem> getDirectoryItemListByParentUUID(String parentUUID) {
+        List<DirectoryItem> directoryItemList = directoryMap.get(parentUUID);
+        if (directoryItemList == null) return new ArrayList<>();
+        return directoryItemList;
     }
 
     /**
@@ -188,6 +201,18 @@ public abstract class GameData {
         List<String> uuidList = getCompositeUUIDListByName(name);
         uuidList.add(uuid);
         compositeIdMap.put(name, uuidList);
+    }
+
+    protected void addDirectoryItemToMap(DirectoryItem directoryItem) {
+        addDirectoryItemToIdMap(directoryItem);
+        directory.add(directoryItem);
+    }
+
+    protected void addDirectoryItemToIdMap(DirectoryItem directoryItem) {
+        String parentId = directoryItem.getParentId();
+        List<DirectoryItem> directoryItemList = getDirectoryItemListByParentUUID(parentId);
+        directoryItemList.add(directoryItem);
+        directoryMap.put(parentId, directoryItemList);
     }
 
     /**

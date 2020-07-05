@@ -1,5 +1,8 @@
 package model;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 /**
  * "uuid": "",
  * "stationId": "67553474-6941-4c64-88d0-d4b4eb7d29fb",
@@ -27,6 +30,10 @@ public class DirectoryItem {
         this.parentId = parentId;
         this.sourceId = sourceId;
         this.gameId = gameId;
+    }
+
+    public static DirectoryItem fromJson(JsonNode node) {
+        return new ObjectMapper().convertValue(node, DirectoryItem.class);
     }
 
     public String getUuid() {

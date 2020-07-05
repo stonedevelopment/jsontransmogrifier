@@ -1,5 +1,8 @@
 package model;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import java.util.Date;
 
 /**
@@ -48,6 +51,10 @@ public class Engram {
         this.craftingTime = craftingTime;
         this.lastUpdated = lastUpdated;
         this.gameId = gameId;
+    }
+
+    public static Engram fromJson(JsonNode node) {
+        return new ObjectMapper().convertValue(node, Engram.class);
     }
 
     public String getUuid() {

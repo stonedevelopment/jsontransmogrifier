@@ -1,5 +1,8 @@
 package model;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import java.util.Date;
 
 public class Composition {
@@ -13,6 +16,10 @@ public class Composition {
         this.engramId = engramId;
         this.lastUpdated = lastUpdated;
         this.gameId = gameId;
+    }
+
+    public static Composition fromJson(JsonNode node) {
+        return new ObjectMapper().convertValue(node, Composition.class);
     }
 
     public String getUuid() {

@@ -291,7 +291,7 @@ public class DlcTransmogGameData extends TransmogGameData {
     }
 
     private void mapTotalConversionFromJson() {
-        JsonNode totalConversionArray = inObject.get(cDlcTypeTotalConversion);
+        JsonNode totalConversionArray = inNode.get(cDlcTypeTotalConversion);
         for (JsonNode totalConversionObject : totalConversionArray) {
             JsonTotalConversion jsonTotalConversion =
                     mapper.convertValue(totalConversionObject, JsonTotalConversion.class);

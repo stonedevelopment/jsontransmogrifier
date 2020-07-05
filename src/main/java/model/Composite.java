@@ -1,6 +1,8 @@
 package model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class Composite {
     private final String uuid;
@@ -28,6 +30,10 @@ public class Composite {
         this.isEngram = isEngram;
         this.compositionId = compositionId;
         this.gameId = gameId;
+    }
+
+    public static Composite fromJson(JsonNode node) {
+        return new ObjectMapper().convertValue(node, Composite.class);
     }
 
     public String getUuid() {
