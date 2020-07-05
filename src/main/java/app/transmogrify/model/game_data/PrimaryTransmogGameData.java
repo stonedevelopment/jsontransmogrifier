@@ -15,7 +15,6 @@ import static util.Constants.*;
 public class PrimaryTransmogGameData extends TransmogGameData {
     public PrimaryTransmogGameData(JsonNode inObject, JsonDlc jsonDlc) {
         super(inObject, jsonDlc);
-        createDetailsObject();
         mapGameDataFromJson();
     }
 

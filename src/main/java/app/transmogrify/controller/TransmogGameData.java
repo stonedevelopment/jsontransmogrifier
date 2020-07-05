@@ -48,6 +48,7 @@ public abstract class TransmogGameData extends GameData {
 
     @Override
     protected void mapGameDataFromJson() {
+        createDetailsObject();
         mapFoldersFromJson();
         mapResourcesFromJson();
         mapEngramsFromJson();
@@ -67,7 +68,7 @@ public abstract class TransmogGameData extends GameData {
                     Folder folder = buildFolder(jsonCategory);
                     addFolderToMapByCategoryId(jsonCategory._id, folder);
                 } else {
-                    Log.d("Duplicate Folder found: " + jsonCategory.toString());
+                    Log.d("Duplicate Folder found: " + jsonCategory.name);
                 }
             }
         }
@@ -87,7 +88,7 @@ public abstract class TransmogGameData extends GameData {
                     Resource resource = buildResource(jsonResource);
                     addResourceToMap(resource);
                 } else {
-                    Log.d("Duplicate Resource found: " + jsonResource.toString());
+                    Log.d("Duplicate Resource found: " + jsonResource.name);
                 }
             }
         }
@@ -104,7 +105,7 @@ public abstract class TransmogGameData extends GameData {
                     Engram engram = buildEngram(jsonEngram);
                     addEngramToMap(engram);
                 } else {
-                    Log.d("Duplicate Engram found: " + jsonEngram.toString());
+                    Log.d("Duplicate Engram found: " + jsonEngram.name);
                 }
             }
         }
@@ -121,7 +122,7 @@ public abstract class TransmogGameData extends GameData {
                     Station station = buildStation(jsonStation);
                     addStationToMap(station);
                 } else {
-                    Log.d("Duplicate Station found: " + jsonStation.toString());
+                    Log.d("Duplicate Station found: " + jsonStation.name);
                 }
             }
         }
@@ -138,7 +139,7 @@ public abstract class TransmogGameData extends GameData {
                     Composition composition = buildComposition(jsonEngram);
                     addCompositionToMap(jsonEngram.name, composition);
                 } else {
-                    Log.d("Duplicate Composition found: " + jsonEngram.toString());
+                    Log.d("Duplicate Composition found: " + jsonEngram.name);
                 }
             }
         }
@@ -327,7 +328,7 @@ public abstract class TransmogGameData extends GameData {
         return !station.equals(name, imageFile, engramId);
     }
 
-    private boolean isCompositionUnique(JsonEngram jsonEngram) {
+    public boolean isCompositionUnique(JsonEngram jsonEngram) {
         //  test name for uuid
         String uuid = getCompositionUUIDByName(jsonEngram.name);
         if (uuid == null) return true;
@@ -344,12 +345,12 @@ public abstract class TransmogGameData extends GameData {
         return !composition.equals(engramId);
     }
 
-    protected boolean isCompositeUnique(String compositionId, String name, JsonComposite jsonComposite) {
+    public boolean isCompositeUnique(String compositionId, String name, JsonComposite jsonComposite) {
         //  test name for uuid
-        List<String> uuids = getCompositeUUIDListByName(name);
-        if (uuids.isEmpty()) return true;
+        List<String> uuidList = getCompositeUUIDListByName(name);
+        if (uuidList.isEmpty()) return true;
 
-        for (String uuid : uuids) {
+        for (String uuid : uuidList) {
             //  test uuid for object
             Composite composite = getComposite(uuid);
             if (composite == null) continue;

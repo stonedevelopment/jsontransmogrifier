@@ -1,6 +1,8 @@
 package app.illuminate;
 
+import app.illuminate.model.DlcIlluminateGameData;
 import app.illuminate.model.PrimaryIlluminateGameData;
+import app.transmogrify.model.details.DlcTransmogDetails;
 import app.transmogrify.model.details.TransmogDetails;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -26,23 +28,31 @@ public class IlluminateApp {
         //  convert transmogrified.json file into separate readable json files
         try {
             JsonNode transmogNode = parseIn(cTransmogrificationFileName);
-            illuminatePrimary(transmogNode);
-            illuminateDlcs(transmogNode);
+            illuminatePrimaryNode(transmogNode);
+            illuminateDlcNode(transmogNode);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    private static void illuminatePrimary(JsonNode transmogNode) throws IOException {
+    private static void illuminatePrimaryNode(JsonNode transmogNode) throws IOException {
         TransmogDetails details = mapper.treeToValue(transmogNode.get(cPrimary), TransmogDetails.class);
         String filePath = details.getTransmogFile();
 
         JsonNode transmogrifiedNode = parseIn(filePath);
         primaryGameData = new PrimaryIlluminateGameData(transmogrifiedNode);
+        //  writeGameDataToFile()
     }
 
-    private static void illuminateDlcs(JsonNode transmogNode) {
-        JsonNode dlcNode = transmogNode.get(cDlc);
+    private static void illuminateDlcNode(JsonNode transmogNode) throws IOException {
+        JsonNode dlcArrayNode = transmogNode.get(cDlc);
+        for (JsonNode dlcNode : dlcArrayNode) {
+            DlcTransmogDetails details = mapper.treeToValue(dlcNode, DlcTransmogDetails.class);
+            String filePath = details.getTransmogFile();
 
+            JsonNode transmogrifiedNode = parseIn(filePath);
+            DlcIlluminateGameData gameData = new DlcIlluminateGameData(transmogrifiedNode);
+            //  writeGameDataToFile()
+        }
     }
 }

@@ -1,1 +1,681 @@
-{"details":{"uuid":"214563bd-a219-4e7e-8bbe-8c0a114a2300","name":"The Center","description":null,"filePath":"DLC/The Center/","logoFile":"logo.webp","folderFile":"folder.webp","backFolderFile":"backFolder.webp","lastUpdated":1593878680934,"totalConversion":false,"gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","transmogFile":"DLC/The Center/transmogrified.json"},"resources":[],"stations":[],"folders":[{"uuid":"11d9d1f5-b322-4cd6-81b1-d50a820a4fd7","name":"The Center Arena","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300"}],"engrams":[{"uuid":"841a8646-c799-47b8-b045-c85dbc014e53","name":"Generate Center (Easy) Portal","description":"Use this to generate a portal to The Center's Guardians.","imageFile":"gamma_portal.webp","level":70,"yield":1,"points":0,"xp":0,"craftingTime":0,"lastUpdated":1593878680945,"gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300"},{"uuid":"226e5af3-658a-453c-b572-a09dfd4c15d2","name":"Generate Center (Hard) Portal","description":"Use this to generate a portal to The Center's Guardians. (Hard)","imageFile":"alpha_portal.webp","level":90,"yield":1,"points":0,"xp":0,"craftingTime":0,"lastUpdated":1593878680945,"gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300"},{"uuid":"83de9345-05ae-417b-8eb1-f8ed2797568b","name":"Generate Center (Medium) Portal","description":"Use this to generate a portal to The Center's Guardians. (Medium)","imageFile":"beta_portal.webp","level":80,"yield":1,"points":0,"xp":0,"craftingTime":0,"lastUpdated":1593878680945,"gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300"}],"composition":[{"uuid":"dd3a88a8-b37c-4a16-936a-acc213b7116f","engramId":"841a8646-c799-47b8-b045-c85dbc014e53","lastUpdated":1593878680952,"gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300"},{"uuid":"3817d31a-e35d-4236-9150-7c0b818ab9ed","engramId":"226e5af3-658a-453c-b572-a09dfd4c15d2","lastUpdated":1593878680952,"gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300"},{"uuid":"6e9dd8ce-941c-4e93-89fd-7489e314c29e","engramId":"83de9345-05ae-417b-8eb1-f8ed2797568b","lastUpdated":1593878680952,"gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300"}],"composites":[[{"uuid":"a802328d-89d1-42db-94c7-df48016b2f94","name":"Argentavis Talon","imageFile":"argentavis_talon.webp","quantity":5,"sourceId":"763e220d-e5d5-4829-87d6-5af07d3e5bd6","compositionId":"b3f68acb-7283-4971-9179-f6cc696bf473","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"6b0edff7-cdc3-4616-8394-e4373da1c87c","name":"Argentavis Talon","imageFile":"argentavis_talon.webp","quantity":10,"sourceId":"763e220d-e5d5-4829-87d6-5af07d3e5bd6","compositionId":"5336b34a-9696-454f-9343-0048e12f8212","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"58cbcddd-cae4-417f-b09d-22d60c4451b6","name":"Argentavis Talon","imageFile":"argentavis_talon.webp","quantity":4,"sourceId":"763e220d-e5d5-4829-87d6-5af07d3e5bd6","compositionId":"dd3a88a8-b37c-4a16-936a-acc213b7116f","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300","isEngram":false},{"uuid":"a802328d-89d1-42db-94c7-df48016b2f94","name":"Argentavis Talon","imageFile":"argentavis_talon.webp","quantity":5,"sourceId":"763e220d-e5d5-4829-87d6-5af07d3e5bd6","compositionId":"b3f68acb-7283-4971-9179-f6cc696bf473","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"6b0edff7-cdc3-4616-8394-e4373da1c87c","name":"Argentavis Talon","imageFile":"argentavis_talon.webp","quantity":10,"sourceId":"763e220d-e5d5-4829-87d6-5af07d3e5bd6","compositionId":"5336b34a-9696-454f-9343-0048e12f8212","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"a802328d-89d1-42db-94c7-df48016b2f94","name":"Argentavis Talon","imageFile":"argentavis_talon.webp","quantity":5,"sourceId":"763e220d-e5d5-4829-87d6-5af07d3e5bd6","compositionId":"b3f68acb-7283-4971-9179-f6cc696bf473","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"6b0edff7-cdc3-4616-8394-e4373da1c87c","name":"Argentavis Talon","imageFile":"argentavis_talon.webp","quantity":10,"sourceId":"763e220d-e5d5-4829-87d6-5af07d3e5bd6","compositionId":"5336b34a-9696-454f-9343-0048e12f8212","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"10061130-4694-4ef1-8496-fc63ff10caa3","name":"Argentavis Talon","imageFile":"argentavis_talon.webp","quantity":10,"sourceId":"763e220d-e5d5-4829-87d6-5af07d3e5bd6","compositionId":"6e9dd8ce-941c-4e93-89fd-7489e314c29e","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300","isEngram":false},{"uuid":"a802328d-89d1-42db-94c7-df48016b2f94","name":"Argentavis Talon","imageFile":"argentavis_talon.webp","quantity":5,"sourceId":"763e220d-e5d5-4829-87d6-5af07d3e5bd6","compositionId":"b3f68acb-7283-4971-9179-f6cc696bf473","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"6b0edff7-cdc3-4616-8394-e4373da1c87c","name":"Argentavis Talon","imageFile":"argentavis_talon.webp","quantity":10,"sourceId":"763e220d-e5d5-4829-87d6-5af07d3e5bd6","compositionId":"5336b34a-9696-454f-9343-0048e12f8212","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"a802328d-89d1-42db-94c7-df48016b2f94","name":"Argentavis Talon","imageFile":"argentavis_talon.webp","quantity":5,"sourceId":"763e220d-e5d5-4829-87d6-5af07d3e5bd6","compositionId":"b3f68acb-7283-4971-9179-f6cc696bf473","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"6b0edff7-cdc3-4616-8394-e4373da1c87c","name":"Argentavis Talon","imageFile":"argentavis_talon.webp","quantity":10,"sourceId":"763e220d-e5d5-4829-87d6-5af07d3e5bd6","compositionId":"5336b34a-9696-454f-9343-0048e12f8212","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"acb590a0-d6c4-4faf-8032-a932a4340ac4","name":"Argentavis Talon","imageFile":"argentavis_talon.webp","quantity":25,"sourceId":"763e220d-e5d5-4829-87d6-5af07d3e5bd6","compositionId":"3817d31a-e35d-4236-9150-7c0b818ab9ed","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300","isEngram":false}],[{"uuid":"f3f01bd1-a834-4db4-a2ef-0006e0fc1bc9","name":"Artifact of the Brute","imageFile":"artifact_of_the_brute.webp","quantity":1,"sourceId":"4f499f9c-fe4f-4ae2-be14-495760f07e8c","compositionId":"ba9767f3-0a1f-4757-83b1-01e2184d93b3","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"293fcc0c-0201-4e14-9d5d-288fff311177","name":"Artifact of the Brute","imageFile":"artifact_of_the_brute.webp","quantity":1,"sourceId":"4f499f9c-fe4f-4ae2-be14-495760f07e8c","compositionId":"6b50be3f-c971-4ce9-b5ef-50879478ec4f","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"c79dce77-59b0-4fae-989c-75d5d89b1e16","name":"Artifact of the Brute","imageFile":"artifact_of_the_brute.webp","quantity":1,"sourceId":"4f499f9c-fe4f-4ae2-be14-495760f07e8c","compositionId":"8a00d82b-8a39-4b53-9f1d-8fba52706084","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"25510876-f94f-4857-92d4-0e2ff36544bc","name":"Artifact of the Brute","imageFile":"artifact_of_the_brute.webp","quantity":1,"sourceId":"4f499f9c-fe4f-4ae2-be14-495760f07e8c","compositionId":"dd3a88a8-b37c-4a16-936a-acc213b7116f","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300","isEngram":false},{"uuid":"f3f01bd1-a834-4db4-a2ef-0006e0fc1bc9","name":"Artifact of the Brute","imageFile":"artifact_of_the_brute.webp","quantity":1,"sourceId":"4f499f9c-fe4f-4ae2-be14-495760f07e8c","compositionId":"ba9767f3-0a1f-4757-83b1-01e2184d93b3","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"293fcc0c-0201-4e14-9d5d-288fff311177","name":"Artifact of the Brute","imageFile":"artifact_of_the_brute.webp","quantity":1,"sourceId":"4f499f9c-fe4f-4ae2-be14-495760f07e8c","compositionId":"6b50be3f-c971-4ce9-b5ef-50879478ec4f","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"c79dce77-59b0-4fae-989c-75d5d89b1e16","name":"Artifact of the Brute","imageFile":"artifact_of_the_brute.webp","quantity":1,"sourceId":"4f499f9c-fe4f-4ae2-be14-495760f07e8c","compositionId":"8a00d82b-8a39-4b53-9f1d-8fba52706084","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"f3f01bd1-a834-4db4-a2ef-0006e0fc1bc9","name":"Artifact of the Brute","imageFile":"artifact_of_the_brute.webp","quantity":1,"sourceId":"4f499f9c-fe4f-4ae2-be14-495760f07e8c","compositionId":"ba9767f3-0a1f-4757-83b1-01e2184d93b3","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"293fcc0c-0201-4e14-9d5d-288fff311177","name":"Artifact of the Brute","imageFile":"artifact_of_the_brute.webp","quantity":1,"sourceId":"4f499f9c-fe4f-4ae2-be14-495760f07e8c","compositionId":"6b50be3f-c971-4ce9-b5ef-50879478ec4f","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"c79dce77-59b0-4fae-989c-75d5d89b1e16","name":"Artifact of the Brute","imageFile":"artifact_of_the_brute.webp","quantity":1,"sourceId":"4f499f9c-fe4f-4ae2-be14-495760f07e8c","compositionId":"8a00d82b-8a39-4b53-9f1d-8fba52706084","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"d3732d1e-6c49-44f7-bebc-65cc9fe6a1c6","name":"Artifact of the Brute","imageFile":"artifact_of_the_brute.webp","quantity":1,"sourceId":"4f499f9c-fe4f-4ae2-be14-495760f07e8c","compositionId":"6e9dd8ce-941c-4e93-89fd-7489e314c29e","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300","isEngram":false},{"uuid":"f3f01bd1-a834-4db4-a2ef-0006e0fc1bc9","name":"Artifact of the Brute","imageFile":"artifact_of_the_brute.webp","quantity":1,"sourceId":"4f499f9c-fe4f-4ae2-be14-495760f07e8c","compositionId":"ba9767f3-0a1f-4757-83b1-01e2184d93b3","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"293fcc0c-0201-4e14-9d5d-288fff311177","name":"Artifact of the Brute","imageFile":"artifact_of_the_brute.webp","quantity":1,"sourceId":"4f499f9c-fe4f-4ae2-be14-495760f07e8c","compositionId":"6b50be3f-c971-4ce9-b5ef-50879478ec4f","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"c79dce77-59b0-4fae-989c-75d5d89b1e16","name":"Artifact of the Brute","imageFile":"artifact_of_the_brute.webp","quantity":1,"sourceId":"4f499f9c-fe4f-4ae2-be14-495760f07e8c","compositionId":"8a00d82b-8a39-4b53-9f1d-8fba52706084","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"f3f01bd1-a834-4db4-a2ef-0006e0fc1bc9","name":"Artifact of the Brute","imageFile":"artifact_of_the_brute.webp","quantity":1,"sourceId":"4f499f9c-fe4f-4ae2-be14-495760f07e8c","compositionId":"ba9767f3-0a1f-4757-83b1-01e2184d93b3","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"293fcc0c-0201-4e14-9d5d-288fff311177","name":"Artifact of the Brute","imageFile":"artifact_of_the_brute.webp","quantity":1,"sourceId":"4f499f9c-fe4f-4ae2-be14-495760f07e8c","compositionId":"6b50be3f-c971-4ce9-b5ef-50879478ec4f","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"c79dce77-59b0-4fae-989c-75d5d89b1e16","name":"Artifact of the Brute","imageFile":"artifact_of_the_brute.webp","quantity":1,"sourceId":"4f499f9c-fe4f-4ae2-be14-495760f07e8c","compositionId":"8a00d82b-8a39-4b53-9f1d-8fba52706084","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"cadf5d3f-6699-48ff-a9f2-7cbdc0829ed6","name":"Artifact of the Brute","imageFile":"artifact_of_the_brute.webp","quantity":1,"sourceId":"4f499f9c-fe4f-4ae2-be14-495760f07e8c","compositionId":"3817d31a-e35d-4236-9150-7c0b818ab9ed","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300","isEngram":false}],[{"uuid":"76dd0b71-db1a-4234-bb19-d737f80e8fa0","name":"Artifact of the Clever","imageFile":"artifact_of_the_clever.webp","quantity":1,"sourceId":"57b7a30a-4cce-4e59-b238-c52afb66ebc0","compositionId":"46a6a2cc-884f-48be-9e66-d96a604eb401","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"b87049d7-4317-4e07-a6d0-c426a7b3ffc2","name":"Artifact of the Clever","imageFile":"artifact_of_the_clever.webp","quantity":1,"sourceId":"57b7a30a-4cce-4e59-b238-c52afb66ebc0","compositionId":"b3f68acb-7283-4971-9179-f6cc696bf473","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"2250c3fe-6e88-4dca-9eef-7488195ec641","name":"Artifact of the Clever","imageFile":"artifact_of_the_clever.webp","quantity":1,"sourceId":"57b7a30a-4cce-4e59-b238-c52afb66ebc0","compositionId":"5336b34a-9696-454f-9343-0048e12f8212","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"ee378c4e-2763-401a-ace8-7dbaf546e884","name":"Artifact of the Clever","imageFile":"artifact_of_the_clever.webp","quantity":1,"sourceId":"57b7a30a-4cce-4e59-b238-c52afb66ebc0","compositionId":"dd3a88a8-b37c-4a16-936a-acc213b7116f","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300","isEngram":false},{"uuid":"76dd0b71-db1a-4234-bb19-d737f80e8fa0","name":"Artifact of the Clever","imageFile":"artifact_of_the_clever.webp","quantity":1,"sourceId":"57b7a30a-4cce-4e59-b238-c52afb66ebc0","compositionId":"46a6a2cc-884f-48be-9e66-d96a604eb401","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"b87049d7-4317-4e07-a6d0-c426a7b3ffc2","name":"Artifact of the Clever","imageFile":"artifact_of_the_clever.webp","quantity":1,"sourceId":"57b7a30a-4cce-4e59-b238-c52afb66ebc0","compositionId":"b3f68acb-7283-4971-9179-f6cc696bf473","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"2250c3fe-6e88-4dca-9eef-7488195ec641","name":"Artifact of the Clever","imageFile":"artifact_of_the_clever.webp","quantity":1,"sourceId":"57b7a30a-4cce-4e59-b238-c52afb66ebc0","compositionId":"5336b34a-9696-454f-9343-0048e12f8212","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"76dd0b71-db1a-4234-bb19-d737f80e8fa0","name":"Artifact of the Clever","imageFile":"artifact_of_the_clever.webp","quantity":1,"sourceId":"57b7a30a-4cce-4e59-b238-c52afb66ebc0","compositionId":"46a6a2cc-884f-48be-9e66-d96a604eb401","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"b87049d7-4317-4e07-a6d0-c426a7b3ffc2","name":"Artifact of the Clever","imageFile":"artifact_of_the_clever.webp","quantity":1,"sourceId":"57b7a30a-4cce-4e59-b238-c52afb66ebc0","compositionId":"b3f68acb-7283-4971-9179-f6cc696bf473","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"2250c3fe-6e88-4dca-9eef-7488195ec641","name":"Artifact of the Clever","imageFile":"artifact_of_the_clever.webp","quantity":1,"sourceId":"57b7a30a-4cce-4e59-b238-c52afb66ebc0","compositionId":"5336b34a-9696-454f-9343-0048e12f8212","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"711ddd16-42a8-48a6-9c69-5c562a029998","name":"Artifact of the Clever","imageFile":"artifact_of_the_clever.webp","quantity":1,"sourceId":"57b7a30a-4cce-4e59-b238-c52afb66ebc0","compositionId":"6e9dd8ce-941c-4e93-89fd-7489e314c29e","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300","isEngram":false},{"uuid":"76dd0b71-db1a-4234-bb19-d737f80e8fa0","name":"Artifact of the Clever","imageFile":"artifact_of_the_clever.webp","quantity":1,"sourceId":"57b7a30a-4cce-4e59-b238-c52afb66ebc0","compositionId":"46a6a2cc-884f-48be-9e66-d96a604eb401","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"b87049d7-4317-4e07-a6d0-c426a7b3ffc2","name":"Artifact of the Clever","imageFile":"artifact_of_the_clever.webp","quantity":1,"sourceId":"57b7a30a-4cce-4e59-b238-c52afb66ebc0","compositionId":"b3f68acb-7283-4971-9179-f6cc696bf473","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"2250c3fe-6e88-4dca-9eef-7488195ec641","name":"Artifact of the Clever","imageFile":"artifact_of_the_clever.webp","quantity":1,"sourceId":"57b7a30a-4cce-4e59-b238-c52afb66ebc0","compositionId":"5336b34a-9696-454f-9343-0048e12f8212","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"76dd0b71-db1a-4234-bb19-d737f80e8fa0","name":"Artifact of the Clever","imageFile":"artifact_of_the_clever.webp","quantity":1,"sourceId":"57b7a30a-4cce-4e59-b238-c52afb66ebc0","compositionId":"46a6a2cc-884f-48be-9e66-d96a604eb401","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"b87049d7-4317-4e07-a6d0-c426a7b3ffc2","name":"Artifact of the Clever","imageFile":"artifact_of_the_clever.webp","quantity":1,"sourceId":"57b7a30a-4cce-4e59-b238-c52afb66ebc0","compositionId":"b3f68acb-7283-4971-9179-f6cc696bf473","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"2250c3fe-6e88-4dca-9eef-7488195ec641","name":"Artifact of the Clever","imageFile":"artifact_of_the_clever.webp","quantity":1,"sourceId":"57b7a30a-4cce-4e59-b238-c52afb66ebc0","compositionId":"5336b34a-9696-454f-9343-0048e12f8212","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"589e7cf1-87e7-401f-9a48-6d5487b318a0","name":"Artifact of the Clever","imageFile":"artifact_of_the_clever.webp","quantity":1,"sourceId":"57b7a30a-4cce-4e59-b238-c52afb66ebc0","compositionId":"3817d31a-e35d-4236-9150-7c0b818ab9ed","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300","isEngram":false}],[{"uuid":"7e926827-3410-4072-b710-9baedb6b8779","name":"Artifact of the Devourer","imageFile":"artifact_of_the_devourer.webp","quantity":1,"sourceId":"be736b65-8341-4891-a6b4-59d6230debb2","compositionId":"ba9767f3-0a1f-4757-83b1-01e2184d93b3","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"56c15d0e-6acd-45e4-8cc2-7eaa2d5c6c3d","name":"Artifact of the Devourer","imageFile":"artifact_of_the_devourer.webp","quantity":1,"sourceId":"be736b65-8341-4891-a6b4-59d6230debb2","compositionId":"6b50be3f-c971-4ce9-b5ef-50879478ec4f","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"650d3b65-0047-4399-adb9-4b807cfa25e7","name":"Artifact of the Devourer","imageFile":"artifact_of_the_devourer.webp","quantity":1,"sourceId":"be736b65-8341-4891-a6b4-59d6230debb2","compositionId":"8a00d82b-8a39-4b53-9f1d-8fba52706084","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"5d9bc415-ec83-4228-ae2d-60266653538f","name":"Artifact of the Devourer","imageFile":"artifact_of_the_devourer.webp","quantity":1,"sourceId":"be736b65-8341-4891-a6b4-59d6230debb2","compositionId":"dd3a88a8-b37c-4a16-936a-acc213b7116f","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300","isEngram":false},{"uuid":"7e926827-3410-4072-b710-9baedb6b8779","name":"Artifact of the Devourer","imageFile":"artifact_of_the_devourer.webp","quantity":1,"sourceId":"be736b65-8341-4891-a6b4-59d6230debb2","compositionId":"ba9767f3-0a1f-4757-83b1-01e2184d93b3","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"56c15d0e-6acd-45e4-8cc2-7eaa2d5c6c3d","name":"Artifact of the Devourer","imageFile":"artifact_of_the_devourer.webp","quantity":1,"sourceId":"be736b65-8341-4891-a6b4-59d6230debb2","compositionId":"6b50be3f-c971-4ce9-b5ef-50879478ec4f","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"650d3b65-0047-4399-adb9-4b807cfa25e7","name":"Artifact of the Devourer","imageFile":"artifact_of_the_devourer.webp","quantity":1,"sourceId":"be736b65-8341-4891-a6b4-59d6230debb2","compositionId":"8a00d82b-8a39-4b53-9f1d-8fba52706084","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"7e926827-3410-4072-b710-9baedb6b8779","name":"Artifact of the Devourer","imageFile":"artifact_of_the_devourer.webp","quantity":1,"sourceId":"be736b65-8341-4891-a6b4-59d6230debb2","compositionId":"ba9767f3-0a1f-4757-83b1-01e2184d93b3","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"56c15d0e-6acd-45e4-8cc2-7eaa2d5c6c3d","name":"Artifact of the Devourer","imageFile":"artifact_of_the_devourer.webp","quantity":1,"sourceId":"be736b65-8341-4891-a6b4-59d6230debb2","compositionId":"6b50be3f-c971-4ce9-b5ef-50879478ec4f","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"650d3b65-0047-4399-adb9-4b807cfa25e7","name":"Artifact of the Devourer","imageFile":"artifact_of_the_devourer.webp","quantity":1,"sourceId":"be736b65-8341-4891-a6b4-59d6230debb2","compositionId":"8a00d82b-8a39-4b53-9f1d-8fba52706084","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"ba1d5a46-7dc6-48c9-b8cc-c4079f4815ca","name":"Artifact of the Devourer","imageFile":"artifact_of_the_devourer.webp","quantity":1,"sourceId":"be736b65-8341-4891-a6b4-59d6230debb2","compositionId":"6e9dd8ce-941c-4e93-89fd-7489e314c29e","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300","isEngram":false},{"uuid":"7e926827-3410-4072-b710-9baedb6b8779","name":"Artifact of the Devourer","imageFile":"artifact_of_the_devourer.webp","quantity":1,"sourceId":"be736b65-8341-4891-a6b4-59d6230debb2","compositionId":"ba9767f3-0a1f-4757-83b1-01e2184d93b3","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"56c15d0e-6acd-45e4-8cc2-7eaa2d5c6c3d","name":"Artifact of the Devourer","imageFile":"artifact_of_the_devourer.webp","quantity":1,"sourceId":"be736b65-8341-4891-a6b4-59d6230debb2","compositionId":"6b50be3f-c971-4ce9-b5ef-50879478ec4f","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"650d3b65-0047-4399-adb9-4b807cfa25e7","name":"Artifact of the Devourer","imageFile":"artifact_of_the_devourer.webp","quantity":1,"sourceId":"be736b65-8341-4891-a6b4-59d6230debb2","compositionId":"8a00d82b-8a39-4b53-9f1d-8fba52706084","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"7e926827-3410-4072-b710-9baedb6b8779","name":"Artifact of the Devourer","imageFile":"artifact_of_the_devourer.webp","quantity":1,"sourceId":"be736b65-8341-4891-a6b4-59d6230debb2","compositionId":"ba9767f3-0a1f-4757-83b1-01e2184d93b3","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"56c15d0e-6acd-45e4-8cc2-7eaa2d5c6c3d","name":"Artifact of the Devourer","imageFile":"artifact_of_the_devourer.webp","quantity":1,"sourceId":"be736b65-8341-4891-a6b4-59d6230debb2","compositionId":"6b50be3f-c971-4ce9-b5ef-50879478ec4f","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"650d3b65-0047-4399-adb9-4b807cfa25e7","name":"Artifact of the Devourer","imageFile":"artifact_of_the_devourer.webp","quantity":1,"sourceId":"be736b65-8341-4891-a6b4-59d6230debb2","compositionId":"8a00d82b-8a39-4b53-9f1d-8fba52706084","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"2117cf44-e550-48e2-a749-e930468d4211","name":"Artifact of the Devourer","imageFile":"artifact_of_the_devourer.webp","quantity":1,"sourceId":"be736b65-8341-4891-a6b4-59d6230debb2","compositionId":"3817d31a-e35d-4236-9150-7c0b818ab9ed","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300","isEngram":false}],[{"uuid":"46544c11-2696-4f27-9cb6-d18ef43c63e4","name":"Artifact of the Hunter","imageFile":"artifact_of_the_hunter.webp","quantity":1,"sourceId":"74dee9b7-82d1-4017-87e2-9cbffab1b8a0","compositionId":"46a6a2cc-884f-48be-9e66-d96a604eb401","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"4b722714-07f0-4dc0-9f51-b5c0839180bb","name":"Artifact of the Hunter","imageFile":"artifact_of_the_hunter.webp","quantity":1,"sourceId":"74dee9b7-82d1-4017-87e2-9cbffab1b8a0","compositionId":"b3f68acb-7283-4971-9179-f6cc696bf473","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"5e135cc5-5924-4b33-a2dd-6fc8e338f62d","name":"Artifact of the Hunter","imageFile":"artifact_of_the_hunter.webp","quantity":1,"sourceId":"74dee9b7-82d1-4017-87e2-9cbffab1b8a0","compositionId":"5336b34a-9696-454f-9343-0048e12f8212","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"d66f4404-e900-4a4e-b44c-ad7971cfb611","name":"Artifact of the Hunter","imageFile":"artifact_of_the_hunter.webp","quantity":1,"sourceId":"74dee9b7-82d1-4017-87e2-9cbffab1b8a0","compositionId":"dd3a88a8-b37c-4a16-936a-acc213b7116f","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300","isEngram":false},{"uuid":"46544c11-2696-4f27-9cb6-d18ef43c63e4","name":"Artifact of the Hunter","imageFile":"artifact_of_the_hunter.webp","quantity":1,"sourceId":"74dee9b7-82d1-4017-87e2-9cbffab1b8a0","compositionId":"46a6a2cc-884f-48be-9e66-d96a604eb401","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"4b722714-07f0-4dc0-9f51-b5c0839180bb","name":"Artifact of the Hunter","imageFile":"artifact_of_the_hunter.webp","quantity":1,"sourceId":"74dee9b7-82d1-4017-87e2-9cbffab1b8a0","compositionId":"b3f68acb-7283-4971-9179-f6cc696bf473","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"5e135cc5-5924-4b33-a2dd-6fc8e338f62d","name":"Artifact of the Hunter","imageFile":"artifact_of_the_hunter.webp","quantity":1,"sourceId":"74dee9b7-82d1-4017-87e2-9cbffab1b8a0","compositionId":"5336b34a-9696-454f-9343-0048e12f8212","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"46544c11-2696-4f27-9cb6-d18ef43c63e4","name":"Artifact of the Hunter","imageFile":"artifact_of_the_hunter.webp","quantity":1,"sourceId":"74dee9b7-82d1-4017-87e2-9cbffab1b8a0","compositionId":"46a6a2cc-884f-48be-9e66-d96a604eb401","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"4b722714-07f0-4dc0-9f51-b5c0839180bb","name":"Artifact of the Hunter","imageFile":"artifact_of_the_hunter.webp","quantity":1,"sourceId":"74dee9b7-82d1-4017-87e2-9cbffab1b8a0","compositionId":"b3f68acb-7283-4971-9179-f6cc696bf473","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"5e135cc5-5924-4b33-a2dd-6fc8e338f62d","name":"Artifact of the Hunter","imageFile":"artifact_of_the_hunter.webp","quantity":1,"sourceId":"74dee9b7-82d1-4017-87e2-9cbffab1b8a0","compositionId":"5336b34a-9696-454f-9343-0048e12f8212","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"69bac742-c8bb-4cf3-9947-4502c7992eb1","name":"Artifact of the Hunter","imageFile":"artifact_of_the_hunter.webp","quantity":1,"sourceId":"74dee9b7-82d1-4017-87e2-9cbffab1b8a0","compositionId":"6e9dd8ce-941c-4e93-89fd-7489e314c29e","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300","isEngram":false},{"uuid":"46544c11-2696-4f27-9cb6-d18ef43c63e4","name":"Artifact of the Hunter","imageFile":"artifact_of_the_hunter.webp","quantity":1,"sourceId":"74dee9b7-82d1-4017-87e2-9cbffab1b8a0","compositionId":"46a6a2cc-884f-48be-9e66-d96a604eb401","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"4b722714-07f0-4dc0-9f51-b5c0839180bb","name":"Artifact of the Hunter","imageFile":"artifact_of_the_hunter.webp","quantity":1,"sourceId":"74dee9b7-82d1-4017-87e2-9cbffab1b8a0","compositionId":"b3f68acb-7283-4971-9179-f6cc696bf473","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"5e135cc5-5924-4b33-a2dd-6fc8e338f62d","name":"Artifact of the Hunter","imageFile":"artifact_of_the_hunter.webp","quantity":1,"sourceId":"74dee9b7-82d1-4017-87e2-9cbffab1b8a0","compositionId":"5336b34a-9696-454f-9343-0048e12f8212","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"46544c11-2696-4f27-9cb6-d18ef43c63e4","name":"Artifact of the Hunter","imageFile":"artifact_of_the_hunter.webp","quantity":1,"sourceId":"74dee9b7-82d1-4017-87e2-9cbffab1b8a0","compositionId":"46a6a2cc-884f-48be-9e66-d96a604eb401","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"4b722714-07f0-4dc0-9f51-b5c0839180bb","name":"Artifact of the Hunter","imageFile":"artifact_of_the_hunter.webp","quantity":1,"sourceId":"74dee9b7-82d1-4017-87e2-9cbffab1b8a0","compositionId":"b3f68acb-7283-4971-9179-f6cc696bf473","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"5e135cc5-5924-4b33-a2dd-6fc8e338f62d","name":"Artifact of the Hunter","imageFile":"artifact_of_the_hunter.webp","quantity":1,"sourceId":"74dee9b7-82d1-4017-87e2-9cbffab1b8a0","compositionId":"5336b34a-9696-454f-9343-0048e12f8212","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"cf137c03-be0e-427f-9dc8-9f5658b2e5f3","name":"Artifact of the Hunter","imageFile":"artifact_of_the_hunter.webp","quantity":1,"sourceId":"74dee9b7-82d1-4017-87e2-9cbffab1b8a0","compositionId":"3817d31a-e35d-4236-9150-7c0b818ab9ed","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300","isEngram":false}],[{"uuid":"3e1a3944-446a-4cf6-ad3e-c0c44f869dbc","name":"Artifact of the Massive","imageFile":"artifact_of_the_massive.webp","quantity":1,"sourceId":"321103cb-3674-441f-8048-a12dced30421","compositionId":"46a6a2cc-884f-48be-9e66-d96a604eb401","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"393b81cd-be41-4509-8c31-bf986540161b","name":"Artifact of the Massive","imageFile":"artifact_of_the_massive.webp","quantity":1,"sourceId":"321103cb-3674-441f-8048-a12dced30421","compositionId":"b3f68acb-7283-4971-9179-f6cc696bf473","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"377160e4-c0c9-407f-b71b-1f3761ef9c47","name":"Artifact of the Massive","imageFile":"artifact_of_the_massive.webp","quantity":1,"sourceId":"321103cb-3674-441f-8048-a12dced30421","compositionId":"5336b34a-9696-454f-9343-0048e12f8212","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"47671843-9307-41e1-b53e-f460fc9bedb5","name":"Artifact of the Massive","imageFile":"artifact_of_the_massive.webp","quantity":1,"sourceId":"321103cb-3674-441f-8048-a12dced30421","compositionId":"dd3a88a8-b37c-4a16-936a-acc213b7116f","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300","isEngram":false},{"uuid":"3e1a3944-446a-4cf6-ad3e-c0c44f869dbc","name":"Artifact of the Massive","imageFile":"artifact_of_the_massive.webp","quantity":1,"sourceId":"321103cb-3674-441f-8048-a12dced30421","compositionId":"46a6a2cc-884f-48be-9e66-d96a604eb401","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"393b81cd-be41-4509-8c31-bf986540161b","name":"Artifact of the Massive","imageFile":"artifact_of_the_massive.webp","quantity":1,"sourceId":"321103cb-3674-441f-8048-a12dced30421","compositionId":"b3f68acb-7283-4971-9179-f6cc696bf473","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"377160e4-c0c9-407f-b71b-1f3761ef9c47","name":"Artifact of the Massive","imageFile":"artifact_of_the_massive.webp","quantity":1,"sourceId":"321103cb-3674-441f-8048-a12dced30421","compositionId":"5336b34a-9696-454f-9343-0048e12f8212","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"3e1a3944-446a-4cf6-ad3e-c0c44f869dbc","name":"Artifact of the Massive","imageFile":"artifact_of_the_massive.webp","quantity":1,"sourceId":"321103cb-3674-441f-8048-a12dced30421","compositionId":"46a6a2cc-884f-48be-9e66-d96a604eb401","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"393b81cd-be41-4509-8c31-bf986540161b","name":"Artifact of the Massive","imageFile":"artifact_of_the_massive.webp","quantity":1,"sourceId":"321103cb-3674-441f-8048-a12dced30421","compositionId":"b3f68acb-7283-4971-9179-f6cc696bf473","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"377160e4-c0c9-407f-b71b-1f3761ef9c47","name":"Artifact of the Massive","imageFile":"artifact_of_the_massive.webp","quantity":1,"sourceId":"321103cb-3674-441f-8048-a12dced30421","compositionId":"5336b34a-9696-454f-9343-0048e12f8212","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"7e04cec7-60d3-4833-b164-0ceaa1c06a2e","name":"Artifact of the Massive","imageFile":"artifact_of_the_massive.webp","quantity":1,"sourceId":"321103cb-3674-441f-8048-a12dced30421","compositionId":"6e9dd8ce-941c-4e93-89fd-7489e314c29e","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300","isEngram":false},{"uuid":"3e1a3944-446a-4cf6-ad3e-c0c44f869dbc","name":"Artifact of the Massive","imageFile":"artifact_of_the_massive.webp","quantity":1,"sourceId":"321103cb-3674-441f-8048-a12dced30421","compositionId":"46a6a2cc-884f-48be-9e66-d96a604eb401","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"393b81cd-be41-4509-8c31-bf986540161b","name":"Artifact of the Massive","imageFile":"artifact_of_the_massive.webp","quantity":1,"sourceId":"321103cb-3674-441f-8048-a12dced30421","compositionId":"b3f68acb-7283-4971-9179-f6cc696bf473","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"377160e4-c0c9-407f-b71b-1f3761ef9c47","name":"Artifact of the Massive","imageFile":"artifact_of_the_massive.webp","quantity":1,"sourceId":"321103cb-3674-441f-8048-a12dced30421","compositionId":"5336b34a-9696-454f-9343-0048e12f8212","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"3e1a3944-446a-4cf6-ad3e-c0c44f869dbc","name":"Artifact of the Massive","imageFile":"artifact_of_the_massive.webp","quantity":1,"sourceId":"321103cb-3674-441f-8048-a12dced30421","compositionId":"46a6a2cc-884f-48be-9e66-d96a604eb401","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"393b81cd-be41-4509-8c31-bf986540161b","name":"Artifact of the Massive","imageFile":"artifact_of_the_massive.webp","quantity":1,"sourceId":"321103cb-3674-441f-8048-a12dced30421","compositionId":"b3f68acb-7283-4971-9179-f6cc696bf473","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"377160e4-c0c9-407f-b71b-1f3761ef9c47","name":"Artifact of the Massive","imageFile":"artifact_of_the_massive.webp","quantity":1,"sourceId":"321103cb-3674-441f-8048-a12dced30421","compositionId":"5336b34a-9696-454f-9343-0048e12f8212","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"066bb50a-8063-4c1d-9da7-b7feb351af26","name":"Artifact of the Massive","imageFile":"artifact_of_the_massive.webp","quantity":1,"sourceId":"321103cb-3674-441f-8048-a12dced30421","compositionId":"3817d31a-e35d-4236-9150-7c0b818ab9ed","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300","isEngram":false}],[{"uuid":"7713b41b-201d-431b-aaff-4cf0036439dc","name":"Artifact of the Pack","imageFile":"artifact_of_the_pack.webp","quantity":1,"sourceId":"ada28369-8a24-4389-8152-f0b9cb016678","compositionId":"ba9767f3-0a1f-4757-83b1-01e2184d93b3","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"d4de43f6-2a33-45fe-b4b4-5f984c1711a3","name":"Artifact of the Pack","imageFile":"artifact_of_the_pack.webp","quantity":1,"sourceId":"ada28369-8a24-4389-8152-f0b9cb016678","compositionId":"6b50be3f-c971-4ce9-b5ef-50879478ec4f","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"a4e71f6e-0391-4439-ba5f-b0d905adc2fd","name":"Artifact of the Pack","imageFile":"artifact_of_the_pack.webp","quantity":1,"sourceId":"ada28369-8a24-4389-8152-f0b9cb016678","compositionId":"8a00d82b-8a39-4b53-9f1d-8fba52706084","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"2b37c787-d52d-4ec8-9e75-b6341dc1ff30","name":"Artifact of the Pack","imageFile":"artifact_of_the_pack.webp","quantity":1,"sourceId":"ada28369-8a24-4389-8152-f0b9cb016678","compositionId":"dd3a88a8-b37c-4a16-936a-acc213b7116f","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300","isEngram":false},{"uuid":"7713b41b-201d-431b-aaff-4cf0036439dc","name":"Artifact of the Pack","imageFile":"artifact_of_the_pack.webp","quantity":1,"sourceId":"ada28369-8a24-4389-8152-f0b9cb016678","compositionId":"ba9767f3-0a1f-4757-83b1-01e2184d93b3","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"d4de43f6-2a33-45fe-b4b4-5f984c1711a3","name":"Artifact of the Pack","imageFile":"artifact_of_the_pack.webp","quantity":1,"sourceId":"ada28369-8a24-4389-8152-f0b9cb016678","compositionId":"6b50be3f-c971-4ce9-b5ef-50879478ec4f","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"a4e71f6e-0391-4439-ba5f-b0d905adc2fd","name":"Artifact of the Pack","imageFile":"artifact_of_the_pack.webp","quantity":1,"sourceId":"ada28369-8a24-4389-8152-f0b9cb016678","compositionId":"8a00d82b-8a39-4b53-9f1d-8fba52706084","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"7713b41b-201d-431b-aaff-4cf0036439dc","name":"Artifact of the Pack","imageFile":"artifact_of_the_pack.webp","quantity":1,"sourceId":"ada28369-8a24-4389-8152-f0b9cb016678","compositionId":"ba9767f3-0a1f-4757-83b1-01e2184d93b3","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"d4de43f6-2a33-45fe-b4b4-5f984c1711a3","name":"Artifact of the Pack","imageFile":"artifact_of_the_pack.webp","quantity":1,"sourceId":"ada28369-8a24-4389-8152-f0b9cb016678","compositionId":"6b50be3f-c971-4ce9-b5ef-50879478ec4f","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"a4e71f6e-0391-4439-ba5f-b0d905adc2fd","name":"Artifact of the Pack","imageFile":"artifact_of_the_pack.webp","quantity":1,"sourceId":"ada28369-8a24-4389-8152-f0b9cb016678","compositionId":"8a00d82b-8a39-4b53-9f1d-8fba52706084","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"eddfdf6c-e70e-4b9c-981d-f0c3c0ab451c","name":"Artifact of the Pack","imageFile":"artifact_of_the_pack.webp","quantity":1,"sourceId":"ada28369-8a24-4389-8152-f0b9cb016678","compositionId":"6e9dd8ce-941c-4e93-89fd-7489e314c29e","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300","isEngram":false},{"uuid":"7713b41b-201d-431b-aaff-4cf0036439dc","name":"Artifact of the Pack","imageFile":"artifact_of_the_pack.webp","quantity":1,"sourceId":"ada28369-8a24-4389-8152-f0b9cb016678","compositionId":"ba9767f3-0a1f-4757-83b1-01e2184d93b3","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"d4de43f6-2a33-45fe-b4b4-5f984c1711a3","name":"Artifact of the Pack","imageFile":"artifact_of_the_pack.webp","quantity":1,"sourceId":"ada28369-8a24-4389-8152-f0b9cb016678","compositionId":"6b50be3f-c971-4ce9-b5ef-50879478ec4f","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"a4e71f6e-0391-4439-ba5f-b0d905adc2fd","name":"Artifact of the Pack","imageFile":"artifact_of_the_pack.webp","quantity":1,"sourceId":"ada28369-8a24-4389-8152-f0b9cb016678","compositionId":"8a00d82b-8a39-4b53-9f1d-8fba52706084","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"7713b41b-201d-431b-aaff-4cf0036439dc","name":"Artifact of the Pack","imageFile":"artifact_of_the_pack.webp","quantity":1,"sourceId":"ada28369-8a24-4389-8152-f0b9cb016678","compositionId":"ba9767f3-0a1f-4757-83b1-01e2184d93b3","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"d4de43f6-2a33-45fe-b4b4-5f984c1711a3","name":"Artifact of the Pack","imageFile":"artifact_of_the_pack.webp","quantity":1,"sourceId":"ada28369-8a24-4389-8152-f0b9cb016678","compositionId":"6b50be3f-c971-4ce9-b5ef-50879478ec4f","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"a4e71f6e-0391-4439-ba5f-b0d905adc2fd","name":"Artifact of the Pack","imageFile":"artifact_of_the_pack.webp","quantity":1,"sourceId":"ada28369-8a24-4389-8152-f0b9cb016678","compositionId":"8a00d82b-8a39-4b53-9f1d-8fba52706084","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"dd0106f1-1e21-48f9-95ff-5704b91530bf","name":"Artifact of the Pack","imageFile":"artifact_of_the_pack.webp","quantity":1,"sourceId":"ada28369-8a24-4389-8152-f0b9cb016678","compositionId":"3817d31a-e35d-4236-9150-7c0b818ab9ed","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300","isEngram":false}],[{"uuid":"b91da474-d626-4de7-a8f3-dea4d3b1da00","name":"Basilosaurus Blubber","imageFile":"basilosaurus_blubber.webp","quantity":5,"sourceId":"e21f1835-c28e-4286-b800-cd67e79621be","compositionId":"8ef537e6-bc25-40a8-a584-44cbfa4d09d8","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"e4ac11f4-38bd-4fb6-87b3-a2472ca53f1b","name":"Basilosaurus Blubber","imageFile":"basilosaurus_blubber.webp","quantity":10,"sourceId":"e21f1835-c28e-4286-b800-cd67e79621be","compositionId":"36770bf1-f898-4a7f-aa54-22036ca14ba0","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"b0f26a87-d40a-48e2-8a3b-6fc67a2870d2","name":"Basilosaurus Blubber","imageFile":"basilosaurus_blubber.webp","quantity":10,"sourceId":"e21f1835-c28e-4286-b800-cd67e79621be","compositionId":"6e9dd8ce-941c-4e93-89fd-7489e314c29e","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300","isEngram":false},{"uuid":"b91da474-d626-4de7-a8f3-dea4d3b1da00","name":"Basilosaurus Blubber","imageFile":"basilosaurus_blubber.webp","quantity":5,"sourceId":"e21f1835-c28e-4286-b800-cd67e79621be","compositionId":"8ef537e6-bc25-40a8-a584-44cbfa4d09d8","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"e4ac11f4-38bd-4fb6-87b3-a2472ca53f1b","name":"Basilosaurus Blubber","imageFile":"basilosaurus_blubber.webp","quantity":10,"sourceId":"e21f1835-c28e-4286-b800-cd67e79621be","compositionId":"36770bf1-f898-4a7f-aa54-22036ca14ba0","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"b91da474-d626-4de7-a8f3-dea4d3b1da00","name":"Basilosaurus Blubber","imageFile":"basilosaurus_blubber.webp","quantity":5,"sourceId":"e21f1835-c28e-4286-b800-cd67e79621be","compositionId":"8ef537e6-bc25-40a8-a584-44cbfa4d09d8","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"e4ac11f4-38bd-4fb6-87b3-a2472ca53f1b","name":"Basilosaurus Blubber","imageFile":"basilosaurus_blubber.webp","quantity":10,"sourceId":"e21f1835-c28e-4286-b800-cd67e79621be","compositionId":"36770bf1-f898-4a7f-aa54-22036ca14ba0","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"a2ddcce2-0410-44c6-a159-689ddd0f7172","name":"Basilosaurus Blubber","imageFile":"basilosaurus_blubber.webp","quantity":25,"sourceId":"e21f1835-c28e-4286-b800-cd67e79621be","compositionId":"3817d31a-e35d-4236-9150-7c0b818ab9ed","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300","isEngram":false}],[{"uuid":"7c3f59b1-e8ab-4269-97a6-966782912ff9","name":"Megalania Toxin","imageFile":"megalania_toxin.webp","quantity":5,"sourceId":"7fba2849-61d6-4382-9686-7ad73810437b","compositionId":"6b50be3f-c971-4ce9-b5ef-50879478ec4f","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"676d96c6-8571-49fd-9916-6e790581a4b2","name":"Megalania Toxin","imageFile":"megalania_toxin.webp","quantity":10,"sourceId":"7fba2849-61d6-4382-9686-7ad73810437b","compositionId":"8a00d82b-8a39-4b53-9f1d-8fba52706084","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"de062bfb-097e-4d64-ac13-532c105e143a","name":"Megalania Toxin","imageFile":"megalania_toxin.webp","quantity":10,"sourceId":"7fba2849-61d6-4382-9686-7ad73810437b","compositionId":"6e9dd8ce-941c-4e93-89fd-7489e314c29e","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300","isEngram":false},{"uuid":"7c3f59b1-e8ab-4269-97a6-966782912ff9","name":"Megalania Toxin","imageFile":"megalania_toxin.webp","quantity":5,"sourceId":"7fba2849-61d6-4382-9686-7ad73810437b","compositionId":"6b50be3f-c971-4ce9-b5ef-50879478ec4f","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"676d96c6-8571-49fd-9916-6e790581a4b2","name":"Megalania Toxin","imageFile":"megalania_toxin.webp","quantity":10,"sourceId":"7fba2849-61d6-4382-9686-7ad73810437b","compositionId":"8a00d82b-8a39-4b53-9f1d-8fba52706084","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"7c3f59b1-e8ab-4269-97a6-966782912ff9","name":"Megalania Toxin","imageFile":"megalania_toxin.webp","quantity":5,"sourceId":"7fba2849-61d6-4382-9686-7ad73810437b","compositionId":"6b50be3f-c971-4ce9-b5ef-50879478ec4f","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"676d96c6-8571-49fd-9916-6e790581a4b2","name":"Megalania Toxin","imageFile":"megalania_toxin.webp","quantity":10,"sourceId":"7fba2849-61d6-4382-9686-7ad73810437b","compositionId":"8a00d82b-8a39-4b53-9f1d-8fba52706084","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"ce4a1782-b044-4bc6-8d4e-1de84357e9d8","name":"Megalania Toxin","imageFile":"megalania_toxin.webp","quantity":25,"sourceId":"7fba2849-61d6-4382-9686-7ad73810437b","compositionId":"3817d31a-e35d-4236-9150-7c0b818ab9ed","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300","isEngram":false}],[{"uuid":"4c557732-fbd3-4561-b091-73e70ef39b81","name":"Megalodon Tooth","imageFile":"megalodon_tooth.webp","quantity":5,"sourceId":"40a8e186-6f0f-49ef-934a-50c67412836a","compositionId":"6b50be3f-c971-4ce9-b5ef-50879478ec4f","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"53b475a7-3152-4222-8ebd-cb111afe16af","name":"Megalodon Tooth","imageFile":"megalodon_tooth.webp","quantity":10,"sourceId":"40a8e186-6f0f-49ef-934a-50c67412836a","compositionId":"8a00d82b-8a39-4b53-9f1d-8fba52706084","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"367b0bba-c9fb-42b4-9593-bf21c2986745","name":"Megalodon Tooth","imageFile":"megalodon_tooth.webp","quantity":8,"sourceId":"40a8e186-6f0f-49ef-934a-50c67412836a","compositionId":"dd3a88a8-b37c-4a16-936a-acc213b7116f","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300","isEngram":false},{"uuid":"4c557732-fbd3-4561-b091-73e70ef39b81","name":"Megalodon Tooth","imageFile":"megalodon_tooth.webp","quantity":5,"sourceId":"40a8e186-6f0f-49ef-934a-50c67412836a","compositionId":"6b50be3f-c971-4ce9-b5ef-50879478ec4f","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"53b475a7-3152-4222-8ebd-cb111afe16af","name":"Megalodon Tooth","imageFile":"megalodon_tooth.webp","quantity":10,"sourceId":"40a8e186-6f0f-49ef-934a-50c67412836a","compositionId":"8a00d82b-8a39-4b53-9f1d-8fba52706084","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"4c557732-fbd3-4561-b091-73e70ef39b81","name":"Megalodon Tooth","imageFile":"megalodon_tooth.webp","quantity":5,"sourceId":"40a8e186-6f0f-49ef-934a-50c67412836a","compositionId":"6b50be3f-c971-4ce9-b5ef-50879478ec4f","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"53b475a7-3152-4222-8ebd-cb111afe16af","name":"Megalodon Tooth","imageFile":"megalodon_tooth.webp","quantity":10,"sourceId":"40a8e186-6f0f-49ef-934a-50c67412836a","compositionId":"8a00d82b-8a39-4b53-9f1d-8fba52706084","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"166562d4-0127-4eed-9cfd-29f691e2dcbe","name":"Megalodon Tooth","imageFile":"megalodon_tooth.webp","quantity":10,"sourceId":"40a8e186-6f0f-49ef-934a-50c67412836a","compositionId":"6e9dd8ce-941c-4e93-89fd-7489e314c29e","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300","isEngram":false},{"uuid":"4c557732-fbd3-4561-b091-73e70ef39b81","name":"Megalodon Tooth","imageFile":"megalodon_tooth.webp","quantity":5,"sourceId":"40a8e186-6f0f-49ef-934a-50c67412836a","compositionId":"6b50be3f-c971-4ce9-b5ef-50879478ec4f","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"53b475a7-3152-4222-8ebd-cb111afe16af","name":"Megalodon Tooth","imageFile":"megalodon_tooth.webp","quantity":10,"sourceId":"40a8e186-6f0f-49ef-934a-50c67412836a","compositionId":"8a00d82b-8a39-4b53-9f1d-8fba52706084","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"4c557732-fbd3-4561-b091-73e70ef39b81","name":"Megalodon Tooth","imageFile":"megalodon_tooth.webp","quantity":5,"sourceId":"40a8e186-6f0f-49ef-934a-50c67412836a","compositionId":"6b50be3f-c971-4ce9-b5ef-50879478ec4f","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"53b475a7-3152-4222-8ebd-cb111afe16af","name":"Megalodon Tooth","imageFile":"megalodon_tooth.webp","quantity":10,"sourceId":"40a8e186-6f0f-49ef-934a-50c67412836a","compositionId":"8a00d82b-8a39-4b53-9f1d-8fba52706084","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"817e1695-3c15-4259-9a89-0d2cf88d681a","name":"Megalodon Tooth","imageFile":"megalodon_tooth.webp","quantity":25,"sourceId":"40a8e186-6f0f-49ef-934a-50c67412836a","compositionId":"3817d31a-e35d-4236-9150-7c0b818ab9ed","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300","isEngram":false}],[{"uuid":"832a7e8b-e33f-4233-83b4-5b44852f719d","name":"Sarcosuchus Skin","imageFile":"sarcosuchus_skin.webp","quantity":5,"sourceId":"5e012894-5aa3-4cf5-8b7f-8eb018904259","compositionId":"b3f68acb-7283-4971-9179-f6cc696bf473","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"e3b3f0ef-d335-4a03-9fe5-6de818a35436","name":"Sarcosuchus Skin","imageFile":"sarcosuchus_skin.webp","quantity":10,"sourceId":"5e012894-5aa3-4cf5-8b7f-8eb018904259","compositionId":"5336b34a-9696-454f-9343-0048e12f8212","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"b45d0cec-c6c7-4c1c-9f6e-085dcc9d5a2b","name":"Sarcosuchus Skin","imageFile":"sarcosuchus_skin.webp","quantity":10,"sourceId":"5e012894-5aa3-4cf5-8b7f-8eb018904259","compositionId":"6e9dd8ce-941c-4e93-89fd-7489e314c29e","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300","isEngram":false},{"uuid":"832a7e8b-e33f-4233-83b4-5b44852f719d","name":"Sarcosuchus Skin","imageFile":"sarcosuchus_skin.webp","quantity":5,"sourceId":"5e012894-5aa3-4cf5-8b7f-8eb018904259","compositionId":"b3f68acb-7283-4971-9179-f6cc696bf473","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"e3b3f0ef-d335-4a03-9fe5-6de818a35436","name":"Sarcosuchus Skin","imageFile":"sarcosuchus_skin.webp","quantity":10,"sourceId":"5e012894-5aa3-4cf5-8b7f-8eb018904259","compositionId":"5336b34a-9696-454f-9343-0048e12f8212","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"832a7e8b-e33f-4233-83b4-5b44852f719d","name":"Sarcosuchus Skin","imageFile":"sarcosuchus_skin.webp","quantity":5,"sourceId":"5e012894-5aa3-4cf5-8b7f-8eb018904259","compositionId":"b3f68acb-7283-4971-9179-f6cc696bf473","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"e3b3f0ef-d335-4a03-9fe5-6de818a35436","name":"Sarcosuchus Skin","imageFile":"sarcosuchus_skin.webp","quantity":10,"sourceId":"5e012894-5aa3-4cf5-8b7f-8eb018904259","compositionId":"5336b34a-9696-454f-9343-0048e12f8212","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"7c05ccc8-9552-4115-984f-60c4d08735ec","name":"Sarcosuchus Skin","imageFile":"sarcosuchus_skin.webp","quantity":25,"sourceId":"5e012894-5aa3-4cf5-8b7f-8eb018904259","compositionId":"3817d31a-e35d-4236-9150-7c0b818ab9ed","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300","isEngram":false}],[{"uuid":"f2537c8e-f7f9-49e5-8b0b-b667263538ef","name":"Sauropod Vertebra","imageFile":"sauropod_vertebra.webp","quantity":5,"sourceId":"863bdf82-2cb4-412c-aa73-c27ef468b832","compositionId":"b3f68acb-7283-4971-9179-f6cc696bf473","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"3806f1e1-26c1-4b18-925f-4830cf7e50fb","name":"Sauropod Vertebra","imageFile":"sauropod_vertebra.webp","quantity":10,"sourceId":"863bdf82-2cb4-412c-aa73-c27ef468b832","compositionId":"5336b34a-9696-454f-9343-0048e12f8212","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"2433969f-5e57-44a1-af13-bd71edc25f2c","name":"Sauropod Vertebra","imageFile":"sauropod_vertebra.webp","quantity":2,"sourceId":"863bdf82-2cb4-412c-aa73-c27ef468b832","compositionId":"dd3a88a8-b37c-4a16-936a-acc213b7116f","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300","isEngram":false},{"uuid":"f2537c8e-f7f9-49e5-8b0b-b667263538ef","name":"Sauropod Vertebra","imageFile":"sauropod_vertebra.webp","quantity":5,"sourceId":"863bdf82-2cb4-412c-aa73-c27ef468b832","compositionId":"b3f68acb-7283-4971-9179-f6cc696bf473","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"3806f1e1-26c1-4b18-925f-4830cf7e50fb","name":"Sauropod Vertebra","imageFile":"sauropod_vertebra.webp","quantity":10,"sourceId":"863bdf82-2cb4-412c-aa73-c27ef468b832","compositionId":"5336b34a-9696-454f-9343-0048e12f8212","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"f2537c8e-f7f9-49e5-8b0b-b667263538ef","name":"Sauropod Vertebra","imageFile":"sauropod_vertebra.webp","quantity":5,"sourceId":"863bdf82-2cb4-412c-aa73-c27ef468b832","compositionId":"b3f68acb-7283-4971-9179-f6cc696bf473","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"3806f1e1-26c1-4b18-925f-4830cf7e50fb","name":"Sauropod Vertebra","imageFile":"sauropod_vertebra.webp","quantity":10,"sourceId":"863bdf82-2cb4-412c-aa73-c27ef468b832","compositionId":"5336b34a-9696-454f-9343-0048e12f8212","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"907af0d7-8d8c-4159-8595-8ef9eeecf81f","name":"Sauropod Vertebra","imageFile":"sauropod_vertebra.webp","quantity":10,"sourceId":"863bdf82-2cb4-412c-aa73-c27ef468b832","compositionId":"6e9dd8ce-941c-4e93-89fd-7489e314c29e","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300","isEngram":false},{"uuid":"f2537c8e-f7f9-49e5-8b0b-b667263538ef","name":"Sauropod Vertebra","imageFile":"sauropod_vertebra.webp","quantity":5,"sourceId":"863bdf82-2cb4-412c-aa73-c27ef468b832","compositionId":"b3f68acb-7283-4971-9179-f6cc696bf473","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"3806f1e1-26c1-4b18-925f-4830cf7e50fb","name":"Sauropod Vertebra","imageFile":"sauropod_vertebra.webp","quantity":10,"sourceId":"863bdf82-2cb4-412c-aa73-c27ef468b832","compositionId":"5336b34a-9696-454f-9343-0048e12f8212","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"f2537c8e-f7f9-49e5-8b0b-b667263538ef","name":"Sauropod Vertebra","imageFile":"sauropod_vertebra.webp","quantity":5,"sourceId":"863bdf82-2cb4-412c-aa73-c27ef468b832","compositionId":"b3f68acb-7283-4971-9179-f6cc696bf473","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"3806f1e1-26c1-4b18-925f-4830cf7e50fb","name":"Sauropod Vertebra","imageFile":"sauropod_vertebra.webp","quantity":10,"sourceId":"863bdf82-2cb4-412c-aa73-c27ef468b832","compositionId":"5336b34a-9696-454f-9343-0048e12f8212","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"877dab7c-3718-4e2d-8d94-132f2c67fbe4","name":"Sauropod Vertebra","imageFile":"sauropod_vertebra.webp","quantity":25,"sourceId":"863bdf82-2cb4-412c-aa73-c27ef468b832","compositionId":"3817d31a-e35d-4236-9150-7c0b818ab9ed","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300","isEngram":false}],[{"uuid":"5abd3508-8d66-49e3-b324-f0f9a1dd48c9","name":"Spinosaurus Sail","imageFile":"spinosaurus_sail.webp","quantity":5,"sourceId":"7d654814-f5c2-4217-ab96-08d186240e6b","compositionId":"6b50be3f-c971-4ce9-b5ef-50879478ec4f","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"96195141-659c-4157-bc0a-175fef5135d0","name":"Spinosaurus Sail","imageFile":"spinosaurus_sail.webp","quantity":10,"sourceId":"7d654814-f5c2-4217-ab96-08d186240e6b","compositionId":"8a00d82b-8a39-4b53-9f1d-8fba52706084","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"ce9f9ad5-5193-43ed-b2b9-8a4faf85a9ea","name":"Spinosaurus Sail","imageFile":"spinosaurus_sail.webp","quantity":10,"sourceId":"7d654814-f5c2-4217-ab96-08d186240e6b","compositionId":"6e9dd8ce-941c-4e93-89fd-7489e314c29e","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300","isEngram":false},{"uuid":"5abd3508-8d66-49e3-b324-f0f9a1dd48c9","name":"Spinosaurus Sail","imageFile":"spinosaurus_sail.webp","quantity":5,"sourceId":"7d654814-f5c2-4217-ab96-08d186240e6b","compositionId":"6b50be3f-c971-4ce9-b5ef-50879478ec4f","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"96195141-659c-4157-bc0a-175fef5135d0","name":"Spinosaurus Sail","imageFile":"spinosaurus_sail.webp","quantity":10,"sourceId":"7d654814-f5c2-4217-ab96-08d186240e6b","compositionId":"8a00d82b-8a39-4b53-9f1d-8fba52706084","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"5abd3508-8d66-49e3-b324-f0f9a1dd48c9","name":"Spinosaurus Sail","imageFile":"spinosaurus_sail.webp","quantity":5,"sourceId":"7d654814-f5c2-4217-ab96-08d186240e6b","compositionId":"6b50be3f-c971-4ce9-b5ef-50879478ec4f","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"96195141-659c-4157-bc0a-175fef5135d0","name":"Spinosaurus Sail","imageFile":"spinosaurus_sail.webp","quantity":10,"sourceId":"7d654814-f5c2-4217-ab96-08d186240e6b","compositionId":"8a00d82b-8a39-4b53-9f1d-8fba52706084","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"ec1d5946-1248-494f-9436-57ccfa566c85","name":"Spinosaurus Sail","imageFile":"spinosaurus_sail.webp","quantity":25,"sourceId":"7d654814-f5c2-4217-ab96-08d186240e6b","compositionId":"3817d31a-e35d-4236-9150-7c0b818ab9ed","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300","isEngram":false}],[{"uuid":"8c58384c-afa8-41b6-96d3-f89b82956289","name":"Thylacoleo Hook-Claw","imageFile":"thylacoleo_hook-claw.webp","quantity":5,"sourceId":"d32a5881-09dc-4e94-a1d0-461d0982a8e2","compositionId":"6b50be3f-c971-4ce9-b5ef-50879478ec4f","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"11b72f4f-5b92-4a09-821f-568c6de0f827","name":"Thylacoleo Hook-Claw","imageFile":"thylacoleo_hook-claw.webp","quantity":10,"sourceId":"d32a5881-09dc-4e94-a1d0-461d0982a8e2","compositionId":"8a00d82b-8a39-4b53-9f1d-8fba52706084","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"22e96d75-d08a-4d96-a137-337b3fa842fd","name":"Thylacoleo Hook-Claw","imageFile":"thylacoleo_hook-claw.webp","quantity":10,"sourceId":"d32a5881-09dc-4e94-a1d0-461d0982a8e2","compositionId":"6e9dd8ce-941c-4e93-89fd-7489e314c29e","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300","isEngram":false},{"uuid":"8c58384c-afa8-41b6-96d3-f89b82956289","name":"Thylacoleo Hook-Claw","imageFile":"thylacoleo_hook-claw.webp","quantity":5,"sourceId":"d32a5881-09dc-4e94-a1d0-461d0982a8e2","compositionId":"6b50be3f-c971-4ce9-b5ef-50879478ec4f","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"11b72f4f-5b92-4a09-821f-568c6de0f827","name":"Thylacoleo Hook-Claw","imageFile":"thylacoleo_hook-claw.webp","quantity":10,"sourceId":"d32a5881-09dc-4e94-a1d0-461d0982a8e2","compositionId":"8a00d82b-8a39-4b53-9f1d-8fba52706084","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"8c58384c-afa8-41b6-96d3-f89b82956289","name":"Thylacoleo Hook-Claw","imageFile":"thylacoleo_hook-claw.webp","quantity":5,"sourceId":"d32a5881-09dc-4e94-a1d0-461d0982a8e2","compositionId":"6b50be3f-c971-4ce9-b5ef-50879478ec4f","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"11b72f4f-5b92-4a09-821f-568c6de0f827","name":"Thylacoleo Hook-Claw","imageFile":"thylacoleo_hook-claw.webp","quantity":10,"sourceId":"d32a5881-09dc-4e94-a1d0-461d0982a8e2","compositionId":"8a00d82b-8a39-4b53-9f1d-8fba52706084","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"520b7d19-209d-4315-a135-c98571158a92","name":"Thylacoleo Hook-Claw","imageFile":"thylacoleo_hook-claw.webp","quantity":25,"sourceId":"d32a5881-09dc-4e94-a1d0-461d0982a8e2","compositionId":"3817d31a-e35d-4236-9150-7c0b818ab9ed","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300","isEngram":false}],[{"uuid":"1121eb9f-7743-4f9f-91bf-64e19b93812c","name":"Titanoboa Venom","imageFile":"titanoboa_venom.webp","quantity":5,"sourceId":"45b5cf8f-c582-4e18-954c-4a643a22b409","compositionId":"b3f68acb-7283-4971-9179-f6cc696bf473","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"e158102f-b2d8-479f-a831-438622468add","name":"Titanoboa Venom","imageFile":"titanoboa_venom.webp","quantity":10,"sourceId":"45b5cf8f-c582-4e18-954c-4a643a22b409","compositionId":"5336b34a-9696-454f-9343-0048e12f8212","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"287b91ad-4c0d-49f9-ad23-1d75df7713e5","name":"Titanoboa Venom","imageFile":"titanoboa_venom.webp","quantity":10,"sourceId":"45b5cf8f-c582-4e18-954c-4a643a22b409","compositionId":"6e9dd8ce-941c-4e93-89fd-7489e314c29e","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300","isEngram":false},{"uuid":"1121eb9f-7743-4f9f-91bf-64e19b93812c","name":"Titanoboa Venom","imageFile":"titanoboa_venom.webp","quantity":5,"sourceId":"45b5cf8f-c582-4e18-954c-4a643a22b409","compositionId":"b3f68acb-7283-4971-9179-f6cc696bf473","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"e158102f-b2d8-479f-a831-438622468add","name":"Titanoboa Venom","imageFile":"titanoboa_venom.webp","quantity":10,"sourceId":"45b5cf8f-c582-4e18-954c-4a643a22b409","compositionId":"5336b34a-9696-454f-9343-0048e12f8212","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"1121eb9f-7743-4f9f-91bf-64e19b93812c","name":"Titanoboa Venom","imageFile":"titanoboa_venom.webp","quantity":5,"sourceId":"45b5cf8f-c582-4e18-954c-4a643a22b409","compositionId":"b3f68acb-7283-4971-9179-f6cc696bf473","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"e158102f-b2d8-479f-a831-438622468add","name":"Titanoboa Venom","imageFile":"titanoboa_venom.webp","quantity":10,"sourceId":"45b5cf8f-c582-4e18-954c-4a643a22b409","compositionId":"5336b34a-9696-454f-9343-0048e12f8212","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"3664dab1-f226-473c-a72f-37f0053d4975","name":"Titanoboa Venom","imageFile":"titanoboa_venom.webp","quantity":25,"sourceId":"45b5cf8f-c582-4e18-954c-4a643a22b409","compositionId":"3817d31a-e35d-4236-9150-7c0b818ab9ed","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300","isEngram":false}],[{"uuid":"b00e0339-47e0-45df-84e1-eef4ab79efbe","name":"Tusoteuthis Tentacle","imageFile":"tusoteuthis_tentacle.webp","quantity":5,"sourceId":"2e79a918-2306-499a-9494-ba3271dc1cb9","compositionId":"8ef537e6-bc25-40a8-a584-44cbfa4d09d8","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"7b620a6e-298f-44ee-bdf6-eaf64a7f2d35","name":"Tusoteuthis Tentacle","imageFile":"tusoteuthis_tentacle.webp","quantity":10,"sourceId":"2e79a918-2306-499a-9494-ba3271dc1cb9","compositionId":"36770bf1-f898-4a7f-aa54-22036ca14ba0","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"412886ff-074e-42de-b32f-d9760e3f58ad","name":"Tusoteuthis Tentacle","imageFile":"tusoteuthis_tentacle.webp","quantity":10,"sourceId":"2e79a918-2306-499a-9494-ba3271dc1cb9","compositionId":"6e9dd8ce-941c-4e93-89fd-7489e314c29e","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300","isEngram":false},{"uuid":"b00e0339-47e0-45df-84e1-eef4ab79efbe","name":"Tusoteuthis Tentacle","imageFile":"tusoteuthis_tentacle.webp","quantity":5,"sourceId":"2e79a918-2306-499a-9494-ba3271dc1cb9","compositionId":"8ef537e6-bc25-40a8-a584-44cbfa4d09d8","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"7b620a6e-298f-44ee-bdf6-eaf64a7f2d35","name":"Tusoteuthis Tentacle","imageFile":"tusoteuthis_tentacle.webp","quantity":10,"sourceId":"2e79a918-2306-499a-9494-ba3271dc1cb9","compositionId":"36770bf1-f898-4a7f-aa54-22036ca14ba0","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"b00e0339-47e0-45df-84e1-eef4ab79efbe","name":"Tusoteuthis Tentacle","imageFile":"tusoteuthis_tentacle.webp","quantity":5,"sourceId":"2e79a918-2306-499a-9494-ba3271dc1cb9","compositionId":"8ef537e6-bc25-40a8-a584-44cbfa4d09d8","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"7b620a6e-298f-44ee-bdf6-eaf64a7f2d35","name":"Tusoteuthis Tentacle","imageFile":"tusoteuthis_tentacle.webp","quantity":10,"sourceId":"2e79a918-2306-499a-9494-ba3271dc1cb9","compositionId":"36770bf1-f898-4a7f-aa54-22036ca14ba0","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"2586d3aa-9c08-46a5-a415-7a925c957ee2","name":"Tusoteuthis Tentacle","imageFile":"tusoteuthis_tentacle.webp","quantity":25,"sourceId":"2e79a918-2306-499a-9494-ba3271dc1cb9","compositionId":"3817d31a-e35d-4236-9150-7c0b818ab9ed","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300","isEngram":false}],[{"uuid":"fdc9e86e-32df-4fbf-9e77-97a90f5474eb","name":"Tyrannosaurus Arm","imageFile":"tyrannosaurus_arm.webp","quantity":5,"sourceId":"e38121c7-62d1-4489-9772-5ccb75eca61e","compositionId":"8ef537e6-bc25-40a8-a584-44cbfa4d09d8","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"e763d5e8-a0cc-48f6-a3a5-e8acfde2282d","name":"Tyrannosaurus Arm","imageFile":"tyrannosaurus_arm.webp","quantity":15,"sourceId":"e38121c7-62d1-4489-9772-5ccb75eca61e","compositionId":"36770bf1-f898-4a7f-aa54-22036ca14ba0","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","isEngram":false},{"uuid":"82a6d547-5211-4a16-b997-bb6545428487","name":"Tyrannosaurus Arm","imageFile":"tyrannosaurus_arm.webp","quantity":4,"sourceId":"e38121c7-62d1-4489-9772-5ccb75eca61e","compositionId":"dd3a88a8-b37c-4a16-936a-acc213b7116f","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300","isEngram":false}]],"directory":[{"uuid":"f71a83a4-6f3a-47de-a49a-db8940610b73","name":"Generate Center (Easy) Portal","imageFile":"gamma_portal.webp","viewType":2,"parentId":"76c785f8-5255-4b0f-9c64-db53ea1d3050","sourceId":"841a8646-c799-47b8-b045-c85dbc014e53","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300"},{"uuid":"6e7ea94f-efab-415f-a205-d4099c664236","name":"Generate Center (Medium) Portal","imageFile":"beta_portal.webp","viewType":2,"parentId":"76c785f8-5255-4b0f-9c64-db53ea1d3050","sourceId":"83de9345-05ae-417b-8eb1-f8ed2797568b","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300"},{"uuid":"d69762ba-1ef6-4502-8242-1d1f316f28bd","name":"Generate Center (Hard) Portal","imageFile":"alpha_portal.webp","viewType":2,"parentId":"76c785f8-5255-4b0f-9c64-db53ea1d3050","sourceId":"226e5af3-658a-453c-b572-a09dfd4c15d2","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300"},{"uuid":"76c785f8-5255-4b0f-9c64-db53ea1d3050","name":"The Center Arena","imageFile":"folder.webp","viewType":1,"parentId":"413ef3ee-9349-4660-9810-e19b7a0a7acc","sourceId":"11d9d1f5-b322-4cd6-81b1-d50a820a4fd7","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300"},{"uuid":"413ef3ee-9349-4660-9810-e19b7a0a7acc","name":"Boss Arenas","imageFile":"folder.webp","viewType":1,"parentId":"ff62aa0c-d82a-41ef-99f7-7273c18cf9a1","sourceId":"0f44181c-5cbd-47ee-af79-480c47fb8aac","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300"},{"uuid":"ff62aa0c-d82a-41ef-99f7-7273c18cf9a1","name":"Obelisk","imageFile":"obelisk.webp","viewType":0,"parentId":null,"sourceId":"8bd09801-20b6-4ac6-9191-434ee0c302f7","gameId":"8d99db94-76cb-4cda-9135-5f3b9a20940e","dlcId":"214563bd-a219-4e7e-8bbe-8c0a114a2300"}],"remove":{"resources":[],"stations":["e45d4693-35e5-45b8-844b-09449c3e95f3"],"folders":["512c2e3f-cceb-40ff-9d98-8a5f4059af40","cade151b-c037-45ab-8563-d7c2650d4904","0e8d6f31-8312-40af-bf6c-e4a33378fc1b"],"engrams":["5b73005c-ae51-424c-a78b-34de15e20a93","c9016dbe-0440-41ac-800f-39c92da43b5d","aa4f7c41-abf3-4026-be1d-da8142f0d5b9","a8b3780e-9981-4610-a93b-6c9ce8e58880","806f25fb-2c9b-475c-9fb1-dee4b8c5826d","73afa996-5a19-4bb9-be41-65489ae6e62d","52ed819c-7cdf-41e1-8c86-8384c73564d8","63a3a1e8-4e48-4717-81fb-f32349b203c0","b8ed2388-240d-459f-92e9-a7329a286795"]},"replace":{"resources":[],"stations":[],"folders":[],"engrams":[],"composition":[]}}
+{
+  "details": {
+    "uuid": "822d40ed-a4a3-4064-bb8a-1b4507598d40",
+    "name": "The Center",
+    "description": null,
+    "filePath": "DLC/The Center/",
+    "logoFile": "logo.webp",
+    "folderFile": "folder.webp",
+    "backFolderFile": "backFolder.webp",
+    "lastUpdated": 1593972059759,
+    "totalConversion": false,
+    "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+    "transmogFile": "DLC/The Center/transmogrified.json"
+  },
+  "resources": [],
+  "stations": [],
+  "folders": [
+    {
+      "uuid": "a05cade5-5ee0-4545-be56-af51504b4f20",
+      "name": "The Center Arena",
+      "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+      "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40"
+    }
+  ],
+  "engrams": [
+    {
+      "uuid": "fa43a426-b91a-49d2-a482-82d70e67f6d8",
+      "name": "Generate Center (Easy) Portal",
+      "description": "Use this to generate a portal to The Center's Guardians.",
+      "imageFile": "gamma_portal.webp",
+      "level": 70,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1593972059769,
+      "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+      "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40"
+    },
+    {
+      "uuid": "1fc94b19-61d2-4794-abbf-42d81eb1aa30",
+      "name": "Generate Center (Hard) Portal",
+      "description": "Use this to generate a portal to The Center's Guardians. (Hard)",
+      "imageFile": "alpha_portal.webp",
+      "level": 90,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1593972059769,
+      "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+      "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40"
+    },
+    {
+      "uuid": "885cdc11-6a4a-4243-9850-4c639fa83713",
+      "name": "Generate Center (Medium) Portal",
+      "description": "Use this to generate a portal to The Center's Guardians. (Medium)",
+      "imageFile": "beta_portal.webp",
+      "level": 80,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1593972059769,
+      "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+      "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40"
+    }
+  ],
+  "composition": [
+    {
+      "uuid": "612de0b3-8e19-448c-a8b1-3b66c006870b",
+      "engramId": "fa43a426-b91a-49d2-a482-82d70e67f6d8",
+      "lastUpdated": 1593972059774,
+      "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+      "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40"
+    },
+    {
+      "uuid": "5a01547c-1bdb-4b7b-ad40-cd2b962b33bc",
+      "engramId": "1fc94b19-61d2-4794-abbf-42d81eb1aa30",
+      "lastUpdated": 1593972059775,
+      "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+      "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40"
+    },
+    {
+      "uuid": "db2b0d30-8323-4b91-ba7d-4fe1b78d65e5",
+      "engramId": "885cdc11-6a4a-4243-9850-4c639fa83713",
+      "lastUpdated": 1593972059775,
+      "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+      "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40"
+    }
+  ],
+  "composites": [
+    [
+      {
+        "uuid": "838eb951-d42f-4dfa-9001-bb14261981f5",
+        "name": "Argentavis Talon",
+        "imageFile": "argentavis_talon.webp",
+        "quantity": 4,
+        "sourceId": "43d03bb9-ad29-4768-a9e2-f8b609dbf8e0",
+        "compositionId": "612de0b3-8e19-448c-a8b1-3b66c006870b",
+        "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+        "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40",
+        "isEngram": false
+      },
+      {
+        "uuid": "191aab54-2e09-4336-a6a7-b88f90e08241",
+        "name": "Argentavis Talon",
+        "imageFile": "argentavis_talon.webp",
+        "quantity": 10,
+        "sourceId": "43d03bb9-ad29-4768-a9e2-f8b609dbf8e0",
+        "compositionId": "db2b0d30-8323-4b91-ba7d-4fe1b78d65e5",
+        "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+        "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40",
+        "isEngram": false
+      },
+      {
+        "uuid": "7784a654-c399-4745-a6f5-c9b162de6db7",
+        "name": "Argentavis Talon",
+        "imageFile": "argentavis_talon.webp",
+        "quantity": 25,
+        "sourceId": "43d03bb9-ad29-4768-a9e2-f8b609dbf8e0",
+        "compositionId": "5a01547c-1bdb-4b7b-ad40-cd2b962b33bc",
+        "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+        "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40",
+        "isEngram": false
+      }
+    ],
+    [
+      {
+        "uuid": "e64a09aa-9fbb-4bdc-8155-f9a94f11de38",
+        "name": "Artifact of the Brute",
+        "imageFile": "artifact_of_the_brute.webp",
+        "quantity": 1,
+        "sourceId": "2f3a619f-071d-4162-bf49-5e0999bf22e5",
+        "compositionId": "612de0b3-8e19-448c-a8b1-3b66c006870b",
+        "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+        "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40",
+        "isEngram": false
+      },
+      {
+        "uuid": "372d93b1-3c2b-48bb-9b4c-299d59e5b27f",
+        "name": "Artifact of the Brute",
+        "imageFile": "artifact_of_the_brute.webp",
+        "quantity": 1,
+        "sourceId": "2f3a619f-071d-4162-bf49-5e0999bf22e5",
+        "compositionId": "db2b0d30-8323-4b91-ba7d-4fe1b78d65e5",
+        "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+        "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40",
+        "isEngram": false
+      },
+      {
+        "uuid": "3a1b5c2b-88b7-48db-a0ee-7e303a2a4154",
+        "name": "Artifact of the Brute",
+        "imageFile": "artifact_of_the_brute.webp",
+        "quantity": 1,
+        "sourceId": "2f3a619f-071d-4162-bf49-5e0999bf22e5",
+        "compositionId": "5a01547c-1bdb-4b7b-ad40-cd2b962b33bc",
+        "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+        "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40",
+        "isEngram": false
+      }
+    ],
+    [
+      {
+        "uuid": "ce5c3475-61fd-4e7d-ae8e-30fd43a83f97",
+        "name": "Artifact of the Clever",
+        "imageFile": "artifact_of_the_clever.webp",
+        "quantity": 1,
+        "sourceId": "5858dc6e-41a2-44da-ae45-0f7e973decc3",
+        "compositionId": "612de0b3-8e19-448c-a8b1-3b66c006870b",
+        "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+        "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40",
+        "isEngram": false
+      },
+      {
+        "uuid": "1ef72a71-fc01-4063-83ae-962c3add6125",
+        "name": "Artifact of the Clever",
+        "imageFile": "artifact_of_the_clever.webp",
+        "quantity": 1,
+        "sourceId": "5858dc6e-41a2-44da-ae45-0f7e973decc3",
+        "compositionId": "db2b0d30-8323-4b91-ba7d-4fe1b78d65e5",
+        "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+        "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40",
+        "isEngram": false
+      },
+      {
+        "uuid": "5d6d0b3a-efca-4249-a9ca-63d0aee72390",
+        "name": "Artifact of the Clever",
+        "imageFile": "artifact_of_the_clever.webp",
+        "quantity": 1,
+        "sourceId": "5858dc6e-41a2-44da-ae45-0f7e973decc3",
+        "compositionId": "5a01547c-1bdb-4b7b-ad40-cd2b962b33bc",
+        "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+        "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40",
+        "isEngram": false
+      }
+    ],
+    [
+      {
+        "uuid": "0df5fd66-ec4f-4520-a751-353ea81417f4",
+        "name": "Artifact of the Devourer",
+        "imageFile": "artifact_of_the_devourer.webp",
+        "quantity": 1,
+        "sourceId": "6da6618f-5eb5-41c9-9aa1-7859b0f9bc37",
+        "compositionId": "612de0b3-8e19-448c-a8b1-3b66c006870b",
+        "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+        "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40",
+        "isEngram": false
+      },
+      {
+        "uuid": "94ce58df-2101-4075-9bbf-21f53a040ea1",
+        "name": "Artifact of the Devourer",
+        "imageFile": "artifact_of_the_devourer.webp",
+        "quantity": 1,
+        "sourceId": "6da6618f-5eb5-41c9-9aa1-7859b0f9bc37",
+        "compositionId": "db2b0d30-8323-4b91-ba7d-4fe1b78d65e5",
+        "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+        "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40",
+        "isEngram": false
+      },
+      {
+        "uuid": "e6fdf91e-9836-4818-a251-009b7cea3fd0",
+        "name": "Artifact of the Devourer",
+        "imageFile": "artifact_of_the_devourer.webp",
+        "quantity": 1,
+        "sourceId": "6da6618f-5eb5-41c9-9aa1-7859b0f9bc37",
+        "compositionId": "5a01547c-1bdb-4b7b-ad40-cd2b962b33bc",
+        "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+        "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40",
+        "isEngram": false
+      }
+    ],
+    [
+      {
+        "uuid": "16b28a2c-7760-4961-aa7b-450864776f39",
+        "name": "Artifact of the Hunter",
+        "imageFile": "artifact_of_the_hunter.webp",
+        "quantity": 1,
+        "sourceId": "31c4814c-536e-4eae-8885-efb01973c2d1",
+        "compositionId": "612de0b3-8e19-448c-a8b1-3b66c006870b",
+        "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+        "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40",
+        "isEngram": false
+      },
+      {
+        "uuid": "06995fce-3e83-4c12-af2e-77c5905d6acb",
+        "name": "Artifact of the Hunter",
+        "imageFile": "artifact_of_the_hunter.webp",
+        "quantity": 1,
+        "sourceId": "31c4814c-536e-4eae-8885-efb01973c2d1",
+        "compositionId": "db2b0d30-8323-4b91-ba7d-4fe1b78d65e5",
+        "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+        "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40",
+        "isEngram": false
+      },
+      {
+        "uuid": "0e7e3b57-3561-484a-bf47-5b7ab1fdf4b3",
+        "name": "Artifact of the Hunter",
+        "imageFile": "artifact_of_the_hunter.webp",
+        "quantity": 1,
+        "sourceId": "31c4814c-536e-4eae-8885-efb01973c2d1",
+        "compositionId": "5a01547c-1bdb-4b7b-ad40-cd2b962b33bc",
+        "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+        "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40",
+        "isEngram": false
+      }
+    ],
+    [
+      {
+        "uuid": "6d958523-fb1d-45a3-b273-b446739fb49e",
+        "name": "Artifact of the Massive",
+        "imageFile": "artifact_of_the_massive.webp",
+        "quantity": 1,
+        "sourceId": "b9af109b-c9a7-4241-91ea-489355b3dae9",
+        "compositionId": "612de0b3-8e19-448c-a8b1-3b66c006870b",
+        "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+        "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40",
+        "isEngram": false
+      },
+      {
+        "uuid": "3628cb48-52a9-4518-81a4-4366dbbd2d11",
+        "name": "Artifact of the Massive",
+        "imageFile": "artifact_of_the_massive.webp",
+        "quantity": 1,
+        "sourceId": "b9af109b-c9a7-4241-91ea-489355b3dae9",
+        "compositionId": "db2b0d30-8323-4b91-ba7d-4fe1b78d65e5",
+        "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+        "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40",
+        "isEngram": false
+      },
+      {
+        "uuid": "f3289a60-22ae-4625-8bd1-dfff6d4c4dea",
+        "name": "Artifact of the Massive",
+        "imageFile": "artifact_of_the_massive.webp",
+        "quantity": 1,
+        "sourceId": "b9af109b-c9a7-4241-91ea-489355b3dae9",
+        "compositionId": "5a01547c-1bdb-4b7b-ad40-cd2b962b33bc",
+        "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+        "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40",
+        "isEngram": false
+      }
+    ],
+    [
+      {
+        "uuid": "c09e8487-fe93-451c-9f9d-f157578ab858",
+        "name": "Artifact of the Pack",
+        "imageFile": "artifact_of_the_pack.webp",
+        "quantity": 1,
+        "sourceId": "13d2a341-9f00-48ad-b550-cf516ede7512",
+        "compositionId": "612de0b3-8e19-448c-a8b1-3b66c006870b",
+        "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+        "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40",
+        "isEngram": false
+      },
+      {
+        "uuid": "e131eaa3-2643-4748-8cef-7d2a7fc67317",
+        "name": "Artifact of the Pack",
+        "imageFile": "artifact_of_the_pack.webp",
+        "quantity": 1,
+        "sourceId": "13d2a341-9f00-48ad-b550-cf516ede7512",
+        "compositionId": "db2b0d30-8323-4b91-ba7d-4fe1b78d65e5",
+        "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+        "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40",
+        "isEngram": false
+      },
+      {
+        "uuid": "43425c9f-7f32-4473-a794-5e0431f92635",
+        "name": "Artifact of the Pack",
+        "imageFile": "artifact_of_the_pack.webp",
+        "quantity": 1,
+        "sourceId": "13d2a341-9f00-48ad-b550-cf516ede7512",
+        "compositionId": "5a01547c-1bdb-4b7b-ad40-cd2b962b33bc",
+        "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+        "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40",
+        "isEngram": false
+      }
+    ],
+    [
+      {
+        "uuid": "f8ac66fe-f875-4854-bb54-f05ea27cfa07",
+        "name": "Basilosaurus Blubber",
+        "imageFile": "basilosaurus_blubber.webp",
+        "quantity": 10,
+        "sourceId": "759bf7f7-cd08-43ad-b9fd-f467313056a8",
+        "compositionId": "db2b0d30-8323-4b91-ba7d-4fe1b78d65e5",
+        "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+        "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40",
+        "isEngram": false
+      },
+      {
+        "uuid": "5f586eff-e31a-450e-9f57-7f547edd424b",
+        "name": "Basilosaurus Blubber",
+        "imageFile": "basilosaurus_blubber.webp",
+        "quantity": 25,
+        "sourceId": "759bf7f7-cd08-43ad-b9fd-f467313056a8",
+        "compositionId": "5a01547c-1bdb-4b7b-ad40-cd2b962b33bc",
+        "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+        "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40",
+        "isEngram": false
+      }
+    ],
+    [
+      {
+        "uuid": "3542ad83-d734-4463-8e09-14d95a1ceaea",
+        "name": "Megalania Toxin",
+        "imageFile": "megalania_toxin.webp",
+        "quantity": 10,
+        "sourceId": "709afe5c-a61e-4f95-85a5-f2a5b1fa041b",
+        "compositionId": "db2b0d30-8323-4b91-ba7d-4fe1b78d65e5",
+        "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+        "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40",
+        "isEngram": false
+      },
+      {
+        "uuid": "e671e0f1-197d-4b9e-b139-1438dcbdae76",
+        "name": "Megalania Toxin",
+        "imageFile": "megalania_toxin.webp",
+        "quantity": 25,
+        "sourceId": "709afe5c-a61e-4f95-85a5-f2a5b1fa041b",
+        "compositionId": "5a01547c-1bdb-4b7b-ad40-cd2b962b33bc",
+        "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+        "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40",
+        "isEngram": false
+      }
+    ],
+    [
+      {
+        "uuid": "f7126d27-8243-40d9-acd4-4f06d4c3b233",
+        "name": "Megalodon Tooth",
+        "imageFile": "megalodon_tooth.webp",
+        "quantity": 8,
+        "sourceId": "02c21a34-f049-4dc8-acce-d3fbc5ec6d76",
+        "compositionId": "612de0b3-8e19-448c-a8b1-3b66c006870b",
+        "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+        "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40",
+        "isEngram": false
+      },
+      {
+        "uuid": "310eae7c-67ba-4543-9863-86944d14b96b",
+        "name": "Megalodon Tooth",
+        "imageFile": "megalodon_tooth.webp",
+        "quantity": 10,
+        "sourceId": "02c21a34-f049-4dc8-acce-d3fbc5ec6d76",
+        "compositionId": "db2b0d30-8323-4b91-ba7d-4fe1b78d65e5",
+        "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+        "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40",
+        "isEngram": false
+      },
+      {
+        "uuid": "106e1a86-d0ff-4b69-a097-354629f42d53",
+        "name": "Megalodon Tooth",
+        "imageFile": "megalodon_tooth.webp",
+        "quantity": 25,
+        "sourceId": "02c21a34-f049-4dc8-acce-d3fbc5ec6d76",
+        "compositionId": "5a01547c-1bdb-4b7b-ad40-cd2b962b33bc",
+        "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+        "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40",
+        "isEngram": false
+      }
+    ],
+    [
+      {
+        "uuid": "d22c8872-05ce-45a9-bc5a-410f849ba678",
+        "name": "Sarcosuchus Skin",
+        "imageFile": "sarcosuchus_skin.webp",
+        "quantity": 10,
+        "sourceId": "d8853700-0f92-4d94-9fec-392edacbb32d",
+        "compositionId": "db2b0d30-8323-4b91-ba7d-4fe1b78d65e5",
+        "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+        "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40",
+        "isEngram": false
+      },
+      {
+        "uuid": "84cb8b45-d038-453b-9e67-c13d661d83bf",
+        "name": "Sarcosuchus Skin",
+        "imageFile": "sarcosuchus_skin.webp",
+        "quantity": 25,
+        "sourceId": "d8853700-0f92-4d94-9fec-392edacbb32d",
+        "compositionId": "5a01547c-1bdb-4b7b-ad40-cd2b962b33bc",
+        "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+        "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40",
+        "isEngram": false
+      }
+    ],
+    [
+      {
+        "uuid": "3c33d8a4-928f-4bcf-be33-6b14f4546f30",
+        "name": "Sauropod Vertebra",
+        "imageFile": "sauropod_vertebra.webp",
+        "quantity": 2,
+        "sourceId": "17d55540-b2ba-4e9b-b2d7-c2ba3fdcf30c",
+        "compositionId": "612de0b3-8e19-448c-a8b1-3b66c006870b",
+        "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+        "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40",
+        "isEngram": false
+      },
+      {
+        "uuid": "3904f3f1-dc70-4d28-9759-715c105bdaf4",
+        "name": "Sauropod Vertebra",
+        "imageFile": "sauropod_vertebra.webp",
+        "quantity": 10,
+        "sourceId": "17d55540-b2ba-4e9b-b2d7-c2ba3fdcf30c",
+        "compositionId": "db2b0d30-8323-4b91-ba7d-4fe1b78d65e5",
+        "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+        "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40",
+        "isEngram": false
+      },
+      {
+        "uuid": "c31718d6-a4aa-4980-8031-6f38f04cd3d2",
+        "name": "Sauropod Vertebra",
+        "imageFile": "sauropod_vertebra.webp",
+        "quantity": 25,
+        "sourceId": "17d55540-b2ba-4e9b-b2d7-c2ba3fdcf30c",
+        "compositionId": "5a01547c-1bdb-4b7b-ad40-cd2b962b33bc",
+        "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+        "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40",
+        "isEngram": false
+      }
+    ],
+    [
+      {
+        "uuid": "59c42372-b2d1-452e-868e-028633e02156",
+        "name": "Spinosaurus Sail",
+        "imageFile": "spinosaurus_sail.webp",
+        "quantity": 10,
+        "sourceId": "eabb18e1-f9d0-41c6-84ca-f4ed52c11279",
+        "compositionId": "db2b0d30-8323-4b91-ba7d-4fe1b78d65e5",
+        "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+        "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40",
+        "isEngram": false
+      },
+      {
+        "uuid": "4ece0b34-5ae4-4ab1-a328-3789a1dabe89",
+        "name": "Spinosaurus Sail",
+        "imageFile": "spinosaurus_sail.webp",
+        "quantity": 25,
+        "sourceId": "eabb18e1-f9d0-41c6-84ca-f4ed52c11279",
+        "compositionId": "5a01547c-1bdb-4b7b-ad40-cd2b962b33bc",
+        "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+        "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40",
+        "isEngram": false
+      }
+    ],
+    [
+      {
+        "uuid": "17f54b3c-b990-4bbc-89d6-1212b27ef0c1",
+        "name": "Thylacoleo Hook-Claw",
+        "imageFile": "thylacoleo_hook-claw.webp",
+        "quantity": 10,
+        "sourceId": "3ff3a8f3-2473-4a98-9643-e65aafdb0b05",
+        "compositionId": "db2b0d30-8323-4b91-ba7d-4fe1b78d65e5",
+        "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+        "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40",
+        "isEngram": false
+      },
+      {
+        "uuid": "7c737988-54fa-4bd2-8136-48ddd696f7ca",
+        "name": "Thylacoleo Hook-Claw",
+        "imageFile": "thylacoleo_hook-claw.webp",
+        "quantity": 25,
+        "sourceId": "3ff3a8f3-2473-4a98-9643-e65aafdb0b05",
+        "compositionId": "5a01547c-1bdb-4b7b-ad40-cd2b962b33bc",
+        "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+        "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40",
+        "isEngram": false
+      }
+    ],
+    [
+      {
+        "uuid": "36678fbe-f20d-4283-b3ad-b6966f19dbf8",
+        "name": "Titanoboa Venom",
+        "imageFile": "titanoboa_venom.webp",
+        "quantity": 10,
+        "sourceId": "451cdca6-6eb0-4def-aebe-12b1fedc511a",
+        "compositionId": "db2b0d30-8323-4b91-ba7d-4fe1b78d65e5",
+        "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+        "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40",
+        "isEngram": false
+      },
+      {
+        "uuid": "05496aa1-899b-4c46-8e00-20bf8f43ffe2",
+        "name": "Titanoboa Venom",
+        "imageFile": "titanoboa_venom.webp",
+        "quantity": 25,
+        "sourceId": "451cdca6-6eb0-4def-aebe-12b1fedc511a",
+        "compositionId": "5a01547c-1bdb-4b7b-ad40-cd2b962b33bc",
+        "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+        "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40",
+        "isEngram": false
+      }
+    ],
+    [
+      {
+        "uuid": "277f6e2c-adbf-46c4-b416-4fc82a78b266",
+        "name": "Tusoteuthis Tentacle",
+        "imageFile": "tusoteuthis_tentacle.webp",
+        "quantity": 10,
+        "sourceId": "832871f6-6bdb-496f-8a06-fbbd9a8893ea",
+        "compositionId": "db2b0d30-8323-4b91-ba7d-4fe1b78d65e5",
+        "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+        "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40",
+        "isEngram": false
+      },
+      {
+        "uuid": "2ef57929-3f22-49e7-a8d3-d7e8a84f0c83",
+        "name": "Tusoteuthis Tentacle",
+        "imageFile": "tusoteuthis_tentacle.webp",
+        "quantity": 25,
+        "sourceId": "832871f6-6bdb-496f-8a06-fbbd9a8893ea",
+        "compositionId": "5a01547c-1bdb-4b7b-ad40-cd2b962b33bc",
+        "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+        "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40",
+        "isEngram": false
+      }
+    ],
+    [
+      {
+        "uuid": "d228e906-8527-4692-a006-c9b0cd31ae1c",
+        "name": "Tyrannosaurus Arm",
+        "imageFile": "tyrannosaurus_arm.webp",
+        "quantity": 4,
+        "sourceId": "5fc158ea-62fa-45cf-9f38-b985e6de2e6c",
+        "compositionId": "612de0b3-8e19-448c-a8b1-3b66c006870b",
+        "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+        "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40",
+        "isEngram": false
+      }
+    ]
+  ],
+  "directory": [
+    {
+      "uuid": "c890bd08-4769-46c8-8912-8d7296ddec0c",
+      "name": "Generate Center (Easy) Portal",
+      "imageFile": "gamma_portal.webp",
+      "viewType": 2,
+      "parentId": "7170b776-77e8-49f3-a307-8f9cd58ea793",
+      "sourceId": "fa43a426-b91a-49d2-a482-82d70e67f6d8",
+      "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+      "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40"
+    },
+    {
+      "uuid": "4c1a370d-9f83-4968-84cb-c385b23e1c2d",
+      "name": "Generate Center (Medium) Portal",
+      "imageFile": "beta_portal.webp",
+      "viewType": 2,
+      "parentId": "7170b776-77e8-49f3-a307-8f9cd58ea793",
+      "sourceId": "885cdc11-6a4a-4243-9850-4c639fa83713",
+      "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+      "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40"
+    },
+    {
+      "uuid": "b2b7d3c5-6f59-4990-b825-0daf259171ac",
+      "name": "Generate Center (Hard) Portal",
+      "imageFile": "alpha_portal.webp",
+      "viewType": 2,
+      "parentId": "7170b776-77e8-49f3-a307-8f9cd58ea793",
+      "sourceId": "1fc94b19-61d2-4794-abbf-42d81eb1aa30",
+      "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+      "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40"
+    },
+    {
+      "uuid": "7170b776-77e8-49f3-a307-8f9cd58ea793",
+      "name": "The Center Arena",
+      "imageFile": "folder.webp",
+      "viewType": 1,
+      "parentId": "98da71f2-83bd-4227-b47c-f83c6455534b",
+      "sourceId": "a05cade5-5ee0-4545-be56-af51504b4f20",
+      "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+      "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40"
+    },
+    {
+      "uuid": "98da71f2-83bd-4227-b47c-f83c6455534b",
+      "name": "Boss Arenas",
+      "imageFile": "folder.webp",
+      "viewType": 1,
+      "parentId": "4eea9d75-c952-409c-90c3-1ebed94d14c3",
+      "sourceId": "b99bda31-ad45-4322-8e66-1d592fcd77cb",
+      "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+      "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40"
+    },
+    {
+      "uuid": "4eea9d75-c952-409c-90c3-1ebed94d14c3",
+      "name": "Obelisk",
+      "imageFile": "obelisk.webp",
+      "viewType": 0,
+      "parentId": null,
+      "sourceId": "1dc619e5-f866-46e9-8ee7-ac58cf4092b9",
+      "gameId": "0f0681b7-297c-4930-8c69-04867d95d895",
+      "dlcId": "822d40ed-a4a3-4064-bb8a-1b4507598d40"
+    }
+  ],
+  "remove": {
+    "resources": [],
+    "stations": [
+      "60c665e3-365e-4640-a361-aded2ee6cec6"
+    ],
+    "folders": [
+      "7c80877c-581a-4b0a-8727-00b50cca473a",
+      "ec037467-0f4c-430f-b062-1dfc3db23b79",
+      "d80f9bd6-d998-419e-b7c2-a1e148c4741c"
+    ],
+    "engrams": [
+      "025964e1-7fcb-4a83-83bf-ef2d62abf0ee",
+      "c68c97b3-4585-4714-8ca8-4b219fe58d98",
+      "8e309357-ad83-48d9-bb84-ddd2fdfeeb00",
+      "e2820a2a-3048-4390-8b25-cec4340a5d24",
+      "93a6695f-0446-4113-a0c0-1af89052ee9f",
+      "28e3fa7a-3226-4aca-8cc1-d3d373d49dd6",
+      "741580ec-bcd1-405b-aa54-9b665bc63fa7",
+      "ba0ca41f-ea0f-4913-b66e-332aa030c213",
+      "3afc1563-d425-48c5-8d5d-6cd1b838bf0c"
+    ]
+  },
+  "replace": {
+    "resources": [],
+    "stations": [],
+    "folders": [],
+    "engrams": [],
+    "composition": []
+  }
+}

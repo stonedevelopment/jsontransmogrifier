@@ -19,12 +19,10 @@ public class DlcTransmogGameData extends TransmogGameData {
     private final PrimaryTransmogGameData primaryGameData;
     private final TotalConversion totalConversion = new TotalConversion();
 
-    public DlcTransmogGameData(JsonNode inObject, JsonDlc jsonDlc, PrimaryTransmogGameData primaryGameData) {
-        super(inObject, jsonDlc);
+    public DlcTransmogGameData(JsonNode inNode, JsonDlc jsonDlc, PrimaryTransmogGameData primaryGameData) {
+        super(inNode, jsonDlc);
 
         this.primaryGameData = primaryGameData;
-
-        createDetailsObject();
         mapGameDataFromJson();
     }
 
@@ -36,11 +34,6 @@ public class DlcTransmogGameData extends TransmogGameData {
     @Override
     protected void createDetailsObject() {
         this.details = DlcTransmogDetails.from(jsonDlc, primaryGameData);
-    }
-
-    @Override
-    protected boolean isValidDlcIdForDirectory(long dlcId) {
-        return isValidDlcId(dlcId) || primaryGameData.isValidDlcIdForDirectory(dlcId);
     }
 
     @Override
@@ -134,13 +127,6 @@ public class DlcTransmogGameData extends TransmogGameData {
     }
 
     @Override
-    public List<String> getCompositeUUIDListByName(String name) {
-        List<String> uuidList = super.getCompositeUUIDListByName(name);
-        uuidList.addAll(primaryGameData.getCompositeUUIDListByName(name));
-        return uuidList;
-    }
-
-    @Override
     public Composite getComposite(String uuid) {
         Composite composite = super.getComposite(uuid);
         return composite != null ? composite : primaryGameData.getComposite(uuid);
@@ -150,6 +136,17 @@ public class DlcTransmogGameData extends TransmogGameData {
     protected void mapGameDataFromJson() {
         mapTotalConversionFromJson();
         super.mapGameDataFromJson();
+    }
+
+    @Override
+    protected boolean isValidDlcIdForDirectory(long dlcId) {
+        return isValidDlcId(dlcId) || primaryGameData.isValidDlcIdForDirectory(dlcId);
+    }
+
+    @Override
+    public boolean isCompositeUnique(String compositionId, String name, JsonComposite jsonComposite) {
+        return primaryGameData.isCompositeUnique(compositionId, name, jsonComposite) &&
+                super.isCompositeUnique(compositionId, name, jsonComposite);
     }
 
     @Override
