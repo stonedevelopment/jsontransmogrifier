@@ -86,4 +86,12 @@ public abstract class IlluminateGameData extends GameData {
             addDirectoryItemToMap(directoryItem);
         }
     }
+
+    public String getFilePathForResources() {
+        return getDetailsObject().getFilePath().concat(cIlluminateResourcesFileName);
+    }
+
+    public String getFilePathForDirectory() {
+        return getDetailsObject().getFilePath().concat(cIlluminateDirectoryFileName);
+    }
 }

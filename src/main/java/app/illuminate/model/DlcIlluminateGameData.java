@@ -11,6 +11,8 @@ import static util.Constants.cDetails;
 public class DlcIlluminateGameData extends IlluminateGameData {
     public DlcIlluminateGameData(JsonNode inNode) {
         super(inNode);
+
+        mapGameDataFromJson();
     }
 
     @Override
@@ -21,16 +23,6 @@ public class DlcIlluminateGameData extends IlluminateGameData {
     @Override
     protected void createDetailsObject() {
         this.details = DlcDetails.from(inNode.get(cDetails));
-    }
-
-    @Override
-    protected void mapStationDirectoryItem(Station station) {
-
-    }
-
-    @Override
-    protected void mapEngramDirectoryItem(Engram engram, String parentId) {
-
     }
 
     @Override

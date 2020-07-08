@@ -57,6 +57,10 @@ public class Engram {
         return new ObjectMapper().convertValue(node, Engram.class);
     }
 
+    public JsonNode toJson() {
+        return new ObjectMapper().valueToTree(this);
+    }
+
     public String getUuid() {
         return uuid;
     }

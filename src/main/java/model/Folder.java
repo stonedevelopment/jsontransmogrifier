@@ -1,6 +1,5 @@
 package model;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -17,6 +16,10 @@ public class Folder {
 
     public static Folder fromJson(JsonNode node) {
         return new ObjectMapper().convertValue(node, Folder.class);
+    }
+
+    public JsonNode toJson() {
+        return new ObjectMapper().valueToTree(this);
     }
 
     public String getUuid() {

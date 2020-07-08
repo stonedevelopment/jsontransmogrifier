@@ -1,0 +1,29 @@
+[
+  {
+    "station": {
+      "uuid": "",
+      "name": "Test Station"
+    },
+    "directory": {
+      "folders": [
+        {
+          "folder": {
+            "uuid": "",
+            "name": "Test Folder"
+          },
+          "directory": {
+            "folders": [
+            ],
+            "engrams": []
+          }
+        }
+      ],
+      "engrams": [
+        {
+          "uuid": "",
+          "name": "Test Engram"
+        }
+      ]
+    }
+  }
+]

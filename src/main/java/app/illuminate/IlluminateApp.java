@@ -1,5 +1,6 @@
 package app.illuminate;
 
+import app.illuminate.controller.IlluminateGameData;
 import app.illuminate.model.DlcIlluminateGameData;
 import app.illuminate.model.PrimaryIlluminateGameData;
 import app.transmogrify.model.details.DlcTransmogDetails;
@@ -11,10 +12,12 @@ import java.io.IOException;
 
 import static util.Constants.*;
 import static util.JSONUtil.parseIn;
+import static util.JSONUtil.writeOut;
 
 /**
  * Converts transmogrified json files into, separate, readable files for easy editing
  * <p>
+ * todo Create illuminate.json to tell Updatify what needs to be converted back into raw uuids.
  * Illuminate!
  */
 public class IlluminateApp {
@@ -41,7 +44,7 @@ public class IlluminateApp {
 
         JsonNode transmogrifiedNode = parseIn(filePath);
         primaryGameData = new PrimaryIlluminateGameData(transmogrifiedNode);
-        //  writeGameDataToFile()
+        writeGameDataToFiles(primaryGameData);
     }
 
     private static void illuminateDlcNode(JsonNode transmogNode) throws IOException {
@@ -52,7 +55,18 @@ public class IlluminateApp {
 
             JsonNode transmogrifiedNode = parseIn(filePath);
             DlcIlluminateGameData gameData = new DlcIlluminateGameData(transmogrifiedNode);
-            //  writeGameDataToFile()
+            writeGameDataToFiles(gameData);
         }
+    }
+
+    private static void writeGameDataToFiles(IlluminateGameData gameData) throws IOException {
+        JsonNode resolvedNode = gameData.resolveToJson();
+
+        writeJsonToFile(gameData.getFilePathForResources(), resolvedNode.get(cResources));
+        writeJsonToFile(gameData.getFilePathForDirectory(), resolvedNode.get(cDirectory));
+    }
+
+    private static void writeJsonToFile(String fileName, JsonNode outNode) throws IOException {
+        writeOut(fileName, outNode);
     }
 }

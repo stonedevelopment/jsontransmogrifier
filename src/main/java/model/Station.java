@@ -26,6 +26,10 @@ public class Station {
         return new ObjectMapper().convertValue(node, Station.class);
     }
 
+    public static JsonNode toJson(Station station) {
+        return new ObjectMapper().valueToTree(station);
+    }
+
     public String getUuid() {
         return uuid;
     }

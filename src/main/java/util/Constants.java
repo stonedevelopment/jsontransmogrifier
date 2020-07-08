@@ -6,6 +6,9 @@ public class Constants {
     public static final String cGamesFileName = "games.json";
     public static final String cTransmogrificationFileName = "transmogrification.json";
     public static final String cTransmogrifiedFileName = "transmogrified.json";
+    public static final String cIlluminateFileName = "illuminate.json";
+    public static final String cIlluminateResourcesFileName = "illuminate_resources.json";
+    public static final String cIlluminateDirectoryFileName = "illuminate_directory.json";
     public static final String cLogoFileName = "logo.webp";
     public static final String cFolderFileName = "folder.webp";
     public static final String cBackFolderFileName = "backFolder.webp";
@@ -15,7 +18,9 @@ public class Constants {
     public static final String cDlc = "DLC";
     public static final String cDetails = "details";
     public static final String cResources = "resources";
+    public static final String cStation = "station";
     public static final String cStations = "stations";
+    public static final String cFolder = "folder";
     public static final String cFolders = "folders";
     public static final String cEngrams = "engrams";
     public static final String cComposition = "composition";
@@ -23,6 +28,8 @@ public class Constants {
     public static final String cDirectory = "directory";
     public static final String cRemove = "remove";
     public static final String cReplace = "replace";
+    public static final String cDescription = "description";
+    public static final String cFilePath = "filePath";
 
     //  json keys
     public static final String cUuid = "uuid";

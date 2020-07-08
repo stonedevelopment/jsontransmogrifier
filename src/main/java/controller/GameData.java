@@ -37,7 +37,7 @@ public abstract class GameData {
     protected Map<String, Composite> compositeMap = new HashMap<>();
 
     //  parent uuid, list<object>
-    protected Map<String, List<DirectoryItem>> directoryMap = new TreeMap<>();
+    protected Map<String, List<DirectoryItem>> directoryMap = new HashMap<>();
 
     //  list<object>
     protected List<DirectoryItem> directory = new ArrayList<>();
@@ -160,10 +160,6 @@ public abstract class GameData {
     protected abstract void mapCompositionFromJson();
 
     protected abstract void mapDirectoryFromJson();
-
-    protected abstract void mapStationDirectoryItem(Station station);
-
-    protected abstract void mapEngramDirectoryItem(Engram engram, String parentId);
 
     /**
      * Add objects to maps

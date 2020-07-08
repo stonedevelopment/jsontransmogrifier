@@ -228,6 +228,10 @@ public abstract class TransmogGameData extends GameData {
 
     protected abstract int mapFolderDirectoryItemByCategoryId(Station station, Folder folder, long categoryId, String parentId);
 
+    protected abstract void mapStationDirectoryItem(Station station);
+
+    protected abstract void mapEngramDirectoryItem(Engram engram, String parentId);
+
     protected abstract Folder buildFolder(JsonCategory jsonCategory);
 
     protected abstract Resource buildResource(JsonResource jsonResource);
