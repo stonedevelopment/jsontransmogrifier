@@ -1,10 +1,8 @@
 package app.illuminate.model;
 
 import app.illuminate.controller.IlluminateGameData;
+import app.illuminate.model.details.IlluminateDetails;
 import com.fasterxml.jackson.databind.JsonNode;
-import model.Engram;
-import model.Station;
-import model.details.DlcDetails;
 
 import static util.Constants.cDetails;
 
@@ -16,13 +14,13 @@ public class DlcIlluminateGameData extends IlluminateGameData {
     }
 
     @Override
-    public DlcDetails getDetailsObject() {
-        return (DlcDetails) super.getDetailsObject();
+    public IlluminateDetails getDetailsObject() {
+        return (IlluminateDetails) super.getDetailsObject();
     }
 
     @Override
     protected void createDetailsObject() {
-        this.details = DlcDetails.from(inNode.get(cDetails));
+        this.details = IlluminateDetails.from(inNode.get(cDetails));
     }
 
     @Override

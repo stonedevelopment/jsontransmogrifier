@@ -3,8 +3,8 @@ package app.illuminate;
 import app.illuminate.controller.IlluminateGameData;
 import app.illuminate.model.DlcIlluminateGameData;
 import app.illuminate.model.PrimaryIlluminateGameData;
+import app.illuminate.model.details.IlluminateDetails;
 import app.transmogrify.model.details.DlcTransmogDetails;
-import app.transmogrify.model.details.TransmogDetails;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -30,19 +30,19 @@ public class IlluminateApp {
         //  load parent object
         //  convert transmogrified.json file into separate readable json files
         try {
-            JsonNode transmogNode = parseIn(cTransmogrificationFileName);
+            JsonNode transmogNode = parseIn(cArkAssetsFilePath, cTransmogrificationFileName);
             illuminatePrimaryNode(transmogNode);
-            illuminateDlcNode(transmogNode);
+//            illuminateDlcNode(transmogNode);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     private static void illuminatePrimaryNode(JsonNode transmogNode) throws IOException {
-        TransmogDetails details = mapper.treeToValue(transmogNode.get(cPrimary), TransmogDetails.class);
-        String filePath = details.getTransmogFile();
+        IlluminateDetails details = IlluminateDetails.from(transmogNode.get(cPrimary));
+        String fileName = details.buildTransmogFilePath();
 
-        JsonNode transmogrifiedNode = parseIn(filePath);
+        JsonNode transmogrifiedNode = parseIn(cArkAssetsFilePath, fileName);
         primaryGameData = new PrimaryIlluminateGameData(transmogrifiedNode);
         writeGameDataToFiles(primaryGameData);
     }
@@ -50,10 +50,10 @@ public class IlluminateApp {
     private static void illuminateDlcNode(JsonNode transmogNode) throws IOException {
         JsonNode dlcArrayNode = transmogNode.get(cDlc);
         for (JsonNode dlcNode : dlcArrayNode) {
-            DlcTransmogDetails details = mapper.treeToValue(dlcNode, DlcTransmogDetails.class);
+            DlcTransmogDetails details = mapper.convertValue(dlcNode, DlcTransmogDetails.class);
             String filePath = details.getTransmogFile();
 
-            JsonNode transmogrifiedNode = parseIn(filePath);
+            JsonNode transmogrifiedNode = parseIn(cArkAssetsFilePath, filePath);
             DlcIlluminateGameData gameData = new DlcIlluminateGameData(transmogrifiedNode);
             writeGameDataToFiles(gameData);
         }
@@ -67,6 +67,6 @@ public class IlluminateApp {
     }
 
     private static void writeJsonToFile(String fileName, JsonNode outNode) throws IOException {
-        writeOut(fileName, outNode);
+        writeOut(cArkAssetsFilePath, fileName, outNode);
     }
 }

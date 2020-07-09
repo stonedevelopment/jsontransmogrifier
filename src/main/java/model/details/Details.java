@@ -1,12 +1,7 @@
 package model.details;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import jdk.nashorn.internal.ir.annotations.Ignore;
 
 import java.util.Date;
 
@@ -27,9 +22,9 @@ public class Details {
                    @JsonProperty(cName) String name,
                    @JsonProperty(cDescription) String description,
                    @JsonProperty(cFilePath) String filePath,
-                   @JsonProperty(cLogoFileName) String logoFile,
-                   @JsonProperty(cFolderFileName) String folderFile,
-                   @JsonProperty(cBackFolderFileName) String backFolderFile) {
+                   @JsonProperty(cLogoFile) String logoFile,
+                   @JsonProperty(cFolderFile) String folderFile,
+                   @JsonProperty(cBackFolderFile) String backFolderFile) {
         this.uuid = uuid;
         this.name = name;
         this.description = description;
@@ -38,16 +33,6 @@ public class Details {
         this.folderFile = folderFile;
         this.backFolderFile = backFolderFile;
         this.lastUpdated = new Date();
-    }
-
-    @JsonIgnore
-    public static Details from(JsonNode jsonNode) {
-        try {
-            return new ObjectMapper().treeToValue(jsonNode, Details.class);
-        } catch (JsonProcessingException e) {
-            e.printStackTrace();
-            return null;
-        }
     }
 
     public String getUuid() {

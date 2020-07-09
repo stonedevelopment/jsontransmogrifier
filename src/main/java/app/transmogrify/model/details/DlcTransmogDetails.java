@@ -11,7 +11,7 @@ public class DlcTransmogDetails extends TransmogDetails {
 
     public DlcTransmogDetails(String uuid, String name, String description, boolean totalConversion, String filePath,
                               String logoFile, String folderFile, String backFolderFile, String gameId) {
-        super(uuid, name, description, filePath, logoFile, folderFile, backFolderFile);
+        super(uuid, name, description, filePath, logoFile, folderFile, backFolderFile, cTransmogrifiedFileName);
         this.totalConversion = totalConversion;
         this.gameId = gameId;
     }

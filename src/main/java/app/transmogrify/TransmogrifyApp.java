@@ -21,7 +21,6 @@ import static util.JSONUtil.writeOut;
  * We want UUIDs to be static so if the User saves a crafting queue, the Engram doesn't change even after an update.
  */
 public class TransmogrifyApp {
-    private static final String inFileName = "data_editable.json";
     private static final ObjectMapper mapper = new ObjectMapper();
     private static PrimaryTransmogGameData primaryGameData;
 
@@ -30,10 +29,10 @@ public class TransmogrifyApp {
             ObjectNode outNode = mapper.createObjectNode();
             ArrayNode outDlcArrayNode = mapper.createArrayNode();
 
-            JsonNode inNode = JSONUtil.parseIn(inFileName);
+            JsonNode inNode = JSONUtil.parseIn(cArkAssetsFilePath, cArkDataEditableFileName);
             JsonNode inDlcArrayNode = inNode.get(cJsonDlc);
             for (JsonNode dlcNode : inDlcArrayNode) {
-                JsonDlc jsonDlc = mapper.treeToValue(dlcNode, JsonDlc.class);
+                JsonDlc jsonDlc = mapper.convertValue(dlcNode, JsonDlc.class);
                 if (jsonDlc.type.equals(cDlcTypePrimary)) {
                     outNode.set(cPrimary, transmogrifyPrimaryGameData(inNode, jsonDlc));
                 } else {
@@ -62,14 +61,17 @@ public class TransmogrifyApp {
     }
 
     private static void writeGameDataToFile(TransmogGameData gameData) throws IOException {
-        writeJsonToFile(gameData.getDetailsObject().getTransmogFile(), gameData.resolveToJson());
+        String filePath = gameData.getDetailsObject().getFilePath();
+        String fileName = gameData.getDetailsObject().getTransmogFile();
+        String fullPath = filePath.concat(fileName);
+        writeJsonToFile(fullPath, gameData.resolveToJson());
     }
 
     private static void writeTransmogrifyDataToFile(JsonNode outNode) throws IOException {
         writeJsonToFile(cTransmogrificationFileName, outNode);
     }
 
-    private static void writeJsonToFile(String fileName, JsonNode outNode) throws IOException {
-        writeOut(fileName, outNode);
+    private static void writeJsonToFile(String filePath, JsonNode outNode) throws IOException {
+        writeOut(cArkAssetsFilePath, filePath, outNode);
     }
 }

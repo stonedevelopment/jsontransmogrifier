@@ -1,11 +1,12 @@
 package app.illuminate.model;
 
 import app.illuminate.controller.IlluminateGameData;
+import app.illuminate.model.details.IlluminateDetails;
+import app.transmogrify.model.details.TransmogDetails;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import model.*;
-import model.details.Details;
 
 import static util.Constants.*;
 
@@ -17,8 +18,13 @@ public class PrimaryIlluminateGameData extends IlluminateGameData {
     }
 
     @Override
+    public IlluminateDetails getDetailsObject() {
+        return (IlluminateDetails) super.getDetailsObject();
+    }
+
+    @Override
     protected void createDetailsObject() {
-        this.details = Details.from(inNode.get(cDetails));
+        this.details = IlluminateDetails.from(inNode.get(cDetails));
     }
 
     @Override
