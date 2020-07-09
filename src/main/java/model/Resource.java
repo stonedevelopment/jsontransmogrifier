@@ -1,9 +1,13 @@
 package model;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.util.Date;
+
+import static util.Constants.*;
 
 /**
  * "name": "Absorbent Substrate",
@@ -18,7 +22,13 @@ public class Resource {
     private final Date lastUpdated;
     private final String gameId;
 
-    public Resource(String uuid, String name, String description, String imageFile, Date lastUpdated, String gameId) {
+    @JsonCreator
+    public Resource(@JsonProperty(cUuid) String uuid,
+                    @JsonProperty(cName) String name,
+                    @JsonProperty(cDescription) String description,
+                    @JsonProperty(cImageFile) String imageFile,
+                    @JsonProperty(cLastUpdated) Date lastUpdated,
+                    @JsonProperty(cGameId) String gameId) {
         this.uuid = uuid;
         this.name = name;
         this.description = description;

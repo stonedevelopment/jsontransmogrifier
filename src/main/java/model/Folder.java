@@ -1,14 +1,21 @@
 package model;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import static util.Constants.*;
 
 public class Folder {
     private final String uuid;
     private final String name;
     private final String gameId;
 
-    public Folder(String uuid, String name, String gameId) {
+    @JsonCreator
+    public Folder(@JsonProperty(cUuid) String uuid,
+                  @JsonProperty(cName) String name,
+                  @JsonProperty(cGameId) String gameId) {
         this.uuid = uuid;
         this.name = name;
         this.gameId = gameId;

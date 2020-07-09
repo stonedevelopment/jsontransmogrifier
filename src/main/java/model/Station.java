@@ -1,9 +1,13 @@
 package model;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.util.Date;
+
+import static util.Constants.*;
 
 public class Station {
     private final String uuid;
@@ -13,7 +17,13 @@ public class Station {
     private final Date lastUpdated;
     private final String gameId;
 
-    public Station(String uuid, String name, String imageFile, String engramId, Date lastUpdated, String gameId) {
+    @JsonCreator
+    public Station(@JsonProperty(cUuid) String uuid,
+                   @JsonProperty(cName) String name,
+                   @JsonProperty(cImageFile) String imageFile,
+                   @JsonProperty(cEngramId) String engramId,
+                   @JsonProperty(cLastUpdated) Date lastUpdated,
+                   @JsonProperty(cGameId) String gameId) {
         this.uuid = uuid;
         this.name = name;
         this.imageFile = imageFile;

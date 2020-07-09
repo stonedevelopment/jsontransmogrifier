@@ -71,10 +71,12 @@ public abstract class IlluminateGameData extends GameData {
     }
 
     protected void mapCompositesFromJson() {
-        JsonNode compositesNode = inNode.get(cComposites);
-        for (JsonNode compositeNode : compositesNode) {
-            Composite composite = Composite.fromJson(compositeNode);
-            addCompositeToMap(composite);
+        JsonNode compositesArrayNode = inNode.get(cComposites);
+        for (JsonNode compositeArrayNode : compositesArrayNode) {
+            for (JsonNode compositeNode : compositeArrayNode) {
+                Composite composite = Composite.fromJson(compositeNode);
+                addCompositeToMap(composite);
+            }
         }
     }
 

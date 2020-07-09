@@ -1,9 +1,13 @@
 package model;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.util.Date;
+
+import static util.Constants.*;
 
 /**
  * "name": "Cloth Boots",
@@ -38,8 +42,18 @@ public class Engram {
     private final Date lastUpdated;
     private final String gameId;
 
-    public Engram(String uuid, String name, String description, String imageFile, int level, int yield, int points,
-                  int xp, int craftingTime, Date lastUpdated, String gameId) {
+    @JsonCreator
+    public Engram(@JsonProperty(cUuid) String uuid,
+                  @JsonProperty(cName) String name,
+                  @JsonProperty(cDescription) String description,
+                  @JsonProperty(cImageFile) String imageFile,
+                  @JsonProperty(cLevel) int level,
+                  @JsonProperty(cYield) int yield,
+                  @JsonProperty(cPoints) int points,
+                  @JsonProperty(cXp) int xp,
+                  @JsonProperty(cCraftingTime) int craftingTime,
+                  @JsonProperty(cLastUpdated) Date lastUpdated,
+                  @JsonProperty(cGameId) String gameId) {
         this.uuid = uuid;
         this.name = name;
         this.description = description;

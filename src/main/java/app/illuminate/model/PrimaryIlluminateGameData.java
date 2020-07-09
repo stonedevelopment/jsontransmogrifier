@@ -2,11 +2,11 @@ package app.illuminate.model;
 
 import app.illuminate.controller.IlluminateGameData;
 import app.illuminate.model.details.IlluminateDetails;
-import app.transmogrify.model.details.TransmogDetails;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import model.*;
+import util.Log;
 
 import static util.Constants.*;
 
@@ -61,18 +61,17 @@ public class PrimaryIlluminateGameData extends IlluminateGameData {
         ArrayNode arrayNode = mapper.createArrayNode();
 
         //  iterate through station uuids, in alphabetical order via TreeMap
-        for (String uuid : stationIdMap.values()) {
+        for (DirectoryItem directoryItem : getDirectoryItemListByParentUUID(null)) {
             ObjectNode rootNode = mapper.createObjectNode();
 
             //  get station object using given uuid
-            Station station = getStation(uuid);
+            Station station = getStation(directoryItem.getSourceId());
 
             //  convert POJO to json object todo tie in engram info?
             rootNode.set(cJsonStation, Station.toJson(station));
 
             //  crawl through directory, recursively return hierarchical data
-            String parentId = station.getUuid();
-            rootNode.set(cDirectory, resolveDirectoryChildren(parentId));
+            rootNode.set(cDirectory, resolveDirectoryChildren(directoryItem.getUuid()));
 
             arrayNode.add(rootNode);
         }
@@ -92,16 +91,24 @@ public class PrimaryIlluminateGameData extends IlluminateGameData {
             //  collect uuid of source
             String sourceId = directoryItem.getSourceId();
 
-            //  determine if engram or folder
+            //  determine if station, engram or folder
             if (isFolder(sourceId)) {
                 ObjectNode folderNode = mapper.createObjectNode();
                 Folder folder = getFolder(sourceId);
-                folderNode.set(cFolder, folder.toJson());
-                folderNode.set(cDirectory, resolveDirectoryChildren(sourceId));
-                folders.add(folderNode);
+                if (folder != null) {
+                    folderNode.set(cFolder, folder.toJson());
+                    folderNode.set(cDirectory, resolveDirectoryChildren(directoryItem.getUuid()));
+                    folders.add(folderNode);
+                } else {
+                    Log.d("getFolder returned null: " + sourceId);
+                }
             } else {
                 Engram engram = getEngram(sourceId);
-                engrams.add(engram.toJson());
+                if (engram != null) {
+                    engrams.add(engram.toJson());
+                } else {
+                    Log.d("getEngram returned null: " + sourceId);
+                }
             }
         }
 
@@ -111,7 +118,7 @@ public class PrimaryIlluminateGameData extends IlluminateGameData {
         return outNode;
     }
 
-    boolean isFolder(String folderId) {
-        return folderMap.containsKey(folderId);
+    boolean isFolder(String sourceId) {
+        return folderMap.containsKey(sourceId);
     }
 }

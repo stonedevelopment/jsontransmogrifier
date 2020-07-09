@@ -1,7 +1,11 @@
 package model;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import static util.Constants.*;
 
 /**
  * "uuid": "",
@@ -22,7 +26,14 @@ public class DirectoryItem {
     private final String sourceId;
     private final String gameId;
 
-    public DirectoryItem(String uuid, String name, String imageFile, int viewType, String parentId, String sourceId, String gameId) {
+    @JsonCreator
+    public DirectoryItem(@JsonProperty(cUuid) String uuid,
+                         @JsonProperty(cName) String name,
+                         @JsonProperty(cImageFile) String imageFile,
+                         @JsonProperty(cViewType) int viewType,
+                         @JsonProperty(cParentId) String parentId,
+                         @JsonProperty(cSourceId) String sourceId,
+                         @JsonProperty(cGameId) String gameId) {
         this.uuid = uuid;
         this.name = name;
         this.imageFile = imageFile;
