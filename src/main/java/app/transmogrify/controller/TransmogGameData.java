@@ -66,9 +66,12 @@ public abstract class TransmogGameData extends GameData {
             if (isValidDlcId(jsonCategory.dlc_id)) {
                 if (isFolderUnique(jsonCategory)) {
                     Folder folder = buildFolder(jsonCategory);
-                    addFolderToMapByCategoryId(jsonCategory._id, folder);
+                    addFolderToCategoryIdMap(jsonCategory._id, folder);
+                    addFolderToMap(folder);
                 } else {
                     Log.d("Duplicate Folder found: " + jsonCategory.name);
+                    Folder folder = getFolderByName(jsonCategory.name);
+                    addFolderToCategoryIdMap(jsonCategory._id, folder);
                 }
             }
         }
@@ -244,9 +247,8 @@ public abstract class TransmogGameData extends GameData {
 
     protected abstract Composite buildComposite(String compositionId, JsonComposite jsonComposite);
 
-    private void addFolderToMapByCategoryId(long _id, Folder folder) {
+    private void addFolderToCategoryIdMap(long _id, Folder folder) {
         categoryIdMap.put(_id, folder.getUuid());
-        addFolderToMap(folder);
     }
 
     protected Collection<Folder> transformFolderMapByCategoryId() {
@@ -260,7 +262,7 @@ public abstract class TransmogGameData extends GameData {
 
     private boolean isFolderUnique(JsonCategory jsonCategory) {
         //  test name for uuid
-        String uuid = categoryIdMap.get(jsonCategory._id);
+        String uuid = getFolderUUIDByName(jsonCategory.name);
         if (uuid == null) return true;
 
         //  test uuid for object
@@ -271,7 +273,7 @@ public abstract class TransmogGameData extends GameData {
         String name = jsonCategory.name;
 
         //  return if incoming object equals mapped object
-        return folder.equals(name);
+        return !folder.equals(name);
     }
 
     private boolean isResourceUnique(JsonResource jsonResource) {
@@ -289,7 +291,7 @@ public abstract class TransmogGameData extends GameData {
         String imageFile = jsonResource.image_file;
 
         //  return if incoming object equals mapped object
-        return resource.equals(name, description, imageFile);
+        return !resource.equals(name, description, imageFile);
     }
 
     private boolean isEngramUnique(JsonEngram jsonEngram) {
@@ -311,7 +313,7 @@ public abstract class TransmogGameData extends GameData {
         int xp = jsonEngram.xp;
 
         //  return if incoming object equals mapped object
-        return engram.equals(name, description, imageFile, level, yield, points, xp);
+        return !engram.equals(name, description, imageFile, level, yield, points, xp);
     }
 
     private boolean isStationUnique(JsonStation jsonStation) {

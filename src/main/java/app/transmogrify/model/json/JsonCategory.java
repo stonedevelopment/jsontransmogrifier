@@ -21,4 +21,15 @@ public class JsonCategory {
     public long parent_id;
     public long dlc_id;
     public List<String> station;
+
+    @Override
+    public String toString() {
+        return "JsonCategory{" +
+                "_id=" + _id +
+                ", name='" + name + '\'' +
+                ", parent_id=" + parent_id +
+                ", dlc_id=" + dlc_id +
+                ", station=" + station +
+                '}';
+    }
 }
