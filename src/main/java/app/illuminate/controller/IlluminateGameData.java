@@ -29,7 +29,7 @@ public abstract class IlluminateGameData extends GameData {
         JsonNode foldersNode = inNode.get(cFolders);
         for (JsonNode folderNode : foldersNode) {
             Folder folder = Folder.fromJson(folderNode);
-            addFolderToMap(folder);
+            addFolder(folder);
         }
     }
 
@@ -38,7 +38,7 @@ public abstract class IlluminateGameData extends GameData {
         JsonNode resourcesNode = inNode.get(cResources);
         for (JsonNode resourceNode : resourcesNode) {
             Resource resource = Resource.fromJson(resourceNode);
-            addResourceToMap(resource);
+            addResource(resource);
         }
     }
 
@@ -47,7 +47,7 @@ public abstract class IlluminateGameData extends GameData {
         JsonNode engramsNode = inNode.get(cEngrams);
         for (JsonNode engramNode : engramsNode) {
             Engram engram = Engram.fromJson(engramNode);
-            addEngramToMap(engram);
+            addEngram(engram);
         }
     }
 
@@ -56,7 +56,7 @@ public abstract class IlluminateGameData extends GameData {
         JsonNode stationsNode = inNode.get(cStations);
         for (JsonNode stationNode : stationsNode) {
             Station station = Station.fromJson(stationNode);
-            addStationToMap(station);
+            addStation(station);
         }
     }
 
@@ -66,7 +66,7 @@ public abstract class IlluminateGameData extends GameData {
         for (JsonNode compositionNode : compositionsNode) {
             Composition composition = Composition.fromJson(compositionNode);
             String compositionName = getEngramNameByUUID(composition.getEngramId());
-            addCompositionToMap(compositionName, composition);
+            addComposition(compositionName, composition);
         }
     }
 
@@ -75,7 +75,7 @@ public abstract class IlluminateGameData extends GameData {
         for (JsonNode compositeArrayNode : compositesArrayNode) {
             for (JsonNode compositeNode : compositeArrayNode) {
                 Composite composite = Composite.fromJson(compositeNode);
-                addCompositeToMap(composite);
+                addComposite(composite);
             }
         }
     }
@@ -85,7 +85,7 @@ public abstract class IlluminateGameData extends GameData {
         JsonNode directoryNode = inNode.get(cDirectory);
         for (JsonNode directoryItemNode : directoryNode) {
             DirectoryItem directoryItem = DirectoryItem.fromJson(directoryItemNode);
-            addDirectoryItemToMap(directoryItem);
+            addDirectoryItem(directoryItem);
         }
     }
 

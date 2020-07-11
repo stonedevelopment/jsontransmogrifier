@@ -46,7 +46,7 @@ public class PrimaryIlluminateGameData extends IlluminateGameData {
     JsonNode resolveResourceNode() {
         ArrayNode arrayNode = mapper.createArrayNode();
 
-        for (String uuid : resourceIdMap.values()) {
+        for (String uuid : getResourceIdMap().values()) {
             Resource resource = getResource(uuid);
             arrayNode.add(Resource.toJson(resource));
         }
@@ -119,6 +119,6 @@ public class PrimaryIlluminateGameData extends IlluminateGameData {
     }
 
     boolean isFolder(String sourceId) {
-        return folderMap.containsKey(sourceId);
+        return getFolderMap().containsKey(sourceId);
     }
 }

@@ -91,7 +91,7 @@ public class PrimaryTransmogGameData extends TransmogGameData {
         for (JsonComposite jsonComposite : jsonEngram.composition) {
             if (isCompositeUnique(uuid, jsonComposite.resource_id, jsonComposite)) {
                 Composite composite = buildComposite(uuid, jsonComposite);
-                addCompositeToMap(composite);
+                addComposite(composite);
             }
         }
 
@@ -131,7 +131,7 @@ public class PrimaryTransmogGameData extends TransmogGameData {
         int totalCount = engramCount + folderCount;
 
         if (totalCount > 0) {
-            directory.add(new DirectoryItem(uuid, name, imageFile, cStationViewType, null, sourceId, gameId));
+            addDirectoryItem(new DirectoryItem(uuid, name, imageFile, cStationViewType, null, sourceId, gameId));
         } else {
             Log.d("mapStationDirectoryItem >> 0 count: " + station.getName() + " e:" + engramCount + "/f:" + folderCount);
         }
@@ -146,7 +146,7 @@ public class PrimaryTransmogGameData extends TransmogGameData {
         String imageFile = engram.getImageFile();
         String gameId = getDetailsObject().getUuid();
 
-        directory.add(new DirectoryItem(uuid, name, imageFile, cEngramViewType, parentId, sourceId, gameId));
+        addDirectoryItem(new DirectoryItem(uuid, name, imageFile, cEngramViewType, parentId, sourceId, gameId));
     }
 
     @Override
@@ -162,7 +162,7 @@ public class PrimaryTransmogGameData extends TransmogGameData {
         int totalCount = engramCount + folderCount;
 
         if (totalCount > 0) {
-            directory.add(new DirectoryItem(uuid, name, imageFile, cFolderViewType, parentId, sourceId, gameId));
+            addDirectoryItem(new DirectoryItem(uuid, name, imageFile, cFolderViewType, parentId, sourceId, gameId));
         } else {
             Log.d("mapFolderDirectoryItem >> 0 count: " + station.getName() + "/" + folder.getName() + " e:" + engramCount + "/f:" + folderCount);
         }
@@ -184,7 +184,7 @@ public class PrimaryTransmogGameData extends TransmogGameData {
         gameDataNode.set(cStations, mapper.valueToTree(transformStationMap()));
 
         //  add folders
-        gameDataNode.set(cFolders, mapper.valueToTree(transformFolderMapByCategoryId()));
+        gameDataNode.set(cFolders, mapper.valueToTree(transformFolderMap()));
 
         //  add engrams
         gameDataNode.set(cEngrams, mapper.valueToTree(transformEngramMap()));
@@ -193,10 +193,10 @@ public class PrimaryTransmogGameData extends TransmogGameData {
         gameDataNode.set(cComposition, mapper.valueToTree(transformCompositionMap()));
 
         //  add composites
-        gameDataNode.set(cComposites, mapper.valueToTree(transformCompositeMap()));
+        gameDataNode.set(cComposites, flattenCompositeMapToJson(transformCompositeMap()));
 
         //  add directory, traverse through tree, fill with uuids
-        gameDataNode.set(cDirectory, mapper.valueToTree(directory));
+        gameDataNode.set(cDirectory, flattenDirectoryToJson(transformDirectory()));
 
         return gameDataNode;
     }

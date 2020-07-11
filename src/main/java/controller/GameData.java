@@ -2,9 +2,9 @@ package controller;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ArrayNode;
 import model.*;
 import model.details.Details;
-import util.Log;
 
 import java.util.*;
 
@@ -16,31 +16,26 @@ public abstract class GameData {
 
     protected final ObjectMapper mapper;
     protected final JsonNode inNode;
-    protected Details details;
-
     //  name, uuid
-    protected Map<String, String> resourceIdMap = new TreeMap<>();
-    protected Map<String, String> engramIdMap = new TreeMap<>();
-    protected Map<String, String> stationIdMap = new TreeMap<>();
-    protected Map<String, String> folderIdMap = new TreeMap<>();
-    protected Map<String, String> compositionIdMap = new TreeMap<>();
-
+    private final Map<String, String> resourceIdMap = new TreeMap<>();
+    private final Map<String, String> engramIdMap = new TreeMap<>();
+    private final Map<String, String> stationIdMap = new TreeMap<>();
+    private final Map<String, String> folderIdMap = new TreeMap<>();
+    private final Map<String, String> compositionIdMap = new TreeMap<>();
     //  name, list<uuid>
-    protected Map<String, List<String>> compositeIdMap = new TreeMap<>();
-
+    private final Map<String, List<String>> compositeIdMap = new TreeMap<>();
+    private final Map<String, List<String>> directoryIdMap = new TreeMap<>();
     //  uuid, object
-    protected Map<String, Resource> resourceMap = new HashMap<>();
-    protected Map<String, Folder> folderMap = new HashMap<>();
-    protected Map<String, Engram> engramMap = new HashMap<>();
-    protected Map<String, Station> stationMap = new HashMap<>();
-    protected Map<String, Composition> compositionMap = new HashMap<>();
-    protected Map<String, Composite> compositeMap = new HashMap<>();
-
-    //  parent uuid, list<object>
-    protected Map<String, List<DirectoryItem>> directoryMap = new HashMap<>();
-
-    //  list<object>
-    protected List<DirectoryItem> directory = new ArrayList<>();
+    private final Map<String, Resource> resourceMap = new HashMap<>();
+    private final Map<String, Folder> folderMap = new HashMap<>();
+    private final Map<String, Engram> engramMap = new HashMap<>();
+    private final Map<String, Station> stationMap = new HashMap<>();
+    private final Map<String, Composition> compositionMap = new HashMap<>();
+    private final Map<String, Composite> compositeMap = new HashMap<>();
+    private final Map<String, DirectoryItem> directoryMap = new HashMap<>();
+    //  parent uuid, object
+    private final Map<String, List<DirectoryItem>> directoryMapByParent = new HashMap<>();
+    protected Details details;
 
     public GameData(JsonNode inNode) {
         this.inNode = inNode;
@@ -55,6 +50,14 @@ public abstract class GameData {
 
     public Details getDetailsObject() {
         return details;
+    }
+
+    public Map<String, String> getResourceIdMap() {
+        return resourceIdMap;
+    }
+
+    public Map<String, Folder> getFolderMap() {
+        return folderMap;
     }
 
     public Resource getResource(String uuid) {
@@ -138,8 +141,18 @@ public abstract class GameData {
         return uuidList;
     }
 
+    public DirectoryItem getDirectoryItem(String uuid) {
+        return directoryMap.get(uuid);
+    }
+
+    public List<String> getDirectoryItemUUIDListByName(String name) {
+        List<String> uuidList = directoryIdMap.get(name);
+        if (uuidList == null) return new ArrayList<>();
+        return uuidList;
+    }
+
     public List<DirectoryItem> getDirectoryItemListByParentUUID(String parentUUID) {
-        List<DirectoryItem> directoryItemList = directoryMap.get(parentUUID);
+        List<DirectoryItem> directoryItemList = directoryMapByParent.get(parentUUID);
         if (directoryItemList == null) return new ArrayList<>();
         return directoryItemList;
     }
@@ -164,52 +177,127 @@ public abstract class GameData {
     /**
      * Add objects to maps
      */
-    protected void addResourceToMap(Resource resource) {
-        resourceIdMap.put(resource.getName(), resource.getUuid());
-        resourceMap.put(resource.getUuid(), resource);
+    protected void addResource(Resource resource) {
+        String uuid = resource.getUuid();
+        String name = resource.getName();
+
+        addResourceToIdMap(uuid, name);
+        addResourceToMap(uuid, resource);
     }
 
-    protected void addEngramToMap(Engram engram) {
-        engramIdMap.put(engram.getName(), engram.getUuid());
-        engramMap.put(engram.getUuid(), engram);
+    private void addResourceToIdMap(String uuid, String name) {
+        resourceIdMap.put(name, uuid);
     }
 
-    protected void addFolderToMap(Folder folder) {
-        folderIdMap.put(folder.getName(), folder.getUuid());
-        folderMap.put(folder.getUuid(), folder);
+    private void addResourceToMap(String uuid, Resource resource) {
+        resourceMap.put(uuid, resource);
     }
 
-    protected void addStationToMap(Station station) {
-        stationIdMap.put(station.getName(), station.getUuid());
-        stationMap.put(station.getUuid(), station);
+    protected void addEngram(Engram engram) {
+        String uuid = engram.getUuid();
+        String name = engram.getName();
+
+        addEngramToIdMap(uuid, name);
+        addEngramToMap(uuid, engram);
     }
 
-    protected void addCompositionToMap(String name, Composition composition) {
-        compositionIdMap.put(name, composition.getUuid());
-        compositionMap.put(composition.getUuid(), composition);
+    private void addEngramToIdMap(String uuid, String name) {
+        engramIdMap.put(name, uuid);
     }
 
-    protected void addCompositeToMap(Composite composite) {
-        addCompositeToIdMap(composite.getName(), composite.getUuid());
-        compositeMap.put(composite.getUuid(), composite);
+    private void addEngramToMap(String uuid, Engram engram) {
+        engramMap.put(uuid, engram);
     }
 
-    protected void addCompositeToIdMap(String name, String uuid) {
+    protected void addFolder(Folder folder) {
+        String uuid = folder.getUuid();
+        String name = folder.getName();
+
+        addFolderToIdMap(uuid, name);
+        addFolderToMap(uuid, folder);
+    }
+
+    private void addFolderToIdMap(String uuid, String name) {
+        folderIdMap.put(name, uuid);
+    }
+
+    private void addFolderToMap(String uuid, Folder folder) {
+        folderMap.put(uuid, folder);
+    }
+
+    protected void addStation(Station station) {
+        String uuid = station.getUuid();
+        String name = station.getName();
+
+        addStationToIdMap(uuid, name);
+        addStationToMap(uuid, station);
+    }
+
+    private void addStationToIdMap(String uuid, String name) {
+        stationIdMap.put(name, uuid);
+    }
+
+    private void addStationToMap(String uuid, Station station) {
+        stationMap.put(uuid, station);
+    }
+
+    protected void addComposition(String name, Composition composition) {
+        String uuid = composition.getUuid();
+
+        addCompositionToIdMap(uuid, name);
+        addCompositionToMap(uuid, composition);
+    }
+
+    private void addCompositionToIdMap(String uuid, String name) {
+        compositionIdMap.put(name, uuid);
+    }
+
+    private void addCompositionToMap(String uuid, Composition composition) {
+        compositionMap.put(uuid, composition);
+    }
+
+    protected void addComposite(Composite composite) {
+        String uuid = composite.getUuid();
+        String name = composite.getName();
+
+        addCompositeToIdMap(uuid, name);
+        addCompositeToMap(uuid, composite);
+    }
+
+    private void addCompositeToIdMap(String uuid, String name) {
         List<String> uuidList = getCompositeUUIDListByName(name);
         uuidList.add(uuid);
         compositeIdMap.put(name, uuidList);
     }
 
-    protected void addDirectoryItemToMap(DirectoryItem directoryItem) {
-        addDirectoryItemToIdMap(directoryItem);
-        directory.add(directoryItem);
+    private void addCompositeToMap(String uuid, Composite composite) {
+        compositeMap.put(uuid, composite);
     }
 
-    protected void addDirectoryItemToIdMap(DirectoryItem directoryItem) {
+    protected void addDirectoryItem(DirectoryItem directoryItem) {
+        String uuid = directoryItem.getUuid();
+        String name = directoryItem.getName();
         String parentId = directoryItem.getParentId();
+
+        addDirectoryItemToIdMap(uuid, name);
+        addDirectItemToMap(uuid, directoryItem);
+        addDirectoryItemToParentMap(parentId, directoryItem);
+    }
+
+    private void addDirectoryItemToIdMap(String uuid, String name) {
+        List<String> uuidList = getDirectoryItemUUIDListByName(name);
+        uuidList.add(uuid);
+        directoryIdMap.put(name, uuidList);
+    }
+
+    private void addDirectItemToMap(String uuid, DirectoryItem directoryItem) {
+        directoryMap.put(uuid, directoryItem);
+    }
+
+    private void addDirectoryItemToParentMap(String parentId, DirectoryItem directoryItem) {
         List<DirectoryItem> directoryItemList = getDirectoryItemListByParentUUID(parentId);
         directoryItemList.add(directoryItem);
-        directoryMap.put(parentId, directoryItemList);
+        directoryMapByParent.put(parentId, directoryItemList);
     }
 
     /**
@@ -287,6 +375,49 @@ public abstract class GameData {
             }
         }
         return transformedMap.values();
+    }
+
+    protected JsonNode flattenCompositeMapToJson(Collection<List<Composite>> collection) {
+        ArrayNode flattenedNode = mapper.createArrayNode();
+
+        for (List<Composite> compositeList : collection) {
+            for (Composite composite : compositeList) {
+                flattenedNode.add(mapper.valueToTree(composite));
+            }
+        }
+
+        return flattenedNode;
+    }
+
+    protected Collection<List<DirectoryItem>> transformDirectory() {
+        Map<String, List<DirectoryItem>> transformedMap = new TreeMap<>();
+        for (Map.Entry<String, List<String>> entry : directoryIdMap.entrySet()) {
+            String name = entry.getKey();
+            List<String> uuidList = entry.getValue();
+            for (String uuid : uuidList) {
+                DirectoryItem directoryItem = getDirectoryItem(uuid);
+                List<DirectoryItem> directoryItemList = transformedMap.get(name);
+                if (directoryItemList == null) {
+                    directoryItemList = new ArrayList<>();
+                }
+                directoryItemList.add(directoryItem);
+                transformedMap.put(name, directoryItemList);
+            }
+        }
+
+        return transformedMap.values();
+    }
+
+    protected JsonNode flattenDirectoryToJson(Collection<List<DirectoryItem>> collection) {
+        ArrayNode flattenedNode = mapper.createArrayNode();
+
+        for (List<DirectoryItem> directoryItemList : collection) {
+            for (DirectoryItem directoryItem : directoryItemList) {
+                flattenedNode.add(mapper.valueToTree(directoryItem));
+            }
+        }
+
+        return flattenedNode;
     }
 
     public abstract JsonNode resolveToJson();

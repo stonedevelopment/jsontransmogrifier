@@ -10,7 +10,6 @@ import model.*;
 import model.dlc.*;
 
 import java.util.Date;
-import java.util.List;
 import java.util.Map;
 
 import static util.Constants.*;
@@ -97,15 +96,15 @@ public class DlcTransmogGameData extends TransmogGameData {
     }
 
     @Override
-    public String getFolderUUIDByCategoryId(long id) {
-        String uuid = super.getFolderUUIDByCategoryId(id);
-        return uuid != null ? uuid : primaryGameData.getFolderUUIDByCategoryId(id);
+    public String getFolderUUIDByCategoryId(long categoryId) {
+        String uuid = super.getFolderUUIDByCategoryId(categoryId);
+        return uuid != null ? uuid : primaryGameData.getFolderUUIDByCategoryId(categoryId);
     }
 
     @Override
-    public Folder getFolderByCategoryId(long id) {
-        Folder folder = super.getFolderByCategoryId(id);
-        return folder != null ? folder : primaryGameData.getFolderByCategoryId(id);
+    public Folder getFolderByCategoryId(long categoryId) {
+        Folder folder = super.getFolderByCategoryId(categoryId);
+        return folder != null ? folder : primaryGameData.getFolderByCategoryId(categoryId);
     }
 
     @Override
@@ -250,7 +249,7 @@ public class DlcTransmogGameData extends TransmogGameData {
         int totalCount = engramCount + folderCount;
 
         if (totalCount > 0) {
-            directory.add(new DlcDirectoryItem(uuid, name, imageFile, cStationViewType, null, sourceId, gameId, dlcId));
+            addDirectoryItem(new DlcDirectoryItem(uuid, name, imageFile, cStationViewType, null, sourceId, gameId, dlcId));
         }
 
     }
@@ -264,7 +263,7 @@ public class DlcTransmogGameData extends TransmogGameData {
         String gameId = getDetailsObject().getGameId();
         String dlcId = getDetailsObject().getUuid();
 
-        directory.add(new DlcDirectoryItem(uuid, name, imageFile, cEngramViewType, parentId, sourceId, gameId, dlcId));
+        addDirectoryItem(new DlcDirectoryItem(uuid, name, imageFile, cEngramViewType, parentId, sourceId, gameId, dlcId));
     }
 
     @Override
@@ -281,7 +280,7 @@ public class DlcTransmogGameData extends TransmogGameData {
         int totalCount = engramCount + folderCount;
 
         if (totalCount > 0) {
-            directory.add(new DlcDirectoryItem(uuid, name, imageFile, cFolderViewType, parentId, sourceId, gameId, dlcId));
+            addDirectoryItem(new DlcDirectoryItem(uuid, name, imageFile, cFolderViewType, parentId, sourceId, gameId, dlcId));
         }
 
         return totalCount;
@@ -386,7 +385,7 @@ public class DlcTransmogGameData extends TransmogGameData {
         gameDataObject.set(cStations, mapper.valueToTree(transformStationMap()));
 
         //  add folders
-        gameDataObject.set(cFolders, mapper.valueToTree(transformFolderMapByCategoryId()));
+        gameDataObject.set(cFolders, mapper.valueToTree(transformFolderMap()));
 
         //  add engrams
         gameDataObject.set(cEngrams, mapper.valueToTree(transformEngramMap()));
@@ -395,10 +394,10 @@ public class DlcTransmogGameData extends TransmogGameData {
         gameDataObject.set(cComposition, mapper.valueToTree(transformCompositionMap()));
 
         //  add composites
-        gameDataObject.set(cComposites, mapper.valueToTree(transformCompositeMap()));
+        gameDataObject.set(cComposites, flattenCompositeMapToJson(transformCompositeMap()));
 
         //  add directory, traverse through tree, fill with uuids
-        gameDataObject.set(cDirectory, mapper.valueToTree(directory));
+        gameDataObject.set(cDirectory, flattenDirectoryToJson(transformDirectory()));
 
         //  add remove section
         gameDataObject.set(cRemove, createRemoveSection());
