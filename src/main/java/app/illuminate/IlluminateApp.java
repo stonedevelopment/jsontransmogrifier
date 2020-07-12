@@ -7,6 +7,7 @@ import app.illuminate.model.details.IlluminateDetails;
 import app.transmogrify.model.details.DlcTransmogDetails;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import java.io.IOException;
 
@@ -30,21 +31,25 @@ public class IlluminateApp {
         //  load parent object
         //  convert transmogrified.json file into separate readable json files
         try {
+            ObjectNode outNode = mapper.createObjectNode();
+
             JsonNode transmogNode = parseIn(cArkAssetsFilePath, cTransmogrificationFileName);
-            illuminatePrimaryNode(transmogNode);
+            outNode.set(cPrimary, mapper.valueToTree(illuminatePrimaryNode(transmogNode)));
 //            illuminateDlcNode(transmogNode);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    private static void illuminatePrimaryNode(JsonNode transmogNode) throws IOException {
+    private static IlluminateDetails illuminatePrimaryNode(JsonNode transmogNode) throws IOException {
         IlluminateDetails details = IlluminateDetails.from(transmogNode.get(cPrimary));
         String fileName = details.buildTransmogFilePath();
 
         JsonNode transmogrifiedNode = parseIn(cArkAssetsFilePath, fileName);
         primaryGameData = new PrimaryIlluminateGameData(transmogrifiedNode);
         writeGameDataToFiles(primaryGameData);
+
+        return details;
     }
 
     private static void illuminateDlcNode(JsonNode transmogNode) throws IOException {

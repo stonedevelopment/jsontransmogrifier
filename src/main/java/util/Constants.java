@@ -55,6 +55,8 @@ public class Constants {
     public static final String cLastUpdated = "lastUpdated";
     public static final String cEngramId = "engramId";
     public static final String cGameId = "gameId";
+    public static final String cRootParentId = "";
+    public static final String cNullUuid = "";
 
     //  json values
     public static final int cStationViewType = 0;

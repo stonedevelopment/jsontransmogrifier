@@ -110,7 +110,7 @@ public class PrimaryTransmogGameData extends TransmogGameData {
         int quantity = jsonComposite.quantity;
         String gameId = getDetailsObject().getUuid();
 
-        if (imageFile == null) {
+        if (imageFile == null) {    // todo code smell, imaegFile should never be null - rework how imagefile is instantiated
             Log.d("imageFile is null: " + name + " isEngram? " + isEngram + " / " + getEngramImageFileByUUID(engramId) + ", " + getResourceImageFileByUUID(resourceId));
             Log.d(uuid + ", " + name + ", " + resourceId + ", " + engramId + ", " + isEngram + ", " + sourceId + ", " + imageFile + ", " + quantity + ", " + gameId);
         }
