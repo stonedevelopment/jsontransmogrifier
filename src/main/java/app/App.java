@@ -8,20 +8,25 @@ import java.io.IOException;
 
 import static util.Constants.cArkAssetsFilePath;
 import static util.Constants.cArkDataEditableFileName;
+import static util.JSONUtil.writeOut;
 
 public class App {
     private static TransmogrifyApp transmogrifyApp;
 
     public static void main(String[] args) {
+        transmogrify();
+    }
+
+    private static void transmogrify() {
         try {
-            setupTransmogrifyApp();
+            JsonNode inNode = JSONUtil.parseIn(cArkAssetsFilePath, cArkDataEditableFileName);
+            transmogrifyApp = new TransmogrifyApp(inNode);
+            transmogrifyApp.transmogrify();
+            transmogrifyApp.export();
+
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
-    private static void setupTransmogrifyApp() throws IOException {
-        JsonNode inNode = JSONUtil.parseIn(cArkAssetsFilePath, cArkDataEditableFileName);
-        transmogrifyApp = new TransmogrifyApp(inNode);
-    }
 }

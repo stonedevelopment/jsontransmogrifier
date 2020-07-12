@@ -21,13 +21,32 @@ import static util.JSONUtil.writeOut;
  * We want UUIDs to be static so if the User saves a crafting queue, the Engram doesn't change even after an update.
  */
 public class TransmogrifyApp {
-    private static final ObjectMapper mapper = new ObjectMapper();
-    private static PrimaryTransmogGameData primaryGameData;
-    private static List<DlcTransmogGameData> dlcGameDataList;
+    private final ObjectMapper mapper = new ObjectMapper();
+    private final JsonNode inNode;
+    private PrimaryTransmogGameData primaryGameData;
+    private List<DlcTransmogGameData> dlcGameDataList;
 
     public TransmogrifyApp(JsonNode inNode) {
-        transmogrifyGameData(inNode);
+        this.inNode = inNode;
+    }
 
+    private static void writeJsonToFile(String filePath, JsonNode outNode) throws IOException {
+        writeOut(cArkAssetsFilePath, filePath, outNode);
+    }
+
+    public void transmogrify() {
+        JsonNode inDlcArrayNode = inNode.get(cJsonDlc);
+        for (JsonNode dlcNode : inDlcArrayNode) {
+            JsonDlc jsonDlc = mapper.convertValue(dlcNode, JsonDlc.class);
+            if (jsonDlc.type.equals(cDlcTypePrimary)) {
+                transmogrifyPrimaryGameData(jsonDlc);
+            } else {
+                transmogrifyDlcGameData(jsonDlc);
+            }
+        }
+    }
+
+    public void export() {
         try {
             writeTransmogrifiedGameData();
             writeTransmogrification();
@@ -36,23 +55,11 @@ public class TransmogrifyApp {
         }
     }
 
-    private void transmogrifyGameData(JsonNode inNode) {
-        JsonNode inDlcArrayNode = inNode.get(cJsonDlc);
-        for (JsonNode dlcNode : inDlcArrayNode) {
-            JsonDlc jsonDlc = mapper.convertValue(dlcNode, JsonDlc.class);
-            if (jsonDlc.type.equals(cDlcTypePrimary)) {
-                transmogrifyPrimaryGameData(inNode, jsonDlc);
-            } else {
-                transmogrifyDlcGameData(inNode, jsonDlc);
-            }
-        }
+    private void transmogrifyPrimaryGameData(JsonDlc jsonDlc) {
+        primaryGameData = new PrimaryTransmogGameData(inNode, jsonDlc);
     }
 
-    private void transmogrifyPrimaryGameData(JsonNode inObject, JsonDlc jsonDlc) {
-        primaryGameData = new PrimaryTransmogGameData(inObject, jsonDlc);
-    }
-
-    private void transmogrifyDlcGameData(JsonNode inNode, JsonDlc jsonDlc) {
+    private void transmogrifyDlcGameData(JsonDlc jsonDlc) {
         DlcTransmogGameData dlcTransmogGameData = new DlcTransmogGameData(inNode, jsonDlc, primaryGameData);
         dlcGameDataList.add(dlcTransmogGameData);
     }
@@ -93,9 +100,5 @@ public class TransmogrifyApp {
 
     private void writeTransmogrifyDataToFile(JsonNode outNode) throws IOException {
         writeJsonToFile(cTransmogrificationFileName, outNode);
-    }
-
-    private void writeJsonToFile(String filePath, JsonNode outNode) throws IOException {
-        writeOut(cArkAssetsFilePath, filePath, outNode);
     }
 }
