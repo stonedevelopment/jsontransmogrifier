@@ -8,9 +8,9 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import util.JSONUtil;
 
 import java.io.IOException;
+import java.util.List;
 
 import static util.Constants.*;
 import static util.JSONUtil.writeOut;
@@ -23,55 +23,79 @@ import static util.JSONUtil.writeOut;
 public class TransmogrifyApp {
     private static final ObjectMapper mapper = new ObjectMapper();
     private static PrimaryTransmogGameData primaryGameData;
+    private static List<DlcTransmogGameData> dlcGameDataList;
 
-    public static void main(String[] args) {
+    public TransmogrifyApp(JsonNode inNode) {
+        transmogrifyGameData(inNode);
+
         try {
-            ObjectNode outNode = mapper.createObjectNode();
-            ArrayNode outDlcArrayNode = mapper.createArrayNode();
-
-            JsonNode inNode = JSONUtil.parseIn(cArkAssetsFilePath, cArkDataEditableFileName);
-            JsonNode inDlcArrayNode = inNode.get(cJsonDlc);
-            for (JsonNode dlcNode : inDlcArrayNode) {
-                JsonDlc jsonDlc = mapper.convertValue(dlcNode, JsonDlc.class);
-                if (jsonDlc.type.equals(cDlcTypePrimary)) {
-                    outNode.set(cPrimary, transmogrifyPrimaryGameData(inNode, jsonDlc));
-                } else {
-                    outDlcArrayNode.add(transmogrifyDlcGameData(inNode, jsonDlc));
-                }
-            }
-
-            outNode.set(cDlc, outDlcArrayNode);
-            writeTransmogrifyDataToFile(outNode);
+            writeTransmogrifiedGameData();
+            writeTransmogrification();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
+    private void transmogrifyGameData(JsonNode inNode) {
+        JsonNode inDlcArrayNode = inNode.get(cJsonDlc);
+        for (JsonNode dlcNode : inDlcArrayNode) {
+            JsonDlc jsonDlc = mapper.convertValue(dlcNode, JsonDlc.class);
+            if (jsonDlc.type.equals(cDlcTypePrimary)) {
+                transmogrifyPrimaryGameData(inNode, jsonDlc);
+            } else {
+                transmogrifyDlcGameData(inNode, jsonDlc);
+            }
+        }
+    }
 
-    static JsonNode transmogrifyPrimaryGameData(JsonNode inObject, JsonDlc jsonDlc) throws IOException {
+    private void transmogrifyPrimaryGameData(JsonNode inObject, JsonDlc jsonDlc) {
         primaryGameData = new PrimaryTransmogGameData(inObject, jsonDlc);
+    }
+
+    private void transmogrifyDlcGameData(JsonNode inNode, JsonDlc jsonDlc) {
+        DlcTransmogGameData dlcTransmogGameData = new DlcTransmogGameData(inNode, jsonDlc, primaryGameData);
+        dlcGameDataList.add(dlcTransmogGameData);
+    }
+
+    private void writeTransmogrifiedGameData() throws IOException {
+        writePrimaryGameData();
+        writeDlcGameData();
+    }
+
+    private void writePrimaryGameData() throws IOException {
         writeGameDataToFile(primaryGameData);
-        return mapper.valueToTree(primaryGameData.getDetailsObject());
     }
 
-    static JsonNode transmogrifyDlcGameData(JsonNode inObject, JsonDlc jsonDlc) throws IOException {
-        DlcTransmogGameData gameData = new DlcTransmogGameData(inObject, jsonDlc, primaryGameData);
-        writeGameDataToFile(gameData);
-        return mapper.valueToTree(gameData.getDetailsObject());
+    private void writeDlcGameData() throws IOException {
+        for (DlcTransmogGameData dlcGameData : dlcGameDataList) {
+            writeGameDataToFile(dlcGameData);
+        }
     }
 
-    private static void writeGameDataToFile(TransmogGameData gameData) throws IOException {
+    private void writeTransmogrification() throws IOException {
+        ObjectNode outNode = mapper.createObjectNode();
+        outNode.set(cPrimary, mapper.valueToTree(primaryGameData.getDetailsObject()));
+
+        ArrayNode outDlcArrayNode = mapper.createArrayNode();
+        for (DlcTransmogGameData dlcGameData : dlcGameDataList) {
+            outDlcArrayNode.add(mapper.valueToTree(dlcGameData.getDetailsObject()));
+        }
+
+        writeTransmogrifyDataToFile(outNode);
+    }
+
+    private void writeGameDataToFile(TransmogGameData gameData) throws IOException {
         String filePath = gameData.getDetailsObject().getFilePath();
         String fileName = gameData.getDetailsObject().getTransmogFile();
         String fullPath = filePath.concat(fileName);
         writeJsonToFile(fullPath, gameData.resolveToJson());
     }
 
-    private static void writeTransmogrifyDataToFile(JsonNode outNode) throws IOException {
+    private void writeTransmogrifyDataToFile(JsonNode outNode) throws IOException {
         writeJsonToFile(cTransmogrificationFileName, outNode);
     }
 
-    private static void writeJsonToFile(String filePath, JsonNode outNode) throws IOException {
+    private void writeJsonToFile(String filePath, JsonNode outNode) throws IOException {
         writeOut(cArkAssetsFilePath, filePath, outNode);
     }
 }
