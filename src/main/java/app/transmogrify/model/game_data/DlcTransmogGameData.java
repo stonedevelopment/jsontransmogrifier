@@ -18,11 +18,15 @@ public class DlcTransmogGameData extends TransmogGameData {
     private final PrimaryTransmogGameData primaryGameData;
     private final TotalConversion totalConversion = new TotalConversion();
 
-    public DlcTransmogGameData(JsonNode inNode, JsonDlc jsonDlc, PrimaryTransmogGameData primaryGameData) {
+    private DlcTransmogGameData(JsonNode inNode, JsonDlc jsonDlc, PrimaryTransmogGameData primaryGameData) {
         super(inNode, jsonDlc);
 
         this.primaryGameData = primaryGameData;
         mapGameDataFromJson();
+    }
+
+    public static DlcTransmogGameData fromJson(JsonNode inNode, JsonDlc jsonDlc, PrimaryTransmogGameData primaryGameData) {
+        return new DlcTransmogGameData(inNode, jsonDlc, primaryGameData);
     }
 
     @Override

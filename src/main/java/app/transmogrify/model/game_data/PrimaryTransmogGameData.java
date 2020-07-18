@@ -13,9 +13,13 @@ import java.util.Date;
 import static util.Constants.*;
 
 public class PrimaryTransmogGameData extends TransmogGameData {
-    public PrimaryTransmogGameData(JsonNode inObject, JsonDlc jsonDlc) {
-        super(inObject, jsonDlc);
+    private PrimaryTransmogGameData(JsonNode inNode, JsonDlc jsonDlc) {
+        super(inNode, jsonDlc);
         mapGameDataFromJson();
+    }
+
+    public static PrimaryTransmogGameData withJson(JsonNode inNode, JsonDlc jsonDlc) {
+        return new PrimaryTransmogGameData(inNode, jsonDlc);
     }
 
     @Override

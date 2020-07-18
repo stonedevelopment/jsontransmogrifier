@@ -21,7 +21,7 @@ public abstract class TransmogGameData extends GameData {
     //  oldId, uuid
     Map<Long, String> categoryIdMap = new TreeMap<>();
 
-    public TransmogGameData(JsonNode inNode, JsonDlc jsonDlc) {
+    protected TransmogGameData(JsonNode inNode, JsonDlc jsonDlc) {
         super(inNode);
         this.jsonDlc = jsonDlc;
     }
