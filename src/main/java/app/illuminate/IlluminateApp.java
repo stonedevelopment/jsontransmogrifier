@@ -17,7 +17,7 @@ import static util.JSONUtil.writeOut;
 /**
  * Converts transmogrified json files into, separate, readable files for easy editing
  * <p>
- * todo Create illuminate.json to tell Updatify what needs to be converted back into raw uuids.
+ * todo Create illumination.json to tell Updatify what needs to be converted back into raw uuids.
  * Illuminate!
  */
 public class IlluminateApp {
@@ -40,7 +40,7 @@ public class IlluminateApp {
         String fileName = details.buildTransmogFilePath();
 
         JsonNode transmogrifiedNode = parseIn(cArkAssetsFilePath, fileName);
-        primaryGameData = new PrimaryIlluminateGameData(transmogrifiedNode);
+        primaryGameData = PrimaryIlluminateGameData.fromJson(transmogrifiedNode);
     }
 
     private void illuminateDlcNode() {
@@ -50,7 +50,7 @@ public class IlluminateApp {
             String filePath = details.getTransmogFile();
 
             JsonNode transmogrifiedNode = parseIn(cArkAssetsFilePath, filePath);
-            DlcIlluminateGameData gameData = new DlcIlluminateGameData(transmogrifiedNode);
+            dlcGameDataList.add(DlcIlluminateGameData.fromJson(transmogrifiedNode));
         }
     }
 

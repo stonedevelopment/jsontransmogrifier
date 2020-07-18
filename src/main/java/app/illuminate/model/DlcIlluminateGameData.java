@@ -7,10 +7,14 @@ import com.fasterxml.jackson.databind.JsonNode;
 import static util.Constants.cDetails;
 
 public class DlcIlluminateGameData extends IlluminateGameData {
-    public DlcIlluminateGameData(JsonNode inNode) {
+    private DlcIlluminateGameData(JsonNode inNode) {
         super(inNode);
 
         mapGameDataFromJson();
+    }
+
+    public static DlcIlluminateGameData fromJson(JsonNode inNode) {
+        return new DlcIlluminateGameData(inNode);
     }
 
     @Override

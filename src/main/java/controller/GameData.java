@@ -37,7 +37,7 @@ public abstract class GameData {
     private final Map<String, List<DirectoryItem>> directoryMapByParent = new HashMap<>();
     protected Details details;
 
-    public GameData(JsonNode inNode) {
+    protected GameData(JsonNode inNode) {
         this.inNode = inNode;
         this.mapper = new ObjectMapper();
     }

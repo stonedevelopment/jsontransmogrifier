@@ -11,10 +11,14 @@ import util.Log;
 import static util.Constants.*;
 
 public class PrimaryIlluminateGameData extends IlluminateGameData {
-    public PrimaryIlluminateGameData(JsonNode inNode) {
+    private PrimaryIlluminateGameData(JsonNode inNode) {
         super(inNode);
 
         mapGameDataFromJson();
+    }
+
+    public static PrimaryIlluminateGameData fromJson(JsonNode inNode) {
+        return new PrimaryIlluminateGameData(inNode);
     }
 
     @Override

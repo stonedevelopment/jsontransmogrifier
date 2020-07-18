@@ -8,7 +8,7 @@ import static util.Constants.*;
 
 public abstract class IlluminateGameData extends GameData {
 
-    public IlluminateGameData(JsonNode inNode) {
+    protected IlluminateGameData(JsonNode inNode) {
         super(inNode);
     }
 
