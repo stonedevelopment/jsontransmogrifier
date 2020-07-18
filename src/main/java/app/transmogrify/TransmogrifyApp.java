@@ -9,7 +9,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
-import java.io.IOException;
 import java.util.List;
 
 import static util.Constants.*;
@@ -30,10 +29,6 @@ public class TransmogrifyApp {
         this.inNode = inNode;
     }
 
-    private static void writeJsonToFile(String filePath, JsonNode outNode) throws IOException {
-        writeOut(cArkAssetsFilePath, filePath, outNode);
-    }
-
     public void transmogrify() {
         JsonNode inDlcArrayNode = inNode.get(cJsonDlc);
         for (JsonNode dlcNode : inDlcArrayNode) {
@@ -46,15 +41,6 @@ public class TransmogrifyApp {
         }
     }
 
-    public void export() {
-        try {
-            writeTransmogrifiedGameData();
-            writeTransmogrification();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
     private void transmogrifyPrimaryGameData(JsonDlc jsonDlc) {
         primaryGameData = new PrimaryTransmogGameData(inNode, jsonDlc);
     }
@@ -64,22 +50,34 @@ public class TransmogrifyApp {
         dlcGameDataList.add(dlcTransmogGameData);
     }
 
-    private void writeTransmogrifiedGameData() throws IOException {
+    public void export() {
+        writeTransmogrifiedGameData();
+        writeTransmogrification();
+    }
+
+    private void writeTransmogrifiedGameData() {
         writePrimaryGameData();
         writeDlcGameData();
     }
 
-    private void writePrimaryGameData() throws IOException {
+    private void writePrimaryGameData() {
         writeGameDataToFile(primaryGameData);
     }
 
-    private void writeDlcGameData() throws IOException {
+    private void writeDlcGameData() {
         for (DlcTransmogGameData dlcGameData : dlcGameDataList) {
             writeGameDataToFile(dlcGameData);
         }
     }
 
-    private void writeTransmogrification() throws IOException {
+    private void writeGameDataToFile(TransmogGameData gameData) {
+        String filePath = gameData.getDetailsObject().getFilePath();
+        String fileName = gameData.getDetailsObject().getTransmogFile();
+        String fullPath = filePath.concat(fileName);
+        writeJsonToFile(fullPath, gameData.resolveToJson());
+    }
+
+    private void writeTransmogrification() {
         ObjectNode outNode = mapper.createObjectNode();
         outNode.set(cPrimary, mapper.valueToTree(primaryGameData.getDetailsObject()));
 
@@ -91,14 +89,11 @@ public class TransmogrifyApp {
         writeTransmogrifyDataToFile(outNode);
     }
 
-    private void writeGameDataToFile(TransmogGameData gameData) throws IOException {
-        String filePath = gameData.getDetailsObject().getFilePath();
-        String fileName = gameData.getDetailsObject().getTransmogFile();
-        String fullPath = filePath.concat(fileName);
-        writeJsonToFile(fullPath, gameData.resolveToJson());
+    private void writeTransmogrifyDataToFile(JsonNode outNode) {
+        writeJsonToFile(cTransmogrificationFileName, outNode);
     }
 
-    private void writeTransmogrifyDataToFile(JsonNode outNode) throws IOException {
-        writeJsonToFile(cTransmogrificationFileName, outNode);
+    private void writeJsonToFile(String filePath, JsonNode outNode) {
+        writeOut(cArkAssetsFilePath, filePath, outNode);
     }
 }
