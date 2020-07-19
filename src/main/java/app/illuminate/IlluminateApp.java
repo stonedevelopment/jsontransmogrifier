@@ -94,6 +94,8 @@ public class IlluminateApp {
             outDlcArrayNode.add(mapper.valueToTree(dlcGameData.getDetailsObject()));
         }
 
+        outNode.set(cDlc, outDlcArrayNode);
+
         writeJsonToFile(cIlluminationFileName, outNode);
     }
 

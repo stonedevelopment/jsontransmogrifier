@@ -9,5 +9,85 @@
     "backFolderFile": "backFolder.webp",
     "transmogFile": "transmogrified.json",
     "lastUpdated": 1594568503542
-  }
+  },
+  "DLC": [
+    {
+      "uuid": "c7ed13ef-3729-408d-ae8e-e7f01efa5b24",
+      "name": "Primitive Plus",
+      "description": "Primitive Plus is a free add-on for ARK: Survival Evolved that alters the available tools, weapons and structures in the game to reflect what humans could realistically create using primitive technology and resources. This does not simply remove advanced technology from ARK, but instead replaces it with a multitude of new resources, engrams and systems.",
+      "filePath": "DLC/Primitive Plus/",
+      "logoFile": "logo.webp",
+      "folderFile": "folder.webp",
+      "backFolderFile": "backFolder.webp",
+      "transmogFile": "transmogrified.json",
+      "totalConversion": true,
+      "gameId": "ec2265d0-7adc-4911-9047-a4a623034818",
+      "lastUpdated": 1594568504537
+    },
+    {
+      "uuid": "fb628944-ad51-4457-93e3-2c18e194a517",
+      "name": "Scorched Earth",
+      "description": "Stranded naked, dehydrated & starving in a vast desert, even the most seasoned ARK survivors must quickly find water, hunt for food, harvest, craft items, and build shelter to have any chance for survival. Use skills honed on ARK's faraway Island to kill, tame, breed, and ride the fantastical new creatures that have evolved to survive the Desert's ultra harsh conditions, including... DRAGONS! Travel back and forth between the Island and the Desert to team up with hundreds of players across both worlds or play locally!",
+      "filePath": "DLC/Scorched Earth/",
+      "logoFile": "logo.webp",
+      "folderFile": "folder.webp",
+      "backFolderFile": "backFolder.webp",
+      "transmogFile": "transmogrified.json",
+      "totalConversion": false,
+      "gameId": "ec2265d0-7adc-4911-9047-a4a623034818",
+      "lastUpdated": 1594568505643
+    },
+    {
+      "uuid": "373dd96f-0e62-47db-9f24-3aadad5e69aa",
+      "name": "Aberration",
+      "description": "Waking up on 'Aberration', a derelict, malfunctioning ARK with an elaborate underground biome system, survivors face exotic new challenges unlike anything before: extreme radioactive sunlight and environmental hazards, ziplines, wingsuits, climbing gear, cave dwellings, charge-batteries, and far more, along with a stable of extraordinary new creatures await within the mysterious depths. But beware the ‘Nameless’: unrelenting, Element-infused humanoids which have evolved into vicious light-hating monstrosities! On Aberration, survivors will uncover the ultimate secrets of the ARKs, and discover what the future holds in store for those strong and clever enough to survive!",
+      "filePath": "DLC/Aberration/",
+      "logoFile": "logo.webp",
+      "folderFile": "folder.webp",
+      "backFolderFile": "backFolder.webp",
+      "transmogFile": "transmogrified.json",
+      "totalConversion": false,
+      "gameId": "ec2265d0-7adc-4911-9047-a4a623034818",
+      "lastUpdated": 1594568506239
+    },
+    {
+      "uuid": "88cf48c6-2c63-472a-b5f2-38bf4a743987",
+      "name": "Extinction",
+      "description": "Finish your journey through the worlds of ARK in ‘Extinction’, where the story began and ends: on Earth itself! An Element-infested, ravaged planet filled with fantastical creatures both organic & technological, Earth holds both the secrets of the past and the keys to its salvation. As a veteran Survivor who has conquered all previous obstacles, your ultimate challenge awaits: can you defeat the gigantic roaming Titans which dominate the planet, and complete the ARK cycle to save Earth's future?",
+      "filePath": "DLC/Extinction/",
+      "logoFile": "logo.webp",
+      "folderFile": "folder.webp",
+      "backFolderFile": "backFolder.webp",
+      "transmogFile": "transmogrified.json",
+      "totalConversion": false,
+      "gameId": "ec2265d0-7adc-4911-9047-a4a623034818",
+      "lastUpdated": 1594568506700
+    },
+    {
+      "uuid": "f309559e-c38f-4f84-a055-f57a2194672c",
+      "name": "The Center",
+      "description": null,
+      "filePath": "DLC/The Center/",
+      "logoFile": "logo.webp",
+      "folderFile": "folder.webp",
+      "backFolderFile": "backFolder.webp",
+      "transmogFile": "transmogrified.json",
+      "totalConversion": false,
+      "gameId": "ec2265d0-7adc-4911-9047-a4a623034818",
+      "lastUpdated": 1594568507159
+    },
+    {
+      "uuid": "7e427c15-ebcb-4d6a-900c-1f5e2885af09",
+      "name": "Ragnarok",
+      "description": null,
+      "filePath": "DLC/Ragnarok/",
+      "logoFile": "logo.webp",
+      "folderFile": "folder.webp",
+      "backFolderFile": "backFolder.webp",
+      "transmogFile": "transmogrified.json",
+      "totalConversion": false,
+      "gameId": "ec2265d0-7adc-4911-9047-a4a623034818",
+      "lastUpdated": 1594568507597
+    }
+  ]
 }
