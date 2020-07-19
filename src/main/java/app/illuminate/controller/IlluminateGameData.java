@@ -1,5 +1,6 @@
 package app.illuminate.controller;
 
+import app.illuminate.model.details.IlluminateDetails;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
@@ -12,6 +13,11 @@ public abstract class IlluminateGameData extends GameData {
 
     protected IlluminateGameData(JsonNode inNode) {
         super(inNode);
+    }
+
+    @Override
+    public IlluminateDetails getDetailsObject() {
+        return (IlluminateDetails) super.getDetailsObject();
     }
 
     @Override
@@ -87,6 +93,10 @@ public abstract class IlluminateGameData extends GameData {
             DirectoryItem directoryItem = DirectoryItem.fromJson(directoryItemNode);
             addDirectoryItem(directoryItem);
         }
+    }
+
+    public JsonNode getIlluminatedNodes() {
+        return getDetailsObject().getIlluminatedNodes();
     }
 
     public String getFilePathForResources() {

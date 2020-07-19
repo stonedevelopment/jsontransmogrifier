@@ -2,14 +2,18 @@ package app.illuminate.model.details;
 
 import app.transmogrify.model.details.TransmogDetails;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ArrayNode;
 
 import static util.Constants.*;
 
 public class IlluminateDetails extends TransmogDetails {
-    @JsonCreator(mode = JsonCreator.Mode.PROPERTIES)
+    private ArrayNode illuminatedNodes = new ObjectMapper().createArrayNode();
+
+    @JsonCreator
     public IlluminateDetails(@JsonProperty(cUuid) String uuid,
                              @JsonProperty(cName) String name,
                              @JsonProperty(cDescription) String description,
@@ -25,6 +29,22 @@ public class IlluminateDetails extends TransmogDetails {
         return new ObjectMapper().convertValue(jsonNode, IlluminateDetails.class);
     }
 
+    @Override
+    @JsonIgnore
+    public String getTransmogFile() {
+        return super.getTransmogFile();
+    }
+
+    @JsonProperty(cIlluminatedFiles)
+    public JsonNode getIlluminatedNodes() {
+        return illuminatedNodes;
+    }
+
+    public void addIlluminatedNode(JsonNode illuminatedNode) {
+        illuminatedNodes.add(illuminatedNode);
+    }
+
+    @JsonIgnore
     public String buildTransmogFilePath() {
         return getFilePath().concat(getTransmogFile());
     }

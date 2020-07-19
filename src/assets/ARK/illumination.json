@@ -7,7 +7,6 @@
     "logoFile": "logo.webp",
     "folderFile": "folder.webp",
     "backFolderFile": "backFolder.webp",
-    "transmogFile": "transmogrified.json",
     "lastUpdated": 1594568503542
   },
   "DLC": [
@@ -19,9 +18,7 @@
       "logoFile": "logo.webp",
       "folderFile": "folder.webp",
       "backFolderFile": "backFolder.webp",
-      "transmogFile": "transmogrified.json",
       "totalConversion": true,
-      "gameId": "ec2265d0-7adc-4911-9047-a4a623034818",
       "lastUpdated": 1594568504537
     },
     {
@@ -32,9 +29,7 @@
       "logoFile": "logo.webp",
       "folderFile": "folder.webp",
       "backFolderFile": "backFolder.webp",
-      "transmogFile": "transmogrified.json",
       "totalConversion": false,
-      "gameId": "ec2265d0-7adc-4911-9047-a4a623034818",
       "lastUpdated": 1594568505643
     },
     {
@@ -45,9 +40,7 @@
       "logoFile": "logo.webp",
       "folderFile": "folder.webp",
       "backFolderFile": "backFolder.webp",
-      "transmogFile": "transmogrified.json",
       "totalConversion": false,
-      "gameId": "ec2265d0-7adc-4911-9047-a4a623034818",
       "lastUpdated": 1594568506239
     },
     {
@@ -58,9 +51,7 @@
       "logoFile": "logo.webp",
       "folderFile": "folder.webp",
       "backFolderFile": "backFolder.webp",
-      "transmogFile": "transmogrified.json",
       "totalConversion": false,
-      "gameId": "ec2265d0-7adc-4911-9047-a4a623034818",
       "lastUpdated": 1594568506700
     },
     {
@@ -71,9 +62,7 @@
       "logoFile": "logo.webp",
       "folderFile": "folder.webp",
       "backFolderFile": "backFolder.webp",
-      "transmogFile": "transmogrified.json",
       "totalConversion": false,
-      "gameId": "ec2265d0-7adc-4911-9047-a4a623034818",
       "lastUpdated": 1594568507159
     },
     {
@@ -84,9 +73,7 @@
       "logoFile": "logo.webp",
       "folderFile": "folder.webp",
       "backFolderFile": "backFolder.webp",
-      "transmogFile": "transmogrified.json",
       "totalConversion": false,
-      "gameId": "ec2265d0-7adc-4911-9047-a4a623034818",
       "lastUpdated": 1594568507597
     }
   ]

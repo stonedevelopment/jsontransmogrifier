@@ -17,7 +17,7 @@ public class Details {
     private final String backFolderFile;
     private final Date lastUpdated;
 
-    @JsonCreator(mode = JsonCreator.Mode.PROPERTIES)
+    @JsonCreator
     public Details(@JsonProperty(cUuid) String uuid,
                    @JsonProperty(cName) String name,
                    @JsonProperty(cDescription) String description,

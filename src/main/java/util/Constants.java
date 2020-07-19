@@ -30,6 +30,7 @@ public class Constants {
     public static final String cDirectory = "directory";
     public static final String cRemove = "remove";
     public static final String cReplace = "replace";
+    public static final String cIlluminatedFiles = "illuminatedFiles";
 
     //  json keys
     public static final String cUuid = "uuid";

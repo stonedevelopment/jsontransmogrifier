@@ -12,7 +12,7 @@ import static util.Constants.*;
 public class TransmogDetails extends Details {
     private final String transmogFile;
 
-    @JsonCreator(mode = JsonCreator.Mode.PROPERTIES)
+    @JsonCreator
     public TransmogDetails(@JsonProperty(cUuid) String uuid,
                            @JsonProperty(cName) String name,
                            @JsonProperty(cDescription) String description,

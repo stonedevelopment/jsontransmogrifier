@@ -1,6 +1,7 @@
 package app.illuminate.model.details;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -35,6 +36,7 @@ public class DlcIlluminateDetails extends IlluminateDetails {
         return totalConversion;
     }
 
+    @JsonIgnore
     public String getGameId() {
         return gameId;
     }
