@@ -3,11 +3,14 @@ package app.illuminate;
 import app.illuminate.controller.IlluminateGameData;
 import app.illuminate.model.DlcIlluminateGameData;
 import app.illuminate.model.PrimaryIlluminateGameData;
+import app.illuminate.model.details.DlcIlluminateDetails;
 import app.illuminate.model.details.IlluminateDetails;
-import app.transmogrify.model.details.DlcTransmogDetails;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ArrayNode;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static util.Constants.*;
@@ -23,7 +26,7 @@ import static util.JSONUtil.writeOut;
 public class IlluminateApp {
     private static final ObjectMapper mapper = new ObjectMapper();
     private static PrimaryIlluminateGameData primaryGameData;
-    private static List<DlcIlluminateGameData> dlcGameDataList;
+    private static List<DlcIlluminateGameData> dlcGameDataList = new ArrayList<>();
     private final JsonNode inNode;
 
     public IlluminateApp(JsonNode inNode) {
@@ -37,20 +40,21 @@ public class IlluminateApp {
 
     private void illuminatePrimaryNode() {
         IlluminateDetails details = IlluminateDetails.from(inNode.get(cPrimary));
-        String fileName = details.buildTransmogFilePath();
+        String filePath = details.buildTransmogFilePath();
 
-        JsonNode transmogrifiedNode = parseIn(cArkAssetsFilePath, fileName);
-        primaryGameData = PrimaryIlluminateGameData.fromJson(transmogrifiedNode);
+        JsonNode transmogrifiedNode = parseIn(cArkAssetsFilePath, filePath);
+        primaryGameData = PrimaryIlluminateGameData.with(transmogrifiedNode);
     }
 
     private void illuminateDlcNode() {
         JsonNode dlcArrayNode = inNode.get(cDlc);
         for (JsonNode dlcNode : dlcArrayNode) {
-            DlcTransmogDetails details = mapper.convertValue(dlcNode, DlcTransmogDetails.class);
-            String filePath = details.getTransmogFile();
+            DlcIlluminateDetails details = mapper.convertValue(dlcNode, DlcIlluminateDetails.class);
+            String filePath = details.buildTransmogFilePath();
 
             JsonNode transmogrifiedNode = parseIn(cArkAssetsFilePath, filePath);
-            dlcGameDataList.add(DlcIlluminateGameData.fromJson(transmogrifiedNode));
+            DlcIlluminateGameData dlcGameData = DlcIlluminateGameData.with(transmogrifiedNode, primaryGameData);
+            dlcGameDataList.add(dlcGameData);
         }
     }
 
@@ -74,15 +78,23 @@ public class IlluminateApp {
         }
     }
 
-    private void writeIllumination() {
-
-    }
-
     private void writeGameDataToFile(IlluminateGameData gameData) {
         JsonNode resolvedNode = gameData.resolveToJson();
 
         writeJsonToFile(gameData.getFilePathForResources(), resolvedNode.get(cResources));
         writeJsonToFile(gameData.getFilePathForDirectory(), resolvedNode.get(cDirectory));
+    }
+
+    private void writeIllumination() {
+        ObjectNode outNode = mapper.createObjectNode();
+        outNode.set(cPrimary, mapper.valueToTree(primaryGameData.getDetailsObject()));
+
+        ArrayNode outDlcArrayNode = mapper.createArrayNode();
+        for (DlcIlluminateGameData dlcGameData : dlcGameDataList) {
+            outDlcArrayNode.add(mapper.valueToTree(dlcGameData.getDetailsObject()));
+        }
+
+        writeJsonToFile(cIlluminationFileName, outNode);
     }
 
     private void writeJsonToFile(String fileName, JsonNode outNode) {
