@@ -5,7 +5,6 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import controller.GameData;
 import model.*;
-import util.Log;
 
 import static util.Constants.*;
 
@@ -122,12 +121,16 @@ public abstract class IlluminateGameData extends GameData {
             //  get station object using given uuid
             Station station = getStation(directoryItem.getSourceId());
 
+            //  add name for readability
+            rootNode.set(cName, mapper.valueToTree(station.getName()));
+
             //  convert POJO to json object todo tie in engram info?
             rootNode.set(cJsonStation, Station.toJson(station));
 
             //  crawl through directory, recursively return hierarchical data
             rootNode.set(cDirectory, resolveDirectoryChildren(directoryItem.getUuid()));
 
+            //  add to json array
             arrayNode.add(rootNode);
         }
 
@@ -149,31 +152,40 @@ public abstract class IlluminateGameData extends GameData {
             //  determine if station, engram or folder
             if (isFolder(sourceId)) {
                 ObjectNode folderNode = mapper.createObjectNode();
+
+                //  get folder object using given uuid
                 Folder folder = getFolder(sourceId);
-                if (folder != null) {
-                    folderNode.set(cFolder, folder.toJson());
-                    folderNode.set(cDirectory, resolveDirectoryChildren(directoryItem.getUuid()));
-                    folders.add(folderNode);
-                } else {
-                    Log.d("getFolder returned null: " + sourceId);
-                }
+                //  add name for readability
+                folderNode.set(cName, mapper.valueToTree(folder.getName()));
+
+                //  convert POJO to json node
+                folderNode.set(cFolder, folder.toJson());
+
+                //  crawl through directory, recursively return hierarchical data
+                folderNode.set(cDirectory, resolveDirectoryChildren(directoryItem.getUuid()));
+
+                //  add to json array
+                folders.add(folderNode);
             } else {
+                //  get engram object from given uuid
                 Engram engram = getEngram(sourceId);
-                if (engram != null) {
-                    engrams.add(engram.toJson());
-                } else {
-                    Log.d("getEngram returned null: " + sourceId);
-                }
+
+                //  add engram to json array
+                engrams.add(engram.toJson());
             }
         }
 
+        //  add folder array node to parent node
         outNode.set(cFolders, folders);
+
+        //  add engram array node to parent node
         outNode.set(cEngrams, engrams);
 
+        //  return parent node
         return outNode;
     }
 
-    private boolean isFolder(String sourceId) {
+    public boolean isFolder(String sourceId) {
         return getFolderMap().containsKey(sourceId);
     }
 

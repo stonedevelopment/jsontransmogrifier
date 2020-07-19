@@ -5,7 +5,7 @@ import app.illuminate.model.details.DlcIlluminateDetails;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import model.Resource;
+import model.*;
 import model.dlc.*;
 
 import java.util.HashMap;
@@ -43,35 +43,52 @@ public class DlcIlluminateGameData extends IlluminateGameData {
     }
 
     @Override
-    public DlcResource getResource(String uuid) {
+    public Resource getResource(String uuid) {
         DlcResource resource = (DlcResource) super.getResource(uuid);
-        if (resource == null) return (DlcResource) primaryGameData.getResource(uuid);
+        if (resource == null) return primaryGameData.getResource(uuid);
         return resource;
     }
 
     @Override
-    public DlcFolder getFolder(String uuid) {
-        return (DlcFolder) super.getFolder(uuid);
+    public Folder getFolder(String uuid) {
+        DlcFolder folder = (DlcFolder) super.getFolder(uuid);
+        if (folder == null) return primaryGameData.getFolder(uuid);
+        return folder;
     }
 
     @Override
-    public DlcStation getStation(String uuid) {
-        return (DlcStation) super.getStation(uuid);
+    public Engram getEngram(String uuid) {
+        DlcEngram engram = (DlcEngram) super.getEngram(uuid);
+        if (engram == null) return primaryGameData.getEngram(uuid);
+        return engram;
     }
 
     @Override
-    public DlcComposition getComposition(String uuid) {
-        return (DlcComposition) super.getComposition(uuid);
+    public Station getStation(String uuid) {
+        DlcStation station = (DlcStation) super.getStation(uuid);
+        if (station == null) return primaryGameData.getStation(uuid);
+        return station;
     }
 
     @Override
-    public DlcComposite getComposite(String uuid) {
-        return (DlcComposite) super.getComposite(uuid);
+    public Composition getComposition(String uuid) {
+        DlcComposition composition = (DlcComposition) super.getComposition(uuid);
+        if (composition == null) return primaryGameData.getComposition(uuid);
+        return composition;
     }
 
     @Override
-    public DlcDirectoryItem getDirectoryItem(String uuid) {
-        return (DlcDirectoryItem) super.getDirectoryItem(uuid);
+    public Composite getComposite(String uuid) {
+        DlcComposite composite = (DlcComposite) super.getComposite(uuid);
+        if (composite == null) return primaryGameData.getComposite(uuid);
+        return composite;
+    }
+
+    @Override
+    public DirectoryItem getDirectoryItem(String uuid) {
+        DlcDirectoryItem directoryItem = (DlcDirectoryItem) super.getDirectoryItem(uuid);
+        if (directoryItem == null) return primaryGameData.getDirectoryItem(uuid);
+        return directoryItem;
     }
 
     @Override
@@ -151,9 +168,14 @@ public class DlcIlluminateGameData extends IlluminateGameData {
     private void mapRemoveResources(JsonNode resourcesNode) {
         for (JsonNode uuidNode : resourcesNode) {
             String uuid = mapper.convertValue(uuidNode, String.class);
-            DlcResource resource = getResource(uuid);
+            DlcResource resource = (DlcResource) getResource(uuid);
             removeResourcesMap.put(uuid, resource);
         }
+    }
+
+    @Override
+    public boolean isFolder(String sourceId) {
+        return super.isFolder(sourceId) || primaryGameData.isFolder(sourceId);
     }
 
     @Override

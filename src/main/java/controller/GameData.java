@@ -280,7 +280,7 @@ public abstract class GameData {
         String parentId = directoryItem.getParentId();
 
         addDirectoryItemToIdMap(uuid, name);
-        addDirectItemToMap(uuid, directoryItem);
+        addDirectoryItemToMap(uuid, directoryItem);
         addDirectoryItemToParentMap(parentId, directoryItem);
     }
 
@@ -290,7 +290,7 @@ public abstract class GameData {
         directoryIdMap.put(name, uuidList);
     }
 
-    private void addDirectItemToMap(String uuid, DirectoryItem directoryItem) {
+    private void addDirectoryItemToMap(String uuid, DirectoryItem directoryItem) {
         directoryMap.put(uuid, directoryItem);
     }
 
