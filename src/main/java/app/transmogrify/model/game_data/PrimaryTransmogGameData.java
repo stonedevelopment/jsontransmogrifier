@@ -18,13 +18,13 @@ public class PrimaryTransmogGameData extends TransmogGameData {
         mapGameDataFromJson();
     }
 
-    public static PrimaryTransmogGameData withJson(JsonNode inNode, JsonDlc jsonDlc) {
+    public static PrimaryTransmogGameData with(JsonNode inNode, JsonDlc jsonDlc) {
         return new PrimaryTransmogGameData(inNode, jsonDlc);
     }
 
     @Override
     protected void createDetailsObject() {
-        this.details = TransmogDetails.from(jsonDlc);
+        this.details = TransmogDetails.with(jsonDlc);
     }
 
     public String getUuid() {

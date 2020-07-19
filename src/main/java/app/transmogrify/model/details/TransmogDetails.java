@@ -25,7 +25,7 @@ public class TransmogDetails extends Details {
         this.transmogFile = transmogFile;
     }
 
-    public static TransmogDetails from(JsonDlc jsonDlc) {
+    public static TransmogDetails with(JsonDlc jsonDlc) {
         String uuid = UUID.randomUUID().toString();
         String name = jsonDlc.name;
         String description = jsonDlc.description;

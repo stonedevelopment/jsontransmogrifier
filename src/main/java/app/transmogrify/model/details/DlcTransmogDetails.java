@@ -16,8 +16,8 @@ public class DlcTransmogDetails extends TransmogDetails {
         this.gameId = gameId;
     }
 
-    public static DlcTransmogDetails from(JsonDlc jsonDlc, PrimaryTransmogGameData primaryGameData) {
-        TransmogDetails details = TransmogDetails.from(jsonDlc);
+    public static DlcTransmogDetails with(JsonDlc jsonDlc, PrimaryTransmogGameData primaryGameData) {
+        TransmogDetails details = TransmogDetails.with(jsonDlc);
         boolean totalConversion = isTotalConversion(jsonDlc.type);
         String gameId = primaryGameData.getUuid();
         return new DlcTransmogDetails(details.getUuid(), details.getName(), details.getDescription(), totalConversion,

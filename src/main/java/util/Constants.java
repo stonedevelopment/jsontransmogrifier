@@ -8,9 +8,9 @@ public class Constants {
     public static final String cGamesFileName = "games.json";
     public static final String cTransmogrificationFileName = "transmogrification.json";
     public static final String cTransmogrifiedFileName = "transmogrified.json";
-    public static final String cIlluminateFileName = "illuminated.json";
-    public static final String cIlluminateResourcesFileName = "illuminate_resources.json";
-    public static final String cIlluminateDirectoryFileName = "illuminate_directory.json";
+    public static final String cIlluminationFileName = "illumination.json";
+    public static final String cIlluminatedResourcesFileName = "illuminated_resources.json";
+    public static final String cIlluminatedDirectoryFileName = "illuminated_directory.json";
     public static final String cLogoFileName = "logo.webp";
     public static final String cFolderFileName = "folder.webp";
     public static final String cBackFolderFileName = "backFolder.webp";
@@ -40,6 +40,7 @@ public class Constants {
     public static final String cFolderFile = "folderFile";
     public static final String cBackFolderFile = "backFolderFile";
     public static final String cTransmogFile = "transmogFile";
+    public static final String cTotalConversion = "totalConversion";
     public static final String cImageFile = "imageFile";
     public static final String cViewType = "viewType";
     public static final String cParentId = "parentId";
@@ -55,6 +56,7 @@ public class Constants {
     public static final String cLastUpdated = "lastUpdated";
     public static final String cEngramId = "engramId";
     public static final String cGameId = "gameId";
+    public static final String cDlcId = "dlcId";
     public static final String cRootParentId = "";
     public static final String cNullUuid = "";
 

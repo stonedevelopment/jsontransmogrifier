@@ -1,0 +1,1274 @@
+[
+  {
+    "uuid": "52c6d8df-229d-48d1-9e77-4319ba85166c",
+    "name": "Allosaurus Brain",
+    "description": "",
+    "imageFile": "allosaurus_brain.webp",
+    "lastUpdated": 1594568503581,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "2656e245-ee3f-4e67-9b7e-a8bab9e44df2",
+    "name": "Allosaurus Egg",
+    "description": "",
+    "imageFile": "allosaurus_egg.webp",
+    "lastUpdated": 1594568503580,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "7e2a5b0a-d821-4af3-9934-85c6f4ff842c",
+    "name": "Alpha Broodmother Trophy",
+    "description": "",
+    "imageFile": "alpha_broodmother_trophy.webp",
+    "lastUpdated": 1594568503593,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "32b1dc5c-d7af-49ed-9944-c6aa7bbdeeb9",
+    "name": "Alpha Carnotaurus Arm",
+    "description": "",
+    "imageFile": "alpha_carnotaurus_arm.webp",
+    "lastUpdated": 1594568503593,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "394e67d0-bb25-4d29-b6cc-92e5374abd0f",
+    "name": "Alpha Dragon Trophy",
+    "description": "",
+    "imageFile": "alpha_dragon_trophy.webp",
+    "lastUpdated": 1594568503593,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "3d101fd0-91fe-4729-9243-e750921e55b2",
+    "name": "Alpha Leedsichthys Blubber",
+    "description": "",
+    "imageFile": "alpha_leedsichthys_blubber.webp",
+    "lastUpdated": 1594568503593,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "940103c8-5b93-4628-bc8a-e85235d56bf5",
+    "name": "Alpha Megalodon Fin",
+    "description": "",
+    "imageFile": "alpha_megalodon_fin.webp",
+    "lastUpdated": 1594568503593,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "c805888e-dc8e-49d3-8788-910fe4c22e25",
+    "name": "Alpha Megapithecus Trophy",
+    "description": "",
+    "imageFile": "alpha_megapithecus_trophy.webp",
+    "lastUpdated": 1594568503593,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "0d3e330e-e272-4f62-a327-8774bb17354c",
+    "name": "Alpha Mosasaur Tooth",
+    "description": "",
+    "imageFile": "alpha_mosasaur_tooth.webp",
+    "lastUpdated": 1594568503594,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "888654b5-ee27-40a4-940d-27bb5b2b4a1d",
+    "name": "Alpha Raptor Claw",
+    "description": "",
+    "imageFile": "alpha_raptor_claw.webp",
+    "lastUpdated": 1594568503594,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "3649ca31-71d3-43d5-8892-6f04aba6c47f",
+    "name": "Alpha Tusoteuthis Eye",
+    "description": "",
+    "imageFile": "alpha_tusoteuthis_eye.webp",
+    "lastUpdated": 1594568503594,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "145ae288-c224-42ba-a639-e6a7e3e7b136",
+    "name": "Alpha Tyrannosaur Tooth",
+    "description": "",
+    "imageFile": "alpha_tyrannosaur_tooth.webp",
+    "lastUpdated": 1594568503594,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "d1369d5f-6f8a-45b9-b464-08166863af48",
+    "name": "Amarberry",
+    "description": "",
+    "imageFile": "amarberry.webp",
+    "lastUpdated": 1594568503581,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "2085a45f-4c20-4f78-8e7c-fc7be1b22fc2",
+    "name": "Ammonite Bile",
+    "description": "",
+    "imageFile": "ammonite_bile.webp",
+    "lastUpdated": 1594568503581,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "fc8f4503-f269-4c33-b770-71d23ebf91ef",
+    "name": "Angler Gel",
+    "description": "",
+    "imageFile": "angler_gel.webp",
+    "lastUpdated": 1594568503581,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "196194ab-ef85-4b50-84c5-32838dc554ed",
+    "name": "Ankylo Egg",
+    "description": "",
+    "imageFile": "ankylo_egg.webp",
+    "lastUpdated": 1594568503581,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "7768abc6-5038-430f-b28e-7163398ed09a",
+    "name": "Araneo Egg",
+    "description": "",
+    "imageFile": "araneo_egg.webp",
+    "lastUpdated": 1594568503581,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "888743bb-c73d-4b3c-8912-846699b2bf04",
+    "name": "Argentavis Egg",
+    "description": "",
+    "imageFile": "argentavis_egg.webp",
+    "lastUpdated": 1594568503581,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "efc7880a-1003-4f83-b484-cc8ad615b206",
+    "name": "Argentavis Talon",
+    "description": "",
+    "imageFile": "argentavis_talon.webp",
+    "lastUpdated": 1594568503582,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "7f8cd651-aae1-429c-8ec3-6a60fa613d84",
+    "name": "Artifact of the Brute",
+    "description": "",
+    "imageFile": "artifact_of_the_brute.webp",
+    "lastUpdated": 1594568503583,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "6df05f3b-477d-4a8e-a6fd-364d540083ce",
+    "name": "Artifact of the Clever",
+    "description": "",
+    "imageFile": "artifact_of_the_clever.webp",
+    "lastUpdated": 1594568503582,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "69a21767-d837-4855-ad05-98dcf35dfba8",
+    "name": "Artifact of the Cunning",
+    "description": "",
+    "imageFile": "artifact_of_the_cunning.webp",
+    "lastUpdated": 1594568503583,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "4035cf90-ee67-4729-b738-b7f33d179332",
+    "name": "Artifact of the Devious",
+    "description": "",
+    "imageFile": "artifact_of_the_devious.webp",
+    "lastUpdated": 1594568503582,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "bb105da4-77a1-483a-8c0a-52232c1d9aa8",
+    "name": "Artifact of the Devourer",
+    "description": "",
+    "imageFile": "artifact_of_the_devourer.webp",
+    "lastUpdated": 1594568503583,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "6bebb64b-6e87-4f98-bd6f-3bfb3857d6f5",
+    "name": "Artifact of the Hunter",
+    "description": "",
+    "imageFile": "artifact_of_the_hunter.webp",
+    "lastUpdated": 1594568503582,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "0fe87b50-3311-43f0-b5c6-373a1c92be72",
+    "name": "Artifact of the Immune",
+    "description": "",
+    "imageFile": "artifact_of_the_immune.webp",
+    "lastUpdated": 1594568503583,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "018ad00b-fb74-40d7-9a71-3ea851e1104b",
+    "name": "Artifact of the Massive",
+    "description": "",
+    "imageFile": "artifact_of_the_massive.webp",
+    "lastUpdated": 1594568503582,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "db68bcc1-9e89-4b34-968f-8c5f7411f52a",
+    "name": "Artifact of the Pack",
+    "description": "",
+    "imageFile": "artifact_of_the_pack.webp",
+    "lastUpdated": 1594568503582,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "9b2e40e6-efc3-4a18-b66c-94315f96c960",
+    "name": "Artifact of the Skylord",
+    "description": "",
+    "imageFile": "artifact_of_the_skylord.webp",
+    "lastUpdated": 1594568503582,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "baaf4607-b9e5-4dbe-83eb-ad134813a812",
+    "name": "Artifact of the Strong",
+    "description": "",
+    "imageFile": "artifact_of_the_strong.webp",
+    "lastUpdated": 1594568503583,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "95b02d54-a5c5-4d81-a21e-c2e74154077f",
+    "name": "Azulberry",
+    "description": "",
+    "imageFile": "azulberry.webp",
+    "lastUpdated": 1594568503583,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "0676beb2-88e0-4bf4-88c0-4be737da096d",
+    "name": "Baryonyx Egg",
+    "description": "",
+    "imageFile": "baryonyx_egg.webp",
+    "lastUpdated": 1594568503583,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "4a695aa2-ba95-454d-823e-8802be76f401",
+    "name": "Basilosaurus Blubber",
+    "description": "",
+    "imageFile": "basilosaurus_blubber.webp",
+    "lastUpdated": 1594568503583,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "ac0adfd2-a787-4ea1-a35a-c9c726c640d5",
+    "name": "Berries (Any Kind)",
+    "description": "",
+    "imageFile": "berries_any_kind.webp",
+    "lastUpdated": 1594568503583,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "21473d32-98a6-4c06-96c8-e05d3643c7b3",
+    "name": "Beta Broodmother Trophy",
+    "description": "",
+    "imageFile": "beta_broodmother_trophy.webp",
+    "lastUpdated": 1594568503593,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "680ea130-be67-4002-a5d2-2beecf8d905f",
+    "name": "Beta Dragon Trophy",
+    "description": "",
+    "imageFile": "beta_dragon_trophy.webp",
+    "lastUpdated": 1594568503593,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "d4de65a4-90a8-4bbf-8a14-a0197d4060a9",
+    "name": "Beta Megapithecus Trophy",
+    "description": "",
+    "imageFile": "beta_megapithecus_trophy.webp",
+    "lastUpdated": 1594568503593,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "a8119850-9a5e-4627-8796-11014b61bb00",
+    "name": "Bio Toxin",
+    "description": "",
+    "imageFile": "bio_toxin.webp",
+    "lastUpdated": 1594568503583,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "f82811e8-e2e4-4b7e-95cd-d5e4f776018a",
+    "name": "Black Pearl",
+    "description": "",
+    "imageFile": "black_pearl.webp",
+    "lastUpdated": 1594568503583,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "fa4e6484-1baf-41f7-b76f-476516d84ee4",
+    "name": "Bronto Egg",
+    "description": "",
+    "imageFile": "bronto_egg.webp",
+    "lastUpdated": 1594568503583,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "db1b3f58-3382-4c71-b97c-554d200adf7d",
+    "name": "Bunny Egg",
+    "description": "",
+    "imageFile": "bunny_egg.webp",
+    "lastUpdated": 1594568503583,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "8de86ad8-e114-4043-94ed-f8c9073d11ad",
+    "name": "Carbonemys Egg",
+    "description": "",
+    "imageFile": "carbonemys_egg.webp",
+    "lastUpdated": 1594568503584,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "5306e55e-606f-47b1-b954-eb2c11fb6237",
+    "name": "Carno Egg",
+    "description": "",
+    "imageFile": "carno_egg.webp",
+    "lastUpdated": 1594568503584,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "35e4f735-07d6-4a8d-8ca6-9495630b3061",
+    "name": "Chitin",
+    "description": "",
+    "imageFile": "chitin.webp",
+    "lastUpdated": 1594568503584,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "76d4a3a6-5e68-4502-950d-d876fba5d8f2",
+    "name": "Chitin or Keratin",
+    "description": "",
+    "imageFile": "chitin_or_keratin.webp",
+    "lastUpdated": 1594568503584,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "299beb3f-3b70-40d5-9225-a30eaddf84c8",
+    "name": "Citronal",
+    "description": "",
+    "imageFile": "citronal.webp",
+    "lastUpdated": 1594568503584,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "41afbbf4-f979-4a40-9c0a-4b265ea92e71",
+    "name": "Compy Egg",
+    "description": "",
+    "imageFile": "compy_egg.webp",
+    "lastUpdated": 1594568503584,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "bdb18a47-533e-472f-9158-fccf46c5b7e3",
+    "name": "Cooked Meat or Fish Meat",
+    "description": "",
+    "imageFile": "cooked_meat_or_fish_meat.webp",
+    "lastUpdated": 1594568503584,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "d5ade58a-3c2c-4fad-96be-814d56c67f38",
+    "name": "Cooked Meat or Meat Jerky",
+    "description": "",
+    "imageFile": "cooked_meat_or_meat_jerky.webp",
+    "lastUpdated": 1594568503584,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "c70f0727-f12f-438c-949e-70b0b69b5eb9",
+    "name": "Cooked Meat, Cooked Fish Meat, or Cooked Meat Jerky",
+    "description": "",
+    "imageFile": "cooked_meat_cooked_fish_meat_or_cooked_meat_jerky.webp",
+    "lastUpdated": 1594568503584,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "e23cf06d-6d9d-4e7b-908e-a1c29e773508",
+    "name": "Cooked Prime Meat or Prime Meat Jerky",
+    "description": "",
+    "imageFile": "cooked_prime_meat_or_prime_meat_jerky.webp",
+    "lastUpdated": 1594568503584,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "c2c5b64e-2eb5-4547-bf7f-c6f04d4a6280",
+    "name": "Crystal",
+    "description": "",
+    "imageFile": "crystal.webp",
+    "lastUpdated": 1594568503584,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "35174317-a539-4435-ab36-108487390162",
+    "name": "Deathworm Horn or Woolly Rhino Horn",
+    "description": "",
+    "imageFile": "deathworm_or_woolly_rhino_horn.webp",
+    "lastUpdated": 1594568503584,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "5156b672-5f7c-412b-90d7-c0eaa72c010c",
+    "name": "Dilo Egg",
+    "description": "",
+    "imageFile": "dilo_egg.webp",
+    "lastUpdated": 1594568503584,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "3ce10daa-1a2c-4afe-ae18-89ee449142c6",
+    "name": "Dimetrodon Egg",
+    "description": "",
+    "imageFile": "dimetrodon_egg.webp",
+    "lastUpdated": 1594568503584,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "1c1c431f-c74f-4720-9abe-c7e01973c59d",
+    "name": "Dimorphodon Egg",
+    "description": "",
+    "imageFile": "dimorphodon_egg.webp",
+    "lastUpdated": 1594568503585,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "bcb02ec4-8712-4e98-8853-9dac4821241e",
+    "name": "Diplodocus Egg",
+    "description": "",
+    "imageFile": "diplodocus_egg.webp",
+    "lastUpdated": 1594568503585,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "9faebc8f-3d3b-4ea1-9989-874c2a4cc906",
+    "name": "Dodo Egg",
+    "description": "",
+    "imageFile": "dodo_egg.webp",
+    "lastUpdated": 1594568503585,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "9216b4ab-628a-4e68-b4f8-31c761b28ebb",
+    "name": "DodoRex Mask Skin",
+    "description": "",
+    "imageFile": "dodorex_mask_skin.webp",
+    "lastUpdated": 1594568503585,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "c5e8d2e3-abc7-4ed9-98e9-2d2e1fba7d99",
+    "name": "DodoWyvern Mask Skin",
+    "description": "",
+    "imageFile": "dodowyvern_mask_skin.webp",
+    "lastUpdated": 1594568503585,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "814ea918-7749-44dc-ae69-03a94cb84b13",
+    "name": "Element",
+    "description": "",
+    "imageFile": "element.webp",
+    "lastUpdated": 1594568503585,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "7e1aae2e-c1aa-4ef5-ba9e-a107e3460d83",
+    "name": "Extra Large Egg",
+    "description": "",
+    "imageFile": "dinosaur_egg.webp",
+    "lastUpdated": 1594568503595,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "17ab358e-b0bf-4f02-a84b-b106b5b8f0ba",
+    "name": "Extra Small Egg",
+    "description": "",
+    "imageFile": "dinosaur_egg.webp",
+    "lastUpdated": 1594568503595,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "6c8f9a1a-f29e-4163-bd21-6062a610f1bd",
+    "name": "Feces (Any Size)",
+    "description": "",
+    "imageFile": "feces.webp",
+    "lastUpdated": 1594568503585,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "6a5c6127-5897-4c45-832b-26547aea633c",
+    "name": "Fiber",
+    "description": "",
+    "imageFile": "fiber.webp",
+    "lastUpdated": 1594568503585,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "04b709e8-6e8d-4d30-b231-daa9bceb64c1",
+    "name": "Fish Egg",
+    "description": "",
+    "imageFile": "fish_egg.webp",
+    "lastUpdated": 1594568503585,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "8a4c39d8-4ecf-4525-ba63-c844ef0f9e08",
+    "name": "Flint",
+    "description": "",
+    "imageFile": "flint.webp",
+    "lastUpdated": 1594568503586,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "fd07c5e4-cbe6-402b-9249-de8b65cac991",
+    "name": "Gallimimus Egg",
+    "description": "",
+    "imageFile": "gallimimus_egg.webp",
+    "lastUpdated": 1594568503586,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "49daa0c4-00c5-4d80-b15c-a65800e51460",
+    "name": "Gamma Broodmother Trophy",
+    "description": "",
+    "imageFile": "gamma_broodmother_trophy.webp",
+    "lastUpdated": 1594568503593,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "a0faee5b-8d51-4447-bb1d-24460dd3c343",
+    "name": "Gamma Dragon Trophy",
+    "description": "",
+    "imageFile": "gamma_dragon_trophy.webp",
+    "lastUpdated": 1594568503593,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "fffe2aec-3133-48f1-9ed2-e72404f269a1",
+    "name": "Gamma Megapithecus Trophy",
+    "description": "",
+    "imageFile": "gamma_megapithecus_trophy.webp",
+    "lastUpdated": 1594568503593,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "3a55508a-04ee-4869-a0da-6a60e6e1d52f",
+    "name": "Giant Bee Honey",
+    "description": "",
+    "imageFile": "giant_bee_honey.webp",
+    "lastUpdated": 1594568503586,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "9a44cfa9-0f0e-47d8-b9e2-ebf5a6063dbe",
+    "name": "Giganotosaurus Heart",
+    "description": "",
+    "imageFile": "giganotosaurus_heart.webp",
+    "lastUpdated": 1594568503586,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "34432710-f07e-4d98-b616-d22e677cecfd",
+    "name": "Golden Hesperonis Egg",
+    "description": "",
+    "imageFile": "golden_hesperonis_egg.webp",
+    "lastUpdated": 1594568503586,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "e71cc819-3ad8-4f08-9fbc-d3bc8f0259b6",
+    "name": "Hesperornis Egg",
+    "description": "",
+    "imageFile": "hesperornis_egg.webp",
+    "lastUpdated": 1594568503586,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "6e8972b2-d89d-4484-83f4-f0972f9f6718",
+    "name": "Hide",
+    "description": "",
+    "imageFile": "hide.webp",
+    "lastUpdated": 1594568503586,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "abf6d044-aecb-4221-9454-01c84aa07a3a",
+    "name": "Human Feces",
+    "description": "",
+    "imageFile": "human_feces.webp",
+    "lastUpdated": 1594568503585,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "9b4f2600-c8fc-4dc5-b628-d5d0a46a8ee8",
+    "name": "Human Hair",
+    "description": "",
+    "imageFile": "human_hair.webp",
+    "lastUpdated": 1594568503585,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "48c46f1b-d741-4e4e-90a8-67a55300defd",
+    "name": "Ichthyornis Egg",
+    "description": "",
+    "imageFile": "ichthyornis_egg.webp",
+    "lastUpdated": 1594568503586,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "dfa46421-a7d9-4020-882c-d4e8d78e41d6",
+    "name": "Iguanodon Egg",
+    "description": "",
+    "imageFile": "iguanodon_egg.webp",
+    "lastUpdated": 1594568503586,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "4bbd77f6-cb7a-42e8-981f-bfb01c5f4550",
+    "name": "Kairuku Egg",
+    "description": "",
+    "imageFile": "kairuku_egg.webp",
+    "lastUpdated": 1594568503586,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "765993c7-5cf0-42c9-92af-e59dd0ee648b",
+    "name": "Kentrosaurus Egg",
+    "description": "",
+    "imageFile": "kentrosaurus_egg.webp",
+    "lastUpdated": 1594568503587,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "e5e66e41-5307-49f4-be3c-7a4647ffef65",
+    "name": "Keratin",
+    "description": "",
+    "imageFile": "keratin.webp",
+    "lastUpdated": 1594568503587,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "6b16eefe-0505-4f8c-bd1c-56b4df38107c",
+    "name": "Large Animal Feces",
+    "description": "",
+    "imageFile": "feces.webp",
+    "lastUpdated": 1594568503585,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "54f4a778-7819-4db8-9af8-15ce20553177",
+    "name": "Large Egg",
+    "description": "",
+    "imageFile": "dinosaur_egg.webp",
+    "lastUpdated": 1594568503595,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "c9ffbfa5-8ab0-43f4-9f13-3ed4cd20fd19",
+    "name": "Leech Blood",
+    "description": "",
+    "imageFile": "leech_blood.webp",
+    "lastUpdated": 1594568503587,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "dc328c8e-d270-41fa-b4f9-46f948e5c4b5",
+    "name": "Leech Blood or Horns",
+    "description": "",
+    "imageFile": "leech_blood_or_horns.webp",
+    "lastUpdated": 1594568503587,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "1cba69aa-50e2-4e49-9888-6444687b6f65",
+    "name": "Longrass",
+    "description": "",
+    "imageFile": "longrass.webp",
+    "lastUpdated": 1594568503587,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "4124ae7d-3a07-41ca-be85-679002dde1e8",
+    "name": "Lystrosaur Egg",
+    "description": "",
+    "imageFile": "lystrosaur_egg.webp",
+    "lastUpdated": 1594568503587,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "f8f12b8b-0dc1-41d0-bd71-4232214880e7",
+    "name": "Massive Animal Feces",
+    "description": "",
+    "imageFile": "feces.webp",
+    "lastUpdated": 1594568503585,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "5aa4b9cc-ed2c-4ad0-8630-09b1b2ec07d0",
+    "name": "Medium Animal Feces",
+    "description": "",
+    "imageFile": "feces.webp",
+    "lastUpdated": 1594568503585,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "77f58411-3293-4b16-b6c6-4235793f2a8c",
+    "name": "Medium Egg",
+    "description": "",
+    "imageFile": "dinosaur_egg.webp",
+    "lastUpdated": 1594568503595,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "92e9c6b5-97a6-44c4-bdcc-a25a0d03e003",
+    "name": "Megalania Egg",
+    "description": "",
+    "imageFile": "megalania_egg.webp",
+    "lastUpdated": 1594568503587,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "719d7a14-0c24-48e4-9430-e7ca503a2fd2",
+    "name": "Megalania Toxin",
+    "description": "",
+    "imageFile": "megalania_toxin.webp",
+    "lastUpdated": 1594568503587,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "535f6156-c86c-4538-942d-3a044a9afeef",
+    "name": "Megalodon Tooth",
+    "description": "",
+    "imageFile": "megalodon_tooth.webp",
+    "lastUpdated": 1594568503587,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "0147182c-81b9-4026-87e0-ec16db7401d6",
+    "name": "Mejoberry",
+    "description": "",
+    "imageFile": "mejoberry.webp",
+    "lastUpdated": 1594568503587,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "e958aae2-3cf9-4893-9ab0-60d6d5c33084",
+    "name": "Metal Ore",
+    "description": "",
+    "imageFile": "metal_ore.webp",
+    "lastUpdated": 1594568503587,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "839bc4ad-abad-4df6-a261-291339589ee2",
+    "name": "Microraptor Egg",
+    "description": "",
+    "imageFile": "microraptor_egg.webp",
+    "lastUpdated": 1594568503587,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "8a108cd0-43ae-4271-872a-0518fd529439",
+    "name": "Moschops Egg",
+    "description": "",
+    "imageFile": "moschops_egg.webp",
+    "lastUpdated": 1594568503587,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "85054620-9c94-4770-a72f-e49187e17dc8",
+    "name": "Narcoberry",
+    "description": "",
+    "imageFile": "narcoberry.webp",
+    "lastUpdated": 1594568503587,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "8445ff89-e909-49c5-bc74-c680295a0aaf",
+    "name": "Obsidian",
+    "description": "",
+    "imageFile": "obsidian.webp",
+    "lastUpdated": 1594568503587,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "895ba60e-89ce-455f-bcb5-0ce3d5eadeee",
+    "name": "Oil",
+    "description": "",
+    "imageFile": "oil.webp",
+    "lastUpdated": 1594568503588,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "7bdcb7ee-63a0-4f2b-81a7-af23de10bf15",
+    "name": "Organic Polymer",
+    "description": "",
+    "imageFile": "organic_polymer.webp",
+    "lastUpdated": 1594568503588,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "c809b23d-f43d-4963-8050-00565850597a",
+    "name": "Pachy Egg",
+    "description": "",
+    "imageFile": "pachy_egg.webp",
+    "lastUpdated": 1594568503588,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "8ebb1798-b074-4226-b7a3-5f7b4961930a",
+    "name": "Parasaur Egg",
+    "description": "",
+    "imageFile": "parasaur_egg.webp",
+    "lastUpdated": 1594568503588,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "7b5b793e-7668-4ce7-824e-ac2779b6bd42",
+    "name": "Pegomastax Egg",
+    "description": "",
+    "imageFile": "pegomastax_egg.webp",
+    "lastUpdated": 1594568503588,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "937fbbc7-09bf-426f-8dde-4a23929289cd",
+    "name": "Pelagornis Egg",
+    "description": "",
+    "imageFile": "pelagornis_egg.webp",
+    "lastUpdated": 1594568503588,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "68184eb1-3d83-4336-9a3c-ecfbfdcce9e6",
+    "name": "Pelt",
+    "description": "",
+    "imageFile": "pelt.webp",
+    "lastUpdated": 1594568503588,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "89626538-5f44-4675-89ce-de6f55d405e2",
+    "name": "Pelt, Hair, or Wool",
+    "description": "",
+    "imageFile": "pelt_hair_or_wool.webp",
+    "lastUpdated": 1594568503593,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "b1b0e883-88f2-4d30-a684-a7f481d2701a",
+    "name": "Pteranodon Egg",
+    "description": "",
+    "imageFile": "pteranodon_egg.webp",
+    "lastUpdated": 1594568503588,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "89abb04b-5fd0-4f9f-bda4-89f0f8fe7dab",
+    "name": "Pulmonoscorpius Egg",
+    "description": "",
+    "imageFile": "pulmonoscorpius_egg.webp",
+    "lastUpdated": 1594568503588,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "4d304ee2-1163-47b1-9da6-ce15a745dfb4",
+    "name": "Pumpkin",
+    "description": "",
+    "imageFile": "pumpkin.webp",
+    "lastUpdated": 1594568503588,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "a71c1d70-90c9-4f21-8a47-21c4924b10bc",
+    "name": "Quetzal Egg",
+    "description": "",
+    "imageFile": "quetzal_egg.webp",
+    "lastUpdated": 1594568503588,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "f951f819-4e16-4452-a63d-5721c2b0220b",
+    "name": "Raptor Egg",
+    "description": "",
+    "imageFile": "raptor_egg.webp",
+    "lastUpdated": 1594568503588,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "289cbf59-221b-4d5a-981c-80df22f960a3",
+    "name": "Rare Flower",
+    "description": "",
+    "imageFile": "rare_flower.webp",
+    "lastUpdated": 1594568503588,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "9f896786-128e-4f78-a26a-aefaad920a65",
+    "name": "Rare Mushroom",
+    "description": "",
+    "imageFile": "rare_mushroom.webp",
+    "lastUpdated": 1594568503588,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "636af43d-ed75-4afd-bff6-5c9fdf4e8608",
+    "name": "Raw Fish Meat",
+    "description": "",
+    "imageFile": "raw_fish_meat.webp",
+    "lastUpdated": 1594568503588,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "84c78af1-d4d7-4eaf-9663-ba66d266b3e3",
+    "name": "Raw Meat",
+    "description": "",
+    "imageFile": "raw_meat.webp",
+    "lastUpdated": 1594568503588,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "e97bcf5c-0956-4d74-a4b5-4655bd25fff3",
+    "name": "Raw Mutton",
+    "description": "",
+    "imageFile": "raw_mutton.webp",
+    "lastUpdated": 1594568503589,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "38d82697-a20d-4eaf-8448-37fd48c84160",
+    "name": "Raw Prime Fish Meat",
+    "description": "",
+    "imageFile": "raw_prime_fish_meat.webp",
+    "lastUpdated": 1594568503589,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "6c6cafc6-e72d-41f1-8456-4145ecdf4192",
+    "name": "Raw Prime Meat",
+    "description": "",
+    "imageFile": "raw_prime_meat.webp",
+    "lastUpdated": 1594568503589,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "6913cfdc-4d33-4a58-a098-035e0310d0e0",
+    "name": "Rex Egg",
+    "description": "",
+    "imageFile": "rex_egg.webp",
+    "lastUpdated": 1594568503589,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "36d70ea9-b4e8-4974-a767-8d1f0df24fef",
+    "name": "Rockarrot",
+    "description": "",
+    "imageFile": "rockarrot.webp",
+    "lastUpdated": 1594568503589,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "1673ceea-827c-4573-bd8b-904003e5e3f2",
+    "name": "Sap",
+    "description": "",
+    "imageFile": "sap.webp",
+    "lastUpdated": 1594568503589,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "a02b6b44-7a7d-4008-a84c-8ca8995fcbf3",
+    "name": "Sarco Egg",
+    "description": "",
+    "imageFile": "sarco_egg.webp",
+    "lastUpdated": 1594568503589,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "607f704a-0752-4a6e-ba6d-be938073974c",
+    "name": "Sarcosuchus Skin",
+    "description": "",
+    "imageFile": "sarcosuchus_skin.webp",
+    "lastUpdated": 1594568503589,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "3effda5a-dd2a-4cd6-9e71-02fc48ef1ee8",
+    "name": "Sauropod Vertebra",
+    "description": "",
+    "imageFile": "sauropod_vertebra.webp",
+    "lastUpdated": 1594568503589,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "d4da796d-1825-45e7-99a8-362ab592fe93",
+    "name": "Savoroot",
+    "description": "",
+    "imageFile": "savoroot.webp",
+    "lastUpdated": 1594568503589,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "7c953767-947e-4ac0-be26-f1a9722df458",
+    "name": "Scarecrow",
+    "description": "",
+    "imageFile": "scarecrow.webp",
+    "lastUpdated": 1594568503590,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "2f398a16-283a-4960-9ec2-de5f2cf4516d",
+    "name": "Silica Pearls",
+    "description": "",
+    "imageFile": "silica_pearls.webp",
+    "lastUpdated": 1594568503590,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "38cc80b4-7286-401c-9f64-ec907ca96d48",
+    "name": "Small Animal Feces",
+    "description": "",
+    "imageFile": "feces.webp",
+    "lastUpdated": 1594568503585,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "9a484d49-5402-4384-8d0c-b8434c870898",
+    "name": "Small Egg",
+    "description": "",
+    "imageFile": "dinosaur_egg.webp",
+    "lastUpdated": 1594568503595,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "70082fbe-bcf4-4d64-b97f-8ad6a8566d74",
+    "name": "Special Egg",
+    "description": "",
+    "imageFile": "golden_hesperonis_egg.webp",
+    "lastUpdated": 1594568503595,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "2d60db2a-e479-41de-b1f7-41936949081a",
+    "name": "Spino Egg",
+    "description": "",
+    "imageFile": "spino_egg.webp",
+    "lastUpdated": 1594568503590,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "13b41200-2aff-4d1f-8cae-345a1c8df37a",
+    "name": "Spinosaurus Sail",
+    "description": "",
+    "imageFile": "spinosaurus_sail.webp",
+    "lastUpdated": 1594568503590,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "b3368f3b-aa8f-4619-a9ed-ac212927238e",
+    "name": "Spoiled Meat",
+    "description": "",
+    "imageFile": "spoiled_meat.webp",
+    "lastUpdated": 1594568503590,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "21df5b70-fbb0-4af8-81aa-bcd1aa6ea5dc",
+    "name": "Stego Egg",
+    "description": "",
+    "imageFile": "stego_egg.webp",
+    "lastUpdated": 1594568503590,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "829499d9-1907-4c3b-bdd2-107da4fc5a6c",
+    "name": "Stimberry",
+    "description": "",
+    "imageFile": "stimberry.webp",
+    "lastUpdated": 1594568503590,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "f5880ae6-a8c1-463c-a725-3ae1ef53c077",
+    "name": "Stolen Headstone",
+    "description": "",
+    "imageFile": "stolen_headstone.webp",
+    "lastUpdated": 1594568503590,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "9b3c499f-1aa2-4859-9353-ba298f9212da",
+    "name": "Stone",
+    "description": "",
+    "imageFile": "stone.webp",
+    "lastUpdated": 1594568503590,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "67032322-e747-4de7-a7e0-4df2b8605475",
+    "name": "Tapejara Egg",
+    "description": "",
+    "imageFile": "tapejara_egg.webp",
+    "lastUpdated": 1594568503590,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "ca8f20d6-3000-49f3-8049-ceca6d3a65f0",
+    "name": "Terror Bird Egg",
+    "description": "",
+    "imageFile": "terror_bird_egg.webp",
+    "lastUpdated": 1594568503590,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "cecc762b-faa6-4b0d-87a6-630ec9dd425e",
+    "name": "Thatch",
+    "description": "",
+    "imageFile": "thatch.webp",
+    "lastUpdated": 1594568503590,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "6680a4c8-a3dc-4f7d-9dda-b456ca978a3d",
+    "name": "Therizino Claws",
+    "description": "",
+    "imageFile": "therizino_claws.webp",
+    "lastUpdated": 1594568503590,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "3bdaeab1-f5fe-4059-a482-295004ba896d",
+    "name": "Therizinosaurus Egg",
+    "description": "",
+    "imageFile": "therizinosaurus_egg.webp",
+    "lastUpdated": 1594568503590,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "cc414b2b-9319-4e22-b3ef-4ea094731de4",
+    "name": "Thylacoleo Hook-Claw",
+    "description": "",
+    "imageFile": "thylacoleo_hook-claw.webp",
+    "lastUpdated": 1594568503590,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "a5ada57b-c544-4f00-9604-6c580f601d50",
+    "name": "Tintoberry",
+    "description": "",
+    "imageFile": "tintoberry.webp",
+    "lastUpdated": 1594568503591,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "f82c01b0-e79f-4057-b5d5-ee69ece72b4b",
+    "name": "Titanoboa Egg",
+    "description": "",
+    "imageFile": "titanoboa_egg.webp",
+    "lastUpdated": 1594568503591,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "62cd81b1-a19f-4222-a099-76493a06e9d1",
+    "name": "Titanoboa Venom",
+    "description": "",
+    "imageFile": "titanoboa_venom.webp",
+    "lastUpdated": 1594568503591,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "c64f0155-fbc8-46be-bf24-466341b114fe",
+    "name": "Trike Egg",
+    "description": "",
+    "imageFile": "trike_egg.webp",
+    "lastUpdated": 1594568503591,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "220ffa92-0140-4b02-98cb-99b2b2070b9c",
+    "name": "Troodon Egg",
+    "description": "",
+    "imageFile": "troodon_egg.webp",
+    "lastUpdated": 1594568503591,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "08d1972f-a740-4ec3-b681-1f2f8b747a94",
+    "name": "Tusoteuthis Tentacle",
+    "description": "",
+    "imageFile": "tusoteuthis_tentacle.webp",
+    "lastUpdated": 1594568503591,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "812ef272-01bb-4381-a0cc-b8f6d85b1879",
+    "name": "Tyrannosaurus Arm",
+    "description": "",
+    "imageFile": "tyrannosaurus_arm.webp",
+    "lastUpdated": 1594568503591,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "a560c3e6-7ad0-4b25-a059-f6659cf83269",
+    "name": "Water",
+    "description": "",
+    "imageFile": "water.webp",
+    "lastUpdated": 1594568503591,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "6e6867f8-7384-4d89-93e7-40db5c564aa4",
+    "name": "Wood",
+    "description": "",
+    "imageFile": "wood.webp",
+    "lastUpdated": 1594568503591,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "5a4a7df7-3981-4497-981d-1b8a5452c399",
+    "name": "Wool",
+    "description": "",
+    "imageFile": "wool.webp",
+    "lastUpdated": 1594568503591,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "d5c90838-cfe7-4803-906c-fe8a87be3eb8",
+    "name": "Woolly Rhino Horn",
+    "description": "",
+    "imageFile": "woolly_rhino_horn.webp",
+    "lastUpdated": 1594568503591,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "03ac9562-0cb5-41c4-8487-d83d978b9dea",
+    "name": "Yutyrannus Egg",
+    "description": "",
+    "imageFile": "yutyrannus_egg.webp",
+    "lastUpdated": 1594568503591,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  },
+  {
+    "uuid": "d645250d-9b71-4bb8-9c89-29cb2eff7024",
+    "name": "Yutyrannus Lungs",
+    "description": "",
+    "imageFile": "yutyrannus_lungs.webp",
+    "lastUpdated": 1594568503591,
+    "gameId": "ec2265d0-7adc-4911-9047-a4a623034818"
+  }
+]

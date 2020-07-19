@@ -25,7 +25,7 @@ public class DlcTransmogGameData extends TransmogGameData {
         mapGameDataFromJson();
     }
 
-    public static DlcTransmogGameData fromJson(JsonNode inNode, JsonDlc jsonDlc, PrimaryTransmogGameData primaryGameData) {
+    public static DlcTransmogGameData with(JsonNode inNode, JsonDlc jsonDlc, PrimaryTransmogGameData primaryGameData) {
         return new DlcTransmogGameData(inNode, jsonDlc, primaryGameData);
     }
 
@@ -36,7 +36,7 @@ public class DlcTransmogGameData extends TransmogGameData {
 
     @Override
     protected void createDetailsObject() {
-        this.details = DlcTransmogDetails.from(jsonDlc, primaryGameData);
+        this.details = DlcTransmogDetails.with(jsonDlc, primaryGameData);
     }
 
     @Override

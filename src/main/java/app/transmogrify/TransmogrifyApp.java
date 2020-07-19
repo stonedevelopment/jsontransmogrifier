@@ -42,12 +42,11 @@ public class TransmogrifyApp {
     }
 
     private void transmogrifyPrimaryGameData(JsonDlc jsonDlc) {
-        primaryGameData = new PrimaryTransmogGameData(inNode, jsonDlc);
+        primaryGameData = PrimaryTransmogGameData.with(inNode, jsonDlc);
     }
 
     private void transmogrifyDlcGameData(JsonDlc jsonDlc) {
-        DlcTransmogGameData dlcTransmogGameData = new DlcTransmogGameData(inNode, jsonDlc, primaryGameData);
-        dlcGameDataList.add(dlcTransmogGameData);
+        dlcGameDataList.add(DlcTransmogGameData.with(inNode, jsonDlc, primaryGameData));
     }
 
     public void export() {
@@ -86,10 +85,6 @@ public class TransmogrifyApp {
             outDlcArrayNode.add(mapper.valueToTree(dlcGameData.getDetailsObject()));
         }
 
-        writeTransmogrifyDataToFile(outNode);
-    }
-
-    private void writeTransmogrifyDataToFile(JsonNode outNode) {
         writeJsonToFile(cTransmogrificationFileName, outNode);
     }
 

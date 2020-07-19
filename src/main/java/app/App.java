@@ -14,13 +14,13 @@ public class App {
      */
     public static void main(String[] args) {
         //  convert old data_editable file to static UUIDs
-        transmogrify();
+//        transmogrify();
 
         //  convert transmogrified static UUIDs to separate readable/editable files
         illuminate();
 
         //  merge illuminated files into database-ready UUIDs
-        updatify();
+//        updatify();
     }
 
     private static void transmogrify() {
