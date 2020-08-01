@@ -81,8 +81,14 @@ public class IlluminateApp {
     private void writeGameDataToFile(IlluminateGameData gameData) {
         JsonNode resolvedNode = gameData.resolveToJson();
 
-        writeJsonToFile(gameData.getFilePathForResources(), resolvedNode.get(cResources));
-        writeJsonToFile(gameData.getFilePathForDirectory(), resolvedNode.get(cDirectory));
+        JsonNode resourcesNode = resolvedNode.get(cResources);
+        JsonNode directoryNode = resolvedNode.get(cDirectory);
+
+        writeJsonToFile(gameData.getFilePathForResources(), resourcesNode);
+
+        for (JsonNode stationNode : directoryNode) {
+            writeJsonToFile(gameData.getFilePathForResolvedNode(stationNode), stationNode);
+        }
     }
 
     private void writeIllumination() {

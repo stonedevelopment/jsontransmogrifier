@@ -10,7 +10,7 @@ public class Constants {
     public static final String cTransmogrifiedFileName = "transmogrified.json";
     public static final String cIlluminationFileName = "illumination.json";
     public static final String cIlluminatedResourcesFileName = "illuminated_resources.json";
-    public static final String cIlluminatedDirectoryFileName = "illuminated_directory.json";
+    public static final String cIlluminatedFileNamePrefix = "illuminated_%s.json";
     public static final String cLogoFileName = "logo.webp";
     public static final String cFolderFileName = "folder.webp";
     public static final String cBackFolderFileName = "backFolder.webp";

@@ -103,8 +103,14 @@ public abstract class IlluminateGameData extends GameData {
         return getDetailsObject().getFilePath().concat(cIlluminatedResourcesFileName);
     }
 
-    public String getFilePathForDirectory() {
-        return getDetailsObject().getFilePath().concat(cIlluminatedDirectoryFileName);
+    public String getFilePathForResolvedNode(JsonNode resolvedNode) {
+        String filePath = getDetailsObject().getFilePath();
+        String name = resolvedNode.get(cName).asText();
+        return filePath.concat(generateIlluminatedFileName(name));
+    }
+
+    private String generateIlluminatedFileName(String name) {
+        return String.format(cIlluminatedFileNamePrefix, name.toLowerCase().replace(' ', '_'));
     }
 
     protected JsonNode resolveResourceNode() {
