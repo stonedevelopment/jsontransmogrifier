@@ -11,7 +11,7 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
 import static util.Constants.*;
 
 public class IlluminateDetails extends TransmogDetails {
-    private ArrayNode illuminatedNodes = new ObjectMapper().createArrayNode();
+    private final ArrayNode illuminatedFiles = new ObjectMapper().createArrayNode();
 
     @JsonCreator
     public IlluminateDetails(@JsonProperty(cUuid) String uuid,
@@ -36,12 +36,12 @@ public class IlluminateDetails extends TransmogDetails {
     }
 
     @JsonProperty(cIlluminatedFiles)
-    public JsonNode getIlluminatedNodes() {
-        return illuminatedNodes;
+    public JsonNode getIlluminatedFiles() {
+        return illuminatedFiles;
     }
 
-    public void addIlluminatedNode(JsonNode illuminatedNode) {
-        illuminatedNodes.add(illuminatedNode);
+    public void addIlluminatedFile(String illuminatedFile) {
+        illuminatedFiles.add(illuminatedFile);
     }
 
     @JsonIgnore

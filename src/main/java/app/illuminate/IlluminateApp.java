@@ -25,8 +25,8 @@ import static util.JSONUtil.writeOut;
  */
 public class IlluminateApp {
     private static final ObjectMapper mapper = new ObjectMapper();
+    private static final List<DlcIlluminateGameData> dlcGameDataList = new ArrayList<>();
     private static PrimaryIlluminateGameData primaryGameData;
-    private static List<DlcIlluminateGameData> dlcGameDataList = new ArrayList<>();
     private final JsonNode inNode;
 
     public IlluminateApp(JsonNode inNode) {
@@ -36,6 +36,11 @@ public class IlluminateApp {
     public void illuminate() {
         illuminatePrimaryNode();
         illuminateDlcNode();
+    }
+
+    public void export() {
+        writeIlluminatedGameData();
+        writeIllumination();
     }
 
     private void illuminatePrimaryNode() {
@@ -58,11 +63,6 @@ public class IlluminateApp {
         }
     }
 
-    public void export() {
-        writeIlluminatedGameData();
-        writeIllumination();
-    }
-
     private void writeIlluminatedGameData() {
         writePrimaryGameData();
         writeDlcGameData();
@@ -82,12 +82,17 @@ public class IlluminateApp {
         JsonNode resolvedNode = gameData.resolveToJson();
 
         JsonNode resourcesNode = resolvedNode.get(cResources);
-        JsonNode directoryNode = resolvedNode.get(cDirectory);
-
         writeJsonToFile(gameData.getFilePathForResources(), resourcesNode);
 
-        for (JsonNode stationNode : directoryNode) {
-            writeJsonToFile(gameData.getFilePathForResolvedNode(stationNode), stationNode);
+        //  iterate through resolved directory, separate each directory parent (crafting stations)
+        JsonNode directoryNode = resolvedNode.get(cDirectory);
+        for (JsonNode illuminatedNode : directoryNode) {
+            //  generate file path for illuminated node
+            String illuminatedFilePath = gameData.generateIlluminatedFilePath(illuminatedNode);
+            //  write illuminated node's data to json
+            writeJsonToFile(illuminatedFilePath, illuminatedNode);
+            //  add illuminate node's json file name for illumination write out
+            gameData.addIlluminatedFile(illuminatedFilePath);
         }
     }
 
