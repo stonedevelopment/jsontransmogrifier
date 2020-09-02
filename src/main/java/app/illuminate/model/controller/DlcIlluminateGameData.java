@@ -1,7 +1,9 @@
-package app.illuminate.model;
+package app.illuminate.model.controller;
 
 import app.illuminate.controller.IlluminateGameData;
 import app.illuminate.model.details.DlcIlluminateDetails;
+import app.illuminate.model.dlc.DlcIlluminateEngram;
+import app.illuminate.model.dlc.DlcIlluminateFolder;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
@@ -44,42 +46,42 @@ public class DlcIlluminateGameData extends IlluminateGameData {
 
     @Override
     public Resource getResource(String uuid) {
-        DlcResource resource = (DlcResource) super.getResource(uuid);
+        Resource resource = super.getResource(uuid);
         if (resource == null) return primaryGameData.getResource(uuid);
         return resource;
     }
 
     @Override
     public Folder getFolder(String uuid) {
-        DlcFolder folder = (DlcFolder) super.getFolder(uuid);
+        Folder folder = super.getFolder(uuid);
         if (folder == null) return primaryGameData.getFolder(uuid);
         return folder;
     }
 
     @Override
     public Engram getEngram(String uuid) {
-        DlcEngram engram = (DlcEngram) super.getEngram(uuid);
+        Engram engram = super.getEngram(uuid);
         if (engram == null) return primaryGameData.getEngram(uuid);
         return engram;
     }
 
     @Override
     public Station getStation(String uuid) {
-        DlcStation station = (DlcStation) super.getStation(uuid);
+        Station station = super.getStation(uuid);
         if (station == null) return primaryGameData.getStation(uuid);
         return station;
     }
 
     @Override
     public Composition getComposition(String uuid) {
-        DlcComposition composition = (DlcComposition) super.getComposition(uuid);
+        Composition composition = super.getComposition(uuid);
         if (composition == null) return primaryGameData.getComposition(uuid);
         return composition;
     }
 
     @Override
     public Composite getComposite(String uuid) {
-        DlcComposite composite = (DlcComposite) super.getComposite(uuid);
+        Composite composite = super.getComposite(uuid);
         if (composite == null) return primaryGameData.getComposite(uuid);
         return composite;
     }
@@ -158,6 +160,57 @@ public class DlcIlluminateGameData extends IlluminateGameData {
             DlcDirectoryItem directoryItem = DlcDirectoryItem.fromJson(directoryItemNode);
             addDirectoryItem(directoryItem);
         }
+    }
+
+    @Override
+    protected JsonNode resolveDirectoryChildren(String parentId) {
+        ObjectNode outNode = mapper.createObjectNode();
+
+        //  create array nodes to hold engrams and folders
+        ArrayNode engrams = mapper.createArrayNode();
+        ArrayNode folders = mapper.createArrayNode();
+
+        //  iterate through directory map
+        for (DirectoryItem directoryItem : getDirectoryItemListByParentUUID(parentId)) {
+            //  collect uuid of source
+            String sourceId = directoryItem.getSourceId();
+
+            //  determine if station, engram or folder
+            if (isFolder(sourceId)) {
+                //  get folder object using given uuid
+                DlcIlluminateFolder folder = (DlcIlluminateFolder) getFolder(sourceId);
+
+                //  convert object to json
+                ObjectNode folderNode = convertJsonNode(folder.toJson());
+
+                //  crawl through directory, recursively return hierarchical data
+                folderNode.set(cDirectory, resolveDirectoryChildren(directoryItem.getUuid()));
+
+                //  add to json array
+                folders.add(folderNode);
+            } else {
+                //  get engram object from given uuid
+                DlcIlluminateEngram engram = (DlcIlluminateEngram) getEngram(sourceId);
+
+                //  convert object to json
+                ObjectNode engramNode = convertJsonNode(engram.toJson());
+
+                //  add engram to json array
+                engrams.add(engramNode);
+
+                // TODO: 8/29/2020 add in composition here?
+                engramNode.set(cComposition, resolveComposition(sourceId));
+            }
+        }
+
+        //  add folder array node to parent node
+        outNode.set(cFolders, folders);
+
+        //  add engram array node to parent node
+        outNode.set(cEngrams, engrams);
+
+        //  return parent node
+        return outNode;
     }
 
     private void mapRemovalsFromJson() {

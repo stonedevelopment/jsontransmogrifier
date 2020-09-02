@@ -1,11 +1,17 @@
 package app.illuminate.controller;
 
+import app.illuminate.model.*;
 import app.illuminate.model.details.IlluminateDetails;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import controller.GameData;
 import model.*;
+import util.Log;
+
+import java.util.Iterator;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import static util.Constants.*;
 
@@ -13,6 +19,19 @@ public abstract class IlluminateGameData extends GameData {
 
     protected IlluminateGameData(JsonNode inNode) {
         super(inNode);
+    }
+
+    protected String getCompositionUUIDByEngramId(String engramId) {
+        return getCompositionUUIDByName(engramId);
+    }
+
+    protected List<String> getCompositeUUIDListByCompositionId(String compositionId) {
+        return getCompositeUUIDListByName(compositionId);
+    }
+
+    protected List<Composite> getCompositeList(String compositionId) {
+        return getCompositeUUIDListByCompositionId(compositionId)
+                .stream().map(this::getComposite).collect(Collectors.toList());
     }
 
     @Override
@@ -36,7 +55,7 @@ public abstract class IlluminateGameData extends GameData {
     protected void mapFoldersFromJson() {
         JsonNode foldersNode = inNode.get(cFolders);
         for (JsonNode folderNode : foldersNode) {
-            Folder folder = Folder.fromJson(folderNode);
+            IlluminateFolder folder = IlluminateFolder.fromJson(folderNode);
             addFolder(folder);
         }
     }
@@ -45,7 +64,7 @@ public abstract class IlluminateGameData extends GameData {
     protected void mapResourcesFromJson() {
         JsonNode resourcesNode = inNode.get(cResources);
         for (JsonNode resourceNode : resourcesNode) {
-            Resource resource = Resource.fromJson(resourceNode);
+            IlluminateResource resource = IlluminateResource.fromJson(resourceNode);
             addResource(resource);
         }
     }
@@ -54,7 +73,7 @@ public abstract class IlluminateGameData extends GameData {
     protected void mapEngramsFromJson() {
         JsonNode engramsNode = inNode.get(cEngrams);
         for (JsonNode engramNode : engramsNode) {
-            Engram engram = Engram.fromJson(engramNode);
+            IlluminateEngram engram = IlluminateEngram.fromJson(engramNode);
             addEngram(engram);
         }
     }
@@ -63,7 +82,7 @@ public abstract class IlluminateGameData extends GameData {
     protected void mapStationsFromJson() {
         JsonNode stationsNode = inNode.get(cStations);
         for (JsonNode stationNode : stationsNode) {
-            Station station = Station.fromJson(stationNode);
+            IlluminateStation station = IlluminateStation.fromJson(stationNode);
             addStation(station);
         }
     }
@@ -73,15 +92,14 @@ public abstract class IlluminateGameData extends GameData {
         JsonNode compositionsNode = inNode.get(cComposition);
         for (JsonNode compositionNode : compositionsNode) {
             Composition composition = Composition.fromJson(compositionNode);
-            String compositionName = getEngramNameByUUID(composition.getEngramId());
-            addComposition(compositionName, composition);
+            addComposition(composition);
         }
     }
 
     protected void mapCompositesFromJson() {
         JsonNode compositesNode = inNode.get(cComposites);
         for (JsonNode compositeNode : compositesNode) {
-            Composite composite = Composite.fromJson(compositeNode);
+            IlluminateComposite composite = IlluminateComposite.fromJson(compositeNode);
             addComposite(composite);
         }
     }
@@ -93,6 +111,29 @@ public abstract class IlluminateGameData extends GameData {
             DirectoryItem directoryItem = DirectoryItem.fromJson(directoryItemNode);
             addDirectoryItem(directoryItem);
         }
+    }
+
+    private void addComposition(Composition composition) {
+        addComposition(composition.getEngramId(), composition);
+    }
+
+    @Override
+    protected void addComposition(String engramId, Composition composition) {
+        //  tie elements to their engram (source) id
+        String uuid = composition.getUuid();
+
+        addCompositionToIdMap(engramId, uuid);
+        addCompositionToMap(uuid, composition);
+    }
+
+    @Override
+    protected void addComposite(Composite composite) {
+        //  tie elements to their composition id
+        String uuid = composite.getUuid();
+        String compositionId = composite.getCompositionId();
+
+        addCompositeToIdMap(compositionId, uuid);
+        addCompositeToMap(uuid, composite);
     }
 
     public JsonNode getIlluminatedFiles() {
@@ -121,8 +162,14 @@ public abstract class IlluminateGameData extends GameData {
         ArrayNode arrayNode = mapper.createArrayNode();
 
         for (String uuid : getResourceIdMap().values()) {
+            //  get resource object using given uuid
             Resource resource = getResource(uuid);
-            arrayNode.add(Resource.toJson(resource));
+
+            //  convert object to json
+            JsonNode resourceNode = convertJsonNode(resource.toJson());
+
+            //  add to json array
+            arrayNode.add(resourceNode);
         }
 
         return arrayNode;
@@ -136,16 +183,11 @@ public abstract class IlluminateGameData extends GameData {
 
         //  iterate through station uuids, in alphabetical order via TreeMap
         for (DirectoryItem directoryItem : getDirectoryItemListByParentUUID(null)) {
-            ObjectNode rootNode = mapper.createObjectNode();
-
             //  get station object using given uuid
             Station station = getStation(directoryItem.getSourceId());
 
-            //  add name for readability
-            rootNode.set(cName, mapper.valueToTree(station.getName()));
-
-            //  convert POJO to json object todo tie in engram info?
-            rootNode.set(cJsonStation, Station.toJson(station));
+            //  convert object to json
+            ObjectNode rootNode = convertJsonNode(station.toJson());
 
             //  crawl through directory, recursively return hierarchical data
             rootNode.set(cDirectory, resolveDirectoryChildren(directoryItem.getUuid()));
@@ -157,56 +199,46 @@ public abstract class IlluminateGameData extends GameData {
         return arrayNode;
     }
 
-    private JsonNode resolveDirectoryChildren(String parentId) {
+    protected abstract JsonNode resolveDirectoryChildren(String parentId);
+
+    public JsonNode resolveComposition(String engramId) {
+        Composition composition = getComposition(engramId);
+        ObjectNode outNode = mapper.valueToTree(composition);
+
+        List<Composite> compositeList = getCompositeList(composition.getUuid());
+        outNode.set(cComposites, mapper.valueToTree(compositeList));
+
+        return outNode;
+    }
+
+    /**
+     * Take in a JsonNode, convert into editable ObjectNode filled with public elements
+     *
+     * @param inNode JsonNode to convert
+     * @return editable ObjectNode
+     */
+    public ObjectNode convertJsonNode(JsonNode inNode) {
         ObjectNode outNode = mapper.createObjectNode();
+        Iterator<JsonNode> elements = inNode.elements();
+        Iterator<String> fieldNames = inNode.fieldNames();
 
-        //  create array nodes to hold engrams and folders
-        ArrayNode engrams = mapper.createArrayNode();
-        ArrayNode folders = mapper.createArrayNode();
+        //  iterate elements to build output node
+        while (elements.hasNext()) {
+            String fieldName = fieldNames.next();
+            JsonNode element = elements.next();
 
-        //  iterate through directory map
-        for (DirectoryItem directoryItem : getDirectoryItemListByParentUUID(parentId)) {
-            //  collect uuid of source
-            String sourceId = directoryItem.getSourceId();
-
-            //  determine if station, engram or folder
-            if (isFolder(sourceId)) {
-                ObjectNode folderNode = mapper.createObjectNode();
-
-                //  get folder object using given uuid
-                Folder folder = getFolder(sourceId);
-                //  add name for readability
-                folderNode.set(cName, mapper.valueToTree(folder.getName()));
-
-                //  convert POJO to json node
-                folderNode.set(cFolder, folder.toJson());
-
-                //  crawl through directory, recursively return hierarchical data
-                folderNode.set(cDirectory, resolveDirectoryChildren(directoryItem.getUuid()));
-
-                //  add to json array
-                folders.add(folderNode);
-            } else {
-                //  get engram object from given uuid
-                Engram engram = getEngram(sourceId);
-
-                //  add engram to json array
-                engrams.add(engram.toJson());
-            }
+            outNode.set(fieldName, element);
         }
 
-        //  add folder array node to parent node
-        outNode.set(cFolders, folders);
-
-        //  add engram array node to parent node
-        outNode.set(cEngrams, engrams);
-
-        //  return parent node
         return outNode;
     }
 
     public boolean isFolder(String sourceId) {
-        return getFolderMap().containsKey(sourceId);
+        return getFolder(sourceId) != null;
+    }
+
+    public boolean isEngram(String sourceId) {
+        return getEngram(sourceId) != null;
     }
 
     @Override

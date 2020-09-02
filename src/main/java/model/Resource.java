@@ -41,8 +41,8 @@ public class Resource {
         return new ObjectMapper().convertValue(node, Resource.class);
     }
 
-    public static JsonNode toJson(Resource resource) {
-        return new ObjectMapper().valueToTree(resource);
+    public JsonNode toJson() {
+        return new ObjectMapper().valueToTree(this);
     }
 
     public String getUuid() {

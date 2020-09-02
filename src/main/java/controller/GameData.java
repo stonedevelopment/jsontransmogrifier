@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import model.*;
 import model.details.Details;
+import util.Log;
 
 import java.util.*;
 
@@ -16,15 +17,18 @@ public abstract class GameData {
 
     protected final ObjectMapper mapper;
     protected final JsonNode inNode;
+
     //  name, uuid
     private final Map<String, String> resourceIdMap = new TreeMap<>();
     private final Map<String, String> engramIdMap = new TreeMap<>();
     private final Map<String, String> stationIdMap = new TreeMap<>();
     private final Map<String, String> folderIdMap = new TreeMap<>();
     private final Map<String, String> compositionIdMap = new TreeMap<>();
+
     //  name, list<uuid>
     private final Map<String, List<String>> compositeIdMap = new TreeMap<>();
     private final Map<String, List<String>> directoryIdMap = new TreeMap<>();
+
     //  uuid, object
     private final Map<String, Resource> resourceMap = new HashMap<>();
     private final Map<String, Folder> folderMap = new HashMap<>();
@@ -33,6 +37,7 @@ public abstract class GameData {
     private final Map<String, Composition> compositionMap = new HashMap<>();
     private final Map<String, Composite> compositeMap = new HashMap<>();
     private final Map<String, DirectoryItem> directoryMap = new HashMap<>();
+
     //  parent uuid, object
     private final Map<String, List<DirectoryItem>> directoryMapByParent = new HashMap<>();
     protected Details details;
@@ -244,15 +249,18 @@ public abstract class GameData {
     protected void addComposition(String name, Composition composition) {
         String uuid = composition.getUuid();
 
-        addCompositionToIdMap(uuid, name);
+        addCompositionToIdMap(name, uuid);
         addCompositionToMap(uuid, composition);
     }
 
-    private void addCompositionToIdMap(String uuid, String name) {
+    protected void addCompositionToIdMap(String name, String uuid) {
         compositionIdMap.put(name, uuid);
     }
 
-    private void addCompositionToMap(String uuid, Composition composition) {
+    protected void addCompositionToMap(String uuid, Composition composition) {
+        if (compositionMap.containsKey(uuid)) {
+            Log.debug("addCompositionToMap", composition.toString());
+        }
         compositionMap.put(uuid, composition);
     }
 
@@ -264,13 +272,16 @@ public abstract class GameData {
         addCompositeToMap(uuid, composite);
     }
 
-    private void addCompositeToIdMap(String uuid, String name) {
+    protected void addCompositeToIdMap(String uuid, String name) {
         List<String> uuidList = getCompositeUUIDListByName(name);
         uuidList.add(uuid);
         compositeIdMap.put(name, uuidList);
     }
 
-    private void addCompositeToMap(String uuid, Composite composite) {
+    protected void addCompositeToMap(String uuid, Composite composite) {
+        if (compositeMap.containsKey(uuid)) {
+            Log.debug("addCompositeToMap", composite.toString());
+        }
         compositeMap.put(uuid, composite);
     }
 

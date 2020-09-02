@@ -36,8 +36,8 @@ public class Station {
         return new ObjectMapper().convertValue(node, Station.class);
     }
 
-    public static JsonNode toJson(Station station) {
-        return new ObjectMapper().valueToTree(station);
+    public JsonNode toJson() {
+        return new ObjectMapper().valueToTree(this);
     }
 
     public String getUuid() {

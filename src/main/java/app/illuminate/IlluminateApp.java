@@ -1,8 +1,8 @@
 package app.illuminate;
 
 import app.illuminate.controller.IlluminateGameData;
-import app.illuminate.model.DlcIlluminateGameData;
-import app.illuminate.model.PrimaryIlluminateGameData;
+import app.illuminate.model.controller.DlcIlluminateGameData;
+import app.illuminate.model.controller.PrimaryIlluminateGameData;
 import app.illuminate.model.details.DlcIlluminateDetails;
 import app.illuminate.model.details.IlluminateDetails;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -20,7 +20,6 @@ import static util.JSONUtil.writeOut;
 /**
  * Converts transmogrified json files into, separate, readable files for easy editing
  * <p>
- * todo Create illumination.json to tell Updatify what needs to be converted back into raw uuids.
  * Illuminate!
  */
 public class IlluminateApp {
