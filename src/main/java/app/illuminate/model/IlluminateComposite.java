@@ -18,9 +18,8 @@ public class IlluminateComposite extends Composite {
                                @JsonProperty(cQuantity) int quantity,
                                @JsonProperty(cSourceId) String sourceId,
                                @JsonProperty(cIsEngram) boolean isEngram,
-                               @JsonProperty(cCompositionId) String compositionId,
-                               @JsonProperty(cGameId) String gameId) {
-        super(uuid, name, imageFile, quantity, sourceId, isEngram, compositionId, gameId);
+                               @JsonProperty(cCompositionId) String compositionId) {
+        super(uuid, name, imageFile, quantity, sourceId, isEngram, compositionId);
     }
 
     public static IlluminateComposite fromJson(JsonNode node) {
@@ -37,11 +36,5 @@ public class IlluminateComposite extends Composite {
     @Override
     public String getCompositionId() {
         return super.getCompositionId();
-    }
-
-    @JsonIgnore
-    @Override
-    public String getGameId() {
-        return super.getGameId();
     }
 }

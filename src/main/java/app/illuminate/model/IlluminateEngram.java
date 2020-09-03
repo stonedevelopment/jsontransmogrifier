@@ -1,7 +1,6 @@
 package app.illuminate.model;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -23,18 +22,11 @@ public class IlluminateEngram extends Engram {
                             @JsonProperty(cPoints) int points,
                             @JsonProperty(cXp) int xp,
                             @JsonProperty(cCraftingTime) int craftingTime,
-                            @JsonProperty(cLastUpdated) Date lastUpdated,
-                            @JsonProperty(cGameId) String gameId) {
-        super(uuid, name, description, imageFile, level, yield, points, xp, craftingTime, lastUpdated, gameId);
+                            @JsonProperty(cLastUpdated) Date lastUpdated) {
+        super(uuid, name, description, imageFile, level, yield, points, xp, craftingTime, lastUpdated);
     }
 
     public static IlluminateEngram fromJson(JsonNode node) {
         return new ObjectMapper().convertValue(node, IlluminateEngram.class);
-    }
-
-    @JsonIgnore
-    @Override
-    public String getGameId() {
-        return super.getGameId();
     }
 }

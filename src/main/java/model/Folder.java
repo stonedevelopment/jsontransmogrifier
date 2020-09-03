@@ -5,24 +5,28 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import static util.Constants.*;
+import java.util.Objects;
+
+import static util.Constants.cName;
+import static util.Constants.cUuid;
 
 public class Folder {
     private final String uuid;
     private final String name;
-    private final String gameId;
 
     @JsonCreator
     public Folder(@JsonProperty(cUuid) String uuid,
-                  @JsonProperty(cName) String name,
-                  @JsonProperty(cGameId) String gameId) {
+                  @JsonProperty(cName) String name) {
         this.uuid = uuid;
         this.name = name;
-        this.gameId = gameId;
     }
 
     public static Folder fromJson(JsonNode node) {
         return new ObjectMapper().convertValue(node, Folder.class);
+    }
+
+    public static Folder comparable(String name) {
+        return new Folder(null, name);
     }
 
     public JsonNode toJson() {
@@ -37,11 +41,24 @@ public class Folder {
         return name;
     }
 
-    public String getGameId() {
-        return gameId;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Folder folder = (Folder) o;
+        return name.equals(folder.name);
     }
 
-    public boolean equals(String name) {
-        return getName().equals(name);
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
+    }
+
+    @Override
+    public String toString() {
+        return "Folder{" +
+                "uuid='" + uuid + '\'' +
+                ", name='" + name + '\'' +
+                '}';
     }
 }

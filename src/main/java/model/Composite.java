@@ -5,6 +5,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.util.Objects;
+
 import static util.Constants.*;
 
 /**
@@ -27,7 +29,6 @@ public class Composite {
     private final String sourceId;
     private final boolean isEngram;
     private final String compositionId;
-    private final String gameId;
 
     @JsonCreator
     public Composite(@JsonProperty(cUuid) String uuid,
@@ -36,8 +37,7 @@ public class Composite {
                      @JsonProperty(cQuantity) int quantity,
                      @JsonProperty(cSourceId) String sourceId,
                      @JsonProperty(cIsEngram) boolean isEngram,
-                     @JsonProperty(cCompositionId) String compositionId,
-                     @JsonProperty(cGameId) String gameId) {
+                     @JsonProperty(cCompositionId) String compositionId) {
         this.uuid = uuid;
         this.name = name;
         this.imageFile = imageFile;
@@ -45,11 +45,14 @@ public class Composite {
         this.sourceId = sourceId;
         this.isEngram = isEngram;
         this.compositionId = compositionId;
-        this.gameId = gameId;
     }
 
     public static Composite fromJson(JsonNode node) {
         return new ObjectMapper().convertValue(node, Composite.class);
+    }
+
+    public static Composite comparable(String name, String imageFile, int quantity, String sourceId, boolean isEngram, String compositionId) {
+        return new Composite(null, name, imageFile, quantity, sourceId, isEngram, compositionId);
     }
 
     public String getUuid() {
@@ -81,17 +84,22 @@ public class Composite {
         return compositionId;
     }
 
-    public String getGameId() {
-        return gameId;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Composite composite = (Composite) o;
+        return quantity == composite.quantity &&
+                isEngram == composite.isEngram &&
+                name.equals(composite.name) &&
+                imageFile.equals(composite.imageFile) &&
+                sourceId.equals(composite.sourceId) &&
+                compositionId.equals(composite.compositionId);
     }
 
-    public boolean equals(String name, String imageFile, int quantity, String sourceId, boolean isEngram, String compositionId) {
-        return getName().equals(name) &&
-                getImageFile().equals(imageFile) &&
-                getQuantity() == quantity &&
-                getSourceId().equals(sourceId) &&
-                isEngram() == isEngram &&
-                getCompositionId().equals(compositionId);
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, imageFile, quantity, sourceId, isEngram, compositionId);
     }
 
     @Override
@@ -104,7 +112,6 @@ public class Composite {
                 ", sourceId='" + sourceId + '\'' +
                 ", isEngram=" + isEngram +
                 ", compositionId='" + compositionId + '\'' +
-                ", gameId='" + gameId + '\'' +
                 '}';
     }
 }

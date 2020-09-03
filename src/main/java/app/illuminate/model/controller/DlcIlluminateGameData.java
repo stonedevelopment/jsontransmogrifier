@@ -1,14 +1,12 @@
 package app.illuminate.model.controller;
 
 import app.illuminate.controller.IlluminateGameData;
+import app.illuminate.model.IlluminateResource;
 import app.illuminate.model.details.DlcIlluminateDetails;
-import app.illuminate.model.dlc.DlcIlluminateEngram;
-import app.illuminate.model.dlc.DlcIlluminateFolder;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import model.*;
-import model.dlc.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -20,7 +18,7 @@ public class DlcIlluminateGameData extends IlluminateGameData {
     private final PrimaryIlluminateGameData primaryGameData;
 
     //  uuid, object
-    private Map<String, DlcResource> removeResourcesMap = new HashMap<>();
+    private final Map<String, IlluminateResource> removeResourcesMap = new HashMap<>();
 
     private DlcIlluminateGameData(JsonNode inNode, PrimaryIlluminateGameData primaryGameData) {
         super(inNode);
@@ -88,7 +86,7 @@ public class DlcIlluminateGameData extends IlluminateGameData {
 
     @Override
     public DirectoryItem getDirectoryItem(String uuid) {
-        DlcDirectoryItem directoryItem = (DlcDirectoryItem) super.getDirectoryItem(uuid);
+        DirectoryItem directoryItem = super.getDirectoryItem(uuid);
         if (directoryItem == null) return primaryGameData.getDirectoryItem(uuid);
         return directoryItem;
     }
@@ -99,120 +97,6 @@ public class DlcIlluminateGameData extends IlluminateGameData {
         mapRemovalsFromJson();
     }
 
-    @Override
-    protected void mapResourcesFromJson() {
-        JsonNode resourcesNode = inNode.get(cResources);
-        for (JsonNode resourceNode : resourcesNode) {
-            DlcResource resource = DlcResource.fromJson(resourceNode);
-            addResource(resource);
-        }
-    }
-
-    @Override
-    protected void mapFoldersFromJson() {
-        JsonNode foldersNode = inNode.get(cFolders);
-        for (JsonNode folderNode : foldersNode) {
-            DlcFolder folder = DlcFolder.fromJson(folderNode);
-            addFolder(folder);
-        }
-    }
-
-    @Override
-    protected void mapEngramsFromJson() {
-        JsonNode engramsNode = inNode.get(cEngrams);
-        for (JsonNode engramNode : engramsNode) {
-            DlcEngram engram = DlcEngram.fromJson(engramNode);
-            addEngram(engram);
-        }
-    }
-
-    @Override
-    protected void mapStationsFromJson() {
-        JsonNode stationsNode = inNode.get(cStations);
-        for (JsonNode stationNode : stationsNode) {
-            DlcStation station = DlcStation.fromJson(stationNode);
-            addStation(station);
-        }
-    }
-
-    @Override
-    protected void mapCompositionFromJson() {
-        JsonNode compositionsNode = inNode.get(cComposition);
-        for (JsonNode compositionNode : compositionsNode) {
-            DlcComposition composition = DlcComposition.fromJson(compositionNode);
-            String compositionName = getEngramNameByUUID(composition.getEngramId());
-            addComposition(compositionName, composition);
-        }
-    }
-
-    protected void mapCompositesFromJson() {
-        JsonNode compositesNode = inNode.get(cComposites);
-        for (JsonNode compositeNode : compositesNode) {
-            DlcComposite composite = DlcComposite.fromJson(compositeNode);
-            addComposite(composite);
-        }
-    }
-
-    @Override
-    protected void mapDirectoryFromJson() {
-        JsonNode directoryNode = inNode.get(cDirectory);
-        for (JsonNode directoryItemNode : directoryNode) {
-            DlcDirectoryItem directoryItem = DlcDirectoryItem.fromJson(directoryItemNode);
-            addDirectoryItem(directoryItem);
-        }
-    }
-
-    @Override
-    protected JsonNode resolveDirectoryChildren(String parentId) {
-        ObjectNode outNode = mapper.createObjectNode();
-
-        //  create array nodes to hold engrams and folders
-        ArrayNode engrams = mapper.createArrayNode();
-        ArrayNode folders = mapper.createArrayNode();
-
-        //  iterate through directory map
-        for (DirectoryItem directoryItem : getDirectoryItemListByParentUUID(parentId)) {
-            //  collect uuid of source
-            String sourceId = directoryItem.getSourceId();
-
-            //  determine if station, engram or folder
-            if (isFolder(sourceId)) {
-                //  get folder object using given uuid
-                DlcIlluminateFolder folder = (DlcIlluminateFolder) getFolder(sourceId);
-
-                //  convert object to json
-                ObjectNode folderNode = convertJsonNode(folder.toJson());
-
-                //  crawl through directory, recursively return hierarchical data
-                folderNode.set(cDirectory, resolveDirectoryChildren(directoryItem.getUuid()));
-
-                //  add to json array
-                folders.add(folderNode);
-            } else {
-                //  get engram object from given uuid
-                DlcIlluminateEngram engram = (DlcIlluminateEngram) getEngram(sourceId);
-
-                //  convert object to json
-                ObjectNode engramNode = convertJsonNode(engram.toJson());
-
-                //  add engram to json array
-                engrams.add(engramNode);
-
-                // TODO: 8/29/2020 add in composition here?
-                engramNode.set(cComposition, resolveComposition(sourceId));
-            }
-        }
-
-        //  add folder array node to parent node
-        outNode.set(cFolders, folders);
-
-        //  add engram array node to parent node
-        outNode.set(cEngrams, engrams);
-
-        //  return parent node
-        return outNode;
-    }
-
     private void mapRemovalsFromJson() {
         JsonNode removalsNode = inNode.get(cRemove);
         mapRemoveResources(removalsNode.get(cResources));
@@ -221,7 +105,7 @@ public class DlcIlluminateGameData extends IlluminateGameData {
     private void mapRemoveResources(JsonNode resourcesNode) {
         for (JsonNode uuidNode : resourcesNode) {
             String uuid = mapper.convertValue(uuidNode, String.class);
-            DlcResource resource = (DlcResource) getResource(uuid);
+            IlluminateResource resource = (IlluminateResource) getResource(uuid);
             removeResourcesMap.put(uuid, resource);
         }
     }
@@ -252,7 +136,7 @@ public class DlcIlluminateGameData extends IlluminateGameData {
     private JsonNode resolveRemoveResources() {
         ArrayNode outNode = mapper.createArrayNode();
 
-        for (Map.Entry<String, DlcResource> resourceEntry : removeResourcesMap.entrySet()) {
+        for (Map.Entry<String, IlluminateResource> resourceEntry : removeResourcesMap.entrySet()) {
             String uuid = resourceEntry.getKey();
             Resource resource = resourceEntry.getValue();
             outNode.add(mapper.valueToTree(resource));

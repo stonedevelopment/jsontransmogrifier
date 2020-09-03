@@ -5,7 +5,9 @@ import app.transmogrify.model.json.*;
 import com.fasterxml.jackson.databind.JsonNode;
 import controller.GameData;
 import model.*;
+import util.Log;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
@@ -217,23 +219,121 @@ public abstract class TransmogGameData extends GameData {
         return count;
     }
 
-    protected abstract int mapFolderDirectoryItemByCategoryId(Station station, Folder folder, long categoryId, String parentId);
+    protected void mapStationDirectoryItem(Station station) {
+        String uuid = !cDebug ? generateUUID() : station.getName();
+        String name = station.getName();
+        String imageFile = station.getImageFile();
+        String sourceId = station.getUuid();
 
-    protected abstract void mapStationDirectoryItem(Station station);
+        int engramCount = mapEngramDirectory(station, 0, uuid);
+        int folderCount = mapFolderDirectory(station, 0, uuid);
+        int totalCount = engramCount + folderCount;
 
-    protected abstract void mapEngramDirectoryItem(Engram engram, String parentId);
+        if (totalCount > 0) {
+            addDirectoryItem(new DirectoryItem(uuid, name, imageFile, cStationViewType, null, sourceId));
+        } else {
+            Log.d("mapStationDirectoryItem >> 0 count: " + station.getName() + " e:" + engramCount + "/f:" + folderCount);
+        }
 
-    protected abstract Folder buildFolder(JsonCategory jsonCategory);
+    }
 
-    protected abstract Resource buildResource(JsonResource jsonResource);
+    protected void mapEngramDirectoryItem(Engram engram, String parentId) {
+        String uuid = !cDebug ? generateUUID() : engram.getName();
+        String sourceId = engram.getUuid();
+        String name = engram.getName();
+        String imageFile = engram.getImageFile();
 
-    protected abstract Engram buildEngram(JsonEngram jsonEngram);
+        addDirectoryItem(new DirectoryItem(uuid, name, imageFile, cEngramViewType, parentId, sourceId));
+    }
 
-    protected abstract Station buildStation(JsonStation jsonStation);
+    protected int mapFolderDirectoryItemByCategoryId(Station station, Folder folder, long categoryId, String parentId) {
+        String uuid = !cDebug ? generateUUID() : folder.getName();
+        String sourceId = folder.getUuid();
+        String name = folder.getName();
+        String imageFile = getDetailsObject().getFolderFile();
 
-    protected abstract Composition buildComposition(JsonEngram jsonEngram);
+        int engramCount = mapEngramDirectory(station, categoryId, uuid);
+        int folderCount = mapFolderDirectory(station, categoryId, uuid);
+        int totalCount = engramCount + folderCount;
 
-    protected abstract Composite buildComposite(String compositionId, JsonComposite jsonComposite);
+        if (totalCount > 0) {
+            addDirectoryItem(new DirectoryItem(uuid, name, imageFile, cFolderViewType, parentId, sourceId));
+        } else {
+            Log.d("mapFolderDirectoryItem (" + getDetailsObject().getName() + ") >> 0 count: " + station.getName() + "/" + folder.getName() + " e:" + engramCount + "/f:" + folderCount);
+        }
+
+        return totalCount;
+    }
+
+    protected Folder buildFolder(JsonCategory jsonCategory) {
+        String uuid = !cDebug ? generateUUID() : jsonCategory.name;
+        String name = jsonCategory.name;
+
+        return new Folder(uuid, name);
+    }
+
+    protected Resource buildResource(JsonResource jsonResource) {
+        String uuid = !cDebug ? generateUUID() : jsonResource.name;
+        String name = jsonResource.name;
+        String description = "";
+        String imageFile = jsonResource.image_file;
+        Date lastUpdated = new Date();
+
+        return new Resource(uuid, name, description, imageFile, lastUpdated);
+    }
+
+    protected Engram buildEngram(JsonEngram jsonEngram) {
+        String uuid = !cDebug ? generateUUID() : jsonEngram.name;
+        String name = jsonEngram.name;
+        String description = jsonEngram.description;
+        String imageFile = jsonEngram.image_file;
+        int level = jsonEngram.level;
+        int yield = jsonEngram.yield;
+        int points = jsonEngram.points;
+        int xp = jsonEngram.xp;
+        int craftingTime = 0;
+        Date lastUpdated = new Date();
+
+        return new Engram(uuid, name, description, imageFile, level, yield, points, xp, craftingTime, lastUpdated);
+    }
+
+    protected Station buildStation(JsonStation jsonStation) {
+        String uuid = !cDebug ? generateUUID() : jsonStation.name;
+        String name = jsonStation.name;
+        String imageFile = jsonStation.image_file;
+        String engramId = getEngramUUIDByName(jsonStation.name);
+        Date lastUpdated = new Date();
+
+        return new Station(uuid, name, imageFile, engramId, lastUpdated);
+    }
+
+    protected Composition buildComposition(JsonEngram jsonEngram) {
+        String uuid = !cDebug ? generateUUID() : jsonEngram.name;
+        String engramId = getEngramUUIDByName(jsonEngram.name);
+
+        for (JsonComposite jsonComposite : jsonEngram.composition) {
+            if (isCompositeUnique(uuid, jsonComposite.resource_id, jsonComposite)) {
+                Composite composite = buildComposite(uuid, jsonComposite);
+                addComposite(composite);
+            }
+        }
+
+        return new Composition(uuid, engramId);
+    }
+
+    protected Composite buildComposite(String compositionId, JsonComposite jsonComposite) {
+        String uuid = generateUUID();
+        String name = jsonComposite.resource_id;
+        String resourceId = getResourceUUIDByName(name);
+        String engramId = getEngramUUIDByName(name);
+        boolean isEngram = engramId != null;
+        String sourceId = isEngram ? engramId : resourceId;
+        String imageFile = isEngram ? getEngramImageFileByUUID(engramId) : getResourceImageFileByUUID(resourceId);
+        assert imageFile != null;
+        int quantity = jsonComposite.quantity;
+
+        return new Composite(uuid, name, imageFile, quantity, sourceId, isEngram, compositionId);
+    }
 
     protected void addFolder(long categoryId, Folder folder) {
         String uuid = folder.getUuid();
@@ -259,7 +359,7 @@ public abstract class TransmogGameData extends GameData {
         String name = jsonCategory.name;
 
         //  return if incoming object equals mapped object
-        return !folder.equals(name);
+        return !folder.equals(Folder.comparable(name));
     }
 
     private boolean isResourceUnique(JsonResource jsonResource) {
@@ -277,7 +377,7 @@ public abstract class TransmogGameData extends GameData {
         String imageFile = jsonResource.image_file;
 
         //  return if incoming object equals mapped object
-        return !resource.equals(name, description, imageFile);
+        return !resource.equals(Resource.comparable(name, description, imageFile));
     }
 
     private boolean isEngramUnique(JsonEngram jsonEngram) {
@@ -299,7 +399,7 @@ public abstract class TransmogGameData extends GameData {
         int xp = jsonEngram.xp;
 
         //  return if incoming object equals mapped object
-        return !engram.equals(name, description, imageFile, level, yield, points, xp);
+        return !engram.equals(Engram.comparable(name, description, imageFile, level, yield, points, xp));
     }
 
     private boolean isStationUnique(JsonStation jsonStation) {
@@ -317,7 +417,7 @@ public abstract class TransmogGameData extends GameData {
         String engramId = getEngramUUIDByName(jsonStation.name);
 
         //  return if incoming object equals mapped object
-        return !station.equals(name, imageFile, engramId);
+        return !station.equals(Station.comparable(name, imageFile, engramId));
     }
 
     public boolean isCompositionUnique(JsonEngram jsonEngram) {
@@ -334,7 +434,7 @@ public abstract class TransmogGameData extends GameData {
         String engramId = getEngramUUIDByName(name);
 
         //  return if incoming object equals mapped object
-        return !composition.equals(engramId);
+        return !composition.equals(Composition.comparable(engramId));
     }
 
     public boolean isCompositeUnique(String compositionId, String name, JsonComposite jsonComposite) {
@@ -359,7 +459,7 @@ public abstract class TransmogGameData extends GameData {
             int quantity = jsonComposite.quantity;
 
             //  return if incoming object equals mapped object
-            if (composite.equals(name, imageFile, quantity, sourceId, isEngram, compositionId)) {
+            if (composite.equals(Composite.comparable(name, imageFile, quantity, sourceId, isEngram, compositionId))) {
                 return false;
             }
         }

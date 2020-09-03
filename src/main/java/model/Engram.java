@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.util.Date;
+import java.util.Objects;
 
 import static util.Constants.*;
 
@@ -40,7 +41,6 @@ public class Engram {
     private final int xp;
     private final int craftingTime;
     private final Date lastUpdated;
-    private final String gameId;
 
     @JsonCreator
     public Engram(@JsonProperty(cUuid) String uuid,
@@ -52,8 +52,7 @@ public class Engram {
                   @JsonProperty(cPoints) int points,
                   @JsonProperty(cXp) int xp,
                   @JsonProperty(cCraftingTime) int craftingTime,
-                  @JsonProperty(cLastUpdated) Date lastUpdated,
-                  @JsonProperty(cGameId) String gameId) {
+                  @JsonProperty(cLastUpdated) Date lastUpdated) {
         this.uuid = uuid;
         this.name = name;
         this.description = description;
@@ -64,11 +63,14 @@ public class Engram {
         this.xp = xp;
         this.craftingTime = craftingTime;
         this.lastUpdated = lastUpdated;
-        this.gameId = gameId;
     }
 
     public static Engram fromJson(JsonNode node) {
         return new ObjectMapper().convertValue(node, Engram.class);
+    }
+
+    public static Engram comparable(String name, String description, String imageFile, int level, int yield, int points, int xp) {
+        return new Engram(null, name, description, imageFile, level, yield, points, xp, 0, null);
     }
 
     public JsonNode toJson() {
@@ -115,17 +117,38 @@ public class Engram {
         return lastUpdated;
     }
 
-    public String getGameId() {
-        return gameId;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Engram engram = (Engram) o;
+        return level == engram.level &&
+                yield == engram.yield &&
+                points == engram.points &&
+                xp == engram.xp &&
+                name.equals(engram.name) &&
+                description.equals(engram.description) &&
+                imageFile.equals(engram.imageFile);
     }
 
-    public boolean equals(String name, String description, String imageFile, int level, int yield, int points, int xp) {
-        return getName().equals(name) &&
-                getDescription().equals(description) &&
-                getImageFile().equals(imageFile) &&
-                getLevel() == level &&
-                getYield() == yield &&
-                getPoints() == points &&
-                getXp() == xp;
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, description, imageFile, level, yield, points, xp);
+    }
+
+    @Override
+    public String toString() {
+        return "Engram{" +
+                "uuid='" + uuid + '\'' +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", imageFile='" + imageFile + '\'' +
+                ", level=" + level +
+                ", yield=" + yield +
+                ", points=" + points +
+                ", xp=" + xp +
+                ", craftingTime=" + craftingTime +
+                ", lastUpdated=" + lastUpdated +
+                '}';
     }
 }

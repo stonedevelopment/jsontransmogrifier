@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.util.Date;
+import java.util.Objects;
 
 import static util.Constants.*;
 
@@ -15,25 +16,26 @@ public class Station {
     private final String imageFile;
     private final String engramId;
     private final Date lastUpdated;
-    private final String gameId;
 
     @JsonCreator
     public Station(@JsonProperty(cUuid) String uuid,
                    @JsonProperty(cName) String name,
                    @JsonProperty(cImageFile) String imageFile,
                    @JsonProperty(cEngramId) String engramId,
-                   @JsonProperty(cLastUpdated) Date lastUpdated,
-                   @JsonProperty(cGameId) String gameId) {
+                   @JsonProperty(cLastUpdated) Date lastUpdated) {
         this.uuid = uuid;
         this.name = name;
         this.imageFile = imageFile;
         this.engramId = engramId;
         this.lastUpdated = lastUpdated;
-        this.gameId = gameId;
     }
 
     public static Station fromJson(JsonNode node) {
         return new ObjectMapper().convertValue(node, Station.class);
+    }
+
+    public static Station comparable(String name, String imageFile, String engramId) {
+        return new Station(null, name, imageFile, engramId, null);
     }
 
     public JsonNode toJson() {
@@ -60,13 +62,29 @@ public class Station {
         return lastUpdated;
     }
 
-    public String getGameId() {
-        return gameId;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Station station = (Station) o;
+        return name.equals(station.name) &&
+                imageFile.equals(station.imageFile) &&
+                engramId.equals(station.engramId);
     }
 
-    public boolean equals(String name, String imageFile, String engramId) {
-        return this.name.equals(name) &&
-                this.name.equals(imageFile) &&
-                this.engramId.equals(engramId);
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, imageFile, engramId);
+    }
+
+    @Override
+    public String toString() {
+        return "Station{" +
+                "uuid='" + uuid + '\'' +
+                ", name='" + name + '\'' +
+                ", imageFile='" + imageFile + '\'' +
+                ", engramId='" + engramId + '\'' +
+                ", lastUpdated=" + lastUpdated +
+                '}';
     }
 }

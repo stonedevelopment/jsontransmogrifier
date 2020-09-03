@@ -5,6 +5,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.util.Objects;
+
 import static util.Constants.*;
 
 /**
@@ -24,7 +26,6 @@ public class DirectoryItem {
     private final int viewType;
     private final String parentId;
     private final String sourceId;
-    private final String gameId;
 
     @JsonCreator
     public DirectoryItem(@JsonProperty(cUuid) String uuid,
@@ -32,15 +33,13 @@ public class DirectoryItem {
                          @JsonProperty(cImageFile) String imageFile,
                          @JsonProperty(cViewType) int viewType,
                          @JsonProperty(cParentId) String parentId,
-                         @JsonProperty(cSourceId) String sourceId,
-                         @JsonProperty(cGameId) String gameId) {
+                         @JsonProperty(cSourceId) String sourceId) {
         this.uuid = uuid;
         this.name = name;
         this.imageFile = imageFile;
         this.viewType = viewType;
         this.parentId = parentId;
         this.sourceId = sourceId;
-        this.gameId = gameId;
     }
 
     public static DirectoryItem fromJson(JsonNode node) {
@@ -71,7 +70,15 @@ public class DirectoryItem {
         return sourceId;
     }
 
-    public String getGameId() {
-        return gameId;
+    @Override
+    public String toString() {
+        return "DirectoryItem{" +
+                "uuid='" + uuid + '\'' +
+                ", name='" + name + '\'' +
+                ", imageFile='" + imageFile + '\'' +
+                ", viewType=" + viewType +
+                ", parentId='" + parentId + '\'' +
+                ", sourceId='" + sourceId + '\'' +
+                '}';
     }
 }

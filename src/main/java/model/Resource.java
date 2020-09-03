@@ -6,6 +6,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.util.Date;
+import java.util.Objects;
 
 import static util.Constants.*;
 
@@ -20,25 +21,26 @@ public class Resource {
     private final String description;
     private final String imageFile;
     private final Date lastUpdated;
-    private final String gameId;
 
     @JsonCreator
     public Resource(@JsonProperty(cUuid) String uuid,
                     @JsonProperty(cName) String name,
                     @JsonProperty(cDescription) String description,
                     @JsonProperty(cImageFile) String imageFile,
-                    @JsonProperty(cLastUpdated) Date lastUpdated,
-                    @JsonProperty(cGameId) String gameId) {
+                    @JsonProperty(cLastUpdated) Date lastUpdated) {
         this.uuid = uuid;
         this.name = name;
         this.description = description;
         this.imageFile = imageFile;
         this.lastUpdated = lastUpdated;
-        this.gameId = gameId;
     }
 
     public static Resource fromJson(JsonNode node) {
         return new ObjectMapper().convertValue(node, Resource.class);
+    }
+
+    public static Resource comparable(String name, String description, String imageFile) {
+        return new Resource(null, name, description, imageFile, null);
     }
 
     public JsonNode toJson() {
@@ -65,13 +67,29 @@ public class Resource {
         return lastUpdated;
     }
 
-    public String getGameId() {
-        return gameId;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Resource resource = (Resource) o;
+        return name.equals(resource.name) &&
+                description.equals(resource.description) &&
+                imageFile.equals(resource.imageFile);
     }
 
-    public boolean equals(String name, String description, String imageFile) {
-        return getName().equals(name) &&
-                getDescription().equals(description) &&
-                getImageFile().equals(imageFile);
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, description, imageFile);
+    }
+
+    @Override
+    public String toString() {
+        return "Resource{" +
+                "uuid='" + uuid + '\'' +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", imageFile='" + imageFile + '\'' +
+                ", lastUpdated=" + lastUpdated +
+                '}';
     }
 }

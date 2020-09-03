@@ -179,6 +179,7 @@ public abstract class IlluminateGameData extends GameData {
      * Each array entry to have its own output file, with the station as the root
      */
     protected JsonNode resolveDirectory() {
+        Log.d(getDetailsObject().getName());
         ArrayNode arrayNode = mapper.createArrayNode();
 
         //  iterate through station uuids, in alphabetical order via TreeMap
@@ -199,9 +200,58 @@ public abstract class IlluminateGameData extends GameData {
         return arrayNode;
     }
 
-    protected abstract JsonNode resolveDirectoryChildren(String parentId);
+    protected JsonNode resolveDirectoryChildren(String parentId) {
+        ObjectNode outNode = mapper.createObjectNode();
+
+        //  create array nodes to hold engrams and folders
+        ArrayNode engrams = mapper.createArrayNode();
+        ArrayNode folders = mapper.createArrayNode();
+
+        //  iterate through directory map
+        for (DirectoryItem directoryItem : getDirectoryItemListByParentUUID(parentId)) {
+            //  collect uuid of source
+            String sourceId = directoryItem.getSourceId();
+
+            //  determine if station, engram or folder
+            if (isFolder(sourceId)) {
+                //  get folder object using given uuid
+                Folder folder = getFolder(sourceId);
+
+                //  convert object to json
+                ObjectNode folderNode = convertJsonNode(folder.toJson());
+
+                //  crawl through directory, recursively return hierarchical data
+                folderNode.set(cDirectory, resolveDirectoryChildren(directoryItem.getUuid()));
+
+                //  add to json array
+                folders.add(folderNode);
+            } else {
+                //  get engram object from given uuid
+                Engram engram = getEngram(sourceId);
+
+                //  convert object to json
+                ObjectNode engramNode = convertJsonNode(engram.toJson());
+
+                //  add engram to json array
+                engrams.add(engramNode);
+
+                // TODO: 8/29/2020 add in composition here?
+                engramNode.set(cComposition, resolveComposition(sourceId));
+            }
+        }
+
+        //  add folder array node to parent node
+        outNode.set(cFolders, folders);
+
+        //  add engram array node to parent node
+        outNode.set(cEngrams, engrams);
+
+        //  return parent node
+        return outNode;
+    }
 
     public JsonNode resolveComposition(String engramId) {
+        Log.d(engramId);
         Composition composition = getComposition(engramId);
         ObjectNode outNode = mapper.valueToTree(composition);
 

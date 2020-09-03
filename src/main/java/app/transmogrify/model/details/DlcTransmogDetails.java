@@ -1,6 +1,5 @@
 package app.transmogrify.model.details;
 
-import app.transmogrify.model.game_data.PrimaryTransmogGameData;
 import app.transmogrify.model.json.JsonDlc;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -9,7 +8,6 @@ import static util.Constants.*;
 
 public class DlcTransmogDetails extends TransmogDetails {
     private final Boolean totalConversion;
-    private final String gameId;
 
     @JsonCreator
     public DlcTransmogDetails(@JsonProperty(cUuid) String uuid,
@@ -20,14 +18,12 @@ public class DlcTransmogDetails extends TransmogDetails {
                               @JsonProperty(cFolderFile) String folderFile,
                               @JsonProperty(cBackFolderFile) String backFolderFile,
                               @JsonProperty(cTransmogFile) String transmogFile,
-                              @JsonProperty(cTotalConversion) boolean totalConversion,
-                              @JsonProperty(cGameId) String gameId) {
+                              @JsonProperty(cTotalConversion) boolean totalConversion) {
         super(uuid, name, description, filePath, logoFile, folderFile, backFolderFile, transmogFile);
         this.totalConversion = totalConversion;
-        this.gameId = gameId;
     }
 
-    public static DlcTransmogDetails with(JsonDlc jsonDlc, PrimaryTransmogGameData primaryGameData) {
+    public static DlcTransmogDetails with(JsonDlc jsonDlc) {
         TransmogDetails details = TransmogDetails.with(jsonDlc);
 
         String uuid = details.getUuid();
@@ -39,10 +35,9 @@ public class DlcTransmogDetails extends TransmogDetails {
         String backFolderFile = details.getBackFolderFile();
         String transmogFile = details.getTransmogFile();
         boolean totalConversion = isTotalConversion(jsonDlc.type);
-        String gameId = primaryGameData.getUuid();
 
         return new DlcTransmogDetails(uuid, name, description, filePath, logoFile, folderFile, backFolderFile,
-                transmogFile, totalConversion, gameId);
+                transmogFile, totalConversion);
     }
 
     private static boolean isTotalConversion(String type) {
@@ -51,9 +46,5 @@ public class DlcTransmogDetails extends TransmogDetails {
 
     public Boolean getTotalConversion() {
         return totalConversion;
-    }
-
-    public String getGameId() {
-        return gameId;
     }
 }
