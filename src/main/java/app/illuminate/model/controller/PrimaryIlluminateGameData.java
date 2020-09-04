@@ -26,12 +26,6 @@ public class PrimaryIlluminateGameData extends IlluminateGameData {
     }
 
     @Override
-    public Composition getComposition(String engramId) {
-        String uuid = getCompositionUUIDByEngramId(engramId);
-        return super.getComposition(uuid);
-    }
-
-    @Override
     public IlluminateDetails getDetailsObject() {
         return super.getDetailsObject();
     }

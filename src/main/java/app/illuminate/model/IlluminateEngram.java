@@ -1,6 +1,7 @@
 package app.illuminate.model;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -28,5 +29,11 @@ public class IlluminateEngram extends Engram {
 
     public static IlluminateEngram fromJson(JsonNode node) {
         return new ObjectMapper().convertValue(node, IlluminateEngram.class);
+    }
+
+    @JsonIgnore
+    @Override
+    public Date getLastUpdated() {
+        return super.getLastUpdated();
     }
 }

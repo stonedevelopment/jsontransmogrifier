@@ -14,19 +14,19 @@ public class Station {
     private final String uuid;
     private final String name;
     private final String imageFile;
-    private final String engramId;
+    private final String sourceId;
     private final Date lastUpdated;
 
     @JsonCreator
     public Station(@JsonProperty(cUuid) String uuid,
                    @JsonProperty(cName) String name,
                    @JsonProperty(cImageFile) String imageFile,
-                   @JsonProperty(cEngramId) String engramId,
+                   @JsonProperty(cEngramId) String sourceId,
                    @JsonProperty(cLastUpdated) Date lastUpdated) {
         this.uuid = uuid;
         this.name = name;
         this.imageFile = imageFile;
-        this.engramId = engramId;
+        this.sourceId = sourceId;
         this.lastUpdated = lastUpdated;
     }
 
@@ -34,8 +34,8 @@ public class Station {
         return new ObjectMapper().convertValue(node, Station.class);
     }
 
-    public static Station comparable(String name, String imageFile, String engramId) {
-        return new Station(null, name, imageFile, engramId, null);
+    public static Station comparable(String name, String imageFile, String sourceId) {
+        return new Station(null, name, imageFile, sourceId, null);
     }
 
     public JsonNode toJson() {
@@ -54,8 +54,8 @@ public class Station {
         return imageFile;
     }
 
-    public String getEngramId() {
-        return engramId;
+    public String getSourceId() {
+        return sourceId;
     }
 
     public Date getLastUpdated() {
@@ -69,12 +69,12 @@ public class Station {
         Station station = (Station) o;
         return name.equals(station.name) &&
                 imageFile.equals(station.imageFile) &&
-                engramId.equals(station.engramId);
+                sourceId.equals(station.sourceId);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, imageFile, engramId);
+        return Objects.hash(name, imageFile, sourceId);
     }
 
     @Override
@@ -83,7 +83,7 @@ public class Station {
                 "uuid='" + uuid + '\'' +
                 ", name='" + name + '\'' +
                 ", imageFile='" + imageFile + '\'' +
-                ", engramId='" + engramId + '\'' +
+                ", engramId='" + sourceId + '\'' +
                 ", lastUpdated=" + lastUpdated +
                 '}';
     }

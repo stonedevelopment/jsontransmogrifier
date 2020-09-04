@@ -1,1 +1,2853 @@
-{"details":{"uuid":"d204404e-e099-4e3e-af8b-d7261563d57a","name":"Aberration","description":"Waking up on 'Aberration', a derelict, malfunctioning ARK with an elaborate underground biome system, survivors face exotic new challenges unlike anything before: extreme radioactive sunlight and environmental hazards, ziplines, wingsuits, climbing gear, cave dwellings, charge-batteries, and far more, along with a stable of extraordinary new creatures await within the mysterious depths. But beware the ‘Nameless’: unrelenting, Element-infused humanoids which have evolved into vicious light-hating monstrosities! On Aberration, survivors will uncover the ultimate secrets of the ARKs, and discover what the future holds in store for those strong and clever enough to survive!","filePath":"DLC/Aberration/","logoFile":"logo.webp","folderFile":"folder.webp","backFolderFile":"backFolder.webp","transmogFile":"transmogrified.json","totalConversion":false,"lastUpdated":1599177809806},"resources":[{"uuid":"4409465a-fc3e-4ee9-a600-8e31b992c55e","name":"Aggeravic Mushroom","description":"","imageFile":"aggeravic_mushroom.webp","lastUpdated":1599177809809},{"uuid":"78a44ec6-6ecd-43e8-9fec-8f41bc6ab07c","name":"Alpha Basilisk Fang","description":"","imageFile":"alpha_basilisk_fang.webp","lastUpdated":1599177809809},{"uuid":"0b33eaa0-1e6c-49e9-b7a4-03ce65f4751d","name":"Alpha Karkinos Claw","description":"","imageFile":"alpha_karkinos_claw.webp","lastUpdated":1599177809809},{"uuid":"d5fb9e1a-4bed-4e88-9ab6-18c6f45cc5f5","name":"Alpha Reaper King Barb","description":"","imageFile":"alpha_reaper_king_barb.webp","lastUpdated":1599177809809},{"uuid":"efb53a2d-71e1-404d-aaef-16dec1b284c9","name":"Aquatic Mushroom","description":"","imageFile":"aquatic_mushroom.webp","lastUpdated":1599177809809},{"uuid":"37d6141b-d932-47c4-a727-bbfc6032a09c","name":"Artifact of the Depths","description":"","imageFile":"artifact_of_the_depths.webp","lastUpdated":1599177809809},{"uuid":"a8c23507-dc77-41bb-92a3-9b9e510fa52f","name":"Artifact of the Shadows","description":"","imageFile":"artifact_of_the_shadows.webp","lastUpdated":1599177809809},{"uuid":"1c886faa-3403-4a0c-8f67-12c1bdc11047","name":"Artifact of the Stalker","description":"","imageFile":"artifact_of_the_stalker.webp","lastUpdated":1599177809809},{"uuid":"40afa5bd-1b17-4b62-ad8d-3afb70f09b67","name":"Ascerbic Mushroom","description":"","imageFile":"ascerbic_mushroom.webp","lastUpdated":1599177809809},{"uuid":"607a5331-9a32-4f06-bfe2-bb99b5ae8b1e","name":"Auric Mushroom","description":"","imageFile":"auric_mushroom.webp","lastUpdated":1599177809809},{"uuid":"5b842933-aaf1-4b3c-bf90-fbb39454c419","name":"Basilisk Egg","description":"","imageFile":"basilisk_egg.webp","lastUpdated":1599177809809},{"uuid":"abf09e9a-0137-4323-959d-a75080cf81c4","name":"Basilisk Scale","description":"","imageFile":"basilisk_scale.webp","lastUpdated":1599177809809},{"uuid":"ef7cb434-67be-48d5-88d8-33d2b4b7091b","name":"Blue Gem","description":"","imageFile":"blue_gem.webp","lastUpdated":1599177809809},{"uuid":"7d9ee472-66e2-45ba-96f4-3917e452ca8a","name":"Congealed Gas Ball","description":"","imageFile":"congealed_gas_ball.webp","lastUpdated":1599177809809},{"uuid":"b229a39a-44db-4d3b-b76d-12a6e07f2fc4","name":"Element Ore","description":"","imageFile":"element_ore.webp","lastUpdated":1599177809809},{"uuid":"5fab6480-2a80-4bcf-ad56-107497390a20","name":"Featherlight Egg","description":"","imageFile":"featherlight_egg.webp","lastUpdated":1599177809809},{"uuid":"fb12dda3-5c15-41ab-b9d3-c1271ee81492","name":"Fungal Wood","description":"","imageFile":"fungal_wood.webp","lastUpdated":1599177809809},{"uuid":"bd14f13b-f94f-40bd-81b6-197f7d6ce601","name":"Glow Stick","description":"","imageFile":"glow_stick.webp","lastUpdated":1599177809809},{"uuid":"d8471954-d97b-41d0-a799-b1712d809516","name":"Glowtail Egg","description":"","imageFile":"glowtail_egg.webp","lastUpdated":1599177809809},{"uuid":"c138f1fd-79f0-444b-9a9d-204de1ba3c6d","name":"Green Gem","description":"","imageFile":"green_gem.webp","lastUpdated":1599177809809},{"uuid":"d96209bd-bfca-4fae-9de3-097b2d1f1af6","name":"Nameless Venom","description":"","imageFile":"nameless_venom.webp","lastUpdated":1599177809809},{"uuid":"e7f8b8c3-4960-438d-95c8-3933bee5e9cd","name":"Plant Species Z Seed","description":"","imageFile":"plant_species_z_seed.webp","lastUpdated":1599177809809},{"uuid":"f5ecc4b9-af70-4f2a-ba06-2606157415b3","name":"Reaper Pheromone Gland","description":"","imageFile":"reaper_pheromone_gland.webp","lastUpdated":1599177809809},{"uuid":"09b80640-c5b8-4adb-9300-89cebbac5f66","name":"Red Gem","description":"","imageFile":"red_gem.webp","lastUpdated":1599177809809},{"uuid":"e6793363-c825-4b86-a6cb-cc5b4e810724","name":"Rock Drake Egg","description":"","imageFile":"rock_drake_egg.webp","lastUpdated":1599177809809},{"uuid":"e032aac3-40f3-42e5-b31a-d1acf0fd484f","name":"Rock Drake Feather","description":"","imageFile":"rock_drake_feather.webp","lastUpdated":1599177809809},{"uuid":"98c269e2-32b7-4e1a-bbb8-9b3f03efb030","name":"Rockwell Flag","description":"","imageFile":"rockwell_flag.webp","lastUpdated":1599177809809},{"uuid":"8a09db7b-0f46-491b-9ab8-9f5b704f95f0","name":"Rockwell Trophy","description":"","imageFile":"rockwell_trophy.webp","lastUpdated":1599177809809}],"stations":[{"uuid":"13e398ff-3aaa-4915-b23c-de4543835d6b","name":"Charge Node","imageFile":"charge_node.webp","engramId":null,"lastUpdated":1599177809816}],"folders":[{"uuid":"e2493efd-c9eb-4a1d-9f64-6c620dbf3cf6","name":"Attachments"},{"uuid":"dfd96ee9-85fa-407a-9949-e1d45a608770","name":"Cliff"},{"uuid":"78e5a429-55f7-4923-8df5-847f4449329c","name":"Decorative"},{"uuid":"ab4e30c5-a8c3-451d-87b5-133f4eabf445","name":"Elevators"},{"uuid":"7e8189aa-955a-4671-a197-4bf2ef015d70","name":"Gas Collector"},{"uuid":"279eec49-a35e-4ce0-97d2-c3ecc832de61","name":"Hazard"}],"engrams":[{"uuid":"77c7b0fa-6b42-4f4d-ae7c-ff33c659d1e1","name":"Basilisk Saddle","description":"Equip a Basilisk with this to ride it.","imageFile":"basilisk_saddle.webp","level":85,"yield":1,"points":0,"xp":0,"craftingTime":0,"lastUpdated":1599177809815},{"uuid":"4325b461-0c9e-48e3-9493-806ce8e40951","name":"Charge Battery","description":"Stores Charge from Power Nodes, and can be placed in various Electrical Devices to power them.","imageFile":"charge_battery.webp","level":71,"yield":1,"points":0,"xp":0,"craftingTime":0,"lastUpdated":1599177809815},{"uuid":"9949f9b7-9c35-4e72-afda-1567af87d6a3","name":"Charge Lantern","description":"Weaponized Charge Light that damages and stuns lifeforms. Place down to ward off dangers in an area. Uses Charge Batteries as fuel.","imageFile":"charge_lantern.webp","level":80,"yield":1,"points":0,"xp":0,"craftingTime":0,"lastUpdated":1599177809815},{"uuid":"d7012190-7422-47f2-a7ee-0a432ed376b3","name":"Climbing Pick","description":"Climb up and hang from nearly any surface with these!","imageFile":"climbing_pick.webp","level":34,"yield":1,"points":0,"xp":0,"craftingTime":0,"lastUpdated":1599177809815},{"uuid":"4a556e7f-ac3b-440e-99a0-06ffd6cd097f","name":"Fish Basket","description":"Trap certain fish in this basket to tame and transport them!","imageFile":"fish_basket.webp","level":13,"yield":1,"points":0,"xp":0,"craftingTime":0,"lastUpdated":1599177809815},{"uuid":"c6b6bb2e-daac-4c7f-9922-6812da2d754d","name":"Gas Collector","description":"Place on a Gas Vent to extract Congealed Gas Balls over time.","imageFile":"gas_collector.webp","level":40,"yield":1,"points":0,"xp":0,"craftingTime":0,"lastUpdated":1599177809815},{"uuid":"186c0331-af7a-4391-873e-1d60c1a100dc","name":"Generate Aberration (Alpha) Portal","description":"Use this to generate a portal to Aberration's Guardian.","imageFile":"alpha_aberration_portal.webp","level":100,"yield":1,"points":0,"xp":0,"craftingTime":0,"lastUpdated":1599177809816},{"uuid":"cbb23011-d00d-4848-a1a0-774c48db4948","name":"Generate Aberration (Beta) Portal","description":"Use this to generate a portal to Aberration's Guardian.","imageFile":"beta_aberration_portal.webp","level":75,"yield":1,"points":0,"xp":0,"craftingTime":0,"lastUpdated":1599177809816},{"uuid":"2b200850-d5de-488c-a252-08703d1b8d38","name":"Generate Aberration (Gamma) Portal","description":"Use this to generate a portal to Aberration's Guardian.","imageFile":"gamma_aberration_portal.webp","level":60,"yield":1,"points":0,"xp":0,"craftingTime":0,"lastUpdated":1599177809816},{"uuid":"6208dfa9-b4ea-4600-90cb-0adf3be2d1a2","name":"Glider Suit Skin","description":"When attached to a Chest Armor, the Glider Suit enables sailing through the air by double-tapping jump, while gaining speed by running and diving!","imageFile":"glider_suit_skin.webp","level":62,"yield":1,"points":0,"xp":0,"craftingTime":0,"lastUpdated":1599177809815},{"uuid":"b1e63ffc-8d4b-4062-a462-9972bcc41627","name":"Glow Stick","description":"Glow Sticks generate light in a radius around them. Throw it and it will stick immediately to the location they first impact.","imageFile":"glow_stick.webp","level":10,"yield":1,"points":0,"xp":0,"craftingTime":0,"lastUpdated":1599177809816},{"uuid":"6faba4bd-2b77-42e5-b60a-dd2481370500","name":"Hazard Suit Boots","description":"Boots made from a unique combination of materials that protect the wearer from environmental contaminants.","imageFile":"hazard_suit_boots.webp","level":68,"yield":1,"points":0,"xp":0,"craftingTime":0,"lastUpdated":1599177809815},{"uuid":"4e8dc499-b846-4a9c-8e77-195bdf7a3f9c","name":"Hazard Suit Gloves","description":"Gloves made from a unique combination of materials that protect the wearer from environmental contaminants.","imageFile":"hazard_suit_gloves.webp","level":68,"yield":1,"points":0,"xp":0,"craftingTime":0,"lastUpdated":1599177809815},{"uuid":"0a5090a6-7c2e-4b66-9ae8-0061c62f5a72","name":"Hazard Suit Hat","description":"A helmet made from a unique combination of materials that protect the wearer from environmental contaminants.","imageFile":"hazard_suit_hat.webp","level":68,"yield":1,"points":0,"xp":0,"craftingTime":0,"lastUpdated":1599177809815},{"uuid":"861081d3-f436-44de-8b64-ff4225f0519a","name":"Hazard Suit Pants","description":"Pants made from a unique combination of materials that protect the wearer from environmental contaminants.","imageFile":"hazard_suit_pants.webp","level":68,"yield":1,"points":0,"xp":0,"craftingTime":0,"lastUpdated":1599177809816},{"uuid":"69a63ee1-23e6-4a91-89c7-6dddf20c2e71","name":"Hazard Suit Shirt","description":"A shirt made from a unique combination of materials that protect the wearer from environmental contaminants.","imageFile":"hazard_suit_shirt.webp","level":68,"yield":1,"points":0,"xp":0,"craftingTime":0,"lastUpdated":1599177809816},{"uuid":"0552d37c-b039-4b3e-bfd8-57434d860372","name":"Karkinos Saddle","description":"Equip a Karkinos with this to ride it.","imageFile":"karkinos_saddle.webp","level":65,"yield":1,"points":0,"xp":0,"craftingTime":0,"lastUpdated":1599177809815},{"uuid":"12b90cd9-2b78-479c-988f-a864441b8e18","name":"Large Wood Elevator Platform","description":"Attach to an Elevator Track to lift a large amount of weight.","imageFile":"large_wood_elevator_platform.webp","level":30,"yield":1,"points":0,"xp":0,"craftingTime":0,"lastUpdated":1599177809816},{"uuid":"675c0207-886e-4635-8dec-92b7b08dec2c","name":"Medium Wood Elevator Platform","description":"Attach to an Elevator Track to lift a medium amount of weight.","imageFile":"medium_wood_elevator_platform.webp","level":23,"yield":1,"points":0,"xp":0,"craftingTime":0,"lastUpdated":1599177809816},{"uuid":"05fb8612-9bd2-4e9b-b31b-01d212007370","name":"Metal Cliff Platform","description":"A Cliff Platform is required to build structures extending from a cliff. This one is made from shiny metal.","imageFile":"metal_cliff_platform.webp","level":51,"yield":1,"points":0,"xp":0,"craftingTime":0,"lastUpdated":1599177809816},{"uuid":"09d094cc-2599-4eef-943e-f3d3bc353bbc","name":"Mushroom Brew","description":"Double, double, toil and trouble, fire burn and cauldron bubble... this is a lovely mushroom brew, a healthy syrup to protect your pets from radiation!","imageFile":"mushroom_brew.webp","level":1,"yield":1,"points":0,"xp":0,"craftingTime":0,"lastUpdated":1599177809816},{"uuid":"0a0e1e1f-0ca8-43ed-aca1-213f96fb0953","name":"Pliers","description":"Use on a Smithy-crafted item in need of repairing and you can repair it on the go within any inventory, at a higher cost of resources.","imageFile":"pliers.webp","level":45,"yield":1,"points":0,"xp":0,"craftingTime":0,"lastUpdated":1599177809816},{"uuid":"8ed496ba-f1c8-45b1-91d1-d1385db8f1ab","name":"Portable Rope Ladder","description":"A portable ladder that can be used to climb up or down. Place onto structures or terrain at waist height or lower.","imageFile":"portable_rope_ladder.webp","level":15,"yield":1,"points":0,"xp":0,"craftingTime":0,"lastUpdated":1599177809816},{"uuid":"db6b9d91-9301-4fb5-a68c-c7ae6b38ce7a","name":"Ravager Saddle","description":"Equip a Ravager with this to ride it.","imageFile":"ravager_saddle.webp","level":47,"yield":1,"points":0,"xp":0,"craftingTime":0,"lastUpdated":1599177809815},{"uuid":"a818b111-a918-485e-a011-d7b76d392984","name":"Rock Drake Saddle","description":"Equip a Rock Drake with this to ride it.","imageFile":"rock_drake_saddle.webp","level":75,"yield":1,"points":0,"xp":0,"craftingTime":0,"lastUpdated":1599177809815},{"uuid":"7b08fb30-32f2-4f3d-9c52-8d9a47fd91e4","name":"Rock Drake Tek Saddle","description":"Equip a Rock Drake with this to ride it, enabling the rider to fire plasma projectiles. Using requires learning this Tekgram.","imageFile":"rock_drake_tek_saddle.webp","level":1,"yield":1,"points":0,"xp":0,"craftingTime":0,"lastUpdated":1599177809815},{"uuid":"27f72822-7805-4c60-8cfe-08425d8e40c6","name":"Roll Rat Saddle","description":"Equip a Roll Rat with this to ride it. Provides protection to passengers while rolling.","imageFile":"roll_rat_saddle.webp","level":58,"yield":1,"points":0,"xp":0,"craftingTime":0,"lastUpdated":1599177809815},{"uuid":"d02ee884-a5b4-4680-9cee-1bf280fdd2f9","name":"Shag Rug","description":"A decorative, paintable rug with a shaggy appearance, which dulls the sound of footsteps.","imageFile":"shag_rug.webp","level":17,"yield":1,"points":0,"xp":0,"craftingTime":0,"lastUpdated":1599177809816},{"uuid":"41d8cc0b-6e8c-4514-bf9f-9850d4ff94ac","name":"Small Wood Elevator Platform","description":"Attach to an Elevator Track to lift a small amount of weight.","imageFile":"small_wood_elevator_platform.webp","level":20,"yield":1,"points":0,"xp":0,"craftingTime":0,"lastUpdated":1599177809816},{"uuid":"e1252aa2-cbb0-4550-82bf-01d26317521a","name":"Stone Cliff Platform","description":"A Cliff Platform is required to build structures extending from a cliff. This one is made from heavy stone.","imageFile":"stone_cliff_platform.webp","level":37,"yield":1,"points":0,"xp":0,"craftingTime":0,"lastUpdated":1599177809816},{"uuid":"74b6dada-9e47-4546-94f6-c72118cf3cfb","name":"Tek Railgun","description":"Shoots explosive plasma bolts, with an infrared zoomable scope. Equipping requires learning this Tekgram.","imageFile":"tek_railgun.webp","level":1,"yield":1,"points":0,"xp":0,"craftingTime":0,"lastUpdated":1599177809816},{"uuid":"5b229416-e11a-46dc-9670-7ec017d54ab5","name":"Tek Sleeping Pod","description":"This Tek-powered Chamber lets you rapidly recover vitals, and slowly gain XP even when sleeping. You can also sleep soundly within it, protected even while on a moving platform!","imageFile":"tek_sleeping_pod.webp","level":1,"yield":1,"points":0,"xp":0,"craftingTime":0,"lastUpdated":1599177809816},{"uuid":"e56d405c-cd6c-4819-8223-3bf5caeceea4","name":"Wood Elevator Top Switch","description":"Attach to the top of a Wood Elevator Track to complete an Elevator!","imageFile":"wood_elevator_top_switch.webp","level":20,"yield":1,"points":0,"xp":0,"craftingTime":0,"lastUpdated":1599177809816},{"uuid":"bd6f705b-dc42-465f-8c59-333493e68931","name":"Wood Elevator Track","description":"Attach a Wood Elevator Platform to these to complete an elevator!","imageFile":"wood_elevator_track.webp","level":20,"yield":1,"points":0,"xp":0,"craftingTime":0,"lastUpdated":1599177809816},{"uuid":"9f8834e8-89cd-4448-a5c6-2cd3021db604","name":"Zip-Line Anchor","description":"Apply onto a Crossbow to fire Zip-Line anchor points. Use two anchor points to complete a Zip-Line, which you can then grab onto [sic]","imageFile":"zip-line_anchor.webp","level":31,"yield":1,"points":0,"xp":0,"craftingTime":0,"lastUpdated":1599177809816},{"uuid":"9e09075c-04e6-47d3-8b5e-0a763c6d6d16","name":"Zip-Line Motor Attachment Skin","description":"Equip onto pants and combine with Gasoline to power yourself up a Zip-Line.","imageFile":"zip-line_motor_attachment_skin.webp","level":54,"yield":1,"points":0,"xp":0,"craftingTime":0,"lastUpdated":1599177809816}],"composition":[{"uuid":"c199b4a0-c317-453c-8a27-897838e514ce","engramId":"77c7b0fa-6b42-4f4d-ae7c-ff33c659d1e1"},{"uuid":"785beb3b-3abd-4c7a-b140-a4671e7f5b93","engramId":"4325b461-0c9e-48e3-9493-806ce8e40951"},{"uuid":"03697756-b558-4081-948f-178744c48bc9","engramId":"9949f9b7-9c35-4e72-afda-1567af87d6a3"},{"uuid":"da1f48d8-9b8a-4ddd-882b-628a65c52d47","engramId":"d7012190-7422-47f2-a7ee-0a432ed376b3"},{"uuid":"13af35e7-c5a9-48c1-85ab-1f6bbc431cb4","engramId":"4a556e7f-ac3b-440e-99a0-06ffd6cd097f"},{"uuid":"8bdaa12e-7753-42e4-a80b-86e411a8a04d","engramId":"c6b6bb2e-daac-4c7f-9922-6812da2d754d"},{"uuid":"5e210d04-15b6-4ce5-ac6f-f16d26440f7e","engramId":"186c0331-af7a-4391-873e-1d60c1a100dc"},{"uuid":"e78134d6-92ed-418e-abeb-f3270ffc9529","engramId":"cbb23011-d00d-4848-a1a0-774c48db4948"},{"uuid":"faaa2b6c-1447-48fe-b8e2-5ce0e3386afa","engramId":"2b200850-d5de-488c-a252-08703d1b8d38"},{"uuid":"fae15dec-1f37-4857-8b46-4c6b07432cc8","engramId":"6208dfa9-b4ea-4600-90cb-0adf3be2d1a2"},{"uuid":"7daa1590-20ef-4bf0-9cfa-70f185154b94","engramId":"b1e63ffc-8d4b-4062-a462-9972bcc41627"},{"uuid":"2b0ca9b1-c71f-4cbf-87c2-33d11a0f2d23","engramId":"6faba4bd-2b77-42e5-b60a-dd2481370500"},{"uuid":"e2a67498-a38f-4ec3-b373-750c4ffc2ad9","engramId":"4e8dc499-b846-4a9c-8e77-195bdf7a3f9c"},{"uuid":"88079a36-eba4-4bb5-bb32-5341e6bc1224","engramId":"0a5090a6-7c2e-4b66-9ae8-0061c62f5a72"},{"uuid":"15752a81-632a-4db2-bb17-d51df108fc7d","engramId":"861081d3-f436-44de-8b64-ff4225f0519a"},{"uuid":"f6eaf7dc-e461-4800-9017-460c18ba970c","engramId":"69a63ee1-23e6-4a91-89c7-6dddf20c2e71"},{"uuid":"9103668d-f238-4377-a905-cd12e814d039","engramId":"0552d37c-b039-4b3e-bfd8-57434d860372"},{"uuid":"e4961dd3-bdf7-4749-8083-f0c986bab3dd","engramId":"12b90cd9-2b78-479c-988f-a864441b8e18"},{"uuid":"df9ef7c8-8e68-49e6-87b8-d71ed277fde1","engramId":"675c0207-886e-4635-8dec-92b7b08dec2c"},{"uuid":"99146b25-372b-4748-b8ae-c0fdf35ae7d3","engramId":"05fb8612-9bd2-4e9b-b31b-01d212007370"},{"uuid":"155d63f2-d685-4705-9457-80df91d4b35f","engramId":"09d094cc-2599-4eef-943e-f3d3bc353bbc"},{"uuid":"885a9c19-5342-4913-83ad-7c31f491c983","engramId":"0a0e1e1f-0ca8-43ed-aca1-213f96fb0953"},{"uuid":"e8be1237-9a8c-4fb2-a987-ff4fa604a1d7","engramId":"8ed496ba-f1c8-45b1-91d1-d1385db8f1ab"},{"uuid":"a34d5739-6cbe-44e1-9e18-e7f3f8cf2149","engramId":"db6b9d91-9301-4fb5-a68c-c7ae6b38ce7a"},{"uuid":"0d2fc7bc-dc33-4df1-9813-906ec8b896cb","engramId":"a818b111-a918-485e-a011-d7b76d392984"},{"uuid":"0fad513a-ea3d-4d04-be92-92e31b6cbd90","engramId":"7b08fb30-32f2-4f3d-9c52-8d9a47fd91e4"},{"uuid":"9bda02e0-af68-4f10-9077-017b8ca957fc","engramId":"27f72822-7805-4c60-8cfe-08425d8e40c6"},{"uuid":"b8d7813d-f7f5-40ea-a345-c25434c0d4d4","engramId":"d02ee884-a5b4-4680-9cee-1bf280fdd2f9"},{"uuid":"f9001290-ae60-4d30-9b27-3391d7ad7073","engramId":"41d8cc0b-6e8c-4514-bf9f-9850d4ff94ac"},{"uuid":"ef241e63-af6e-420d-87f6-69e2303fef10","engramId":"e1252aa2-cbb0-4550-82bf-01d26317521a"},{"uuid":"8845df47-d67f-4cc8-ab6e-fcef4bdcb3cd","engramId":"74b6dada-9e47-4546-94f6-c72118cf3cfb"},{"uuid":"e6488604-3190-4aba-8d5b-e5864f5a5412","engramId":"5b229416-e11a-46dc-9670-7ec017d54ab5"},{"uuid":"b03b879e-3fe2-41f7-88b8-b09803838070","engramId":"e56d405c-cd6c-4819-8223-3bf5caeceea4"},{"uuid":"b19a06a0-7c25-4528-9801-e61024bfd716","engramId":"bd6f705b-dc42-465f-8c59-333493e68931"},{"uuid":"333b279d-db49-4a50-9664-1d1babcd9743","engramId":"9f8834e8-89cd-4448-a5c6-2cd3021db604"},{"uuid":"0fa80083-cadc-484a-b062-476bce4d79e2","engramId":"9e09075c-04e6-47d3-8b5e-0a763c6d6d16"}],"composites":[{"uuid":"d266ed0f-5ae0-4cfa-a9cc-783130301f89","name":"Aggeravic Mushroom","imageFile":"aggeravic_mushroom.webp","quantity":5,"sourceId":"4409465a-fc3e-4ee9-a600-8e31b992c55e","isEngram":false,"compositionId":"155d63f2-d685-4705-9457-80df91d4b35f"},{"uuid":"c0594965-5055-47a3-9c8f-2d5aa698b1d4","name":"Alpha Basilisk Fang","imageFile":"alpha_basilisk_fang.webp","quantity":1,"sourceId":"78a44ec6-6ecd-43e8-9fec-8f41bc6ab07c","isEngram":false,"compositionId":"5e210d04-15b6-4ce5-ac6f-f16d26440f7e"},{"uuid":"99a42af1-1b74-44ba-ac87-ad1f96abd2e4","name":"Alpha Karkinos Claw","imageFile":"alpha_karkinos_claw.webp","quantity":1,"sourceId":"0b33eaa0-1e6c-49e9-b7a4-03ce65f4751d","isEngram":false,"compositionId":"5e210d04-15b6-4ce5-ac6f-f16d26440f7e"},{"uuid":"d14e623c-8465-4f52-bfbb-6d5c40486782","name":"Alpha Reaper King Barb","imageFile":"alpha_reaper_king_barb.webp","quantity":1,"sourceId":"d5fb9e1a-4bed-4e88-9ab6-18c6f45cc5f5","isEngram":false,"compositionId":"5e210d04-15b6-4ce5-ac6f-f16d26440f7e"},{"uuid":"ea4e736d-343b-43ee-85cb-932c2b53ea84","name":"Aquatic Mushroom","imageFile":"aquatic_mushroom.webp","quantity":5,"sourceId":"efb53a2d-71e1-404d-aaef-16dec1b284c9","isEngram":false,"compositionId":"155d63f2-d685-4705-9457-80df91d4b35f"},{"uuid":"d0656423-5ebf-4dc5-b1d4-92d582b9c257","name":"Artifact of the Depths","imageFile":"artifact_of_the_depths.webp","quantity":1,"sourceId":"37d6141b-d932-47c4-a727-bbfc6032a09c","isEngram":false,"compositionId":"faaa2b6c-1447-48fe-b8e2-5ce0e3386afa"},{"uuid":"695f79c2-d703-4f98-b86a-0bbcde9334fc","name":"Artifact of the Depths","imageFile":"artifact_of_the_depths.webp","quantity":1,"sourceId":"37d6141b-d932-47c4-a727-bbfc6032a09c","isEngram":false,"compositionId":"e78134d6-92ed-418e-abeb-f3270ffc9529"},{"uuid":"70f579fb-5130-41e5-b083-479fcebc1618","name":"Artifact of the Depths","imageFile":"artifact_of_the_depths.webp","quantity":1,"sourceId":"37d6141b-d932-47c4-a727-bbfc6032a09c","isEngram":false,"compositionId":"5e210d04-15b6-4ce5-ac6f-f16d26440f7e"},{"uuid":"096537ce-1966-47f2-a99d-e5a6b9e56709","name":"Artifact of the Shadows","imageFile":"artifact_of_the_shadows.webp","quantity":1,"sourceId":"a8c23507-dc77-41bb-92a3-9b9e510fa52f","isEngram":false,"compositionId":"faaa2b6c-1447-48fe-b8e2-5ce0e3386afa"},{"uuid":"f4b81572-68fe-4fce-b008-b6091b671f66","name":"Artifact of the Shadows","imageFile":"artifact_of_the_shadows.webp","quantity":1,"sourceId":"a8c23507-dc77-41bb-92a3-9b9e510fa52f","isEngram":false,"compositionId":"e78134d6-92ed-418e-abeb-f3270ffc9529"},{"uuid":"bd5535eb-41a9-4373-b75a-7dc1b0490638","name":"Artifact of the Shadows","imageFile":"artifact_of_the_shadows.webp","quantity":1,"sourceId":"a8c23507-dc77-41bb-92a3-9b9e510fa52f","isEngram":false,"compositionId":"5e210d04-15b6-4ce5-ac6f-f16d26440f7e"},{"uuid":"4554d048-90f2-453a-ab56-65f98775fe15","name":"Artifact of the Stalker","imageFile":"artifact_of_the_stalker.webp","quantity":1,"sourceId":"1c886faa-3403-4a0c-8f67-12c1bdc11047","isEngram":false,"compositionId":"faaa2b6c-1447-48fe-b8e2-5ce0e3386afa"},{"uuid":"04af8bc3-18f7-4dfe-b70d-b8fce098c41c","name":"Artifact of the Stalker","imageFile":"artifact_of_the_stalker.webp","quantity":1,"sourceId":"1c886faa-3403-4a0c-8f67-12c1bdc11047","isEngram":false,"compositionId":"e78134d6-92ed-418e-abeb-f3270ffc9529"},{"uuid":"7a7505e8-b47a-4991-bdaa-ddf9b9accd6a","name":"Artifact of the Stalker","imageFile":"artifact_of_the_stalker.webp","quantity":1,"sourceId":"1c886faa-3403-4a0c-8f67-12c1bdc11047","isEngram":false,"compositionId":"5e210d04-15b6-4ce5-ac6f-f16d26440f7e"},{"uuid":"cfee13e3-066a-4d93-bc9a-00276a46a8c4","name":"Ascerbic Mushroom","imageFile":"ascerbic_mushroom.webp","quantity":5,"sourceId":"40afa5bd-1b17-4b62-ad8d-3afb70f09b67","isEngram":false,"compositionId":"155d63f2-d685-4705-9457-80df91d4b35f"},{"uuid":"51f807d1-f2cf-41f3-b22f-61aa7f05e80e","name":"Auric Mushroom","imageFile":"auric_mushroom.webp","quantity":5,"sourceId":"607a5331-9a32-4f06-bfe2-bb99b5ae8b1e","isEngram":false,"compositionId":"155d63f2-d685-4705-9457-80df91d4b35f"},{"uuid":"118c2067-9d17-4d3d-bae8-81b0de01de13","name":"Basilisk Scale","imageFile":"basilisk_scale.webp","quantity":4,"sourceId":"abf09e9a-0137-4323-959d-a75080cf81c4","isEngram":false,"compositionId":"e78134d6-92ed-418e-abeb-f3270ffc9529"},{"uuid":"f14bc4fb-332f-4d24-b19d-700e2980d0a9","name":"Basilisk Scale","imageFile":"basilisk_scale.webp","quantity":8,"sourceId":"abf09e9a-0137-4323-959d-a75080cf81c4","isEngram":false,"compositionId":"5e210d04-15b6-4ce5-ac6f-f16d26440f7e"},{"uuid":"67ada26b-e096-46b2-9ed8-cd87a0048c20","name":"Black Pearl","imageFile":"black_pearl.webp","quantity":185,"sourceId":"2d39a819-2378-453d-943c-ff8ba3423b33","isEngram":false,"compositionId":"0fad513a-ea3d-4d04-be92-92e31b6cbd90"},{"uuid":"333be0f5-7aab-4daf-81ab-f9ef970a24e5","name":"Black Pearl","imageFile":"black_pearl.webp","quantity":55,"sourceId":"2d39a819-2378-453d-943c-ff8ba3423b33","isEngram":false,"compositionId":"8845df47-d67f-4cc8-ab6e-fcef4bdcb3cd"},{"uuid":"d4690368-35a9-44a6-850f-517fe7d5da04","name":"Blue Gem","imageFile":"blue_gem.webp","quantity":80,"sourceId":"ef7cb434-67be-48d5-88d8-33d2b4b7091b","isEngram":false,"compositionId":"9103668d-f238-4377-a905-cd12e814d039"},{"uuid":"a3895799-b5d1-4f9f-a066-039ed7625106","name":"Blue Gem","imageFile":"blue_gem.webp","quantity":25,"sourceId":"ef7cb434-67be-48d5-88d8-33d2b4b7091b","isEngram":false,"compositionId":"fae15dec-1f37-4857-8b46-4c6b07432cc8"},{"uuid":"e6dc279c-6b6d-46c3-9441-c6ca8cda35bf","name":"Blue Gem","imageFile":"blue_gem.webp","quantity":5,"sourceId":"ef7cb434-67be-48d5-88d8-33d2b4b7091b","isEngram":false,"compositionId":"2b0ca9b1-c71f-4cbf-87c2-33d11a0f2d23"},{"uuid":"f838d1f8-da9e-41f2-825e-4de1ede4468f","name":"Blue Gem","imageFile":"blue_gem.webp","quantity":8,"sourceId":"ef7cb434-67be-48d5-88d8-33d2b4b7091b","isEngram":false,"compositionId":"e2a67498-a38f-4ec3-b373-750c4ffc2ad9"},{"uuid":"65ccd839-bbbc-404b-8b80-49ba81d3b211","name":"Blue Gem","imageFile":"blue_gem.webp","quantity":25,"sourceId":"ef7cb434-67be-48d5-88d8-33d2b4b7091b","isEngram":false,"compositionId":"88079a36-eba4-4bb5-bb32-5341e6bc1224"},{"uuid":"417bc53f-2ffc-4cd8-b547-d8b9bb64f046","name":"Blue Gem","imageFile":"blue_gem.webp","quantity":20,"sourceId":"ef7cb434-67be-48d5-88d8-33d2b4b7091b","isEngram":false,"compositionId":"15752a81-632a-4db2-bb17-d51df108fc7d"},{"uuid":"f7c2f8d4-f5cd-4f26-ac31-903958310ae2","name":"Blue Gem","imageFile":"blue_gem.webp","quantity":25,"sourceId":"ef7cb434-67be-48d5-88d8-33d2b4b7091b","isEngram":false,"compositionId":"f6eaf7dc-e461-4800-9017-460c18ba970c"},{"uuid":"b99cc97a-a0a9-4b01-b415-77d20841b3f7","name":"Blue Gem","imageFile":"blue_gem.webp","quantity":200,"sourceId":"ef7cb434-67be-48d5-88d8-33d2b4b7091b","isEngram":false,"compositionId":"99146b25-372b-4748-b8ae-c0fdf35ae7d3"},{"uuid":"667f258a-2af3-472f-9947-6b56710cffaf","name":"Blue Gem","imageFile":"blue_gem.webp","quantity":15,"sourceId":"ef7cb434-67be-48d5-88d8-33d2b4b7091b","isEngram":false,"compositionId":"885a9c19-5342-4913-83ad-7c31f491c983"},{"uuid":"3f841d3a-63d2-48d5-b32a-53b40929951f","name":"Blue Gem","imageFile":"blue_gem.webp","quantity":40,"sourceId":"ef7cb434-67be-48d5-88d8-33d2b4b7091b","isEngram":false,"compositionId":"0fa80083-cadc-484a-b062-476bce4d79e2"},{"uuid":"34a4fd16-40ca-404c-9740-9dcfbb2968d4","name":"Cementing Paste","imageFile":"cementing_paste.webp","quantity":85,"sourceId":"f89bfa2e-0323-4d7f-ae07-2d45e17db0c0","isEngram":true,"compositionId":"c199b4a0-c317-453c-8a27-897838e514ce"},{"uuid":"9d11fc73-754b-4ebd-ae60-8984c2988265","name":"Cementing Paste","imageFile":"cementing_paste.webp","quantity":85,"sourceId":"f89bfa2e-0323-4d7f-ae07-2d45e17db0c0","isEngram":true,"compositionId":"9bda02e0-af68-4f10-9077-017b8ca957fc"},{"uuid":"35e9b212-9bc3-4ef0-8a95-7abea166942c","name":"Cementing Paste","imageFile":"cementing_paste.webp","quantity":60,"sourceId":"f89bfa2e-0323-4d7f-ae07-2d45e17db0c0","isEngram":true,"compositionId":"8bdaa12e-7753-42e4-a80b-86e411a8a04d"},{"uuid":"bd411c85-59f7-4aab-b293-5095922c7c06","name":"Cementing Paste","imageFile":"cementing_paste.webp","quantity":800,"sourceId":"f89bfa2e-0323-4d7f-ae07-2d45e17db0c0","isEngram":true,"compositionId":"99146b25-372b-4748-b8ae-c0fdf35ae7d3"},{"uuid":"c1a314b2-8767-4243-9f15-8a030725483c","name":"Cementing Paste","imageFile":"cementing_paste.webp","quantity":250,"sourceId":"f89bfa2e-0323-4d7f-ae07-2d45e17db0c0","isEngram":true,"compositionId":"ef241e63-af6e-420d-87f6-69e2303fef10"},{"uuid":"975e9291-45c4-4158-9e6b-881d538ff0ea","name":"Charge Battery","imageFile":"charge_battery.webp","quantity":2,"sourceId":"4325b461-0c9e-48e3-9493-806ce8e40951","isEngram":true,"compositionId":"03697756-b558-4081-948f-178744c48bc9"},{"uuid":"138e676d-3bc3-4946-9753-64295c63a101","name":"Congealed Gas Ball","imageFile":"congealed_gas_ball.webp","quantity":20,"sourceId":"7d9ee472-66e2-45ba-96f4-3917e452ca8a","isEngram":false,"compositionId":"785beb3b-3abd-4c7a-b140-a4671e7f5b93"},{"uuid":"35b4aa9d-b364-4a9c-99ba-577622a935ae","name":"Congealed Gas Ball","imageFile":"congealed_gas_ball.webp","quantity":400,"sourceId":"7d9ee472-66e2-45ba-96f4-3917e452ca8a","isEngram":false,"compositionId":"03697756-b558-4081-948f-178744c48bc9"},{"uuid":"f38bb37c-580e-4ad2-8c21-3a61f58fc900","name":"Congealed Gas Ball","imageFile":"congealed_gas_ball.webp","quantity":15,"sourceId":"7d9ee472-66e2-45ba-96f4-3917e452ca8a","isEngram":false,"compositionId":"2b0ca9b1-c71f-4cbf-87c2-33d11a0f2d23"},{"uuid":"862c8c5c-0076-471f-9e0f-2c93df18bd80","name":"Congealed Gas Ball","imageFile":"congealed_gas_ball.webp","quantity":15,"sourceId":"7d9ee472-66e2-45ba-96f4-3917e452ca8a","isEngram":false,"compositionId":"e2a67498-a38f-4ec3-b373-750c4ffc2ad9"},{"uuid":"0da19d0a-8131-46b7-9f10-8f4d7173dc94","name":"Congealed Gas Ball","imageFile":"congealed_gas_ball.webp","quantity":20,"sourceId":"7d9ee472-66e2-45ba-96f4-3917e452ca8a","isEngram":false,"compositionId":"88079a36-eba4-4bb5-bb32-5341e6bc1224"},{"uuid":"b2a1c3bb-b502-4095-b978-024bb7748003","name":"Congealed Gas Ball","imageFile":"congealed_gas_ball.webp","quantity":30,"sourceId":"7d9ee472-66e2-45ba-96f4-3917e452ca8a","isEngram":false,"compositionId":"15752a81-632a-4db2-bb17-d51df108fc7d"},{"uuid":"ab4b739f-4e5e-43a4-938e-42fac249e270","name":"Congealed Gas Ball","imageFile":"congealed_gas_ball.webp","quantity":45,"sourceId":"7d9ee472-66e2-45ba-96f4-3917e452ca8a","isEngram":false,"compositionId":"f6eaf7dc-e461-4800-9017-460c18ba970c"},{"uuid":"dba501a8-2389-421e-81af-ca88cd8f82e5","name":"Congealed Gas Ball","imageFile":"congealed_gas_ball.webp","quantity":3,"sourceId":"7d9ee472-66e2-45ba-96f4-3917e452ca8a","isEngram":false,"compositionId":"155d63f2-d685-4705-9457-80df91d4b35f"},{"uuid":"a507ba2c-bf43-426d-a763-8862493d857b","name":"Congealed Gas Ball","imageFile":"congealed_gas_ball.webp","quantity":12,"sourceId":"7d9ee472-66e2-45ba-96f4-3917e452ca8a","isEngram":false,"compositionId":"885a9c19-5342-4913-83ad-7c31f491c983"},{"uuid":"654b1702-c943-43e6-9594-335350326a4b","name":"Congealed Gas Ball","imageFile":"congealed_gas_ball.webp","quantity":525,"sourceId":"7d9ee472-66e2-45ba-96f4-3917e452ca8a","isEngram":false,"compositionId":"8845df47-d67f-4cc8-ab6e-fcef4bdcb3cd"},{"uuid":"3eca6b0a-a92b-416b-922f-e76d18dc6ac8","name":"Crystal","imageFile":"crystal.webp","quantity":325,"sourceId":"42578eef-d988-4ace-95f8-e91474503e96","isEngram":false,"compositionId":"0fad513a-ea3d-4d04-be92-92e31b6cbd90"},{"uuid":"01c74df6-db80-41b0-b1d4-0b3513ec0b4d","name":"Crystal","imageFile":"crystal.webp","quantity":4,"sourceId":"42578eef-d988-4ace-95f8-e91474503e96","isEngram":false,"compositionId":"785beb3b-3abd-4c7a-b140-a4671e7f5b93"},{"uuid":"70cef181-9564-4d4c-b060-4a176f32e019","name":"Crystal","imageFile":"crystal.webp","quantity":40,"sourceId":"42578eef-d988-4ace-95f8-e91474503e96","isEngram":false,"compositionId":"8bdaa12e-7753-42e4-a80b-86e411a8a04d"},{"uuid":"8aa258b6-7902-458a-9cb2-c2f216507f59","name":"Crystal","imageFile":"crystal.webp","quantity":10,"sourceId":"42578eef-d988-4ace-95f8-e91474503e96","isEngram":false,"compositionId":"2b0ca9b1-c71f-4cbf-87c2-33d11a0f2d23"},{"uuid":"3970d4f3-2855-4604-a365-cbefbca25717","name":"Crystal","imageFile":"crystal.webp","quantity":16,"sourceId":"42578eef-d988-4ace-95f8-e91474503e96","isEngram":false,"compositionId":"e2a67498-a38f-4ec3-b373-750c4ffc2ad9"},{"uuid":"fa5677b8-1a27-474b-adf2-bca3ad5faa21","name":"Crystal","imageFile":"crystal.webp","quantity":50,"sourceId":"42578eef-d988-4ace-95f8-e91474503e96","isEngram":false,"compositionId":"88079a36-eba4-4bb5-bb32-5341e6bc1224"},{"uuid":"6e29272c-edce-4116-aff0-b67799fc9df5","name":"Crystal","imageFile":"crystal.webp","quantity":40,"sourceId":"42578eef-d988-4ace-95f8-e91474503e96","isEngram":false,"compositionId":"15752a81-632a-4db2-bb17-d51df108fc7d"},{"uuid":"ecdc5dc4-da05-4017-94ea-ea5c8b808e10","name":"Crystal","imageFile":"crystal.webp","quantity":50,"sourceId":"42578eef-d988-4ace-95f8-e91474503e96","isEngram":false,"compositionId":"f6eaf7dc-e461-4800-9017-460c18ba970c"},{"uuid":"36a6ac4f-f30d-4e1c-8e51-0137df671bda","name":"Crystal","imageFile":"crystal.webp","quantity":2,"sourceId":"42578eef-d988-4ace-95f8-e91474503e96","isEngram":false,"compositionId":"7daa1590-20ef-4bf0-9cfa-70f185154b94"},{"uuid":"61da12c0-df02-47ed-a704-a4f15b0a1f62","name":"Electronics","imageFile":"electronics.webp","quantity":120,"sourceId":"5ad4b23a-feff-4bc3-86d5-25df032067b4","isEngram":true,"compositionId":"03697756-b558-4081-948f-178744c48bc9"},{"uuid":"8c0670cb-b728-48a8-b032-35bf2dac750e","name":"Electronics","imageFile":"electronics.webp","quantity":15,"sourceId":"5ad4b23a-feff-4bc3-86d5-25df032067b4","isEngram":true,"compositionId":"0fa80083-cadc-484a-b062-476bce4d79e2"},{"uuid":"0350cd8c-0b5b-4136-880f-cf641f098440","name":"Element","imageFile":"element.webp","quantity":75,"sourceId":"141d3b93-887b-4a3d-a97a-ff529ec1b91f","isEngram":true,"compositionId":"0fad513a-ea3d-4d04-be92-92e31b6cbd90"},{"uuid":"9ab960eb-47ac-4ce2-9b60-f7634d2f3366","name":"Element","imageFile":"element.webp","quantity":20,"sourceId":"141d3b93-887b-4a3d-a97a-ff529ec1b91f","isEngram":true,"compositionId":"8845df47-d67f-4cc8-ab6e-fcef4bdcb3cd"},{"uuid":"1f008c9e-c395-4937-b18c-fb2bd4e6eaef","name":"Fiber","imageFile":"fiber.webp","quantity":150,"sourceId":"a5f8bb2e-29ca-406f-ab9b-053810485884","isEngram":false,"compositionId":"c199b4a0-c317-453c-8a27-897838e514ce"},{"uuid":"92a217be-e1d5-43a3-a53b-53e957278e96","name":"Fiber","imageFile":"fiber.webp","quantity":225,"sourceId":"a5f8bb2e-29ca-406f-ab9b-053810485884","isEngram":false,"compositionId":"9103668d-f238-4377-a905-cd12e814d039"},{"uuid":"117505fa-1771-4139-b00c-077157bba63d","name":"Fiber","imageFile":"fiber.webp","quantity":125,"sourceId":"a5f8bb2e-29ca-406f-ab9b-053810485884","isEngram":false,"compositionId":"a34d5739-6cbe-44e1-9e18-e7f3f8cf2149"},{"uuid":"aca21cb8-ddb0-4e5f-bdc0-0616c197eb3a","name":"Fiber","imageFile":"fiber.webp","quantity":225,"sourceId":"a5f8bb2e-29ca-406f-ab9b-053810485884","isEngram":false,"compositionId":"0d2fc7bc-dc33-4df1-9813-906ec8b896cb"},{"uuid":"dde97dac-f68e-45cd-a417-00427111e3dd","name":"Fiber","imageFile":"fiber.webp","quantity":150,"sourceId":"a5f8bb2e-29ca-406f-ab9b-053810485884","isEngram":false,"compositionId":"9bda02e0-af68-4f10-9077-017b8ca957fc"},{"uuid":"99558aba-6134-4b36-a67b-78d0e930f95a","name":"Fiber","imageFile":"fiber.webp","quantity":10,"sourceId":"a5f8bb2e-29ca-406f-ab9b-053810485884","isEngram":false,"compositionId":"da1f48d8-9b8a-4ddd-882b-628a65c52d47"},{"uuid":"18462264-b0d7-4641-bab8-b647b38c8d5a","name":"Fiber","imageFile":"fiber.webp","quantity":120,"sourceId":"a5f8bb2e-29ca-406f-ab9b-053810485884","isEngram":false,"compositionId":"13af35e7-c5a9-48c1-85ab-1f6bbc431cb4"},{"uuid":"b2be136f-44d6-4049-86d0-b9d88af81d55","name":"Fiber","imageFile":"fiber.webp","quantity":100,"sourceId":"a5f8bb2e-29ca-406f-ab9b-053810485884","isEngram":false,"compositionId":"fae15dec-1f37-4857-8b46-4c6b07432cc8"},{"uuid":"26297149-28c1-4de1-be04-874518cf87ec","name":"Fiber","imageFile":"fiber.webp","quantity":25,"sourceId":"a5f8bb2e-29ca-406f-ab9b-053810485884","isEngram":false,"compositionId":"2b0ca9b1-c71f-4cbf-87c2-33d11a0f2d23"},{"uuid":"f074e0f2-3cf3-4946-b7e6-a18d389c5d7c","name":"Fiber","imageFile":"fiber.webp","quantity":35,"sourceId":"a5f8bb2e-29ca-406f-ab9b-053810485884","isEngram":false,"compositionId":"e2a67498-a38f-4ec3-b373-750c4ffc2ad9"},{"uuid":"e9c057ba-462f-4c0f-9423-ecbd16a2fe9b","name":"Fiber","imageFile":"fiber.webp","quantity":45,"sourceId":"a5f8bb2e-29ca-406f-ab9b-053810485884","isEngram":false,"compositionId":"88079a36-eba4-4bb5-bb32-5341e6bc1224"},{"uuid":"8b627594-8653-43ef-bc4b-b7c9a4763d9d","name":"Fiber","imageFile":"fiber.webp","quantity":65,"sourceId":"a5f8bb2e-29ca-406f-ab9b-053810485884","isEngram":false,"compositionId":"15752a81-632a-4db2-bb17-d51df108fc7d"},{"uuid":"a9e611b0-31ee-426e-a9ea-609ab45107a4","name":"Fiber","imageFile":"fiber.webp","quantity":65,"sourceId":"a5f8bb2e-29ca-406f-ab9b-053810485884","isEngram":false,"compositionId":"f6eaf7dc-e461-4800-9017-460c18ba970c"},{"uuid":"392cc064-fcda-4fb9-80f4-845a907184d2","name":"Fiber","imageFile":"fiber.webp","quantity":600,"sourceId":"a5f8bb2e-29ca-406f-ab9b-053810485884","isEngram":false,"compositionId":"e4961dd3-bdf7-4749-8083-f0c986bab3dd"},{"uuid":"61b8898a-1c58-43a7-9474-1939cba71124","name":"Fiber","imageFile":"fiber.webp","quantity":350,"sourceId":"a5f8bb2e-29ca-406f-ab9b-053810485884","isEngram":false,"compositionId":"df9ef7c8-8e68-49e6-87b8-d71ed277fde1"},{"uuid":"9d51b527-d4f1-402e-a32d-03a0e8e8909c","name":"Fiber","imageFile":"fiber.webp","quantity":175,"sourceId":"a5f8bb2e-29ca-406f-ab9b-053810485884","isEngram":false,"compositionId":"f9001290-ae60-4d30-9b27-3391d7ad7073"},{"uuid":"4dcfbbc5-4543-4a3c-9171-2d9fa197947e","name":"Fiber","imageFile":"fiber.webp","quantity":200,"sourceId":"a5f8bb2e-29ca-406f-ab9b-053810485884","isEngram":false,"compositionId":"b03b879e-3fe2-41f7-88b8-b09803838070"},{"uuid":"80a925ca-f228-475f-ba81-ac7ca2937213","name":"Fiber","imageFile":"fiber.webp","quantity":45,"sourceId":"a5f8bb2e-29ca-406f-ab9b-053810485884","isEngram":false,"compositionId":"b19a06a0-7c25-4528-9801-e61024bfd716"},{"uuid":"2b2f7c67-c418-4b33-9b21-afda345344c1","name":"Fiber","imageFile":"fiber.webp","quantity":600,"sourceId":"a5f8bb2e-29ca-406f-ab9b-053810485884","isEngram":false,"compositionId":"ef241e63-af6e-420d-87f6-69e2303fef10"},{"uuid":"29cec5e7-4a56-42ac-ad5c-4fd3d56981ee","name":"Fiber","imageFile":"fiber.webp","quantity":180,"sourceId":"a5f8bb2e-29ca-406f-ab9b-053810485884","isEngram":false,"compositionId":"e8be1237-9a8c-4fb2-a987-ff4fa604a1d7"},{"uuid":"5b93f91b-03cb-4f37-9d6e-61713e555c76","name":"Fiber","imageFile":"fiber.webp","quantity":280,"sourceId":"a5f8bb2e-29ca-406f-ab9b-053810485884","isEngram":false,"compositionId":"e6488604-3190-4aba-8d5b-e5864f5a5412"},{"uuid":"1a222274-cac8-4187-8726-0778afd0a211","name":"Fiber","imageFile":"fiber.webp","quantity":100,"sourceId":"a5f8bb2e-29ca-406f-ab9b-053810485884","isEngram":false,"compositionId":"333b279d-db49-4a50-9664-1d1babcd9743"},{"uuid":"12b4d620-03bb-4135-9af4-a159571dde2e","name":"Flint","imageFile":"flint.webp","quantity":70,"sourceId":"d888198a-3ea9-4dea-83a6-85c73033cc62","isEngram":false,"compositionId":"885a9c19-5342-4913-83ad-7c31f491c983"},{"uuid":"7897af49-e38a-416a-ac56-62f5fdbc14c5","name":"Fungal Wood","imageFile":"fungal_wood.webp","quantity":200,"sourceId":"fb12dda3-5c15-41ab-b9d3-c1271ee81492","isEngram":false,"compositionId":"9103668d-f238-4377-a905-cd12e814d039"},{"uuid":"413fd0a5-ccdb-4e95-ae95-d7cafd401517","name":"Fungal Wood","imageFile":"fungal_wood.webp","quantity":110,"sourceId":"fb12dda3-5c15-41ab-b9d3-c1271ee81492","isEngram":false,"compositionId":"a34d5739-6cbe-44e1-9e18-e7f3f8cf2149"},{"uuid":"e6993fce-5df4-4b2a-ab07-2fe94078b19d","name":"Fungal Wood","imageFile":"fungal_wood.webp","quantity":2,"sourceId":"fb12dda3-5c15-41ab-b9d3-c1271ee81492","isEngram":false,"compositionId":"da1f48d8-9b8a-4ddd-882b-628a65c52d47"},{"uuid":"f6395eee-3ed7-460b-825a-cc77abad6a41","name":"Fungal Wood","imageFile":"fungal_wood.webp","quantity":60,"sourceId":"fb12dda3-5c15-41ab-b9d3-c1271ee81492","isEngram":false,"compositionId":"13af35e7-c5a9-48c1-85ab-1f6bbc431cb4"},{"uuid":"751e84ca-28de-413a-b4ee-e815561de5c7","name":"Fungal Wood","imageFile":"fungal_wood.webp","quantity":270,"sourceId":"fb12dda3-5c15-41ab-b9d3-c1271ee81492","isEngram":false,"compositionId":"e4961dd3-bdf7-4749-8083-f0c986bab3dd"},{"uuid":"5e39852d-6127-454b-9b5e-61453bcc051d","name":"Fungal Wood","imageFile":"fungal_wood.webp","quantity":285,"sourceId":"fb12dda3-5c15-41ab-b9d3-c1271ee81492","isEngram":false,"compositionId":"df9ef7c8-8e68-49e6-87b8-d71ed277fde1"},{"uuid":"3f6038ec-cc97-4c78-bfef-edcb48567d3e","name":"Fungal Wood","imageFile":"fungal_wood.webp","quantity":175,"sourceId":"fb12dda3-5c15-41ab-b9d3-c1271ee81492","isEngram":false,"compositionId":"f9001290-ae60-4d30-9b27-3391d7ad7073"},{"uuid":"35108fd9-04e8-4659-86cc-575cff6106a3","name":"Fungal Wood","imageFile":"fungal_wood.webp","quantity":125,"sourceId":"fb12dda3-5c15-41ab-b9d3-c1271ee81492","isEngram":false,"compositionId":"b03b879e-3fe2-41f7-88b8-b09803838070"},{"uuid":"899922df-dcf2-40f3-a38b-3e21994b2e5f","name":"Fungal Wood","imageFile":"fungal_wood.webp","quantity":80,"sourceId":"fb12dda3-5c15-41ab-b9d3-c1271ee81492","isEngram":false,"compositionId":"b19a06a0-7c25-4528-9801-e61024bfd716"},{"uuid":"41429946-5a1e-4cf6-8e76-3f0992010355","name":"Fungal Wood","imageFile":"fungal_wood.webp","quantity":800,"sourceId":"fb12dda3-5c15-41ab-b9d3-c1271ee81492","isEngram":false,"compositionId":"ef241e63-af6e-420d-87f6-69e2303fef10"},{"uuid":"a37fbedd-adce-479c-be9e-aff133c22197","name":"Fungal Wood","imageFile":"fungal_wood.webp","quantity":15,"sourceId":"fb12dda3-5c15-41ab-b9d3-c1271ee81492","isEngram":false,"compositionId":"e8be1237-9a8c-4fb2-a987-ff4fa604a1d7"},{"uuid":"48bc74b4-dfa7-4095-ba8b-d81016f91a78","name":"Fungal Wood","imageFile":"fungal_wood.webp","quantity":10,"sourceId":"fb12dda3-5c15-41ab-b9d3-c1271ee81492","isEngram":false,"compositionId":"b8d7813d-f7f5-40ea-a345-c25434c0d4d4"},{"uuid":"72fbe854-99ac-4a98-85d7-56118d0a0b30","name":"Fungal Wood","imageFile":"fungal_wood.webp","quantity":8,"sourceId":"fb12dda3-5c15-41ab-b9d3-c1271ee81492","isEngram":false,"compositionId":"333b279d-db49-4a50-9664-1d1babcd9743"},{"uuid":"e9ed1dd4-6e85-4980-8fcd-497066f29749","name":"Green Gem","imageFile":"green_gem.webp","quantity":45,"sourceId":"c138f1fd-79f0-444b-9a9d-204de1ba3c6d","isEngram":false,"compositionId":"c199b4a0-c317-453c-8a27-897838e514ce"},{"uuid":"9067b056-96f3-4e74-961a-5ea8db675ab1","name":"Green Gem","imageFile":"green_gem.webp","quantity":45,"sourceId":"c138f1fd-79f0-444b-9a9d-204de1ba3c6d","isEngram":false,"compositionId":"9bda02e0-af68-4f10-9077-017b8ca957fc"},{"uuid":"869b4268-8bc0-4ab2-a161-0cafefc43a75","name":"Green Gem","imageFile":"green_gem.webp","quantity":4,"sourceId":"c138f1fd-79f0-444b-9a9d-204de1ba3c6d","isEngram":false,"compositionId":"da1f48d8-9b8a-4ddd-882b-628a65c52d47"},{"uuid":"78ca3297-9edc-4613-a675-cf653d0717f4","name":"Green Gem","imageFile":"green_gem.webp","quantity":20,"sourceId":"c138f1fd-79f0-444b-9a9d-204de1ba3c6d","isEngram":false,"compositionId":"8bdaa12e-7753-42e4-a80b-86e411a8a04d"},{"uuid":"faf194bf-afd4-4b67-9e04-8c1f32eeed48","name":"Green Gem","imageFile":"green_gem.webp","quantity":1,"sourceId":"c138f1fd-79f0-444b-9a9d-204de1ba3c6d","isEngram":false,"compositionId":"7daa1590-20ef-4bf0-9cfa-70f185154b94"},{"uuid":"48b20e17-e596-4bfb-8b2f-b433b81d12d1","name":"Hide","imageFile":"hide.webp","quantity":270,"sourceId":"38832ff7-1ccf-488a-a806-f18391326701","isEngram":false,"compositionId":"c199b4a0-c317-453c-8a27-897838e514ce"},{"uuid":"3c51a2ec-a797-464d-8dd6-7b5ee918bc77","name":"Hide","imageFile":"hide.webp","quantity":170,"sourceId":"38832ff7-1ccf-488a-a806-f18391326701","isEngram":false,"compositionId":"9103668d-f238-4377-a905-cd12e814d039"},{"uuid":"ef6e8ebd-7dd1-4c52-838a-2af65195b082","name":"Hide","imageFile":"hide.webp","quantity":285,"sourceId":"38832ff7-1ccf-488a-a806-f18391326701","isEngram":false,"compositionId":"a34d5739-6cbe-44e1-9e18-e7f3f8cf2149"},{"uuid":"7cf426bd-7bb6-430c-b113-d795a797e5b1","name":"Hide","imageFile":"hide.webp","quantity":350,"sourceId":"38832ff7-1ccf-488a-a806-f18391326701","isEngram":false,"compositionId":"0d2fc7bc-dc33-4df1-9813-906ec8b896cb"},{"uuid":"37880b25-cd24-4585-a73e-c6ee6c18bf08","name":"Hide","imageFile":"hide.webp","quantity":270,"sourceId":"38832ff7-1ccf-488a-a806-f18391326701","isEngram":false,"compositionId":"9bda02e0-af68-4f10-9077-017b8ca957fc"},{"uuid":"68c29a8e-5053-4f55-bf40-804ceb17e4f8","name":"Hide","imageFile":"hide.webp","quantity":60,"sourceId":"38832ff7-1ccf-488a-a806-f18391326701","isEngram":false,"compositionId":"fae15dec-1f37-4857-8b46-4c6b07432cc8"},{"uuid":"bd4776dd-d794-4f5d-967c-205c3fbc310f","name":"Hide","imageFile":"hide.webp","quantity":20,"sourceId":"38832ff7-1ccf-488a-a806-f18391326701","isEngram":false,"compositionId":"2b0ca9b1-c71f-4cbf-87c2-33d11a0f2d23"},{"uuid":"ee370230-4ddb-44c9-a73b-0810c168e9dd","name":"Hide","imageFile":"hide.webp","quantity":15,"sourceId":"38832ff7-1ccf-488a-a806-f18391326701","isEngram":false,"compositionId":"e2a67498-a38f-4ec3-b373-750c4ffc2ad9"},{"uuid":"1eab3832-4295-496d-a1e4-38b590fcc2ae","name":"Hide","imageFile":"hide.webp","quantity":30,"sourceId":"38832ff7-1ccf-488a-a806-f18391326701","isEngram":false,"compositionId":"88079a36-eba4-4bb5-bb32-5341e6bc1224"},{"uuid":"85247346-d2b9-4feb-b72e-7c5a7366a2d5","name":"Hide","imageFile":"hide.webp","quantity":45,"sourceId":"38832ff7-1ccf-488a-a806-f18391326701","isEngram":false,"compositionId":"15752a81-632a-4db2-bb17-d51df108fc7d"},{"uuid":"71655e24-7086-4bf6-a4a3-f7c78f32f90b","name":"Hide","imageFile":"hide.webp","quantity":45,"sourceId":"38832ff7-1ccf-488a-a806-f18391326701","isEngram":false,"compositionId":"f6eaf7dc-e461-4800-9017-460c18ba970c"},{"uuid":"48a475fc-f8e9-4644-be8e-c24e08f62e9a","name":"Hide","imageFile":"hide.webp","quantity":30,"sourceId":"38832ff7-1ccf-488a-a806-f18391326701","isEngram":false,"compositionId":"b8d7813d-f7f5-40ea-a345-c25434c0d4d4"},{"uuid":"665d0347-32d2-4c8b-b908-7596a2077d09","name":"Hide","imageFile":"hide.webp","quantity":120,"sourceId":"38832ff7-1ccf-488a-a806-f18391326701","isEngram":false,"compositionId":"e6488604-3190-4aba-8d5b-e5864f5a5412"},{"uuid":"211157e7-d883-472c-ab6e-53692f42caa0","name":"Metal Ingot","imageFile":"metal_ingot.webp","quantity":425,"sourceId":"7d40cf2a-c24c-49fb-9912-d86a1b497036","isEngram":true,"compositionId":"c199b4a0-c317-453c-8a27-897838e514ce"},{"uuid":"4c5ddfa8-c6e3-46ab-8f04-5d9d9b6be674","name":"Metal Ingot","imageFile":"metal_ingot.webp","quantity":125,"sourceId":"7d40cf2a-c24c-49fb-9912-d86a1b497036","isEngram":true,"compositionId":"0d2fc7bc-dc33-4df1-9813-906ec8b896cb"},{"uuid":"5356ae6e-ec35-4608-9288-92afcbb59913","name":"Metal Ingot","imageFile":"metal_ingot.webp","quantity":2350,"sourceId":"7d40cf2a-c24c-49fb-9912-d86a1b497036","isEngram":true,"compositionId":"0fad513a-ea3d-4d04-be92-92e31b6cbd90"},{"uuid":"b832e47a-bdad-4923-b8d3-0ed299716bf1","name":"Metal Ingot","imageFile":"metal_ingot.webp","quantity":425,"sourceId":"7d40cf2a-c24c-49fb-9912-d86a1b497036","isEngram":true,"compositionId":"9bda02e0-af68-4f10-9077-017b8ca957fc"},{"uuid":"600e890e-370b-4e31-a4e9-f04e1f3d8859","name":"Metal Ingot","imageFile":"metal_ingot.webp","quantity":10,"sourceId":"7d40cf2a-c24c-49fb-9912-d86a1b497036","isEngram":true,"compositionId":"785beb3b-3abd-4c7a-b140-a4671e7f5b93"},{"uuid":"8677e0b1-ccbd-41f8-a532-86ba53c206fc","name":"Metal Ingot","imageFile":"metal_ingot.webp","quantity":130,"sourceId":"7d40cf2a-c24c-49fb-9912-d86a1b497036","isEngram":true,"compositionId":"03697756-b558-4081-948f-178744c48bc9"},{"uuid":"37309b77-c661-4c3e-88a6-9f2f14ff2852","name":"Metal Ingot","imageFile":"metal_ingot.webp","quantity":8,"sourceId":"7d40cf2a-c24c-49fb-9912-d86a1b497036","isEngram":true,"compositionId":"da1f48d8-9b8a-4ddd-882b-628a65c52d47"},{"uuid":"9116caf2-1c22-4c0d-94b7-0bc9e094bde5","name":"Metal Ingot","imageFile":"metal_ingot.webp","quantity":75,"sourceId":"7d40cf2a-c24c-49fb-9912-d86a1b497036","isEngram":true,"compositionId":"8bdaa12e-7753-42e4-a80b-86e411a8a04d"},{"uuid":"4a53c2da-452a-49b5-89df-ee3554d0b6f3","name":"Metal Ingot","imageFile":"metal_ingot.webp","quantity":60,"sourceId":"7d40cf2a-c24c-49fb-9912-d86a1b497036","isEngram":true,"compositionId":"fae15dec-1f37-4857-8b46-4c6b07432cc8"},{"uuid":"2a654e45-aa6a-4034-b037-b47cd648154e","name":"Metal Ingot","imageFile":"metal_ingot.webp","quantity":85,"sourceId":"7d40cf2a-c24c-49fb-9912-d86a1b497036","isEngram":true,"compositionId":"e4961dd3-bdf7-4749-8083-f0c986bab3dd"},{"uuid":"88e30a1c-25ad-4e2c-9fdb-7ca249cdb13b","name":"Metal Ingot","imageFile":"metal_ingot.webp","quantity":30,"sourceId":"7d40cf2a-c24c-49fb-9912-d86a1b497036","isEngram":true,"compositionId":"df9ef7c8-8e68-49e6-87b8-d71ed277fde1"},{"uuid":"88843402-b853-4201-9744-7655441851f9","name":"Metal Ingot","imageFile":"metal_ingot.webp","quantity":20,"sourceId":"7d40cf2a-c24c-49fb-9912-d86a1b497036","isEngram":true,"compositionId":"f9001290-ae60-4d30-9b27-3391d7ad7073"},{"uuid":"ca0dfbea-7fc5-4a3c-a679-665777067855","name":"Metal Ingot","imageFile":"metal_ingot.webp","quantity":35,"sourceId":"7d40cf2a-c24c-49fb-9912-d86a1b497036","isEngram":true,"compositionId":"b03b879e-3fe2-41f7-88b8-b09803838070"},{"uuid":"e2689519-3642-46a6-84b7-317fcef4fdb4","name":"Metal Ingot","imageFile":"metal_ingot.webp","quantity":5,"sourceId":"7d40cf2a-c24c-49fb-9912-d86a1b497036","isEngram":true,"compositionId":"b19a06a0-7c25-4528-9801-e61024bfd716"},{"uuid":"bf3e2876-04a2-4968-baef-e0085830d6a6","name":"Metal Ingot","imageFile":"metal_ingot.webp","quantity":120,"sourceId":"7d40cf2a-c24c-49fb-9912-d86a1b497036","isEngram":true,"compositionId":"99146b25-372b-4748-b8ae-c0fdf35ae7d3"},{"uuid":"b71e8684-52f6-4d6c-b6d2-881eb309d570","name":"Metal Ingot","imageFile":"metal_ingot.webp","quantity":15,"sourceId":"7d40cf2a-c24c-49fb-9912-d86a1b497036","isEngram":true,"compositionId":"885a9c19-5342-4913-83ad-7c31f491c983"},{"uuid":"76fa249e-5522-4b6f-a2c1-bdc15a91545e","name":"Metal Ingot","imageFile":"metal_ingot.webp","quantity":120,"sourceId":"7d40cf2a-c24c-49fb-9912-d86a1b497036","isEngram":true,"compositionId":"8845df47-d67f-4cc8-ab6e-fcef4bdcb3cd"},{"uuid":"8553a8ee-be0c-4b5a-9530-40beb63135e5","name":"Metal Ingot","imageFile":"metal_ingot.webp","quantity":320,"sourceId":"7d40cf2a-c24c-49fb-9912-d86a1b497036","isEngram":true,"compositionId":"e6488604-3190-4aba-8d5b-e5864f5a5412"},{"uuid":"d429fe3d-e6da-4ebf-b542-8cc67c736509","name":"Metal Ingot","imageFile":"metal_ingot.webp","quantity":15,"sourceId":"7d40cf2a-c24c-49fb-9912-d86a1b497036","isEngram":true,"compositionId":"333b279d-db49-4a50-9664-1d1babcd9743"},{"uuid":"c4b7d7a2-3178-4353-99d5-cad097783bdc","name":"Metal Ingot","imageFile":"metal_ingot.webp","quantity":60,"sourceId":"7d40cf2a-c24c-49fb-9912-d86a1b497036","isEngram":true,"compositionId":"0fa80083-cadc-484a-b062-476bce4d79e2"},{"uuid":"24f59751-7e1c-416a-9d66-a26dc3586af2","name":"Nameless Venom","imageFile":"nameless_venom.webp","quantity":12,"sourceId":"d96209bd-bfca-4fae-9de3-097b2d1f1af6","isEngram":false,"compositionId":"e78134d6-92ed-418e-abeb-f3270ffc9529"},{"uuid":"34e412f5-7b58-4d3b-9ee6-fe0955d7a228","name":"Nameless Venom","imageFile":"nameless_venom.webp","quantity":20,"sourceId":"d96209bd-bfca-4fae-9de3-097b2d1f1af6","isEngram":false,"compositionId":"5e210d04-15b6-4ce5-ac6f-f16d26440f7e"},{"uuid":"41adfd73-cacb-474e-a786-ba050609d65b","name":"Obsidian","imageFile":"obsidian.webp","quantity":10,"sourceId":"c3d03aa4-35b0-44e0-980e-fbffe807442b","isEngram":false,"compositionId":"885a9c19-5342-4913-83ad-7c31f491c983"},{"uuid":"2049280c-28d7-4fdf-a3b0-07442b0c2e7e","name":"Pelt, Hair, or Wool","imageFile":"pelt_hair_or_wool.webp","quantity":140,"sourceId":"4bcf0452-e5ae-473d-a1cc-17fe4b293a0d","isEngram":false,"compositionId":"b8d7813d-f7f5-40ea-a345-c25434c0d4d4"},{"uuid":"9f4a0b39-304c-40af-abc9-80aec3d87b63","name":"Pelt, Hair, or Wool","imageFile":"pelt_hair_or_wool.webp","quantity":200,"sourceId":"4bcf0452-e5ae-473d-a1cc-17fe4b293a0d","isEngram":false,"compositionId":"e6488604-3190-4aba-8d5b-e5864f5a5412"},{"uuid":"f7f830a4-0f3e-463b-ac0a-7d3b0d0b5e4b","name":"Polymer","imageFile":"polymer.webp","quantity":270,"sourceId":"d30752f8-ca63-45cb-8340-b24de54af103","isEngram":true,"compositionId":"0fad513a-ea3d-4d04-be92-92e31b6cbd90"},{"uuid":"813cd0aa-be62-4036-a6b4-0bdc28b53fed","name":"Polymer","imageFile":"polymer.webp","quantity":15,"sourceId":"d30752f8-ca63-45cb-8340-b24de54af103","isEngram":true,"compositionId":"785beb3b-3abd-4c7a-b140-a4671e7f5b93"},{"uuid":"810b9613-7fc5-4abf-a7e7-f53d49487462","name":"Polymer","imageFile":"polymer.webp","quantity":120,"sourceId":"d30752f8-ca63-45cb-8340-b24de54af103","isEngram":true,"compositionId":"03697756-b558-4081-948f-178744c48bc9"},{"uuid":"559a6ee0-6d5b-4481-8e6d-d4db0c02527d","name":"Polymer","imageFile":"polymer.webp","quantity":10,"sourceId":"d30752f8-ca63-45cb-8340-b24de54af103","isEngram":true,"compositionId":"2b0ca9b1-c71f-4cbf-87c2-33d11a0f2d23"},{"uuid":"6ce6e2f2-6806-4d43-92b9-59d5292a28c4","name":"Polymer","imageFile":"polymer.webp","quantity":2,"sourceId":"d30752f8-ca63-45cb-8340-b24de54af103","isEngram":true,"compositionId":"e2a67498-a38f-4ec3-b373-750c4ffc2ad9"},{"uuid":"63f3c06e-6911-450e-9f16-a61f9c9eadef","name":"Polymer","imageFile":"polymer.webp","quantity":20,"sourceId":"d30752f8-ca63-45cb-8340-b24de54af103","isEngram":true,"compositionId":"88079a36-eba4-4bb5-bb32-5341e6bc1224"},{"uuid":"7a3377ab-1d73-4282-a89c-571eb5906b5d","name":"Polymer","imageFile":"polymer.webp","quantity":15,"sourceId":"d30752f8-ca63-45cb-8340-b24de54af103","isEngram":true,"compositionId":"15752a81-632a-4db2-bb17-d51df108fc7d"},{"uuid":"a4fadbe8-7c8a-480a-96b5-106c3c677445","name":"Polymer","imageFile":"polymer.webp","quantity":25,"sourceId":"d30752f8-ca63-45cb-8340-b24de54af103","isEngram":true,"compositionId":"f6eaf7dc-e461-4800-9017-460c18ba970c"},{"uuid":"c48c6d29-52f0-42bf-a62e-aa81ea9a1e24","name":"Polymer","imageFile":"polymer.webp","quantity":450,"sourceId":"d30752f8-ca63-45cb-8340-b24de54af103","isEngram":true,"compositionId":"8845df47-d67f-4cc8-ab6e-fcef4bdcb3cd"},{"uuid":"20368550-1d33-494a-9392-4245fca4fc19","name":"Polymer","imageFile":"polymer.webp","quantity":80,"sourceId":"d30752f8-ca63-45cb-8340-b24de54af103","isEngram":true,"compositionId":"e6488604-3190-4aba-8d5b-e5864f5a5412"},{"uuid":"ee199fe7-49c5-4086-b565-21ab48a12ed3","name":"Reaper Pheromone Gland","imageFile":"reaper_pheromone_gland.webp","quantity":2,"sourceId":"f5ecc4b9-af70-4f2a-ba06-2606157415b3","isEngram":false,"compositionId":"e78134d6-92ed-418e-abeb-f3270ffc9529"},{"uuid":"d4458f26-fe2a-45ea-9955-2dbe76ec7880","name":"Reaper Pheromone Gland","imageFile":"reaper_pheromone_gland.webp","quantity":7,"sourceId":"f5ecc4b9-af70-4f2a-ba06-2606157415b3","isEngram":false,"compositionId":"5e210d04-15b6-4ce5-ac6f-f16d26440f7e"},{"uuid":"97c158f7-a9d2-46e9-9f97-13b4c4958317","name":"Red Gem","imageFile":"red_gem.webp","quantity":85,"sourceId":"09b80640-c5b8-4adb-9300-89cebbac5f66","isEngram":false,"compositionId":"0d2fc7bc-dc33-4df1-9813-906ec8b896cb"},{"uuid":"e3184bd0-b6b6-4e2e-adfc-7246edde9c36","name":"Red Gem","imageFile":"red_gem.webp","quantity":80,"sourceId":"09b80640-c5b8-4adb-9300-89cebbac5f66","isEngram":false,"compositionId":"03697756-b558-4081-948f-178744c48bc9"},{"uuid":"a1803f64-fc65-4c9d-b017-2a010bce82bc","name":"Red Gem","imageFile":"red_gem.webp","quantity":120,"sourceId":"09b80640-c5b8-4adb-9300-89cebbac5f66","isEngram":false,"compositionId":"8845df47-d67f-4cc8-ab6e-fcef4bdcb3cd"},{"uuid":"fbda807a-c351-4b1a-8a55-4e2a0a27adc5","name":"Rock Drake Feather","imageFile":"rock_drake_feather.webp","quantity":2,"sourceId":"e032aac3-40f3-42e5-b31a-d1acf0fd484f","isEngram":false,"compositionId":"e78134d6-92ed-418e-abeb-f3270ffc9529"},{"uuid":"65d2d64b-5409-4ea7-8aac-3f1d841a841e","name":"Rock Drake Feather","imageFile":"rock_drake_feather.webp","quantity":7,"sourceId":"e032aac3-40f3-42e5-b31a-d1acf0fd484f","isEngram":false,"compositionId":"5e210d04-15b6-4ce5-ac6f-f16d26440f7e"},{"uuid":"dd1117e3-3ecc-4e17-aaf7-b5ee62b4fff8","name":"Sap","imageFile":"sap.webp","quantity":3,"sourceId":"db1138e5-8f0b-48ce-ac1f-56efce7a98f6","isEngram":false,"compositionId":"155d63f2-d685-4705-9457-80df91d4b35f"},{"uuid":"8cf9bfd2-9c7f-49cd-a08a-7af5f6edce44","name":"Stone","imageFile":"stone.webp","quantity":1200,"sourceId":"b25e9378-8298-4bcd-bac5-cf1ed5bb39c9","isEngram":false,"compositionId":"ef241e63-af6e-420d-87f6-69e2303fef10"},{"uuid":"f20d0919-2a26-433f-a326-db0e6aeaeffa","name":"Stone Arrow","imageFile":"stone_arrow.webp","quantity":2,"sourceId":"0badd773-dbff-4a7b-9f5a-13825430ca71","isEngram":true,"compositionId":"333b279d-db49-4a50-9664-1d1babcd9743"},{"uuid":"b8c39046-1066-4215-acd4-f0cc2892d5a0","name":"Thatch","imageFile":"thatch.webp","quantity":40,"sourceId":"2755f800-9a64-43ff-acba-379ec759a49b","isEngram":false,"compositionId":"13af35e7-c5a9-48c1-85ab-1f6bbc431cb4"},{"uuid":"e582aac4-d931-4020-96a4-2288c3854e17","name":"Thatch","imageFile":"thatch.webp","quantity":140,"sourceId":"2755f800-9a64-43ff-acba-379ec759a49b","isEngram":false,"compositionId":"e8be1237-9a8c-4fb2-a987-ff4fa604a1d7"},{"uuid":"fc26de68-0e94-446a-a61d-07b323538e41","name":"Water","imageFile":"water.webp","quantity":1,"sourceId":"efdbd8dd-004a-4aa0-a65a-ad204bb4e02c","isEngram":false,"compositionId":"155d63f2-d685-4705-9457-80df91d4b35f"}],"directory":[{"uuid":"5d591f62-80ed-4a81-a4de-54ef27a499f3","name":"Ammo","imageFile":"folder.webp","viewType":1,"parentId":"08c73cd4-21e7-4089-af22-1f2526149ea6","sourceId":"f6957eda-8f56-4a1e-8f37-96e5ec1eb872"},{"uuid":"c61f493b-558b-40ff-9e04-8774a4ecfcf1","name":"Armor","imageFile":"folder.webp","viewType":1,"parentId":"650f2659-131d-4a1b-b661-05b71f0ac789","sourceId":"ced08f46-8cd6-4618-9c39-d54f6a32269f"},{"uuid":"50ad584d-da84-4604-a865-989e785a6730","name":"Armor","imageFile":"folder.webp","viewType":1,"parentId":"f3dd4e09-c791-49cc-b078-be1840d4b6b2","sourceId":"ced08f46-8cd6-4618-9c39-d54f6a32269f"},{"uuid":"d5c3b9b7-8dd2-46f7-8f9d-3244114fa55b","name":"Attachments","imageFile":"folder.webp","viewType":1,"parentId":"c61f493b-558b-40ff-9e04-8774a4ecfcf1","sourceId":"e2493efd-c9eb-4a1d-9f64-6c620dbf3cf6"},{"uuid":"d2bbfcf0-4ffb-4a05-8556-9b782ef69a2c","name":"Attachments","imageFile":"folder.webp","viewType":1,"parentId":"50ad584d-da84-4604-a865-989e785a6730","sourceId":"e2493efd-c9eb-4a1d-9f64-6c620dbf3cf6"},{"uuid":"98625a0b-90b7-4059-b5e0-36be59907990","name":"Basilisk Saddle","imageFile":"basilisk_saddle.webp","viewType":2,"parentId":"4e9eb414-05be-4782-8e9e-fc3622517040","sourceId":"77c7b0fa-6b42-4f4d-ae7c-ff33c659d1e1"},{"uuid":"fdda90b3-5f04-437e-af1a-ca8d05ea7c78","name":"Boss Arenas","imageFile":"folder.webp","viewType":1,"parentId":"68be870e-3337-4172-b94c-5656d5faf634","sourceId":"afcf5f73-38c0-43d2-8c65-483ee582e19d"},{"uuid":"61d1ac6e-cc59-4d71-8abd-48adb27c2751","name":"Charge Battery","imageFile":"charge_battery.webp","viewType":2,"parentId":"5ec8b4dd-a179-4771-8e49-95b172c8f067","sourceId":"4325b461-0c9e-48e3-9493-806ce8e40951"},{"uuid":"55f19ca6-90cc-4189-8636-49d5b5f559da","name":"Charge Lantern","imageFile":"charge_lantern.webp","viewType":2,"parentId":"b9462a7c-1cc6-467a-b1ba-884c9265b343","sourceId":"9949f9b7-9c35-4e72-afda-1567af87d6a3"},{"uuid":"98897cb4-2e77-49ad-929e-e09fbb0fdc97","name":"Charge Node","imageFile":"charge_node.webp","viewType":0,"parentId":null,"sourceId":"13e398ff-3aaa-4915-b23c-de4543835d6b"},{"uuid":"0b5a50ba-9ef5-422a-b8fb-7701255fa1df","name":"Cliff","imageFile":"folder.webp","viewType":1,"parentId":"a30f959e-3d58-461a-979a-cd21416f2f23","sourceId":"dfd96ee9-85fa-407a-9949-e1d45a608770"},{"uuid":"e8bb1864-b7b2-4fb3-a523-03de08da609d","name":"Climbing Pick","imageFile":"climbing_pick.webp","viewType":2,"parentId":"5ec8b4dd-a179-4771-8e49-95b172c8f067","sourceId":"d7012190-7422-47f2-a7ee-0a432ed376b3"},{"uuid":"a842f225-7784-4b8c-8aa5-9aeccbc2f9b4","name":"Decorative","imageFile":"folder.webp","viewType":1,"parentId":"a6f66cc6-c400-4e43-a6e5-abd1ed450b65","sourceId":"78e5a429-55f7-4923-8df5-847f4449329c"},{"uuid":"c7a303ac-99fa-4cbc-8dbf-409b3fa8a830","name":"Element","imageFile":"element.webp","viewType":2,"parentId":"ef4f0bf9-5a51-4bce-80a0-8c50418aa530","sourceId":"141d3b93-887b-4a3d-a97a-ff529ec1b91f"},{"uuid":"d7fe222f-0fd8-4b10-bc2c-fdb31f739f8c","name":"Elevators","imageFile":"folder.webp","viewType":1,"parentId":"a30f959e-3d58-461a-979a-cd21416f2f23","sourceId":"ab4e30c5-a8c3-451d-87b5-133f4eabf445"},{"uuid":"650f2659-131d-4a1b-b661-05b71f0ac789","name":"Fabricator","imageFile":"fabricator.webp","viewType":0,"parentId":null,"sourceId":"6625159c-ff94-431f-a2cc-e10996e9d253"},{"uuid":"c96e98c3-75a8-4c30-bc70-32872ab42a74","name":"Firearms","imageFile":"folder.webp","viewType":1,"parentId":"c5441c1c-927d-45d7-b106-a79d885e646c","sourceId":"41c4850e-6df4-48e6-b013-5bca46ce5f67"},{"uuid":"f510c99f-7a16-4b53-8aac-37eb971fff1b","name":"Fish Basket","imageFile":"fish_basket.webp","viewType":2,"parentId":"fa7b126d-b560-4106-b6d2-0afb12377988","sourceId":"4a556e7f-ac3b-440e-99a0-06ffd6cd097f"},{"uuid":"a6f66cc6-c400-4e43-a6e5-abd1ed450b65","name":"Furniture","imageFile":"folder.webp","viewType":1,"parentId":"943e551d-1863-4f21-85f9-11947dee9d32","sourceId":"57711965-4fac-4706-b9d5-38e1b40e69ab"},{"uuid":"98c71929-e14b-4c93-8d9b-d4113258a7ad","name":"Gas Collector","imageFile":"gas_collector.webp","viewType":2,"parentId":"bffc52de-88c8-47ce-b4ab-4a425adf0245","sourceId":"c6b6bb2e-daac-4c7f-9922-6812da2d754d"},{"uuid":"bffc52de-88c8-47ce-b4ab-4a425adf0245","name":"Gas Collector","imageFile":"folder.webp","viewType":1,"parentId":"a30f959e-3d58-461a-979a-cd21416f2f23","sourceId":"7e8189aa-955a-4671-a197-4bf2ef015d70"},{"uuid":"1b4cd569-db91-4020-aa42-bb4f8e56f466","name":"Generate Aberration (Alpha) Portal","imageFile":"alpha_aberration_portal.webp","viewType":2,"parentId":"fdda90b3-5f04-437e-af1a-ca8d05ea7c78","sourceId":"186c0331-af7a-4391-873e-1d60c1a100dc"},{"uuid":"596bbeed-a1e2-4c35-a995-122100bbdaa0","name":"Generate Aberration (Beta) Portal","imageFile":"beta_aberration_portal.webp","viewType":2,"parentId":"fdda90b3-5f04-437e-af1a-ca8d05ea7c78","sourceId":"cbb23011-d00d-4848-a1a0-774c48db4948"},{"uuid":"3803ab59-f11f-450c-a068-d58eb4eb3566","name":"Generate Aberration (Gamma) Portal","imageFile":"gamma_aberration_portal.webp","viewType":2,"parentId":"fdda90b3-5f04-437e-af1a-ca8d05ea7c78","sourceId":"2b200850-d5de-488c-a252-08703d1b8d38"},{"uuid":"002a3e33-d1fc-413a-9435-2746ac4832e6","name":"Glider Suit Skin","imageFile":"glider_suit_skin.webp","viewType":2,"parentId":"d2bbfcf0-4ffb-4a05-8556-9b782ef69a2c","sourceId":"6208dfa9-b4ea-4600-90cb-0adf3be2d1a2"},{"uuid":"a4393ed4-b601-4161-bd28-6a91535a81b1","name":"Glow Stick","imageFile":"glow_stick.webp","viewType":2,"parentId":"5c1415bb-fd59-49ab-b252-7d98570cc28a","sourceId":"b1e63ffc-8d4b-4062-a462-9972bcc41627"},{"uuid":"b2463301-f2fd-4862-964d-c851e1cb643d","name":"Hazard","imageFile":"folder.webp","viewType":1,"parentId":"c61f493b-558b-40ff-9e04-8774a4ecfcf1","sourceId":"279eec49-a35e-4ce0-97d2-c3ecc832de61"},{"uuid":"74aa22e3-99ad-4a1c-84a7-6a5400cc2512","name":"Hazard Suit Boots","imageFile":"hazard_suit_boots.webp","viewType":2,"parentId":"b2463301-f2fd-4862-964d-c851e1cb643d","sourceId":"6faba4bd-2b77-42e5-b60a-dd2481370500"},{"uuid":"49d63656-6050-4d95-aa45-5596b09bec7c","name":"Hazard Suit Gloves","imageFile":"hazard_suit_gloves.webp","viewType":2,"parentId":"b2463301-f2fd-4862-964d-c851e1cb643d","sourceId":"4e8dc499-b846-4a9c-8e77-195bdf7a3f9c"},{"uuid":"9ac3f3e6-3236-4450-a4ae-7dff0c452fb1","name":"Hazard Suit Hat","imageFile":"hazard_suit_hat.webp","viewType":2,"parentId":"b2463301-f2fd-4862-964d-c851e1cb643d","sourceId":"0a5090a6-7c2e-4b66-9ae8-0061c62f5a72"},{"uuid":"6a035dc4-84a8-4026-a686-1ebd8e4af354","name":"Hazard Suit Pants","imageFile":"hazard_suit_pants.webp","viewType":2,"parentId":"b2463301-f2fd-4862-964d-c851e1cb643d","sourceId":"861081d3-f436-44de-8b64-ff4225f0519a"},{"uuid":"6d270b6e-bb95-41af-bf7c-f00ed47aa595","name":"Hazard Suit Shirt","imageFile":"hazard_suit_shirt.webp","viewType":2,"parentId":"b2463301-f2fd-4862-964d-c851e1cb643d","sourceId":"69a63ee1-23e6-4a91-89c7-6dddf20c2e71"},{"uuid":"f8ea4fa8-a683-4780-97a7-556defef9e80","name":"Karkinos Saddle","imageFile":"karkinos_saddle.webp","viewType":2,"parentId":"4e9eb414-05be-4782-8e9e-fc3622517040","sourceId":"0552d37c-b039-4b3e-bfd8-57434d860372"},{"uuid":"1d9515e6-9401-4acb-9143-dbe88b811d82","name":"Large Wood Elevator Platform","imageFile":"large_wood_elevator_platform.webp","viewType":2,"parentId":"d7fe222f-0fd8-4b10-bc2c-fdb31f739f8c","sourceId":"12b90cd9-2b78-479c-988f-a864441b8e18"},{"uuid":"cd6ee095-e665-4b89-9a0e-a5a4cc63ab24","name":"Medium Wood Elevator Platform","imageFile":"medium_wood_elevator_platform.webp","viewType":2,"parentId":"d7fe222f-0fd8-4b10-bc2c-fdb31f739f8c","sourceId":"675c0207-886e-4635-8dec-92b7b08dec2c"},{"uuid":"146640fc-2b81-4e8c-8f42-552f1d816cef","name":"Metal Cliff Platform","imageFile":"metal_cliff_platform.webp","viewType":2,"parentId":"0b5a50ba-9ef5-422a-b8fb-7701255fa1df","sourceId":"05fb8612-9bd2-4e9b-b31b-01d212007370"},{"uuid":"5c1415bb-fd59-49ab-b252-7d98570cc28a","name":"Misc","imageFile":"folder.webp","viewType":1,"parentId":"8b8cb0d2-ffa9-46e0-b380-1bfa5186af49","sourceId":"33e2e661-7932-4c26-b3a6-9b405388e278"},{"uuid":"fa7b126d-b560-4106-b6d2-0afb12377988","name":"Misc","imageFile":"folder.webp","viewType":1,"parentId":"943e551d-1863-4f21-85f9-11947dee9d32","sourceId":"33e2e661-7932-4c26-b3a6-9b405388e278"},{"uuid":"5ec8b4dd-a179-4771-8e49-95b172c8f067","name":"Misc","imageFile":"folder.webp","viewType":1,"parentId":"f3dd4e09-c791-49cc-b078-be1840d4b6b2","sourceId":"33e2e661-7932-4c26-b3a6-9b405388e278"},{"uuid":"68be870e-3337-4172-b94c-5656d5faf634","name":"Obelisk","imageFile":"obelisk.webp","viewType":0,"parentId":null,"sourceId":"56e87eeb-eabc-4124-bfcd-051a07eca0e1"},{"uuid":"c2554188-5a93-449b-84d4-940ffd2573fa","name":"Pliers","imageFile":"pliers.webp","viewType":2,"parentId":"5ec8b4dd-a179-4771-8e49-95b172c8f067","sourceId":"0a0e1e1f-0ca8-43ed-aca1-213f96fb0953"},{"uuid":"fc55f56f-4b9b-4ff7-b663-3df26ec148a2","name":"Portable Rope Ladder","imageFile":"portable_rope_ladder.webp","viewType":2,"parentId":"d42827d2-394c-4cfd-b30e-9d35157a7506","sourceId":"8ed496ba-f1c8-45b1-91d1-d1385db8f1ab"},{"uuid":"8c5cff33-33be-47ba-b687-e454380f7cab","name":"Ravager Saddle","imageFile":"ravager_saddle.webp","viewType":2,"parentId":"4e9eb414-05be-4782-8e9e-fc3622517040","sourceId":"db6b9d91-9301-4fb5-a68c-c7ae6b38ce7a"},{"uuid":"ef4f0bf9-5a51-4bce-80a0-8c50418aa530","name":"Refined","imageFile":"folder.webp","viewType":1,"parentId":"98897cb4-2e77-49ad-929e-e09fbb0fdc97","sourceId":"7d6bbd61-26f0-4ff0-a8f5-8077b7b5b8da"},{"uuid":"6d6240c9-0640-4cdf-bef3-9ff27b98c01f","name":"Rock Drake Saddle","imageFile":"rock_drake_saddle.webp","viewType":2,"parentId":"4e9eb414-05be-4782-8e9e-fc3622517040","sourceId":"a818b111-a918-485e-a011-d7b76d392984"},{"uuid":"1aa47e01-6f10-4df3-8d12-08ee3bffb39f","name":"Rock Drake Tek Saddle","imageFile":"rock_drake_tek_saddle.webp","viewType":2,"parentId":"026964d8-7eaf-43d1-8f58-331d6b8ee224","sourceId":"7b08fb30-32f2-4f3d-9c52-8d9a47fd91e4"},{"uuid":"5cae6f88-a5b9-4223-bf7a-3e8c991dcf5b","name":"Roll Rat Saddle","imageFile":"roll_rat_saddle.webp","viewType":2,"parentId":"4e9eb414-05be-4782-8e9e-fc3622517040","sourceId":"27f72822-7805-4c60-8cfe-08425d8e40c6"},{"uuid":"4e9eb414-05be-4782-8e9e-fc3622517040","name":"Saddles","imageFile":"folder.webp","viewType":1,"parentId":"f3dd4e09-c791-49cc-b078-be1840d4b6b2","sourceId":"60051f2d-21a1-4094-962f-b1a36c35304d"},{"uuid":"c32b782a-4902-4dd9-8fac-683211ca4043","name":"Saddles","imageFile":"folder.webp","viewType":1,"parentId":"a87b8ae2-2f2f-477c-ad92-3a1758bc6ebc","sourceId":"60051f2d-21a1-4094-962f-b1a36c35304d"},{"uuid":"8b8cb0d2-ffa9-46e0-b380-1bfa5186af49","name":"Self","imageFile":"self.webp","viewType":0,"parentId":null,"sourceId":"9fbd47ad-23b9-4fd5-b821-bed961bf5c32"},{"uuid":"7b685805-8ad7-4f83-b541-777dcd12af11","name":"Shag Rug","imageFile":"shag_rug.webp","viewType":2,"parentId":"a842f225-7784-4b8c-8aa5-9aeccbc2f9b4","sourceId":"d02ee884-a5b4-4680-9cee-1bf280fdd2f9"},{"uuid":"a4a3b445-18f2-45be-b85d-5439f17cc07a","name":"Small Wood Elevator Platform","imageFile":"small_wood_elevator_platform.webp","viewType":2,"parentId":"d7fe222f-0fd8-4b10-bc2c-fdb31f739f8c","sourceId":"41d8cc0b-6e8c-4514-bf9f-9850d4ff94ac"},{"uuid":"f3dd4e09-c791-49cc-b078-be1840d4b6b2","name":"Smithy","imageFile":"smithy.webp","viewType":0,"parentId":null,"sourceId":"615c3e98-008b-4b87-975b-c883c2c895eb"},{"uuid":"8b5f5fc1-723f-4ffb-9456-3ab7fb6448fc","name":"Stone Cliff Platform","imageFile":"stone_cliff_platform.webp","viewType":2,"parentId":"0b5a50ba-9ef5-422a-b8fb-7701255fa1df","sourceId":"e1252aa2-cbb0-4550-82bf-01d26317521a"},{"uuid":"943e551d-1863-4f21-85f9-11947dee9d32","name":"Structures","imageFile":"folder.webp","viewType":1,"parentId":"8b8cb0d2-ffa9-46e0-b380-1bfa5186af49","sourceId":"b679e329-d15f-40ba-a18b-f323225d8cac"},{"uuid":"a30f959e-3d58-461a-979a-cd21416f2f23","name":"Structures","imageFile":"folder.webp","viewType":1,"parentId":"f3dd4e09-c791-49cc-b078-be1840d4b6b2","sourceId":"b679e329-d15f-40ba-a18b-f323225d8cac"},{"uuid":"74165c49-0fe0-4661-9563-b3647c065ecb","name":"Tek","imageFile":"folder.webp","viewType":1,"parentId":"c96e98c3-75a8-4c30-bc70-32872ab42a74","sourceId":"e9cd4c1c-0090-4d39-9273-173556186d8c"},{"uuid":"026964d8-7eaf-43d1-8f58-331d6b8ee224","name":"Tek","imageFile":"folder.webp","viewType":1,"parentId":"c32b782a-4902-4dd9-8fac-683211ca4043","sourceId":"e9cd4c1c-0090-4d39-9273-173556186d8c"},{"uuid":"574bf6a9-856b-448d-af2b-c0a9decbb4bc","name":"Tek Railgun","imageFile":"tek_railgun.webp","viewType":2,"parentId":"74165c49-0fe0-4661-9563-b3647c065ecb","sourceId":"74b6dada-9e47-4546-94f6-c72118cf3cfb"},{"uuid":"a87b8ae2-2f2f-477c-ad92-3a1758bc6ebc","name":"Tek Replicator","imageFile":"tek_replicator.webp","viewType":0,"parentId":null,"sourceId":"fd9ac2cc-f1a8-4b2e-8cc4-065fc3e3b3b1"},{"uuid":"b9462a7c-1cc6-467a-b1ba-884c9265b343","name":"Weapons","imageFile":"folder.webp","viewType":1,"parentId":"650f2659-131d-4a1b-b661-05b71f0ac789","sourceId":"ef948d46-efde-4ef1-ac82-815d7844c220"},{"uuid":"08c73cd4-21e7-4089-af22-1f2526149ea6","name":"Weapons","imageFile":"folder.webp","viewType":1,"parentId":"f3dd4e09-c791-49cc-b078-be1840d4b6b2","sourceId":"ef948d46-efde-4ef1-ac82-815d7844c220"},{"uuid":"c5441c1c-927d-45d7-b106-a79d885e646c","name":"Weapons","imageFile":"folder.webp","viewType":1,"parentId":"a87b8ae2-2f2f-477c-ad92-3a1758bc6ebc","sourceId":"ef948d46-efde-4ef1-ac82-815d7844c220"},{"uuid":"d42827d2-394c-4cfd-b30e-9d35157a7506","name":"Wood","imageFile":"folder.webp","viewType":1,"parentId":"943e551d-1863-4f21-85f9-11947dee9d32","sourceId":"659641cc-256f-4e86-9847-9e16b0e53ba9"},{"uuid":"222a5fc7-c1ec-4c4a-9b4d-be345150eeb8","name":"Wood Elevator Top Switch","imageFile":"wood_elevator_top_switch.webp","viewType":2,"parentId":"d7fe222f-0fd8-4b10-bc2c-fdb31f739f8c","sourceId":"e56d405c-cd6c-4819-8223-3bf5caeceea4"},{"uuid":"3b8c8939-8cf5-4821-8b68-3fa3570e8bbc","name":"Wood Elevator Track","imageFile":"wood_elevator_track.webp","viewType":2,"parentId":"d7fe222f-0fd8-4b10-bc2c-fdb31f739f8c","sourceId":"bd6f705b-dc42-465f-8c59-333493e68931"},{"uuid":"8bc5c1be-5a88-4dc8-ad0c-e1936cec134c","name":"Zip-Line Anchor","imageFile":"zip-line_anchor.webp","viewType":2,"parentId":"5d591f62-80ed-4a81-a4de-54ef27a499f3","sourceId":"9f8834e8-89cd-4448-a5c6-2cd3021db604"},{"uuid":"6bc254ac-5fff-4832-8920-93baec1f21ef","name":"Zip-Line Motor Attachment Skin","imageFile":"zip-line_motor_attachment_skin.webp","viewType":2,"parentId":"d5c3b9b7-8dd2-46f7-8f9d-3244114fa55b","sourceId":"9e09075c-04e6-47d3-8b5e-0a763c6d6d16"}],"remove":{"resources":[],"stations":["2b96c917-a1d9-4ad9-abc0-19149376e9fd"],"folders":["906918d2-c97b-431e-8d31-8ff5bf166ed7","7ec498e2-1019-4285-8d64-5cf50c842222","48dfe696-4a09-4251-831d-dd9e5d28ac40"],"engrams":["1d4b132c-17e0-4f94-9696-7a6c5c8e7d12","8d064184-96d6-49a3-8824-c30417d8cb4d","0f12b648-1c68-4d6c-91bc-2182f8f34a89","6d25ae54-d06a-4161-9c84-471f78d1c9bf","f1f21585-d8b7-4384-a361-e1f9a39df313","5a178972-019d-4e0a-b87c-c425f438fc80","ef5c8042-02da-43b8-b7ec-d5839c99b069","e3326f6b-d38b-4c31-9776-0ce446106fdb","1e4852a9-a75d-47d0-b88b-3a61c07b4cd1"]},"replace":{"resources":[],"stations":[],"folders":[],"engrams":[],"composition":[]}}
+{
+  "details": {
+    "uuid": "d204404e-e099-4e3e-af8b-d7261563d57a",
+    "name": "Aberration",
+    "description": "Waking up on 'Aberration', a derelict, malfunctioning ARK with an elaborate underground biome system, survivors face exotic new challenges unlike anything before: extreme radioactive sunlight and environmental hazards, ziplines, wingsuits, climbing gear, cave dwellings, charge-batteries, and far more, along with a stable of extraordinary new creatures await within the mysterious depths. But beware the ‘Nameless’: unrelenting, Element-infused humanoids which have evolved into vicious light-hating monstrosities! On Aberration, survivors will uncover the ultimate secrets of the ARKs, and discover what the future holds in store for those strong and clever enough to survive!",
+    "filePath": "DLC/Aberration/",
+    "logoFile": "logo.webp",
+    "folderFile": "folder.webp",
+    "backFolderFile": "backFolder.webp",
+    "transmogFile": "transmogrified.json",
+    "totalConversion": false,
+    "lastUpdated": 1599177809806
+  },
+  "resources": [
+    {
+      "uuid": "4409465a-fc3e-4ee9-a600-8e31b992c55e",
+      "name": "Aggeravic Mushroom",
+      "description": "",
+      "imageFile": "aggeravic_mushroom.webp",
+      "lastUpdated": 1599177809809
+    },
+    {
+      "uuid": "78a44ec6-6ecd-43e8-9fec-8f41bc6ab07c",
+      "name": "Alpha Basilisk Fang",
+      "description": "",
+      "imageFile": "alpha_basilisk_fang.webp",
+      "lastUpdated": 1599177809809
+    },
+    {
+      "uuid": "0b33eaa0-1e6c-49e9-b7a4-03ce65f4751d",
+      "name": "Alpha Karkinos Claw",
+      "description": "",
+      "imageFile": "alpha_karkinos_claw.webp",
+      "lastUpdated": 1599177809809
+    },
+    {
+      "uuid": "d5fb9e1a-4bed-4e88-9ab6-18c6f45cc5f5",
+      "name": "Alpha Reaper King Barb",
+      "description": "",
+      "imageFile": "alpha_reaper_king_barb.webp",
+      "lastUpdated": 1599177809809
+    },
+    {
+      "uuid": "efb53a2d-71e1-404d-aaef-16dec1b284c9",
+      "name": "Aquatic Mushroom",
+      "description": "",
+      "imageFile": "aquatic_mushroom.webp",
+      "lastUpdated": 1599177809809
+    },
+    {
+      "uuid": "37d6141b-d932-47c4-a727-bbfc6032a09c",
+      "name": "Artifact of the Depths",
+      "description": "",
+      "imageFile": "artifact_of_the_depths.webp",
+      "lastUpdated": 1599177809809
+    },
+    {
+      "uuid": "a8c23507-dc77-41bb-92a3-9b9e510fa52f",
+      "name": "Artifact of the Shadows",
+      "description": "",
+      "imageFile": "artifact_of_the_shadows.webp",
+      "lastUpdated": 1599177809809
+    },
+    {
+      "uuid": "1c886faa-3403-4a0c-8f67-12c1bdc11047",
+      "name": "Artifact of the Stalker",
+      "description": "",
+      "imageFile": "artifact_of_the_stalker.webp",
+      "lastUpdated": 1599177809809
+    },
+    {
+      "uuid": "40afa5bd-1b17-4b62-ad8d-3afb70f09b67",
+      "name": "Ascerbic Mushroom",
+      "description": "",
+      "imageFile": "ascerbic_mushroom.webp",
+      "lastUpdated": 1599177809809
+    },
+    {
+      "uuid": "607a5331-9a32-4f06-bfe2-bb99b5ae8b1e",
+      "name": "Auric Mushroom",
+      "description": "",
+      "imageFile": "auric_mushroom.webp",
+      "lastUpdated": 1599177809809
+    },
+    {
+      "uuid": "5b842933-aaf1-4b3c-bf90-fbb39454c419",
+      "name": "Basilisk Egg",
+      "description": "",
+      "imageFile": "basilisk_egg.webp",
+      "lastUpdated": 1599177809809
+    },
+    {
+      "uuid": "abf09e9a-0137-4323-959d-a75080cf81c4",
+      "name": "Basilisk Scale",
+      "description": "",
+      "imageFile": "basilisk_scale.webp",
+      "lastUpdated": 1599177809809
+    },
+    {
+      "uuid": "ef7cb434-67be-48d5-88d8-33d2b4b7091b",
+      "name": "Blue Gem",
+      "description": "",
+      "imageFile": "blue_gem.webp",
+      "lastUpdated": 1599177809809
+    },
+    {
+      "uuid": "7d9ee472-66e2-45ba-96f4-3917e452ca8a",
+      "name": "Congealed Gas Ball",
+      "description": "",
+      "imageFile": "congealed_gas_ball.webp",
+      "lastUpdated": 1599177809809
+    },
+    {
+      "uuid": "b229a39a-44db-4d3b-b76d-12a6e07f2fc4",
+      "name": "Element Ore",
+      "description": "",
+      "imageFile": "element_ore.webp",
+      "lastUpdated": 1599177809809
+    },
+    {
+      "uuid": "5fab6480-2a80-4bcf-ad56-107497390a20",
+      "name": "Featherlight Egg",
+      "description": "",
+      "imageFile": "featherlight_egg.webp",
+      "lastUpdated": 1599177809809
+    },
+    {
+      "uuid": "fb12dda3-5c15-41ab-b9d3-c1271ee81492",
+      "name": "Fungal Wood",
+      "description": "",
+      "imageFile": "fungal_wood.webp",
+      "lastUpdated": 1599177809809
+    },
+    {
+      "uuid": "bd14f13b-f94f-40bd-81b6-197f7d6ce601",
+      "name": "Glow Stick",
+      "description": "",
+      "imageFile": "glow_stick.webp",
+      "lastUpdated": 1599177809809
+    },
+    {
+      "uuid": "d8471954-d97b-41d0-a799-b1712d809516",
+      "name": "Glowtail Egg",
+      "description": "",
+      "imageFile": "glowtail_egg.webp",
+      "lastUpdated": 1599177809809
+    },
+    {
+      "uuid": "c138f1fd-79f0-444b-9a9d-204de1ba3c6d",
+      "name": "Green Gem",
+      "description": "",
+      "imageFile": "green_gem.webp",
+      "lastUpdated": 1599177809809
+    },
+    {
+      "uuid": "d96209bd-bfca-4fae-9de3-097b2d1f1af6",
+      "name": "Nameless Venom",
+      "description": "",
+      "imageFile": "nameless_venom.webp",
+      "lastUpdated": 1599177809809
+    },
+    {
+      "uuid": "e7f8b8c3-4960-438d-95c8-3933bee5e9cd",
+      "name": "Plant Species Z Seed",
+      "description": "",
+      "imageFile": "plant_species_z_seed.webp",
+      "lastUpdated": 1599177809809
+    },
+    {
+      "uuid": "f5ecc4b9-af70-4f2a-ba06-2606157415b3",
+      "name": "Reaper Pheromone Gland",
+      "description": "",
+      "imageFile": "reaper_pheromone_gland.webp",
+      "lastUpdated": 1599177809809
+    },
+    {
+      "uuid": "09b80640-c5b8-4adb-9300-89cebbac5f66",
+      "name": "Red Gem",
+      "description": "",
+      "imageFile": "red_gem.webp",
+      "lastUpdated": 1599177809809
+    },
+    {
+      "uuid": "e6793363-c825-4b86-a6cb-cc5b4e810724",
+      "name": "Rock Drake Egg",
+      "description": "",
+      "imageFile": "rock_drake_egg.webp",
+      "lastUpdated": 1599177809809
+    },
+    {
+      "uuid": "e032aac3-40f3-42e5-b31a-d1acf0fd484f",
+      "name": "Rock Drake Feather",
+      "description": "",
+      "imageFile": "rock_drake_feather.webp",
+      "lastUpdated": 1599177809809
+    },
+    {
+      "uuid": "98c269e2-32b7-4e1a-bbb8-9b3f03efb030",
+      "name": "Rockwell Flag",
+      "description": "",
+      "imageFile": "rockwell_flag.webp",
+      "lastUpdated": 1599177809809
+    },
+    {
+      "uuid": "8a09db7b-0f46-491b-9ab8-9f5b704f95f0",
+      "name": "Rockwell Trophy",
+      "description": "",
+      "imageFile": "rockwell_trophy.webp",
+      "lastUpdated": 1599177809809
+    }
+  ],
+  "stations": [
+    {
+      "uuid": "13e398ff-3aaa-4915-b23c-de4543835d6b",
+      "name": "Charge Node",
+      "imageFile": "charge_node.webp",
+      "engramId": null,
+      "lastUpdated": 1599177809816
+    }
+  ],
+  "folders": [
+    {
+      "uuid": "e2493efd-c9eb-4a1d-9f64-6c620dbf3cf6",
+      "name": "Attachments"
+    },
+    {
+      "uuid": "dfd96ee9-85fa-407a-9949-e1d45a608770",
+      "name": "Cliff"
+    },
+    {
+      "uuid": "78e5a429-55f7-4923-8df5-847f4449329c",
+      "name": "Decorative"
+    },
+    {
+      "uuid": "ab4e30c5-a8c3-451d-87b5-133f4eabf445",
+      "name": "Elevators"
+    },
+    {
+      "uuid": "7e8189aa-955a-4671-a197-4bf2ef015d70",
+      "name": "Gas Collector"
+    },
+    {
+      "uuid": "279eec49-a35e-4ce0-97d2-c3ecc832de61",
+      "name": "Hazard"
+    }
+  ],
+  "engrams": [
+    {
+      "uuid": "77c7b0fa-6b42-4f4d-ae7c-ff33c659d1e1",
+      "name": "Basilisk Saddle",
+      "description": "Equip a Basilisk with this to ride it.",
+      "imageFile": "basilisk_saddle.webp",
+      "level": 85,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1599177809815
+    },
+    {
+      "uuid": "4325b461-0c9e-48e3-9493-806ce8e40951",
+      "name": "Charge Battery",
+      "description": "Stores Charge from Power Nodes, and can be placed in various Electrical Devices to power them.",
+      "imageFile": "charge_battery.webp",
+      "level": 71,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1599177809815
+    },
+    {
+      "uuid": "9949f9b7-9c35-4e72-afda-1567af87d6a3",
+      "name": "Charge Lantern",
+      "description": "Weaponized Charge Light that damages and stuns lifeforms. Place down to ward off dangers in an area. Uses Charge Batteries as fuel.",
+      "imageFile": "charge_lantern.webp",
+      "level": 80,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1599177809815
+    },
+    {
+      "uuid": "d7012190-7422-47f2-a7ee-0a432ed376b3",
+      "name": "Climbing Pick",
+      "description": "Climb up and hang from nearly any surface with these!",
+      "imageFile": "climbing_pick.webp",
+      "level": 34,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1599177809815
+    },
+    {
+      "uuid": "4a556e7f-ac3b-440e-99a0-06ffd6cd097f",
+      "name": "Fish Basket",
+      "description": "Trap certain fish in this basket to tame and transport them!",
+      "imageFile": "fish_basket.webp",
+      "level": 13,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1599177809815
+    },
+    {
+      "uuid": "c6b6bb2e-daac-4c7f-9922-6812da2d754d",
+      "name": "Gas Collector",
+      "description": "Place on a Gas Vent to extract Congealed Gas Balls over time.",
+      "imageFile": "gas_collector.webp",
+      "level": 40,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1599177809815
+    },
+    {
+      "uuid": "186c0331-af7a-4391-873e-1d60c1a100dc",
+      "name": "Generate Aberration (Alpha) Portal",
+      "description": "Use this to generate a portal to Aberration's Guardian.",
+      "imageFile": "alpha_aberration_portal.webp",
+      "level": 100,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1599177809816
+    },
+    {
+      "uuid": "cbb23011-d00d-4848-a1a0-774c48db4948",
+      "name": "Generate Aberration (Beta) Portal",
+      "description": "Use this to generate a portal to Aberration's Guardian.",
+      "imageFile": "beta_aberration_portal.webp",
+      "level": 75,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1599177809816
+    },
+    {
+      "uuid": "2b200850-d5de-488c-a252-08703d1b8d38",
+      "name": "Generate Aberration (Gamma) Portal",
+      "description": "Use this to generate a portal to Aberration's Guardian.",
+      "imageFile": "gamma_aberration_portal.webp",
+      "level": 60,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1599177809816
+    },
+    {
+      "uuid": "6208dfa9-b4ea-4600-90cb-0adf3be2d1a2",
+      "name": "Glider Suit Skin",
+      "description": "When attached to a Chest Armor, the Glider Suit enables sailing through the air by double-tapping jump, while gaining speed by running and diving!",
+      "imageFile": "glider_suit_skin.webp",
+      "level": 62,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1599177809815
+    },
+    {
+      "uuid": "b1e63ffc-8d4b-4062-a462-9972bcc41627",
+      "name": "Glow Stick",
+      "description": "Glow Sticks generate light in a radius around them. Throw it and it will stick immediately to the location they first impact.",
+      "imageFile": "glow_stick.webp",
+      "level": 10,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1599177809816
+    },
+    {
+      "uuid": "6faba4bd-2b77-42e5-b60a-dd2481370500",
+      "name": "Hazard Suit Boots",
+      "description": "Boots made from a unique combination of materials that protect the wearer from environmental contaminants.",
+      "imageFile": "hazard_suit_boots.webp",
+      "level": 68,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1599177809815
+    },
+    {
+      "uuid": "4e8dc499-b846-4a9c-8e77-195bdf7a3f9c",
+      "name": "Hazard Suit Gloves",
+      "description": "Gloves made from a unique combination of materials that protect the wearer from environmental contaminants.",
+      "imageFile": "hazard_suit_gloves.webp",
+      "level": 68,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1599177809815
+    },
+    {
+      "uuid": "0a5090a6-7c2e-4b66-9ae8-0061c62f5a72",
+      "name": "Hazard Suit Hat",
+      "description": "A helmet made from a unique combination of materials that protect the wearer from environmental contaminants.",
+      "imageFile": "hazard_suit_hat.webp",
+      "level": 68,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1599177809815
+    },
+    {
+      "uuid": "861081d3-f436-44de-8b64-ff4225f0519a",
+      "name": "Hazard Suit Pants",
+      "description": "Pants made from a unique combination of materials that protect the wearer from environmental contaminants.",
+      "imageFile": "hazard_suit_pants.webp",
+      "level": 68,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1599177809816
+    },
+    {
+      "uuid": "69a63ee1-23e6-4a91-89c7-6dddf20c2e71",
+      "name": "Hazard Suit Shirt",
+      "description": "A shirt made from a unique combination of materials that protect the wearer from environmental contaminants.",
+      "imageFile": "hazard_suit_shirt.webp",
+      "level": 68,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1599177809816
+    },
+    {
+      "uuid": "0552d37c-b039-4b3e-bfd8-57434d860372",
+      "name": "Karkinos Saddle",
+      "description": "Equip a Karkinos with this to ride it.",
+      "imageFile": "karkinos_saddle.webp",
+      "level": 65,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1599177809815
+    },
+    {
+      "uuid": "12b90cd9-2b78-479c-988f-a864441b8e18",
+      "name": "Large Wood Elevator Platform",
+      "description": "Attach to an Elevator Track to lift a large amount of weight.",
+      "imageFile": "large_wood_elevator_platform.webp",
+      "level": 30,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1599177809816
+    },
+    {
+      "uuid": "675c0207-886e-4635-8dec-92b7b08dec2c",
+      "name": "Medium Wood Elevator Platform",
+      "description": "Attach to an Elevator Track to lift a medium amount of weight.",
+      "imageFile": "medium_wood_elevator_platform.webp",
+      "level": 23,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1599177809816
+    },
+    {
+      "uuid": "05fb8612-9bd2-4e9b-b31b-01d212007370",
+      "name": "Metal Cliff Platform",
+      "description": "A Cliff Platform is required to build structures extending from a cliff. This one is made from shiny metal.",
+      "imageFile": "metal_cliff_platform.webp",
+      "level": 51,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1599177809816
+    },
+    {
+      "uuid": "09d094cc-2599-4eef-943e-f3d3bc353bbc",
+      "name": "Mushroom Brew",
+      "description": "Double, double, toil and trouble, fire burn and cauldron bubble... this is a lovely mushroom brew, a healthy syrup to protect your pets from radiation!",
+      "imageFile": "mushroom_brew.webp",
+      "level": 1,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1599177809816
+    },
+    {
+      "uuid": "0a0e1e1f-0ca8-43ed-aca1-213f96fb0953",
+      "name": "Pliers",
+      "description": "Use on a Smithy-crafted item in need of repairing and you can repair it on the go within any inventory, at a higher cost of resources.",
+      "imageFile": "pliers.webp",
+      "level": 45,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1599177809816
+    },
+    {
+      "uuid": "8ed496ba-f1c8-45b1-91d1-d1385db8f1ab",
+      "name": "Portable Rope Ladder",
+      "description": "A portable ladder that can be used to climb up or down. Place onto structures or terrain at waist height or lower.",
+      "imageFile": "portable_rope_ladder.webp",
+      "level": 15,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1599177809816
+    },
+    {
+      "uuid": "db6b9d91-9301-4fb5-a68c-c7ae6b38ce7a",
+      "name": "Ravager Saddle",
+      "description": "Equip a Ravager with this to ride it.",
+      "imageFile": "ravager_saddle.webp",
+      "level": 47,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1599177809815
+    },
+    {
+      "uuid": "a818b111-a918-485e-a011-d7b76d392984",
+      "name": "Rock Drake Saddle",
+      "description": "Equip a Rock Drake with this to ride it.",
+      "imageFile": "rock_drake_saddle.webp",
+      "level": 75,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1599177809815
+    },
+    {
+      "uuid": "7b08fb30-32f2-4f3d-9c52-8d9a47fd91e4",
+      "name": "Rock Drake Tek Saddle",
+      "description": "Equip a Rock Drake with this to ride it, enabling the rider to fire plasma projectiles. Using requires learning this Tekgram.",
+      "imageFile": "rock_drake_tek_saddle.webp",
+      "level": 1,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1599177809815
+    },
+    {
+      "uuid": "27f72822-7805-4c60-8cfe-08425d8e40c6",
+      "name": "Roll Rat Saddle",
+      "description": "Equip a Roll Rat with this to ride it. Provides protection to passengers while rolling.",
+      "imageFile": "roll_rat_saddle.webp",
+      "level": 58,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1599177809815
+    },
+    {
+      "uuid": "d02ee884-a5b4-4680-9cee-1bf280fdd2f9",
+      "name": "Shag Rug",
+      "description": "A decorative, paintable rug with a shaggy appearance, which dulls the sound of footsteps.",
+      "imageFile": "shag_rug.webp",
+      "level": 17,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1599177809816
+    },
+    {
+      "uuid": "41d8cc0b-6e8c-4514-bf9f-9850d4ff94ac",
+      "name": "Small Wood Elevator Platform",
+      "description": "Attach to an Elevator Track to lift a small amount of weight.",
+      "imageFile": "small_wood_elevator_platform.webp",
+      "level": 20,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1599177809816
+    },
+    {
+      "uuid": "e1252aa2-cbb0-4550-82bf-01d26317521a",
+      "name": "Stone Cliff Platform",
+      "description": "A Cliff Platform is required to build structures extending from a cliff. This one is made from heavy stone.",
+      "imageFile": "stone_cliff_platform.webp",
+      "level": 37,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1599177809816
+    },
+    {
+      "uuid": "74b6dada-9e47-4546-94f6-c72118cf3cfb",
+      "name": "Tek Railgun",
+      "description": "Shoots explosive plasma bolts, with an infrared zoomable scope. Equipping requires learning this Tekgram.",
+      "imageFile": "tek_railgun.webp",
+      "level": 1,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1599177809816
+    },
+    {
+      "uuid": "5b229416-e11a-46dc-9670-7ec017d54ab5",
+      "name": "Tek Sleeping Pod",
+      "description": "This Tek-powered Chamber lets you rapidly recover vitals, and slowly gain XP even when sleeping. You can also sleep soundly within it, protected even while on a moving platform!",
+      "imageFile": "tek_sleeping_pod.webp",
+      "level": 1,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1599177809816
+    },
+    {
+      "uuid": "e56d405c-cd6c-4819-8223-3bf5caeceea4",
+      "name": "Wood Elevator Top Switch",
+      "description": "Attach to the top of a Wood Elevator Track to complete an Elevator!",
+      "imageFile": "wood_elevator_top_switch.webp",
+      "level": 20,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1599177809816
+    },
+    {
+      "uuid": "bd6f705b-dc42-465f-8c59-333493e68931",
+      "name": "Wood Elevator Track",
+      "description": "Attach a Wood Elevator Platform to these to complete an elevator!",
+      "imageFile": "wood_elevator_track.webp",
+      "level": 20,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1599177809816
+    },
+    {
+      "uuid": "9f8834e8-89cd-4448-a5c6-2cd3021db604",
+      "name": "Zip-Line Anchor",
+      "description": "Apply onto a Crossbow to fire Zip-Line anchor points. Use two anchor points to complete a Zip-Line, which you can then grab onto [sic]",
+      "imageFile": "zip-line_anchor.webp",
+      "level": 31,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1599177809816
+    },
+    {
+      "uuid": "9e09075c-04e6-47d3-8b5e-0a763c6d6d16",
+      "name": "Zip-Line Motor Attachment Skin",
+      "description": "Equip onto pants and combine with Gasoline to power yourself up a Zip-Line.",
+      "imageFile": "zip-line_motor_attachment_skin.webp",
+      "level": 54,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1599177809816
+    }
+  ],
+  "composition": [
+    {
+      "uuid": "c199b4a0-c317-453c-8a27-897838e514ce",
+      "engramId": "77c7b0fa-6b42-4f4d-ae7c-ff33c659d1e1"
+    },
+    {
+      "uuid": "785beb3b-3abd-4c7a-b140-a4671e7f5b93",
+      "engramId": "4325b461-0c9e-48e3-9493-806ce8e40951"
+    },
+    {
+      "uuid": "03697756-b558-4081-948f-178744c48bc9",
+      "engramId": "9949f9b7-9c35-4e72-afda-1567af87d6a3"
+    },
+    {
+      "uuid": "da1f48d8-9b8a-4ddd-882b-628a65c52d47",
+      "engramId": "d7012190-7422-47f2-a7ee-0a432ed376b3"
+    },
+    {
+      "uuid": "13af35e7-c5a9-48c1-85ab-1f6bbc431cb4",
+      "engramId": "4a556e7f-ac3b-440e-99a0-06ffd6cd097f"
+    },
+    {
+      "uuid": "8bdaa12e-7753-42e4-a80b-86e411a8a04d",
+      "engramId": "c6b6bb2e-daac-4c7f-9922-6812da2d754d"
+    },
+    {
+      "uuid": "5e210d04-15b6-4ce5-ac6f-f16d26440f7e",
+      "engramId": "186c0331-af7a-4391-873e-1d60c1a100dc"
+    },
+    {
+      "uuid": "e78134d6-92ed-418e-abeb-f3270ffc9529",
+      "engramId": "cbb23011-d00d-4848-a1a0-774c48db4948"
+    },
+    {
+      "uuid": "faaa2b6c-1447-48fe-b8e2-5ce0e3386afa",
+      "engramId": "2b200850-d5de-488c-a252-08703d1b8d38"
+    },
+    {
+      "uuid": "fae15dec-1f37-4857-8b46-4c6b07432cc8",
+      "engramId": "6208dfa9-b4ea-4600-90cb-0adf3be2d1a2"
+    },
+    {
+      "uuid": "7daa1590-20ef-4bf0-9cfa-70f185154b94",
+      "engramId": "b1e63ffc-8d4b-4062-a462-9972bcc41627"
+    },
+    {
+      "uuid": "2b0ca9b1-c71f-4cbf-87c2-33d11a0f2d23",
+      "engramId": "6faba4bd-2b77-42e5-b60a-dd2481370500"
+    },
+    {
+      "uuid": "e2a67498-a38f-4ec3-b373-750c4ffc2ad9",
+      "engramId": "4e8dc499-b846-4a9c-8e77-195bdf7a3f9c"
+    },
+    {
+      "uuid": "88079a36-eba4-4bb5-bb32-5341e6bc1224",
+      "engramId": "0a5090a6-7c2e-4b66-9ae8-0061c62f5a72"
+    },
+    {
+      "uuid": "15752a81-632a-4db2-bb17-d51df108fc7d",
+      "engramId": "861081d3-f436-44de-8b64-ff4225f0519a"
+    },
+    {
+      "uuid": "f6eaf7dc-e461-4800-9017-460c18ba970c",
+      "engramId": "69a63ee1-23e6-4a91-89c7-6dddf20c2e71"
+    },
+    {
+      "uuid": "9103668d-f238-4377-a905-cd12e814d039",
+      "engramId": "0552d37c-b039-4b3e-bfd8-57434d860372"
+    },
+    {
+      "uuid": "e4961dd3-bdf7-4749-8083-f0c986bab3dd",
+      "engramId": "12b90cd9-2b78-479c-988f-a864441b8e18"
+    },
+    {
+      "uuid": "df9ef7c8-8e68-49e6-87b8-d71ed277fde1",
+      "engramId": "675c0207-886e-4635-8dec-92b7b08dec2c"
+    },
+    {
+      "uuid": "99146b25-372b-4748-b8ae-c0fdf35ae7d3",
+      "engramId": "05fb8612-9bd2-4e9b-b31b-01d212007370"
+    },
+    {
+      "uuid": "155d63f2-d685-4705-9457-80df91d4b35f",
+      "engramId": "09d094cc-2599-4eef-943e-f3d3bc353bbc"
+    },
+    {
+      "uuid": "885a9c19-5342-4913-83ad-7c31f491c983",
+      "engramId": "0a0e1e1f-0ca8-43ed-aca1-213f96fb0953"
+    },
+    {
+      "uuid": "e8be1237-9a8c-4fb2-a987-ff4fa604a1d7",
+      "engramId": "8ed496ba-f1c8-45b1-91d1-d1385db8f1ab"
+    },
+    {
+      "uuid": "a34d5739-6cbe-44e1-9e18-e7f3f8cf2149",
+      "engramId": "db6b9d91-9301-4fb5-a68c-c7ae6b38ce7a"
+    },
+    {
+      "uuid": "0d2fc7bc-dc33-4df1-9813-906ec8b896cb",
+      "engramId": "a818b111-a918-485e-a011-d7b76d392984"
+    },
+    {
+      "uuid": "0fad513a-ea3d-4d04-be92-92e31b6cbd90",
+      "engramId": "7b08fb30-32f2-4f3d-9c52-8d9a47fd91e4"
+    },
+    {
+      "uuid": "9bda02e0-af68-4f10-9077-017b8ca957fc",
+      "engramId": "27f72822-7805-4c60-8cfe-08425d8e40c6"
+    },
+    {
+      "uuid": "b8d7813d-f7f5-40ea-a345-c25434c0d4d4",
+      "engramId": "d02ee884-a5b4-4680-9cee-1bf280fdd2f9"
+    },
+    {
+      "uuid": "f9001290-ae60-4d30-9b27-3391d7ad7073",
+      "engramId": "41d8cc0b-6e8c-4514-bf9f-9850d4ff94ac"
+    },
+    {
+      "uuid": "ef241e63-af6e-420d-87f6-69e2303fef10",
+      "engramId": "e1252aa2-cbb0-4550-82bf-01d26317521a"
+    },
+    {
+      "uuid": "8845df47-d67f-4cc8-ab6e-fcef4bdcb3cd",
+      "engramId": "74b6dada-9e47-4546-94f6-c72118cf3cfb"
+    },
+    {
+      "uuid": "e6488604-3190-4aba-8d5b-e5864f5a5412",
+      "engramId": "5b229416-e11a-46dc-9670-7ec017d54ab5"
+    },
+    {
+      "uuid": "b03b879e-3fe2-41f7-88b8-b09803838070",
+      "engramId": "e56d405c-cd6c-4819-8223-3bf5caeceea4"
+    },
+    {
+      "uuid": "b19a06a0-7c25-4528-9801-e61024bfd716",
+      "engramId": "bd6f705b-dc42-465f-8c59-333493e68931"
+    },
+    {
+      "uuid": "333b279d-db49-4a50-9664-1d1babcd9743",
+      "engramId": "9f8834e8-89cd-4448-a5c6-2cd3021db604"
+    },
+    {
+      "uuid": "0fa80083-cadc-484a-b062-476bce4d79e2",
+      "engramId": "9e09075c-04e6-47d3-8b5e-0a763c6d6d16"
+    }
+  ],
+  "composites": [
+    {
+      "uuid": "d266ed0f-5ae0-4cfa-a9cc-783130301f89",
+      "name": "Aggeravic Mushroom",
+      "imageFile": "aggeravic_mushroom.webp",
+      "quantity": 5,
+      "sourceId": "4409465a-fc3e-4ee9-a600-8e31b992c55e",
+      "isEngram": false,
+      "compositionId": "155d63f2-d685-4705-9457-80df91d4b35f"
+    },
+    {
+      "uuid": "c0594965-5055-47a3-9c8f-2d5aa698b1d4",
+      "name": "Alpha Basilisk Fang",
+      "imageFile": "alpha_basilisk_fang.webp",
+      "quantity": 1,
+      "sourceId": "78a44ec6-6ecd-43e8-9fec-8f41bc6ab07c",
+      "isEngram": false,
+      "compositionId": "5e210d04-15b6-4ce5-ac6f-f16d26440f7e"
+    },
+    {
+      "uuid": "99a42af1-1b74-44ba-ac87-ad1f96abd2e4",
+      "name": "Alpha Karkinos Claw",
+      "imageFile": "alpha_karkinos_claw.webp",
+      "quantity": 1,
+      "sourceId": "0b33eaa0-1e6c-49e9-b7a4-03ce65f4751d",
+      "isEngram": false,
+      "compositionId": "5e210d04-15b6-4ce5-ac6f-f16d26440f7e"
+    },
+    {
+      "uuid": "d14e623c-8465-4f52-bfbb-6d5c40486782",
+      "name": "Alpha Reaper King Barb",
+      "imageFile": "alpha_reaper_king_barb.webp",
+      "quantity": 1,
+      "sourceId": "d5fb9e1a-4bed-4e88-9ab6-18c6f45cc5f5",
+      "isEngram": false,
+      "compositionId": "5e210d04-15b6-4ce5-ac6f-f16d26440f7e"
+    },
+    {
+      "uuid": "ea4e736d-343b-43ee-85cb-932c2b53ea84",
+      "name": "Aquatic Mushroom",
+      "imageFile": "aquatic_mushroom.webp",
+      "quantity": 5,
+      "sourceId": "efb53a2d-71e1-404d-aaef-16dec1b284c9",
+      "isEngram": false,
+      "compositionId": "155d63f2-d685-4705-9457-80df91d4b35f"
+    },
+    {
+      "uuid": "d0656423-5ebf-4dc5-b1d4-92d582b9c257",
+      "name": "Artifact of the Depths",
+      "imageFile": "artifact_of_the_depths.webp",
+      "quantity": 1,
+      "sourceId": "37d6141b-d932-47c4-a727-bbfc6032a09c",
+      "isEngram": false,
+      "compositionId": "faaa2b6c-1447-48fe-b8e2-5ce0e3386afa"
+    },
+    {
+      "uuid": "695f79c2-d703-4f98-b86a-0bbcde9334fc",
+      "name": "Artifact of the Depths",
+      "imageFile": "artifact_of_the_depths.webp",
+      "quantity": 1,
+      "sourceId": "37d6141b-d932-47c4-a727-bbfc6032a09c",
+      "isEngram": false,
+      "compositionId": "e78134d6-92ed-418e-abeb-f3270ffc9529"
+    },
+    {
+      "uuid": "70f579fb-5130-41e5-b083-479fcebc1618",
+      "name": "Artifact of the Depths",
+      "imageFile": "artifact_of_the_depths.webp",
+      "quantity": 1,
+      "sourceId": "37d6141b-d932-47c4-a727-bbfc6032a09c",
+      "isEngram": false,
+      "compositionId": "5e210d04-15b6-4ce5-ac6f-f16d26440f7e"
+    },
+    {
+      "uuid": "096537ce-1966-47f2-a99d-e5a6b9e56709",
+      "name": "Artifact of the Shadows",
+      "imageFile": "artifact_of_the_shadows.webp",
+      "quantity": 1,
+      "sourceId": "a8c23507-dc77-41bb-92a3-9b9e510fa52f",
+      "isEngram": false,
+      "compositionId": "faaa2b6c-1447-48fe-b8e2-5ce0e3386afa"
+    },
+    {
+      "uuid": "f4b81572-68fe-4fce-b008-b6091b671f66",
+      "name": "Artifact of the Shadows",
+      "imageFile": "artifact_of_the_shadows.webp",
+      "quantity": 1,
+      "sourceId": "a8c23507-dc77-41bb-92a3-9b9e510fa52f",
+      "isEngram": false,
+      "compositionId": "e78134d6-92ed-418e-abeb-f3270ffc9529"
+    },
+    {
+      "uuid": "bd5535eb-41a9-4373-b75a-7dc1b0490638",
+      "name": "Artifact of the Shadows",
+      "imageFile": "artifact_of_the_shadows.webp",
+      "quantity": 1,
+      "sourceId": "a8c23507-dc77-41bb-92a3-9b9e510fa52f",
+      "isEngram": false,
+      "compositionId": "5e210d04-15b6-4ce5-ac6f-f16d26440f7e"
+    },
+    {
+      "uuid": "4554d048-90f2-453a-ab56-65f98775fe15",
+      "name": "Artifact of the Stalker",
+      "imageFile": "artifact_of_the_stalker.webp",
+      "quantity": 1,
+      "sourceId": "1c886faa-3403-4a0c-8f67-12c1bdc11047",
+      "isEngram": false,
+      "compositionId": "faaa2b6c-1447-48fe-b8e2-5ce0e3386afa"
+    },
+    {
+      "uuid": "04af8bc3-18f7-4dfe-b70d-b8fce098c41c",
+      "name": "Artifact of the Stalker",
+      "imageFile": "artifact_of_the_stalker.webp",
+      "quantity": 1,
+      "sourceId": "1c886faa-3403-4a0c-8f67-12c1bdc11047",
+      "isEngram": false,
+      "compositionId": "e78134d6-92ed-418e-abeb-f3270ffc9529"
+    },
+    {
+      "uuid": "7a7505e8-b47a-4991-bdaa-ddf9b9accd6a",
+      "name": "Artifact of the Stalker",
+      "imageFile": "artifact_of_the_stalker.webp",
+      "quantity": 1,
+      "sourceId": "1c886faa-3403-4a0c-8f67-12c1bdc11047",
+      "isEngram": false,
+      "compositionId": "5e210d04-15b6-4ce5-ac6f-f16d26440f7e"
+    },
+    {
+      "uuid": "cfee13e3-066a-4d93-bc9a-00276a46a8c4",
+      "name": "Ascerbic Mushroom",
+      "imageFile": "ascerbic_mushroom.webp",
+      "quantity": 5,
+      "sourceId": "40afa5bd-1b17-4b62-ad8d-3afb70f09b67",
+      "isEngram": false,
+      "compositionId": "155d63f2-d685-4705-9457-80df91d4b35f"
+    },
+    {
+      "uuid": "51f807d1-f2cf-41f3-b22f-61aa7f05e80e",
+      "name": "Auric Mushroom",
+      "imageFile": "auric_mushroom.webp",
+      "quantity": 5,
+      "sourceId": "607a5331-9a32-4f06-bfe2-bb99b5ae8b1e",
+      "isEngram": false,
+      "compositionId": "155d63f2-d685-4705-9457-80df91d4b35f"
+    },
+    {
+      "uuid": "118c2067-9d17-4d3d-bae8-81b0de01de13",
+      "name": "Basilisk Scale",
+      "imageFile": "basilisk_scale.webp",
+      "quantity": 4,
+      "sourceId": "abf09e9a-0137-4323-959d-a75080cf81c4",
+      "isEngram": false,
+      "compositionId": "e78134d6-92ed-418e-abeb-f3270ffc9529"
+    },
+    {
+      "uuid": "f14bc4fb-332f-4d24-b19d-700e2980d0a9",
+      "name": "Basilisk Scale",
+      "imageFile": "basilisk_scale.webp",
+      "quantity": 8,
+      "sourceId": "abf09e9a-0137-4323-959d-a75080cf81c4",
+      "isEngram": false,
+      "compositionId": "5e210d04-15b6-4ce5-ac6f-f16d26440f7e"
+    },
+    {
+      "uuid": "67ada26b-e096-46b2-9ed8-cd87a0048c20",
+      "name": "Black Pearl",
+      "imageFile": "black_pearl.webp",
+      "quantity": 185,
+      "sourceId": "2d39a819-2378-453d-943c-ff8ba3423b33",
+      "isEngram": false,
+      "compositionId": "0fad513a-ea3d-4d04-be92-92e31b6cbd90"
+    },
+    {
+      "uuid": "333be0f5-7aab-4daf-81ab-f9ef970a24e5",
+      "name": "Black Pearl",
+      "imageFile": "black_pearl.webp",
+      "quantity": 55,
+      "sourceId": "2d39a819-2378-453d-943c-ff8ba3423b33",
+      "isEngram": false,
+      "compositionId": "8845df47-d67f-4cc8-ab6e-fcef4bdcb3cd"
+    },
+    {
+      "uuid": "d4690368-35a9-44a6-850f-517fe7d5da04",
+      "name": "Blue Gem",
+      "imageFile": "blue_gem.webp",
+      "quantity": 80,
+      "sourceId": "ef7cb434-67be-48d5-88d8-33d2b4b7091b",
+      "isEngram": false,
+      "compositionId": "9103668d-f238-4377-a905-cd12e814d039"
+    },
+    {
+      "uuid": "a3895799-b5d1-4f9f-a066-039ed7625106",
+      "name": "Blue Gem",
+      "imageFile": "blue_gem.webp",
+      "quantity": 25,
+      "sourceId": "ef7cb434-67be-48d5-88d8-33d2b4b7091b",
+      "isEngram": false,
+      "compositionId": "fae15dec-1f37-4857-8b46-4c6b07432cc8"
+    },
+    {
+      "uuid": "e6dc279c-6b6d-46c3-9441-c6ca8cda35bf",
+      "name": "Blue Gem",
+      "imageFile": "blue_gem.webp",
+      "quantity": 5,
+      "sourceId": "ef7cb434-67be-48d5-88d8-33d2b4b7091b",
+      "isEngram": false,
+      "compositionId": "2b0ca9b1-c71f-4cbf-87c2-33d11a0f2d23"
+    },
+    {
+      "uuid": "f838d1f8-da9e-41f2-825e-4de1ede4468f",
+      "name": "Blue Gem",
+      "imageFile": "blue_gem.webp",
+      "quantity": 8,
+      "sourceId": "ef7cb434-67be-48d5-88d8-33d2b4b7091b",
+      "isEngram": false,
+      "compositionId": "e2a67498-a38f-4ec3-b373-750c4ffc2ad9"
+    },
+    {
+      "uuid": "65ccd839-bbbc-404b-8b80-49ba81d3b211",
+      "name": "Blue Gem",
+      "imageFile": "blue_gem.webp",
+      "quantity": 25,
+      "sourceId": "ef7cb434-67be-48d5-88d8-33d2b4b7091b",
+      "isEngram": false,
+      "compositionId": "88079a36-eba4-4bb5-bb32-5341e6bc1224"
+    },
+    {
+      "uuid": "417bc53f-2ffc-4cd8-b547-d8b9bb64f046",
+      "name": "Blue Gem",
+      "imageFile": "blue_gem.webp",
+      "quantity": 20,
+      "sourceId": "ef7cb434-67be-48d5-88d8-33d2b4b7091b",
+      "isEngram": false,
+      "compositionId": "15752a81-632a-4db2-bb17-d51df108fc7d"
+    },
+    {
+      "uuid": "f7c2f8d4-f5cd-4f26-ac31-903958310ae2",
+      "name": "Blue Gem",
+      "imageFile": "blue_gem.webp",
+      "quantity": 25,
+      "sourceId": "ef7cb434-67be-48d5-88d8-33d2b4b7091b",
+      "isEngram": false,
+      "compositionId": "f6eaf7dc-e461-4800-9017-460c18ba970c"
+    },
+    {
+      "uuid": "b99cc97a-a0a9-4b01-b415-77d20841b3f7",
+      "name": "Blue Gem",
+      "imageFile": "blue_gem.webp",
+      "quantity": 200,
+      "sourceId": "ef7cb434-67be-48d5-88d8-33d2b4b7091b",
+      "isEngram": false,
+      "compositionId": "99146b25-372b-4748-b8ae-c0fdf35ae7d3"
+    },
+    {
+      "uuid": "667f258a-2af3-472f-9947-6b56710cffaf",
+      "name": "Blue Gem",
+      "imageFile": "blue_gem.webp",
+      "quantity": 15,
+      "sourceId": "ef7cb434-67be-48d5-88d8-33d2b4b7091b",
+      "isEngram": false,
+      "compositionId": "885a9c19-5342-4913-83ad-7c31f491c983"
+    },
+    {
+      "uuid": "3f841d3a-63d2-48d5-b32a-53b40929951f",
+      "name": "Blue Gem",
+      "imageFile": "blue_gem.webp",
+      "quantity": 40,
+      "sourceId": "ef7cb434-67be-48d5-88d8-33d2b4b7091b",
+      "isEngram": false,
+      "compositionId": "0fa80083-cadc-484a-b062-476bce4d79e2"
+    },
+    {
+      "uuid": "34a4fd16-40ca-404c-9740-9dcfbb2968d4",
+      "name": "Cementing Paste",
+      "imageFile": "cementing_paste.webp",
+      "quantity": 85,
+      "sourceId": "f89bfa2e-0323-4d7f-ae07-2d45e17db0c0",
+      "isEngram": true,
+      "compositionId": "c199b4a0-c317-453c-8a27-897838e514ce"
+    },
+    {
+      "uuid": "9d11fc73-754b-4ebd-ae60-8984c2988265",
+      "name": "Cementing Paste",
+      "imageFile": "cementing_paste.webp",
+      "quantity": 85,
+      "sourceId": "f89bfa2e-0323-4d7f-ae07-2d45e17db0c0",
+      "isEngram": true,
+      "compositionId": "9bda02e0-af68-4f10-9077-017b8ca957fc"
+    },
+    {
+      "uuid": "35e9b212-9bc3-4ef0-8a95-7abea166942c",
+      "name": "Cementing Paste",
+      "imageFile": "cementing_paste.webp",
+      "quantity": 60,
+      "sourceId": "f89bfa2e-0323-4d7f-ae07-2d45e17db0c0",
+      "isEngram": true,
+      "compositionId": "8bdaa12e-7753-42e4-a80b-86e411a8a04d"
+    },
+    {
+      "uuid": "bd411c85-59f7-4aab-b293-5095922c7c06",
+      "name": "Cementing Paste",
+      "imageFile": "cementing_paste.webp",
+      "quantity": 800,
+      "sourceId": "f89bfa2e-0323-4d7f-ae07-2d45e17db0c0",
+      "isEngram": true,
+      "compositionId": "99146b25-372b-4748-b8ae-c0fdf35ae7d3"
+    },
+    {
+      "uuid": "c1a314b2-8767-4243-9f15-8a030725483c",
+      "name": "Cementing Paste",
+      "imageFile": "cementing_paste.webp",
+      "quantity": 250,
+      "sourceId": "f89bfa2e-0323-4d7f-ae07-2d45e17db0c0",
+      "isEngram": true,
+      "compositionId": "ef241e63-af6e-420d-87f6-69e2303fef10"
+    },
+    {
+      "uuid": "975e9291-45c4-4158-9e6b-881d538ff0ea",
+      "name": "Charge Battery",
+      "imageFile": "charge_battery.webp",
+      "quantity": 2,
+      "sourceId": "4325b461-0c9e-48e3-9493-806ce8e40951",
+      "isEngram": true,
+      "compositionId": "03697756-b558-4081-948f-178744c48bc9"
+    },
+    {
+      "uuid": "138e676d-3bc3-4946-9753-64295c63a101",
+      "name": "Congealed Gas Ball",
+      "imageFile": "congealed_gas_ball.webp",
+      "quantity": 20,
+      "sourceId": "7d9ee472-66e2-45ba-96f4-3917e452ca8a",
+      "isEngram": false,
+      "compositionId": "785beb3b-3abd-4c7a-b140-a4671e7f5b93"
+    },
+    {
+      "uuid": "35b4aa9d-b364-4a9c-99ba-577622a935ae",
+      "name": "Congealed Gas Ball",
+      "imageFile": "congealed_gas_ball.webp",
+      "quantity": 400,
+      "sourceId": "7d9ee472-66e2-45ba-96f4-3917e452ca8a",
+      "isEngram": false,
+      "compositionId": "03697756-b558-4081-948f-178744c48bc9"
+    },
+    {
+      "uuid": "f38bb37c-580e-4ad2-8c21-3a61f58fc900",
+      "name": "Congealed Gas Ball",
+      "imageFile": "congealed_gas_ball.webp",
+      "quantity": 15,
+      "sourceId": "7d9ee472-66e2-45ba-96f4-3917e452ca8a",
+      "isEngram": false,
+      "compositionId": "2b0ca9b1-c71f-4cbf-87c2-33d11a0f2d23"
+    },
+    {
+      "uuid": "862c8c5c-0076-471f-9e0f-2c93df18bd80",
+      "name": "Congealed Gas Ball",
+      "imageFile": "congealed_gas_ball.webp",
+      "quantity": 15,
+      "sourceId": "7d9ee472-66e2-45ba-96f4-3917e452ca8a",
+      "isEngram": false,
+      "compositionId": "e2a67498-a38f-4ec3-b373-750c4ffc2ad9"
+    },
+    {
+      "uuid": "0da19d0a-8131-46b7-9f10-8f4d7173dc94",
+      "name": "Congealed Gas Ball",
+      "imageFile": "congealed_gas_ball.webp",
+      "quantity": 20,
+      "sourceId": "7d9ee472-66e2-45ba-96f4-3917e452ca8a",
+      "isEngram": false,
+      "compositionId": "88079a36-eba4-4bb5-bb32-5341e6bc1224"
+    },
+    {
+      "uuid": "b2a1c3bb-b502-4095-b978-024bb7748003",
+      "name": "Congealed Gas Ball",
+      "imageFile": "congealed_gas_ball.webp",
+      "quantity": 30,
+      "sourceId": "7d9ee472-66e2-45ba-96f4-3917e452ca8a",
+      "isEngram": false,
+      "compositionId": "15752a81-632a-4db2-bb17-d51df108fc7d"
+    },
+    {
+      "uuid": "ab4b739f-4e5e-43a4-938e-42fac249e270",
+      "name": "Congealed Gas Ball",
+      "imageFile": "congealed_gas_ball.webp",
+      "quantity": 45,
+      "sourceId": "7d9ee472-66e2-45ba-96f4-3917e452ca8a",
+      "isEngram": false,
+      "compositionId": "f6eaf7dc-e461-4800-9017-460c18ba970c"
+    },
+    {
+      "uuid": "dba501a8-2389-421e-81af-ca88cd8f82e5",
+      "name": "Congealed Gas Ball",
+      "imageFile": "congealed_gas_ball.webp",
+      "quantity": 3,
+      "sourceId": "7d9ee472-66e2-45ba-96f4-3917e452ca8a",
+      "isEngram": false,
+      "compositionId": "155d63f2-d685-4705-9457-80df91d4b35f"
+    },
+    {
+      "uuid": "a507ba2c-bf43-426d-a763-8862493d857b",
+      "name": "Congealed Gas Ball",
+      "imageFile": "congealed_gas_ball.webp",
+      "quantity": 12,
+      "sourceId": "7d9ee472-66e2-45ba-96f4-3917e452ca8a",
+      "isEngram": false,
+      "compositionId": "885a9c19-5342-4913-83ad-7c31f491c983"
+    },
+    {
+      "uuid": "654b1702-c943-43e6-9594-335350326a4b",
+      "name": "Congealed Gas Ball",
+      "imageFile": "congealed_gas_ball.webp",
+      "quantity": 525,
+      "sourceId": "7d9ee472-66e2-45ba-96f4-3917e452ca8a",
+      "isEngram": false,
+      "compositionId": "8845df47-d67f-4cc8-ab6e-fcef4bdcb3cd"
+    },
+    {
+      "uuid": "3eca6b0a-a92b-416b-922f-e76d18dc6ac8",
+      "name": "Crystal",
+      "imageFile": "crystal.webp",
+      "quantity": 325,
+      "sourceId": "42578eef-d988-4ace-95f8-e91474503e96",
+      "isEngram": false,
+      "compositionId": "0fad513a-ea3d-4d04-be92-92e31b6cbd90"
+    },
+    {
+      "uuid": "01c74df6-db80-41b0-b1d4-0b3513ec0b4d",
+      "name": "Crystal",
+      "imageFile": "crystal.webp",
+      "quantity": 4,
+      "sourceId": "42578eef-d988-4ace-95f8-e91474503e96",
+      "isEngram": false,
+      "compositionId": "785beb3b-3abd-4c7a-b140-a4671e7f5b93"
+    },
+    {
+      "uuid": "70cef181-9564-4d4c-b060-4a176f32e019",
+      "name": "Crystal",
+      "imageFile": "crystal.webp",
+      "quantity": 40,
+      "sourceId": "42578eef-d988-4ace-95f8-e91474503e96",
+      "isEngram": false,
+      "compositionId": "8bdaa12e-7753-42e4-a80b-86e411a8a04d"
+    },
+    {
+      "uuid": "8aa258b6-7902-458a-9cb2-c2f216507f59",
+      "name": "Crystal",
+      "imageFile": "crystal.webp",
+      "quantity": 10,
+      "sourceId": "42578eef-d988-4ace-95f8-e91474503e96",
+      "isEngram": false,
+      "compositionId": "2b0ca9b1-c71f-4cbf-87c2-33d11a0f2d23"
+    },
+    {
+      "uuid": "3970d4f3-2855-4604-a365-cbefbca25717",
+      "name": "Crystal",
+      "imageFile": "crystal.webp",
+      "quantity": 16,
+      "sourceId": "42578eef-d988-4ace-95f8-e91474503e96",
+      "isEngram": false,
+      "compositionId": "e2a67498-a38f-4ec3-b373-750c4ffc2ad9"
+    },
+    {
+      "uuid": "fa5677b8-1a27-474b-adf2-bca3ad5faa21",
+      "name": "Crystal",
+      "imageFile": "crystal.webp",
+      "quantity": 50,
+      "sourceId": "42578eef-d988-4ace-95f8-e91474503e96",
+      "isEngram": false,
+      "compositionId": "88079a36-eba4-4bb5-bb32-5341e6bc1224"
+    },
+    {
+      "uuid": "6e29272c-edce-4116-aff0-b67799fc9df5",
+      "name": "Crystal",
+      "imageFile": "crystal.webp",
+      "quantity": 40,
+      "sourceId": "42578eef-d988-4ace-95f8-e91474503e96",
+      "isEngram": false,
+      "compositionId": "15752a81-632a-4db2-bb17-d51df108fc7d"
+    },
+    {
+      "uuid": "ecdc5dc4-da05-4017-94ea-ea5c8b808e10",
+      "name": "Crystal",
+      "imageFile": "crystal.webp",
+      "quantity": 50,
+      "sourceId": "42578eef-d988-4ace-95f8-e91474503e96",
+      "isEngram": false,
+      "compositionId": "f6eaf7dc-e461-4800-9017-460c18ba970c"
+    },
+    {
+      "uuid": "36a6ac4f-f30d-4e1c-8e51-0137df671bda",
+      "name": "Crystal",
+      "imageFile": "crystal.webp",
+      "quantity": 2,
+      "sourceId": "42578eef-d988-4ace-95f8-e91474503e96",
+      "isEngram": false,
+      "compositionId": "7daa1590-20ef-4bf0-9cfa-70f185154b94"
+    },
+    {
+      "uuid": "61da12c0-df02-47ed-a704-a4f15b0a1f62",
+      "name": "Electronics",
+      "imageFile": "electronics.webp",
+      "quantity": 120,
+      "sourceId": "5ad4b23a-feff-4bc3-86d5-25df032067b4",
+      "isEngram": true,
+      "compositionId": "03697756-b558-4081-948f-178744c48bc9"
+    },
+    {
+      "uuid": "8c0670cb-b728-48a8-b032-35bf2dac750e",
+      "name": "Electronics",
+      "imageFile": "electronics.webp",
+      "quantity": 15,
+      "sourceId": "5ad4b23a-feff-4bc3-86d5-25df032067b4",
+      "isEngram": true,
+      "compositionId": "0fa80083-cadc-484a-b062-476bce4d79e2"
+    },
+    {
+      "uuid": "0350cd8c-0b5b-4136-880f-cf641f098440",
+      "name": "Element",
+      "imageFile": "element.webp",
+      "quantity": 75,
+      "sourceId": "141d3b93-887b-4a3d-a97a-ff529ec1b91f",
+      "isEngram": true,
+      "compositionId": "0fad513a-ea3d-4d04-be92-92e31b6cbd90"
+    },
+    {
+      "uuid": "9ab960eb-47ac-4ce2-9b60-f7634d2f3366",
+      "name": "Element",
+      "imageFile": "element.webp",
+      "quantity": 20,
+      "sourceId": "141d3b93-887b-4a3d-a97a-ff529ec1b91f",
+      "isEngram": true,
+      "compositionId": "8845df47-d67f-4cc8-ab6e-fcef4bdcb3cd"
+    },
+    {
+      "uuid": "1f008c9e-c395-4937-b18c-fb2bd4e6eaef",
+      "name": "Fiber",
+      "imageFile": "fiber.webp",
+      "quantity": 150,
+      "sourceId": "a5f8bb2e-29ca-406f-ab9b-053810485884",
+      "isEngram": false,
+      "compositionId": "c199b4a0-c317-453c-8a27-897838e514ce"
+    },
+    {
+      "uuid": "92a217be-e1d5-43a3-a53b-53e957278e96",
+      "name": "Fiber",
+      "imageFile": "fiber.webp",
+      "quantity": 225,
+      "sourceId": "a5f8bb2e-29ca-406f-ab9b-053810485884",
+      "isEngram": false,
+      "compositionId": "9103668d-f238-4377-a905-cd12e814d039"
+    },
+    {
+      "uuid": "117505fa-1771-4139-b00c-077157bba63d",
+      "name": "Fiber",
+      "imageFile": "fiber.webp",
+      "quantity": 125,
+      "sourceId": "a5f8bb2e-29ca-406f-ab9b-053810485884",
+      "isEngram": false,
+      "compositionId": "a34d5739-6cbe-44e1-9e18-e7f3f8cf2149"
+    },
+    {
+      "uuid": "aca21cb8-ddb0-4e5f-bdc0-0616c197eb3a",
+      "name": "Fiber",
+      "imageFile": "fiber.webp",
+      "quantity": 225,
+      "sourceId": "a5f8bb2e-29ca-406f-ab9b-053810485884",
+      "isEngram": false,
+      "compositionId": "0d2fc7bc-dc33-4df1-9813-906ec8b896cb"
+    },
+    {
+      "uuid": "dde97dac-f68e-45cd-a417-00427111e3dd",
+      "name": "Fiber",
+      "imageFile": "fiber.webp",
+      "quantity": 150,
+      "sourceId": "a5f8bb2e-29ca-406f-ab9b-053810485884",
+      "isEngram": false,
+      "compositionId": "9bda02e0-af68-4f10-9077-017b8ca957fc"
+    },
+    {
+      "uuid": "99558aba-6134-4b36-a67b-78d0e930f95a",
+      "name": "Fiber",
+      "imageFile": "fiber.webp",
+      "quantity": 10,
+      "sourceId": "a5f8bb2e-29ca-406f-ab9b-053810485884",
+      "isEngram": false,
+      "compositionId": "da1f48d8-9b8a-4ddd-882b-628a65c52d47"
+    },
+    {
+      "uuid": "18462264-b0d7-4641-bab8-b647b38c8d5a",
+      "name": "Fiber",
+      "imageFile": "fiber.webp",
+      "quantity": 120,
+      "sourceId": "a5f8bb2e-29ca-406f-ab9b-053810485884",
+      "isEngram": false,
+      "compositionId": "13af35e7-c5a9-48c1-85ab-1f6bbc431cb4"
+    },
+    {
+      "uuid": "b2be136f-44d6-4049-86d0-b9d88af81d55",
+      "name": "Fiber",
+      "imageFile": "fiber.webp",
+      "quantity": 100,
+      "sourceId": "a5f8bb2e-29ca-406f-ab9b-053810485884",
+      "isEngram": false,
+      "compositionId": "fae15dec-1f37-4857-8b46-4c6b07432cc8"
+    },
+    {
+      "uuid": "26297149-28c1-4de1-be04-874518cf87ec",
+      "name": "Fiber",
+      "imageFile": "fiber.webp",
+      "quantity": 25,
+      "sourceId": "a5f8bb2e-29ca-406f-ab9b-053810485884",
+      "isEngram": false,
+      "compositionId": "2b0ca9b1-c71f-4cbf-87c2-33d11a0f2d23"
+    },
+    {
+      "uuid": "f074e0f2-3cf3-4946-b7e6-a18d389c5d7c",
+      "name": "Fiber",
+      "imageFile": "fiber.webp",
+      "quantity": 35,
+      "sourceId": "a5f8bb2e-29ca-406f-ab9b-053810485884",
+      "isEngram": false,
+      "compositionId": "e2a67498-a38f-4ec3-b373-750c4ffc2ad9"
+    },
+    {
+      "uuid": "e9c057ba-462f-4c0f-9423-ecbd16a2fe9b",
+      "name": "Fiber",
+      "imageFile": "fiber.webp",
+      "quantity": 45,
+      "sourceId": "a5f8bb2e-29ca-406f-ab9b-053810485884",
+      "isEngram": false,
+      "compositionId": "88079a36-eba4-4bb5-bb32-5341e6bc1224"
+    },
+    {
+      "uuid": "8b627594-8653-43ef-bc4b-b7c9a4763d9d",
+      "name": "Fiber",
+      "imageFile": "fiber.webp",
+      "quantity": 65,
+      "sourceId": "a5f8bb2e-29ca-406f-ab9b-053810485884",
+      "isEngram": false,
+      "compositionId": "15752a81-632a-4db2-bb17-d51df108fc7d"
+    },
+    {
+      "uuid": "a9e611b0-31ee-426e-a9ea-609ab45107a4",
+      "name": "Fiber",
+      "imageFile": "fiber.webp",
+      "quantity": 65,
+      "sourceId": "a5f8bb2e-29ca-406f-ab9b-053810485884",
+      "isEngram": false,
+      "compositionId": "f6eaf7dc-e461-4800-9017-460c18ba970c"
+    },
+    {
+      "uuid": "392cc064-fcda-4fb9-80f4-845a907184d2",
+      "name": "Fiber",
+      "imageFile": "fiber.webp",
+      "quantity": 600,
+      "sourceId": "a5f8bb2e-29ca-406f-ab9b-053810485884",
+      "isEngram": false,
+      "compositionId": "e4961dd3-bdf7-4749-8083-f0c986bab3dd"
+    },
+    {
+      "uuid": "61b8898a-1c58-43a7-9474-1939cba71124",
+      "name": "Fiber",
+      "imageFile": "fiber.webp",
+      "quantity": 350,
+      "sourceId": "a5f8bb2e-29ca-406f-ab9b-053810485884",
+      "isEngram": false,
+      "compositionId": "df9ef7c8-8e68-49e6-87b8-d71ed277fde1"
+    },
+    {
+      "uuid": "9d51b527-d4f1-402e-a32d-03a0e8e8909c",
+      "name": "Fiber",
+      "imageFile": "fiber.webp",
+      "quantity": 175,
+      "sourceId": "a5f8bb2e-29ca-406f-ab9b-053810485884",
+      "isEngram": false,
+      "compositionId": "f9001290-ae60-4d30-9b27-3391d7ad7073"
+    },
+    {
+      "uuid": "4dcfbbc5-4543-4a3c-9171-2d9fa197947e",
+      "name": "Fiber",
+      "imageFile": "fiber.webp",
+      "quantity": 200,
+      "sourceId": "a5f8bb2e-29ca-406f-ab9b-053810485884",
+      "isEngram": false,
+      "compositionId": "b03b879e-3fe2-41f7-88b8-b09803838070"
+    },
+    {
+      "uuid": "80a925ca-f228-475f-ba81-ac7ca2937213",
+      "name": "Fiber",
+      "imageFile": "fiber.webp",
+      "quantity": 45,
+      "sourceId": "a5f8bb2e-29ca-406f-ab9b-053810485884",
+      "isEngram": false,
+      "compositionId": "b19a06a0-7c25-4528-9801-e61024bfd716"
+    },
+    {
+      "uuid": "2b2f7c67-c418-4b33-9b21-afda345344c1",
+      "name": "Fiber",
+      "imageFile": "fiber.webp",
+      "quantity": 600,
+      "sourceId": "a5f8bb2e-29ca-406f-ab9b-053810485884",
+      "isEngram": false,
+      "compositionId": "ef241e63-af6e-420d-87f6-69e2303fef10"
+    },
+    {
+      "uuid": "29cec5e7-4a56-42ac-ad5c-4fd3d56981ee",
+      "name": "Fiber",
+      "imageFile": "fiber.webp",
+      "quantity": 180,
+      "sourceId": "a5f8bb2e-29ca-406f-ab9b-053810485884",
+      "isEngram": false,
+      "compositionId": "e8be1237-9a8c-4fb2-a987-ff4fa604a1d7"
+    },
+    {
+      "uuid": "5b93f91b-03cb-4f37-9d6e-61713e555c76",
+      "name": "Fiber",
+      "imageFile": "fiber.webp",
+      "quantity": 280,
+      "sourceId": "a5f8bb2e-29ca-406f-ab9b-053810485884",
+      "isEngram": false,
+      "compositionId": "e6488604-3190-4aba-8d5b-e5864f5a5412"
+    },
+    {
+      "uuid": "1a222274-cac8-4187-8726-0778afd0a211",
+      "name": "Fiber",
+      "imageFile": "fiber.webp",
+      "quantity": 100,
+      "sourceId": "a5f8bb2e-29ca-406f-ab9b-053810485884",
+      "isEngram": false,
+      "compositionId": "333b279d-db49-4a50-9664-1d1babcd9743"
+    },
+    {
+      "uuid": "12b4d620-03bb-4135-9af4-a159571dde2e",
+      "name": "Flint",
+      "imageFile": "flint.webp",
+      "quantity": 70,
+      "sourceId": "d888198a-3ea9-4dea-83a6-85c73033cc62",
+      "isEngram": false,
+      "compositionId": "885a9c19-5342-4913-83ad-7c31f491c983"
+    },
+    {
+      "uuid": "7897af49-e38a-416a-ac56-62f5fdbc14c5",
+      "name": "Fungal Wood",
+      "imageFile": "fungal_wood.webp",
+      "quantity": 200,
+      "sourceId": "fb12dda3-5c15-41ab-b9d3-c1271ee81492",
+      "isEngram": false,
+      "compositionId": "9103668d-f238-4377-a905-cd12e814d039"
+    },
+    {
+      "uuid": "413fd0a5-ccdb-4e95-ae95-d7cafd401517",
+      "name": "Fungal Wood",
+      "imageFile": "fungal_wood.webp",
+      "quantity": 110,
+      "sourceId": "fb12dda3-5c15-41ab-b9d3-c1271ee81492",
+      "isEngram": false,
+      "compositionId": "a34d5739-6cbe-44e1-9e18-e7f3f8cf2149"
+    },
+    {
+      "uuid": "e6993fce-5df4-4b2a-ab07-2fe94078b19d",
+      "name": "Fungal Wood",
+      "imageFile": "fungal_wood.webp",
+      "quantity": 2,
+      "sourceId": "fb12dda3-5c15-41ab-b9d3-c1271ee81492",
+      "isEngram": false,
+      "compositionId": "da1f48d8-9b8a-4ddd-882b-628a65c52d47"
+    },
+    {
+      "uuid": "f6395eee-3ed7-460b-825a-cc77abad6a41",
+      "name": "Fungal Wood",
+      "imageFile": "fungal_wood.webp",
+      "quantity": 60,
+      "sourceId": "fb12dda3-5c15-41ab-b9d3-c1271ee81492",
+      "isEngram": false,
+      "compositionId": "13af35e7-c5a9-48c1-85ab-1f6bbc431cb4"
+    },
+    {
+      "uuid": "751e84ca-28de-413a-b4ee-e815561de5c7",
+      "name": "Fungal Wood",
+      "imageFile": "fungal_wood.webp",
+      "quantity": 270,
+      "sourceId": "fb12dda3-5c15-41ab-b9d3-c1271ee81492",
+      "isEngram": false,
+      "compositionId": "e4961dd3-bdf7-4749-8083-f0c986bab3dd"
+    },
+    {
+      "uuid": "5e39852d-6127-454b-9b5e-61453bcc051d",
+      "name": "Fungal Wood",
+      "imageFile": "fungal_wood.webp",
+      "quantity": 285,
+      "sourceId": "fb12dda3-5c15-41ab-b9d3-c1271ee81492",
+      "isEngram": false,
+      "compositionId": "df9ef7c8-8e68-49e6-87b8-d71ed277fde1"
+    },
+    {
+      "uuid": "3f6038ec-cc97-4c78-bfef-edcb48567d3e",
+      "name": "Fungal Wood",
+      "imageFile": "fungal_wood.webp",
+      "quantity": 175,
+      "sourceId": "fb12dda3-5c15-41ab-b9d3-c1271ee81492",
+      "isEngram": false,
+      "compositionId": "f9001290-ae60-4d30-9b27-3391d7ad7073"
+    },
+    {
+      "uuid": "35108fd9-04e8-4659-86cc-575cff6106a3",
+      "name": "Fungal Wood",
+      "imageFile": "fungal_wood.webp",
+      "quantity": 125,
+      "sourceId": "fb12dda3-5c15-41ab-b9d3-c1271ee81492",
+      "isEngram": false,
+      "compositionId": "b03b879e-3fe2-41f7-88b8-b09803838070"
+    },
+    {
+      "uuid": "899922df-dcf2-40f3-a38b-3e21994b2e5f",
+      "name": "Fungal Wood",
+      "imageFile": "fungal_wood.webp",
+      "quantity": 80,
+      "sourceId": "fb12dda3-5c15-41ab-b9d3-c1271ee81492",
+      "isEngram": false,
+      "compositionId": "b19a06a0-7c25-4528-9801-e61024bfd716"
+    },
+    {
+      "uuid": "41429946-5a1e-4cf6-8e76-3f0992010355",
+      "name": "Fungal Wood",
+      "imageFile": "fungal_wood.webp",
+      "quantity": 800,
+      "sourceId": "fb12dda3-5c15-41ab-b9d3-c1271ee81492",
+      "isEngram": false,
+      "compositionId": "ef241e63-af6e-420d-87f6-69e2303fef10"
+    },
+    {
+      "uuid": "a37fbedd-adce-479c-be9e-aff133c22197",
+      "name": "Fungal Wood",
+      "imageFile": "fungal_wood.webp",
+      "quantity": 15,
+      "sourceId": "fb12dda3-5c15-41ab-b9d3-c1271ee81492",
+      "isEngram": false,
+      "compositionId": "e8be1237-9a8c-4fb2-a987-ff4fa604a1d7"
+    },
+    {
+      "uuid": "48bc74b4-dfa7-4095-ba8b-d81016f91a78",
+      "name": "Fungal Wood",
+      "imageFile": "fungal_wood.webp",
+      "quantity": 10,
+      "sourceId": "fb12dda3-5c15-41ab-b9d3-c1271ee81492",
+      "isEngram": false,
+      "compositionId": "b8d7813d-f7f5-40ea-a345-c25434c0d4d4"
+    },
+    {
+      "uuid": "72fbe854-99ac-4a98-85d7-56118d0a0b30",
+      "name": "Fungal Wood",
+      "imageFile": "fungal_wood.webp",
+      "quantity": 8,
+      "sourceId": "fb12dda3-5c15-41ab-b9d3-c1271ee81492",
+      "isEngram": false,
+      "compositionId": "333b279d-db49-4a50-9664-1d1babcd9743"
+    },
+    {
+      "uuid": "e9ed1dd4-6e85-4980-8fcd-497066f29749",
+      "name": "Green Gem",
+      "imageFile": "green_gem.webp",
+      "quantity": 45,
+      "sourceId": "c138f1fd-79f0-444b-9a9d-204de1ba3c6d",
+      "isEngram": false,
+      "compositionId": "c199b4a0-c317-453c-8a27-897838e514ce"
+    },
+    {
+      "uuid": "9067b056-96f3-4e74-961a-5ea8db675ab1",
+      "name": "Green Gem",
+      "imageFile": "green_gem.webp",
+      "quantity": 45,
+      "sourceId": "c138f1fd-79f0-444b-9a9d-204de1ba3c6d",
+      "isEngram": false,
+      "compositionId": "9bda02e0-af68-4f10-9077-017b8ca957fc"
+    },
+    {
+      "uuid": "869b4268-8bc0-4ab2-a161-0cafefc43a75",
+      "name": "Green Gem",
+      "imageFile": "green_gem.webp",
+      "quantity": 4,
+      "sourceId": "c138f1fd-79f0-444b-9a9d-204de1ba3c6d",
+      "isEngram": false,
+      "compositionId": "da1f48d8-9b8a-4ddd-882b-628a65c52d47"
+    },
+    {
+      "uuid": "78ca3297-9edc-4613-a675-cf653d0717f4",
+      "name": "Green Gem",
+      "imageFile": "green_gem.webp",
+      "quantity": 20,
+      "sourceId": "c138f1fd-79f0-444b-9a9d-204de1ba3c6d",
+      "isEngram": false,
+      "compositionId": "8bdaa12e-7753-42e4-a80b-86e411a8a04d"
+    },
+    {
+      "uuid": "faf194bf-afd4-4b67-9e04-8c1f32eeed48",
+      "name": "Green Gem",
+      "imageFile": "green_gem.webp",
+      "quantity": 1,
+      "sourceId": "c138f1fd-79f0-444b-9a9d-204de1ba3c6d",
+      "isEngram": false,
+      "compositionId": "7daa1590-20ef-4bf0-9cfa-70f185154b94"
+    },
+    {
+      "uuid": "48b20e17-e596-4bfb-8b2f-b433b81d12d1",
+      "name": "Hide",
+      "imageFile": "hide.webp",
+      "quantity": 270,
+      "sourceId": "38832ff7-1ccf-488a-a806-f18391326701",
+      "isEngram": false,
+      "compositionId": "c199b4a0-c317-453c-8a27-897838e514ce"
+    },
+    {
+      "uuid": "3c51a2ec-a797-464d-8dd6-7b5ee918bc77",
+      "name": "Hide",
+      "imageFile": "hide.webp",
+      "quantity": 170,
+      "sourceId": "38832ff7-1ccf-488a-a806-f18391326701",
+      "isEngram": false,
+      "compositionId": "9103668d-f238-4377-a905-cd12e814d039"
+    },
+    {
+      "uuid": "ef6e8ebd-7dd1-4c52-838a-2af65195b082",
+      "name": "Hide",
+      "imageFile": "hide.webp",
+      "quantity": 285,
+      "sourceId": "38832ff7-1ccf-488a-a806-f18391326701",
+      "isEngram": false,
+      "compositionId": "a34d5739-6cbe-44e1-9e18-e7f3f8cf2149"
+    },
+    {
+      "uuid": "7cf426bd-7bb6-430c-b113-d795a797e5b1",
+      "name": "Hide",
+      "imageFile": "hide.webp",
+      "quantity": 350,
+      "sourceId": "38832ff7-1ccf-488a-a806-f18391326701",
+      "isEngram": false,
+      "compositionId": "0d2fc7bc-dc33-4df1-9813-906ec8b896cb"
+    },
+    {
+      "uuid": "37880b25-cd24-4585-a73e-c6ee6c18bf08",
+      "name": "Hide",
+      "imageFile": "hide.webp",
+      "quantity": 270,
+      "sourceId": "38832ff7-1ccf-488a-a806-f18391326701",
+      "isEngram": false,
+      "compositionId": "9bda02e0-af68-4f10-9077-017b8ca957fc"
+    },
+    {
+      "uuid": "68c29a8e-5053-4f55-bf40-804ceb17e4f8",
+      "name": "Hide",
+      "imageFile": "hide.webp",
+      "quantity": 60,
+      "sourceId": "38832ff7-1ccf-488a-a806-f18391326701",
+      "isEngram": false,
+      "compositionId": "fae15dec-1f37-4857-8b46-4c6b07432cc8"
+    },
+    {
+      "uuid": "bd4776dd-d794-4f5d-967c-205c3fbc310f",
+      "name": "Hide",
+      "imageFile": "hide.webp",
+      "quantity": 20,
+      "sourceId": "38832ff7-1ccf-488a-a806-f18391326701",
+      "isEngram": false,
+      "compositionId": "2b0ca9b1-c71f-4cbf-87c2-33d11a0f2d23"
+    },
+    {
+      "uuid": "ee370230-4ddb-44c9-a73b-0810c168e9dd",
+      "name": "Hide",
+      "imageFile": "hide.webp",
+      "quantity": 15,
+      "sourceId": "38832ff7-1ccf-488a-a806-f18391326701",
+      "isEngram": false,
+      "compositionId": "e2a67498-a38f-4ec3-b373-750c4ffc2ad9"
+    },
+    {
+      "uuid": "1eab3832-4295-496d-a1e4-38b590fcc2ae",
+      "name": "Hide",
+      "imageFile": "hide.webp",
+      "quantity": 30,
+      "sourceId": "38832ff7-1ccf-488a-a806-f18391326701",
+      "isEngram": false,
+      "compositionId": "88079a36-eba4-4bb5-bb32-5341e6bc1224"
+    },
+    {
+      "uuid": "85247346-d2b9-4feb-b72e-7c5a7366a2d5",
+      "name": "Hide",
+      "imageFile": "hide.webp",
+      "quantity": 45,
+      "sourceId": "38832ff7-1ccf-488a-a806-f18391326701",
+      "isEngram": false,
+      "compositionId": "15752a81-632a-4db2-bb17-d51df108fc7d"
+    },
+    {
+      "uuid": "71655e24-7086-4bf6-a4a3-f7c78f32f90b",
+      "name": "Hide",
+      "imageFile": "hide.webp",
+      "quantity": 45,
+      "sourceId": "38832ff7-1ccf-488a-a806-f18391326701",
+      "isEngram": false,
+      "compositionId": "f6eaf7dc-e461-4800-9017-460c18ba970c"
+    },
+    {
+      "uuid": "48a475fc-f8e9-4644-be8e-c24e08f62e9a",
+      "name": "Hide",
+      "imageFile": "hide.webp",
+      "quantity": 30,
+      "sourceId": "38832ff7-1ccf-488a-a806-f18391326701",
+      "isEngram": false,
+      "compositionId": "b8d7813d-f7f5-40ea-a345-c25434c0d4d4"
+    },
+    {
+      "uuid": "665d0347-32d2-4c8b-b908-7596a2077d09",
+      "name": "Hide",
+      "imageFile": "hide.webp",
+      "quantity": 120,
+      "sourceId": "38832ff7-1ccf-488a-a806-f18391326701",
+      "isEngram": false,
+      "compositionId": "e6488604-3190-4aba-8d5b-e5864f5a5412"
+    },
+    {
+      "uuid": "211157e7-d883-472c-ab6e-53692f42caa0",
+      "name": "Metal Ingot",
+      "imageFile": "metal_ingot.webp",
+      "quantity": 425,
+      "sourceId": "7d40cf2a-c24c-49fb-9912-d86a1b497036",
+      "isEngram": true,
+      "compositionId": "c199b4a0-c317-453c-8a27-897838e514ce"
+    },
+    {
+      "uuid": "4c5ddfa8-c6e3-46ab-8f04-5d9d9b6be674",
+      "name": "Metal Ingot",
+      "imageFile": "metal_ingot.webp",
+      "quantity": 125,
+      "sourceId": "7d40cf2a-c24c-49fb-9912-d86a1b497036",
+      "isEngram": true,
+      "compositionId": "0d2fc7bc-dc33-4df1-9813-906ec8b896cb"
+    },
+    {
+      "uuid": "5356ae6e-ec35-4608-9288-92afcbb59913",
+      "name": "Metal Ingot",
+      "imageFile": "metal_ingot.webp",
+      "quantity": 2350,
+      "sourceId": "7d40cf2a-c24c-49fb-9912-d86a1b497036",
+      "isEngram": true,
+      "compositionId": "0fad513a-ea3d-4d04-be92-92e31b6cbd90"
+    },
+    {
+      "uuid": "b832e47a-bdad-4923-b8d3-0ed299716bf1",
+      "name": "Metal Ingot",
+      "imageFile": "metal_ingot.webp",
+      "quantity": 425,
+      "sourceId": "7d40cf2a-c24c-49fb-9912-d86a1b497036",
+      "isEngram": true,
+      "compositionId": "9bda02e0-af68-4f10-9077-017b8ca957fc"
+    },
+    {
+      "uuid": "600e890e-370b-4e31-a4e9-f04e1f3d8859",
+      "name": "Metal Ingot",
+      "imageFile": "metal_ingot.webp",
+      "quantity": 10,
+      "sourceId": "7d40cf2a-c24c-49fb-9912-d86a1b497036",
+      "isEngram": true,
+      "compositionId": "785beb3b-3abd-4c7a-b140-a4671e7f5b93"
+    },
+    {
+      "uuid": "8677e0b1-ccbd-41f8-a532-86ba53c206fc",
+      "name": "Metal Ingot",
+      "imageFile": "metal_ingot.webp",
+      "quantity": 130,
+      "sourceId": "7d40cf2a-c24c-49fb-9912-d86a1b497036",
+      "isEngram": true,
+      "compositionId": "03697756-b558-4081-948f-178744c48bc9"
+    },
+    {
+      "uuid": "37309b77-c661-4c3e-88a6-9f2f14ff2852",
+      "name": "Metal Ingot",
+      "imageFile": "metal_ingot.webp",
+      "quantity": 8,
+      "sourceId": "7d40cf2a-c24c-49fb-9912-d86a1b497036",
+      "isEngram": true,
+      "compositionId": "da1f48d8-9b8a-4ddd-882b-628a65c52d47"
+    },
+    {
+      "uuid": "9116caf2-1c22-4c0d-94b7-0bc9e094bde5",
+      "name": "Metal Ingot",
+      "imageFile": "metal_ingot.webp",
+      "quantity": 75,
+      "sourceId": "7d40cf2a-c24c-49fb-9912-d86a1b497036",
+      "isEngram": true,
+      "compositionId": "8bdaa12e-7753-42e4-a80b-86e411a8a04d"
+    },
+    {
+      "uuid": "4a53c2da-452a-49b5-89df-ee3554d0b6f3",
+      "name": "Metal Ingot",
+      "imageFile": "metal_ingot.webp",
+      "quantity": 60,
+      "sourceId": "7d40cf2a-c24c-49fb-9912-d86a1b497036",
+      "isEngram": true,
+      "compositionId": "fae15dec-1f37-4857-8b46-4c6b07432cc8"
+    },
+    {
+      "uuid": "2a654e45-aa6a-4034-b037-b47cd648154e",
+      "name": "Metal Ingot",
+      "imageFile": "metal_ingot.webp",
+      "quantity": 85,
+      "sourceId": "7d40cf2a-c24c-49fb-9912-d86a1b497036",
+      "isEngram": true,
+      "compositionId": "e4961dd3-bdf7-4749-8083-f0c986bab3dd"
+    },
+    {
+      "uuid": "88e30a1c-25ad-4e2c-9fdb-7ca249cdb13b",
+      "name": "Metal Ingot",
+      "imageFile": "metal_ingot.webp",
+      "quantity": 30,
+      "sourceId": "7d40cf2a-c24c-49fb-9912-d86a1b497036",
+      "isEngram": true,
+      "compositionId": "df9ef7c8-8e68-49e6-87b8-d71ed277fde1"
+    },
+    {
+      "uuid": "88843402-b853-4201-9744-7655441851f9",
+      "name": "Metal Ingot",
+      "imageFile": "metal_ingot.webp",
+      "quantity": 20,
+      "sourceId": "7d40cf2a-c24c-49fb-9912-d86a1b497036",
+      "isEngram": true,
+      "compositionId": "f9001290-ae60-4d30-9b27-3391d7ad7073"
+    },
+    {
+      "uuid": "ca0dfbea-7fc5-4a3c-a679-665777067855",
+      "name": "Metal Ingot",
+      "imageFile": "metal_ingot.webp",
+      "quantity": 35,
+      "sourceId": "7d40cf2a-c24c-49fb-9912-d86a1b497036",
+      "isEngram": true,
+      "compositionId": "b03b879e-3fe2-41f7-88b8-b09803838070"
+    },
+    {
+      "uuid": "e2689519-3642-46a6-84b7-317fcef4fdb4",
+      "name": "Metal Ingot",
+      "imageFile": "metal_ingot.webp",
+      "quantity": 5,
+      "sourceId": "7d40cf2a-c24c-49fb-9912-d86a1b497036",
+      "isEngram": true,
+      "compositionId": "b19a06a0-7c25-4528-9801-e61024bfd716"
+    },
+    {
+      "uuid": "bf3e2876-04a2-4968-baef-e0085830d6a6",
+      "name": "Metal Ingot",
+      "imageFile": "metal_ingot.webp",
+      "quantity": 120,
+      "sourceId": "7d40cf2a-c24c-49fb-9912-d86a1b497036",
+      "isEngram": true,
+      "compositionId": "99146b25-372b-4748-b8ae-c0fdf35ae7d3"
+    },
+    {
+      "uuid": "b71e8684-52f6-4d6c-b6d2-881eb309d570",
+      "name": "Metal Ingot",
+      "imageFile": "metal_ingot.webp",
+      "quantity": 15,
+      "sourceId": "7d40cf2a-c24c-49fb-9912-d86a1b497036",
+      "isEngram": true,
+      "compositionId": "885a9c19-5342-4913-83ad-7c31f491c983"
+    },
+    {
+      "uuid": "76fa249e-5522-4b6f-a2c1-bdc15a91545e",
+      "name": "Metal Ingot",
+      "imageFile": "metal_ingot.webp",
+      "quantity": 120,
+      "sourceId": "7d40cf2a-c24c-49fb-9912-d86a1b497036",
+      "isEngram": true,
+      "compositionId": "8845df47-d67f-4cc8-ab6e-fcef4bdcb3cd"
+    },
+    {
+      "uuid": "8553a8ee-be0c-4b5a-9530-40beb63135e5",
+      "name": "Metal Ingot",
+      "imageFile": "metal_ingot.webp",
+      "quantity": 320,
+      "sourceId": "7d40cf2a-c24c-49fb-9912-d86a1b497036",
+      "isEngram": true,
+      "compositionId": "e6488604-3190-4aba-8d5b-e5864f5a5412"
+    },
+    {
+      "uuid": "d429fe3d-e6da-4ebf-b542-8cc67c736509",
+      "name": "Metal Ingot",
+      "imageFile": "metal_ingot.webp",
+      "quantity": 15,
+      "sourceId": "7d40cf2a-c24c-49fb-9912-d86a1b497036",
+      "isEngram": true,
+      "compositionId": "333b279d-db49-4a50-9664-1d1babcd9743"
+    },
+    {
+      "uuid": "c4b7d7a2-3178-4353-99d5-cad097783bdc",
+      "name": "Metal Ingot",
+      "imageFile": "metal_ingot.webp",
+      "quantity": 60,
+      "sourceId": "7d40cf2a-c24c-49fb-9912-d86a1b497036",
+      "isEngram": true,
+      "compositionId": "0fa80083-cadc-484a-b062-476bce4d79e2"
+    },
+    {
+      "uuid": "24f59751-7e1c-416a-9d66-a26dc3586af2",
+      "name": "Nameless Venom",
+      "imageFile": "nameless_venom.webp",
+      "quantity": 12,
+      "sourceId": "d96209bd-bfca-4fae-9de3-097b2d1f1af6",
+      "isEngram": false,
+      "compositionId": "e78134d6-92ed-418e-abeb-f3270ffc9529"
+    },
+    {
+      "uuid": "34e412f5-7b58-4d3b-9ee6-fe0955d7a228",
+      "name": "Nameless Venom",
+      "imageFile": "nameless_venom.webp",
+      "quantity": 20,
+      "sourceId": "d96209bd-bfca-4fae-9de3-097b2d1f1af6",
+      "isEngram": false,
+      "compositionId": "5e210d04-15b6-4ce5-ac6f-f16d26440f7e"
+    },
+    {
+      "uuid": "41adfd73-cacb-474e-a786-ba050609d65b",
+      "name": "Obsidian",
+      "imageFile": "obsidian.webp",
+      "quantity": 10,
+      "sourceId": "c3d03aa4-35b0-44e0-980e-fbffe807442b",
+      "isEngram": false,
+      "compositionId": "885a9c19-5342-4913-83ad-7c31f491c983"
+    },
+    {
+      "uuid": "2049280c-28d7-4fdf-a3b0-07442b0c2e7e",
+      "name": "Pelt, Hair, or Wool",
+      "imageFile": "pelt_hair_or_wool.webp",
+      "quantity": 140,
+      "sourceId": "4bcf0452-e5ae-473d-a1cc-17fe4b293a0d",
+      "isEngram": false,
+      "compositionId": "b8d7813d-f7f5-40ea-a345-c25434c0d4d4"
+    },
+    {
+      "uuid": "9f4a0b39-304c-40af-abc9-80aec3d87b63",
+      "name": "Pelt, Hair, or Wool",
+      "imageFile": "pelt_hair_or_wool.webp",
+      "quantity": 200,
+      "sourceId": "4bcf0452-e5ae-473d-a1cc-17fe4b293a0d",
+      "isEngram": false,
+      "compositionId": "e6488604-3190-4aba-8d5b-e5864f5a5412"
+    },
+    {
+      "uuid": "f7f830a4-0f3e-463b-ac0a-7d3b0d0b5e4b",
+      "name": "Polymer",
+      "imageFile": "polymer.webp",
+      "quantity": 270,
+      "sourceId": "d30752f8-ca63-45cb-8340-b24de54af103",
+      "isEngram": true,
+      "compositionId": "0fad513a-ea3d-4d04-be92-92e31b6cbd90"
+    },
+    {
+      "uuid": "813cd0aa-be62-4036-a6b4-0bdc28b53fed",
+      "name": "Polymer",
+      "imageFile": "polymer.webp",
+      "quantity": 15,
+      "sourceId": "d30752f8-ca63-45cb-8340-b24de54af103",
+      "isEngram": true,
+      "compositionId": "785beb3b-3abd-4c7a-b140-a4671e7f5b93"
+    },
+    {
+      "uuid": "810b9613-7fc5-4abf-a7e7-f53d49487462",
+      "name": "Polymer",
+      "imageFile": "polymer.webp",
+      "quantity": 120,
+      "sourceId": "d30752f8-ca63-45cb-8340-b24de54af103",
+      "isEngram": true,
+      "compositionId": "03697756-b558-4081-948f-178744c48bc9"
+    },
+    {
+      "uuid": "559a6ee0-6d5b-4481-8e6d-d4db0c02527d",
+      "name": "Polymer",
+      "imageFile": "polymer.webp",
+      "quantity": 10,
+      "sourceId": "d30752f8-ca63-45cb-8340-b24de54af103",
+      "isEngram": true,
+      "compositionId": "2b0ca9b1-c71f-4cbf-87c2-33d11a0f2d23"
+    },
+    {
+      "uuid": "6ce6e2f2-6806-4d43-92b9-59d5292a28c4",
+      "name": "Polymer",
+      "imageFile": "polymer.webp",
+      "quantity": 2,
+      "sourceId": "d30752f8-ca63-45cb-8340-b24de54af103",
+      "isEngram": true,
+      "compositionId": "e2a67498-a38f-4ec3-b373-750c4ffc2ad9"
+    },
+    {
+      "uuid": "63f3c06e-6911-450e-9f16-a61f9c9eadef",
+      "name": "Polymer",
+      "imageFile": "polymer.webp",
+      "quantity": 20,
+      "sourceId": "d30752f8-ca63-45cb-8340-b24de54af103",
+      "isEngram": true,
+      "compositionId": "88079a36-eba4-4bb5-bb32-5341e6bc1224"
+    },
+    {
+      "uuid": "7a3377ab-1d73-4282-a89c-571eb5906b5d",
+      "name": "Polymer",
+      "imageFile": "polymer.webp",
+      "quantity": 15,
+      "sourceId": "d30752f8-ca63-45cb-8340-b24de54af103",
+      "isEngram": true,
+      "compositionId": "15752a81-632a-4db2-bb17-d51df108fc7d"
+    },
+    {
+      "uuid": "a4fadbe8-7c8a-480a-96b5-106c3c677445",
+      "name": "Polymer",
+      "imageFile": "polymer.webp",
+      "quantity": 25,
+      "sourceId": "d30752f8-ca63-45cb-8340-b24de54af103",
+      "isEngram": true,
+      "compositionId": "f6eaf7dc-e461-4800-9017-460c18ba970c"
+    },
+    {
+      "uuid": "c48c6d29-52f0-42bf-a62e-aa81ea9a1e24",
+      "name": "Polymer",
+      "imageFile": "polymer.webp",
+      "quantity": 450,
+      "sourceId": "d30752f8-ca63-45cb-8340-b24de54af103",
+      "isEngram": true,
+      "compositionId": "8845df47-d67f-4cc8-ab6e-fcef4bdcb3cd"
+    },
+    {
+      "uuid": "20368550-1d33-494a-9392-4245fca4fc19",
+      "name": "Polymer",
+      "imageFile": "polymer.webp",
+      "quantity": 80,
+      "sourceId": "d30752f8-ca63-45cb-8340-b24de54af103",
+      "isEngram": true,
+      "compositionId": "e6488604-3190-4aba-8d5b-e5864f5a5412"
+    },
+    {
+      "uuid": "ee199fe7-49c5-4086-b565-21ab48a12ed3",
+      "name": "Reaper Pheromone Gland",
+      "imageFile": "reaper_pheromone_gland.webp",
+      "quantity": 2,
+      "sourceId": "f5ecc4b9-af70-4f2a-ba06-2606157415b3",
+      "isEngram": false,
+      "compositionId": "e78134d6-92ed-418e-abeb-f3270ffc9529"
+    },
+    {
+      "uuid": "d4458f26-fe2a-45ea-9955-2dbe76ec7880",
+      "name": "Reaper Pheromone Gland",
+      "imageFile": "reaper_pheromone_gland.webp",
+      "quantity": 7,
+      "sourceId": "f5ecc4b9-af70-4f2a-ba06-2606157415b3",
+      "isEngram": false,
+      "compositionId": "5e210d04-15b6-4ce5-ac6f-f16d26440f7e"
+    },
+    {
+      "uuid": "97c158f7-a9d2-46e9-9f97-13b4c4958317",
+      "name": "Red Gem",
+      "imageFile": "red_gem.webp",
+      "quantity": 85,
+      "sourceId": "09b80640-c5b8-4adb-9300-89cebbac5f66",
+      "isEngram": false,
+      "compositionId": "0d2fc7bc-dc33-4df1-9813-906ec8b896cb"
+    },
+    {
+      "uuid": "e3184bd0-b6b6-4e2e-adfc-7246edde9c36",
+      "name": "Red Gem",
+      "imageFile": "red_gem.webp",
+      "quantity": 80,
+      "sourceId": "09b80640-c5b8-4adb-9300-89cebbac5f66",
+      "isEngram": false,
+      "compositionId": "03697756-b558-4081-948f-178744c48bc9"
+    },
+    {
+      "uuid": "a1803f64-fc65-4c9d-b017-2a010bce82bc",
+      "name": "Red Gem",
+      "imageFile": "red_gem.webp",
+      "quantity": 120,
+      "sourceId": "09b80640-c5b8-4adb-9300-89cebbac5f66",
+      "isEngram": false,
+      "compositionId": "8845df47-d67f-4cc8-ab6e-fcef4bdcb3cd"
+    },
+    {
+      "uuid": "fbda807a-c351-4b1a-8a55-4e2a0a27adc5",
+      "name": "Rock Drake Feather",
+      "imageFile": "rock_drake_feather.webp",
+      "quantity": 2,
+      "sourceId": "e032aac3-40f3-42e5-b31a-d1acf0fd484f",
+      "isEngram": false,
+      "compositionId": "e78134d6-92ed-418e-abeb-f3270ffc9529"
+    },
+    {
+      "uuid": "65d2d64b-5409-4ea7-8aac-3f1d841a841e",
+      "name": "Rock Drake Feather",
+      "imageFile": "rock_drake_feather.webp",
+      "quantity": 7,
+      "sourceId": "e032aac3-40f3-42e5-b31a-d1acf0fd484f",
+      "isEngram": false,
+      "compositionId": "5e210d04-15b6-4ce5-ac6f-f16d26440f7e"
+    },
+    {
+      "uuid": "dd1117e3-3ecc-4e17-aaf7-b5ee62b4fff8",
+      "name": "Sap",
+      "imageFile": "sap.webp",
+      "quantity": 3,
+      "sourceId": "db1138e5-8f0b-48ce-ac1f-56efce7a98f6",
+      "isEngram": false,
+      "compositionId": "155d63f2-d685-4705-9457-80df91d4b35f"
+    },
+    {
+      "uuid": "8cf9bfd2-9c7f-49cd-a08a-7af5f6edce44",
+      "name": "Stone",
+      "imageFile": "stone.webp",
+      "quantity": 1200,
+      "sourceId": "b25e9378-8298-4bcd-bac5-cf1ed5bb39c9",
+      "isEngram": false,
+      "compositionId": "ef241e63-af6e-420d-87f6-69e2303fef10"
+    },
+    {
+      "uuid": "f20d0919-2a26-433f-a326-db0e6aeaeffa",
+      "name": "Stone Arrow",
+      "imageFile": "stone_arrow.webp",
+      "quantity": 2,
+      "sourceId": "0badd773-dbff-4a7b-9f5a-13825430ca71",
+      "isEngram": true,
+      "compositionId": "333b279d-db49-4a50-9664-1d1babcd9743"
+    },
+    {
+      "uuid": "b8c39046-1066-4215-acd4-f0cc2892d5a0",
+      "name": "Thatch",
+      "imageFile": "thatch.webp",
+      "quantity": 40,
+      "sourceId": "2755f800-9a64-43ff-acba-379ec759a49b",
+      "isEngram": false,
+      "compositionId": "13af35e7-c5a9-48c1-85ab-1f6bbc431cb4"
+    },
+    {
+      "uuid": "e582aac4-d931-4020-96a4-2288c3854e17",
+      "name": "Thatch",
+      "imageFile": "thatch.webp",
+      "quantity": 140,
+      "sourceId": "2755f800-9a64-43ff-acba-379ec759a49b",
+      "isEngram": false,
+      "compositionId": "e8be1237-9a8c-4fb2-a987-ff4fa604a1d7"
+    },
+    {
+      "uuid": "fc26de68-0e94-446a-a61d-07b323538e41",
+      "name": "Water",
+      "imageFile": "water.webp",
+      "quantity": 1,
+      "sourceId": "efdbd8dd-004a-4aa0-a65a-ad204bb4e02c",
+      "isEngram": false,
+      "compositionId": "155d63f2-d685-4705-9457-80df91d4b35f"
+    }
+  ],
+  "directory": [
+    {
+      "uuid": "5d591f62-80ed-4a81-a4de-54ef27a499f3",
+      "name": "Ammo",
+      "imageFile": "folder.webp",
+      "viewType": 1,
+      "parentId": "08c73cd4-21e7-4089-af22-1f2526149ea6",
+      "sourceId": "f6957eda-8f56-4a1e-8f37-96e5ec1eb872"
+    },
+    {
+      "uuid": "c61f493b-558b-40ff-9e04-8774a4ecfcf1",
+      "name": "Armor",
+      "imageFile": "folder.webp",
+      "viewType": 1,
+      "parentId": "650f2659-131d-4a1b-b661-05b71f0ac789",
+      "sourceId": "ced08f46-8cd6-4618-9c39-d54f6a32269f"
+    },
+    {
+      "uuid": "50ad584d-da84-4604-a865-989e785a6730",
+      "name": "Armor",
+      "imageFile": "folder.webp",
+      "viewType": 1,
+      "parentId": "f3dd4e09-c791-49cc-b078-be1840d4b6b2",
+      "sourceId": "ced08f46-8cd6-4618-9c39-d54f6a32269f"
+    },
+    {
+      "uuid": "d5c3b9b7-8dd2-46f7-8f9d-3244114fa55b",
+      "name": "Attachments",
+      "imageFile": "folder.webp",
+      "viewType": 1,
+      "parentId": "c61f493b-558b-40ff-9e04-8774a4ecfcf1",
+      "sourceId": "e2493efd-c9eb-4a1d-9f64-6c620dbf3cf6"
+    },
+    {
+      "uuid": "d2bbfcf0-4ffb-4a05-8556-9b782ef69a2c",
+      "name": "Attachments",
+      "imageFile": "folder.webp",
+      "viewType": 1,
+      "parentId": "50ad584d-da84-4604-a865-989e785a6730",
+      "sourceId": "e2493efd-c9eb-4a1d-9f64-6c620dbf3cf6"
+    },
+    {
+      "uuid": "98625a0b-90b7-4059-b5e0-36be59907990",
+      "name": "Basilisk Saddle",
+      "imageFile": "basilisk_saddle.webp",
+      "viewType": 2,
+      "parentId": "4e9eb414-05be-4782-8e9e-fc3622517040",
+      "sourceId": "77c7b0fa-6b42-4f4d-ae7c-ff33c659d1e1"
+    },
+    {
+      "uuid": "fdda90b3-5f04-437e-af1a-ca8d05ea7c78",
+      "name": "Boss Arenas",
+      "imageFile": "folder.webp",
+      "viewType": 1,
+      "parentId": "68be870e-3337-4172-b94c-5656d5faf634",
+      "sourceId": "afcf5f73-38c0-43d2-8c65-483ee582e19d"
+    },
+    {
+      "uuid": "61d1ac6e-cc59-4d71-8abd-48adb27c2751",
+      "name": "Charge Battery",
+      "imageFile": "charge_battery.webp",
+      "viewType": 2,
+      "parentId": "5ec8b4dd-a179-4771-8e49-95b172c8f067",
+      "sourceId": "4325b461-0c9e-48e3-9493-806ce8e40951"
+    },
+    {
+      "uuid": "55f19ca6-90cc-4189-8636-49d5b5f559da",
+      "name": "Charge Lantern",
+      "imageFile": "charge_lantern.webp",
+      "viewType": 2,
+      "parentId": "b9462a7c-1cc6-467a-b1ba-884c9265b343",
+      "sourceId": "9949f9b7-9c35-4e72-afda-1567af87d6a3"
+    },
+    {
+      "uuid": "98897cb4-2e77-49ad-929e-e09fbb0fdc97",
+      "name": "Charge Node",
+      "imageFile": "charge_node.webp",
+      "viewType": 0,
+      "parentId": null,
+      "sourceId": "13e398ff-3aaa-4915-b23c-de4543835d6b"
+    },
+    {
+      "uuid": "0b5a50ba-9ef5-422a-b8fb-7701255fa1df",
+      "name": "Cliff",
+      "imageFile": "folder.webp",
+      "viewType": 1,
+      "parentId": "a30f959e-3d58-461a-979a-cd21416f2f23",
+      "sourceId": "dfd96ee9-85fa-407a-9949-e1d45a608770"
+    },
+    {
+      "uuid": "e8bb1864-b7b2-4fb3-a523-03de08da609d",
+      "name": "Climbing Pick",
+      "imageFile": "climbing_pick.webp",
+      "viewType": 2,
+      "parentId": "5ec8b4dd-a179-4771-8e49-95b172c8f067",
+      "sourceId": "d7012190-7422-47f2-a7ee-0a432ed376b3"
+    },
+    {
+      "uuid": "a842f225-7784-4b8c-8aa5-9aeccbc2f9b4",
+      "name": "Decorative",
+      "imageFile": "folder.webp",
+      "viewType": 1,
+      "parentId": "a6f66cc6-c400-4e43-a6e5-abd1ed450b65",
+      "sourceId": "78e5a429-55f7-4923-8df5-847f4449329c"
+    },
+    {
+      "uuid": "c7a303ac-99fa-4cbc-8dbf-409b3fa8a830",
+      "name": "Element",
+      "imageFile": "element.webp",
+      "viewType": 2,
+      "parentId": "ef4f0bf9-5a51-4bce-80a0-8c50418aa530",
+      "sourceId": "141d3b93-887b-4a3d-a97a-ff529ec1b91f"
+    },
+    {
+      "uuid": "d7fe222f-0fd8-4b10-bc2c-fdb31f739f8c",
+      "name": "Elevators",
+      "imageFile": "folder.webp",
+      "viewType": 1,
+      "parentId": "a30f959e-3d58-461a-979a-cd21416f2f23",
+      "sourceId": "ab4e30c5-a8c3-451d-87b5-133f4eabf445"
+    },
+    {
+      "uuid": "650f2659-131d-4a1b-b661-05b71f0ac789",
+      "name": "Fabricator",
+      "imageFile": "fabricator.webp",
+      "viewType": 0,
+      "parentId": null,
+      "sourceId": "6625159c-ff94-431f-a2cc-e10996e9d253"
+    },
+    {
+      "uuid": "c96e98c3-75a8-4c30-bc70-32872ab42a74",
+      "name": "Firearms",
+      "imageFile": "folder.webp",
+      "viewType": 1,
+      "parentId": "c5441c1c-927d-45d7-b106-a79d885e646c",
+      "sourceId": "41c4850e-6df4-48e6-b013-5bca46ce5f67"
+    },
+    {
+      "uuid": "f510c99f-7a16-4b53-8aac-37eb971fff1b",
+      "name": "Fish Basket",
+      "imageFile": "fish_basket.webp",
+      "viewType": 2,
+      "parentId": "fa7b126d-b560-4106-b6d2-0afb12377988",
+      "sourceId": "4a556e7f-ac3b-440e-99a0-06ffd6cd097f"
+    },
+    {
+      "uuid": "a6f66cc6-c400-4e43-a6e5-abd1ed450b65",
+      "name": "Furniture",
+      "imageFile": "folder.webp",
+      "viewType": 1,
+      "parentId": "943e551d-1863-4f21-85f9-11947dee9d32",
+      "sourceId": "57711965-4fac-4706-b9d5-38e1b40e69ab"
+    },
+    {
+      "uuid": "98c71929-e14b-4c93-8d9b-d4113258a7ad",
+      "name": "Gas Collector",
+      "imageFile": "gas_collector.webp",
+      "viewType": 2,
+      "parentId": "bffc52de-88c8-47ce-b4ab-4a425adf0245",
+      "sourceId": "c6b6bb2e-daac-4c7f-9922-6812da2d754d"
+    },
+    {
+      "uuid": "bffc52de-88c8-47ce-b4ab-4a425adf0245",
+      "name": "Gas Collector",
+      "imageFile": "folder.webp",
+      "viewType": 1,
+      "parentId": "a30f959e-3d58-461a-979a-cd21416f2f23",
+      "sourceId": "7e8189aa-955a-4671-a197-4bf2ef015d70"
+    },
+    {
+      "uuid": "1b4cd569-db91-4020-aa42-bb4f8e56f466",
+      "name": "Generate Aberration (Alpha) Portal",
+      "imageFile": "alpha_aberration_portal.webp",
+      "viewType": 2,
+      "parentId": "fdda90b3-5f04-437e-af1a-ca8d05ea7c78",
+      "sourceId": "186c0331-af7a-4391-873e-1d60c1a100dc"
+    },
+    {
+      "uuid": "596bbeed-a1e2-4c35-a995-122100bbdaa0",
+      "name": "Generate Aberration (Beta) Portal",
+      "imageFile": "beta_aberration_portal.webp",
+      "viewType": 2,
+      "parentId": "fdda90b3-5f04-437e-af1a-ca8d05ea7c78",
+      "sourceId": "cbb23011-d00d-4848-a1a0-774c48db4948"
+    },
+    {
+      "uuid": "3803ab59-f11f-450c-a068-d58eb4eb3566",
+      "name": "Generate Aberration (Gamma) Portal",
+      "imageFile": "gamma_aberration_portal.webp",
+      "viewType": 2,
+      "parentId": "fdda90b3-5f04-437e-af1a-ca8d05ea7c78",
+      "sourceId": "2b200850-d5de-488c-a252-08703d1b8d38"
+    },
+    {
+      "uuid": "002a3e33-d1fc-413a-9435-2746ac4832e6",
+      "name": "Glider Suit Skin",
+      "imageFile": "glider_suit_skin.webp",
+      "viewType": 2,
+      "parentId": "d2bbfcf0-4ffb-4a05-8556-9b782ef69a2c",
+      "sourceId": "6208dfa9-b4ea-4600-90cb-0adf3be2d1a2"
+    },
+    {
+      "uuid": "a4393ed4-b601-4161-bd28-6a91535a81b1",
+      "name": "Glow Stick",
+      "imageFile": "glow_stick.webp",
+      "viewType": 2,
+      "parentId": "5c1415bb-fd59-49ab-b252-7d98570cc28a",
+      "sourceId": "b1e63ffc-8d4b-4062-a462-9972bcc41627"
+    },
+    {
+      "uuid": "b2463301-f2fd-4862-964d-c851e1cb643d",
+      "name": "Hazard",
+      "imageFile": "folder.webp",
+      "viewType": 1,
+      "parentId": "c61f493b-558b-40ff-9e04-8774a4ecfcf1",
+      "sourceId": "279eec49-a35e-4ce0-97d2-c3ecc832de61"
+    },
+    {
+      "uuid": "74aa22e3-99ad-4a1c-84a7-6a5400cc2512",
+      "name": "Hazard Suit Boots",
+      "imageFile": "hazard_suit_boots.webp",
+      "viewType": 2,
+      "parentId": "b2463301-f2fd-4862-964d-c851e1cb643d",
+      "sourceId": "6faba4bd-2b77-42e5-b60a-dd2481370500"
+    },
+    {
+      "uuid": "49d63656-6050-4d95-aa45-5596b09bec7c",
+      "name": "Hazard Suit Gloves",
+      "imageFile": "hazard_suit_gloves.webp",
+      "viewType": 2,
+      "parentId": "b2463301-f2fd-4862-964d-c851e1cb643d",
+      "sourceId": "4e8dc499-b846-4a9c-8e77-195bdf7a3f9c"
+    },
+    {
+      "uuid": "9ac3f3e6-3236-4450-a4ae-7dff0c452fb1",
+      "name": "Hazard Suit Hat",
+      "imageFile": "hazard_suit_hat.webp",
+      "viewType": 2,
+      "parentId": "b2463301-f2fd-4862-964d-c851e1cb643d",
+      "sourceId": "0a5090a6-7c2e-4b66-9ae8-0061c62f5a72"
+    },
+    {
+      "uuid": "6a035dc4-84a8-4026-a686-1ebd8e4af354",
+      "name": "Hazard Suit Pants",
+      "imageFile": "hazard_suit_pants.webp",
+      "viewType": 2,
+      "parentId": "b2463301-f2fd-4862-964d-c851e1cb643d",
+      "sourceId": "861081d3-f436-44de-8b64-ff4225f0519a"
+    },
+    {
+      "uuid": "6d270b6e-bb95-41af-bf7c-f00ed47aa595",
+      "name": "Hazard Suit Shirt",
+      "imageFile": "hazard_suit_shirt.webp",
+      "viewType": 2,
+      "parentId": "b2463301-f2fd-4862-964d-c851e1cb643d",
+      "sourceId": "69a63ee1-23e6-4a91-89c7-6dddf20c2e71"
+    },
+    {
+      "uuid": "f8ea4fa8-a683-4780-97a7-556defef9e80",
+      "name": "Karkinos Saddle",
+      "imageFile": "karkinos_saddle.webp",
+      "viewType": 2,
+      "parentId": "4e9eb414-05be-4782-8e9e-fc3622517040",
+      "sourceId": "0552d37c-b039-4b3e-bfd8-57434d860372"
+    },
+    {
+      "uuid": "1d9515e6-9401-4acb-9143-dbe88b811d82",
+      "name": "Large Wood Elevator Platform",
+      "imageFile": "large_wood_elevator_platform.webp",
+      "viewType": 2,
+      "parentId": "d7fe222f-0fd8-4b10-bc2c-fdb31f739f8c",
+      "sourceId": "12b90cd9-2b78-479c-988f-a864441b8e18"
+    },
+    {
+      "uuid": "cd6ee095-e665-4b89-9a0e-a5a4cc63ab24",
+      "name": "Medium Wood Elevator Platform",
+      "imageFile": "medium_wood_elevator_platform.webp",
+      "viewType": 2,
+      "parentId": "d7fe222f-0fd8-4b10-bc2c-fdb31f739f8c",
+      "sourceId": "675c0207-886e-4635-8dec-92b7b08dec2c"
+    },
+    {
+      "uuid": "146640fc-2b81-4e8c-8f42-552f1d816cef",
+      "name": "Metal Cliff Platform",
+      "imageFile": "metal_cliff_platform.webp",
+      "viewType": 2,
+      "parentId": "0b5a50ba-9ef5-422a-b8fb-7701255fa1df",
+      "sourceId": "05fb8612-9bd2-4e9b-b31b-01d212007370"
+    },
+    {
+      "uuid": "5c1415bb-fd59-49ab-b252-7d98570cc28a",
+      "name": "Misc",
+      "imageFile": "folder.webp",
+      "viewType": 1,
+      "parentId": "8b8cb0d2-ffa9-46e0-b380-1bfa5186af49",
+      "sourceId": "33e2e661-7932-4c26-b3a6-9b405388e278"
+    },
+    {
+      "uuid": "fa7b126d-b560-4106-b6d2-0afb12377988",
+      "name": "Misc",
+      "imageFile": "folder.webp",
+      "viewType": 1,
+      "parentId": "943e551d-1863-4f21-85f9-11947dee9d32",
+      "sourceId": "33e2e661-7932-4c26-b3a6-9b405388e278"
+    },
+    {
+      "uuid": "5ec8b4dd-a179-4771-8e49-95b172c8f067",
+      "name": "Misc",
+      "imageFile": "folder.webp",
+      "viewType": 1,
+      "parentId": "f3dd4e09-c791-49cc-b078-be1840d4b6b2",
+      "sourceId": "33e2e661-7932-4c26-b3a6-9b405388e278"
+    },
+    {
+      "uuid": "68be870e-3337-4172-b94c-5656d5faf634",
+      "name": "Obelisk",
+      "imageFile": "obelisk.webp",
+      "viewType": 0,
+      "parentId": null,
+      "sourceId": "56e87eeb-eabc-4124-bfcd-051a07eca0e1"
+    },
+    {
+      "uuid": "c2554188-5a93-449b-84d4-940ffd2573fa",
+      "name": "Pliers",
+      "imageFile": "pliers.webp",
+      "viewType": 2,
+      "parentId": "5ec8b4dd-a179-4771-8e49-95b172c8f067",
+      "sourceId": "0a0e1e1f-0ca8-43ed-aca1-213f96fb0953"
+    },
+    {
+      "uuid": "fc55f56f-4b9b-4ff7-b663-3df26ec148a2",
+      "name": "Portable Rope Ladder",
+      "imageFile": "portable_rope_ladder.webp",
+      "viewType": 2,
+      "parentId": "d42827d2-394c-4cfd-b30e-9d35157a7506",
+      "sourceId": "8ed496ba-f1c8-45b1-91d1-d1385db8f1ab"
+    },
+    {
+      "uuid": "8c5cff33-33be-47ba-b687-e454380f7cab",
+      "name": "Ravager Saddle",
+      "imageFile": "ravager_saddle.webp",
+      "viewType": 2,
+      "parentId": "4e9eb414-05be-4782-8e9e-fc3622517040",
+      "sourceId": "db6b9d91-9301-4fb5-a68c-c7ae6b38ce7a"
+    },
+    {
+      "uuid": "ef4f0bf9-5a51-4bce-80a0-8c50418aa530",
+      "name": "Refined",
+      "imageFile": "folder.webp",
+      "viewType": 1,
+      "parentId": "98897cb4-2e77-49ad-929e-e09fbb0fdc97",
+      "sourceId": "7d6bbd61-26f0-4ff0-a8f5-8077b7b5b8da"
+    },
+    {
+      "uuid": "6d6240c9-0640-4cdf-bef3-9ff27b98c01f",
+      "name": "Rock Drake Saddle",
+      "imageFile": "rock_drake_saddle.webp",
+      "viewType": 2,
+      "parentId": "4e9eb414-05be-4782-8e9e-fc3622517040",
+      "sourceId": "a818b111-a918-485e-a011-d7b76d392984"
+    },
+    {
+      "uuid": "1aa47e01-6f10-4df3-8d12-08ee3bffb39f",
+      "name": "Rock Drake Tek Saddle",
+      "imageFile": "rock_drake_tek_saddle.webp",
+      "viewType": 2,
+      "parentId": "026964d8-7eaf-43d1-8f58-331d6b8ee224",
+      "sourceId": "7b08fb30-32f2-4f3d-9c52-8d9a47fd91e4"
+    },
+    {
+      "uuid": "5cae6f88-a5b9-4223-bf7a-3e8c991dcf5b",
+      "name": "Roll Rat Saddle",
+      "imageFile": "roll_rat_saddle.webp",
+      "viewType": 2,
+      "parentId": "4e9eb414-05be-4782-8e9e-fc3622517040",
+      "sourceId": "27f72822-7805-4c60-8cfe-08425d8e40c6"
+    },
+    {
+      "uuid": "4e9eb414-05be-4782-8e9e-fc3622517040",
+      "name": "Saddles",
+      "imageFile": "folder.webp",
+      "viewType": 1,
+      "parentId": "f3dd4e09-c791-49cc-b078-be1840d4b6b2",
+      "sourceId": "60051f2d-21a1-4094-962f-b1a36c35304d"
+    },
+    {
+      "uuid": "c32b782a-4902-4dd9-8fac-683211ca4043",
+      "name": "Saddles",
+      "imageFile": "folder.webp",
+      "viewType": 1,
+      "parentId": "a87b8ae2-2f2f-477c-ad92-3a1758bc6ebc",
+      "sourceId": "60051f2d-21a1-4094-962f-b1a36c35304d"
+    },
+    {
+      "uuid": "8b8cb0d2-ffa9-46e0-b380-1bfa5186af49",
+      "name": "Self",
+      "imageFile": "self.webp",
+      "viewType": 0,
+      "parentId": null,
+      "sourceId": "9fbd47ad-23b9-4fd5-b821-bed961bf5c32"
+    },
+    {
+      "uuid": "7b685805-8ad7-4f83-b541-777dcd12af11",
+      "name": "Shag Rug",
+      "imageFile": "shag_rug.webp",
+      "viewType": 2,
+      "parentId": "a842f225-7784-4b8c-8aa5-9aeccbc2f9b4",
+      "sourceId": "d02ee884-a5b4-4680-9cee-1bf280fdd2f9"
+    },
+    {
+      "uuid": "a4a3b445-18f2-45be-b85d-5439f17cc07a",
+      "name": "Small Wood Elevator Platform",
+      "imageFile": "small_wood_elevator_platform.webp",
+      "viewType": 2,
+      "parentId": "d7fe222f-0fd8-4b10-bc2c-fdb31f739f8c",
+      "sourceId": "41d8cc0b-6e8c-4514-bf9f-9850d4ff94ac"
+    },
+    {
+      "uuid": "f3dd4e09-c791-49cc-b078-be1840d4b6b2",
+      "name": "Smithy",
+      "imageFile": "smithy.webp",
+      "viewType": 0,
+      "parentId": null,
+      "sourceId": "615c3e98-008b-4b87-975b-c883c2c895eb"
+    },
+    {
+      "uuid": "8b5f5fc1-723f-4ffb-9456-3ab7fb6448fc",
+      "name": "Stone Cliff Platform",
+      "imageFile": "stone_cliff_platform.webp",
+      "viewType": 2,
+      "parentId": "0b5a50ba-9ef5-422a-b8fb-7701255fa1df",
+      "sourceId": "e1252aa2-cbb0-4550-82bf-01d26317521a"
+    },
+    {
+      "uuid": "943e551d-1863-4f21-85f9-11947dee9d32",
+      "name": "Structures",
+      "imageFile": "folder.webp",
+      "viewType": 1,
+      "parentId": "8b8cb0d2-ffa9-46e0-b380-1bfa5186af49",
+      "sourceId": "b679e329-d15f-40ba-a18b-f323225d8cac"
+    },
+    {
+      "uuid": "a30f959e-3d58-461a-979a-cd21416f2f23",
+      "name": "Structures",
+      "imageFile": "folder.webp",
+      "viewType": 1,
+      "parentId": "f3dd4e09-c791-49cc-b078-be1840d4b6b2",
+      "sourceId": "b679e329-d15f-40ba-a18b-f323225d8cac"
+    },
+    {
+      "uuid": "74165c49-0fe0-4661-9563-b3647c065ecb",
+      "name": "Tek",
+      "imageFile": "folder.webp",
+      "viewType": 1,
+      "parentId": "c96e98c3-75a8-4c30-bc70-32872ab42a74",
+      "sourceId": "e9cd4c1c-0090-4d39-9273-173556186d8c"
+    },
+    {
+      "uuid": "026964d8-7eaf-43d1-8f58-331d6b8ee224",
+      "name": "Tek",
+      "imageFile": "folder.webp",
+      "viewType": 1,
+      "parentId": "c32b782a-4902-4dd9-8fac-683211ca4043",
+      "sourceId": "e9cd4c1c-0090-4d39-9273-173556186d8c"
+    },
+    {
+      "uuid": "574bf6a9-856b-448d-af2b-c0a9decbb4bc",
+      "name": "Tek Railgun",
+      "imageFile": "tek_railgun.webp",
+      "viewType": 2,
+      "parentId": "74165c49-0fe0-4661-9563-b3647c065ecb",
+      "sourceId": "74b6dada-9e47-4546-94f6-c72118cf3cfb"
+    },
+    {
+      "uuid": "a87b8ae2-2f2f-477c-ad92-3a1758bc6ebc",
+      "name": "Tek Replicator",
+      "imageFile": "tek_replicator.webp",
+      "viewType": 0,
+      "parentId": null,
+      "sourceId": "fd9ac2cc-f1a8-4b2e-8cc4-065fc3e3b3b1"
+    },
+    {
+      "uuid": "b9462a7c-1cc6-467a-b1ba-884c9265b343",
+      "name": "Weapons",
+      "imageFile": "folder.webp",
+      "viewType": 1,
+      "parentId": "650f2659-131d-4a1b-b661-05b71f0ac789",
+      "sourceId": "ef948d46-efde-4ef1-ac82-815d7844c220"
+    },
+    {
+      "uuid": "08c73cd4-21e7-4089-af22-1f2526149ea6",
+      "name": "Weapons",
+      "imageFile": "folder.webp",
+      "viewType": 1,
+      "parentId": "f3dd4e09-c791-49cc-b078-be1840d4b6b2",
+      "sourceId": "ef948d46-efde-4ef1-ac82-815d7844c220"
+    },
+    {
+      "uuid": "c5441c1c-927d-45d7-b106-a79d885e646c",
+      "name": "Weapons",
+      "imageFile": "folder.webp",
+      "viewType": 1,
+      "parentId": "a87b8ae2-2f2f-477c-ad92-3a1758bc6ebc",
+      "sourceId": "ef948d46-efde-4ef1-ac82-815d7844c220"
+    },
+    {
+      "uuid": "d42827d2-394c-4cfd-b30e-9d35157a7506",
+      "name": "Wood",
+      "imageFile": "folder.webp",
+      "viewType": 1,
+      "parentId": "943e551d-1863-4f21-85f9-11947dee9d32",
+      "sourceId": "659641cc-256f-4e86-9847-9e16b0e53ba9"
+    },
+    {
+      "uuid": "222a5fc7-c1ec-4c4a-9b4d-be345150eeb8",
+      "name": "Wood Elevator Top Switch",
+      "imageFile": "wood_elevator_top_switch.webp",
+      "viewType": 2,
+      "parentId": "d7fe222f-0fd8-4b10-bc2c-fdb31f739f8c",
+      "sourceId": "e56d405c-cd6c-4819-8223-3bf5caeceea4"
+    },
+    {
+      "uuid": "3b8c8939-8cf5-4821-8b68-3fa3570e8bbc",
+      "name": "Wood Elevator Track",
+      "imageFile": "wood_elevator_track.webp",
+      "viewType": 2,
+      "parentId": "d7fe222f-0fd8-4b10-bc2c-fdb31f739f8c",
+      "sourceId": "bd6f705b-dc42-465f-8c59-333493e68931"
+    },
+    {
+      "uuid": "8bc5c1be-5a88-4dc8-ad0c-e1936cec134c",
+      "name": "Zip-Line Anchor",
+      "imageFile": "zip-line_anchor.webp",
+      "viewType": 2,
+      "parentId": "5d591f62-80ed-4a81-a4de-54ef27a499f3",
+      "sourceId": "9f8834e8-89cd-4448-a5c6-2cd3021db604"
+    },
+    {
+      "uuid": "6bc254ac-5fff-4832-8920-93baec1f21ef",
+      "name": "Zip-Line Motor Attachment Skin",
+      "imageFile": "zip-line_motor_attachment_skin.webp",
+      "viewType": 2,
+      "parentId": "d5c3b9b7-8dd2-46f7-8f9d-3244114fa55b",
+      "sourceId": "9e09075c-04e6-47d3-8b5e-0a763c6d6d16"
+    }
+  ],
+  "remove": {
+    "resources": [],
+    "stations": [
+      "2b96c917-a1d9-4ad9-abc0-19149376e9fd"
+    ],
+    "folders": [
+      "906918d2-c97b-431e-8d31-8ff5bf166ed7",
+      "7ec498e2-1019-4285-8d64-5cf50c842222",
+      "48dfe696-4a09-4251-831d-dd9e5d28ac40"
+    ],
+    "engrams": [
+      "1d4b132c-17e0-4f94-9696-7a6c5c8e7d12",
+      "8d064184-96d6-49a3-8824-c30417d8cb4d",
+      "0f12b648-1c68-4d6c-91bc-2182f8f34a89",
+      "6d25ae54-d06a-4161-9c84-471f78d1c9bf",
+      "f1f21585-d8b7-4384-a361-e1f9a39df313",
+      "5a178972-019d-4e0a-b87c-c425f438fc80",
+      "ef5c8042-02da-43b8-b7ec-d5839c99b069",
+      "e3326f6b-d38b-4c31-9776-0ce446106fdb",
+      "1e4852a9-a75d-47d0-b88b-3a61c07b4cd1"
+    ]
+  },
+  "replace": {
+    "resources": [],
+    "stations": [],
+    "folders": [],
+    "engrams": [],
+    "composition": []
+  }
+}

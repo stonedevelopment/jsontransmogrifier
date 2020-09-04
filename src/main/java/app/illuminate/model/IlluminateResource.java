@@ -1,6 +1,7 @@
 package app.illuminate.model;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -23,5 +24,11 @@ public class IlluminateResource extends Resource {
 
     public static IlluminateResource fromJson(JsonNode node) {
         return new ObjectMapper().convertValue(node, IlluminateResource.class);
+    }
+
+    @JsonIgnore
+    @Override
+    public Date getLastUpdated() {
+        return super.getLastUpdated();
     }
 }

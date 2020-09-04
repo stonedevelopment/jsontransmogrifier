@@ -17,9 +17,9 @@ public class IlluminateStation extends Station {
     public IlluminateStation(@JsonProperty(cUuid) String uuid,
                              @JsonProperty(cName) String name,
                              @JsonProperty(cImageFile) String imageFile,
-                             @JsonProperty(cEngramId) String engramId,
+                             @JsonProperty(cEngramId) String sourceId,
                              @JsonProperty(cLastUpdated) Date lastUpdated) {
-        super(uuid, name, imageFile, engramId, lastUpdated);
+        super(uuid, name, imageFile, sourceId, lastUpdated);
     }
 
     public static IlluminateStation fromJson(JsonNode node) {
@@ -28,7 +28,13 @@ public class IlluminateStation extends Station {
 
     @JsonIgnore
     @Override
-    public String getEngramId() {
-        return super.getEngramId();
+    public String getSourceId() {
+        return super.getSourceId();
+    }
+
+    @JsonIgnore
+    @Override
+    public Date getLastUpdated() {
+        return super.getLastUpdated();
     }
 }

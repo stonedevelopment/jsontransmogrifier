@@ -1,6 +1,7 @@
 package app.illuminate.model;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -19,5 +20,11 @@ public class IlluminateComposition extends Composition {
 
     public static IlluminateComposition fromJson(JsonNode node) {
         return new ObjectMapper().convertValue(node, IlluminateComposition.class);
+    }
+
+    @JsonIgnore
+    @Override
+    public String getEngramId() {
+        return super.getEngramId();
     }
 }

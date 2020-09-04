@@ -7,7 +7,6 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import controller.GameData;
 import model.*;
-import util.Log;
 
 import java.util.Iterator;
 import java.util.List;
@@ -19,6 +18,17 @@ public abstract class IlluminateGameData extends GameData {
 
     protected IlluminateGameData(JsonNode inNode) {
         super(inNode);
+    }
+
+    @Override
+    public Composition getComposition(String engramId) {
+        String uuid = getCompositionUUIDByEngramId(engramId);
+        return super.getComposition(uuid);
+    }
+
+    @Override
+    public Composite getComposite(String uuid) {
+        return super.getComposite(uuid);
     }
 
     protected String getCompositionUUIDByEngramId(String engramId) {
@@ -91,7 +101,7 @@ public abstract class IlluminateGameData extends GameData {
     protected void mapCompositionFromJson() {
         JsonNode compositionsNode = inNode.get(cComposition);
         for (JsonNode compositionNode : compositionsNode) {
-            Composition composition = Composition.fromJson(compositionNode);
+            IlluminateComposition composition = IlluminateComposition.fromJson(compositionNode);
             addComposition(composition);
         }
     }
@@ -132,7 +142,7 @@ public abstract class IlluminateGameData extends GameData {
         String uuid = composite.getUuid();
         String compositionId = composite.getCompositionId();
 
-        addCompositeToIdMap(compositionId, uuid);
+        addCompositeToIdMap(uuid, compositionId);
         addCompositeToMap(uuid, composite);
     }
 
@@ -179,7 +189,6 @@ public abstract class IlluminateGameData extends GameData {
      * Each array entry to have its own output file, with the station as the root
      */
     protected JsonNode resolveDirectory() {
-        Log.d(getDetailsObject().getName());
         ArrayNode arrayNode = mapper.createArrayNode();
 
         //  iterate through station uuids, in alphabetical order via TreeMap
@@ -251,7 +260,6 @@ public abstract class IlluminateGameData extends GameData {
     }
 
     public JsonNode resolveComposition(String engramId) {
-        Log.d(engramId);
         Composition composition = getComposition(engramId);
         ObjectNode outNode = mapper.valueToTree(composition);
 

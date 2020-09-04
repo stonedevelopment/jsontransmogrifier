@@ -1,13 +1,13 @@
 {
   "Primary": {
-    "uuid": "ec2265d0-7adc-4911-9047-a4a623034818",
+    "uuid": "507438a7-4f6e-403e-8128-a7f3bb241f17",
     "name": "ARK:Survival Evolved",
     "description": "As a man or woman stranded, naked, freezing, and starving on the unforgiving shores of a mysterious island called \"ARK\", use your skill and cunning to kill or tame and ride the plethora of leviathan dinosaurs and other primeval creatures roaming the land. Hunt, harvest resources, craft items, grow crops, research technologies, and build shelters to withstand the elements and store valuables, all while teaming up with (or preying upon) hundreds of other players to survive, dominate... and escape!",
     "filePath": "Primary/",
     "logoFile": "logo.webp",
     "folderFile": "folder.webp",
     "backFolderFile": "backFolder.webp",
-    "lastUpdated": 1594568503542,
+    "lastUpdated": 1599177807301,
     "illuminatedFiles": [
       "Primary/illuminated_beer_barrel.json",
       "Primary/illuminated_campfire.json",
@@ -31,7 +31,7 @@
   },
   "DLC": [
     {
-      "uuid": "c7ed13ef-3729-408d-ae8e-e7f01efa5b24",
+      "uuid": "46fa640c-9409-464c-9c8b-8ea1e750373f",
       "name": "Primitive Plus",
       "description": "Primitive Plus is a free add-on for ARK: Survival Evolved that alters the available tools, weapons and structures in the game to reflect what humans could realistically create using primitive technology and resources. This does not simply remove advanced technology from ARK, but instead replaces it with a multitude of new resources, engrams and systems.",
       "filePath": "DLC/Primitive Plus/",
@@ -39,7 +39,7 @@
       "folderFile": "folder.webp",
       "backFolderFile": "backFolder.webp",
       "totalConversion": true,
-      "lastUpdated": 1594568504537,
+      "lastUpdated": 1599177808170,
       "illuminatedFiles": [
         "DLC/Primitive Plus/illuminated_apiary.json",
         "DLC/Primitive Plus/illuminated_baker's_oven.json",
@@ -69,7 +69,7 @@
       ]
     },
     {
-      "uuid": "fb628944-ad51-4457-93e3-2c18e194a517",
+      "uuid": "47711903-a470-4daf-8eeb-649b3376487a",
       "name": "Scorched Earth",
       "description": "Stranded naked, dehydrated & starving in a vast desert, even the most seasoned ARK survivors must quickly find water, hunt for food, harvest, craft items, and build shelter to have any chance for survival. Use skills honed on ARK's faraway Island to kill, tame, breed, and ride the fantastical new creatures that have evolved to survive the Desert's ultra harsh conditions, including... DRAGONS! Travel back and forth between the Island and the Desert to team up with hundreds of players across both worlds or play locally!",
       "filePath": "DLC/Scorched Earth/",
@@ -77,7 +77,7 @@
       "folderFile": "folder.webp",
       "backFolderFile": "backFolder.webp",
       "totalConversion": false,
-      "lastUpdated": 1594568505643,
+      "lastUpdated": 1599177809202,
       "illuminatedFiles": [
         "DLC/Scorched Earth/illuminated_chemistry_bench.json",
         "DLC/Scorched Earth/illuminated_cooking_pot.json",
@@ -90,7 +90,7 @@
       ]
     },
     {
-      "uuid": "373dd96f-0e62-47db-9f24-3aadad5e69aa",
+      "uuid": "d204404e-e099-4e3e-af8b-d7261563d57a",
       "name": "Aberration",
       "description": "Waking up on 'Aberration', a derelict, malfunctioning ARK with an elaborate underground biome system, survivors face exotic new challenges unlike anything before: extreme radioactive sunlight and environmental hazards, ziplines, wingsuits, climbing gear, cave dwellings, charge-batteries, and far more, along with a stable of extraordinary new creatures await within the mysterious depths. But beware the ‘Nameless’: unrelenting, Element-infused humanoids which have evolved into vicious light-hating monstrosities! On Aberration, survivors will uncover the ultimate secrets of the ARKs, and discover what the future holds in store for those strong and clever enough to survive!",
       "filePath": "DLC/Aberration/",
@@ -98,7 +98,7 @@
       "folderFile": "folder.webp",
       "backFolderFile": "backFolder.webp",
       "totalConversion": false,
-      "lastUpdated": 1594568506239,
+      "lastUpdated": 1599177809806,
       "illuminatedFiles": [
         "DLC/Aberration/illuminated_charge_node.json",
         "DLC/Aberration/illuminated_fabricator.json",
@@ -109,7 +109,7 @@
       ]
     },
     {
-      "uuid": "88cf48c6-2c63-472a-b5f2-38bf4a743987",
+      "uuid": "9e8a4fb3-e3eb-42fc-bc78-c8154f09b01d",
       "name": "Extinction",
       "description": "Finish your journey through the worlds of ARK in ‘Extinction’, where the story began and ends: on Earth itself! An Element-infested, ravaged planet filled with fantastical creatures both organic & technological, Earth holds both the secrets of the past and the keys to its salvation. As a veteran Survivor who has conquered all previous obstacles, your ultimate challenge awaits: can you defeat the gigantic roaming Titans which dominate the planet, and complete the ARK cycle to save Earth's future?",
       "filePath": "DLC/Extinction/",
@@ -117,7 +117,7 @@
       "folderFile": "folder.webp",
       "backFolderFile": "backFolder.webp",
       "totalConversion": false,
-      "lastUpdated": 1594568506700,
+      "lastUpdated": 1599177810545,
       "illuminatedFiles": [
         "DLC/Extinction/illuminated_city_terminal.json",
         "DLC/Extinction/illuminated_self.json",
@@ -127,7 +127,7 @@
       ]
     },
     {
-      "uuid": "f309559e-c38f-4f84-a055-f57a2194672c",
+      "uuid": "53b5ae88-a934-4e3b-a0b7-6c1cb5e0145f",
       "name": "The Center",
       "description": null,
       "filePath": "DLC/The Center/",
@@ -135,13 +135,13 @@
       "folderFile": "folder.webp",
       "backFolderFile": "backFolder.webp",
       "totalConversion": false,
-      "lastUpdated": 1594568507159,
+      "lastUpdated": 1599177811145,
       "illuminatedFiles": [
         "DLC/The Center/illuminated_obelisk.json"
       ]
     },
     {
-      "uuid": "7e427c15-ebcb-4d6a-900c-1f5e2885af09",
+      "uuid": "84ffa699-57c6-4aa0-8f7f-9a146185811f",
       "name": "Ragnarok",
       "description": null,
       "filePath": "DLC/Ragnarok/",
@@ -149,7 +149,7 @@
       "folderFile": "folder.webp",
       "backFolderFile": "backFolder.webp",
       "totalConversion": false,
-      "lastUpdated": 1594568507597,
+      "lastUpdated": 1599177811628,
       "illuminatedFiles": [
         "DLC/Ragnarok/illuminated_obelisk.json"
       ]

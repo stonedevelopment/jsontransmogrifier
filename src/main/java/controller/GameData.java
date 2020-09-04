@@ -280,7 +280,7 @@ public abstract class GameData {
 
     protected void addCompositeToMap(String uuid, Composite composite) {
         if (compositeMap.containsKey(uuid)) {
-            Log.debug("addCompositeToMap", composite.toString());
+            Log.debug("addCompositeToMap: already exists!", composite.toString());
         }
         compositeMap.put(uuid, composite);
     }
