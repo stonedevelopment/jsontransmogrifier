@@ -9,6 +9,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static util.Constants.*;
@@ -22,8 +23,8 @@ import static util.JSONUtil.writeOut;
 public class TransmogrifyApp {
     private final ObjectMapper mapper = new ObjectMapper();
     private final JsonNode inNode;
+    private final List<DlcTransmogGameData> dlcGameDataList = new ArrayList<>();
     private PrimaryTransmogGameData primaryGameData;
-    private List<DlcTransmogGameData> dlcGameDataList;
 
     public TransmogrifyApp(JsonNode inNode) {
         this.inNode = inNode;
@@ -84,6 +85,7 @@ public class TransmogrifyApp {
         for (DlcTransmogGameData dlcGameData : dlcGameDataList) {
             outDlcArrayNode.add(mapper.valueToTree(dlcGameData.getDetailsObject()));
         }
+        outNode.set(cDlc, outDlcArrayNode);
 
         writeJsonToFile(cTransmogrificationFileName, outNode);
     }
