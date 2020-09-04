@@ -80,18 +80,38 @@ public class IlluminateApp {
     private void writeGameDataToFile(IlluminateGameData gameData) {
         JsonNode resolvedNode = gameData.resolveToJson();
 
+
+
         JsonNode resourcesNode = resolvedNode.get(cResources);
-        writeJsonToFile(gameData.getFilePathForResources(), resourcesNode);
+        //  generate file path for illuminated resources
+        String illuminatedResourcesFilePath = gameData.generateIlluminatedResourcesFilePath();
+        //  write illuminated resources to json
+        writeJsonToFile(illuminatedResourcesFilePath, resourcesNode);
+        //  add illuminated resources json file name for illumination write out
+        gameData.addIlluminatedFile(illuminatedResourcesFilePath);
+
+        /**
+         * Consider removing uuids from all illuminated files
+         * Updatify should compare Transmog with Illuminated, if exists use UUID; else create one
+         *
+         * Consider moving engrams to own file
+         *  Include composition, using only the composites
+         *
+         * Consider creating directory file in place of separate files
+         * Use names only for stations, folders and engrams
+         */
+
+        ArrayNode resolvedDirectory = mapper.createArrayNode();
 
         //  iterate through resolved directory, separate each directory parent (crafting stations)
         JsonNode directoryNode = resolvedNode.get(cDirectory);
-        for (JsonNode illuminatedNode : directoryNode) {
+        for (JsonNode illuminatedStation : directoryNode) {
             //  generate file path for illuminated node
-            String illuminatedFilePath = gameData.generateIlluminatedFilePath(illuminatedNode);
+            String illuminatedStationFilePath = gameData.generateIlluminatedStationFilePath(illuminatedStation);
             //  write illuminated node's data to json
-            writeJsonToFile(illuminatedFilePath, illuminatedNode);
+            writeJsonToFile(illuminatedStationFilePath, illuminatedStation);
             //  add illuminate node's json file name for illumination write out
-            gameData.addIlluminatedFile(illuminatedFilePath);
+            gameData.addIlluminatedFile(illuminatedStationFilePath);
         }
     }
 

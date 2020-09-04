@@ -1,1 +1,533 @@
-{"details":{"uuid":"53b5ae88-a934-4e3b-a0b7-6c1cb5e0145f","name":"The Center","description":null,"filePath":"DLC/The Center/","logoFile":"logo.webp","folderFile":"folder.webp","backFolderFile":"backFolder.webp","transmogFile":"transmogrified.json","totalConversion":false,"lastUpdated":1599177811145},"resources":[],"stations":[],"folders":[{"uuid":"4e92a67a-e8e0-420c-9c04-336054d7279a","name":"The Center Arena"}],"engrams":[{"uuid":"1add2e5f-4777-4e43-8b9f-bab5bfbcf1c2","name":"Generate Center (Easy) Portal","description":"Use this to generate a portal to The Center's Guardians.","imageFile":"gamma_portal.webp","level":70,"yield":1,"points":0,"xp":0,"craftingTime":0,"lastUpdated":1599177811151},{"uuid":"522b2454-259a-46db-bbb4-808be20d11cc","name":"Generate Center (Hard) Portal","description":"Use this to generate a portal to The Center's Guardians. (Hard)","imageFile":"alpha_portal.webp","level":90,"yield":1,"points":0,"xp":0,"craftingTime":0,"lastUpdated":1599177811151},{"uuid":"0fcd7f45-1f86-4540-972b-7010ed898d94","name":"Generate Center (Medium) Portal","description":"Use this to generate a portal to The Center's Guardians. (Medium)","imageFile":"beta_portal.webp","level":80,"yield":1,"points":0,"xp":0,"craftingTime":0,"lastUpdated":1599177811151}],"composition":[{"uuid":"a11b3ec3-4706-4f9a-940a-be39a7e81752","engramId":"1add2e5f-4777-4e43-8b9f-bab5bfbcf1c2"},{"uuid":"df0885a8-451f-42b3-b994-1845668535f4","engramId":"522b2454-259a-46db-bbb4-808be20d11cc"},{"uuid":"b57cf8bd-02b9-4b06-a2d8-dd6e48ea9c61","engramId":"0fcd7f45-1f86-4540-972b-7010ed898d94"}],"composites":[{"uuid":"cbccdd96-c725-4149-bbf9-3b3bee45c577","name":"Argentavis Talon","imageFile":"argentavis_talon.webp","quantity":4,"sourceId":"c248f0e9-0ee3-4c32-b790-64f75b8c67e9","isEngram":false,"compositionId":"a11b3ec3-4706-4f9a-940a-be39a7e81752"},{"uuid":"6462938a-cbb4-48f1-ad1c-aa233235ddaa","name":"Argentavis Talon","imageFile":"argentavis_talon.webp","quantity":10,"sourceId":"c248f0e9-0ee3-4c32-b790-64f75b8c67e9","isEngram":false,"compositionId":"b57cf8bd-02b9-4b06-a2d8-dd6e48ea9c61"},{"uuid":"33068316-def7-467e-b434-ef395e119806","name":"Argentavis Talon","imageFile":"argentavis_talon.webp","quantity":25,"sourceId":"c248f0e9-0ee3-4c32-b790-64f75b8c67e9","isEngram":false,"compositionId":"df0885a8-451f-42b3-b994-1845668535f4"},{"uuid":"5fc06d5e-3c14-4daf-8b97-bf4b1afa9805","name":"Artifact of the Brute","imageFile":"artifact_of_the_brute.webp","quantity":1,"sourceId":"646b10a9-2586-4693-983d-c0b022626a76","isEngram":false,"compositionId":"a11b3ec3-4706-4f9a-940a-be39a7e81752"},{"uuid":"c4f94fa6-296a-4f3b-ae41-5794d652a56a","name":"Artifact of the Brute","imageFile":"artifact_of_the_brute.webp","quantity":1,"sourceId":"646b10a9-2586-4693-983d-c0b022626a76","isEngram":false,"compositionId":"b57cf8bd-02b9-4b06-a2d8-dd6e48ea9c61"},{"uuid":"5fadee1a-93dc-4da1-9dbd-2af58b200be8","name":"Artifact of the Brute","imageFile":"artifact_of_the_brute.webp","quantity":1,"sourceId":"646b10a9-2586-4693-983d-c0b022626a76","isEngram":false,"compositionId":"df0885a8-451f-42b3-b994-1845668535f4"},{"uuid":"cdb044e7-9dbd-467f-93c2-506dd7289b17","name":"Artifact of the Clever","imageFile":"artifact_of_the_clever.webp","quantity":1,"sourceId":"efae0661-011f-47f2-9490-74f33d89eb05","isEngram":false,"compositionId":"a11b3ec3-4706-4f9a-940a-be39a7e81752"},{"uuid":"049e2a2b-d327-4c2d-a8e4-d4ac46ea81aa","name":"Artifact of the Clever","imageFile":"artifact_of_the_clever.webp","quantity":1,"sourceId":"efae0661-011f-47f2-9490-74f33d89eb05","isEngram":false,"compositionId":"b57cf8bd-02b9-4b06-a2d8-dd6e48ea9c61"},{"uuid":"5226cd18-245e-42c5-a00f-439f41209336","name":"Artifact of the Clever","imageFile":"artifact_of_the_clever.webp","quantity":1,"sourceId":"efae0661-011f-47f2-9490-74f33d89eb05","isEngram":false,"compositionId":"df0885a8-451f-42b3-b994-1845668535f4"},{"uuid":"ac6f9cab-8422-47bc-ac2e-19ce493d2449","name":"Artifact of the Devourer","imageFile":"artifact_of_the_devourer.webp","quantity":1,"sourceId":"9a8613b2-32d4-426a-aec6-ef90312eaae9","isEngram":false,"compositionId":"a11b3ec3-4706-4f9a-940a-be39a7e81752"},{"uuid":"42892277-39d1-47ab-af1e-4366ebeecce3","name":"Artifact of the Devourer","imageFile":"artifact_of_the_devourer.webp","quantity":1,"sourceId":"9a8613b2-32d4-426a-aec6-ef90312eaae9","isEngram":false,"compositionId":"b57cf8bd-02b9-4b06-a2d8-dd6e48ea9c61"},{"uuid":"b4615fec-90af-4192-990c-3bd5765780ae","name":"Artifact of the Devourer","imageFile":"artifact_of_the_devourer.webp","quantity":1,"sourceId":"9a8613b2-32d4-426a-aec6-ef90312eaae9","isEngram":false,"compositionId":"df0885a8-451f-42b3-b994-1845668535f4"},{"uuid":"bd8a379d-02b8-4c2e-84d9-908d99dd143a","name":"Artifact of the Hunter","imageFile":"artifact_of_the_hunter.webp","quantity":1,"sourceId":"4f493577-d71b-4c0d-8bd2-6138d8f46602","isEngram":false,"compositionId":"a11b3ec3-4706-4f9a-940a-be39a7e81752"},{"uuid":"3401b4a8-15fe-45c2-abfa-53610fdacef2","name":"Artifact of the Hunter","imageFile":"artifact_of_the_hunter.webp","quantity":1,"sourceId":"4f493577-d71b-4c0d-8bd2-6138d8f46602","isEngram":false,"compositionId":"b57cf8bd-02b9-4b06-a2d8-dd6e48ea9c61"},{"uuid":"56b0797f-d0e8-4ee5-97b5-07e082766c3a","name":"Artifact of the Hunter","imageFile":"artifact_of_the_hunter.webp","quantity":1,"sourceId":"4f493577-d71b-4c0d-8bd2-6138d8f46602","isEngram":false,"compositionId":"df0885a8-451f-42b3-b994-1845668535f4"},{"uuid":"e09c6a0b-17ac-4c33-a09d-0afef2106879","name":"Artifact of the Massive","imageFile":"artifact_of_the_massive.webp","quantity":1,"sourceId":"0c1bf180-67d2-4210-b4ae-06167183aacd","isEngram":false,"compositionId":"a11b3ec3-4706-4f9a-940a-be39a7e81752"},{"uuid":"1a4266b9-4d4c-4f9f-86f7-3b8c292a7b99","name":"Artifact of the Massive","imageFile":"artifact_of_the_massive.webp","quantity":1,"sourceId":"0c1bf180-67d2-4210-b4ae-06167183aacd","isEngram":false,"compositionId":"b57cf8bd-02b9-4b06-a2d8-dd6e48ea9c61"},{"uuid":"b89f72ac-64d4-45cd-a6fb-abcc473f73b4","name":"Artifact of the Massive","imageFile":"artifact_of_the_massive.webp","quantity":1,"sourceId":"0c1bf180-67d2-4210-b4ae-06167183aacd","isEngram":false,"compositionId":"df0885a8-451f-42b3-b994-1845668535f4"},{"uuid":"0187a4d9-11a5-45cf-bc96-7a37cde23d89","name":"Artifact of the Pack","imageFile":"artifact_of_the_pack.webp","quantity":1,"sourceId":"f0d08f8f-9ecf-45fb-a5ca-2ff5d6564aee","isEngram":false,"compositionId":"a11b3ec3-4706-4f9a-940a-be39a7e81752"},{"uuid":"a0e552b6-6629-4770-9ef2-23fb7d816269","name":"Artifact of the Pack","imageFile":"artifact_of_the_pack.webp","quantity":1,"sourceId":"f0d08f8f-9ecf-45fb-a5ca-2ff5d6564aee","isEngram":false,"compositionId":"b57cf8bd-02b9-4b06-a2d8-dd6e48ea9c61"},{"uuid":"892e93ab-f7f7-4359-9037-bee309b949d4","name":"Artifact of the Pack","imageFile":"artifact_of_the_pack.webp","quantity":1,"sourceId":"f0d08f8f-9ecf-45fb-a5ca-2ff5d6564aee","isEngram":false,"compositionId":"df0885a8-451f-42b3-b994-1845668535f4"},{"uuid":"7114e38d-50fe-4845-af97-75929e299ff4","name":"Basilosaurus Blubber","imageFile":"basilosaurus_blubber.webp","quantity":10,"sourceId":"d89e5a0a-2094-4a40-b34e-cd54e41ac007","isEngram":false,"compositionId":"b57cf8bd-02b9-4b06-a2d8-dd6e48ea9c61"},{"uuid":"1cf48d29-cc63-4380-a9a4-aa09a1405e66","name":"Basilosaurus Blubber","imageFile":"basilosaurus_blubber.webp","quantity":25,"sourceId":"d89e5a0a-2094-4a40-b34e-cd54e41ac007","isEngram":false,"compositionId":"df0885a8-451f-42b3-b994-1845668535f4"},{"uuid":"6d7fcceb-943d-448f-8cf8-12818a0cd78a","name":"Megalania Toxin","imageFile":"megalania_toxin.webp","quantity":10,"sourceId":"6ebb43a1-ca90-431f-89c1-772504dced4c","isEngram":false,"compositionId":"b57cf8bd-02b9-4b06-a2d8-dd6e48ea9c61"},{"uuid":"7eaa8181-5b82-4b40-8bc3-0ea809f01bbb","name":"Megalania Toxin","imageFile":"megalania_toxin.webp","quantity":25,"sourceId":"6ebb43a1-ca90-431f-89c1-772504dced4c","isEngram":false,"compositionId":"df0885a8-451f-42b3-b994-1845668535f4"},{"uuid":"f1e70663-f5ff-40b4-907c-0eaf00fbb0cc","name":"Megalodon Tooth","imageFile":"megalodon_tooth.webp","quantity":8,"sourceId":"8d7f85e4-b890-49fd-9044-7d0f90f08ef6","isEngram":false,"compositionId":"a11b3ec3-4706-4f9a-940a-be39a7e81752"},{"uuid":"4a9b0a76-7576-4bf2-8454-8cc26b8eaea7","name":"Megalodon Tooth","imageFile":"megalodon_tooth.webp","quantity":10,"sourceId":"8d7f85e4-b890-49fd-9044-7d0f90f08ef6","isEngram":false,"compositionId":"b57cf8bd-02b9-4b06-a2d8-dd6e48ea9c61"},{"uuid":"0b412adf-6508-4d8b-9b16-a2393582a595","name":"Megalodon Tooth","imageFile":"megalodon_tooth.webp","quantity":25,"sourceId":"8d7f85e4-b890-49fd-9044-7d0f90f08ef6","isEngram":false,"compositionId":"df0885a8-451f-42b3-b994-1845668535f4"},{"uuid":"d50ae89f-436f-4e4e-9549-6a2d8b90ab38","name":"Sarcosuchus Skin","imageFile":"sarcosuchus_skin.webp","quantity":10,"sourceId":"f66107f0-b17c-424b-adf1-84cf16568ae7","isEngram":false,"compositionId":"b57cf8bd-02b9-4b06-a2d8-dd6e48ea9c61"},{"uuid":"b9a5649b-a27e-48d8-aa20-127eec139ae2","name":"Sarcosuchus Skin","imageFile":"sarcosuchus_skin.webp","quantity":25,"sourceId":"f66107f0-b17c-424b-adf1-84cf16568ae7","isEngram":false,"compositionId":"df0885a8-451f-42b3-b994-1845668535f4"},{"uuid":"1aa52236-db6d-419f-b881-74fcf34e704e","name":"Sauropod Vertebra","imageFile":"sauropod_vertebra.webp","quantity":2,"sourceId":"24911036-2526-45c2-8780-f7fc00b0951f","isEngram":false,"compositionId":"a11b3ec3-4706-4f9a-940a-be39a7e81752"},{"uuid":"84747d99-44c7-493e-9ac0-b11e7266f3c2","name":"Sauropod Vertebra","imageFile":"sauropod_vertebra.webp","quantity":10,"sourceId":"24911036-2526-45c2-8780-f7fc00b0951f","isEngram":false,"compositionId":"b57cf8bd-02b9-4b06-a2d8-dd6e48ea9c61"},{"uuid":"4a3e879d-7ccb-4297-9629-a81141884687","name":"Sauropod Vertebra","imageFile":"sauropod_vertebra.webp","quantity":25,"sourceId":"24911036-2526-45c2-8780-f7fc00b0951f","isEngram":false,"compositionId":"df0885a8-451f-42b3-b994-1845668535f4"},{"uuid":"8d1e1f81-7f8c-43a3-a376-b8681f28c9a1","name":"Spinosaurus Sail","imageFile":"spinosaurus_sail.webp","quantity":10,"sourceId":"2ecdd857-0f12-423c-96c5-02b6ccdc4b47","isEngram":false,"compositionId":"b57cf8bd-02b9-4b06-a2d8-dd6e48ea9c61"},{"uuid":"b2d4cd1a-c06c-4699-a5e8-31423c74077e","name":"Spinosaurus Sail","imageFile":"spinosaurus_sail.webp","quantity":25,"sourceId":"2ecdd857-0f12-423c-96c5-02b6ccdc4b47","isEngram":false,"compositionId":"df0885a8-451f-42b3-b994-1845668535f4"},{"uuid":"147db374-531e-4579-90c2-981469e3952d","name":"Thylacoleo Hook-Claw","imageFile":"thylacoleo_hook-claw.webp","quantity":10,"sourceId":"ad3c6796-962c-4e65-9a18-20be3df38baf","isEngram":false,"compositionId":"b57cf8bd-02b9-4b06-a2d8-dd6e48ea9c61"},{"uuid":"3dcc9358-1da4-465a-8baa-e939f9a0cbc6","name":"Thylacoleo Hook-Claw","imageFile":"thylacoleo_hook-claw.webp","quantity":25,"sourceId":"ad3c6796-962c-4e65-9a18-20be3df38baf","isEngram":false,"compositionId":"df0885a8-451f-42b3-b994-1845668535f4"},{"uuid":"d99b46f0-7427-4642-9306-91bbbbb7d340","name":"Titanoboa Venom","imageFile":"titanoboa_venom.webp","quantity":10,"sourceId":"309f1588-b6d3-4ad4-9592-da5ccd0aae0a","isEngram":false,"compositionId":"b57cf8bd-02b9-4b06-a2d8-dd6e48ea9c61"},{"uuid":"d4a23fcb-2c6b-49e5-8124-ba4dde056387","name":"Titanoboa Venom","imageFile":"titanoboa_venom.webp","quantity":25,"sourceId":"309f1588-b6d3-4ad4-9592-da5ccd0aae0a","isEngram":false,"compositionId":"df0885a8-451f-42b3-b994-1845668535f4"},{"uuid":"fab6c379-ffc5-41d2-803f-01fabdc74d9c","name":"Tusoteuthis Tentacle","imageFile":"tusoteuthis_tentacle.webp","quantity":10,"sourceId":"ff0a2de6-0bf9-4b27-b3d8-7362d6e6b649","isEngram":false,"compositionId":"b57cf8bd-02b9-4b06-a2d8-dd6e48ea9c61"},{"uuid":"9ad22321-d206-42ef-a319-656a67548def","name":"Tusoteuthis Tentacle","imageFile":"tusoteuthis_tentacle.webp","quantity":25,"sourceId":"ff0a2de6-0bf9-4b27-b3d8-7362d6e6b649","isEngram":false,"compositionId":"df0885a8-451f-42b3-b994-1845668535f4"},{"uuid":"a407b156-0009-46f9-b758-626c927dd4b8","name":"Tyrannosaurus Arm","imageFile":"tyrannosaurus_arm.webp","quantity":4,"sourceId":"2f0258e0-4799-42c8-8a7a-cbc47cb17fd8","isEngram":false,"compositionId":"a11b3ec3-4706-4f9a-940a-be39a7e81752"}],"directory":[{"uuid":"5bdf4504-5928-4cee-a8cc-1b35d59d3f23","name":"Boss Arenas","imageFile":"folder.webp","viewType":1,"parentId":"52416dc1-9a70-44ac-973a-942f6d1d8d82","sourceId":"afcf5f73-38c0-43d2-8c65-483ee582e19d"},{"uuid":"67e1b274-ae98-4a92-ac16-ad9af018f69f","name":"Generate Center (Easy) Portal","imageFile":"gamma_portal.webp","viewType":2,"parentId":"532d94c7-6932-4e25-9446-abc4b28d810c","sourceId":"1add2e5f-4777-4e43-8b9f-bab5bfbcf1c2"},{"uuid":"d7449466-0223-420a-a706-bcc43812cdbb","name":"Generate Center (Hard) Portal","imageFile":"alpha_portal.webp","viewType":2,"parentId":"532d94c7-6932-4e25-9446-abc4b28d810c","sourceId":"522b2454-259a-46db-bbb4-808be20d11cc"},{"uuid":"5e6c135c-996e-4d16-989e-3b1459bf1ab2","name":"Generate Center (Medium) Portal","imageFile":"beta_portal.webp","viewType":2,"parentId":"532d94c7-6932-4e25-9446-abc4b28d810c","sourceId":"0fcd7f45-1f86-4540-972b-7010ed898d94"},{"uuid":"52416dc1-9a70-44ac-973a-942f6d1d8d82","name":"Obelisk","imageFile":"obelisk.webp","viewType":0,"parentId":null,"sourceId":"56e87eeb-eabc-4124-bfcd-051a07eca0e1"},{"uuid":"532d94c7-6932-4e25-9446-abc4b28d810c","name":"The Center Arena","imageFile":"folder.webp","viewType":1,"parentId":"5bdf4504-5928-4cee-a8cc-1b35d59d3f23","sourceId":"4e92a67a-e8e0-420c-9c04-336054d7279a"}],"remove":{"resources":[],"stations":["2b96c917-a1d9-4ad9-abc0-19149376e9fd"],"folders":["906918d2-c97b-431e-8d31-8ff5bf166ed7","7ec498e2-1019-4285-8d64-5cf50c842222","48dfe696-4a09-4251-831d-dd9e5d28ac40"],"engrams":["1d4b132c-17e0-4f94-9696-7a6c5c8e7d12","8d064184-96d6-49a3-8824-c30417d8cb4d","0f12b648-1c68-4d6c-91bc-2182f8f34a89","6d25ae54-d06a-4161-9c84-471f78d1c9bf","f1f21585-d8b7-4384-a361-e1f9a39df313","5a178972-019d-4e0a-b87c-c425f438fc80","ef5c8042-02da-43b8-b7ec-d5839c99b069","e3326f6b-d38b-4c31-9776-0ce446106fdb","1e4852a9-a75d-47d0-b88b-3a61c07b4cd1"]},"replace":{"resources":[],"stations":[],"folders":[],"engrams":[],"composition":[]}}
+{
+  "details": {
+    "uuid": "53b5ae88-a934-4e3b-a0b7-6c1cb5e0145f",
+    "name": "The Center",
+    "description": null,
+    "filePath": "DLC/The Center/",
+    "logoFile": "logo.webp",
+    "folderFile": "folder.webp",
+    "backFolderFile": "backFolder.webp",
+    "transmogFile": "transmogrified.json",
+    "totalConversion": false,
+    "lastUpdated": 1599177811145
+  },
+  "resources": [],
+  "stations": [],
+  "folders": [
+    {
+      "uuid": "4e92a67a-e8e0-420c-9c04-336054d7279a",
+      "name": "The Center Arena"
+    }
+  ],
+  "engrams": [
+    {
+      "uuid": "1add2e5f-4777-4e43-8b9f-bab5bfbcf1c2",
+      "name": "Generate Center (Easy) Portal",
+      "description": "Use this to generate a portal to The Center's Guardians.",
+      "imageFile": "gamma_portal.webp",
+      "level": 70,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1599177811151
+    },
+    {
+      "uuid": "522b2454-259a-46db-bbb4-808be20d11cc",
+      "name": "Generate Center (Hard) Portal",
+      "description": "Use this to generate a portal to The Center's Guardians. (Hard)",
+      "imageFile": "alpha_portal.webp",
+      "level": 90,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1599177811151
+    },
+    {
+      "uuid": "0fcd7f45-1f86-4540-972b-7010ed898d94",
+      "name": "Generate Center (Medium) Portal",
+      "description": "Use this to generate a portal to The Center's Guardians. (Medium)",
+      "imageFile": "beta_portal.webp",
+      "level": 80,
+      "yield": 1,
+      "points": 0,
+      "xp": 0,
+      "craftingTime": 0,
+      "lastUpdated": 1599177811151
+    }
+  ],
+  "composition": [
+    {
+      "uuid": "a11b3ec3-4706-4f9a-940a-be39a7e81752",
+      "engramId": "1add2e5f-4777-4e43-8b9f-bab5bfbcf1c2"
+    },
+    {
+      "uuid": "df0885a8-451f-42b3-b994-1845668535f4",
+      "engramId": "522b2454-259a-46db-bbb4-808be20d11cc"
+    },
+    {
+      "uuid": "b57cf8bd-02b9-4b06-a2d8-dd6e48ea9c61",
+      "engramId": "0fcd7f45-1f86-4540-972b-7010ed898d94"
+    }
+  ],
+  "composites": [
+    {
+      "uuid": "cbccdd96-c725-4149-bbf9-3b3bee45c577",
+      "name": "Argentavis Talon",
+      "imageFile": "argentavis_talon.webp",
+      "quantity": 4,
+      "sourceId": "c248f0e9-0ee3-4c32-b790-64f75b8c67e9",
+      "isEngram": false,
+      "compositionId": "a11b3ec3-4706-4f9a-940a-be39a7e81752"
+    },
+    {
+      "uuid": "6462938a-cbb4-48f1-ad1c-aa233235ddaa",
+      "name": "Argentavis Talon",
+      "imageFile": "argentavis_talon.webp",
+      "quantity": 10,
+      "sourceId": "c248f0e9-0ee3-4c32-b790-64f75b8c67e9",
+      "isEngram": false,
+      "compositionId": "b57cf8bd-02b9-4b06-a2d8-dd6e48ea9c61"
+    },
+    {
+      "uuid": "33068316-def7-467e-b434-ef395e119806",
+      "name": "Argentavis Talon",
+      "imageFile": "argentavis_talon.webp",
+      "quantity": 25,
+      "sourceId": "c248f0e9-0ee3-4c32-b790-64f75b8c67e9",
+      "isEngram": false,
+      "compositionId": "df0885a8-451f-42b3-b994-1845668535f4"
+    },
+    {
+      "uuid": "5fc06d5e-3c14-4daf-8b97-bf4b1afa9805",
+      "name": "Artifact of the Brute",
+      "imageFile": "artifact_of_the_brute.webp",
+      "quantity": 1,
+      "sourceId": "646b10a9-2586-4693-983d-c0b022626a76",
+      "isEngram": false,
+      "compositionId": "a11b3ec3-4706-4f9a-940a-be39a7e81752"
+    },
+    {
+      "uuid": "c4f94fa6-296a-4f3b-ae41-5794d652a56a",
+      "name": "Artifact of the Brute",
+      "imageFile": "artifact_of_the_brute.webp",
+      "quantity": 1,
+      "sourceId": "646b10a9-2586-4693-983d-c0b022626a76",
+      "isEngram": false,
+      "compositionId": "b57cf8bd-02b9-4b06-a2d8-dd6e48ea9c61"
+    },
+    {
+      "uuid": "5fadee1a-93dc-4da1-9dbd-2af58b200be8",
+      "name": "Artifact of the Brute",
+      "imageFile": "artifact_of_the_brute.webp",
+      "quantity": 1,
+      "sourceId": "646b10a9-2586-4693-983d-c0b022626a76",
+      "isEngram": false,
+      "compositionId": "df0885a8-451f-42b3-b994-1845668535f4"
+    },
+    {
+      "uuid": "cdb044e7-9dbd-467f-93c2-506dd7289b17",
+      "name": "Artifact of the Clever",
+      "imageFile": "artifact_of_the_clever.webp",
+      "quantity": 1,
+      "sourceId": "efae0661-011f-47f2-9490-74f33d89eb05",
+      "isEngram": false,
+      "compositionId": "a11b3ec3-4706-4f9a-940a-be39a7e81752"
+    },
+    {
+      "uuid": "049e2a2b-d327-4c2d-a8e4-d4ac46ea81aa",
+      "name": "Artifact of the Clever",
+      "imageFile": "artifact_of_the_clever.webp",
+      "quantity": 1,
+      "sourceId": "efae0661-011f-47f2-9490-74f33d89eb05",
+      "isEngram": false,
+      "compositionId": "b57cf8bd-02b9-4b06-a2d8-dd6e48ea9c61"
+    },
+    {
+      "uuid": "5226cd18-245e-42c5-a00f-439f41209336",
+      "name": "Artifact of the Clever",
+      "imageFile": "artifact_of_the_clever.webp",
+      "quantity": 1,
+      "sourceId": "efae0661-011f-47f2-9490-74f33d89eb05",
+      "isEngram": false,
+      "compositionId": "df0885a8-451f-42b3-b994-1845668535f4"
+    },
+    {
+      "uuid": "ac6f9cab-8422-47bc-ac2e-19ce493d2449",
+      "name": "Artifact of the Devourer",
+      "imageFile": "artifact_of_the_devourer.webp",
+      "quantity": 1,
+      "sourceId": "9a8613b2-32d4-426a-aec6-ef90312eaae9",
+      "isEngram": false,
+      "compositionId": "a11b3ec3-4706-4f9a-940a-be39a7e81752"
+    },
+    {
+      "uuid": "42892277-39d1-47ab-af1e-4366ebeecce3",
+      "name": "Artifact of the Devourer",
+      "imageFile": "artifact_of_the_devourer.webp",
+      "quantity": 1,
+      "sourceId": "9a8613b2-32d4-426a-aec6-ef90312eaae9",
+      "isEngram": false,
+      "compositionId": "b57cf8bd-02b9-4b06-a2d8-dd6e48ea9c61"
+    },
+    {
+      "uuid": "b4615fec-90af-4192-990c-3bd5765780ae",
+      "name": "Artifact of the Devourer",
+      "imageFile": "artifact_of_the_devourer.webp",
+      "quantity": 1,
+      "sourceId": "9a8613b2-32d4-426a-aec6-ef90312eaae9",
+      "isEngram": false,
+      "compositionId": "df0885a8-451f-42b3-b994-1845668535f4"
+    },
+    {
+      "uuid": "bd8a379d-02b8-4c2e-84d9-908d99dd143a",
+      "name": "Artifact of the Hunter",
+      "imageFile": "artifact_of_the_hunter.webp",
+      "quantity": 1,
+      "sourceId": "4f493577-d71b-4c0d-8bd2-6138d8f46602",
+      "isEngram": false,
+      "compositionId": "a11b3ec3-4706-4f9a-940a-be39a7e81752"
+    },
+    {
+      "uuid": "3401b4a8-15fe-45c2-abfa-53610fdacef2",
+      "name": "Artifact of the Hunter",
+      "imageFile": "artifact_of_the_hunter.webp",
+      "quantity": 1,
+      "sourceId": "4f493577-d71b-4c0d-8bd2-6138d8f46602",
+      "isEngram": false,
+      "compositionId": "b57cf8bd-02b9-4b06-a2d8-dd6e48ea9c61"
+    },
+    {
+      "uuid": "56b0797f-d0e8-4ee5-97b5-07e082766c3a",
+      "name": "Artifact of the Hunter",
+      "imageFile": "artifact_of_the_hunter.webp",
+      "quantity": 1,
+      "sourceId": "4f493577-d71b-4c0d-8bd2-6138d8f46602",
+      "isEngram": false,
+      "compositionId": "df0885a8-451f-42b3-b994-1845668535f4"
+    },
+    {
+      "uuid": "e09c6a0b-17ac-4c33-a09d-0afef2106879",
+      "name": "Artifact of the Massive",
+      "imageFile": "artifact_of_the_massive.webp",
+      "quantity": 1,
+      "sourceId": "0c1bf180-67d2-4210-b4ae-06167183aacd",
+      "isEngram": false,
+      "compositionId": "a11b3ec3-4706-4f9a-940a-be39a7e81752"
+    },
+    {
+      "uuid": "1a4266b9-4d4c-4f9f-86f7-3b8c292a7b99",
+      "name": "Artifact of the Massive",
+      "imageFile": "artifact_of_the_massive.webp",
+      "quantity": 1,
+      "sourceId": "0c1bf180-67d2-4210-b4ae-06167183aacd",
+      "isEngram": false,
+      "compositionId": "b57cf8bd-02b9-4b06-a2d8-dd6e48ea9c61"
+    },
+    {
+      "uuid": "b89f72ac-64d4-45cd-a6fb-abcc473f73b4",
+      "name": "Artifact of the Massive",
+      "imageFile": "artifact_of_the_massive.webp",
+      "quantity": 1,
+      "sourceId": "0c1bf180-67d2-4210-b4ae-06167183aacd",
+      "isEngram": false,
+      "compositionId": "df0885a8-451f-42b3-b994-1845668535f4"
+    },
+    {
+      "uuid": "0187a4d9-11a5-45cf-bc96-7a37cde23d89",
+      "name": "Artifact of the Pack",
+      "imageFile": "artifact_of_the_pack.webp",
+      "quantity": 1,
+      "sourceId": "f0d08f8f-9ecf-45fb-a5ca-2ff5d6564aee",
+      "isEngram": false,
+      "compositionId": "a11b3ec3-4706-4f9a-940a-be39a7e81752"
+    },
+    {
+      "uuid": "a0e552b6-6629-4770-9ef2-23fb7d816269",
+      "name": "Artifact of the Pack",
+      "imageFile": "artifact_of_the_pack.webp",
+      "quantity": 1,
+      "sourceId": "f0d08f8f-9ecf-45fb-a5ca-2ff5d6564aee",
+      "isEngram": false,
+      "compositionId": "b57cf8bd-02b9-4b06-a2d8-dd6e48ea9c61"
+    },
+    {
+      "uuid": "892e93ab-f7f7-4359-9037-bee309b949d4",
+      "name": "Artifact of the Pack",
+      "imageFile": "artifact_of_the_pack.webp",
+      "quantity": 1,
+      "sourceId": "f0d08f8f-9ecf-45fb-a5ca-2ff5d6564aee",
+      "isEngram": false,
+      "compositionId": "df0885a8-451f-42b3-b994-1845668535f4"
+    },
+    {
+      "uuid": "7114e38d-50fe-4845-af97-75929e299ff4",
+      "name": "Basilosaurus Blubber",
+      "imageFile": "basilosaurus_blubber.webp",
+      "quantity": 10,
+      "sourceId": "d89e5a0a-2094-4a40-b34e-cd54e41ac007",
+      "isEngram": false,
+      "compositionId": "b57cf8bd-02b9-4b06-a2d8-dd6e48ea9c61"
+    },
+    {
+      "uuid": "1cf48d29-cc63-4380-a9a4-aa09a1405e66",
+      "name": "Basilosaurus Blubber",
+      "imageFile": "basilosaurus_blubber.webp",
+      "quantity": 25,
+      "sourceId": "d89e5a0a-2094-4a40-b34e-cd54e41ac007",
+      "isEngram": false,
+      "compositionId": "df0885a8-451f-42b3-b994-1845668535f4"
+    },
+    {
+      "uuid": "6d7fcceb-943d-448f-8cf8-12818a0cd78a",
+      "name": "Megalania Toxin",
+      "imageFile": "megalania_toxin.webp",
+      "quantity": 10,
+      "sourceId": "6ebb43a1-ca90-431f-89c1-772504dced4c",
+      "isEngram": false,
+      "compositionId": "b57cf8bd-02b9-4b06-a2d8-dd6e48ea9c61"
+    },
+    {
+      "uuid": "7eaa8181-5b82-4b40-8bc3-0ea809f01bbb",
+      "name": "Megalania Toxin",
+      "imageFile": "megalania_toxin.webp",
+      "quantity": 25,
+      "sourceId": "6ebb43a1-ca90-431f-89c1-772504dced4c",
+      "isEngram": false,
+      "compositionId": "df0885a8-451f-42b3-b994-1845668535f4"
+    },
+    {
+      "uuid": "f1e70663-f5ff-40b4-907c-0eaf00fbb0cc",
+      "name": "Megalodon Tooth",
+      "imageFile": "megalodon_tooth.webp",
+      "quantity": 8,
+      "sourceId": "8d7f85e4-b890-49fd-9044-7d0f90f08ef6",
+      "isEngram": false,
+      "compositionId": "a11b3ec3-4706-4f9a-940a-be39a7e81752"
+    },
+    {
+      "uuid": "4a9b0a76-7576-4bf2-8454-8cc26b8eaea7",
+      "name": "Megalodon Tooth",
+      "imageFile": "megalodon_tooth.webp",
+      "quantity": 10,
+      "sourceId": "8d7f85e4-b890-49fd-9044-7d0f90f08ef6",
+      "isEngram": false,
+      "compositionId": "b57cf8bd-02b9-4b06-a2d8-dd6e48ea9c61"
+    },
+    {
+      "uuid": "0b412adf-6508-4d8b-9b16-a2393582a595",
+      "name": "Megalodon Tooth",
+      "imageFile": "megalodon_tooth.webp",
+      "quantity": 25,
+      "sourceId": "8d7f85e4-b890-49fd-9044-7d0f90f08ef6",
+      "isEngram": false,
+      "compositionId": "df0885a8-451f-42b3-b994-1845668535f4"
+    },
+    {
+      "uuid": "d50ae89f-436f-4e4e-9549-6a2d8b90ab38",
+      "name": "Sarcosuchus Skin",
+      "imageFile": "sarcosuchus_skin.webp",
+      "quantity": 10,
+      "sourceId": "f66107f0-b17c-424b-adf1-84cf16568ae7",
+      "isEngram": false,
+      "compositionId": "b57cf8bd-02b9-4b06-a2d8-dd6e48ea9c61"
+    },
+    {
+      "uuid": "b9a5649b-a27e-48d8-aa20-127eec139ae2",
+      "name": "Sarcosuchus Skin",
+      "imageFile": "sarcosuchus_skin.webp",
+      "quantity": 25,
+      "sourceId": "f66107f0-b17c-424b-adf1-84cf16568ae7",
+      "isEngram": false,
+      "compositionId": "df0885a8-451f-42b3-b994-1845668535f4"
+    },
+    {
+      "uuid": "1aa52236-db6d-419f-b881-74fcf34e704e",
+      "name": "Sauropod Vertebra",
+      "imageFile": "sauropod_vertebra.webp",
+      "quantity": 2,
+      "sourceId": "24911036-2526-45c2-8780-f7fc00b0951f",
+      "isEngram": false,
+      "compositionId": "a11b3ec3-4706-4f9a-940a-be39a7e81752"
+    },
+    {
+      "uuid": "84747d99-44c7-493e-9ac0-b11e7266f3c2",
+      "name": "Sauropod Vertebra",
+      "imageFile": "sauropod_vertebra.webp",
+      "quantity": 10,
+      "sourceId": "24911036-2526-45c2-8780-f7fc00b0951f",
+      "isEngram": false,
+      "compositionId": "b57cf8bd-02b9-4b06-a2d8-dd6e48ea9c61"
+    },
+    {
+      "uuid": "4a3e879d-7ccb-4297-9629-a81141884687",
+      "name": "Sauropod Vertebra",
+      "imageFile": "sauropod_vertebra.webp",
+      "quantity": 25,
+      "sourceId": "24911036-2526-45c2-8780-f7fc00b0951f",
+      "isEngram": false,
+      "compositionId": "df0885a8-451f-42b3-b994-1845668535f4"
+    },
+    {
+      "uuid": "8d1e1f81-7f8c-43a3-a376-b8681f28c9a1",
+      "name": "Spinosaurus Sail",
+      "imageFile": "spinosaurus_sail.webp",
+      "quantity": 10,
+      "sourceId": "2ecdd857-0f12-423c-96c5-02b6ccdc4b47",
+      "isEngram": false,
+      "compositionId": "b57cf8bd-02b9-4b06-a2d8-dd6e48ea9c61"
+    },
+    {
+      "uuid": "b2d4cd1a-c06c-4699-a5e8-31423c74077e",
+      "name": "Spinosaurus Sail",
+      "imageFile": "spinosaurus_sail.webp",
+      "quantity": 25,
+      "sourceId": "2ecdd857-0f12-423c-96c5-02b6ccdc4b47",
+      "isEngram": false,
+      "compositionId": "df0885a8-451f-42b3-b994-1845668535f4"
+    },
+    {
+      "uuid": "147db374-531e-4579-90c2-981469e3952d",
+      "name": "Thylacoleo Hook-Claw",
+      "imageFile": "thylacoleo_hook-claw.webp",
+      "quantity": 10,
+      "sourceId": "ad3c6796-962c-4e65-9a18-20be3df38baf",
+      "isEngram": false,
+      "compositionId": "b57cf8bd-02b9-4b06-a2d8-dd6e48ea9c61"
+    },
+    {
+      "uuid": "3dcc9358-1da4-465a-8baa-e939f9a0cbc6",
+      "name": "Thylacoleo Hook-Claw",
+      "imageFile": "thylacoleo_hook-claw.webp",
+      "quantity": 25,
+      "sourceId": "ad3c6796-962c-4e65-9a18-20be3df38baf",
+      "isEngram": false,
+      "compositionId": "df0885a8-451f-42b3-b994-1845668535f4"
+    },
+    {
+      "uuid": "d99b46f0-7427-4642-9306-91bbbbb7d340",
+      "name": "Titanoboa Venom",
+      "imageFile": "titanoboa_venom.webp",
+      "quantity": 10,
+      "sourceId": "309f1588-b6d3-4ad4-9592-da5ccd0aae0a",
+      "isEngram": false,
+      "compositionId": "b57cf8bd-02b9-4b06-a2d8-dd6e48ea9c61"
+    },
+    {
+      "uuid": "d4a23fcb-2c6b-49e5-8124-ba4dde056387",
+      "name": "Titanoboa Venom",
+      "imageFile": "titanoboa_venom.webp",
+      "quantity": 25,
+      "sourceId": "309f1588-b6d3-4ad4-9592-da5ccd0aae0a",
+      "isEngram": false,
+      "compositionId": "df0885a8-451f-42b3-b994-1845668535f4"
+    },
+    {
+      "uuid": "fab6c379-ffc5-41d2-803f-01fabdc74d9c",
+      "name": "Tusoteuthis Tentacle",
+      "imageFile": "tusoteuthis_tentacle.webp",
+      "quantity": 10,
+      "sourceId": "ff0a2de6-0bf9-4b27-b3d8-7362d6e6b649",
+      "isEngram": false,
+      "compositionId": "b57cf8bd-02b9-4b06-a2d8-dd6e48ea9c61"
+    },
+    {
+      "uuid": "9ad22321-d206-42ef-a319-656a67548def",
+      "name": "Tusoteuthis Tentacle",
+      "imageFile": "tusoteuthis_tentacle.webp",
+      "quantity": 25,
+      "sourceId": "ff0a2de6-0bf9-4b27-b3d8-7362d6e6b649",
+      "isEngram": false,
+      "compositionId": "df0885a8-451f-42b3-b994-1845668535f4"
+    },
+    {
+      "uuid": "a407b156-0009-46f9-b758-626c927dd4b8",
+      "name": "Tyrannosaurus Arm",
+      "imageFile": "tyrannosaurus_arm.webp",
+      "quantity": 4,
+      "sourceId": "2f0258e0-4799-42c8-8a7a-cbc47cb17fd8",
+      "isEngram": false,
+      "compositionId": "a11b3ec3-4706-4f9a-940a-be39a7e81752"
+    }
+  ],
+  "directory": [
+    {
+      "uuid": "5bdf4504-5928-4cee-a8cc-1b35d59d3f23",
+      "name": "Boss Arenas",
+      "imageFile": "folder.webp",
+      "viewType": 1,
+      "parentId": "52416dc1-9a70-44ac-973a-942f6d1d8d82",
+      "sourceId": "afcf5f73-38c0-43d2-8c65-483ee582e19d"
+    },
+    {
+      "uuid": "67e1b274-ae98-4a92-ac16-ad9af018f69f",
+      "name": "Generate Center (Easy) Portal",
+      "imageFile": "gamma_portal.webp",
+      "viewType": 2,
+      "parentId": "532d94c7-6932-4e25-9446-abc4b28d810c",
+      "sourceId": "1add2e5f-4777-4e43-8b9f-bab5bfbcf1c2"
+    },
+    {
+      "uuid": "d7449466-0223-420a-a706-bcc43812cdbb",
+      "name": "Generate Center (Hard) Portal",
+      "imageFile": "alpha_portal.webp",
+      "viewType": 2,
+      "parentId": "532d94c7-6932-4e25-9446-abc4b28d810c",
+      "sourceId": "522b2454-259a-46db-bbb4-808be20d11cc"
+    },
+    {
+      "uuid": "5e6c135c-996e-4d16-989e-3b1459bf1ab2",
+      "name": "Generate Center (Medium) Portal",
+      "imageFile": "beta_portal.webp",
+      "viewType": 2,
+      "parentId": "532d94c7-6932-4e25-9446-abc4b28d810c",
+      "sourceId": "0fcd7f45-1f86-4540-972b-7010ed898d94"
+    },
+    {
+      "uuid": "52416dc1-9a70-44ac-973a-942f6d1d8d82",
+      "name": "Obelisk",
+      "imageFile": "obelisk.webp",
+      "viewType": 0,
+      "parentId": null,
+      "sourceId": "56e87eeb-eabc-4124-bfcd-051a07eca0e1"
+    },
+    {
+      "uuid": "532d94c7-6932-4e25-9446-abc4b28d810c",
+      "name": "The Center Arena",
+      "imageFile": "folder.webp",
+      "viewType": 1,
+      "parentId": "5bdf4504-5928-4cee-a8cc-1b35d59d3f23",
+      "sourceId": "4e92a67a-e8e0-420c-9c04-336054d7279a"
+    }
+  ],
+  "remove": {
+    "resources": [],
+    "stations": [
+      "2b96c917-a1d9-4ad9-abc0-19149376e9fd"
+    ],
+    "folders": [
+      "906918d2-c97b-431e-8d31-8ff5bf166ed7",
+      "7ec498e2-1019-4285-8d64-5cf50c842222",
+      "48dfe696-4a09-4251-831d-dd9e5d28ac40"
+    ],
+    "engrams": [
+      "1d4b132c-17e0-4f94-9696-7a6c5c8e7d12",
+      "8d064184-96d6-49a3-8824-c30417d8cb4d",
+      "0f12b648-1c68-4d6c-91bc-2182f8f34a89",
+      "6d25ae54-d06a-4161-9c84-471f78d1c9bf",
+      "f1f21585-d8b7-4384-a361-e1f9a39df313",
+      "5a178972-019d-4e0a-b87c-c425f438fc80",
+      "ef5c8042-02da-43b8-b7ec-d5839c99b069",
+      "e3326f6b-d38b-4c31-9776-0ce446106fdb",
+      "1e4852a9-a75d-47d0-b88b-3a61c07b4cd1"
+    ]
+  },
+  "replace": {
+    "resources": [],
+    "stations": [],
+    "folders": [],
+    "engrams": [],
+    "composition": []
+  }
+}

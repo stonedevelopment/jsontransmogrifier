@@ -29,6 +29,10 @@ public class IlluminateDetails extends TransmogDetails {
         return new ObjectMapper().convertValue(jsonNode, IlluminateDetails.class);
     }
 
+    public JsonNode toJson() {
+        return new ObjectMapper().valueToTree(this);
+    }
+
     @Override
     @JsonIgnore
     public String getTransmogFile() {
