@@ -26,11 +26,6 @@ public abstract class IlluminateGameData extends GameData {
         return super.getComposition(uuid);
     }
 
-    @Override
-    public Composite getComposite(String uuid) {
-        return super.getComposite(uuid);
-    }
-
     protected String getCompositionUUIDByEngramId(String engramId) {
         return getCompositionUUIDByName(engramId);
     }
@@ -200,7 +195,7 @@ public abstract class IlluminateGameData extends GameData {
             ObjectNode rootNode = convertJsonNode(station.toJson());
 
             //  crawl through directory, recursively return hierarchical data
-            rootNode.set(cDirectory, resolveDirectoryChildren(directoryItem.getUuid()));
+            rootNode.setAll(resolveDirectoryChildren(directoryItem.getUuid()));
 
             //  add to json array
             arrayNode.add(rootNode);
@@ -209,7 +204,7 @@ public abstract class IlluminateGameData extends GameData {
         return arrayNode;
     }
 
-    protected JsonNode resolveDirectoryChildren(String parentId) {
+    protected ObjectNode resolveDirectoryChildren(String parentId) {
         ObjectNode outNode = mapper.createObjectNode();
 
         //  create array nodes to hold engrams and folders
@@ -230,7 +225,7 @@ public abstract class IlluminateGameData extends GameData {
                 ObjectNode folderNode = convertJsonNode(folder.toJson());
 
                 //  crawl through directory, recursively return hierarchical data
-                folderNode.set(cDirectory, resolveDirectoryChildren(directoryItem.getUuid()));
+                folderNode.setAll(resolveDirectoryChildren(directoryItem.getUuid()));
 
                 //  add to json array
                 folders.add(folderNode);
@@ -244,7 +239,6 @@ public abstract class IlluminateGameData extends GameData {
                 //  add engram to json array
                 engrams.add(engramNode);
 
-                // TODO: 8/29/2020 add in composition here?
                 engramNode.set(cComposition, resolveComposition(sourceId));
             }
         }
