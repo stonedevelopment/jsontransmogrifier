@@ -65,6 +65,14 @@ public abstract class GameData {
         return engramIdMap;
     }
 
+    public Map<String, String> getFolderIdMap() {
+        return folderIdMap;
+    }
+
+    public Map<String, String> getStationIdMap() {
+        return stationIdMap;
+    }
+
     public Map<String, Folder> getFolderMap() {
         return folderMap;
     }

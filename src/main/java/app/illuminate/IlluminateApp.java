@@ -80,15 +80,11 @@ public class IlluminateApp {
     private void writeGameDataToFile(IlluminateGameData gameData) {
         JsonNode resolvedNode = gameData.resolveToJson();
 
-
-
-        JsonNode resourcesNode = resolvedNode.get(cResources);
-        //  generate file path for illuminated resources
-        String illuminatedResourcesFilePath = gameData.generateIlluminatedResourcesFilePath();
-        //  write illuminated resources to json
-        writeJsonToFile(illuminatedResourcesFilePath, resourcesNode);
-        //  add illuminated resources json file name for illumination write out
-        gameData.addIlluminatedFile(illuminatedResourcesFilePath);
+        addResolvedNodeToGameData(gameData, resolvedNode, cResources);
+        addResolvedNodeToGameData(gameData, resolvedNode, cEngrams);
+        addResolvedNodeToGameData(gameData, resolvedNode, cFolders);
+        addResolvedNodeToGameData(gameData, resolvedNode, cStations);
+        addResolvedNodeToGameData(gameData, resolvedNode, cDirectory);
 
         /**
          * Consider removing uuids from all illuminated files
@@ -100,19 +96,24 @@ public class IlluminateApp {
          * Consider creating directory file in place of separate files
          * Use names only for stations, folders and engrams
          */
+    }
 
-        ArrayNode resolvedDirectory = mapper.createArrayNode();
-
-        //  iterate through resolved directory, separate each directory parent (crafting stations)
-        JsonNode directoryNode = resolvedNode.get(cDirectory);
-        for (JsonNode illuminatedStation : directoryNode) {
-            //  generate file path for illuminated node
-            String illuminatedStationFilePath = gameData.generateIlluminatedStationFilePath(illuminatedStation);
-            //  write illuminated node's data to json
-            writeJsonToFile(illuminatedStationFilePath, illuminatedStation);
-            //  add illuminate node's json file name for illumination write out
-            gameData.addIlluminatedFile(illuminatedStationFilePath);
-        }
+    /**
+     * Generates file path, Writes illuminated/resolved node to json file, adds path to game data controller
+     *
+     * @param gameData     Controller instance
+     * @param resolvedNode Node that holds all resolved nodes
+     * @param type         String constant holding name of illuminated node
+     */
+    private void addResolvedNodeToGameData(IlluminateGameData gameData, JsonNode resolvedNode, String type) {
+        //  get illuminated node from provided type
+        JsonNode illuminatedNode = resolvedNode.get(type);
+        //  generate file path for illuminated node
+        String illuminatedFilePath = gameData.generateIlluminatedFilePath(type);
+        //  write illuminated node to json
+        writeNodeToFile(illuminatedFilePath, illuminatedNode);
+        //  add illuminated json file name for illumination write out
+        gameData.addIlluminatedFile(illuminatedFilePath);
     }
 
     private void writeIllumination() {
@@ -126,10 +127,10 @@ public class IlluminateApp {
 
         outNode.set(cDlc, outDlcArrayNode);
 
-        writeJsonToFile(cIlluminationFileName, outNode);
+        writeNodeToFile(cIlluminationFileName, outNode);
     }
 
-    private void writeJsonToFile(String fileName, JsonNode outNode) {
+    private void writeNodeToFile(String fileName, JsonNode outNode) {
         writeOut(cArkAssetsFilePath, fileName, outNode);
     }
 }

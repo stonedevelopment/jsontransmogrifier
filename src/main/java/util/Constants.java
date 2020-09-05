@@ -9,7 +9,7 @@ public class Constants {
     public static final String cTransmogrificationFileName = "transmogrification.json";
     public static final String cTransmogrifiedFileName = "transmogrified.json";
     public static final String cIlluminationFileName = "illumination.json";
-    public static final String cIlluminatedResourcesFileName = "illuminated_resources.json";
+    public static final String cIlluminatedFileNameFormat = "illuminated_%s.json";
     public static final String cIlluminatedStationsFileName = "illuminated_stations.json";
     public static final String cIlluminatedFoldersFileName = "illuminated_folders.json";
     public static final String cIlluminatedStationFileNamePrefix = "illuminated_station_%s.json";

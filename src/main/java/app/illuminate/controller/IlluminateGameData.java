@@ -149,34 +149,19 @@ public abstract class IlluminateGameData extends GameData {
         getDetailsObject().addIlluminatedFile(illuminatedFile);
     }
 
-    public String generateIlluminatedResourcesFilePath() {
-        return getDetailsObject().getFilePath().concat(cIlluminatedResourcesFileName);
-    }
-
-    public String generateIlluminatedStationsFilePath() {
-        return getDetailsObject().getFilePath().concat(cIlluminatedResourcesFileName);
-    }
-
-    public String generateIlluminatedStationFilePath(JsonNode resolvedNode) {
-        String filePath = getDetailsObject().getFilePath();
-        String name = resolvedNode.get(cName).asText();
-        return filePath.concat(generateIlluminatedStationFileName(name));
-    }
-
-    private String generateIlluminatedStationFileName(String name) {
-        return String.format(cIlluminatedStationFileNamePrefix, name.toLowerCase().replace(' ', '_'));
+    public String generateIlluminatedFilePath(String type) {
+        String filePath = String.format(cIlluminatedFileNameFormat, type);
+        return getDetailsObject().getFilePath().concat(filePath);
     }
 
     protected JsonNode resolveResourceNode() {
         ArrayNode arrayNode = mapper.createArrayNode();
 
         for (String uuid : getResourceIdMap().values()) {
-            //  get resource object using given uuid
+            //  get object using given uuid
             Resource resource = getResource(uuid);
-
             //  convert object to json
             JsonNode resourceNode = convertJsonNode(resource.toJson());
-
             //  add to json array
             arrayNode.add(resourceNode);
         }
@@ -188,12 +173,40 @@ public abstract class IlluminateGameData extends GameData {
         ArrayNode arrayNode = mapper.createArrayNode();
 
         for (String uuid : getEngramIdMap().values()) {
-            //  get resource object using given uuid
+            //  get object using given uuid
             Engram engram = getEngram(uuid);
-
             //  convert object to json
             JsonNode node = engram.toJson();
+            //  add to json array
+            arrayNode.add(node);
+        }
 
+        return arrayNode;
+    }
+
+    protected JsonNode resolveFolderNode() {
+        ArrayNode arrayNode = mapper.createArrayNode();
+
+        for (String uuid : getFolderIdMap().values()) {
+            //  get object using given uuid
+            Folder folder = getFolder(uuid);
+            //  convert object to json
+            JsonNode node = folder.toJson();
+            //  add to json array
+            arrayNode.add(node);
+        }
+
+        return arrayNode;
+    }
+
+    protected JsonNode resolveStationNode() {
+        ArrayNode arrayNode = mapper.createArrayNode();
+
+        for (String uuid : getStationIdMap().values()) {
+            //  get object using given uuid
+            Station station = getStation(uuid);
+            //  convert object to json
+            JsonNode node = station.toJson();
             //  add to json array
             arrayNode.add(node);
         }
@@ -325,7 +338,14 @@ public abstract class IlluminateGameData extends GameData {
         //  resolve resources
         outNode.set(cResources, resolveResourceNode());
 
+        //  resolve engrams
         outNode.set(cEngrams, resolveEngramNode());
+
+        //  resolve folders
+        outNode.set(cFolders, resolveFolderNode());
+
+        //  resolve stations
+        outNode.set(cStations, resolveStationNode());
 
         //  resolve directory in a hierarchy, separated by stations as parent node
         outNode.set(cDirectory, resolveDirectory());

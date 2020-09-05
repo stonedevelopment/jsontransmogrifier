@@ -1,0 +1,222 @@
+[
+  {
+    "uuid": "f6957eda-8f56-4a1e-8f37-96e5ec1eb872",
+    "name": "Ammo"
+  },
+  {
+    "uuid": "ced08f46-8cd6-4618-9c39-d54f6a32269f",
+    "name": "Armor"
+  },
+  {
+    "uuid": "450d865b-2b70-47e1-a746-3a34a9bde8fd",
+    "name": "Attachments"
+  },
+  {
+    "uuid": "a1aca782-d863-460b-8257-1ebd58317500",
+    "name": "Beds"
+  },
+  {
+    "uuid": "afcf5f73-38c0-43d2-8c65-483ee582e19d",
+    "name": "Boss Arenas"
+  },
+  {
+    "uuid": "906918d2-c97b-431e-8d31-8ff5bf166ed7",
+    "name": "Broodmother Arena"
+  },
+  {
+    "uuid": "a753d4ba-0997-47d6-8b56-6d84cd40b691",
+    "name": "Chitin"
+  },
+  {
+    "uuid": "d5ba43b1-4034-407e-b13b-6748c914b653",
+    "name": "Cloth"
+  },
+  {
+    "uuid": "2680e98a-7261-49a1-8bc2-61a1e5a91799",
+    "name": "Communication"
+  },
+  {
+    "uuid": "a9ac3512-a72b-4def-b42f-05309c9f8004",
+    "name": "Composite"
+  },
+  {
+    "uuid": "112ede05-9eb2-41d3-8b0f-db84da04a4bd",
+    "name": "Consumables"
+  },
+  {
+    "uuid": "f63b0784-2c4e-4100-9fa7-d2c0c39f96b9",
+    "name": "Cooking"
+  },
+  {
+    "uuid": "c7274e35-9d3a-44e1-a30a-6e97e57e3a1e",
+    "name": "Crafting"
+  },
+  {
+    "uuid": "1cba124b-029d-46fd-898e-5209a39a7b85",
+    "name": "Defenses"
+  },
+  {
+    "uuid": "48dfe696-4a09-4251-831d-dd9e5d28ac40",
+    "name": "Dragon Arena"
+  },
+  {
+    "uuid": "9ace0808-9d1f-46b0-b8b8-9f69534af413",
+    "name": "Drugs"
+  },
+  {
+    "uuid": "62df8aba-05fb-42c4-bee1-57df1918e6b3",
+    "name": "Dyes"
+  },
+  {
+    "uuid": "d7379730-ab13-4b0b-905a-6e48606e6ae1",
+    "name": "Electric"
+  },
+  {
+    "uuid": "12508bd5-9ebc-407e-b532-30ebb4f14cef",
+    "name": "Electrical"
+  },
+  {
+    "uuid": "2231b9d7-c5fd-49ae-ba4d-8654da8492fb",
+    "name": "Elevators"
+  },
+  {
+    "uuid": "2da55ad1-eede-4270-81c3-f4418e9955b7",
+    "name": "Explosive"
+  },
+  {
+    "uuid": "c7f83c25-f647-4c96-a3c5-544f5526fd6f",
+    "name": "Farming"
+  },
+  {
+    "uuid": "41c4850e-6df4-48e6-b013-5bca46ce5f67",
+    "name": "Firearms"
+  },
+  {
+    "uuid": "f0b120a8-e681-4a35-9bde-1638285917a9",
+    "name": "Food"
+  },
+  {
+    "uuid": "b35e951c-3536-4e6d-8384-429fe9a64421",
+    "name": "Fridges"
+  },
+  {
+    "uuid": "eaec834c-189e-4045-9823-4cd59c42b36c",
+    "name": "Fur"
+  },
+  {
+    "uuid": "57711965-4fac-4706-b9d5-38e1b40e69ab",
+    "name": "Furniture"
+  },
+  {
+    "uuid": "242d61e9-0b46-4460-895e-0af16e5589b0",
+    "name": "Ghillie"
+  },
+  {
+    "uuid": "27e7790a-0b15-41dc-9ab5-9a7b2a6a8afc",
+    "name": "Greenhouse"
+  },
+  {
+    "uuid": "f193c20a-a9d9-41ea-8190-22acffdafc99",
+    "name": "Hide"
+  },
+  {
+    "uuid": "10d6912c-1f27-40e4-b56e-dde2e6d26643",
+    "name": "Kibble"
+  },
+  {
+    "uuid": "7ec498e2-1019-4285-8d64-5cf50c842222",
+    "name": "Megapithecus Arena"
+  },
+  {
+    "uuid": "ca76917f-5955-4d0a-bd41-d1576a9a4f5b",
+    "name": "Melee"
+  },
+  {
+    "uuid": "8bc0345a-1085-4a42-bcc7-1db2e87906ce",
+    "name": "Metal"
+  },
+  {
+    "uuid": "33e2e661-7932-4c26-b3a6-9b405388e278",
+    "name": "Misc"
+  },
+  {
+    "uuid": "a04cb141-1d0c-4f8d-ac62-55a6055d85a1",
+    "name": "Navigation"
+  },
+  {
+    "uuid": "1e743766-b5c5-4da1-b09f-b2fa0d8e8e5f",
+    "name": "Off-Hand"
+  },
+  {
+    "uuid": "d0a25fac-fd3d-4461-b47e-e47cd67898ab",
+    "name": "Pipes"
+  },
+  {
+    "uuid": "6ef13c55-5cab-4615-9fd3-22b669549697",
+    "name": "Primitive"
+  },
+  {
+    "uuid": "e5ebea33-5735-4fe2-bd37-4deca699331f",
+    "name": "Ragnarok Arena"
+  },
+  {
+    "uuid": "2eaf2594-5615-431b-9038-376263f14a8f",
+    "name": "Ranged"
+  },
+  {
+    "uuid": "7d6bbd61-26f0-4ff0-a8f5-8077b7b5b8da",
+    "name": "Refined"
+  },
+  {
+    "uuid": "f8860474-5bf6-4909-90ae-4fb81d277bc3",
+    "name": "Riot"
+  },
+  {
+    "uuid": "d592d6b3-080b-4034-9840-39cc8c2a10bd",
+    "name": "SCUBA"
+  },
+  {
+    "uuid": "60051f2d-21a1-4094-962f-b1a36c35304d",
+    "name": "Saddles"
+  },
+  {
+    "uuid": "f57a10a3-1620-47a0-a40f-406d6decefa1",
+    "name": "Shields"
+  },
+  {
+    "uuid": "2baa0fdd-0fbb-4c8b-8a40-593ac886d854",
+    "name": "Signs"
+  },
+  {
+    "uuid": "3d9a55e7-c0f9-4c6a-8284-f61460b3bb87",
+    "name": "Stone"
+  },
+  {
+    "uuid": "27249acf-7b6c-43cf-b0ec-b9af58f34376",
+    "name": "Storage"
+  },
+  {
+    "uuid": "b679e329-d15f-40ba-a18b-f323225d8cac",
+    "name": "Structures"
+  },
+  {
+    "uuid": "e9cd4c1c-0090-4d39-9273-173556186d8c",
+    "name": "Tek"
+  },
+  {
+    "uuid": "00675858-e037-4b0e-b59f-1c1b4f11b23d",
+    "name": "Thatch"
+  },
+  {
+    "uuid": "52b64bd7-8fd7-45e4-bb85-de8b4f97692d",
+    "name": "Tripwires"
+  },
+  {
+    "uuid": "ef948d46-efde-4ef1-ac82-815d7844c220",
+    "name": "Weapons"
+  },
+  {
+    "uuid": "659641cc-256f-4e86-9847-9e16b0e53ba9",
+    "name": "Wood"
+  }
+]
