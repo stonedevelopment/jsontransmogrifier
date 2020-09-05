@@ -85,17 +85,6 @@ public class IlluminateApp {
         addResolvedNodeToGameData(gameData, resolvedNode, cFolders);
         addResolvedNodeToGameData(gameData, resolvedNode, cStations);
         addResolvedNodeToGameData(gameData, resolvedNode, cDirectory);
-
-        /**
-         * Consider removing uuids from all illuminated files
-         * Updatify should compare Transmog with Illuminated, if exists use UUID; else create one
-         *
-         * Consider moving engrams to own file
-         *  Include composition, using only the composites
-         *
-         * Consider creating directory file in place of separate files
-         * Use names only for stations, folders and engrams
-         */
     }
 
     /**

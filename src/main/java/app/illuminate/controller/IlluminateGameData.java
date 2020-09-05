@@ -176,7 +176,11 @@ public abstract class IlluminateGameData extends GameData {
             //  get object using given uuid
             Engram engram = getEngram(uuid);
             //  convert object to json
-            JsonNode node = engram.toJson();
+            ObjectNode node = convertJsonNode(engram.toJson());
+
+            //  add composition to node
+            node.set(cComposition, resolveComposition(uuid));
+
             //  add to json array
             arrayNode.add(node);
         }
@@ -226,7 +230,9 @@ public abstract class IlluminateGameData extends GameData {
             Station station = getStation(directoryItem.getSourceId());
 
             //  convert object to json
-            ObjectNode rootNode = convertJsonNode(station.toJson());
+            ObjectNode rootNode = mapper.createObjectNode();
+
+            rootNode.put(cName, station.getName());
 
             //  crawl through directory, recursively return hierarchical data
             rootNode.setAll(resolveDirectoryChildren(directoryItem.getUuid()));
@@ -256,7 +262,9 @@ public abstract class IlluminateGameData extends GameData {
                 Folder folder = getFolder(sourceId);
 
                 //  convert object to json
-                ObjectNode folderNode = convertJsonNode(folder.toJson());
+                ObjectNode folderNode = mapper.createObjectNode();
+
+                folderNode.put(cName, folder.getName());
 
                 //  crawl through directory, recursively return hierarchical data
                 folderNode.setAll(resolveDirectoryChildren(directoryItem.getUuid()));
@@ -267,13 +275,8 @@ public abstract class IlluminateGameData extends GameData {
                 //  get engram object from given uuid
                 Engram engram = getEngram(sourceId);
 
-                //  convert object to json
-                ObjectNode engramNode = convertJsonNode(engram.toJson());
-
                 //  add engram to json array
-                engrams.add(engramNode);
-
-                engramNode.set(cComposition, resolveComposition(sourceId));
+                engrams.add(engram.getName());
             }
         }
 

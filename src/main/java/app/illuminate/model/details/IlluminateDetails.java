@@ -8,6 +8,8 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 
+import java.util.Date;
+
 import static util.Constants.*;
 
 public class IlluminateDetails extends TransmogDetails {
@@ -31,6 +33,12 @@ public class IlluminateDetails extends TransmogDetails {
 
     public JsonNode toJson() {
         return new ObjectMapper().valueToTree(this);
+    }
+
+    @JsonIgnore
+    @Override
+    public Date getLastUpdated() {
+        return super.getLastUpdated();
     }
 
     @Override
