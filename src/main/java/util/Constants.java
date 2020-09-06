@@ -31,6 +31,7 @@ public class Constants {
     public static final String cComposites = "composites";
     public static final String cDirectory = "directory";
     public static final String cRemove = "remove";
+    public static final String cBlacklist = "blacklist";
     public static final String cReplace = "replace";
     public static final String cIlluminatedFiles = "illuminatedFiles";
 

@@ -41,13 +41,13 @@ public class IlluminateDetails extends TransmogDetails {
         return super.getLastUpdated();
     }
 
-    @Override
     @JsonIgnore
+    @Override
     public String getTransmogFile() {
         return super.getTransmogFile();
     }
 
-    @JsonProperty(cIlluminatedFiles)
+    @JsonIgnore
     public JsonNode getIlluminatedFiles() {
         return illuminatedFiles;
     }

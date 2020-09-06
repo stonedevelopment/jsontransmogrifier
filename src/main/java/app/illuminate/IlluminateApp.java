@@ -11,6 +11,7 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import static util.Constants.*;
@@ -78,25 +79,26 @@ public class IlluminateApp {
     }
 
     private void writeGameDataToFile(IlluminateGameData gameData) {
-        JsonNode resolvedNode = gameData.resolveToJson();
+        JsonNode resolvedNodes = gameData.resolveToJson();
+        Iterator<JsonNode> elements = resolvedNodes.elements();
+        Iterator<String> fieldNames = resolvedNodes.fieldNames();
 
-        addResolvedNodeToGameData(gameData, resolvedNode, cResources);
-        addResolvedNodeToGameData(gameData, resolvedNode, cEngrams);
-        addResolvedNodeToGameData(gameData, resolvedNode, cFolders);
-        addResolvedNodeToGameData(gameData, resolvedNode, cStations);
-        addResolvedNodeToGameData(gameData, resolvedNode, cDirectory);
+        //  iterate elements to build output node
+        while (elements.hasNext()) {
+            String fieldName = fieldNames.next();
+            JsonNode resolvedNode = elements.next();
+            addResolvedNodeToGameData(gameData, resolvedNode, fieldName);
+        }
     }
 
     /**
      * Generates file path, Writes illuminated/resolved node to json file, adds path to game data controller
      *
-     * @param gameData     Controller instance
-     * @param resolvedNode Node that holds all resolved nodes
-     * @param type         String constant holding name of illuminated node
+     * @param gameData        Controller instance
+     * @param illuminatedNode Illuminated Node of type value
+     * @param type            String constant holding name of illuminated node
      */
-    private void addResolvedNodeToGameData(IlluminateGameData gameData, JsonNode resolvedNode, String type) {
-        //  get illuminated node from provided type
-        JsonNode illuminatedNode = resolvedNode.get(type);
+    private void addResolvedNodeToGameData(IlluminateGameData gameData, JsonNode illuminatedNode, String type) {
         //  generate file path for illuminated node
         String illuminatedFilePath = gameData.generateIlluminatedFilePath(type);
         //  write illuminated node to json
@@ -107,16 +109,23 @@ public class IlluminateApp {
 
     private void writeIllumination() {
         ObjectNode outNode = mapper.createObjectNode();
-        outNode.set(cPrimary, mapper.valueToTree(primaryGameData.getDetailsObject()));
+        outNode.set(cPrimary, generateIlluminationDetails(primaryGameData));
 
         ArrayNode outDlcArrayNode = mapper.createArrayNode();
         for (DlcIlluminateGameData dlcGameData : dlcGameDataList) {
-            outDlcArrayNode.add(mapper.valueToTree(dlcGameData.getDetailsObject()));
+            outDlcArrayNode.add(generateIlluminationDetails(dlcGameData));
         }
 
         outNode.set(cDlc, outDlcArrayNode);
 
         writeNodeToFile(cIlluminationFileName, outNode);
+    }
+
+    private JsonNode generateIlluminationDetails(IlluminateGameData gameData) {
+        ObjectNode outNode = mapper.createObjectNode();
+        outNode.put(cName, gameData.getDetailsObject().getName());
+        outNode.set(cIlluminatedFiles, gameData.getDetailsObject().getIlluminatedFiles());
+        return outNode;
     }
 
     private void writeNodeToFile(String fileName, JsonNode outNode) {
