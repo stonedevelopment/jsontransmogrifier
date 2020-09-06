@@ -2,15 +2,18 @@ package app.transmogrify.model.game_data;
 
 import app.transmogrify.controller.TransmogGameData;
 import app.transmogrify.model.details.DlcTransmogDetails;
-import app.transmogrify.model.json.*;
+import app.transmogrify.model.json.JsonComposite;
+import app.transmogrify.model.json.JsonDlc;
+import app.transmogrify.model.json.JsonTotalConversion;
+import app.transmogrify.model.json.JsonTotalConversionResource;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import model.*;
-import model.dlc.*;
+import model.dlc.TotalConversion;
 
-import java.util.Date;
 import java.util.Map;
+import java.util.Set;
 
 import static util.Constants.*;
 
@@ -209,8 +212,8 @@ public class DlcTransmogGameData extends TransmogGameData {
         //  add uuids of resources to replace
         ArrayNode resourceArray = mapper.createArrayNode();
         for (Map.Entry<String, String> resourceEntry : totalConversion.resourcesToReplace.entrySet()) {
-            String from = resourceEntry.getKey();
-            String to = resourceEntry.getValue();
+            String from = getResourceUUIDByName(resourceEntry.getKey());
+            String to = getResourceUUIDByName(resourceEntry.getValue());
 
             ObjectNode resourceNode = mapper.createObjectNode();
             resourceNode.put(from, to);
@@ -218,22 +221,6 @@ public class DlcTransmogGameData extends TransmogGameData {
             resourceArray.add(resourceNode);
         }
         outNode.set(cResources, resourceArray);
-
-        //  add uuids of stations to replace
-        ArrayNode stationArray = mapper.createArrayNode();
-        outNode.set(cStations, stationArray);
-
-        //  add uuids of folders to replace
-        ArrayNode folderArray = mapper.createArrayNode();
-        outNode.set(cFolders, folderArray);
-
-        //  add uuids of engrams to replace
-        ArrayNode engramArray = mapper.createArrayNode();
-        outNode.set(cEngrams, engramArray);
-
-        //  add uuids of engrams to replace
-        ArrayNode compositionArray = mapper.createArrayNode();
-        outNode.set(cComposition, compositionArray);
 
         return outNode;
     }

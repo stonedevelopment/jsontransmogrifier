@@ -81,6 +81,11 @@ public abstract class GameData {
         return resourceMap.get(uuid);
     }
 
+    public Resource getResourceByName(String name) {
+        String uuid = getResourceUUIDByName(name);
+        return getResource(uuid);
+    }
+
     public String getResourceUUIDByName(String name) {
         return resourceIdMap.get(name);
     }
