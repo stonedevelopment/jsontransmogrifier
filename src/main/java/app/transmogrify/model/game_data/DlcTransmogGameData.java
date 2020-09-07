@@ -13,7 +13,6 @@ import model.*;
 import model.dlc.TotalConversion;
 
 import java.util.Map;
-import java.util.Set;
 
 import static util.Constants.*;
 
@@ -138,6 +137,19 @@ public class DlcTransmogGameData extends TransmogGameData {
         return composite != null ? composite : primaryGameData.getComposite(uuid);
     }
 
+    /**
+     * Helper method that crawls through the Resource map for a UUID, then the Engram map if not found.
+     * There should only be 2 locations to search for since all Engrams used in a composition used to be considered
+     * Resources.
+     *
+     * @param name Name of replacement object to search for
+     * @return UUID of found replacement object
+     */
+    public String getReplacementUUIDByName(String name) {
+        String uuid = getResourceUUIDByName(name);
+        return uuid != null ? uuid : getEngramUUIDByName(name);
+    }
+
     @Override
     protected void mapGameDataFromJson() {
         mapTotalConversionFromJson();
@@ -212,8 +224,8 @@ public class DlcTransmogGameData extends TransmogGameData {
         //  add uuids of resources to replace
         ArrayNode resourceArray = mapper.createArrayNode();
         for (Map.Entry<String, String> resourceEntry : totalConversion.resourcesToReplace.entrySet()) {
-            String from = getResourceUUIDByName(resourceEntry.getKey());
-            String to = getResourceUUIDByName(resourceEntry.getValue());
+            String from = getReplacementUUIDByName(resourceEntry.getKey());
+            String to = getReplacementUUIDByName(resourceEntry.getValue());
 
             ObjectNode resourceNode = mapper.createObjectNode();
             resourceNode.put(from, to);
