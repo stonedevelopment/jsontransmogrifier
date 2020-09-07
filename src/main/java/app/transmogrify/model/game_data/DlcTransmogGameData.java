@@ -234,6 +234,10 @@ public class DlcTransmogGameData extends TransmogGameData {
         }
         outNode.set(cResources, resourceArray);
 
+        outNode.set(cStations, mapper.createArrayNode());
+        outNode.set(cFolders, mapper.createArrayNode());
+        outNode.set(cEngrams, mapper.createArrayNode());
+
         return outNode;
     }
 
