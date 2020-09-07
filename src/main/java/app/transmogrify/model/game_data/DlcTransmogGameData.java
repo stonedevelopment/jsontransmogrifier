@@ -228,7 +228,8 @@ public class DlcTransmogGameData extends TransmogGameData {
             String to = getReplacementUUIDByName(resourceEntry.getValue());
 
             ObjectNode resourceNode = mapper.createObjectNode();
-            resourceNode.put(from, to);
+            resourceNode.put(cFrom, from);
+            resourceNode.put(cTo, to);
 
             resourceArray.add(resourceNode);
         }

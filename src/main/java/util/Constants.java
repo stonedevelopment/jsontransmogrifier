@@ -63,6 +63,8 @@ public class Constants {
     public static final String cDlcId = "dlcId";
     public static final String cRootParentId = "";
     public static final String cNullUuid = "";
+    public static final String cFrom = "from";
+    public static final String cTo = "to";
 
     //  json values
     public static final int cStationViewType = 0;

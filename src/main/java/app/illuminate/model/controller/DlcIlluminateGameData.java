@@ -1,6 +1,7 @@
 package app.illuminate.model.controller;
 
 import app.illuminate.controller.IlluminateGameData;
+import app.illuminate.model.IlluminateReplacement;
 import app.illuminate.model.details.DlcIlluminateDetails;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
@@ -20,6 +21,7 @@ public class DlcIlluminateGameData extends IlluminateGameData {
     private final Map<String, String> removeStationsIdMap = new TreeMap<>();
     private final Map<String, String> removeFoldersIdMap = new TreeMap<>();
     private final Map<String, String> removeEngramsIdMap = new TreeMap<>();
+
     private final Map<String, String> replaceResourcesIdMap = new TreeMap<>();
     private final Map<String, String> replaceStationsIdMap = new TreeMap<>();
     private final Map<String, String> replaceFoldersIdMap = new TreeMap<>();
@@ -111,11 +113,6 @@ public class DlcIlluminateGameData extends IlluminateGameData {
         mapRemovalEngrams(removalsNode.get(cEngrams));
     }
 
-    private void mapReplacementsFromJson() {
-        JsonNode removalsNode = inNode.get(cReplace);
-        mapReplacementResources(removalsNode.get(cResources));
-    }
-
     private void mapRemovalResources(JsonNode jsonNode) {
         for (JsonNode uuidNode : jsonNode) {
             String uuid = uuidNode.asText();
@@ -144,10 +141,13 @@ public class DlcIlluminateGameData extends IlluminateGameData {
         }
     }
 
-    private void mapReplacementResources(JsonNode jsonNode) {
-        for (JsonNode uuidNode : jsonNode) {
-            String uuid = uuidNode.asText();
-            addReplacementResource(getResource(uuid));
+    private void mapReplacementsFromJson() {
+        JsonNode removalsNode = inNode.get(cReplace);
+        mapReplacementResources(removalsNode.get(cResources));
+    }
+
+    private void mapReplacementResources(JsonNode replacementNode) {
+        for (JsonNode childNode : replacementNode) {
         }
     }
 
@@ -200,11 +200,11 @@ public class DlcIlluminateGameData extends IlluminateGameData {
         addRemovalEngramToIdMap(uuid, name);
     }
 
-    private void addReplacementResource(Resource resource) {
-        String uuid = resource.getUuid();
-        String name = resource.getName();
-
-        addReplacementResourceToIdMap(uuid, name);
+    private void addReplacementResource(IlluminateReplacement replacement) {
+//        String uuid = replacement.getUuid();
+//        String name = replacement.getName();
+//
+//        addReplacementResourceToIdMap(uuid, name);
     }
 
     private void addReplacementStation(Station station) {
@@ -310,7 +310,11 @@ public class DlcIlluminateGameData extends IlluminateGameData {
     }
 
     private JsonNode resolveReplacementsToTotalConversion() {
-        return resolveReplaceResources();
+        ObjectNode outNode = mapper.createObjectNode();
+
+        outNode.set(cResources, resolveReplaceResources());
+
+        return outNode;
     }
 
     private JsonNode resolveReplaceResources() {
