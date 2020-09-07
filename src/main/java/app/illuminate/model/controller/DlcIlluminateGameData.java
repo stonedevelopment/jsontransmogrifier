@@ -21,6 +21,9 @@ public class DlcIlluminateGameData extends IlluminateGameData {
     private final Map<String, String> removeFoldersIdMap = new TreeMap<>();
     private final Map<String, String> removeEngramsIdMap = new TreeMap<>();
     private final Map<String, String> replaceResourcesIdMap = new TreeMap<>();
+    private final Map<String, String> replaceStationsIdMap = new TreeMap<>();
+    private final Map<String, String> replaceFoldersIdMap = new TreeMap<>();
+    private final Map<String, String> replaceEngramsIdMap = new TreeMap<>();
 
     private DlcIlluminateGameData(JsonNode inNode, PrimaryIlluminateGameData primaryGameData) {
         super(inNode);
@@ -102,10 +105,10 @@ public class DlcIlluminateGameData extends IlluminateGameData {
 
     private void mapRemovalsFromJson() {
         JsonNode removalsNode = inNode.get(cRemove);
-        mapRemoveResources(removalsNode.get(cResources));
-        mapRemoveStations(removalsNode.get(cStations));
-        mapRemoveFolders(removalsNode.get(cFolders));
-        mapRemoveEngrams(removalsNode.get(cEngrams));
+        mapRemovalResources(removalsNode.get(cResources));
+        mapRemovalStations(removalsNode.get(cStations));
+        mapRemovalFolders(removalsNode.get(cFolders));
+        mapRemovalEngrams(removalsNode.get(cEngrams));
     }
 
     private void mapReplacementsFromJson() {
@@ -113,28 +116,28 @@ public class DlcIlluminateGameData extends IlluminateGameData {
         mapReplacementResources(removalsNode.get(cResources));
     }
 
-    private void mapRemoveResources(JsonNode jsonNode) {
+    private void mapRemovalResources(JsonNode jsonNode) {
         for (JsonNode uuidNode : jsonNode) {
             String uuid = uuidNode.asText();
             addRemovalResource(getResource(uuid));
         }
     }
 
-    private void mapRemoveStations(JsonNode jsonNode) {
+    private void mapRemovalStations(JsonNode jsonNode) {
         for (JsonNode uuidNode : jsonNode) {
             String uuid = uuidNode.asText();
             addRemovalStation(getStation(uuid));
         }
     }
 
-    private void mapRemoveFolders(JsonNode jsonNode) {
+    private void mapRemovalFolders(JsonNode jsonNode) {
         for (JsonNode uuidNode : jsonNode) {
             String uuid = uuidNode.asText();
             addRemovalFolder(getFolder(uuid));
         }
     }
 
-    private void mapRemoveEngrams(JsonNode jsonNode) {
+    private void mapRemovalEngrams(JsonNode jsonNode) {
         for (JsonNode uuidNode : jsonNode) {
             String uuid = uuidNode.asText();
             addRemovalEngram(getEngram(uuid));
@@ -145,6 +148,27 @@ public class DlcIlluminateGameData extends IlluminateGameData {
         for (JsonNode uuidNode : jsonNode) {
             String uuid = uuidNode.asText();
             addReplacementResource(getResource(uuid));
+        }
+    }
+
+    private void mapReplacementStations(JsonNode jsonNode) {
+        for (JsonNode uuidNode : jsonNode) {
+            String uuid = uuidNode.asText();
+            addReplacementStation(getStation(uuid));
+        }
+    }
+
+    private void mapReplacementFolders(JsonNode jsonNode) {
+        for (JsonNode uuidNode : jsonNode) {
+            String uuid = uuidNode.asText();
+            addReplacementFolder(getFolder(uuid));
+        }
+    }
+
+    private void mapReplacementEngrams(JsonNode jsonNode) {
+        for (JsonNode uuidNode : jsonNode) {
+            String uuid = uuidNode.asText();
+            addReplacementEngram(getEngram(uuid));
         }
     }
 
@@ -183,6 +207,27 @@ public class DlcIlluminateGameData extends IlluminateGameData {
         addReplacementResourceToIdMap(uuid, name);
     }
 
+    private void addReplacementStation(Station station) {
+        String uuid = station.getUuid();
+        String name = station.getName();
+
+        addReplacementStationToIdMap(uuid, name);
+    }
+
+    private void addReplacementFolder(Folder folder) {
+        String uuid = folder.getUuid();
+        String name = folder.getName();
+
+        addReplacementFolderToIdMap(uuid, name);
+    }
+
+    private void addReplacementEngram(Engram engram) {
+        String uuid = engram.getUuid();
+        String name = engram.getName();
+
+        addReplacementEngramToIdMap(uuid, name);
+    }
+
     private void addRemovalResourceToIdMap(String uuid, String name) {
         removeResourcesIdMap.put(name, uuid);
     }
@@ -201,6 +246,18 @@ public class DlcIlluminateGameData extends IlluminateGameData {
 
     private void addReplacementResourceToIdMap(String uuid, String name) {
         replaceResourcesIdMap.put(name, uuid);
+    }
+
+    private void addReplacementStationToIdMap(String uuid, String name) {
+        replaceStationsIdMap.put(name, uuid);
+    }
+
+    private void addReplacementFolderToIdMap(String uuid, String name) {
+        replaceFoldersIdMap.put(name, uuid);
+    }
+
+    private void addReplacementEngramToIdMap(String uuid, String name) {
+        replaceEngramsIdMap.put(name, uuid);
     }
 
     @Override
