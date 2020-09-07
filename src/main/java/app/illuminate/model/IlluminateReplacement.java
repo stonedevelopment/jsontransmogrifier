@@ -1,27 +1,24 @@
 package app.illuminate.model;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import model.Replacement;
 
-import static util.Constants.cFrom;
-import static util.Constants.cTo;
+import static util.Constants.*;
 
-public abstract class IlluminateReplacement {
-    private final Object from;
-    private final Object to;
+public class IlluminateReplacement extends Replacement {
 
     @JsonCreator
-    public IlluminateReplacement(@JsonProperty(cFrom) Object from,
+    public IlluminateReplacement(@JsonProperty(cUuid) String uuid,
+                                 @JsonProperty(cFrom) Object from,
                                  @JsonProperty(cTo) Object to) {
-        this.from = from;
-        this.to = to;
+        super(uuid, from, to);
     }
 
-    public Object getFrom() {
-        return from;
-    }
-
-    public Object getTo() {
-        return to;
+    @JsonIgnore
+    @Override
+    public String getUuid() {
+        return super.getUuid();
     }
 }

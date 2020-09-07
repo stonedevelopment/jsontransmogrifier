@@ -150,6 +150,13 @@ public class DlcTransmogGameData extends TransmogGameData {
         return uuid != null ? uuid : getEngramUUIDByName(name);
     }
 
+    public Replacement buildReplacement(String fromName, String toName) {
+        String uuid = generateUUID();
+        String fromUUID = getReplacementUUIDByName(fromName);
+        String toUUID = getReplacementUUIDByName(toName);
+        return new Replacement(uuid, fromUUID, toUUID);
+    }
+
     @Override
     protected void mapGameDataFromJson() {
         mapTotalConversionFromJson();
@@ -224,14 +231,9 @@ public class DlcTransmogGameData extends TransmogGameData {
         //  add uuids of resources to replace
         ArrayNode resourceArray = mapper.createArrayNode();
         for (Map.Entry<String, String> resourceEntry : totalConversion.resourcesToReplace.entrySet()) {
-            String from = getReplacementUUIDByName(resourceEntry.getKey());
-            String to = getReplacementUUIDByName(resourceEntry.getValue());
+            Replacement replacement = buildReplacement(resourceEntry.getKey(), resourceEntry.getValue());
 
-            ObjectNode resourceNode = mapper.createObjectNode();
-            resourceNode.put(cFrom, from);
-            resourceNode.put(cTo, to);
-
-            resourceArray.add(resourceNode);
+            resourceArray.add(mapper.valueToTree(replacement));
         }
         outNode.set(cResources, resourceArray);
 

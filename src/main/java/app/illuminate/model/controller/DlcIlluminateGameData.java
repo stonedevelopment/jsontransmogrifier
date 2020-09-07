@@ -1,12 +1,14 @@
 package app.illuminate.model.controller;
 
 import app.illuminate.controller.IlluminateGameData;
-import app.illuminate.model.IlluminateReplacement;
+import app.illuminate.model.*;
 import app.illuminate.model.details.DlcIlluminateDetails;
 import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import model.*;
 
+import java.util.HashMap;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -26,6 +28,9 @@ public class DlcIlluminateGameData extends IlluminateGameData {
     private final Map<String, String> replaceStationsIdMap = new TreeMap<>();
     private final Map<String, String> replaceFoldersIdMap = new TreeMap<>();
     private final Map<String, String> replaceEngramsIdMap = new TreeMap<>();
+
+    //  uuid, object
+    private final Map<String, IlluminateReplacement> replacementMap = new HashMap<>();
 
     private DlcIlluminateGameData(JsonNode inNode, PrimaryIlluminateGameData primaryGameData) {
         super(inNode);
@@ -98,6 +103,10 @@ public class DlcIlluminateGameData extends IlluminateGameData {
         return directoryItem;
     }
 
+    public Replacement getReplacement(String uuid) {
+        return replacementMap.get(uuid);
+    }
+
     @Override
     protected void mapGameDataFromJson() {
         super.mapGameDataFromJson();
@@ -142,33 +151,62 @@ public class DlcIlluminateGameData extends IlluminateGameData {
     }
 
     private void mapReplacementsFromJson() {
-        JsonNode removalsNode = inNode.get(cReplace);
-        mapReplacementResources(removalsNode.get(cResources));
+        JsonNode replacementsNode = inNode.get(cReplace);
+        mapReplacementResources(replacementsNode.get(cResources));
+        mapReplacementStations(replacementsNode.get(cStations));
+        mapReplacementFolders(replacementsNode.get(cFolders));
+        mapReplacementEngrams(replacementsNode.get(cEngrams));
     }
 
     private void mapReplacementResources(JsonNode replacementNode) {
         for (JsonNode childNode : replacementNode) {
+            //  convert node into base object
+            Replacement replacement = Replacement.fromJson(childNode);
+            //  break down fields
+            String uuid = replacement.getUuid();
+            Resource from = getResource((String) replacement.getFrom());
+            Resource to = getResource((String) replacement.getTo());
+            //  add to map
+            addReplacementResource(new IlluminateReplacementResource(uuid, from, to));
         }
     }
 
-    private void mapReplacementStations(JsonNode jsonNode) {
-        for (JsonNode uuidNode : jsonNode) {
-            String uuid = uuidNode.asText();
-            addReplacementStation(getStation(uuid));
+    private void mapReplacementStations(JsonNode replacementNode) {
+        for (JsonNode childNode : replacementNode) {
+            //  convert node into base object
+            Replacement replacement = Replacement.fromJson(childNode);
+            //  break down fields
+            String uuid = replacement.getUuid();
+            Station from = getStation((String) replacement.getFrom());
+            Station to = getStation((String) replacement.getTo());
+            //  add to map
+            addReplacementStation(new IlluminateReplacementStation(uuid, from, to));
         }
     }
 
-    private void mapReplacementFolders(JsonNode jsonNode) {
-        for (JsonNode uuidNode : jsonNode) {
-            String uuid = uuidNode.asText();
-            addReplacementFolder(getFolder(uuid));
+    private void mapReplacementFolders(JsonNode replacementNode) {
+        for (JsonNode childNode : replacementNode) {
+            //  convert node into base object
+            Replacement replacement = Replacement.fromJson(childNode);
+            //  break down fields
+            String uuid = replacement.getUuid();
+            Folder from = getFolder((String) replacement.getFrom());
+            Folder to = getFolder((String) replacement.getTo());
+            //  add to map
+            addReplacementFolder(new IlluminateReplacementFolder(uuid, from, to));
         }
     }
 
-    private void mapReplacementEngrams(JsonNode jsonNode) {
-        for (JsonNode uuidNode : jsonNode) {
-            String uuid = uuidNode.asText();
-            addReplacementEngram(getEngram(uuid));
+    private void mapReplacementEngrams(JsonNode replacementNode) {
+        for (JsonNode childNode : replacementNode) {
+            //  convert node into base object
+            Replacement replacement = Replacement.fromJson(childNode);
+            //  break down fields
+            String uuid = replacement.getUuid();
+            Engram from = getEngram((String) replacement.getFrom());
+            Engram to = getEngram((String) replacement.getTo());
+            //  add to map
+            addReplacementEngram(new IlluminateReplacementEngram(uuid, from, to));
         }
     }
 
@@ -200,31 +238,40 @@ public class DlcIlluminateGameData extends IlluminateGameData {
         addRemovalEngramToIdMap(uuid, name);
     }
 
-    private void addReplacementResource(IlluminateReplacement replacement) {
-//        String uuid = replacement.getUuid();
-//        String name = replacement.getName();
-//
-//        addReplacementResourceToIdMap(uuid, name);
+    private void addReplacement(IlluminateReplacement replacement) {
+        String uuid = replacement.getUuid();
+        replacementMap.put(uuid, replacement);
     }
 
-    private void addReplacementStation(Station station) {
-        String uuid = station.getUuid();
-        String name = station.getName();
+    private void addReplacementResource(IlluminateReplacementResource resource) {
+        String uuid = resource.getUuid();
+        String name = resource.getFrom().getName();
 
+        addReplacement(resource);
+        addReplacementResourceToIdMap(uuid, name);
+    }
+
+    private void addReplacementStation(IlluminateReplacementStation station) {
+        String uuid = station.getUuid();
+        String name = station.getFrom().getName();
+
+        addReplacement(station);
         addReplacementStationToIdMap(uuid, name);
     }
 
-    private void addReplacementFolder(Folder folder) {
+    private void addReplacementFolder(IlluminateReplacementFolder folder) {
         String uuid = folder.getUuid();
-        String name = folder.getName();
+        String name = folder.getFrom().getName();
 
+        addReplacement(folder);
         addReplacementFolderToIdMap(uuid, name);
     }
 
-    private void addReplacementEngram(Engram engram) {
+    private void addReplacementEngram(IlluminateReplacementEngram engram) {
         String uuid = engram.getUuid();
-        String name = engram.getName();
+        String name = engram.getFrom().getName();
 
+        addReplacement(engram);
         addReplacementEngramToIdMap(uuid, name);
     }
 
@@ -313,11 +360,66 @@ public class DlcIlluminateGameData extends IlluminateGameData {
         ObjectNode outNode = mapper.createObjectNode();
 
         outNode.set(cResources, resolveReplaceResources());
+        outNode.set(cStations, resolveReplaceStations());
+        outNode.set(cFolders, resolveReplaceFolders());
+        outNode.set(cEngrams, resolveReplaceEngrams());
 
         return outNode;
     }
 
     private JsonNode resolveReplaceResources() {
-        return mapper.valueToTree(replaceResourcesIdMap.keySet());
+        ArrayNode outNode = mapper.createArrayNode();
+
+        for (String uuid : replaceResourcesIdMap.values()) {
+            ObjectNode replacementNode = mapper.createObjectNode();
+            IlluminateReplacementResource replacement = (IlluminateReplacementResource) getReplacement(uuid);
+            replacementNode.put(cFrom, replacement.getFrom().getName());
+            replacementNode.put(cTo, replacement.getTo().getName());
+            outNode.add(replacementNode);
+        }
+
+        return outNode;
+    }
+
+    private JsonNode resolveReplaceStations() {
+        ArrayNode outNode = mapper.createArrayNode();
+
+        for (String uuid : replaceStationsIdMap.values()) {
+            ObjectNode replacementNode = mapper.createObjectNode();
+            IlluminateReplacementStation replacement = (IlluminateReplacementStation) getReplacement(uuid);
+            replacementNode.put(cFrom, replacement.getFrom().getName());
+            replacementNode.put(cTo, replacement.getTo().getName());
+            outNode.add(replacementNode);
+        }
+
+        return outNode;
+    }
+
+    private JsonNode resolveReplaceFolders() {
+        ArrayNode outNode = mapper.createArrayNode();
+
+        for (String uuid : replaceFoldersIdMap.values()) {
+            ObjectNode replacementNode = mapper.createObjectNode();
+            IlluminateReplacementFolder replacement = (IlluminateReplacementFolder) getReplacement(uuid);
+            replacementNode.put(cFrom, replacement.getFrom().getName());
+            replacementNode.put(cTo, replacement.getTo().getName());
+            outNode.add(replacementNode);
+        }
+
+        return outNode;
+    }
+
+    private JsonNode resolveReplaceEngrams() {
+        ArrayNode outNode = mapper.createArrayNode();
+
+        for (String uuid : replaceEngramsIdMap.values()) {
+            ObjectNode replacementNode = mapper.createObjectNode();
+            IlluminateReplacementEngram replacement = (IlluminateReplacementEngram) getReplacement(uuid);
+            replacementNode.put(cFrom, replacement.getFrom().getName());
+            replacementNode.put(cTo, replacement.getTo().getName());
+            outNode.add(replacementNode);
+        }
+
+        return outNode;
     }
 }

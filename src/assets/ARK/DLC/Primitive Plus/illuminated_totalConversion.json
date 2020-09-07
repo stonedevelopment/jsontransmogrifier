@@ -1,0 +1,24 @@
+{
+  "resources": [
+    {
+      "from": "Metal Ore",
+      "to": "Iron Ore"
+    },
+    {
+      "from": "Raw Meat",
+      "to": "Fresh Meat"
+    },
+    {
+      "from": "Spoiled Meat",
+      "to": "Rotten Meat"
+    }
+  ],
+  "stations": [],
+  "folders": [],
+  "engrams": [
+    {
+      "from": "Metal Ingot",
+      "to": "Iron Ingot"
+    }
+  ]
+}

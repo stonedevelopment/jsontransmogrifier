@@ -1,1 +1,1544 @@
-[{"uuid":"77c7b0fa-6b42-4f4d-ae7c-ff33c659d1e1","name":"Basilisk Saddle","description":"Equip a Basilisk with this to ride it.","imageFile":"basilisk_saddle.webp","level":85,"yield":1,"points":0,"xp":0,"craftingTime":0,"composition":{"uuid":"c199b4a0-c317-453c-8a27-897838e514ce","composites":[{"uuid":"34a4fd16-40ca-404c-9740-9dcfbb2968d4","name":"Cementing Paste","quantity":85,"isEngram":true},{"uuid":"1f008c9e-c395-4937-b18c-fb2bd4e6eaef","name":"Fiber","quantity":150,"isEngram":false},{"uuid":"e9ed1dd4-6e85-4980-8fcd-497066f29749","name":"Green Gem","quantity":45,"isEngram":false},{"uuid":"48b20e17-e596-4bfb-8b2f-b433b81d12d1","name":"Hide","quantity":270,"isEngram":false},{"uuid":"211157e7-d883-472c-ab6e-53692f42caa0","name":"Metal Ingot","quantity":425,"isEngram":true}]}},{"uuid":"4325b461-0c9e-48e3-9493-806ce8e40951","name":"Charge Battery","description":"Stores Charge from Power Nodes, and can be placed in various Electrical Devices to power them.","imageFile":"charge_battery.webp","level":71,"yield":1,"points":0,"xp":0,"craftingTime":0,"composition":{"uuid":"785beb3b-3abd-4c7a-b140-a4671e7f5b93","composites":[{"uuid":"138e676d-3bc3-4946-9753-64295c63a101","name":"Congealed Gas Ball","quantity":20,"isEngram":false},{"uuid":"01c74df6-db80-41b0-b1d4-0b3513ec0b4d","name":"Crystal","quantity":4,"isEngram":false},{"uuid":"600e890e-370b-4e31-a4e9-f04e1f3d8859","name":"Metal Ingot","quantity":10,"isEngram":true},{"uuid":"813cd0aa-be62-4036-a6b4-0bdc28b53fed","name":"Polymer","quantity":15,"isEngram":true}]}},{"uuid":"9949f9b7-9c35-4e72-afda-1567af87d6a3","name":"Charge Lantern","description":"Weaponized Charge Light that damages and stuns lifeforms. Place down to ward off dangers in an area. Uses Charge Batteries as fuel.","imageFile":"charge_lantern.webp","level":80,"yield":1,"points":0,"xp":0,"craftingTime":0,"composition":{"uuid":"03697756-b558-4081-948f-178744c48bc9","composites":[{"uuid":"975e9291-45c4-4158-9e6b-881d538ff0ea","name":"Charge Battery","quantity":2,"isEngram":true},{"uuid":"35b4aa9d-b364-4a9c-99ba-577622a935ae","name":"Congealed Gas Ball","quantity":400,"isEngram":false},{"uuid":"61da12c0-df02-47ed-a704-a4f15b0a1f62","name":"Electronics","quantity":120,"isEngram":true},{"uuid":"8677e0b1-ccbd-41f8-a532-86ba53c206fc","name":"Metal Ingot","quantity":130,"isEngram":true},{"uuid":"810b9613-7fc5-4abf-a7e7-f53d49487462","name":"Polymer","quantity":120,"isEngram":true},{"uuid":"e3184bd0-b6b6-4e2e-adfc-7246edde9c36","name":"Red Gem","quantity":80,"isEngram":false}]}},{"uuid":"d7012190-7422-47f2-a7ee-0a432ed376b3","name":"Climbing Pick","description":"Climb up and hang from nearly any surface with these!","imageFile":"climbing_pick.webp","level":34,"yield":1,"points":0,"xp":0,"craftingTime":0,"composition":{"uuid":"da1f48d8-9b8a-4ddd-882b-628a65c52d47","composites":[{"uuid":"99558aba-6134-4b36-a67b-78d0e930f95a","name":"Fiber","quantity":10,"isEngram":false},{"uuid":"e6993fce-5df4-4b2a-ab07-2fe94078b19d","name":"Fungal Wood","quantity":2,"isEngram":false},{"uuid":"869b4268-8bc0-4ab2-a161-0cafefc43a75","name":"Green Gem","quantity":4,"isEngram":false},{"uuid":"37309b77-c661-4c3e-88a6-9f2f14ff2852","name":"Metal Ingot","quantity":8,"isEngram":true}]}},{"uuid":"4a556e7f-ac3b-440e-99a0-06ffd6cd097f","name":"Fish Basket","description":"Trap certain fish in this basket to tame and transport them!","imageFile":"fish_basket.webp","level":13,"yield":1,"points":0,"xp":0,"craftingTime":0,"composition":{"uuid":"13af35e7-c5a9-48c1-85ab-1f6bbc431cb4","composites":[{"uuid":"18462264-b0d7-4641-bab8-b647b38c8d5a","name":"Fiber","quantity":120,"isEngram":false},{"uuid":"f6395eee-3ed7-460b-825a-cc77abad6a41","name":"Fungal Wood","quantity":60,"isEngram":false},{"uuid":"b8c39046-1066-4215-acd4-f0cc2892d5a0","name":"Thatch","quantity":40,"isEngram":false}]}},{"uuid":"c6b6bb2e-daac-4c7f-9922-6812da2d754d","name":"Gas Collector","description":"Place on a Gas Vent to extract Congealed Gas Balls over time.","imageFile":"gas_collector.webp","level":40,"yield":1,"points":0,"xp":0,"craftingTime":0,"composition":{"uuid":"8bdaa12e-7753-42e4-a80b-86e411a8a04d","composites":[{"uuid":"35e9b212-9bc3-4ef0-8a95-7abea166942c","name":"Cementing Paste","quantity":60,"isEngram":true},{"uuid":"70cef181-9564-4d4c-b060-4a176f32e019","name":"Crystal","quantity":40,"isEngram":false},{"uuid":"78ca3297-9edc-4613-a675-cf653d0717f4","name":"Green Gem","quantity":20,"isEngram":false},{"uuid":"9116caf2-1c22-4c0d-94b7-0bc9e094bde5","name":"Metal Ingot","quantity":75,"isEngram":true}]}},{"uuid":"186c0331-af7a-4391-873e-1d60c1a100dc","name":"Generate Aberration (Alpha) Portal","description":"Use this to generate a portal to Aberration's Guardian.","imageFile":"alpha_aberration_portal.webp","level":100,"yield":1,"points":0,"xp":0,"craftingTime":0,"composition":{"uuid":"5e210d04-15b6-4ce5-ac6f-f16d26440f7e","composites":[{"uuid":"c0594965-5055-47a3-9c8f-2d5aa698b1d4","name":"Alpha Basilisk Fang","quantity":1,"isEngram":false},{"uuid":"99a42af1-1b74-44ba-ac87-ad1f96abd2e4","name":"Alpha Karkinos Claw","quantity":1,"isEngram":false},{"uuid":"d14e623c-8465-4f52-bfbb-6d5c40486782","name":"Alpha Reaper King Barb","quantity":1,"isEngram":false},{"uuid":"70f579fb-5130-41e5-b083-479fcebc1618","name":"Artifact of the Depths","quantity":1,"isEngram":false},{"uuid":"bd5535eb-41a9-4373-b75a-7dc1b0490638","name":"Artifact of the Shadows","quantity":1,"isEngram":false},{"uuid":"7a7505e8-b47a-4991-bdaa-ddf9b9accd6a","name":"Artifact of the Stalker","quantity":1,"isEngram":false},{"uuid":"f14bc4fb-332f-4d24-b19d-700e2980d0a9","name":"Basilisk Scale","quantity":8,"isEngram":false},{"uuid":"34e412f5-7b58-4d3b-9ee6-fe0955d7a228","name":"Nameless Venom","quantity":20,"isEngram":false},{"uuid":"d4458f26-fe2a-45ea-9955-2dbe76ec7880","name":"Reaper Pheromone Gland","quantity":7,"isEngram":false},{"uuid":"65d2d64b-5409-4ea7-8aac-3f1d841a841e","name":"Rock Drake Feather","quantity":7,"isEngram":false}]}},{"uuid":"cbb23011-d00d-4848-a1a0-774c48db4948","name":"Generate Aberration (Beta) Portal","description":"Use this to generate a portal to Aberration's Guardian.","imageFile":"beta_aberration_portal.webp","level":75,"yield":1,"points":0,"xp":0,"craftingTime":0,"composition":{"uuid":"e78134d6-92ed-418e-abeb-f3270ffc9529","composites":[{"uuid":"695f79c2-d703-4f98-b86a-0bbcde9334fc","name":"Artifact of the Depths","quantity":1,"isEngram":false},{"uuid":"f4b81572-68fe-4fce-b008-b6091b671f66","name":"Artifact of the Shadows","quantity":1,"isEngram":false},{"uuid":"04af8bc3-18f7-4dfe-b70d-b8fce098c41c","name":"Artifact of the Stalker","quantity":1,"isEngram":false},{"uuid":"118c2067-9d17-4d3d-bae8-81b0de01de13","name":"Basilisk Scale","quantity":4,"isEngram":false},{"uuid":"24f59751-7e1c-416a-9d66-a26dc3586af2","name":"Nameless Venom","quantity":12,"isEngram":false},{"uuid":"ee199fe7-49c5-4086-b565-21ab48a12ed3","name":"Reaper Pheromone Gland","quantity":2,"isEngram":false},{"uuid":"fbda807a-c351-4b1a-8a55-4e2a0a27adc5","name":"Rock Drake Feather","quantity":2,"isEngram":false}]}},{"uuid":"2b200850-d5de-488c-a252-08703d1b8d38","name":"Generate Aberration (Gamma) Portal","description":"Use this to generate a portal to Aberration's Guardian.","imageFile":"gamma_aberration_portal.webp","level":60,"yield":1,"points":0,"xp":0,"craftingTime":0,"composition":{"uuid":"faaa2b6c-1447-48fe-b8e2-5ce0e3386afa","composites":[{"uuid":"d0656423-5ebf-4dc5-b1d4-92d582b9c257","name":"Artifact of the Depths","quantity":1,"isEngram":false},{"uuid":"096537ce-1966-47f2-a99d-e5a6b9e56709","name":"Artifact of the Shadows","quantity":1,"isEngram":false},{"uuid":"4554d048-90f2-453a-ab56-65f98775fe15","name":"Artifact of the Stalker","quantity":1,"isEngram":false}]}},{"uuid":"6208dfa9-b4ea-4600-90cb-0adf3be2d1a2","name":"Glider Suit Skin","description":"When attached to a Chest Armor, the Glider Suit enables sailing through the air by double-tapping jump, while gaining speed by running and diving!","imageFile":"glider_suit_skin.webp","level":62,"yield":1,"points":0,"xp":0,"craftingTime":0,"composition":{"uuid":"fae15dec-1f37-4857-8b46-4c6b07432cc8","composites":[{"uuid":"a3895799-b5d1-4f9f-a066-039ed7625106","name":"Blue Gem","quantity":25,"isEngram":false},{"uuid":"b2be136f-44d6-4049-86d0-b9d88af81d55","name":"Fiber","quantity":100,"isEngram":false},{"uuid":"68c29a8e-5053-4f55-bf40-804ceb17e4f8","name":"Hide","quantity":60,"isEngram":false},{"uuid":"4a53c2da-452a-49b5-89df-ee3554d0b6f3","name":"Metal Ingot","quantity":60,"isEngram":true}]}},{"uuid":"b1e63ffc-8d4b-4062-a462-9972bcc41627","name":"Glow Stick","description":"Glow Sticks generate light in a radius around them. Throw it and it will stick immediately to the location they first impact.","imageFile":"glow_stick.webp","level":10,"yield":1,"points":0,"xp":0,"craftingTime":0,"composition":{"uuid":"7daa1590-20ef-4bf0-9cfa-70f185154b94","composites":[{"uuid":"36a6ac4f-f30d-4e1c-8e51-0137df671bda","name":"Crystal","quantity":2,"isEngram":false},{"uuid":"faf194bf-afd4-4b67-9e04-8c1f32eeed48","name":"Green Gem","quantity":1,"isEngram":false}]}},{"uuid":"6faba4bd-2b77-42e5-b60a-dd2481370500","name":"Hazard Suit Boots","description":"Boots made from a unique combination of materials that protect the wearer from environmental contaminants.","imageFile":"hazard_suit_boots.webp","level":68,"yield":1,"points":0,"xp":0,"craftingTime":0,"composition":{"uuid":"2b0ca9b1-c71f-4cbf-87c2-33d11a0f2d23","composites":[{"uuid":"e6dc279c-6b6d-46c3-9441-c6ca8cda35bf","name":"Blue Gem","quantity":5,"isEngram":false},{"uuid":"f38bb37c-580e-4ad2-8c21-3a61f58fc900","name":"Congealed Gas Ball","quantity":15,"isEngram":false},{"uuid":"8aa258b6-7902-458a-9cb2-c2f216507f59","name":"Crystal","quantity":10,"isEngram":false},{"uuid":"26297149-28c1-4de1-be04-874518cf87ec","name":"Fiber","quantity":25,"isEngram":false},{"uuid":"bd4776dd-d794-4f5d-967c-205c3fbc310f","name":"Hide","quantity":20,"isEngram":false},{"uuid":"559a6ee0-6d5b-4481-8e6d-d4db0c02527d","name":"Polymer","quantity":10,"isEngram":true}]}},{"uuid":"4e8dc499-b846-4a9c-8e77-195bdf7a3f9c","name":"Hazard Suit Gloves","description":"Gloves made from a unique combination of materials that protect the wearer from environmental contaminants.","imageFile":"hazard_suit_gloves.webp","level":68,"yield":1,"points":0,"xp":0,"craftingTime":0,"composition":{"uuid":"e2a67498-a38f-4ec3-b373-750c4ffc2ad9","composites":[{"uuid":"f838d1f8-da9e-41f2-825e-4de1ede4468f","name":"Blue Gem","quantity":8,"isEngram":false},{"uuid":"862c8c5c-0076-471f-9e0f-2c93df18bd80","name":"Congealed Gas Ball","quantity":15,"isEngram":false},{"uuid":"3970d4f3-2855-4604-a365-cbefbca25717","name":"Crystal","quantity":16,"isEngram":false},{"uuid":"f074e0f2-3cf3-4946-b7e6-a18d389c5d7c","name":"Fiber","quantity":35,"isEngram":false},{"uuid":"ee370230-4ddb-44c9-a73b-0810c168e9dd","name":"Hide","quantity":15,"isEngram":false},{"uuid":"6ce6e2f2-6806-4d43-92b9-59d5292a28c4","name":"Polymer","quantity":2,"isEngram":true}]}},{"uuid":"0a5090a6-7c2e-4b66-9ae8-0061c62f5a72","name":"Hazard Suit Hat","description":"A helmet made from a unique combination of materials that protect the wearer from environmental contaminants.","imageFile":"hazard_suit_hat.webp","level":68,"yield":1,"points":0,"xp":0,"craftingTime":0,"composition":{"uuid":"88079a36-eba4-4bb5-bb32-5341e6bc1224","composites":[{"uuid":"65ccd839-bbbc-404b-8b80-49ba81d3b211","name":"Blue Gem","quantity":25,"isEngram":false},{"uuid":"0da19d0a-8131-46b7-9f10-8f4d7173dc94","name":"Congealed Gas Ball","quantity":20,"isEngram":false},{"uuid":"fa5677b8-1a27-474b-adf2-bca3ad5faa21","name":"Crystal","quantity":50,"isEngram":false},{"uuid":"e9c057ba-462f-4c0f-9423-ecbd16a2fe9b","name":"Fiber","quantity":45,"isEngram":false},{"uuid":"1eab3832-4295-496d-a1e4-38b590fcc2ae","name":"Hide","quantity":30,"isEngram":false},{"uuid":"63f3c06e-6911-450e-9f16-a61f9c9eadef","name":"Polymer","quantity":20,"isEngram":true}]}},{"uuid":"861081d3-f436-44de-8b64-ff4225f0519a","name":"Hazard Suit Pants","description":"Pants made from a unique combination of materials that protect the wearer from environmental contaminants.","imageFile":"hazard_suit_pants.webp","level":68,"yield":1,"points":0,"xp":0,"craftingTime":0,"composition":{"uuid":"15752a81-632a-4db2-bb17-d51df108fc7d","composites":[{"uuid":"417bc53f-2ffc-4cd8-b547-d8b9bb64f046","name":"Blue Gem","quantity":20,"isEngram":false},{"uuid":"b2a1c3bb-b502-4095-b978-024bb7748003","name":"Congealed Gas Ball","quantity":30,"isEngram":false},{"uuid":"6e29272c-edce-4116-aff0-b67799fc9df5","name":"Crystal","quantity":40,"isEngram":false},{"uuid":"8b627594-8653-43ef-bc4b-b7c9a4763d9d","name":"Fiber","quantity":65,"isEngram":false},{"uuid":"85247346-d2b9-4feb-b72e-7c5a7366a2d5","name":"Hide","quantity":45,"isEngram":false},{"uuid":"7a3377ab-1d73-4282-a89c-571eb5906b5d","name":"Polymer","quantity":15,"isEngram":true}]}},{"uuid":"69a63ee1-23e6-4a91-89c7-6dddf20c2e71","name":"Hazard Suit Shirt","description":"A shirt made from a unique combination of materials that protect the wearer from environmental contaminants.","imageFile":"hazard_suit_shirt.webp","level":68,"yield":1,"points":0,"xp":0,"craftingTime":0,"composition":{"uuid":"f6eaf7dc-e461-4800-9017-460c18ba970c","composites":[{"uuid":"f7c2f8d4-f5cd-4f26-ac31-903958310ae2","name":"Blue Gem","quantity":25,"isEngram":false},{"uuid":"ab4b739f-4e5e-43a4-938e-42fac249e270","name":"Congealed Gas Ball","quantity":45,"isEngram":false},{"uuid":"ecdc5dc4-da05-4017-94ea-ea5c8b808e10","name":"Crystal","quantity":50,"isEngram":false},{"uuid":"a9e611b0-31ee-426e-a9ea-609ab45107a4","name":"Fiber","quantity":65,"isEngram":false},{"uuid":"71655e24-7086-4bf6-a4a3-f7c78f32f90b","name":"Hide","quantity":45,"isEngram":false},{"uuid":"a4fadbe8-7c8a-480a-96b5-106c3c677445","name":"Polymer","quantity":25,"isEngram":true}]}},{"uuid":"0552d37c-b039-4b3e-bfd8-57434d860372","name":"Karkinos Saddle","description":"Equip a Karkinos with this to ride it.","imageFile":"karkinos_saddle.webp","level":65,"yield":1,"points":0,"xp":0,"craftingTime":0,"composition":{"uuid":"9103668d-f238-4377-a905-cd12e814d039","composites":[{"uuid":"d4690368-35a9-44a6-850f-517fe7d5da04","name":"Blue Gem","quantity":80,"isEngram":false},{"uuid":"92a217be-e1d5-43a3-a53b-53e957278e96","name":"Fiber","quantity":225,"isEngram":false},{"uuid":"7897af49-e38a-416a-ac56-62f5fdbc14c5","name":"Fungal Wood","quantity":200,"isEngram":false},{"uuid":"3c51a2ec-a797-464d-8dd6-7b5ee918bc77","name":"Hide","quantity":170,"isEngram":false}]}},{"uuid":"12b90cd9-2b78-479c-988f-a864441b8e18","name":"Large Wood Elevator Platform","description":"Attach to an Elevator Track to lift a large amount of weight.","imageFile":"large_wood_elevator_platform.webp","level":30,"yield":1,"points":0,"xp":0,"craftingTime":0,"composition":{"uuid":"e4961dd3-bdf7-4749-8083-f0c986bab3dd","composites":[{"uuid":"392cc064-fcda-4fb9-80f4-845a907184d2","name":"Fiber","quantity":600,"isEngram":false},{"uuid":"751e84ca-28de-413a-b4ee-e815561de5c7","name":"Fungal Wood","quantity":270,"isEngram":false},{"uuid":"2a654e45-aa6a-4034-b037-b47cd648154e","name":"Metal Ingot","quantity":85,"isEngram":true}]}},{"uuid":"675c0207-886e-4635-8dec-92b7b08dec2c","name":"Medium Wood Elevator Platform","description":"Attach to an Elevator Track to lift a medium amount of weight.","imageFile":"medium_wood_elevator_platform.webp","level":23,"yield":1,"points":0,"xp":0,"craftingTime":0,"composition":{"uuid":"df9ef7c8-8e68-49e6-87b8-d71ed277fde1","composites":[{"uuid":"61b8898a-1c58-43a7-9474-1939cba71124","name":"Fiber","quantity":350,"isEngram":false},{"uuid":"5e39852d-6127-454b-9b5e-61453bcc051d","name":"Fungal Wood","quantity":285,"isEngram":false},{"uuid":"88e30a1c-25ad-4e2c-9fdb-7ca249cdb13b","name":"Metal Ingot","quantity":30,"isEngram":true}]}},{"uuid":"05fb8612-9bd2-4e9b-b31b-01d212007370","name":"Metal Cliff Platform","description":"A Cliff Platform is required to build structures extending from a cliff. This one is made from shiny metal.","imageFile":"metal_cliff_platform.webp","level":51,"yield":1,"points":0,"xp":0,"craftingTime":0,"composition":{"uuid":"99146b25-372b-4748-b8ae-c0fdf35ae7d3","composites":[{"uuid":"b99cc97a-a0a9-4b01-b415-77d20841b3f7","name":"Blue Gem","quantity":200,"isEngram":false},{"uuid":"bd411c85-59f7-4aab-b293-5095922c7c06","name":"Cementing Paste","quantity":800,"isEngram":true},{"uuid":"bf3e2876-04a2-4968-baef-e0085830d6a6","name":"Metal Ingot","quantity":120,"isEngram":true}]}},{"uuid":"09d094cc-2599-4eef-943e-f3d3bc353bbc","name":"Mushroom Brew","description":"Double, double, toil and trouble, fire burn and cauldron bubble... this is a lovely mushroom brew, a healthy syrup to protect your pets from radiation!","imageFile":"mushroom_brew.webp","level":1,"yield":1,"points":0,"xp":0,"craftingTime":0,"composition":{"uuid":"155d63f2-d685-4705-9457-80df91d4b35f","composites":[{"uuid":"d266ed0f-5ae0-4cfa-a9cc-783130301f89","name":"Aggeravic Mushroom","quantity":5,"isEngram":false},{"uuid":"ea4e736d-343b-43ee-85cb-932c2b53ea84","name":"Aquatic Mushroom","quantity":5,"isEngram":false},{"uuid":"cfee13e3-066a-4d93-bc9a-00276a46a8c4","name":"Ascerbic Mushroom","quantity":5,"isEngram":false},{"uuid":"51f807d1-f2cf-41f3-b22f-61aa7f05e80e","name":"Auric Mushroom","quantity":5,"isEngram":false},{"uuid":"dba501a8-2389-421e-81af-ca88cd8f82e5","name":"Congealed Gas Ball","quantity":3,"isEngram":false},{"uuid":"dd1117e3-3ecc-4e17-aaf7-b5ee62b4fff8","name":"Sap","quantity":3,"isEngram":false},{"uuid":"fc26de68-0e94-446a-a61d-07b323538e41","name":"Water","quantity":1,"isEngram":false}]}},{"uuid":"0a0e1e1f-0ca8-43ed-aca1-213f96fb0953","name":"Pliers","description":"Use on a Smithy-crafted item in need of repairing and you can repair it on the go within any inventory, at a higher cost of resources.","imageFile":"pliers.webp","level":45,"yield":1,"points":0,"xp":0,"craftingTime":0,"composition":{"uuid":"885a9c19-5342-4913-83ad-7c31f491c983","composites":[{"uuid":"667f258a-2af3-472f-9947-6b56710cffaf","name":"Blue Gem","quantity":15,"isEngram":false},{"uuid":"a507ba2c-bf43-426d-a763-8862493d857b","name":"Congealed Gas Ball","quantity":12,"isEngram":false},{"uuid":"12b4d620-03bb-4135-9af4-a159571dde2e","name":"Flint","quantity":70,"isEngram":false},{"uuid":"b71e8684-52f6-4d6c-b6d2-881eb309d570","name":"Metal Ingot","quantity":15,"isEngram":true},{"uuid":"41adfd73-cacb-474e-a786-ba050609d65b","name":"Obsidian","quantity":10,"isEngram":false}]}},{"uuid":"8ed496ba-f1c8-45b1-91d1-d1385db8f1ab","name":"Portable Rope Ladder","description":"A portable ladder that can be used to climb up or down. Place onto structures or terrain at waist height or lower.","imageFile":"portable_rope_ladder.webp","level":15,"yield":1,"points":0,"xp":0,"craftingTime":0,"composition":{"uuid":"e8be1237-9a8c-4fb2-a987-ff4fa604a1d7","composites":[{"uuid":"29cec5e7-4a56-42ac-ad5c-4fd3d56981ee","name":"Fiber","quantity":180,"isEngram":false},{"uuid":"a37fbedd-adce-479c-be9e-aff133c22197","name":"Fungal Wood","quantity":15,"isEngram":false},{"uuid":"e582aac4-d931-4020-96a4-2288c3854e17","name":"Thatch","quantity":140,"isEngram":false}]}},{"uuid":"db6b9d91-9301-4fb5-a68c-c7ae6b38ce7a","name":"Ravager Saddle","description":"Equip a Ravager with this to ride it.","imageFile":"ravager_saddle.webp","level":47,"yield":1,"points":0,"xp":0,"craftingTime":0,"composition":{"uuid":"a34d5739-6cbe-44e1-9e18-e7f3f8cf2149","composites":[{"uuid":"117505fa-1771-4139-b00c-077157bba63d","name":"Fiber","quantity":125,"isEngram":false},{"uuid":"413fd0a5-ccdb-4e95-ae95-d7cafd401517","name":"Fungal Wood","quantity":110,"isEngram":false},{"uuid":"ef6e8ebd-7dd1-4c52-838a-2af65195b082","name":"Hide","quantity":285,"isEngram":false}]}},{"uuid":"a818b111-a918-485e-a011-d7b76d392984","name":"Rock Drake Saddle","description":"Equip a Rock Drake with this to ride it.","imageFile":"rock_drake_saddle.webp","level":75,"yield":1,"points":0,"xp":0,"craftingTime":0,"composition":{"uuid":"0d2fc7bc-dc33-4df1-9813-906ec8b896cb","composites":[{"uuid":"aca21cb8-ddb0-4e5f-bdc0-0616c197eb3a","name":"Fiber","quantity":225,"isEngram":false},{"uuid":"7cf426bd-7bb6-430c-b113-d795a797e5b1","name":"Hide","quantity":350,"isEngram":false},{"uuid":"4c5ddfa8-c6e3-46ab-8f04-5d9d9b6be674","name":"Metal Ingot","quantity":125,"isEngram":true},{"uuid":"97c158f7-a9d2-46e9-9f97-13b4c4958317","name":"Red Gem","quantity":85,"isEngram":false}]}},{"uuid":"7b08fb30-32f2-4f3d-9c52-8d9a47fd91e4","name":"Rock Drake Tek Saddle","description":"Equip a Rock Drake with this to ride it, enabling the rider to fire plasma projectiles. Using requires learning this Tekgram.","imageFile":"rock_drake_tek_saddle.webp","level":1,"yield":1,"points":0,"xp":0,"craftingTime":0,"composition":{"uuid":"0fad513a-ea3d-4d04-be92-92e31b6cbd90","composites":[{"uuid":"67ada26b-e096-46b2-9ed8-cd87a0048c20","name":"Black Pearl","quantity":185,"isEngram":false},{"uuid":"3eca6b0a-a92b-416b-922f-e76d18dc6ac8","name":"Crystal","quantity":325,"isEngram":false},{"uuid":"0350cd8c-0b5b-4136-880f-cf641f098440","name":"Element","quantity":75,"isEngram":true},{"uuid":"5356ae6e-ec35-4608-9288-92afcbb59913","name":"Metal Ingot","quantity":2350,"isEngram":true},{"uuid":"f7f830a4-0f3e-463b-ac0a-7d3b0d0b5e4b","name":"Polymer","quantity":270,"isEngram":true}]}},{"uuid":"27f72822-7805-4c60-8cfe-08425d8e40c6","name":"Roll Rat Saddle","description":"Equip a Roll Rat with this to ride it. Provides protection to passengers while rolling.","imageFile":"roll_rat_saddle.webp","level":58,"yield":1,"points":0,"xp":0,"craftingTime":0,"composition":{"uuid":"9bda02e0-af68-4f10-9077-017b8ca957fc","composites":[{"uuid":"9d11fc73-754b-4ebd-ae60-8984c2988265","name":"Cementing Paste","quantity":85,"isEngram":true},{"uuid":"dde97dac-f68e-45cd-a417-00427111e3dd","name":"Fiber","quantity":150,"isEngram":false},{"uuid":"9067b056-96f3-4e74-961a-5ea8db675ab1","name":"Green Gem","quantity":45,"isEngram":false},{"uuid":"37880b25-cd24-4585-a73e-c6ee6c18bf08","name":"Hide","quantity":270,"isEngram":false},{"uuid":"b832e47a-bdad-4923-b8d3-0ed299716bf1","name":"Metal Ingot","quantity":425,"isEngram":true}]}},{"uuid":"d02ee884-a5b4-4680-9cee-1bf280fdd2f9","name":"Shag Rug","description":"A decorative, paintable rug with a shaggy appearance, which dulls the sound of footsteps.","imageFile":"shag_rug.webp","level":17,"yield":1,"points":0,"xp":0,"craftingTime":0,"composition":{"uuid":"b8d7813d-f7f5-40ea-a345-c25434c0d4d4","composites":[{"uuid":"48bc74b4-dfa7-4095-ba8b-d81016f91a78","name":"Fungal Wood","quantity":10,"isEngram":false},{"uuid":"48a475fc-f8e9-4644-be8e-c24e08f62e9a","name":"Hide","quantity":30,"isEngram":false},{"uuid":"2049280c-28d7-4fdf-a3b0-07442b0c2e7e","name":"Pelt, Hair, or Wool","quantity":140,"isEngram":false}]}},{"uuid":"41d8cc0b-6e8c-4514-bf9f-9850d4ff94ac","name":"Small Wood Elevator Platform","description":"Attach to an Elevator Track to lift a small amount of weight.","imageFile":"small_wood_elevator_platform.webp","level":20,"yield":1,"points":0,"xp":0,"craftingTime":0,"composition":{"uuid":"f9001290-ae60-4d30-9b27-3391d7ad7073","composites":[{"uuid":"9d51b527-d4f1-402e-a32d-03a0e8e8909c","name":"Fiber","quantity":175,"isEngram":false},{"uuid":"3f6038ec-cc97-4c78-bfef-edcb48567d3e","name":"Fungal Wood","quantity":175,"isEngram":false},{"uuid":"88843402-b853-4201-9744-7655441851f9","name":"Metal Ingot","quantity":20,"isEngram":true}]}},{"uuid":"e1252aa2-cbb0-4550-82bf-01d26317521a","name":"Stone Cliff Platform","description":"A Cliff Platform is required to build structures extending from a cliff. This one is made from heavy stone.","imageFile":"stone_cliff_platform.webp","level":37,"yield":1,"points":0,"xp":0,"craftingTime":0,"composition":{"uuid":"ef241e63-af6e-420d-87f6-69e2303fef10","composites":[{"uuid":"c1a314b2-8767-4243-9f15-8a030725483c","name":"Cementing Paste","quantity":250,"isEngram":true},{"uuid":"2b2f7c67-c418-4b33-9b21-afda345344c1","name":"Fiber","quantity":600,"isEngram":false},{"uuid":"41429946-5a1e-4cf6-8e76-3f0992010355","name":"Fungal Wood","quantity":800,"isEngram":false},{"uuid":"8cf9bfd2-9c7f-49cd-a08a-7af5f6edce44","name":"Stone","quantity":1200,"isEngram":false}]}},{"uuid":"74b6dada-9e47-4546-94f6-c72118cf3cfb","name":"Tek Railgun","description":"Shoots explosive plasma bolts, with an infrared zoomable scope. Equipping requires learning this Tekgram.","imageFile":"tek_railgun.webp","level":1,"yield":1,"points":0,"xp":0,"craftingTime":0,"composition":{"uuid":"8845df47-d67f-4cc8-ab6e-fcef4bdcb3cd","composites":[{"uuid":"333be0f5-7aab-4daf-81ab-f9ef970a24e5","name":"Black Pearl","quantity":55,"isEngram":false},{"uuid":"654b1702-c943-43e6-9594-335350326a4b","name":"Congealed Gas Ball","quantity":525,"isEngram":false},{"uuid":"9ab960eb-47ac-4ce2-9b60-f7634d2f3366","name":"Element","quantity":20,"isEngram":true},{"uuid":"76fa249e-5522-4b6f-a2c1-bdc15a91545e","name":"Metal Ingot","quantity":120,"isEngram":true},{"uuid":"c48c6d29-52f0-42bf-a62e-aa81ea9a1e24","name":"Polymer","quantity":450,"isEngram":true},{"uuid":"a1803f64-fc65-4c9d-b017-2a010bce82bc","name":"Red Gem","quantity":120,"isEngram":false}]}},{"uuid":"5b229416-e11a-46dc-9670-7ec017d54ab5","name":"Tek Sleeping Pod","description":"This Tek-powered Chamber lets you rapidly recover vitals, and slowly gain XP even when sleeping. You can also sleep soundly within it, protected even while on a moving platform!","imageFile":"tek_sleeping_pod.webp","level":1,"yield":1,"points":0,"xp":0,"craftingTime":0,"composition":{"uuid":"e6488604-3190-4aba-8d5b-e5864f5a5412","composites":[{"uuid":"5b93f91b-03cb-4f37-9d6e-61713e555c76","name":"Fiber","quantity":280,"isEngram":false},{"uuid":"665d0347-32d2-4c8b-b908-7596a2077d09","name":"Hide","quantity":120,"isEngram":false},{"uuid":"8553a8ee-be0c-4b5a-9530-40beb63135e5","name":"Metal Ingot","quantity":320,"isEngram":true},{"uuid":"9f4a0b39-304c-40af-abc9-80aec3d87b63","name":"Pelt, Hair, or Wool","quantity":200,"isEngram":false},{"uuid":"20368550-1d33-494a-9392-4245fca4fc19","name":"Polymer","quantity":80,"isEngram":true}]}},{"uuid":"e56d405c-cd6c-4819-8223-3bf5caeceea4","name":"Wood Elevator Top Switch","description":"Attach to the top of a Wood Elevator Track to complete an Elevator!","imageFile":"wood_elevator_top_switch.webp","level":20,"yield":1,"points":0,"xp":0,"craftingTime":0,"composition":{"uuid":"b03b879e-3fe2-41f7-88b8-b09803838070","composites":[{"uuid":"4dcfbbc5-4543-4a3c-9171-2d9fa197947e","name":"Fiber","quantity":200,"isEngram":false},{"uuid":"35108fd9-04e8-4659-86cc-575cff6106a3","name":"Fungal Wood","quantity":125,"isEngram":false},{"uuid":"ca0dfbea-7fc5-4a3c-a679-665777067855","name":"Metal Ingot","quantity":35,"isEngram":true}]}},{"uuid":"bd6f705b-dc42-465f-8c59-333493e68931","name":"Wood Elevator Track","description":"Attach a Wood Elevator Platform to these to complete an elevator!","imageFile":"wood_elevator_track.webp","level":20,"yield":1,"points":0,"xp":0,"craftingTime":0,"composition":{"uuid":"b19a06a0-7c25-4528-9801-e61024bfd716","composites":[{"uuid":"80a925ca-f228-475f-ba81-ac7ca2937213","name":"Fiber","quantity":45,"isEngram":false},{"uuid":"899922df-dcf2-40f3-a38b-3e21994b2e5f","name":"Fungal Wood","quantity":80,"isEngram":false},{"uuid":"e2689519-3642-46a6-84b7-317fcef4fdb4","name":"Metal Ingot","quantity":5,"isEngram":true}]}},{"uuid":"9f8834e8-89cd-4448-a5c6-2cd3021db604","name":"Zip-Line Anchor","description":"Apply onto a Crossbow to fire Zip-Line anchor points. Use two anchor points to complete a Zip-Line, which you can then grab onto [sic]","imageFile":"zip-line_anchor.webp","level":31,"yield":1,"points":0,"xp":0,"craftingTime":0,"composition":{"uuid":"333b279d-db49-4a50-9664-1d1babcd9743","composites":[{"uuid":"1a222274-cac8-4187-8726-0778afd0a211","name":"Fiber","quantity":100,"isEngram":false},{"uuid":"72fbe854-99ac-4a98-85d7-56118d0a0b30","name":"Fungal Wood","quantity":8,"isEngram":false},{"uuid":"d429fe3d-e6da-4ebf-b542-8cc67c736509","name":"Metal Ingot","quantity":15,"isEngram":true},{"uuid":"f20d0919-2a26-433f-a326-db0e6aeaeffa","name":"Stone Arrow","quantity":2,"isEngram":true}]}},{"uuid":"9e09075c-04e6-47d3-8b5e-0a763c6d6d16","name":"Zip-Line Motor Attachment Skin","description":"Equip onto pants and combine with Gasoline to power yourself up a Zip-Line.","imageFile":"zip-line_motor_attachment_skin.webp","level":54,"yield":1,"points":0,"xp":0,"craftingTime":0,"composition":{"uuid":"0fa80083-cadc-484a-b062-476bce4d79e2","composites":[{"uuid":"3f841d3a-63d2-48d5-b32a-53b40929951f","name":"Blue Gem","quantity":40,"isEngram":false},{"uuid":"8c0670cb-b728-48a8-b032-35bf2dac750e","name":"Electronics","quantity":15,"isEngram":true},{"uuid":"c4b7d7a2-3178-4353-99d5-cad097783bdc","name":"Metal Ingot","quantity":60,"isEngram":true}]}}]
+[
+  {
+    "uuid": "d15cf2c5-9d96-40d5-a0e7-ad58477e8dec",
+    "name": "Basilisk Saddle",
+    "description": "Equip a Basilisk with this to ride it.",
+    "imageFile": "basilisk_saddle.webp",
+    "level": 85,
+    "yield": 1,
+    "points": 0,
+    "xp": 0,
+    "craftingTime": 0,
+    "composition": {
+      "uuid": "ab06fb1e-8300-43d3-bf29-025bdb7bcbb1",
+      "composites": [
+        {
+          "uuid": "fa89ceec-a700-469b-a4ed-b68589c46992",
+          "name": "Cementing Paste",
+          "quantity": 85,
+          "isEngram": true
+        },
+        {
+          "uuid": "54c0dcea-aa97-46e1-b42d-b1ae859b2d42",
+          "name": "Fiber",
+          "quantity": 150,
+          "isEngram": false
+        },
+        {
+          "uuid": "e7314f41-1c04-43ab-9be1-3c1e77ba3882",
+          "name": "Green Gem",
+          "quantity": 45,
+          "isEngram": false
+        },
+        {
+          "uuid": "b200b156-3681-4d88-b519-43248a6e56f3",
+          "name": "Hide",
+          "quantity": 270,
+          "isEngram": false
+        },
+        {
+          "uuid": "13fb3ba1-364d-4b03-a676-28e5da9b726b",
+          "name": "Metal Ingot",
+          "quantity": 425,
+          "isEngram": true
+        }
+      ]
+    }
+  },
+  {
+    "uuid": "558f71d6-a8e9-4a0f-bdf3-52e61de80ca8",
+    "name": "Charge Battery",
+    "description": "Stores Charge from Power Nodes, and can be placed in various Electrical Devices to power them.",
+    "imageFile": "charge_battery.webp",
+    "level": 71,
+    "yield": 1,
+    "points": 0,
+    "xp": 0,
+    "craftingTime": 0,
+    "composition": {
+      "uuid": "2f13e9f0-50e0-4609-bb34-e7033b000c94",
+      "composites": [
+        {
+          "uuid": "028d7704-c19c-4a9f-8745-9fbc566a9f43",
+          "name": "Congealed Gas Ball",
+          "quantity": 20,
+          "isEngram": false
+        },
+        {
+          "uuid": "3786a2c3-ae80-4f69-b969-5092963f6b70",
+          "name": "Crystal",
+          "quantity": 4,
+          "isEngram": false
+        },
+        {
+          "uuid": "e7f5dc65-996a-4b95-86ca-6910167508df",
+          "name": "Metal Ingot",
+          "quantity": 10,
+          "isEngram": true
+        },
+        {
+          "uuid": "85ffbe3b-fa40-43d6-88a4-1d137ca16106",
+          "name": "Polymer",
+          "quantity": 15,
+          "isEngram": true
+        }
+      ]
+    }
+  },
+  {
+    "uuid": "6ba78be2-3170-4187-899f-ea12c6b5a350",
+    "name": "Charge Lantern",
+    "description": "Weaponized Charge Light that damages and stuns lifeforms. Place down to ward off dangers in an area. Uses Charge Batteries as fuel.",
+    "imageFile": "charge_lantern.webp",
+    "level": 80,
+    "yield": 1,
+    "points": 0,
+    "xp": 0,
+    "craftingTime": 0,
+    "composition": {
+      "uuid": "64e5ce23-1341-4dfa-9981-ee043e92d20d",
+      "composites": [
+        {
+          "uuid": "5574717c-8ef3-459a-8bf7-7f50febe7f9d",
+          "name": "Charge Battery",
+          "quantity": 2,
+          "isEngram": true
+        },
+        {
+          "uuid": "d7f24652-6dc4-4b6e-9e90-fa4ffc1b85be",
+          "name": "Congealed Gas Ball",
+          "quantity": 400,
+          "isEngram": false
+        },
+        {
+          "uuid": "bc630a70-3b1e-48da-9a08-6ff2bf098ae1",
+          "name": "Electronics",
+          "quantity": 120,
+          "isEngram": true
+        },
+        {
+          "uuid": "1aab5305-119d-4f4c-8fe9-426ad823c27e",
+          "name": "Metal Ingot",
+          "quantity": 130,
+          "isEngram": true
+        },
+        {
+          "uuid": "1a685bbb-b4cd-4ace-a85f-f49dded8ef05",
+          "name": "Polymer",
+          "quantity": 120,
+          "isEngram": true
+        },
+        {
+          "uuid": "b48dc130-1cc8-4a27-8acb-5cac660cfdef",
+          "name": "Red Gem",
+          "quantity": 80,
+          "isEngram": false
+        }
+      ]
+    }
+  },
+  {
+    "uuid": "99f556d3-b816-4203-ac22-43a6ebc15393",
+    "name": "Climbing Pick",
+    "description": "Climb up and hang from nearly any surface with these!",
+    "imageFile": "climbing_pick.webp",
+    "level": 34,
+    "yield": 1,
+    "points": 0,
+    "xp": 0,
+    "craftingTime": 0,
+    "composition": {
+      "uuid": "2499fc09-6179-4c2e-a7ba-ba632bac4f93",
+      "composites": [
+        {
+          "uuid": "6ec96ac6-9c39-4e20-9d41-5736292adf02",
+          "name": "Fiber",
+          "quantity": 10,
+          "isEngram": false
+        },
+        {
+          "uuid": "f7422c78-0287-4a3e-9083-5ec45270f95c",
+          "name": "Fungal Wood",
+          "quantity": 2,
+          "isEngram": false
+        },
+        {
+          "uuid": "8b14e166-3384-4c98-a38f-afaf49351b83",
+          "name": "Green Gem",
+          "quantity": 4,
+          "isEngram": false
+        },
+        {
+          "uuid": "7f421d4f-2219-4732-9826-ce9a38c9b896",
+          "name": "Metal Ingot",
+          "quantity": 8,
+          "isEngram": true
+        }
+      ]
+    }
+  },
+  {
+    "uuid": "ef638e97-7974-4dce-a8bd-56caf0858008",
+    "name": "Fish Basket",
+    "description": "Trap certain fish in this basket to tame and transport them!",
+    "imageFile": "fish_basket.webp",
+    "level": 13,
+    "yield": 1,
+    "points": 0,
+    "xp": 0,
+    "craftingTime": 0,
+    "composition": {
+      "uuid": "c4216727-7cc9-496c-b7eb-66d74861bad1",
+      "composites": [
+        {
+          "uuid": "dffa184b-7e26-42f8-9282-3289d6435219",
+          "name": "Fiber",
+          "quantity": 120,
+          "isEngram": false
+        },
+        {
+          "uuid": "f9ac35a1-4a74-4a70-821a-41a565ed22a0",
+          "name": "Fungal Wood",
+          "quantity": 60,
+          "isEngram": false
+        },
+        {
+          "uuid": "13f30f38-ec4e-4404-b641-baa986048458",
+          "name": "Thatch",
+          "quantity": 40,
+          "isEngram": false
+        }
+      ]
+    }
+  },
+  {
+    "uuid": "5989a155-3c61-4d4c-9c2b-2ac9302d15a9",
+    "name": "Gas Collector",
+    "description": "Place on a Gas Vent to extract Congealed Gas Balls over time.",
+    "imageFile": "gas_collector.webp",
+    "level": 40,
+    "yield": 1,
+    "points": 0,
+    "xp": 0,
+    "craftingTime": 0,
+    "composition": {
+      "uuid": "877abee0-9723-4390-a588-5b0c0366f60e",
+      "composites": [
+        {
+          "uuid": "f6c73d5c-8ea2-49c9-bba9-8e9ec90e9fff",
+          "name": "Cementing Paste",
+          "quantity": 60,
+          "isEngram": true
+        },
+        {
+          "uuid": "ed45dfd6-9217-42f8-93f1-99b3b4f50b85",
+          "name": "Crystal",
+          "quantity": 40,
+          "isEngram": false
+        },
+        {
+          "uuid": "12576673-f8a9-4ead-bb39-a3c4d1042828",
+          "name": "Green Gem",
+          "quantity": 20,
+          "isEngram": false
+        },
+        {
+          "uuid": "d38831af-1c92-4b1f-aa7b-03307803e79e",
+          "name": "Metal Ingot",
+          "quantity": 75,
+          "isEngram": true
+        }
+      ]
+    }
+  },
+  {
+    "uuid": "3a1693ae-913e-4583-a9f6-f425293f4b25",
+    "name": "Generate Aberration (Alpha) Portal",
+    "description": "Use this to generate a portal to Aberration's Guardian.",
+    "imageFile": "alpha_aberration_portal.webp",
+    "level": 100,
+    "yield": 1,
+    "points": 0,
+    "xp": 0,
+    "craftingTime": 0,
+    "composition": {
+      "uuid": "b0ec8cbb-a73c-466b-9301-3687e37e9e2e",
+      "composites": [
+        {
+          "uuid": "cb6de277-74ae-4773-8aa0-e2c40208d0d0",
+          "name": "Alpha Basilisk Fang",
+          "quantity": 1,
+          "isEngram": false
+        },
+        {
+          "uuid": "9b4e2aff-e47e-40cf-b60a-811f5be59e0b",
+          "name": "Alpha Karkinos Claw",
+          "quantity": 1,
+          "isEngram": false
+        },
+        {
+          "uuid": "2e08cf26-4c91-4df9-8f67-a6737c4431c3",
+          "name": "Alpha Reaper King Barb",
+          "quantity": 1,
+          "isEngram": false
+        },
+        {
+          "uuid": "8cc0c43a-77d3-4dfd-9b4c-85f840efe6a5",
+          "name": "Artifact of the Depths",
+          "quantity": 1,
+          "isEngram": false
+        },
+        {
+          "uuid": "e4511749-ff5b-44db-8412-82e37b8dc874",
+          "name": "Artifact of the Shadows",
+          "quantity": 1,
+          "isEngram": false
+        },
+        {
+          "uuid": "ee7a20a3-47d5-418a-b19f-81567809ec86",
+          "name": "Artifact of the Stalker",
+          "quantity": 1,
+          "isEngram": false
+        },
+        {
+          "uuid": "2e84949e-27a0-48ce-8435-b9b7d2a43dc4",
+          "name": "Basilisk Scale",
+          "quantity": 8,
+          "isEngram": false
+        },
+        {
+          "uuid": "19061722-da17-4338-9982-43e7ed368df4",
+          "name": "Nameless Venom",
+          "quantity": 20,
+          "isEngram": false
+        },
+        {
+          "uuid": "efc786f6-354d-4f8c-9d2a-ae2f6e614778",
+          "name": "Reaper Pheromone Gland",
+          "quantity": 7,
+          "isEngram": false
+        },
+        {
+          "uuid": "6d8ec281-c226-47c6-99fc-5bfda863fe82",
+          "name": "Rock Drake Feather",
+          "quantity": 7,
+          "isEngram": false
+        }
+      ]
+    }
+  },
+  {
+    "uuid": "a99fe510-206b-48e9-ba3c-85ec2673674a",
+    "name": "Generate Aberration (Beta) Portal",
+    "description": "Use this to generate a portal to Aberration's Guardian.",
+    "imageFile": "beta_aberration_portal.webp",
+    "level": 75,
+    "yield": 1,
+    "points": 0,
+    "xp": 0,
+    "craftingTime": 0,
+    "composition": {
+      "uuid": "4dc0819c-8a5a-4cc6-ad2e-74f0d4295434",
+      "composites": [
+        {
+          "uuid": "f00aab4b-4dae-4163-8527-372c2b00f0d4",
+          "name": "Artifact of the Depths",
+          "quantity": 1,
+          "isEngram": false
+        },
+        {
+          "uuid": "8d792fbe-8f73-4864-886f-061e9603fb26",
+          "name": "Artifact of the Shadows",
+          "quantity": 1,
+          "isEngram": false
+        },
+        {
+          "uuid": "b52f8f27-951a-4715-93ca-c678297a09c9",
+          "name": "Artifact of the Stalker",
+          "quantity": 1,
+          "isEngram": false
+        },
+        {
+          "uuid": "7bf87c14-ee13-404a-84ea-16b2f39ba732",
+          "name": "Basilisk Scale",
+          "quantity": 4,
+          "isEngram": false
+        },
+        {
+          "uuid": "4c199875-71eb-4105-a46e-87a985c16dad",
+          "name": "Nameless Venom",
+          "quantity": 12,
+          "isEngram": false
+        },
+        {
+          "uuid": "47083e3b-5419-4817-94d9-8549e222bd9f",
+          "name": "Reaper Pheromone Gland",
+          "quantity": 2,
+          "isEngram": false
+        },
+        {
+          "uuid": "c4baad14-a46f-44cf-a6ef-b2fb01d4627f",
+          "name": "Rock Drake Feather",
+          "quantity": 2,
+          "isEngram": false
+        }
+      ]
+    }
+  },
+  {
+    "uuid": "759ebb45-b662-440b-8585-7476ad5a0518",
+    "name": "Generate Aberration (Gamma) Portal",
+    "description": "Use this to generate a portal to Aberration's Guardian.",
+    "imageFile": "gamma_aberration_portal.webp",
+    "level": 60,
+    "yield": 1,
+    "points": 0,
+    "xp": 0,
+    "craftingTime": 0,
+    "composition": {
+      "uuid": "ad2d4d63-d437-4cf6-ac14-353161cd8ce8",
+      "composites": [
+        {
+          "uuid": "75a57f01-9a9f-48b5-abc3-2112ece315bf",
+          "name": "Artifact of the Depths",
+          "quantity": 1,
+          "isEngram": false
+        },
+        {
+          "uuid": "0951e4c6-1986-4696-a3eb-791e3f3a6686",
+          "name": "Artifact of the Shadows",
+          "quantity": 1,
+          "isEngram": false
+        },
+        {
+          "uuid": "c771b285-1f21-420d-b5a0-7b75d113bcdb",
+          "name": "Artifact of the Stalker",
+          "quantity": 1,
+          "isEngram": false
+        }
+      ]
+    }
+  },
+  {
+    "uuid": "8096fab8-5df3-42cc-a7b2-8e763961aade",
+    "name": "Glider Suit Skin",
+    "description": "When attached to a Chest Armor, the Glider Suit enables sailing through the air by double-tapping jump, while gaining speed by running and diving!",
+    "imageFile": "glider_suit_skin.webp",
+    "level": 62,
+    "yield": 1,
+    "points": 0,
+    "xp": 0,
+    "craftingTime": 0,
+    "composition": {
+      "uuid": "233fef67-41e5-4261-9f31-102c6eecf5d9",
+      "composites": [
+        {
+          "uuid": "697363a8-ea0a-4cb1-8ed2-c969a8ae5239",
+          "name": "Blue Gem",
+          "quantity": 25,
+          "isEngram": false
+        },
+        {
+          "uuid": "84dbd9b3-fe0f-4119-b1d1-a207b826fe0d",
+          "name": "Fiber",
+          "quantity": 100,
+          "isEngram": false
+        },
+        {
+          "uuid": "f70a3aea-0858-4e24-92d0-4bf3c133a584",
+          "name": "Hide",
+          "quantity": 60,
+          "isEngram": false
+        },
+        {
+          "uuid": "50b19092-51e4-4372-a8ee-f0f4d1ca9265",
+          "name": "Metal Ingot",
+          "quantity": 60,
+          "isEngram": true
+        }
+      ]
+    }
+  },
+  {
+    "uuid": "2e894a20-f7f6-4acc-8b7b-d8a6ac11d96f",
+    "name": "Glow Stick",
+    "description": "Glow Sticks generate light in a radius around them. Throw it and it will stick immediately to the location they first impact.",
+    "imageFile": "glow_stick.webp",
+    "level": 10,
+    "yield": 1,
+    "points": 0,
+    "xp": 0,
+    "craftingTime": 0,
+    "composition": {
+      "uuid": "3eb70ab0-a791-45de-bf89-097846b8caae",
+      "composites": [
+        {
+          "uuid": "d8f4c09b-e624-402a-afdb-021f8b9f5438",
+          "name": "Crystal",
+          "quantity": 2,
+          "isEngram": false
+        },
+        {
+          "uuid": "0f23b058-4720-411f-a7ef-f400e4b1be97",
+          "name": "Green Gem",
+          "quantity": 1,
+          "isEngram": false
+        }
+      ]
+    }
+  },
+  {
+    "uuid": "33439533-ec50-45df-817c-981211b39ecc",
+    "name": "Hazard Suit Boots",
+    "description": "Boots made from a unique combination of materials that protect the wearer from environmental contaminants.",
+    "imageFile": "hazard_suit_boots.webp",
+    "level": 68,
+    "yield": 1,
+    "points": 0,
+    "xp": 0,
+    "craftingTime": 0,
+    "composition": {
+      "uuid": "212a27f5-aa93-4044-9223-cf0c9d8b58e0",
+      "composites": [
+        {
+          "uuid": "eb0ae2e4-6f29-4daa-850b-0eacc340f7b2",
+          "name": "Blue Gem",
+          "quantity": 5,
+          "isEngram": false
+        },
+        {
+          "uuid": "928bdac2-8365-4bc8-8809-1b9ba512bc34",
+          "name": "Congealed Gas Ball",
+          "quantity": 15,
+          "isEngram": false
+        },
+        {
+          "uuid": "b62bbeda-1210-42e9-bb52-1ffee9c920b5",
+          "name": "Crystal",
+          "quantity": 10,
+          "isEngram": false
+        },
+        {
+          "uuid": "69a73728-b73d-44d3-bf00-4ece160c633f",
+          "name": "Fiber",
+          "quantity": 25,
+          "isEngram": false
+        },
+        {
+          "uuid": "ee48dcf7-43b0-45e9-a836-5c1813f85105",
+          "name": "Hide",
+          "quantity": 20,
+          "isEngram": false
+        },
+        {
+          "uuid": "88ed46fc-da93-4286-a151-fffd1062e8a7",
+          "name": "Polymer",
+          "quantity": 10,
+          "isEngram": true
+        }
+      ]
+    }
+  },
+  {
+    "uuid": "840fbefa-0bec-4573-9fb8-9e9c41e4d173",
+    "name": "Hazard Suit Gloves",
+    "description": "Gloves made from a unique combination of materials that protect the wearer from environmental contaminants.",
+    "imageFile": "hazard_suit_gloves.webp",
+    "level": 68,
+    "yield": 1,
+    "points": 0,
+    "xp": 0,
+    "craftingTime": 0,
+    "composition": {
+      "uuid": "e5eeef54-684e-4415-84a7-a023ba0d676a",
+      "composites": [
+        {
+          "uuid": "4684eb31-3d9a-4797-803d-9a5ac7bb32ca",
+          "name": "Blue Gem",
+          "quantity": 8,
+          "isEngram": false
+        },
+        {
+          "uuid": "6a3c64df-8a64-4718-852c-d9ead2570799",
+          "name": "Congealed Gas Ball",
+          "quantity": 15,
+          "isEngram": false
+        },
+        {
+          "uuid": "109144db-8a89-4745-bffc-c74c1acf2275",
+          "name": "Crystal",
+          "quantity": 16,
+          "isEngram": false
+        },
+        {
+          "uuid": "26655497-30bd-4dc3-a411-c6dad5f0a3fb",
+          "name": "Fiber",
+          "quantity": 35,
+          "isEngram": false
+        },
+        {
+          "uuid": "f26e1a90-5ee9-4a81-851c-3fc1c4423497",
+          "name": "Hide",
+          "quantity": 15,
+          "isEngram": false
+        },
+        {
+          "uuid": "76950d26-238f-427d-842b-b52fe7bda19d",
+          "name": "Polymer",
+          "quantity": 2,
+          "isEngram": true
+        }
+      ]
+    }
+  },
+  {
+    "uuid": "b0954cf7-0113-4c18-8e57-30f159c68297",
+    "name": "Hazard Suit Hat",
+    "description": "A helmet made from a unique combination of materials that protect the wearer from environmental contaminants.",
+    "imageFile": "hazard_suit_hat.webp",
+    "level": 68,
+    "yield": 1,
+    "points": 0,
+    "xp": 0,
+    "craftingTime": 0,
+    "composition": {
+      "uuid": "01fe2cdc-d545-49e6-8e0c-8b04a01e9207",
+      "composites": [
+        {
+          "uuid": "36f5fcca-7816-464a-8fff-84894a750efe",
+          "name": "Blue Gem",
+          "quantity": 25,
+          "isEngram": false
+        },
+        {
+          "uuid": "7d605968-5255-4388-a4a7-07deb83efc66",
+          "name": "Congealed Gas Ball",
+          "quantity": 20,
+          "isEngram": false
+        },
+        {
+          "uuid": "06588deb-e212-469c-a2f0-5e4672905a33",
+          "name": "Crystal",
+          "quantity": 50,
+          "isEngram": false
+        },
+        {
+          "uuid": "b3f2748b-80d1-4431-9aef-90536850767c",
+          "name": "Fiber",
+          "quantity": 45,
+          "isEngram": false
+        },
+        {
+          "uuid": "a2c8315b-7126-46cc-afdc-336fbbc88e80",
+          "name": "Hide",
+          "quantity": 30,
+          "isEngram": false
+        },
+        {
+          "uuid": "a1fd7c5e-8992-4445-9b46-6c132a8aec07",
+          "name": "Polymer",
+          "quantity": 20,
+          "isEngram": true
+        }
+      ]
+    }
+  },
+  {
+    "uuid": "8e8a9d8f-2c34-4cf0-86c8-796abfbede18",
+    "name": "Hazard Suit Pants",
+    "description": "Pants made from a unique combination of materials that protect the wearer from environmental contaminants.",
+    "imageFile": "hazard_suit_pants.webp",
+    "level": 68,
+    "yield": 1,
+    "points": 0,
+    "xp": 0,
+    "craftingTime": 0,
+    "composition": {
+      "uuid": "fed9a12c-9a79-4df2-9037-ed8e29876a47",
+      "composites": [
+        {
+          "uuid": "df6b2b0d-0d44-4ffe-b4e7-cb6e4f5034d0",
+          "name": "Blue Gem",
+          "quantity": 20,
+          "isEngram": false
+        },
+        {
+          "uuid": "2ba3053a-c792-4a23-ae2b-ee88263ee393",
+          "name": "Congealed Gas Ball",
+          "quantity": 30,
+          "isEngram": false
+        },
+        {
+          "uuid": "89cbd050-ee2a-4fc3-b768-1ed24cdd5ee4",
+          "name": "Crystal",
+          "quantity": 40,
+          "isEngram": false
+        },
+        {
+          "uuid": "e1d7fcb2-558f-4159-a666-dfa049dc90a0",
+          "name": "Fiber",
+          "quantity": 65,
+          "isEngram": false
+        },
+        {
+          "uuid": "d8d5af01-434d-4ab9-aa37-543577e8a463",
+          "name": "Hide",
+          "quantity": 45,
+          "isEngram": false
+        },
+        {
+          "uuid": "7a2649c3-5fe2-4533-9fda-be5120b5db84",
+          "name": "Polymer",
+          "quantity": 15,
+          "isEngram": true
+        }
+      ]
+    }
+  },
+  {
+    "uuid": "fe325705-ee1e-4f83-8ff0-573c6bbd5237",
+    "name": "Hazard Suit Shirt",
+    "description": "A shirt made from a unique combination of materials that protect the wearer from environmental contaminants.",
+    "imageFile": "hazard_suit_shirt.webp",
+    "level": 68,
+    "yield": 1,
+    "points": 0,
+    "xp": 0,
+    "craftingTime": 0,
+    "composition": {
+      "uuid": "449b020b-0697-4044-8a17-eba49d616765",
+      "composites": [
+        {
+          "uuid": "aec91984-9538-4437-9955-e8d63c45803b",
+          "name": "Blue Gem",
+          "quantity": 25,
+          "isEngram": false
+        },
+        {
+          "uuid": "b0535157-1b44-4666-87c3-b5f7cf9de34f",
+          "name": "Congealed Gas Ball",
+          "quantity": 45,
+          "isEngram": false
+        },
+        {
+          "uuid": "beedf6cc-4d8a-43c4-b999-5373dff448ac",
+          "name": "Crystal",
+          "quantity": 50,
+          "isEngram": false
+        },
+        {
+          "uuid": "4b0638b1-bb98-4d43-b5f6-6ca626d1aeff",
+          "name": "Fiber",
+          "quantity": 65,
+          "isEngram": false
+        },
+        {
+          "uuid": "311edfc3-39f4-4123-9240-89df8d67e50a",
+          "name": "Hide",
+          "quantity": 45,
+          "isEngram": false
+        },
+        {
+          "uuid": "a03400fa-8c05-4082-8e40-af6579ce09bc",
+          "name": "Polymer",
+          "quantity": 25,
+          "isEngram": true
+        }
+      ]
+    }
+  },
+  {
+    "uuid": "0af306ee-7224-4ecc-ab05-8ff6865682d5",
+    "name": "Karkinos Saddle",
+    "description": "Equip a Karkinos with this to ride it.",
+    "imageFile": "karkinos_saddle.webp",
+    "level": 65,
+    "yield": 1,
+    "points": 0,
+    "xp": 0,
+    "craftingTime": 0,
+    "composition": {
+      "uuid": "9338fe3b-369a-4855-a9d6-67ca49afd53b",
+      "composites": [
+        {
+          "uuid": "d34981aa-d90e-4713-bf27-46a97d5c6ee1",
+          "name": "Blue Gem",
+          "quantity": 80,
+          "isEngram": false
+        },
+        {
+          "uuid": "5e067677-adb2-4992-8f59-8e7fbdb2bf4c",
+          "name": "Fiber",
+          "quantity": 225,
+          "isEngram": false
+        },
+        {
+          "uuid": "959587c1-e3b9-4b33-af1e-6482590ef5d5",
+          "name": "Fungal Wood",
+          "quantity": 200,
+          "isEngram": false
+        },
+        {
+          "uuid": "13f6e841-d710-4eb2-ba72-e9b9f7da1d32",
+          "name": "Hide",
+          "quantity": 170,
+          "isEngram": false
+        }
+      ]
+    }
+  },
+  {
+    "uuid": "70a59b60-5793-436b-8270-07e990964f15",
+    "name": "Large Wood Elevator Platform",
+    "description": "Attach to an Elevator Track to lift a large amount of weight.",
+    "imageFile": "large_wood_elevator_platform.webp",
+    "level": 30,
+    "yield": 1,
+    "points": 0,
+    "xp": 0,
+    "craftingTime": 0,
+    "composition": {
+      "uuid": "33c68fe5-5ed3-466b-a9ea-3eec8efb197c",
+      "composites": [
+        {
+          "uuid": "392c6164-4fa7-42d9-acc6-fa878e521dc5",
+          "name": "Fiber",
+          "quantity": 600,
+          "isEngram": false
+        },
+        {
+          "uuid": "e8facd2e-9720-47e9-972a-34a9a2d4e24d",
+          "name": "Fungal Wood",
+          "quantity": 270,
+          "isEngram": false
+        },
+        {
+          "uuid": "1b089540-e782-4363-ac81-0dd773bc9184",
+          "name": "Metal Ingot",
+          "quantity": 85,
+          "isEngram": true
+        }
+      ]
+    }
+  },
+  {
+    "uuid": "4f42afc1-a680-4582-85ee-cd4d644930d4",
+    "name": "Medium Wood Elevator Platform",
+    "description": "Attach to an Elevator Track to lift a medium amount of weight.",
+    "imageFile": "medium_wood_elevator_platform.webp",
+    "level": 23,
+    "yield": 1,
+    "points": 0,
+    "xp": 0,
+    "craftingTime": 0,
+    "composition": {
+      "uuid": "b574f2ec-cff4-461c-8047-3b9aa2f45dbb",
+      "composites": [
+        {
+          "uuid": "5de5ff85-de72-46bb-af39-1170ea0a87d1",
+          "name": "Fiber",
+          "quantity": 350,
+          "isEngram": false
+        },
+        {
+          "uuid": "eecd1bb2-2662-4b3c-8af2-985b4c414635",
+          "name": "Fungal Wood",
+          "quantity": 285,
+          "isEngram": false
+        },
+        {
+          "uuid": "61d4096b-42d8-4041-8572-ab3b68eae6bc",
+          "name": "Metal Ingot",
+          "quantity": 30,
+          "isEngram": true
+        }
+      ]
+    }
+  },
+  {
+    "uuid": "3382d4ff-9dee-4e9e-9c0e-e2b2146b10ca",
+    "name": "Metal Cliff Platform",
+    "description": "A Cliff Platform is required to build structures extending from a cliff. This one is made from shiny metal.",
+    "imageFile": "metal_cliff_platform.webp",
+    "level": 51,
+    "yield": 1,
+    "points": 0,
+    "xp": 0,
+    "craftingTime": 0,
+    "composition": {
+      "uuid": "dd38ebd9-4f11-4970-b558-d175bb313e48",
+      "composites": [
+        {
+          "uuid": "d44c1ecf-127f-4efd-8bc0-18d915501a4e",
+          "name": "Blue Gem",
+          "quantity": 200,
+          "isEngram": false
+        },
+        {
+          "uuid": "bd07ecac-0232-48dc-86a7-9579fdbcb5c9",
+          "name": "Cementing Paste",
+          "quantity": 800,
+          "isEngram": true
+        },
+        {
+          "uuid": "b61f0119-2d49-47fc-8c0d-f0e29eadd5c8",
+          "name": "Metal Ingot",
+          "quantity": 120,
+          "isEngram": true
+        }
+      ]
+    }
+  },
+  {
+    "uuid": "9498ca53-4339-4f3e-87a1-2a477c7935e2",
+    "name": "Mushroom Brew",
+    "description": "Double, double, toil and trouble, fire burn and cauldron bubble... this is a lovely mushroom brew, a healthy syrup to protect your pets from radiation!",
+    "imageFile": "mushroom_brew.webp",
+    "level": 1,
+    "yield": 1,
+    "points": 0,
+    "xp": 0,
+    "craftingTime": 0,
+    "composition": {
+      "uuid": "227c15a5-77f9-4bd7-b44a-dad4aa7643d0",
+      "composites": [
+        {
+          "uuid": "47160f85-7cd9-4714-afdc-f277263100c2",
+          "name": "Aggeravic Mushroom",
+          "quantity": 5,
+          "isEngram": false
+        },
+        {
+          "uuid": "8177d0aa-6d33-4760-85de-ce6c6f9ebd53",
+          "name": "Aquatic Mushroom",
+          "quantity": 5,
+          "isEngram": false
+        },
+        {
+          "uuid": "3893f4d2-1cef-46b6-b6e6-82a6665a1b11",
+          "name": "Ascerbic Mushroom",
+          "quantity": 5,
+          "isEngram": false
+        },
+        {
+          "uuid": "9dd3dde0-bc60-49bc-8f0f-ce728d6f28ff",
+          "name": "Auric Mushroom",
+          "quantity": 5,
+          "isEngram": false
+        },
+        {
+          "uuid": "1d9dd4a9-82a4-4c52-b76a-2e834f153c12",
+          "name": "Congealed Gas Ball",
+          "quantity": 3,
+          "isEngram": false
+        },
+        {
+          "uuid": "a336e19b-69de-4184-b26c-1c8916c43f03",
+          "name": "Sap",
+          "quantity": 3,
+          "isEngram": false
+        },
+        {
+          "uuid": "a1e3e4da-8658-46d2-ae86-f42f9a834032",
+          "name": "Water",
+          "quantity": 1,
+          "isEngram": false
+        }
+      ]
+    }
+  },
+  {
+    "uuid": "833a284b-712c-4d8e-90ff-ac459c040e1d",
+    "name": "Pliers",
+    "description": "Use on a Smithy-crafted item in need of repairing and you can repair it on the go within any inventory, at a higher cost of resources.",
+    "imageFile": "pliers.webp",
+    "level": 45,
+    "yield": 1,
+    "points": 0,
+    "xp": 0,
+    "craftingTime": 0,
+    "composition": {
+      "uuid": "52ca0a58-5411-482a-8a1e-ed9dfede6d8d",
+      "composites": [
+        {
+          "uuid": "aeb92417-5fb3-4204-8e1c-138745e5a434",
+          "name": "Blue Gem",
+          "quantity": 15,
+          "isEngram": false
+        },
+        {
+          "uuid": "44300d5d-7934-4fbb-826d-42863e37801b",
+          "name": "Congealed Gas Ball",
+          "quantity": 12,
+          "isEngram": false
+        },
+        {
+          "uuid": "49d3923e-0197-4586-aa67-1b3b901523c7",
+          "name": "Flint",
+          "quantity": 70,
+          "isEngram": false
+        },
+        {
+          "uuid": "7c4f4b52-d721-4a79-af46-f8d980caacfe",
+          "name": "Metal Ingot",
+          "quantity": 15,
+          "isEngram": true
+        },
+        {
+          "uuid": "80fef02d-ef94-475d-97fa-32653e408f59",
+          "name": "Obsidian",
+          "quantity": 10,
+          "isEngram": false
+        }
+      ]
+    }
+  },
+  {
+    "uuid": "6730daa2-0e82-4801-b820-749c14ce5216",
+    "name": "Portable Rope Ladder",
+    "description": "A portable ladder that can be used to climb up or down. Place onto structures or terrain at waist height or lower.",
+    "imageFile": "portable_rope_ladder.webp",
+    "level": 15,
+    "yield": 1,
+    "points": 0,
+    "xp": 0,
+    "craftingTime": 0,
+    "composition": {
+      "uuid": "580880ce-c1ad-4759-836b-0690f0cee7ff",
+      "composites": [
+        {
+          "uuid": "340b532e-e620-4c5a-897f-6f360b7e27fb",
+          "name": "Fiber",
+          "quantity": 180,
+          "isEngram": false
+        },
+        {
+          "uuid": "4cf64049-bf27-46a1-abd9-231d49d6de05",
+          "name": "Fungal Wood",
+          "quantity": 15,
+          "isEngram": false
+        },
+        {
+          "uuid": "d20358d0-4bc1-4942-8943-6a70b3294fea",
+          "name": "Thatch",
+          "quantity": 140,
+          "isEngram": false
+        }
+      ]
+    }
+  },
+  {
+    "uuid": "02587490-8224-48fd-8046-14c9db4d3476",
+    "name": "Ravager Saddle",
+    "description": "Equip a Ravager with this to ride it.",
+    "imageFile": "ravager_saddle.webp",
+    "level": 47,
+    "yield": 1,
+    "points": 0,
+    "xp": 0,
+    "craftingTime": 0,
+    "composition": {
+      "uuid": "73c7d18c-113e-4ace-8429-d8e99c58ea16",
+      "composites": [
+        {
+          "uuid": "83f3c76a-9cec-42b3-86bd-f74e2a876565",
+          "name": "Fiber",
+          "quantity": 125,
+          "isEngram": false
+        },
+        {
+          "uuid": "6f1768c3-184e-4241-a2a0-c57e0e91e66c",
+          "name": "Fungal Wood",
+          "quantity": 110,
+          "isEngram": false
+        },
+        {
+          "uuid": "6535fd08-c2df-4418-8307-c417213c6ca4",
+          "name": "Hide",
+          "quantity": 285,
+          "isEngram": false
+        }
+      ]
+    }
+  },
+  {
+    "uuid": "70145456-2d9c-42ca-9d80-533f6b48bf3e",
+    "name": "Rock Drake Saddle",
+    "description": "Equip a Rock Drake with this to ride it.",
+    "imageFile": "rock_drake_saddle.webp",
+    "level": 75,
+    "yield": 1,
+    "points": 0,
+    "xp": 0,
+    "craftingTime": 0,
+    "composition": {
+      "uuid": "0c4f1285-28b1-4914-8582-7f87ee75525d",
+      "composites": [
+        {
+          "uuid": "cd8844a5-bb7f-4014-839b-121503498590",
+          "name": "Fiber",
+          "quantity": 225,
+          "isEngram": false
+        },
+        {
+          "uuid": "e3d5cb07-dbf3-46e7-8256-6abbaeb30733",
+          "name": "Hide",
+          "quantity": 350,
+          "isEngram": false
+        },
+        {
+          "uuid": "5b794be0-3e91-41b1-b0d2-ae08bd4dcfd4",
+          "name": "Metal Ingot",
+          "quantity": 125,
+          "isEngram": true
+        },
+        {
+          "uuid": "59e264be-b7f0-42db-b433-5beb2e24b4a9",
+          "name": "Red Gem",
+          "quantity": 85,
+          "isEngram": false
+        }
+      ]
+    }
+  },
+  {
+    "uuid": "f1706e94-e5b6-421a-81fc-683fe12b0767",
+    "name": "Rock Drake Tek Saddle",
+    "description": "Equip a Rock Drake with this to ride it, enabling the rider to fire plasma projectiles. Using requires learning this Tekgram.",
+    "imageFile": "rock_drake_tek_saddle.webp",
+    "level": 1,
+    "yield": 1,
+    "points": 0,
+    "xp": 0,
+    "craftingTime": 0,
+    "composition": {
+      "uuid": "69b79d88-e38b-4dc4-9dc9-4d1420df8d70",
+      "composites": [
+        {
+          "uuid": "8b095018-9d18-4dac-83a8-40b6e2a39bd3",
+          "name": "Black Pearl",
+          "quantity": 185,
+          "isEngram": false
+        },
+        {
+          "uuid": "d1441ed3-9e42-4ab5-826a-8ed437b0617a",
+          "name": "Crystal",
+          "quantity": 325,
+          "isEngram": false
+        },
+        {
+          "uuid": "7bde708a-4037-4ef2-addf-f92926c5db2f",
+          "name": "Element",
+          "quantity": 75,
+          "isEngram": true
+        },
+        {
+          "uuid": "c1be762a-e776-4523-af68-f4a7e2efcc67",
+          "name": "Metal Ingot",
+          "quantity": 2350,
+          "isEngram": true
+        },
+        {
+          "uuid": "0b73a121-1598-43b0-89b5-c6118d3999a6",
+          "name": "Polymer",
+          "quantity": 270,
+          "isEngram": true
+        }
+      ]
+    }
+  },
+  {
+    "uuid": "beb75542-c6c4-441f-904e-4403aee9e715",
+    "name": "Roll Rat Saddle",
+    "description": "Equip a Roll Rat with this to ride it. Provides protection to passengers while rolling.",
+    "imageFile": "roll_rat_saddle.webp",
+    "level": 58,
+    "yield": 1,
+    "points": 0,
+    "xp": 0,
+    "craftingTime": 0,
+    "composition": {
+      "uuid": "cfc22c20-6dc4-4d64-9106-db7b3eb864df",
+      "composites": [
+        {
+          "uuid": "d3d2721b-33c0-45e7-8eb1-2e92035bbc75",
+          "name": "Cementing Paste",
+          "quantity": 85,
+          "isEngram": true
+        },
+        {
+          "uuid": "2992bd6f-d33f-4ac9-be19-c34507d4721d",
+          "name": "Fiber",
+          "quantity": 150,
+          "isEngram": false
+        },
+        {
+          "uuid": "a366ce0d-ed89-45fd-95d5-2ce8c2ce806b",
+          "name": "Green Gem",
+          "quantity": 45,
+          "isEngram": false
+        },
+        {
+          "uuid": "e4c39921-d819-42a6-9fcc-d1a1d9c4105e",
+          "name": "Hide",
+          "quantity": 270,
+          "isEngram": false
+        },
+        {
+          "uuid": "3bb7f3b9-9a45-4988-8f20-5fb97c72063d",
+          "name": "Metal Ingot",
+          "quantity": 425,
+          "isEngram": true
+        }
+      ]
+    }
+  },
+  {
+    "uuid": "e13a0151-74e1-4f6b-a149-b13e92c22683",
+    "name": "Shag Rug",
+    "description": "A decorative, paintable rug with a shaggy appearance, which dulls the sound of footsteps.",
+    "imageFile": "shag_rug.webp",
+    "level": 17,
+    "yield": 1,
+    "points": 0,
+    "xp": 0,
+    "craftingTime": 0,
+    "composition": {
+      "uuid": "37cba2cd-f81e-4e35-81bb-447daa60e651",
+      "composites": [
+        {
+          "uuid": "64eca7df-a042-4bc3-8a5a-7b8d08ff1e2b",
+          "name": "Fungal Wood",
+          "quantity": 10,
+          "isEngram": false
+        },
+        {
+          "uuid": "b562d837-698f-46a1-99f2-a68040e90bc4",
+          "name": "Hide",
+          "quantity": 30,
+          "isEngram": false
+        },
+        {
+          "uuid": "d0a821aa-4738-44f3-9dce-50f1e9fb05c8",
+          "name": "Pelt, Hair, or Wool",
+          "quantity": 140,
+          "isEngram": false
+        }
+      ]
+    }
+  },
+  {
+    "uuid": "da631972-7e7f-45e3-8cc1-e92727001082",
+    "name": "Small Wood Elevator Platform",
+    "description": "Attach to an Elevator Track to lift a small amount of weight.",
+    "imageFile": "small_wood_elevator_platform.webp",
+    "level": 20,
+    "yield": 1,
+    "points": 0,
+    "xp": 0,
+    "craftingTime": 0,
+    "composition": {
+      "uuid": "67470b54-a188-42a5-93ae-b03a9ea3c1f2",
+      "composites": [
+        {
+          "uuid": "022e84fc-ab4a-44f6-a033-deafbc4b3eaf",
+          "name": "Fiber",
+          "quantity": 175,
+          "isEngram": false
+        },
+        {
+          "uuid": "08e4856d-4740-4b29-8a3e-6fcfe309d0eb",
+          "name": "Fungal Wood",
+          "quantity": 175,
+          "isEngram": false
+        },
+        {
+          "uuid": "a11f6e5e-da25-483c-9abe-25a09b73253a",
+          "name": "Metal Ingot",
+          "quantity": 20,
+          "isEngram": true
+        }
+      ]
+    }
+  },
+  {
+    "uuid": "32de9b3d-c467-4a36-98e1-ac933e7e3826",
+    "name": "Stone Cliff Platform",
+    "description": "A Cliff Platform is required to build structures extending from a cliff. This one is made from heavy stone.",
+    "imageFile": "stone_cliff_platform.webp",
+    "level": 37,
+    "yield": 1,
+    "points": 0,
+    "xp": 0,
+    "craftingTime": 0,
+    "composition": {
+      "uuid": "1583f6da-e65f-4937-90c4-6ae536b215ca",
+      "composites": [
+        {
+          "uuid": "adcc3aa6-5bb1-43b3-aa11-0b207aea0cd7",
+          "name": "Cementing Paste",
+          "quantity": 250,
+          "isEngram": true
+        },
+        {
+          "uuid": "7304d2c7-a009-4328-98ac-637e7d1a82b1",
+          "name": "Fiber",
+          "quantity": 600,
+          "isEngram": false
+        },
+        {
+          "uuid": "8421d0bc-55fb-4499-875d-79e9bfe5c254",
+          "name": "Fungal Wood",
+          "quantity": 800,
+          "isEngram": false
+        },
+        {
+          "uuid": "d77b431c-30dc-498a-bcfd-f4b2f7ce6dca",
+          "name": "Stone",
+          "quantity": 1200,
+          "isEngram": false
+        }
+      ]
+    }
+  },
+  {
+    "uuid": "33e65e1a-f437-495d-a043-17effb213166",
+    "name": "Tek Railgun",
+    "description": "Shoots explosive plasma bolts, with an infrared zoomable scope. Equipping requires learning this Tekgram.",
+    "imageFile": "tek_railgun.webp",
+    "level": 1,
+    "yield": 1,
+    "points": 0,
+    "xp": 0,
+    "craftingTime": 0,
+    "composition": {
+      "uuid": "10d5224e-f5e7-44c7-8f58-d579da4e6505",
+      "composites": [
+        {
+          "uuid": "2a76f61a-dc06-4b11-ac01-adac7ac2e3c0",
+          "name": "Black Pearl",
+          "quantity": 55,
+          "isEngram": false
+        },
+        {
+          "uuid": "c071649d-62b2-4025-b2cd-53faab624999",
+          "name": "Congealed Gas Ball",
+          "quantity": 525,
+          "isEngram": false
+        },
+        {
+          "uuid": "041bbe86-6e76-4239-9eec-acf1c8f16d80",
+          "name": "Element",
+          "quantity": 20,
+          "isEngram": true
+        },
+        {
+          "uuid": "f300cd68-e54d-4534-a712-9a9ceda530c6",
+          "name": "Metal Ingot",
+          "quantity": 120,
+          "isEngram": true
+        },
+        {
+          "uuid": "770cdc8c-4f14-48c5-8308-d6d838bf026b",
+          "name": "Polymer",
+          "quantity": 450,
+          "isEngram": true
+        },
+        {
+          "uuid": "5988c590-c5f2-4a50-a1c6-4c3a7c13902d",
+          "name": "Red Gem",
+          "quantity": 120,
+          "isEngram": false
+        }
+      ]
+    }
+  },
+  {
+    "uuid": "9812fb24-6268-4bf2-9a2b-76e60a95f0d6",
+    "name": "Tek Sleeping Pod",
+    "description": "This Tek-powered Chamber lets you rapidly recover vitals, and slowly gain XP even when sleeping. You can also sleep soundly within it, protected even while on a moving platform!",
+    "imageFile": "tek_sleeping_pod.webp",
+    "level": 1,
+    "yield": 1,
+    "points": 0,
+    "xp": 0,
+    "craftingTime": 0,
+    "composition": {
+      "uuid": "0e93370e-1e7a-4fd4-8292-c5f7f430a383",
+      "composites": [
+        {
+          "uuid": "c956ec51-9fc2-44a5-8df5-bdab8212a89d",
+          "name": "Fiber",
+          "quantity": 280,
+          "isEngram": false
+        },
+        {
+          "uuid": "2d96dba9-ce37-4826-8090-0a3acd11cac3",
+          "name": "Hide",
+          "quantity": 120,
+          "isEngram": false
+        },
+        {
+          "uuid": "ef4d40ea-42ca-48cc-a200-cb5bc2e0a292",
+          "name": "Metal Ingot",
+          "quantity": 320,
+          "isEngram": true
+        },
+        {
+          "uuid": "f80e0722-3069-42a7-98c0-18fe9700c026",
+          "name": "Pelt, Hair, or Wool",
+          "quantity": 200,
+          "isEngram": false
+        },
+        {
+          "uuid": "4e5dc00d-7e36-4b9e-b0f8-884ce1b7ef3d",
+          "name": "Polymer",
+          "quantity": 80,
+          "isEngram": true
+        }
+      ]
+    }
+  },
+  {
+    "uuid": "e36526f7-dd35-440c-ae41-f1a349fcf7d9",
+    "name": "Wood Elevator Top Switch",
+    "description": "Attach to the top of a Wood Elevator Track to complete an Elevator!",
+    "imageFile": "wood_elevator_top_switch.webp",
+    "level": 20,
+    "yield": 1,
+    "points": 0,
+    "xp": 0,
+    "craftingTime": 0,
+    "composition": {
+      "uuid": "526c27dd-4cdc-4b4d-91ce-c1b5477b6174",
+      "composites": [
+        {
+          "uuid": "39b2f13d-3b87-43dd-948c-979da3ef56f4",
+          "name": "Fiber",
+          "quantity": 200,
+          "isEngram": false
+        },
+        {
+          "uuid": "aaa0e16a-d59b-4133-aaed-f2ead587b917",
+          "name": "Fungal Wood",
+          "quantity": 125,
+          "isEngram": false
+        },
+        {
+          "uuid": "2f7aa6a8-a99e-404d-81dd-466b3803ba0c",
+          "name": "Metal Ingot",
+          "quantity": 35,
+          "isEngram": true
+        }
+      ]
+    }
+  },
+  {
+    "uuid": "746277e8-a069-4e7b-83cd-c7827337e42d",
+    "name": "Wood Elevator Track",
+    "description": "Attach a Wood Elevator Platform to these to complete an elevator!",
+    "imageFile": "wood_elevator_track.webp",
+    "level": 20,
+    "yield": 1,
+    "points": 0,
+    "xp": 0,
+    "craftingTime": 0,
+    "composition": {
+      "uuid": "4507378f-8bd9-4b3c-9ce4-d9429a510236",
+      "composites": [
+        {
+          "uuid": "46667bf7-a5b5-44d9-b2af-a00530fcd9b9",
+          "name": "Fiber",
+          "quantity": 45,
+          "isEngram": false
+        },
+        {
+          "uuid": "65edc932-199b-4bf9-91b3-e81634894534",
+          "name": "Fungal Wood",
+          "quantity": 80,
+          "isEngram": false
+        },
+        {
+          "uuid": "6c6c7b96-7954-46ae-82f0-6aec3218dd8b",
+          "name": "Metal Ingot",
+          "quantity": 5,
+          "isEngram": true
+        }
+      ]
+    }
+  },
+  {
+    "uuid": "80251c46-ae1c-483f-ad3e-e87f0b1fa936",
+    "name": "Zip-Line Anchor",
+    "description": "Apply onto a Crossbow to fire Zip-Line anchor points. Use two anchor points to complete a Zip-Line, which you can then grab onto [sic]",
+    "imageFile": "zip-line_anchor.webp",
+    "level": 31,
+    "yield": 1,
+    "points": 0,
+    "xp": 0,
+    "craftingTime": 0,
+    "composition": {
+      "uuid": "61d6857e-48c7-42b2-9b3b-461d7c3b14f7",
+      "composites": [
+        {
+          "uuid": "bec47bf2-f4bf-4d60-9f8d-05f56abd9fd1",
+          "name": "Fiber",
+          "quantity": 100,
+          "isEngram": false
+        },
+        {
+          "uuid": "79eacdaf-c93a-4bb9-8b81-4c1c318c94d9",
+          "name": "Fungal Wood",
+          "quantity": 8,
+          "isEngram": false
+        },
+        {
+          "uuid": "4dda1535-2169-4932-b948-2390db94e126",
+          "name": "Metal Ingot",
+          "quantity": 15,
+          "isEngram": true
+        },
+        {
+          "uuid": "6484ed60-753e-45f5-8b3e-8f1e4cb1bdd1",
+          "name": "Stone Arrow",
+          "quantity": 2,
+          "isEngram": true
+        }
+      ]
+    }
+  },
+  {
+    "uuid": "a3be5555-aa47-4030-8156-d29962d565f4",
+    "name": "Zip-Line Motor Attachment Skin",
+    "description": "Equip onto pants and combine with Gasoline to power yourself up a Zip-Line.",
+    "imageFile": "zip-line_motor_attachment_skin.webp",
+    "level": 54,
+    "yield": 1,
+    "points": 0,
+    "xp": 0,
+    "craftingTime": 0,
+    "composition": {
+      "uuid": "ae9ce2dd-30e2-4706-b3ea-530d1257ab37",
+      "composites": [
+        {
+          "uuid": "dc1132b5-1036-4d70-bdb9-5b5759005670",
+          "name": "Blue Gem",
+          "quantity": 40,
+          "isEngram": false
+        },
+        {
+          "uuid": "43eb7edd-8308-47fb-b3c8-6d97792a79ec",
+          "name": "Electronics",
+          "quantity": 15,
+          "isEngram": true
+        },
+        {
+          "uuid": "b736c2bb-40ad-4295-9b90-4b4f6c518417",
+          "name": "Metal Ingot",
+          "quantity": 60,
+          "isEngram": true
+        }
+      ]
+    }
+  }
+]
