@@ -231,10 +231,7 @@ public abstract class TransmogGameData extends GameData {
 
         if (totalCount > 0) {
             addDirectoryItem(new DirectoryItem(uuid, name, imageFile, cStationViewType, null, sourceId));
-        } else {
-            Log.d("mapStationDirectoryItem >> 0 count: " + station.getName() + " e:" + engramCount + "/f:" + folderCount);
         }
-
     }
 
     protected void mapEngramDirectoryItem(Engram engram, String parentId) {
@@ -258,8 +255,6 @@ public abstract class TransmogGameData extends GameData {
 
         if (totalCount > 0) {
             addDirectoryItem(new DirectoryItem(uuid, name, imageFile, cFolderViewType, parentId, sourceId));
-        } else {
-            Log.d("mapFolderDirectoryItem (" + getDetailsObject().getName() + ") >> 0 count: " + station.getName() + "/" + folder.getName() + " e:" + engramCount + "/f:" + folderCount);
         }
 
         return totalCount;

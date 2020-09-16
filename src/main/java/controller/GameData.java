@@ -267,6 +267,9 @@ public abstract class GameData {
         stationMap.put(uuid, station);
     }
 
+    protected void addComposition(Composition composition) {
+    }
+
     protected void addComposition(String name, Composition composition) {
         String uuid = composition.getUuid();
 

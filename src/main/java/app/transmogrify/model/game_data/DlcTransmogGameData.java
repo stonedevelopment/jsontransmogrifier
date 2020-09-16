@@ -141,6 +141,8 @@ public class DlcTransmogGameData extends TransmogGameData {
      * Helper method that crawls through the Resource map for a UUID, then the Engram map if not found.
      * There should only be 2 locations to search for since all Engrams used in a composition used to be considered
      * Resources.
+     * <p>
+     * TODO: 9/13/2020  Consider converting Replacement to replace Composition of Engrams
      *
      * @param name Name of replacement object to search for
      * @return UUID of found replacement object
@@ -182,11 +184,12 @@ public class DlcTransmogGameData extends TransmogGameData {
 
             if (isValidDlcId(jsonTotalConversion.dlc_id)) {
                 //  add list of resources to replace
-                for (JsonTotalConversionResource resourceConversion : jsonTotalConversion.resource) {
+                for (JsonTotalConversionResource resourceConversion : jsonTotalConversion.replace) {
                     totalConversion.resourcesToReplace.put(resourceConversion.from, resourceConversion.to);
                 }
 
                 //  add lists of removals
+                totalConversion.resourcesToRemove.addAll(jsonTotalConversion.resource);
                 totalConversion.stationsToRemove.addAll(jsonTotalConversion.station);
                 totalConversion.foldersToRemove.addAll(jsonTotalConversion.category);
                 totalConversion.engramsToRemove.addAll(jsonTotalConversion.engram);
@@ -199,6 +202,10 @@ public class DlcTransmogGameData extends TransmogGameData {
 
         //  add uuids of resources to remove
         ArrayNode resourceArray = mapper.createArrayNode();
+        for (String resourceName : totalConversion.resourcesToReplace.keySet()) {
+            String uuid = getResourceUUIDByName(resourceName);
+            resourceArray.add(uuid == null ? getEngramUUIDByName(resourceName) : uuid);
+        }
         outNode.set(cResources, resourceArray);
 
         //  add uuids of stations to remove
@@ -225,22 +232,18 @@ public class DlcTransmogGameData extends TransmogGameData {
         return outNode;
     }
 
+    /**
+     * Generates an ArrayNode with UUIDs of "resources" to replace in compositions for Total Conversion DLCs
+     *
+     * @return ArrayNode of UUIDs
+     */
     private JsonNode createReplaceSection() {
-        ObjectNode outNode = mapper.createObjectNode();
-
-        //  add uuids of resources to replace
-        ArrayNode resourceArray = mapper.createArrayNode();
+        ArrayNode outNode = mapper.createArrayNode();
         for (Map.Entry<String, String> resourceEntry : totalConversion.resourcesToReplace.entrySet()) {
             Replacement replacement = buildReplacement(resourceEntry.getKey(), resourceEntry.getValue());
 
-            resourceArray.add(mapper.valueToTree(replacement));
+            outNode.add(mapper.valueToTree(replacement));
         }
-        outNode.set(cResources, resourceArray);
-
-        outNode.set(cStations, mapper.createArrayNode());
-        outNode.set(cFolders, mapper.createArrayNode());
-        outNode.set(cEngrams, mapper.createArrayNode());
-
         return outNode;
     }
 

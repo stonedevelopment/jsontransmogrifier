@@ -32267,7 +32267,7 @@
   "total_conversion": [
     {
       "dlc_id": 2,
-      "resource": [
+      "replace": [
         {
           "from": "Metal Ingot",
           "to": "Iron Ingot"
@@ -32285,6 +32285,11 @@
           "to": "Fresh Meat"
         }
       ],
+      "resource": [
+        "Metal Ore",
+        "Spoiled Meat",
+        "Raw Meat"
+      ],
       "station": [],
       "category": [],
       "engram": [
@@ -32294,6 +32299,7 @@
     },
     {
       "dlc_id": 3,
+      "replace": [],
       "resource": [],
       "station": [
         "Tek Terminal"
@@ -32317,6 +32323,7 @@
     },
     {
       "dlc_id": 4,
+      "replace": [],
       "resource": [],
       "station": [
         "Tek Terminal"
@@ -32340,6 +32347,7 @@
     },
     {
       "dlc_id": 5,
+      "replace": [],
       "resource": [],
       "station": [
         "Obelisk",
@@ -32364,6 +32372,7 @@
     },
     {
       "dlc_id": 6,
+      "replace": [],
       "resource": [],
       "station": [
         "Tek Terminal"
@@ -32387,6 +32396,7 @@
     },
     {
       "dlc_id": 7,
+      "replace": [],
       "resource": [],
       "station": [
         "Tek Terminal"

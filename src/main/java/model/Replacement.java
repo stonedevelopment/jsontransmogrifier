@@ -36,9 +36,4 @@ public class Replacement {
     public Object getTo() {
         return to;
     }
-
-    class From {
-        String uuid;
-        String name;
-    }
 }

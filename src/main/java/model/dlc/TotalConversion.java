@@ -39,6 +39,7 @@ public class TotalConversion {
     public Map<String, String> resourcesToReplace = new TreeMap<>();
 
     //  remove all in lists
+    public List<String> resourcesToRemove = new ArrayList<>();
     public List<String> stationsToRemove = new ArrayList<>();
     public List<Long> foldersToRemove = new ArrayList<>();
     public List<String> engramsToRemove = new ArrayList<>();

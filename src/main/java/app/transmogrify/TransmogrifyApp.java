@@ -1,6 +1,8 @@
 package app.transmogrify;
 
 import app.transmogrify.controller.TransmogGameData;
+import app.transmogrify.model.details.DlcTransmogDetails;
+import app.transmogrify.model.details.TransmogDetails;
 import app.transmogrify.model.game_data.DlcTransmogGameData;
 import app.transmogrify.model.game_data.PrimaryTransmogGameData;
 import app.transmogrify.model.json.JsonDlc;
@@ -30,7 +32,7 @@ public class TransmogrifyApp {
         this.inNode = inNode;
     }
 
-    public void transmogrify() {
+    public void start() {
         JsonNode inDlcArrayNode = inNode.get(cJsonDlc);
         for (JsonNode dlcNode : inDlcArrayNode) {
             JsonDlc jsonDlc = mapper.convertValue(dlcNode, JsonDlc.class);
@@ -40,6 +42,14 @@ public class TransmogrifyApp {
                 transmogrifyDlcGameData(jsonDlc);
             }
         }
+    }
+
+    public PrimaryTransmogGameData getPrimaryGameData() {
+        return primaryGameData;
+    }
+
+    public List<DlcTransmogGameData> getDlcGameDataList() {
+        return dlcGameDataList;
     }
 
     private void transmogrifyPrimaryGameData(JsonDlc jsonDlc) {
@@ -79,11 +89,26 @@ public class TransmogrifyApp {
 
     private void writeTransmogrification() {
         ObjectNode outNode = mapper.createObjectNode();
-        outNode.set(cPrimary, mapper.valueToTree(primaryGameData.getDetailsObject()));
+
+        ObjectNode primaryNode = mapper.createObjectNode();
+        TransmogDetails primaryDetails = primaryGameData.getDetailsObject();
+        primaryNode.put(cUuid, primaryDetails.getUuid());
+        primaryNode.put(cName, primaryDetails.getName());
+        primaryNode.put(cFilePath, primaryDetails.getFilePath());
+        primaryNode.put(cTransmogFile, primaryDetails.getTransmogFile());
+        primaryNode.put(cLastUpdated, primaryDetails.getLastUpdated().getTime());
+        outNode.set(cPrimary, primaryNode);
 
         ArrayNode outDlcArrayNode = mapper.createArrayNode();
         for (DlcTransmogGameData dlcGameData : dlcGameDataList) {
-            outDlcArrayNode.add(mapper.valueToTree(dlcGameData.getDetailsObject()));
+            ObjectNode dlcNode = mapper.createObjectNode();
+            DlcTransmogDetails dlcDetails = dlcGameData.getDetailsObject();
+            dlcNode.put(cUuid, dlcDetails.getUuid());
+            dlcNode.put(cName, dlcDetails.getName());
+            dlcNode.put(cFilePath, dlcDetails.getFilePath());
+            dlcNode.put(cTransmogFile, dlcDetails.getTransmogFile());
+            dlcNode.put(cLastUpdated, dlcDetails.getLastUpdated().getTime());
+            outDlcArrayNode.add(dlcNode);
         }
         outNode.set(cDlc, outDlcArrayNode);
 

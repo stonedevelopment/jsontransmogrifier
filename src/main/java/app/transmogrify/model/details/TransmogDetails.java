@@ -3,6 +3,8 @@ package app.transmogrify.model.details;
 import app.transmogrify.model.json.JsonDlc;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import model.details.Details;
 
 import java.util.UUID;
@@ -32,6 +34,10 @@ public class TransmogDetails extends Details {
         String filePath = jsonDlc.filePath;
         return new TransmogDetails(uuid, name, description, filePath, cLogoFileName, cFolderFileName,
                 cBackFolderFileName, cTransmogrifiedFileName);
+    }
+
+    public static TransmogDetails from(JsonNode jsonNode) {
+        return new ObjectMapper().convertValue(jsonNode, TransmogDetails.class);
     }
 
     public String getTransmogFile() {

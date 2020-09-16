@@ -118,7 +118,7 @@ public abstract class IlluminateGameData extends GameData {
         }
     }
 
-    private void addComposition(Composition composition) {
+    public void addComposition(Composition composition) {
         addComposition(composition.getEngramId(), composition);
     }
 

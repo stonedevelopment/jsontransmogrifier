@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.Date;
+import java.util.Objects;
 
 import static util.Constants.*;
 
@@ -65,5 +66,23 @@ public class Details {
 
     public Date getLastUpdated() {
         return lastUpdated;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Details details = (Details) o;
+        return name.equals(details.name) &&
+                description.equals(details.description) &&
+                filePath.equals(details.filePath) &&
+                logoFile.equals(details.logoFile) &&
+                folderFile.equals(details.folderFile) &&
+                backFolderFile.equals(details.backFolderFile);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, description, filePath, logoFile, folderFile, backFolderFile);
     }
 }
