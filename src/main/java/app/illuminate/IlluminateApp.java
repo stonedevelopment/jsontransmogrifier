@@ -99,7 +99,8 @@ public class IlluminateApp {
         while (elements.hasNext()) {
             String fieldName = fieldNames.next();
             JsonNode resolvedNode = elements.next();
-            addResolvedNodeToGameData(gameData, resolvedNode, fieldName);
+            JsonNode prefixNode = mapper.createObjectNode().set(fieldName, resolvedNode);
+            addResolvedNodeToGameData(gameData, prefixNode, fieldName);
         }
     }
 

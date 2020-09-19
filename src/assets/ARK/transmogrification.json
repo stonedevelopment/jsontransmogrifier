@@ -1,1 +1,53 @@
-{"Primary":{"uuid":"79176c1d-2ae9-475b-aa86-4986ffa91f8a","name":"ARK:Survival Evolved","filePath":"Primary/","transmogFile":"transmogrified.json","lastUpdated":1600526874399},"DLC":[{"uuid":"92ba9ce7-7b10-48ec-858e-e917387cdd49","name":"Primitive Plus","filePath":"DLC/Primitive Plus/","transmogFile":"transmogrified.json","lastUpdated":1600526875748},{"uuid":"400c2289-a934-4ac2-94ec-7c77acf61c2f","name":"Scorched Earth","filePath":"DLC/Scorched Earth/","transmogFile":"transmogrified.json","lastUpdated":1600526877589},{"uuid":"22f6a763-fbce-46db-b7d3-566e158ef0db","name":"Aberration","filePath":"DLC/Aberration/","transmogFile":"transmogrified.json","lastUpdated":1600526878311},{"uuid":"0a6ce5be-d42c-4185-ad45-dee8020773c0","name":"Extinction","filePath":"DLC/Extinction/","transmogFile":"transmogrified.json","lastUpdated":1600526878972},{"uuid":"3dceca26-54ba-4736-a093-46637253714b","name":"The Center","filePath":"DLC/The Center/","transmogFile":"transmogrified.json","lastUpdated":1600526879575},{"uuid":"195fdbbf-711e-482e-ad8f-5b013bc5b3f7","name":"Ragnarok","filePath":"DLC/Ragnarok/","transmogFile":"transmogrified.json","lastUpdated":1600526880181}]}
+{
+  "Primary": {
+    "uuid": "79176c1d-2ae9-475b-aa86-4986ffa91f8a",
+    "name": "ARK:Survival Evolved",
+    "filePath": "Primary/",
+    "transmogFile": "transmogrified.json",
+    "lastUpdated": 1600526874399
+  },
+  "DLC": [
+    {
+      "uuid": "92ba9ce7-7b10-48ec-858e-e917387cdd49",
+      "name": "Primitive Plus",
+      "filePath": "DLC/Primitive Plus/",
+      "transmogFile": "transmogrified.json",
+      "lastUpdated": 1600526875748
+    },
+    {
+      "uuid": "400c2289-a934-4ac2-94ec-7c77acf61c2f",
+      "name": "Scorched Earth",
+      "filePath": "DLC/Scorched Earth/",
+      "transmogFile": "transmogrified.json",
+      "lastUpdated": 1600526877589
+    },
+    {
+      "uuid": "22f6a763-fbce-46db-b7d3-566e158ef0db",
+      "name": "Aberration",
+      "filePath": "DLC/Aberration/",
+      "transmogFile": "transmogrified.json",
+      "lastUpdated": 1600526878311
+    },
+    {
+      "uuid": "0a6ce5be-d42c-4185-ad45-dee8020773c0",
+      "name": "Extinction",
+      "filePath": "DLC/Extinction/",
+      "transmogFile": "transmogrified.json",
+      "lastUpdated": 1600526878972
+    },
+    {
+      "uuid": "3dceca26-54ba-4736-a093-46637253714b",
+      "name": "The Center",
+      "filePath": "DLC/The Center/",
+      "transmogFile": "transmogrified.json",
+      "lastUpdated": 1600526879575
+    },
+    {
+      "uuid": "195fdbbf-711e-482e-ad8f-5b013bc5b3f7",
+      "name": "Ragnarok",
+      "filePath": "DLC/Ragnarok/",
+      "transmogFile": "transmogrified.json",
+      "lastUpdated": 1600526880181
+    }
+  ]
+}

@@ -284,13 +284,13 @@ public class DlcIlluminateGameData extends IlluminateGameData {
     }
 
     private JsonNode resolveReplacementsToTotalConversion() {
-        ArrayNode outNode = mapper.createArrayNode();
+        ArrayNode arrayNode = mapper.createArrayNode();
 
         for (Map.Entry<String, IlluminateReplacement> entry : replacementMap.entrySet()) {
             IlluminateReplacement replacement = entry.getValue();
-            outNode.add(mapper.valueToTree(replacement));
+            arrayNode.add(mapper.valueToTree(replacement));
         }
 
-        return outNode;
+        return arrayNode;
     }
 }

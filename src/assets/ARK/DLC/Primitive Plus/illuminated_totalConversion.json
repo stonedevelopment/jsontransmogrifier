@@ -1,18 +1,1 @@
-[
-  {
-    "from": "Spoiled Meat",
-    "to": "Rotten Meat"
-  },
-  {
-    "from": "Metal Ingot",
-    "to": "Iron Ingot"
-  },
-  {
-    "from": "Raw Meat",
-    "to": "Fresh Meat"
-  },
-  {
-    "from": "Metal Ore",
-    "to": "Iron Ore"
-  }
-]
+{"totalConversion":{"totalConversion":[{"from":"Spoiled Meat","to":"Rotten Meat"},{"from":"Metal Ingot","to":"Iron Ingot"},{"from":"Raw Meat","to":"Fresh Meat"},{"from":"Metal Ore","to":"Iron Ore"}]}}
