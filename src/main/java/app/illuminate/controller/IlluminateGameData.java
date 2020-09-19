@@ -8,13 +8,14 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import controller.GameData;
 import model.*;
 
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import static util.Constants.*;
 
 public abstract class IlluminateGameData extends GameData {
+    //  uuid, list<object>
+    private final Map<String, List<Composite>> compositeIdMapBySourceId = new HashMap<>();
 
     protected IlluminateGameData(JsonNode inNode) {
         super(inNode);
@@ -34,9 +35,20 @@ public abstract class IlluminateGameData extends GameData {
         return getCompositeUUIDListByName(compositionId);
     }
 
-    protected List<Composite> getCompositeList(String compositionId) {
+    protected List<Composite> getCompositeListByCompositionId(String compositionId) {
         return getCompositeUUIDListByCompositionId(compositionId)
                 .stream().map(this::getComposite).collect(Collectors.toList());
+    }
+
+    public List<Composite> getCompositeListBySourceId(String sourceId) {
+        if (compositeIdMapBySourceId.containsKey(sourceId)) return compositeIdMapBySourceId.get(sourceId);
+        return new ArrayList<>();
+    }
+
+    //  collects a list of composition uuids, iterating through all composites to find uuid as source id
+    protected List<String> getCompositionIdListFromSourceId(String sourceId) {
+        return getCompositeListBySourceId(sourceId)
+                .stream().map(Composite::getCompositionId).collect(Collectors.toList());
     }
 
     @Override
@@ -136,9 +148,17 @@ public abstract class IlluminateGameData extends GameData {
         //  tie elements to their composition id
         String uuid = composite.getUuid();
         String compositionId = composite.getCompositionId();
+        String sourceId = composite.getSourceId();
 
+        addCompositeToSourceIdMap(sourceId, composite);
         addCompositeToIdMap(uuid, compositionId);
         addCompositeToMap(uuid, composite);
+    }
+
+    protected void addCompositeToSourceIdMap(String sourceId, Composite composite) {
+        List<Composite> compositeList = getCompositeListBySourceId(sourceId);
+        compositeList.add(composite);
+        compositeIdMapBySourceId.put(sourceId, compositeList);
     }
 
     public JsonNode getIlluminatedFiles() {
@@ -294,7 +314,7 @@ public abstract class IlluminateGameData extends GameData {
         Composition composition = getComposition(engramId);
         ObjectNode outNode = mapper.valueToTree(composition);
 
-        List<Composite> compositeList = getCompositeList(composition.getUuid());
+        List<Composite> compositeList = getCompositeListByCompositionId(composition.getUuid());
         outNode.set(cComposites, mapper.valueToTree(compositeList));
 
         return outNode;

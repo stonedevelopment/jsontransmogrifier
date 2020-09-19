@@ -202,9 +202,8 @@ public class DlcTransmogGameData extends TransmogGameData {
 
         //  add uuids of resources to remove
         ArrayNode resourceArray = mapper.createArrayNode();
-        for (String resourceName : totalConversion.resourcesToReplace.keySet()) {
-            String uuid = getResourceUUIDByName(resourceName);
-            resourceArray.add(uuid == null ? getEngramUUIDByName(resourceName) : uuid);
+        for (String resourceName : totalConversion.resourcesToRemove) {
+            resourceArray.add(getResourceUUIDByName(resourceName));
         }
         outNode.set(cResources, resourceArray);
 

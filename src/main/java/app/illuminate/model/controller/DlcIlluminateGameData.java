@@ -1,7 +1,8 @@
 package app.illuminate.model.controller;
 
 import app.illuminate.controller.IlluminateGameData;
-import app.illuminate.model.*;
+import app.illuminate.model.IlluminateReplacement;
+import app.illuminate.model.IlluminateReplacementResource;
 import app.illuminate.model.details.DlcIlluminateDetails;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ArrayNode;
@@ -9,6 +10,7 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import model.*;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -23,8 +25,6 @@ public class DlcIlluminateGameData extends IlluminateGameData {
     private final Map<String, String> removeStationsIdMap = new TreeMap<>();
     private final Map<String, String> removeFoldersIdMap = new TreeMap<>();
     private final Map<String, String> removeEngramsIdMap = new TreeMap<>();
-
-    private final Map<String, String> replacementIdMap = new TreeMap<>();
 
     //  uuid, object
     private final Map<String, IlluminateReplacement> replacementMap = new HashMap<>();
@@ -94,6 +94,20 @@ public class DlcIlluminateGameData extends IlluminateGameData {
     }
 
     @Override
+    public String getCompositeName(String uuid) {
+        String name = super.getCompositeName(uuid);
+        if (name == null) return primaryGameData.getCompositeName(uuid);
+        return name;
+    }
+
+    @Override
+    public List<Composite> getCompositeListBySourceId(String sourceId) {
+        List<Composite> compositeList = super.getCompositeListBySourceId(sourceId);
+        compositeList.addAll(primaryGameData.getCompositeListBySourceId(sourceId));
+        return compositeList;
+    }
+
+    @Override
     public DirectoryItem getDirectoryItem(String uuid) {
         DirectoryItem directoryItem = super.getDirectoryItem(uuid);
         if (directoryItem == null) return primaryGameData.getDirectoryItem(uuid);
@@ -147,25 +161,27 @@ public class DlcIlluminateGameData extends IlluminateGameData {
         }
     }
 
+    /**
+     * Converts a list of composite uuids into a list of composite names
+     */
     private void mapReplacementsFromJson() {
         JsonNode replacementsNode = inNode.get(cReplace);
         //  TODO: 9/13/2020 Collect composition ids to that contain composites matching replacement names below
         //      create new composite for each old composite
         //      create new composition with new composite replacement
         //      add new replacement to map with new and old composition id
-        mapReplacementResources(replacementsNode.get(cResources));
-    }
-
-    private void mapReplacementResources(JsonNode replacementNode) {
-        for (JsonNode childNode : replacementNode) {
+        for (JsonNode childNode : replacementsNode) {
             //  convert node into base object
             Replacement replacement = Replacement.fromJson(childNode);
+
             //  break down fields
             String uuid = replacement.getUuid();
-            Resource from = getResource((String) replacement.getFrom());
-            Resource to = getResource((String) replacement.getTo());
-            //  add to map
-            addReplacementResource(new IlluminateReplacementResource(uuid, from, to));
+            String fromId = (String) replacement.getFrom();
+            String fromName = getCompositeName(fromId);
+            String toId = (String) replacement.getTo();
+            String toName = getCompositeName(toId);
+
+            addReplacement(new IlluminateReplacement(uuid, fromName, toName));
         }
     }
 
@@ -202,15 +218,6 @@ public class DlcIlluminateGameData extends IlluminateGameData {
         replacementMap.put(uuid, replacement);
     }
 
-    private void addReplacementResource(IlluminateReplacementResource resource) {
-        String uuid = resource.getUuid();
-        String name = resource.getFrom().getName();
-
-        addReplacement(resource);
-        addReplacementResourceToIdMap(uuid, name);
-    }
-
-
     private void addRemovalResourceToIdMap(String uuid, String name) {
         removeResourcesIdMap.put(name, uuid);
     }
@@ -225,10 +232,6 @@ public class DlcIlluminateGameData extends IlluminateGameData {
 
     private void addRemovalEngramToIdMap(String uuid, String name) {
         removeEngramsIdMap.put(name, uuid);
-    }
-
-    private void addReplacementResourceToIdMap(String uuid, String name) {
-        replacementIdMap.put(name, uuid);
     }
 
     @Override
@@ -281,22 +284,11 @@ public class DlcIlluminateGameData extends IlluminateGameData {
     }
 
     private JsonNode resolveReplacementsToTotalConversion() {
-        ObjectNode outNode = mapper.createObjectNode();
-
-        outNode.set(cResources, resolveReplaceResources());
-
-        return outNode;
-    }
-
-    private JsonNode resolveReplaceResources() {
         ArrayNode outNode = mapper.createArrayNode();
 
-        for (String uuid : replacementIdMap.values()) {
-            ObjectNode replacementNode = mapper.createObjectNode();
-            IlluminateReplacementResource replacement = (IlluminateReplacementResource) getReplacement(uuid);
-            replacementNode.put(cFrom, replacement.getFrom().getName());
-            replacementNode.put(cTo, replacement.getTo().getName());
-            outNode.add(replacementNode);
+        for (Map.Entry<String, IlluminateReplacement> entry : replacementMap.entrySet()) {
+            IlluminateReplacement replacement = entry.getValue();
+            outNode.add(mapper.valueToTree(replacement));
         }
 
         return outNode;

@@ -161,6 +161,12 @@ public abstract class GameData {
         return compositeMap.get(uuid);
     }
 
+    public String getCompositeName(String uuid) {
+        Resource resource = getResource(uuid);
+        if (resource != null) return resource.getName();
+        return getEngram(uuid).getName();
+    }
+
     public List<String> getCompositeUUIDListByName(String name) {
         List<String> uuidList = compositeIdMap.get(name);
         if (uuidList == null) return new ArrayList<>();
