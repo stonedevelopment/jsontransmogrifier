@@ -1,14 +1,12 @@
 package app.updatify.game_data;
 
+import app.illuminate.model.IlluminateEngram;
 import app.illuminate.model.IlluminateFolder;
 import app.illuminate.model.IlluminateResource;
 import app.illuminate.model.IlluminateStation;
 import app.illuminate.model.details.IlluminateDetails;
 import app.transmogrify.model.details.TransmogDetails;
-import app.updatify.model.UpdatifyDetails;
-import app.updatify.model.UpdatifyFolder;
-import app.updatify.model.UpdatifyResource;
-import app.updatify.model.UpdatifyStation;
+import app.updatify.model.*;
 import com.fasterxml.jackson.databind.JsonNode;
 import controller.GameData;
 import model.*;
@@ -158,6 +156,18 @@ public class UpdatifyGameData extends GameData {
         for (JsonNode jsonNode : jsonArray) {
             addEngram(Engram.fromJson(jsonNode));
         }
+
+        JsonNode iArray = getIlluminatedNode(cEngrams);
+        for (JsonNode jsonNode : iArray) {
+            IlluminateEngram iEngram = IlluminateEngram.fromJson(jsonNode);
+            Engram tEngram = getEngramByName(iEngram.getName());
+
+            if (tEngram == null) {
+                addEngram(UpdatifyEngram.createFrom(iEngram));
+            } else if (!tEngram.equals(iEngram)) {
+                updateEngram(UpdatifyEngram.updateToNew(tEngram, iEngram));
+            }
+        }
     }
 
     @Override
@@ -203,6 +213,10 @@ public class UpdatifyGameData extends GameData {
 
     private void updateFolder(Folder folder) {
         addFolderToMap(folder.getUuid(), folder);
+    }
+
+    private void updateEngram(Engram engram) {
+        addEngramToMap(engram.getUuid(), engram);
     }
 
     @Override

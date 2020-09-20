@@ -249,7 +249,7 @@ public abstract class GameData {
         engramIdMap.put(name, uuid);
     }
 
-    private void addEngramToMap(String uuid, Engram engram) {
+    protected void addEngramToMap(String uuid, Engram engram) {
         engramMap.put(uuid, engram);
     }
 
