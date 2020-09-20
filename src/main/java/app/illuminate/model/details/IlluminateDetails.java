@@ -24,9 +24,8 @@ public class IlluminateDetails extends TransmogDetails {
                              @JsonProperty(cFilePath) String filePath,
                              @JsonProperty(cLogoFile) String logoFile,
                              @JsonProperty(cFolderFile) String folderFile,
-                             @JsonProperty(cBackFolderFile) String backFolderFile,
-                             @JsonProperty(cTransmogFile) String transmogFile) {
-        super(uuid, name, description, filePath, logoFile, folderFile, backFolderFile, transmogFile);
+                             @JsonProperty(cBackFolderFile) String backFolderFile) {
+        super(uuid, name, description, filePath, logoFile, folderFile, backFolderFile);
     }
 
     public static IlluminateDetails from(JsonNode jsonNode) {
@@ -50,12 +49,6 @@ public class IlluminateDetails extends TransmogDetails {
     }
 
     @JsonIgnore
-    @Override
-    public String getTransmogFile() {
-        return super.getTransmogFile();
-    }
-
-    @JsonIgnore
     public JsonNode getIlluminatedFiles() {
         return illuminatedFiles;
     }
@@ -65,10 +58,5 @@ public class IlluminateDetails extends TransmogDetails {
         illuminatedNode.put(cType, type);
         illuminatedNode.put(cFilePath, illuminatedFile);
         illuminatedFiles.add(illuminatedNode);
-    }
-
-    @JsonIgnore
-    public String buildTransmogFilePath() {
-        return getFilePath().concat(getTransmogFile());
     }
 }
