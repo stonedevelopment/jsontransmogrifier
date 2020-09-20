@@ -112,6 +112,10 @@ public abstract class GameData {
         return resource.getImageFile();
     }
 
+    public String getResourceImageFileByName(String name) {
+        return getResourceImageFileByUUID(getResourceUUIDByName(name));
+    }
+
     public Engram getEngram(String uuid) {
         return engramMap.get(uuid);
     }
@@ -133,6 +137,15 @@ public abstract class GameData {
         Engram engram = getEngram(uuid);
         if (engram == null) return null;
         return engram.getImageFile();
+    }
+
+    public String getEngramImageFileByName(String name) {
+        return getEngramImageFileByUUID(getEngramUUIDByName(name));
+    }
+
+    public String getImageFileByName(String name) {
+        String imageFile = getResourceImageFileByName(name);
+        return imageFile != null ? imageFile : getEngramImageFileByName(name);
     }
 
     public Station getStation(String uuid) {
@@ -285,23 +298,20 @@ public abstract class GameData {
         stationMap.put(uuid, station);
     }
 
-    protected void addComposition(Composition composition) {
-    }
-
     protected void addComposition(String name, Composition composition) {
         String uuid = composition.getUuid();
 
-        addCompositionToIdMap(name, uuid);
+        addCompositionToIdMap(uuid, name);
         addCompositionToMap(uuid, composition);
     }
 
-    protected void addCompositionToIdMap(String name, String uuid) {
+    protected void addCompositionToIdMap(String uuid, String name) {
         compositionIdMap.put(name, uuid);
     }
 
     protected void addCompositionToMap(String uuid, Composition composition) {
         if (compositionMap.containsKey(uuid)) {
-            Log.debug("addCompositionToMap", composition.toString());
+            Log.debug("addCompositionToMap: already exists!", composition.toString());
         }
         compositionMap.put(uuid, composition);
     }

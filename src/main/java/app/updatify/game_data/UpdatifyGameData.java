@@ -1,9 +1,6 @@
 package app.updatify.game_data;
 
-import app.illuminate.model.IlluminateEngram;
-import app.illuminate.model.IlluminateFolder;
-import app.illuminate.model.IlluminateResource;
-import app.illuminate.model.IlluminateStation;
+import app.illuminate.model.*;
 import app.illuminate.model.details.IlluminateDetails;
 import app.transmogrify.model.details.TransmogDetails;
 import app.updatify.model.*;
@@ -159,7 +156,7 @@ public class UpdatifyGameData extends GameData {
 
         JsonNode iArray = getIlluminatedNode(cEngrams);
         for (JsonNode jsonNode : iArray) {
-            IlluminateEngram iEngram = IlluminateEngram.fromJson(jsonNode);
+            IlluminateEngram iEngram = UpdatifyEngram.fromJson(jsonNode);
             Engram tEngram = getEngramByName(iEngram.getName());
 
             if (tEngram == null) {
@@ -172,8 +169,8 @@ public class UpdatifyGameData extends GameData {
 
     @Override
     protected void mapCompositionFromJson() {
-        JsonNode jsonArray = getTransmogNode().get(cComposition);
-        for (JsonNode jsonNode : jsonArray) {
+        JsonNode tArray = getTransmogNode().get(cComposition);
+        for (JsonNode jsonNode : tArray) {
             addComposition(Composition.fromJson(jsonNode));
         }
     }
@@ -182,6 +179,42 @@ public class UpdatifyGameData extends GameData {
         JsonNode jsonArray = getTransmogNode().get(cComposites);
         for (JsonNode jsonNode : jsonArray) {
             addComposite(Composite.fromJson(jsonNode));
+        }
+
+        JsonNode iArray = getIlluminatedNode(cEngrams);
+        for (JsonNode jsonNode : iArray) {
+            String name = jsonNode.get(cName).asText();
+            String compositionId = getCompositionUUIDByName(name);
+
+            JsonNode compositionNode = jsonNode.get(cComposition);
+            JsonNode compositesNode = compositionNode.get(cComposites);
+
+            if (compositionId == null) {
+                // TODO: 9/20/2020
+                //      create new Composition
+                //      pull in Composite list, create new Composites
+                String engramId = getEngramUUIDByName(name);
+                Composition iComposition = UpdatifyComposition.createFrom(IlluminateComposition.with(engramId));
+                compositionId = iComposition.getUuid();
+
+                for (JsonNode compositeNode : compositesNode) {
+                    IlluminateComposite iComposite = IlluminateComposite.fromJson(compositeNode);
+                    String imageFile = getImageFileByName(name);
+                    addComposite(UpdatifyComposite.createFrom(iComposite, imageFile, engramId, compositionId));
+                }
+            } else {
+                for (JsonNode compositeNode : compositesNode) {
+                    IlluminateComposite iComposite = IlluminateComposite.fromJson(compositeNode);
+                    for (String compositeId : getCompositeUUIDListByName(iComposite.getName())) {
+                        Composite tComposite = getComposite(compositeId);
+                        if (compositeId.equals(tComposite.getCompositionId())) {
+                            if (!tComposite.equals(iComposite)) {
+                                updateComposite(UpdatifyComposite.updateToNew(tComposite, iComposite));
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -197,7 +230,6 @@ public class UpdatifyGameData extends GameData {
         illuminationMap.put(type, illuminatedNode);
     }
 
-    @Override
     protected void addComposition(Composition composition) {
         String name = getEngramNameByUUID(composition.getEngramId());
         addComposition(name, composition);
@@ -217,6 +249,10 @@ public class UpdatifyGameData extends GameData {
 
     private void updateEngram(Engram engram) {
         addEngramToMap(engram.getUuid(), engram);
+    }
+
+    private void updateComposite(Composite composite) {
+        addCompositeToMap(composite.getUuid(), composite);
     }
 
     @Override
