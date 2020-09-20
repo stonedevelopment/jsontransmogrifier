@@ -1,15 +1,16 @@
 package app.updatify.game_data;
 
 import app.illuminate.model.IlluminateResource;
+import app.illuminate.model.IlluminateStation;
 import app.illuminate.model.details.IlluminateDetails;
 import app.transmogrify.model.details.TransmogDetails;
 import app.updatify.model.UpdatifyDetails;
 import app.updatify.model.UpdatifyResource;
+import app.updatify.model.UpdatifyStation;
 import com.fasterxml.jackson.databind.JsonNode;
 import controller.GameData;
 import model.*;
 import util.JSONUtil;
-import util.Log;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -104,7 +105,7 @@ public class UpdatifyGameData extends GameData {
             if (tResource == null) {
                 addResource(UpdatifyResource.createFrom(iResource));
             } else if (!tResource.equals(iResource)) {
-                updateResource(UpdatifyResource.convertToNew(tResource, iResource));
+                updateResource(UpdatifyResource.updateToNew(tResource, iResource));
             }
         }
     }
@@ -114,6 +115,18 @@ public class UpdatifyGameData extends GameData {
         JsonNode tArray = getTransmogNode().get(cStations);
         for (JsonNode jsonNode : tArray) {
             addStation(Station.fromJson(jsonNode));
+        }
+
+        JsonNode iArray = getIlluminatedNode(cStations);
+        for (JsonNode jsonNode : iArray) {
+            IlluminateStation iStation = IlluminateStation.fromJson(jsonNode);
+            Station tStation = getStationByName(iStation.getName());
+
+            if (tStation == null) {
+                addStation(UpdatifyStation.createFrom(iStation));
+            } else if (!tStation.equals(iStation)) {
+                updateStation(UpdatifyStation.updateToNew(tStation, iStation));
+            }
         }
     }
 
@@ -168,6 +181,10 @@ public class UpdatifyGameData extends GameData {
 
     private void updateResource(Resource resource) {
         addResourceToMap(resource.getUuid(), resource);
+    }
+
+    private void updateStation(Station station) {
+        addStationToMap(station.getUuid(), station);
     }
 
     @Override

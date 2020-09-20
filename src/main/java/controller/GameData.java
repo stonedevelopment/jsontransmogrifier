@@ -281,7 +281,7 @@ public abstract class GameData {
         stationIdMap.put(name, uuid);
     }
 
-    private void addStationToMap(String uuid, Station station) {
+    protected void addStationToMap(String uuid, Station station) {
         stationMap.put(uuid, station);
     }
 

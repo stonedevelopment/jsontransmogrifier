@@ -20,7 +20,7 @@ public class UpdatifyResource extends Resource {
                 new Date());
     }
 
-    public static Resource convertToNew(Resource tResource, IlluminateResource iResource) {
+    public static Resource updateToNew(Resource tResource, IlluminateResource iResource) {
         return new Resource(tResource.getUuid(),
                 iResource.getName(),
                 iResource.getDescription(),
