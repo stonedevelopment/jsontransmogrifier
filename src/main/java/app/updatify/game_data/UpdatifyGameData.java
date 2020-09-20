@@ -1,10 +1,12 @@
 package app.updatify.game_data;
 
+import app.illuminate.model.IlluminateFolder;
 import app.illuminate.model.IlluminateResource;
 import app.illuminate.model.IlluminateStation;
 import app.illuminate.model.details.IlluminateDetails;
 import app.transmogrify.model.details.TransmogDetails;
 import app.updatify.model.UpdatifyDetails;
+import app.updatify.model.UpdatifyFolder;
 import app.updatify.model.UpdatifyResource;
 import app.updatify.model.UpdatifyStation;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -136,6 +138,18 @@ public class UpdatifyGameData extends GameData {
         for (JsonNode jsonNode : jsonArray) {
             addFolder(Folder.fromJson(jsonNode));
         }
+
+        JsonNode iArray = getIlluminatedNode(cFolders);
+        for (JsonNode jsonNode : iArray) {
+            IlluminateFolder iFolder = IlluminateFolder.fromJson(jsonNode);
+            Folder tFolder = getFolderByName(iFolder.getName());
+
+            if (tFolder == null) {
+                addFolder(UpdatifyFolder.createFrom(iFolder));
+            } else if (!tFolder.equals(iFolder)) {
+                updateFolder(UpdatifyFolder.updateToNew(tFolder, iFolder));
+            }
+        }
     }
 
     @Override
@@ -185,6 +199,10 @@ public class UpdatifyGameData extends GameData {
 
     private void updateStation(Station station) {
         addStationToMap(station.getUuid(), station);
+    }
+
+    private void updateFolder(Folder folder) {
+        addFolderToMap(folder.getUuid(), folder);
     }
 
     @Override

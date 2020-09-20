@@ -265,7 +265,7 @@ public abstract class GameData {
         folderIdMap.put(name, uuid);
     }
 
-    private void addFolderToMap(String uuid, Folder folder) {
+    protected void addFolderToMap(String uuid, Folder folder) {
         folderMap.put(uuid, folder);
     }
 
