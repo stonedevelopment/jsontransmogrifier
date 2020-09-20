@@ -42,6 +42,16 @@ public class Details {
         return new ObjectMapper().convertValue(jsonNode, Details.class);
     }
 
+    public Details updateToNew(Details newDetails) {
+        return new Details(getUuid(),
+                newDetails.getName(),
+                newDetails.getDescription(),
+                newDetails.getFilePath(),
+                newDetails.getLogoFile(),
+                newDetails.getFolderFile(),
+                newDetails.getBackFolderFile());
+    }
+
     public String getUuid() {
         return uuid;
     }

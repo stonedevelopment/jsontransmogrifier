@@ -135,8 +135,8 @@ public class IlluminateApp {
 
     private JsonNode generateIlluminationDetails(IlluminateGameData gameData) {
         ObjectNode outNode = mapper.createObjectNode();
-        outNode.put(cName, gameData.getDetailsObject().getName());
-        outNode.set(cIlluminatedFiles, gameData.getDetailsObject().getIlluminatedFiles());
+        outNode.put(cName, gameData.getDetails().getName());
+        outNode.set(cIlluminatedFiles, gameData.getDetails().getIlluminatedFiles());
         return outNode;
     }
 

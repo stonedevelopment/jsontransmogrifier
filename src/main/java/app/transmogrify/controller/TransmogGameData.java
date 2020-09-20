@@ -5,7 +5,6 @@ import app.transmogrify.model.json.*;
 import com.fasterxml.jackson.databind.JsonNode;
 import controller.GameData;
 import model.*;
-import util.Log;
 
 import java.util.Date;
 import java.util.List;
@@ -29,8 +28,8 @@ public abstract class TransmogGameData extends GameData {
     }
 
     @Override
-    public TransmogDetails getDetailsObject() {
-        return (TransmogDetails) super.getDetailsObject();
+    public TransmogDetails getDetails() {
+        return (TransmogDetails) super.getDetails();
     }
 
     protected long getDlcId() {
@@ -247,7 +246,7 @@ public abstract class TransmogGameData extends GameData {
         String uuid = !cDebug ? generateUUID() : folder.getName();
         String sourceId = folder.getUuid();
         String name = folder.getName();
-        String imageFile = getDetailsObject().getFolderFile();
+        String imageFile = getDetails().getFolderFile();
 
         int engramCount = mapEngramDirectory(station, categoryId, uuid);
         int folderCount = mapFolderDirectory(station, categoryId, uuid);

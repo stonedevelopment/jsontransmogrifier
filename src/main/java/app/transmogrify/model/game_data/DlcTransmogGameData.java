@@ -32,7 +32,7 @@ public class DlcTransmogGameData extends TransmogGameData {
     }
 
     @Override
-    public DlcTransmogDetails getDetailsObject() {
+    public DlcTransmogDetails getDetails() {
         return (DlcTransmogDetails) details;
     }
 
@@ -177,7 +177,7 @@ public class DlcTransmogGameData extends TransmogGameData {
     }
 
     private void mapTotalConversionFromJson() {
-        JsonNode totalConversionArray = inNode.get(cDlcTypeTotalConversion);
+        JsonNode totalConversionArray = getInNode().get(cDlcTypeTotalConversion);
         for (JsonNode totalConversionObject : totalConversionArray) {
             JsonTotalConversion jsonTotalConversion =
                     mapper.convertValue(totalConversionObject, JsonTotalConversion.class);
@@ -250,7 +250,7 @@ public class DlcTransmogGameData extends TransmogGameData {
     public JsonNode resolveToJson() {
         ObjectNode gameDataObject = mapper.createObjectNode();
 
-        gameDataObject.set(cDetails, mapper.valueToTree(getDetailsObject()));
+        gameDataObject.set(cDetails, mapper.valueToTree(getDetails()));
 
         //  add resources, without complex resources
         gameDataObject.set(cResources, mapper.valueToTree(transformResourceMap()));

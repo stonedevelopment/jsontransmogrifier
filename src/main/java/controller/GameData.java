@@ -57,8 +57,16 @@ public abstract class GameData {
         return inNode;
     }
 
-    public Details getDetailsObject() {
+    public Details getDetails() {
         return details;
+    }
+
+    protected void setDetails(Details details) {
+        this.details = details;
+    }
+
+    protected void updateDetails(Details details) {
+        setDetails(details);
     }
 
     public Map<String, String> getResourceIdMap() {
@@ -225,7 +233,7 @@ public abstract class GameData {
         resourceIdMap.put(name, uuid);
     }
 
-    private void addResourceToMap(String uuid, Resource resource) {
+    protected void addResourceToMap(String uuid, Resource resource) {
         resourceMap.put(uuid, resource);
     }
 

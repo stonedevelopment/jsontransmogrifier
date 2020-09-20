@@ -52,8 +52,8 @@ public abstract class IlluminateGameData extends GameData {
     }
 
     @Override
-    public IlluminateDetails getDetailsObject() {
-        return (IlluminateDetails) super.getDetailsObject();
+    public IlluminateDetails getDetails() {
+        return (IlluminateDetails) super.getDetails();
     }
 
     @Override
@@ -162,16 +162,16 @@ public abstract class IlluminateGameData extends GameData {
     }
 
     public JsonNode getIlluminatedFiles() {
-        return getDetailsObject().getIlluminatedFiles();
+        return getDetails().getIlluminatedFiles();
     }
 
     public void addIlluminatedFile(String type, String illuminatedFile) {
-        getDetailsObject().addIlluminatedFile(type, illuminatedFile);
+        getDetails().addIlluminatedFile(type, illuminatedFile);
     }
 
     public String generateIlluminatedFilePath(String type) {
         String filePath = String.format(cIlluminatedFileNameFormat, type);
-        return getDetailsObject().getFilePath().concat(filePath);
+        return getDetails().getFilePath().concat(filePath);
     }
 
     protected JsonNode resolveResourceNode() {
@@ -356,7 +356,7 @@ public abstract class IlluminateGameData extends GameData {
         ObjectNode outNode = mapper.createObjectNode();
 
         //  details
-        outNode.set(cDetails, getDetailsObject().toJson());
+        outNode.set(cDetails, getDetails().toJson());
 
         //  resolve resources
         outNode.set(cResources, resolveResourceNode());

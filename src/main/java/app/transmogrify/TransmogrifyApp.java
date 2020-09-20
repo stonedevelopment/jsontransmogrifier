@@ -81,8 +81,8 @@ public class TransmogrifyApp {
     }
 
     private void writeGameDataToFile(TransmogGameData gameData) {
-        String filePath = gameData.getDetailsObject().getFilePath();
-        String fileName = gameData.getDetailsObject().getTransmogFile();
+        String filePath = gameData.getDetails().getFilePath();
+        String fileName = gameData.getDetails().getTransmogFile();
         String fullPath = filePath.concat(fileName);
         writeJsonToFile(fullPath, gameData.resolveToJson());
     }
@@ -91,22 +91,18 @@ public class TransmogrifyApp {
         ObjectNode outNode = mapper.createObjectNode();
 
         ObjectNode primaryNode = mapper.createObjectNode();
-        TransmogDetails primaryDetails = primaryGameData.getDetailsObject();
-        primaryNode.put(cUuid, primaryDetails.getUuid());
+        TransmogDetails primaryDetails = primaryGameData.getDetails();
         primaryNode.put(cName, primaryDetails.getName());
-        primaryNode.put(cFilePath, primaryDetails.getFilePath());
-        primaryNode.put(cTransmogFile, primaryDetails.getTransmogFile());
+        primaryNode.put(cFilePath, primaryDetails.getFilePath().concat(primaryDetails.getTransmogFile()));
         primaryNode.put(cLastUpdated, primaryDetails.getLastUpdated().getTime());
         outNode.set(cPrimary, primaryNode);
 
         ArrayNode outDlcArrayNode = mapper.createArrayNode();
         for (DlcTransmogGameData dlcGameData : dlcGameDataList) {
             ObjectNode dlcNode = mapper.createObjectNode();
-            DlcTransmogDetails dlcDetails = dlcGameData.getDetailsObject();
-            dlcNode.put(cUuid, dlcDetails.getUuid());
+            DlcTransmogDetails dlcDetails = dlcGameData.getDetails();
             dlcNode.put(cName, dlcDetails.getName());
-            dlcNode.put(cFilePath, dlcDetails.getFilePath());
-            dlcNode.put(cTransmogFile, dlcDetails.getTransmogFile());
+            dlcNode.put(cFilePath, dlcDetails.getFilePath().concat(dlcDetails.getTransmogFile()));
             dlcNode.put(cLastUpdated, dlcDetails.getLastUpdated().getTime());
             outDlcArrayNode.add(dlcNode);
         }

@@ -2,7 +2,6 @@ package app.illuminate.model.controller;
 
 import app.illuminate.controller.IlluminateGameData;
 import app.illuminate.model.IlluminateReplacement;
-import app.illuminate.model.IlluminateReplacementResource;
 import app.illuminate.model.details.DlcIlluminateDetails;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ArrayNode;
@@ -42,13 +41,13 @@ public class DlcIlluminateGameData extends IlluminateGameData {
     }
 
     @Override
-    public DlcIlluminateDetails getDetailsObject() {
-        return (DlcIlluminateDetails) super.getDetailsObject();
+    public DlcIlluminateDetails getDetails() {
+        return (DlcIlluminateDetails) super.getDetails();
     }
 
     @Override
     protected void createDetailsObject() {
-        this.details = DlcIlluminateDetails.from(inNode.get(cDetails));
+        this.details = DlcIlluminateDetails.from(getInNode().get(cDetails));
     }
 
     @Override
@@ -126,7 +125,7 @@ public class DlcIlluminateGameData extends IlluminateGameData {
     }
 
     private void mapRemovalsFromJson() {
-        JsonNode removalsNode = inNode.get(cRemove);
+        JsonNode removalsNode = getInNode().get(cRemove);
         mapRemovalResources(removalsNode.get(cResources));
         mapRemovalStations(removalsNode.get(cStations));
         mapRemovalFolders(removalsNode.get(cFolders));
@@ -165,7 +164,7 @@ public class DlcIlluminateGameData extends IlluminateGameData {
      * Converts a list of composite uuids into a list of composite names
      */
     private void mapReplacementsFromJson() {
-        JsonNode replacementsNode = inNode.get(cReplace);
+        JsonNode replacementsNode = getInNode().get(cReplace);
         //  TODO: 9/13/2020 Collect composition ids to that contain composites matching replacement names below
         //      create new composite for each old composite
         //      create new composition with new composite replacement
@@ -240,7 +239,7 @@ public class DlcIlluminateGameData extends IlluminateGameData {
     }
 
     private boolean isTotalConversion() {
-        return getDetailsObject().isTotalConversion();
+        return getDetails().isTotalConversion();
     }
 
     @Override

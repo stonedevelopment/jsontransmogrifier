@@ -6,8 +6,8 @@ import com.fasterxml.jackson.databind.JsonNode;
 public class UpdatifyController {
     private final UpdatifyGameData gameData;
 
-    public UpdatifyController(JsonNode transmogrifiedNode, JsonNode illuminationNode) {
-        this.gameData = new UpdatifyGameData(transmogrifiedNode, illuminationNode);
+    public UpdatifyController(JsonNode transmogrificationNode, JsonNode illuminationNode) {
+        this.gameData = new UpdatifyGameData(transmogrificationNode, illuminationNode);
     }
 
     public void start() {

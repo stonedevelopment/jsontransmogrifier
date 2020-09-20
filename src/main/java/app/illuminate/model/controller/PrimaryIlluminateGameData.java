@@ -1,16 +1,8 @@
 package app.illuminate.model.controller;
 
 import app.illuminate.controller.IlluminateGameData;
-import app.illuminate.model.IlluminateEngram;
-import app.illuminate.model.IlluminateFolder;
 import app.illuminate.model.details.IlluminateDetails;
 import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.node.ArrayNode;
-import com.fasterxml.jackson.databind.node.ObjectNode;
-import model.Composition;
-import model.DirectoryItem;
-import model.Engram;
-import model.Folder;
 
 import static util.Constants.*;
 
@@ -26,12 +18,12 @@ public class PrimaryIlluminateGameData extends IlluminateGameData {
     }
 
     @Override
-    public IlluminateDetails getDetailsObject() {
-        return super.getDetailsObject();
+    public IlluminateDetails getDetails() {
+        return super.getDetails();
     }
 
     @Override
     protected void createDetailsObject() {
-        this.details = IlluminateDetails.from(inNode.get(cDetails));
+        this.details = IlluminateDetails.from(getInNode().get(cDetails));
     }
 }

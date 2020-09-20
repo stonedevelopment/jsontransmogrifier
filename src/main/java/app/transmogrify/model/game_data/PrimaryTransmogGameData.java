@@ -5,10 +5,6 @@ import app.transmogrify.model.details.TransmogDetails;
 import app.transmogrify.model.json.*;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import model.*;
-import util.Log;
-
-import java.util.Date;
 
 import static util.Constants.*;
 
@@ -28,7 +24,7 @@ public class PrimaryTransmogGameData extends TransmogGameData {
     }
 
     public String getUuid() {
-        return getDetailsObject().getUuid();
+        return getDetails().getUuid();
     }
 
     @Override
@@ -41,7 +37,7 @@ public class PrimaryTransmogGameData extends TransmogGameData {
         //  create game data node
         ObjectNode gameDataNode = mapper.createObjectNode();
 
-        gameDataNode.set(cDetails, mapper.valueToTree(getDetailsObject()));
+        gameDataNode.set(cDetails, mapper.valueToTree(getDetails()));
 
         //  add resources, without complex resources
         gameDataNode.set(cResources, mapper.valueToTree(transformResourceMap()));

@@ -55,8 +55,8 @@ public class UpdatifyApp {
     }
 
     private void updatifyDetails(TransmogGameData transmogGameData, IlluminateGameData illuminateGameData) {
-        TransmogDetails transmogDetails = transmogGameData.getDetailsObject();
-        IlluminateDetails illuminateDetails = illuminateGameData.getDetailsObject();
+        TransmogDetails transmogDetails = transmogGameData.getDetails();
+        IlluminateDetails illuminateDetails = illuminateGameData.getDetails();
         if (transmogDetails.equals(illuminateDetails)) {
             //  no change
             Log.d("No change required.");

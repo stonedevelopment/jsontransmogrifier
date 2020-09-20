@@ -2,12 +2,30 @@
   "Primary": {
     "name": "ARK:Survival Evolved",
     "illuminatedFiles": [
-      "Primary/illuminated_details.json",
-      "Primary/illuminated_resources.json",
-      "Primary/illuminated_engrams.json",
-      "Primary/illuminated_folders.json",
-      "Primary/illuminated_stations.json",
-      "Primary/illuminated_directory.json"
+      {
+        "type": "details",
+        "filePath": "Primary/illuminated_details.json"
+      },
+      {
+        "type": "resources",
+        "filePath": "Primary/illuminated_resources.json"
+      },
+      {
+        "type": "engrams",
+        "filePath": "Primary/illuminated_engrams.json"
+      },
+      {
+        "type": "folders",
+        "filePath": "Primary/illuminated_folders.json"
+      },
+      {
+        "type": "stations",
+        "filePath": "Primary/illuminated_stations.json"
+      },
+      {
+        "type": "directory",
+        "filePath": "Primary/illuminated_directory.json"
+      }
     ]
   },
   "DLC": [
@@ -16,75 +34,201 @@
       "illuminatedFiles": [
         {
           "type": "details",
-          "fileName": "DLC/Primitive Plus/illuminated_details.json"
+          "filePath": "DLC/Primitive Plus/illuminated_details.json"
         },
-        "DLC/Primitive Plus/illuminated_resources.json",
-        "DLC/Primitive Plus/illuminated_engrams.json",
-        "DLC/Primitive Plus/illuminated_folders.json",
-        "DLC/Primitive Plus/illuminated_stations.json",
-        "DLC/Primitive Plus/illuminated_directory.json",
-        "DLC/Primitive Plus/illuminated_blacklist.json",
-        "DLC/Primitive Plus/illuminated_totalConversion.json"
+        {
+          "type": "resources",
+          "filePath": "DLC/Primitive Plus/illuminated_resources.json"
+        },
+        {
+          "type": "engrams",
+          "filePath": "DLC/Primitive Plus/illuminated_engrams.json"
+        },
+        {
+          "type": "folders",
+          "filePath": "DLC/Primitive Plus/illuminated_folders.json"
+        },
+        {
+          "type": "stations",
+          "filePath": "DLC/Primitive Plus/illuminated_stations.json"
+        },
+        {
+          "type": "directory",
+          "filePath": "DLC/Primitive Plus/illuminated_directory.json"
+        },
+        {
+          "type": "blacklist",
+          "filePath": "DLC/Primitive Plus/illuminated_blacklist.json"
+        },
+        {
+          "type": "totalConversion",
+          "filePath": "DLC/Primitive Plus/illuminated_totalConversion.json"
+        }
       ]
     },
     {
       "name": "Scorched Earth",
       "illuminatedFiles": [
-        "DLC/Scorched Earth/illuminated_details.json",
-        "DLC/Scorched Earth/illuminated_resources.json",
-        "DLC/Scorched Earth/illuminated_engrams.json",
-        "DLC/Scorched Earth/illuminated_folders.json",
-        "DLC/Scorched Earth/illuminated_stations.json",
-        "DLC/Scorched Earth/illuminated_directory.json",
-        "DLC/Scorched Earth/illuminated_blacklist.json"
+        {
+          "type": "details",
+          "filePath": "DLC/Scorched Earth/illuminated_details.json"
+        },
+        {
+          "type": "resources",
+          "filePath": "DLC/Scorched Earth/illuminated_resources.json"
+        },
+        {
+          "type": "engrams",
+          "filePath": "DLC/Scorched Earth/illuminated_engrams.json"
+        },
+        {
+          "type": "folders",
+          "filePath": "DLC/Scorched Earth/illuminated_folders.json"
+        },
+        {
+          "type": "stations",
+          "filePath": "DLC/Scorched Earth/illuminated_stations.json"
+        },
+        {
+          "type": "directory",
+          "filePath": "DLC/Scorched Earth/illuminated_directory.json"
+        },
+        {
+          "type": "blacklist",
+          "filePath": "DLC/Scorched Earth/illuminated_blacklist.json"
+        }
       ]
     },
     {
       "name": "Aberration",
       "illuminatedFiles": [
-        "DLC/Aberration/illuminated_details.json",
-        "DLC/Aberration/illuminated_resources.json",
-        "DLC/Aberration/illuminated_engrams.json",
-        "DLC/Aberration/illuminated_folders.json",
-        "DLC/Aberration/illuminated_stations.json",
-        "DLC/Aberration/illuminated_directory.json",
-        "DLC/Aberration/illuminated_blacklist.json"
+        {
+          "type": "details",
+          "filePath": "DLC/Aberration/illuminated_details.json"
+        },
+        {
+          "type": "resources",
+          "filePath": "DLC/Aberration/illuminated_resources.json"
+        },
+        {
+          "type": "engrams",
+          "filePath": "DLC/Aberration/illuminated_engrams.json"
+        },
+        {
+          "type": "folders",
+          "filePath": "DLC/Aberration/illuminated_folders.json"
+        },
+        {
+          "type": "stations",
+          "filePath": "DLC/Aberration/illuminated_stations.json"
+        },
+        {
+          "type": "directory",
+          "filePath": "DLC/Aberration/illuminated_directory.json"
+        },
+        {
+          "type": "blacklist",
+          "filePath": "DLC/Aberration/illuminated_blacklist.json"
+        }
       ]
     },
     {
       "name": "Extinction",
       "illuminatedFiles": [
-        "DLC/Extinction/illuminated_details.json",
-        "DLC/Extinction/illuminated_resources.json",
-        "DLC/Extinction/illuminated_engrams.json",
-        "DLC/Extinction/illuminated_folders.json",
-        "DLC/Extinction/illuminated_stations.json",
-        "DLC/Extinction/illuminated_directory.json",
-        "DLC/Extinction/illuminated_blacklist.json"
+        {
+          "type": "details",
+          "filePath": "DLC/Extinction/illuminated_details.json"
+        },
+        {
+          "type": "resources",
+          "filePath": "DLC/Extinction/illuminated_resources.json"
+        },
+        {
+          "type": "engrams",
+          "filePath": "DLC/Extinction/illuminated_engrams.json"
+        },
+        {
+          "type": "folders",
+          "filePath": "DLC/Extinction/illuminated_folders.json"
+        },
+        {
+          "type": "stations",
+          "filePath": "DLC/Extinction/illuminated_stations.json"
+        },
+        {
+          "type": "directory",
+          "filePath": "DLC/Extinction/illuminated_directory.json"
+        },
+        {
+          "type": "blacklist",
+          "filePath": "DLC/Extinction/illuminated_blacklist.json"
+        }
       ]
     },
     {
       "name": "The Center",
       "illuminatedFiles": [
-        "DLC/The Center/illuminated_details.json",
-        "DLC/The Center/illuminated_resources.json",
-        "DLC/The Center/illuminated_engrams.json",
-        "DLC/The Center/illuminated_folders.json",
-        "DLC/The Center/illuminated_stations.json",
-        "DLC/The Center/illuminated_directory.json",
-        "DLC/The Center/illuminated_blacklist.json"
+        {
+          "type": "details",
+          "filePath": "DLC/The Center/illuminated_details.json"
+        },
+        {
+          "type": "resources",
+          "filePath": "DLC/The Center/illuminated_resources.json"
+        },
+        {
+          "type": "engrams",
+          "filePath": "DLC/The Center/illuminated_engrams.json"
+        },
+        {
+          "type": "folders",
+          "filePath": "DLC/The Center/illuminated_folders.json"
+        },
+        {
+          "type": "stations",
+          "filePath": "DLC/The Center/illuminated_stations.json"
+        },
+        {
+          "type": "directory",
+          "filePath": "DLC/The Center/illuminated_directory.json"
+        },
+        {
+          "type": "blacklist",
+          "filePath": "DLC/The Center/illuminated_blacklist.json"
+        }
       ]
     },
     {
       "name": "Ragnarok",
       "illuminatedFiles": [
-        "DLC/Ragnarok/illuminated_details.json",
-        "DLC/Ragnarok/illuminated_resources.json",
-        "DLC/Ragnarok/illuminated_engrams.json",
-        "DLC/Ragnarok/illuminated_folders.json",
-        "DLC/Ragnarok/illuminated_stations.json",
-        "DLC/Ragnarok/illuminated_directory.json",
-        "DLC/Ragnarok/illuminated_blacklist.json"
+        {
+          "type": "details",
+          "filePath": "DLC/Ragnarok/illuminated_details.json"
+        },
+        {
+          "type": "resources",
+          "filePath": "DLC/Ragnarok/illuminated_resources.json"
+        },
+        {
+          "type": "engrams",
+          "filePath": "DLC/Ragnarok/illuminated_engrams.json"
+        },
+        {
+          "type": "folders",
+          "filePath": "DLC/Ragnarok/illuminated_folders.json"
+        },
+        {
+          "type": "stations",
+          "filePath": "DLC/Ragnarok/illuminated_stations.json"
+        },
+        {
+          "type": "directory",
+          "filePath": "DLC/Ragnarok/illuminated_directory.json"
+        },
+        {
+          "type": "blacklist",
+          "filePath": "DLC/Ragnarok/illuminated_blacklist.json"
+        }
       ]
     }
   ]

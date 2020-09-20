@@ -25,6 +25,20 @@ public class App {
         updatify();
     }
 
+    private static void transmogrify() {
+        JsonNode inNode = JSONUtil.parseIn(cArkAssetsFilePath, cArkDataEditableFileName);
+        TransmogrifyApp transmogrifyApp = new TransmogrifyApp(inNode);
+        transmogrifyApp.start();
+        transmogrifyApp.export();
+    }
+
+    private static void illuminate() {
+        JsonNode inNode = JSONUtil.parseIn(cArkAssetsFilePath, cTransmogrificationFileName);
+        IlluminateApp illuminateApp = new IlluminateApp(inNode);
+        illuminateApp.start();
+        illuminateApp.export();
+    }
+
     private static void updatify() {
         //  parse Transmogrification file
         JsonNode transmogrificationNode = JSONUtil.parseIn(cArkAssetsFilePath, cTransmogrificationFileName);
