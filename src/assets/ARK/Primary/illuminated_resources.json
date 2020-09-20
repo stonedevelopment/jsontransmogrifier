@@ -1,8 +1,13 @@
 [
   {
     "name": "Allosaurus Brain",
-    "description": "",
+    "description": "This is a placeholder description.",
     "imageFile": "allosaurus_brain.webp"
+  },
+  {
+    "name": "Borosaurus Brain",
+    "description": "This is a boring description.",
+    "imageFile": "borosaurus_brain.webp"
   },
   {
     "name": "Allosaurus Egg",

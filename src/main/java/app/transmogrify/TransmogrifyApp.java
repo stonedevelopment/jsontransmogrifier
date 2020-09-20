@@ -81,7 +81,7 @@ public class TransmogrifyApp {
     }
 
     private void writeGameDataToFile(TransmogGameData gameData) {
-        String filePath = gameData.getDetails().getFilePath();
+        String filePath = gameData.getDetails().getTransmogFilePath();
         writeJsonToFile(filePath, gameData.resolveToJson());
     }
 
@@ -91,7 +91,7 @@ public class TransmogrifyApp {
         ObjectNode primaryNode = mapper.createObjectNode();
         TransmogDetails primaryDetails = primaryGameData.getDetails();
         primaryNode.put(cName, primaryDetails.getName());
-        primaryNode.put(cFilePath, primaryDetails.getFilePath());
+        primaryNode.put(cFilePath, primaryDetails.getTransmogFilePath());
         primaryNode.put(cLastUpdated, primaryDetails.getLastUpdated().getTime());
         outNode.set(cPrimary, primaryNode);
 
@@ -100,7 +100,7 @@ public class TransmogrifyApp {
             ObjectNode dlcNode = mapper.createObjectNode();
             DlcTransmogDetails dlcDetails = dlcGameData.getDetails();
             dlcNode.put(cName, dlcDetails.getName());
-            dlcNode.put(cFilePath, dlcDetails.getFilePath());
+            dlcNode.put(cFilePath, dlcDetails.getTransmogFilePath());
             dlcNode.put(cLastUpdated, dlcDetails.getLastUpdated().getTime());
             outDlcArrayNode.add(dlcNode);
         }

@@ -24,8 +24,9 @@ public class IlluminateDetails extends TransmogDetails {
                              @JsonProperty(cFilePath) String filePath,
                              @JsonProperty(cLogoFile) String logoFile,
                              @JsonProperty(cFolderFile) String folderFile,
-                             @JsonProperty(cBackFolderFile) String backFolderFile) {
-        super(uuid, name, description, filePath, logoFile, folderFile, backFolderFile);
+                             @JsonProperty(cBackFolderFile) String backFolderFile,
+                             @JsonProperty(cTransmogFile) String transmogFile) {
+        super(uuid, name, description, filePath, logoFile, folderFile, backFolderFile, transmogFile);
     }
 
     public static IlluminateDetails from(JsonNode jsonNode) {
@@ -46,6 +47,12 @@ public class IlluminateDetails extends TransmogDetails {
     @Override
     public Date getLastUpdated() {
         return super.getLastUpdated();
+    }
+
+    @JsonIgnore
+    @Override
+    public String getTransmogFile() {
+        return super.getTransmogFile();
     }
 
     @JsonIgnore

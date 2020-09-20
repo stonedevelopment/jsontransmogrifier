@@ -54,18 +54,16 @@ public class IlluminateApp {
         //  consider creating top-level objects for each conversion type (Transmog, Illuminate)
         //  all top-level json files point to file paths and names, they're not meant for updating game details
         JsonNode primaryNode = inNode.get(cPrimary);
-        String filePath = primaryNode.get(cFilePath).asText();
-
-        JsonNode transmogrifiedNode = parseIn(cArkAssetsFilePath, filePath);
+        String transmogrifiedFilePath = primaryNode.get(cFilePath).asText();
+        JsonNode transmogrifiedNode = parseIn(cArkAssetsFilePath, transmogrifiedFilePath);
         primaryGameData = PrimaryIlluminateGameData.with(transmogrifiedNode);
     }
 
     private void illuminateDlcNode() {
         JsonNode dlcArrayNode = inNode.get(cDlc);
         for (JsonNode dlcNode : dlcArrayNode) {
-            String filePath = dlcNode.get(cFilePath).asText();
-
-            JsonNode transmogrifiedNode = parseIn(cArkAssetsFilePath, filePath);
+            String transmogrifiedFilePath = dlcNode.get(cFilePath).asText();
+            JsonNode transmogrifiedNode = parseIn(cArkAssetsFilePath, transmogrifiedFilePath);
             DlcIlluminateGameData dlcGameData = DlcIlluminateGameData.with(transmogrifiedNode, primaryGameData);
             dlcGameDataList.add(dlcGameData);
         }

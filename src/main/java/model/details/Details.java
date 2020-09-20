@@ -42,16 +42,6 @@ public class Details {
         return new ObjectMapper().convertValue(jsonNode, Details.class);
     }
 
-    public Details updateToNew(Details newDetails) {
-        return new Details(getUuid(),
-                newDetails.getName(),
-                newDetails.getDescription(),
-                newDetails.getFilePath(),
-                newDetails.getLogoFile(),
-                newDetails.getFolderFile(),
-                newDetails.getBackFolderFile());
-    }
-
     public String getUuid() {
         return uuid;
     }
@@ -84,11 +74,7 @@ public class Details {
         return lastUpdated;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Details details = (Details) o;
+    public boolean equals(Details details) {
         return name.equals(details.name) &&
                 description.equals(details.description) &&
                 filePath.equals(details.filePath) &&

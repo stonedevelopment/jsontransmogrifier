@@ -3,11 +3,11 @@ package app.updatify.game_data;
 import app.illuminate.model.IlluminateResource;
 import app.illuminate.model.details.IlluminateDetails;
 import app.transmogrify.model.details.TransmogDetails;
+import app.updatify.model.UpdatifyDetails;
 import app.updatify.model.UpdatifyResource;
 import com.fasterxml.jackson.databind.JsonNode;
 import controller.GameData;
 import model.*;
-import model.details.Details;
 import util.JSONUtil;
 import util.Log;
 
@@ -52,11 +52,6 @@ public class UpdatifyGameData extends GameData {
     }
 
     @Override
-    public UpdatifyResource getResourceByName(String name) {
-        return (UpdatifyResource) super.getResourceByName(name);
-    }
-
-    @Override
     public void mapGameDataFromJson() {
         //  we first need to map out the illumination files
         mapIlluminationNode();
@@ -83,13 +78,13 @@ public class UpdatifyGameData extends GameData {
     @Override
     protected void createDetailsObject() {
         //  instantiate
-        Details tDetails = TransmogDetails.fromJson(getTransmogNode().get(cDetails));
+        TransmogDetails tDetails = TransmogDetails.fromJson(getTransmogNode().get(cDetails));
         setDetails(tDetails);
 
         //  compare
         IlluminateDetails iDetails = IlluminateDetails.from(getIlluminatedNode(cDetails));
         if (!tDetails.equals(iDetails)) {
-            updateDetails(tDetails.updateToNew(iDetails));
+            updateDetails(UpdatifyDetails.convertToNew(tDetails, iDetails));
             setHasUpdate();
         }
     }
@@ -104,22 +99,20 @@ public class UpdatifyGameData extends GameData {
         JsonNode iArray = getIlluminatedNode(cResources);
         for (JsonNode jsonNode : iArray) {
             IlluminateResource iResource = IlluminateResource.fromJson(jsonNode);
-            UpdatifyResource tResource = getResourceByName(iResource.getName());
+            Resource tResource = getResourceByName(iResource.getName());
 
             if (tResource == null) {
-                Log.d("ADDING: " + iResource.toString());
                 addResource(UpdatifyResource.createFrom(iResource));
             } else if (!tResource.equals(iResource)) {
-                Log.d("UPDATING: " + tResource.toString() + " to " + iResource.toString());
-                updateResource(tResource.updateFrom(iResource));
+                updateResource(UpdatifyResource.convertToNew(tResource, iResource));
             }
         }
     }
 
     @Override
     protected void mapStationsFromJson() {
-        JsonNode jsonArray = getTransmogNode().get(cStations);
-        for (JsonNode jsonNode : jsonArray) {
+        JsonNode tArray = getTransmogNode().get(cStations);
+        for (JsonNode jsonNode : tArray) {
             addStation(Station.fromJson(jsonNode));
         }
     }
