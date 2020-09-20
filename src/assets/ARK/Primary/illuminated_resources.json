@@ -1,1 +1,797 @@
-[{"uuid":"de289f3e-7174-4e32-b08f-7c407dd727a7","name":"Allosaurus Brain","description":"","imageFile":"allosaurus_brain.webp"},{"uuid":"4ffc7e8f-c0a6-456d-9c5e-e04916d0ee1b","name":"Allosaurus Egg","description":"","imageFile":"allosaurus_egg.webp"},{"uuid":"1f91203a-638a-4be0-83d0-7342e35aea07","name":"Alpha Broodmother Trophy","description":"","imageFile":"alpha_broodmother_trophy.webp"},{"uuid":"978ee66f-4dee-4142-ac8d-0ed0503d70ca","name":"Alpha Carnotaurus Arm","description":"","imageFile":"alpha_carnotaurus_arm.webp"},{"uuid":"22df2e6d-7373-4cc9-90fd-5b5a28bf3619","name":"Alpha Dragon Trophy","description":"","imageFile":"alpha_dragon_trophy.webp"},{"uuid":"92bcf4d8-a3af-4247-92dc-b07865b1e732","name":"Alpha Leedsichthys Blubber","description":"","imageFile":"alpha_leedsichthys_blubber.webp"},{"uuid":"01f7330f-9c1d-4462-936f-1c94c064775f","name":"Alpha Megalodon Fin","description":"","imageFile":"alpha_megalodon_fin.webp"},{"uuid":"bdcde3e5-b816-40d4-aff9-cec93c8d7d6e","name":"Alpha Megapithecus Trophy","description":"","imageFile":"alpha_megapithecus_trophy.webp"},{"uuid":"c64284d4-b96f-41a7-81dd-b0ba87d90020","name":"Alpha Mosasaur Tooth","description":"","imageFile":"alpha_mosasaur_tooth.webp"},{"uuid":"6ad41516-facf-45d8-8a5a-595f3f037c8b","name":"Alpha Raptor Claw","description":"","imageFile":"alpha_raptor_claw.webp"},{"uuid":"68c87142-6051-4571-81a6-05d14fa84c1b","name":"Alpha Tusoteuthis Eye","description":"","imageFile":"alpha_tusoteuthis_eye.webp"},{"uuid":"43307e8b-96b3-4b8e-9b5c-572c7bd91e24","name":"Alpha Tyrannosaur Tooth","description":"","imageFile":"alpha_tyrannosaur_tooth.webp"},{"uuid":"e0daf98e-8f1e-4f30-b4bf-5211ec443529","name":"Amarberry","description":"","imageFile":"amarberry.webp"},{"uuid":"0b5d0cd3-6ac6-4a2c-abc1-51b1d67f871f","name":"Ammonite Bile","description":"","imageFile":"ammonite_bile.webp"},{"uuid":"31c2d58e-dcd1-4ca9-a7cd-845b9f360d63","name":"Angler Gel","description":"","imageFile":"angler_gel.webp"},{"uuid":"fc44e4de-7edf-4974-aac6-49cd92b303aa","name":"Ankylo Egg","description":"","imageFile":"ankylo_egg.webp"},{"uuid":"b64f34e6-5db5-47e6-b36e-f5996ecde2ab","name":"Araneo Egg","description":"","imageFile":"araneo_egg.webp"},{"uuid":"b5e20d68-c6f6-4646-b609-330f0309db3b","name":"Argentavis Egg","description":"","imageFile":"argentavis_egg.webp"},{"uuid":"f264e4e9-e07c-43b7-8aa2-e53e739858fd","name":"Argentavis Talon","description":"","imageFile":"argentavis_talon.webp"},{"uuid":"21d34e03-ceba-4212-95d4-b1bc675eb209","name":"Artifact of the Brute","description":"","imageFile":"artifact_of_the_brute.webp"},{"uuid":"efe259c2-424d-4811-950a-b9a8729009df","name":"Artifact of the Clever","description":"","imageFile":"artifact_of_the_clever.webp"},{"uuid":"1a0eca58-c4e3-4dd4-acd9-7c970d7f1075","name":"Artifact of the Cunning","description":"","imageFile":"artifact_of_the_cunning.webp"},{"uuid":"2c32f28d-d647-4eff-8598-1cd0643485ef","name":"Artifact of the Devious","description":"","imageFile":"artifact_of_the_devious.webp"},{"uuid":"477eeb50-4a5f-478a-a001-15d18fbef17f","name":"Artifact of the Devourer","description":"","imageFile":"artifact_of_the_devourer.webp"},{"uuid":"d5314602-dd8c-4767-8038-f44a45525176","name":"Artifact of the Hunter","description":"","imageFile":"artifact_of_the_hunter.webp"},{"uuid":"1edc1ed0-5dd2-4d0d-a245-6228471dcb24","name":"Artifact of the Immune","description":"","imageFile":"artifact_of_the_immune.webp"},{"uuid":"c33da64d-e07b-4c1e-bdb4-a2ff91057d22","name":"Artifact of the Massive","description":"","imageFile":"artifact_of_the_massive.webp"},{"uuid":"e4d8aa85-902c-41ae-8c84-ea857088e130","name":"Artifact of the Pack","description":"","imageFile":"artifact_of_the_pack.webp"},{"uuid":"ef575132-18f7-4814-9888-1d200e66afd9","name":"Artifact of the Skylord","description":"","imageFile":"artifact_of_the_skylord.webp"},{"uuid":"13e86a53-938b-43ad-b669-9079ddcc0cd7","name":"Artifact of the Strong","description":"","imageFile":"artifact_of_the_strong.webp"},{"uuid":"42e872d4-6e1c-4701-9a25-0f1d601c4747","name":"Azulberry","description":"","imageFile":"azulberry.webp"},{"uuid":"327d1c7d-2b52-4264-8c07-9ea015721433","name":"Baryonyx Egg","description":"","imageFile":"baryonyx_egg.webp"},{"uuid":"7e549ce2-5570-4fc7-9c25-90941f9ecaf1","name":"Basilosaurus Blubber","description":"","imageFile":"basilosaurus_blubber.webp"},{"uuid":"974db149-a991-4014-8ad8-6bd7ac34efc2","name":"Berries (Any Kind)","description":"","imageFile":"berries_any_kind.webp"},{"uuid":"6c7e950e-7128-4a9a-80fd-689a7484f97a","name":"Beta Broodmother Trophy","description":"","imageFile":"beta_broodmother_trophy.webp"},{"uuid":"a4ae17ab-46ca-4d77-8373-12043d55d43f","name":"Beta Dragon Trophy","description":"","imageFile":"beta_dragon_trophy.webp"},{"uuid":"dc89da31-a134-4a98-a087-bc03b47da931","name":"Beta Megapithecus Trophy","description":"","imageFile":"beta_megapithecus_trophy.webp"},{"uuid":"3e4e9aa5-9012-4641-a394-088d00af9c31","name":"Bio Toxin","description":"","imageFile":"bio_toxin.webp"},{"uuid":"b20a25d7-1376-4834-aa94-04206069770b","name":"Black Pearl","description":"","imageFile":"black_pearl.webp"},{"uuid":"fa9829f5-73cc-4704-8908-04dd51bfb17e","name":"Bronto Egg","description":"","imageFile":"bronto_egg.webp"},{"uuid":"dc386f22-902a-4679-a2da-cfb75dd2ce8b","name":"Bunny Egg","description":"","imageFile":"bunny_egg.webp"},{"uuid":"475caed0-052a-4610-b1ee-cd90899756f3","name":"Carbonemys Egg","description":"","imageFile":"carbonemys_egg.webp"},{"uuid":"21e7131b-3aa4-4074-bc0d-afd1c20fd374","name":"Carno Egg","description":"","imageFile":"carno_egg.webp"},{"uuid":"faa27bea-99cd-4825-864f-949b20041a9a","name":"Chitin","description":"","imageFile":"chitin.webp"},{"uuid":"c787a850-8222-4a66-9987-52ecc63e4514","name":"Chitin or Keratin","description":"","imageFile":"chitin_or_keratin.webp"},{"uuid":"7e1e44b9-9d8b-4747-8ee3-c3ab8e137883","name":"Citronal","description":"","imageFile":"citronal.webp"},{"uuid":"a31a80be-1198-4327-aa5a-7bc7bb171364","name":"Compy Egg","description":"","imageFile":"compy_egg.webp"},{"uuid":"10bf20fe-5074-4bc2-8627-c0071253d926","name":"Cooked Meat or Fish Meat","description":"","imageFile":"cooked_meat_or_fish_meat.webp"},{"uuid":"59382c5d-2aac-4fc4-9a63-af097c2c73c7","name":"Cooked Meat or Meat Jerky","description":"","imageFile":"cooked_meat_or_meat_jerky.webp"},{"uuid":"2d02915c-9548-46fa-800c-78b2d89adfd8","name":"Cooked Meat, Cooked Fish Meat, or Cooked Meat Jerky","description":"","imageFile":"cooked_meat_cooked_fish_meat_or_cooked_meat_jerky.webp"},{"uuid":"ba12d3d5-7271-4cca-8ff1-bdb41c490329","name":"Cooked Prime Meat or Prime Meat Jerky","description":"","imageFile":"cooked_prime_meat_or_prime_meat_jerky.webp"},{"uuid":"202b301a-01d3-4651-a466-14dfd4b13ae0","name":"Crystal","description":"","imageFile":"crystal.webp"},{"uuid":"6056a9ba-bf1f-4c67-b0d4-d291e69ef3ce","name":"Deathworm Horn or Woolly Rhino Horn","description":"","imageFile":"deathworm_or_woolly_rhino_horn.webp"},{"uuid":"44f1e142-78d2-46db-884a-b497ffe26c0b","name":"Dilo Egg","description":"","imageFile":"dilo_egg.webp"},{"uuid":"a265ac59-c0e4-4e31-8d5d-331b95f7a394","name":"Dimetrodon Egg","description":"","imageFile":"dimetrodon_egg.webp"},{"uuid":"3e1f704c-26dd-4c1b-8499-1f339cc810d4","name":"Dimorphodon Egg","description":"","imageFile":"dimorphodon_egg.webp"},{"uuid":"1fd819f3-0de9-4497-9d49-52e1f70c90d4","name":"Diplodocus Egg","description":"","imageFile":"diplodocus_egg.webp"},{"uuid":"1c77828e-07c9-4866-8e4a-4c88345c1fbd","name":"Dodo Egg","description":"","imageFile":"dodo_egg.webp"},{"uuid":"b8e4ca14-0bb7-488b-8d34-eea6c09bd6a5","name":"DodoRex Mask Skin","description":"","imageFile":"dodorex_mask_skin.webp"},{"uuid":"2aa4163a-ecbe-44a3-ac02-03b64c25826a","name":"DodoWyvern Mask Skin","description":"","imageFile":"dodowyvern_mask_skin.webp"},{"uuid":"75d569c3-6543-4b05-b326-14329a3d0040","name":"Element","description":"","imageFile":"element.webp"},{"uuid":"d5764b73-2a23-4c4d-84cb-5f593cdc8211","name":"Extra Large Egg","description":"","imageFile":"dinosaur_egg.webp"},{"uuid":"38e96ef7-4b35-4c2c-b074-a0da095b8715","name":"Extra Small Egg","description":"","imageFile":"dinosaur_egg.webp"},{"uuid":"f8540533-5a15-42a4-8754-de6c4b4cd079","name":"Feces (Any Size)","description":"","imageFile":"feces.webp"},{"uuid":"88e9ecdb-4372-4b2b-b4f0-66b18089bd3a","name":"Fiber","description":"","imageFile":"fiber.webp"},{"uuid":"b2906f8a-81c0-44ac-af65-f20c588292f1","name":"Fish Egg","description":"","imageFile":"fish_egg.webp"},{"uuid":"870f7e7b-2394-403d-836e-9abc150a0451","name":"Flint","description":"","imageFile":"flint.webp"},{"uuid":"a74b341b-af83-4345-812c-eed2a621faa1","name":"Gallimimus Egg","description":"","imageFile":"gallimimus_egg.webp"},{"uuid":"e6332095-ef3f-45d0-9125-e2a26cb94e55","name":"Gamma Broodmother Trophy","description":"","imageFile":"gamma_broodmother_trophy.webp"},{"uuid":"ed21c9ee-976c-4101-8ccb-059ce37ee05e","name":"Gamma Dragon Trophy","description":"","imageFile":"gamma_dragon_trophy.webp"},{"uuid":"6e2ea460-4da3-4faf-bcdf-8c875927008c","name":"Gamma Megapithecus Trophy","description":"","imageFile":"gamma_megapithecus_trophy.webp"},{"uuid":"753f6fe3-989e-4f9e-896a-eedb0f33197c","name":"Giant Bee Honey","description":"","imageFile":"giant_bee_honey.webp"},{"uuid":"256d9b47-9467-4e06-ab41-6fba3eb3bcfa","name":"Giganotosaurus Heart","description":"","imageFile":"giganotosaurus_heart.webp"},{"uuid":"7f27488f-fed8-4d21-a16f-ecac0d4725cf","name":"Golden Hesperonis Egg","description":"","imageFile":"golden_hesperonis_egg.webp"},{"uuid":"457f58ea-e61d-47f3-9c1e-275e32ccdf7b","name":"Hesperornis Egg","description":"","imageFile":"hesperornis_egg.webp"},{"uuid":"aaff233b-07ea-450e-a8cd-6f36a8149129","name":"Hide","description":"","imageFile":"hide.webp"},{"uuid":"d924a9fd-858f-4126-a507-ad7a4e07947f","name":"Human Feces","description":"","imageFile":"human_feces.webp"},{"uuid":"ad2769e7-5395-4b10-9810-392092ec3ffe","name":"Human Hair","description":"","imageFile":"human_hair.webp"},{"uuid":"f1edc533-9ce3-4da0-b112-5c29269dbb8b","name":"Ichthyornis Egg","description":"","imageFile":"ichthyornis_egg.webp"},{"uuid":"b756a564-8384-48ae-be07-227c2bc8c1ff","name":"Iguanodon Egg","description":"","imageFile":"iguanodon_egg.webp"},{"uuid":"002994f6-12be-43f4-b030-856444aa5d9a","name":"Kairuku Egg","description":"","imageFile":"kairuku_egg.webp"},{"uuid":"a781b0d3-d5e4-4f91-aab3-3ed26ccf04e0","name":"Kentrosaurus Egg","description":"","imageFile":"kentrosaurus_egg.webp"},{"uuid":"3df73ae7-486b-4aab-bb44-d6abba76013f","name":"Keratin","description":"","imageFile":"keratin.webp"},{"uuid":"ced53937-5bb5-403f-87a9-1c2bbef973c9","name":"Large Animal Feces","description":"","imageFile":"feces.webp"},{"uuid":"ca2f5eb2-6161-4570-9d00-0435873e2bea","name":"Large Egg","description":"","imageFile":"dinosaur_egg.webp"},{"uuid":"8d6c60c5-4793-4697-af33-3966683c4494","name":"Leech Blood","description":"","imageFile":"leech_blood.webp"},{"uuid":"bcae920a-af2e-4750-860f-de4aeb007d6a","name":"Leech Blood or Horns","description":"","imageFile":"leech_blood_or_horns.webp"},{"uuid":"9ecee75c-2443-4b18-8119-280cfc474eec","name":"Longrass","description":"","imageFile":"longrass.webp"},{"uuid":"30927b80-3aee-4406-976c-8bb3632b03b8","name":"Lystrosaur Egg","description":"","imageFile":"lystrosaur_egg.webp"},{"uuid":"99f9b4c5-3d94-44f8-8c6b-4679ba666b01","name":"Massive Animal Feces","description":"","imageFile":"feces.webp"},{"uuid":"aec61ff5-b4bf-48e5-99d6-d36833a83af2","name":"Medium Animal Feces","description":"","imageFile":"feces.webp"},{"uuid":"20725fba-92c3-45e4-8b5d-7c23e17574b6","name":"Medium Egg","description":"","imageFile":"dinosaur_egg.webp"},{"uuid":"fdb8a206-4fdc-4132-b9aa-1695d7d1e204","name":"Megalania Egg","description":"","imageFile":"megalania_egg.webp"},{"uuid":"0fe85417-c3c6-4bda-bc10-0bd4535c1bcd","name":"Megalania Toxin","description":"","imageFile":"megalania_toxin.webp"},{"uuid":"14f031cb-352b-49db-bf4e-e65513ebe4f8","name":"Megalodon Tooth","description":"","imageFile":"megalodon_tooth.webp"},{"uuid":"476c35e2-f9ff-449c-a639-c1419461be91","name":"Mejoberry","description":"","imageFile":"mejoberry.webp"},{"uuid":"79e052ad-5a19-47b9-b58b-d5790c95f337","name":"Metal Ore","description":"","imageFile":"metal_ore.webp"},{"uuid":"4c95fee0-ec2c-4daf-b9c1-9f07bd4cab40","name":"Microraptor Egg","description":"","imageFile":"microraptor_egg.webp"},{"uuid":"93115911-8f85-4a15-a92b-f721c7e9adce","name":"Moschops Egg","description":"","imageFile":"moschops_egg.webp"},{"uuid":"afe78648-c18a-42d6-be94-0a8561be6e28","name":"Narcoberry","description":"","imageFile":"narcoberry.webp"},{"uuid":"9fa22fb8-3aaa-46ad-98de-f0afae3c09fb","name":"Obsidian","description":"","imageFile":"obsidian.webp"},{"uuid":"e5590019-0370-4abb-b172-40450cc8d03a","name":"Oil","description":"","imageFile":"oil.webp"},{"uuid":"a5546bf4-8938-48f0-aa42-f51d2b704d37","name":"Organic Polymer","description":"","imageFile":"organic_polymer.webp"},{"uuid":"92bb07fd-f793-4145-b05f-dd099e934bef","name":"Pachy Egg","description":"","imageFile":"pachy_egg.webp"},{"uuid":"14c98f24-2dcb-44fa-9cde-fdfc6cc159cb","name":"Parasaur Egg","description":"","imageFile":"parasaur_egg.webp"},{"uuid":"4da2df12-9957-4d96-9a0d-044b62d5adb5","name":"Pegomastax Egg","description":"","imageFile":"pegomastax_egg.webp"},{"uuid":"6ef8eff7-31a6-4de8-b33b-78902dda54a9","name":"Pelagornis Egg","description":"","imageFile":"pelagornis_egg.webp"},{"uuid":"f8661e25-4fe5-44e1-9d0d-9ffce044c135","name":"Pelt","description":"","imageFile":"pelt.webp"},{"uuid":"3f14e5e6-172b-4786-be89-7183560016b4","name":"Pelt, Hair, or Wool","description":"","imageFile":"pelt_hair_or_wool.webp"},{"uuid":"a320f059-4491-4ee3-8105-9e49159d0507","name":"Pteranodon Egg","description":"","imageFile":"pteranodon_egg.webp"},{"uuid":"b7fa51b6-72d1-4e04-8e1d-79ae65f946df","name":"Pulmonoscorpius Egg","description":"","imageFile":"pulmonoscorpius_egg.webp"},{"uuid":"be6c5210-58db-41ff-b282-6afa0c6cb903","name":"Pumpkin","description":"","imageFile":"pumpkin.webp"},{"uuid":"b8e1509f-f903-4736-af8b-ae0df20042ec","name":"Quetzal Egg","description":"","imageFile":"quetzal_egg.webp"},{"uuid":"fd946365-7dc4-4371-b081-2f4a4eda4ccb","name":"Raptor Egg","description":"","imageFile":"raptor_egg.webp"},{"uuid":"daae0dc1-7c30-406a-8112-510f3a5d5958","name":"Rare Flower","description":"","imageFile":"rare_flower.webp"},{"uuid":"54a81adb-1949-429b-a74a-78cab818db14","name":"Rare Mushroom","description":"","imageFile":"rare_mushroom.webp"},{"uuid":"dde37d62-a25d-4e8e-b83e-0e482b9bae09","name":"Raw Fish Meat","description":"","imageFile":"raw_fish_meat.webp"},{"uuid":"36b4e32b-f964-427a-a47b-59c59d85c47c","name":"Raw Meat","description":"","imageFile":"raw_meat.webp"},{"uuid":"16517965-3f6e-43b9-8de5-f7fb656a3f3a","name":"Raw Mutton","description":"","imageFile":"raw_mutton.webp"},{"uuid":"e5231d90-0d9a-4f3a-a1b0-b59f42afabd1","name":"Raw Prime Fish Meat","description":"","imageFile":"raw_prime_fish_meat.webp"},{"uuid":"3160d2ea-eba3-4b0a-acf7-d5b59aa81dde","name":"Raw Prime Meat","description":"","imageFile":"raw_prime_meat.webp"},{"uuid":"0e2accef-b939-4462-9a94-8766e116fc52","name":"Rex Egg","description":"","imageFile":"rex_egg.webp"},{"uuid":"1f6adc2a-3415-4bfd-bf23-6ebbc755ace3","name":"Rockarrot","description":"","imageFile":"rockarrot.webp"},{"uuid":"c18dcb4a-ad03-4b5e-b37f-d0edc3d54117","name":"Sap","description":"","imageFile":"sap.webp"},{"uuid":"535a2be6-9d9b-4767-9a95-e402a4c33f80","name":"Sarco Egg","description":"","imageFile":"sarco_egg.webp"},{"uuid":"e9286bce-c70a-40d5-9a36-7fb1ff68789d","name":"Sarcosuchus Skin","description":"","imageFile":"sarcosuchus_skin.webp"},{"uuid":"226bd66c-62ed-4e95-b97e-26f857d0a983","name":"Sauropod Vertebra","description":"","imageFile":"sauropod_vertebra.webp"},{"uuid":"3a30111d-7bba-4d41-8afe-05f6a3b61297","name":"Savoroot","description":"","imageFile":"savoroot.webp"},{"uuid":"9c99e55c-c4ff-4ebf-88fd-83c821ba332a","name":"Scarecrow","description":"","imageFile":"scarecrow.webp"},{"uuid":"d2758d9e-9f46-448d-9846-a4d8287344f6","name":"Silica Pearls","description":"","imageFile":"silica_pearls.webp"},{"uuid":"b4e89915-0645-4c8a-91c9-9871ab2f1b01","name":"Small Animal Feces","description":"","imageFile":"feces.webp"},{"uuid":"279fd3d3-43ee-4119-a186-9697fc61c60d","name":"Small Egg","description":"","imageFile":"dinosaur_egg.webp"},{"uuid":"2502df13-b083-4069-ad3b-4ec3305410b8","name":"Special Egg","description":"","imageFile":"golden_hesperonis_egg.webp"},{"uuid":"66d9781a-0bce-4154-9cff-f916df57202a","name":"Spino Egg","description":"","imageFile":"spino_egg.webp"},{"uuid":"18c0e092-0c9b-47f3-bd8d-247fda330b3f","name":"Spinosaurus Sail","description":"","imageFile":"spinosaurus_sail.webp"},{"uuid":"b976dcab-2ada-4f5a-948d-6ce8cdec879a","name":"Spoiled Meat","description":"","imageFile":"spoiled_meat.webp"},{"uuid":"8a7dcb85-ccb1-4769-8f84-8da93e32e323","name":"Stego Egg","description":"","imageFile":"stego_egg.webp"},{"uuid":"c56ef034-a63e-4bec-8190-380e66465874","name":"Stimberry","description":"","imageFile":"stimberry.webp"},{"uuid":"07a72f1d-8f48-48b9-a184-a6ae4a4eec64","name":"Stolen Headstone","description":"","imageFile":"stolen_headstone.webp"},{"uuid":"e2434938-eaed-477c-a699-6299f9eb8242","name":"Stone","description":"","imageFile":"stone.webp"},{"uuid":"e43770b3-108f-4721-849f-59b0fc3b9e25","name":"Tapejara Egg","description":"","imageFile":"tapejara_egg.webp"},{"uuid":"a47bf066-7b70-4fed-b927-58a981818e0a","name":"Terror Bird Egg","description":"","imageFile":"terror_bird_egg.webp"},{"uuid":"692a39a9-dba2-4fee-ae2e-3c5f301806c1","name":"Thatch","description":"","imageFile":"thatch.webp"},{"uuid":"43d86159-4f18-4a93-a509-275294e47de0","name":"Therizino Claws","description":"","imageFile":"therizino_claws.webp"},{"uuid":"c0a57fca-8033-4571-a19b-dba813c9f599","name":"Therizinosaurus Egg","description":"","imageFile":"therizinosaurus_egg.webp"},{"uuid":"cb688268-4834-41f8-ab01-c53c74d050c3","name":"Thylacoleo Hook-Claw","description":"","imageFile":"thylacoleo_hook-claw.webp"},{"uuid":"556c9b4e-2d2f-4133-b3d8-97f228fa438c","name":"Tintoberry","description":"","imageFile":"tintoberry.webp"},{"uuid":"40b89b9a-5ba1-45a9-947c-bd1e4c2db855","name":"Titanoboa Egg","description":"","imageFile":"titanoboa_egg.webp"},{"uuid":"1a62e510-09e8-4544-aa73-d665bf0e03ab","name":"Titanoboa Venom","description":"","imageFile":"titanoboa_venom.webp"},{"uuid":"0958a3aa-50fa-4e90-bfa4-de6ffad56ce1","name":"Trike Egg","description":"","imageFile":"trike_egg.webp"},{"uuid":"59f5a0ab-dc4e-42fc-ac1a-39dcfc897d65","name":"Troodon Egg","description":"","imageFile":"troodon_egg.webp"},{"uuid":"06a987b7-82a5-4a19-914f-384ead51cf5b","name":"Tusoteuthis Tentacle","description":"","imageFile":"tusoteuthis_tentacle.webp"},{"uuid":"dff781ac-b02c-48ba-98db-349734a68677","name":"Tyrannosaurus Arm","description":"","imageFile":"tyrannosaurus_arm.webp"},{"uuid":"84743f87-87d8-4299-a923-d7cbe1293cec","name":"Water","description":"","imageFile":"water.webp"},{"uuid":"8a1718c2-b014-4c01-83d1-ef0115c27528","name":"Wood","description":"","imageFile":"wood.webp"},{"uuid":"25a02e92-dd01-42e4-87d3-9c52116d4056","name":"Wool","description":"","imageFile":"wool.webp"},{"uuid":"69de1639-003b-4575-b074-cfbe192a2de5","name":"Woolly Rhino Horn","description":"","imageFile":"woolly_rhino_horn.webp"},{"uuid":"dfb68a74-011c-4c68-acbf-94340e8d46b8","name":"Yutyrannus Egg","description":"","imageFile":"yutyrannus_egg.webp"},{"uuid":"8c080688-4be1-45c5-afb7-e42abd41cffe","name":"Yutyrannus Lungs","description":"","imageFile":"yutyrannus_lungs.webp"}]
+[
+  {
+    "name": "Allosaurus Brain",
+    "description": "",
+    "imageFile": "allosaurus_brain.webp"
+  },
+  {
+    "name": "Allosaurus Egg",
+    "description": "",
+    "imageFile": "allosaurus_egg.webp"
+  },
+  {
+    "name": "Alpha Broodmother Trophy",
+    "description": "",
+    "imageFile": "alpha_broodmother_trophy.webp"
+  },
+  {
+    "name": "Alpha Carnotaurus Arm",
+    "description": "",
+    "imageFile": "alpha_carnotaurus_arm.webp"
+  },
+  {
+    "name": "Alpha Dragon Trophy",
+    "description": "",
+    "imageFile": "alpha_dragon_trophy.webp"
+  },
+  {
+    "name": "Alpha Leedsichthys Blubber",
+    "description": "",
+    "imageFile": "alpha_leedsichthys_blubber.webp"
+  },
+  {
+    "name": "Alpha Megalodon Fin",
+    "description": "",
+    "imageFile": "alpha_megalodon_fin.webp"
+  },
+  {
+    "name": "Alpha Megapithecus Trophy",
+    "description": "",
+    "imageFile": "alpha_megapithecus_trophy.webp"
+  },
+  {
+    "name": "Alpha Mosasaur Tooth",
+    "description": "",
+    "imageFile": "alpha_mosasaur_tooth.webp"
+  },
+  {
+    "name": "Alpha Raptor Claw",
+    "description": "",
+    "imageFile": "alpha_raptor_claw.webp"
+  },
+  {
+    "name": "Alpha Tusoteuthis Eye",
+    "description": "",
+    "imageFile": "alpha_tusoteuthis_eye.webp"
+  },
+  {
+    "name": "Alpha Tyrannosaur Tooth",
+    "description": "",
+    "imageFile": "alpha_tyrannosaur_tooth.webp"
+  },
+  {
+    "name": "Amarberry",
+    "description": "",
+    "imageFile": "amarberry.webp"
+  },
+  {
+    "name": "Ammonite Bile",
+    "description": "",
+    "imageFile": "ammonite_bile.webp"
+  },
+  {
+    "name": "Angler Gel",
+    "description": "",
+    "imageFile": "angler_gel.webp"
+  },
+  {
+    "name": "Ankylo Egg",
+    "description": "",
+    "imageFile": "ankylo_egg.webp"
+  },
+  {
+    "name": "Araneo Egg",
+    "description": "",
+    "imageFile": "araneo_egg.webp"
+  },
+  {
+    "name": "Argentavis Egg",
+    "description": "",
+    "imageFile": "argentavis_egg.webp"
+  },
+  {
+    "name": "Argentavis Talon",
+    "description": "",
+    "imageFile": "argentavis_talon.webp"
+  },
+  {
+    "name": "Artifact of the Brute",
+    "description": "",
+    "imageFile": "artifact_of_the_brute.webp"
+  },
+  {
+    "name": "Artifact of the Clever",
+    "description": "",
+    "imageFile": "artifact_of_the_clever.webp"
+  },
+  {
+    "name": "Artifact of the Cunning",
+    "description": "",
+    "imageFile": "artifact_of_the_cunning.webp"
+  },
+  {
+    "name": "Artifact of the Devious",
+    "description": "",
+    "imageFile": "artifact_of_the_devious.webp"
+  },
+  {
+    "name": "Artifact of the Devourer",
+    "description": "",
+    "imageFile": "artifact_of_the_devourer.webp"
+  },
+  {
+    "name": "Artifact of the Hunter",
+    "description": "",
+    "imageFile": "artifact_of_the_hunter.webp"
+  },
+  {
+    "name": "Artifact of the Immune",
+    "description": "",
+    "imageFile": "artifact_of_the_immune.webp"
+  },
+  {
+    "name": "Artifact of the Massive",
+    "description": "",
+    "imageFile": "artifact_of_the_massive.webp"
+  },
+  {
+    "name": "Artifact of the Pack",
+    "description": "",
+    "imageFile": "artifact_of_the_pack.webp"
+  },
+  {
+    "name": "Artifact of the Skylord",
+    "description": "",
+    "imageFile": "artifact_of_the_skylord.webp"
+  },
+  {
+    "name": "Artifact of the Strong",
+    "description": "",
+    "imageFile": "artifact_of_the_strong.webp"
+  },
+  {
+    "name": "Azulberry",
+    "description": "",
+    "imageFile": "azulberry.webp"
+  },
+  {
+    "name": "Baryonyx Egg",
+    "description": "",
+    "imageFile": "baryonyx_egg.webp"
+  },
+  {
+    "name": "Basilosaurus Blubber",
+    "description": "",
+    "imageFile": "basilosaurus_blubber.webp"
+  },
+  {
+    "name": "Berries (Any Kind)",
+    "description": "",
+    "imageFile": "berries_any_kind.webp"
+  },
+  {
+    "name": "Beta Broodmother Trophy",
+    "description": "",
+    "imageFile": "beta_broodmother_trophy.webp"
+  },
+  {
+    "name": "Beta Dragon Trophy",
+    "description": "",
+    "imageFile": "beta_dragon_trophy.webp"
+  },
+  {
+    "name": "Beta Megapithecus Trophy",
+    "description": "",
+    "imageFile": "beta_megapithecus_trophy.webp"
+  },
+  {
+    "name": "Bio Toxin",
+    "description": "",
+    "imageFile": "bio_toxin.webp"
+  },
+  {
+    "name": "Black Pearl",
+    "description": "",
+    "imageFile": "black_pearl.webp"
+  },
+  {
+    "name": "Bronto Egg",
+    "description": "",
+    "imageFile": "bronto_egg.webp"
+  },
+  {
+    "name": "Bunny Egg",
+    "description": "",
+    "imageFile": "bunny_egg.webp"
+  },
+  {
+    "name": "Carbonemys Egg",
+    "description": "",
+    "imageFile": "carbonemys_egg.webp"
+  },
+  {
+    "name": "Carno Egg",
+    "description": "",
+    "imageFile": "carno_egg.webp"
+  },
+  {
+    "name": "Chitin",
+    "description": "",
+    "imageFile": "chitin.webp"
+  },
+  {
+    "name": "Chitin or Keratin",
+    "description": "",
+    "imageFile": "chitin_or_keratin.webp"
+  },
+  {
+    "name": "Citronal",
+    "description": "",
+    "imageFile": "citronal.webp"
+  },
+  {
+    "name": "Compy Egg",
+    "description": "",
+    "imageFile": "compy_egg.webp"
+  },
+  {
+    "name": "Cooked Meat or Fish Meat",
+    "description": "",
+    "imageFile": "cooked_meat_or_fish_meat.webp"
+  },
+  {
+    "name": "Cooked Meat or Meat Jerky",
+    "description": "",
+    "imageFile": "cooked_meat_or_meat_jerky.webp"
+  },
+  {
+    "name": "Cooked Meat, Cooked Fish Meat, or Cooked Meat Jerky",
+    "description": "",
+    "imageFile": "cooked_meat_cooked_fish_meat_or_cooked_meat_jerky.webp"
+  },
+  {
+    "name": "Cooked Prime Meat or Prime Meat Jerky",
+    "description": "",
+    "imageFile": "cooked_prime_meat_or_prime_meat_jerky.webp"
+  },
+  {
+    "name": "Crystal",
+    "description": "",
+    "imageFile": "crystal.webp"
+  },
+  {
+    "name": "Deathworm Horn or Woolly Rhino Horn",
+    "description": "",
+    "imageFile": "deathworm_or_woolly_rhino_horn.webp"
+  },
+  {
+    "name": "Dilo Egg",
+    "description": "",
+    "imageFile": "dilo_egg.webp"
+  },
+  {
+    "name": "Dimetrodon Egg",
+    "description": "",
+    "imageFile": "dimetrodon_egg.webp"
+  },
+  {
+    "name": "Dimorphodon Egg",
+    "description": "",
+    "imageFile": "dimorphodon_egg.webp"
+  },
+  {
+    "name": "Diplodocus Egg",
+    "description": "",
+    "imageFile": "diplodocus_egg.webp"
+  },
+  {
+    "name": "Dodo Egg",
+    "description": "",
+    "imageFile": "dodo_egg.webp"
+  },
+  {
+    "name": "DodoRex Mask Skin",
+    "description": "",
+    "imageFile": "dodorex_mask_skin.webp"
+  },
+  {
+    "name": "DodoWyvern Mask Skin",
+    "description": "",
+    "imageFile": "dodowyvern_mask_skin.webp"
+  },
+  {
+    "name": "Element",
+    "description": "",
+    "imageFile": "element.webp"
+  },
+  {
+    "name": "Extra Large Egg",
+    "description": "",
+    "imageFile": "dinosaur_egg.webp"
+  },
+  {
+    "name": "Extra Small Egg",
+    "description": "",
+    "imageFile": "dinosaur_egg.webp"
+  },
+  {
+    "name": "Feces (Any Size)",
+    "description": "",
+    "imageFile": "feces.webp"
+  },
+  {
+    "name": "Fiber",
+    "description": "",
+    "imageFile": "fiber.webp"
+  },
+  {
+    "name": "Fish Egg",
+    "description": "",
+    "imageFile": "fish_egg.webp"
+  },
+  {
+    "name": "Flint",
+    "description": "",
+    "imageFile": "flint.webp"
+  },
+  {
+    "name": "Gallimimus Egg",
+    "description": "",
+    "imageFile": "gallimimus_egg.webp"
+  },
+  {
+    "name": "Gamma Broodmother Trophy",
+    "description": "",
+    "imageFile": "gamma_broodmother_trophy.webp"
+  },
+  {
+    "name": "Gamma Dragon Trophy",
+    "description": "",
+    "imageFile": "gamma_dragon_trophy.webp"
+  },
+  {
+    "name": "Gamma Megapithecus Trophy",
+    "description": "",
+    "imageFile": "gamma_megapithecus_trophy.webp"
+  },
+  {
+    "name": "Giant Bee Honey",
+    "description": "",
+    "imageFile": "giant_bee_honey.webp"
+  },
+  {
+    "name": "Giganotosaurus Heart",
+    "description": "",
+    "imageFile": "giganotosaurus_heart.webp"
+  },
+  {
+    "name": "Golden Hesperonis Egg",
+    "description": "",
+    "imageFile": "golden_hesperonis_egg.webp"
+  },
+  {
+    "name": "Hesperornis Egg",
+    "description": "",
+    "imageFile": "hesperornis_egg.webp"
+  },
+  {
+    "name": "Hide",
+    "description": "",
+    "imageFile": "hide.webp"
+  },
+  {
+    "name": "Human Feces",
+    "description": "",
+    "imageFile": "human_feces.webp"
+  },
+  {
+    "name": "Human Hair",
+    "description": "",
+    "imageFile": "human_hair.webp"
+  },
+  {
+    "name": "Ichthyornis Egg",
+    "description": "",
+    "imageFile": "ichthyornis_egg.webp"
+  },
+  {
+    "name": "Iguanodon Egg",
+    "description": "",
+    "imageFile": "iguanodon_egg.webp"
+  },
+  {
+    "name": "Kairuku Egg",
+    "description": "",
+    "imageFile": "kairuku_egg.webp"
+  },
+  {
+    "name": "Kentrosaurus Egg",
+    "description": "",
+    "imageFile": "kentrosaurus_egg.webp"
+  },
+  {
+    "name": "Keratin",
+    "description": "",
+    "imageFile": "keratin.webp"
+  },
+  {
+    "name": "Large Animal Feces",
+    "description": "",
+    "imageFile": "feces.webp"
+  },
+  {
+    "name": "Large Egg",
+    "description": "",
+    "imageFile": "dinosaur_egg.webp"
+  },
+  {
+    "name": "Leech Blood",
+    "description": "",
+    "imageFile": "leech_blood.webp"
+  },
+  {
+    "name": "Leech Blood or Horns",
+    "description": "",
+    "imageFile": "leech_blood_or_horns.webp"
+  },
+  {
+    "name": "Longrass",
+    "description": "",
+    "imageFile": "longrass.webp"
+  },
+  {
+    "name": "Lystrosaur Egg",
+    "description": "",
+    "imageFile": "lystrosaur_egg.webp"
+  },
+  {
+    "name": "Massive Animal Feces",
+    "description": "",
+    "imageFile": "feces.webp"
+  },
+  {
+    "name": "Medium Animal Feces",
+    "description": "",
+    "imageFile": "feces.webp"
+  },
+  {
+    "name": "Medium Egg",
+    "description": "",
+    "imageFile": "dinosaur_egg.webp"
+  },
+  {
+    "name": "Megalania Egg",
+    "description": "",
+    "imageFile": "megalania_egg.webp"
+  },
+  {
+    "name": "Megalania Toxin",
+    "description": "",
+    "imageFile": "megalania_toxin.webp"
+  },
+  {
+    "name": "Megalodon Tooth",
+    "description": "",
+    "imageFile": "megalodon_tooth.webp"
+  },
+  {
+    "name": "Mejoberry",
+    "description": "",
+    "imageFile": "mejoberry.webp"
+  },
+  {
+    "name": "Metal Ore",
+    "description": "",
+    "imageFile": "metal_ore.webp"
+  },
+  {
+    "name": "Microraptor Egg",
+    "description": "",
+    "imageFile": "microraptor_egg.webp"
+  },
+  {
+    "name": "Moschops Egg",
+    "description": "",
+    "imageFile": "moschops_egg.webp"
+  },
+  {
+    "name": "Narcoberry",
+    "description": "",
+    "imageFile": "narcoberry.webp"
+  },
+  {
+    "name": "Obsidian",
+    "description": "",
+    "imageFile": "obsidian.webp"
+  },
+  {
+    "name": "Oil",
+    "description": "",
+    "imageFile": "oil.webp"
+  },
+  {
+    "name": "Organic Polymer",
+    "description": "",
+    "imageFile": "organic_polymer.webp"
+  },
+  {
+    "name": "Pachy Egg",
+    "description": "",
+    "imageFile": "pachy_egg.webp"
+  },
+  {
+    "name": "Parasaur Egg",
+    "description": "",
+    "imageFile": "parasaur_egg.webp"
+  },
+  {
+    "name": "Pegomastax Egg",
+    "description": "",
+    "imageFile": "pegomastax_egg.webp"
+  },
+  {
+    "name": "Pelagornis Egg",
+    "description": "",
+    "imageFile": "pelagornis_egg.webp"
+  },
+  {
+    "name": "Pelt",
+    "description": "",
+    "imageFile": "pelt.webp"
+  },
+  {
+    "name": "Pelt, Hair, or Wool",
+    "description": "",
+    "imageFile": "pelt_hair_or_wool.webp"
+  },
+  {
+    "name": "Pteranodon Egg",
+    "description": "",
+    "imageFile": "pteranodon_egg.webp"
+  },
+  {
+    "name": "Pulmonoscorpius Egg",
+    "description": "",
+    "imageFile": "pulmonoscorpius_egg.webp"
+  },
+  {
+    "name": "Pumpkin",
+    "description": "",
+    "imageFile": "pumpkin.webp"
+  },
+  {
+    "name": "Quetzal Egg",
+    "description": "",
+    "imageFile": "quetzal_egg.webp"
+  },
+  {
+    "name": "Raptor Egg",
+    "description": "",
+    "imageFile": "raptor_egg.webp"
+  },
+  {
+    "name": "Rare Flower",
+    "description": "",
+    "imageFile": "rare_flower.webp"
+  },
+  {
+    "name": "Rare Mushroom",
+    "description": "",
+    "imageFile": "rare_mushroom.webp"
+  },
+  {
+    "name": "Raw Fish Meat",
+    "description": "",
+    "imageFile": "raw_fish_meat.webp"
+  },
+  {
+    "name": "Raw Meat",
+    "description": "",
+    "imageFile": "raw_meat.webp"
+  },
+  {
+    "name": "Raw Mutton",
+    "description": "",
+    "imageFile": "raw_mutton.webp"
+  },
+  {
+    "name": "Raw Prime Fish Meat",
+    "description": "",
+    "imageFile": "raw_prime_fish_meat.webp"
+  },
+  {
+    "name": "Raw Prime Meat",
+    "description": "",
+    "imageFile": "raw_prime_meat.webp"
+  },
+  {
+    "name": "Rex Egg",
+    "description": "",
+    "imageFile": "rex_egg.webp"
+  },
+  {
+    "name": "Rockarrot",
+    "description": "",
+    "imageFile": "rockarrot.webp"
+  },
+  {
+    "name": "Sap",
+    "description": "",
+    "imageFile": "sap.webp"
+  },
+  {
+    "name": "Sarco Egg",
+    "description": "",
+    "imageFile": "sarco_egg.webp"
+  },
+  {
+    "name": "Sarcosuchus Skin",
+    "description": "",
+    "imageFile": "sarcosuchus_skin.webp"
+  },
+  {
+    "name": "Sauropod Vertebra",
+    "description": "",
+    "imageFile": "sauropod_vertebra.webp"
+  },
+  {
+    "name": "Savoroot",
+    "description": "",
+    "imageFile": "savoroot.webp"
+  },
+  {
+    "name": "Scarecrow",
+    "description": "",
+    "imageFile": "scarecrow.webp"
+  },
+  {
+    "name": "Silica Pearls",
+    "description": "",
+    "imageFile": "silica_pearls.webp"
+  },
+  {
+    "name": "Small Animal Feces",
+    "description": "",
+    "imageFile": "feces.webp"
+  },
+  {
+    "name": "Small Egg",
+    "description": "",
+    "imageFile": "dinosaur_egg.webp"
+  },
+  {
+    "name": "Special Egg",
+    "description": "",
+    "imageFile": "golden_hesperonis_egg.webp"
+  },
+  {
+    "name": "Spino Egg",
+    "description": "",
+    "imageFile": "spino_egg.webp"
+  },
+  {
+    "name": "Spinosaurus Sail",
+    "description": "",
+    "imageFile": "spinosaurus_sail.webp"
+  },
+  {
+    "name": "Spoiled Meat",
+    "description": "",
+    "imageFile": "spoiled_meat.webp"
+  },
+  {
+    "name": "Stego Egg",
+    "description": "",
+    "imageFile": "stego_egg.webp"
+  },
+  {
+    "name": "Stimberry",
+    "description": "",
+    "imageFile": "stimberry.webp"
+  },
+  {
+    "name": "Stolen Headstone",
+    "description": "",
+    "imageFile": "stolen_headstone.webp"
+  },
+  {
+    "name": "Stone",
+    "description": "",
+    "imageFile": "stone.webp"
+  },
+  {
+    "name": "Tapejara Egg",
+    "description": "",
+    "imageFile": "tapejara_egg.webp"
+  },
+  {
+    "name": "Terror Bird Egg",
+    "description": "",
+    "imageFile": "terror_bird_egg.webp"
+  },
+  {
+    "name": "Thatch",
+    "description": "",
+    "imageFile": "thatch.webp"
+  },
+  {
+    "name": "Therizino Claws",
+    "description": "",
+    "imageFile": "therizino_claws.webp"
+  },
+  {
+    "name": "Therizinosaurus Egg",
+    "description": "",
+    "imageFile": "therizinosaurus_egg.webp"
+  },
+  {
+    "name": "Thylacoleo Hook-Claw",
+    "description": "",
+    "imageFile": "thylacoleo_hook-claw.webp"
+  },
+  {
+    "name": "Tintoberry",
+    "description": "",
+    "imageFile": "tintoberry.webp"
+  },
+  {
+    "name": "Titanoboa Egg",
+    "description": "",
+    "imageFile": "titanoboa_egg.webp"
+  },
+  {
+    "name": "Titanoboa Venom",
+    "description": "",
+    "imageFile": "titanoboa_venom.webp"
+  },
+  {
+    "name": "Trike Egg",
+    "description": "",
+    "imageFile": "trike_egg.webp"
+  },
+  {
+    "name": "Troodon Egg",
+    "description": "",
+    "imageFile": "troodon_egg.webp"
+  },
+  {
+    "name": "Tusoteuthis Tentacle",
+    "description": "",
+    "imageFile": "tusoteuthis_tentacle.webp"
+  },
+  {
+    "name": "Tyrannosaurus Arm",
+    "description": "",
+    "imageFile": "tyrannosaurus_arm.webp"
+  },
+  {
+    "name": "Water",
+    "description": "",
+    "imageFile": "water.webp"
+  },
+  {
+    "name": "Wood",
+    "description": "",
+    "imageFile": "wood.webp"
+  },
+  {
+    "name": "Wool",
+    "description": "",
+    "imageFile": "wool.webp"
+  },
+  {
+    "name": "Woolly Rhino Horn",
+    "description": "",
+    "imageFile": "woolly_rhino_horn.webp"
+  },
+  {
+    "name": "Yutyrannus Egg",
+    "description": "",
+    "imageFile": "yutyrannus_egg.webp"
+  },
+  {
+    "name": "Yutyrannus Lungs",
+    "description": "",
+    "imageFile": "yutyrannus_lungs.webp"
+  }
+]

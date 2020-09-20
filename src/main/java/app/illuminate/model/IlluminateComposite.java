@@ -28,6 +28,12 @@ public class IlluminateComposite extends Composite {
 
     @JsonIgnore
     @Override
+    public String getUuid() {
+        return super.getUuid();
+    }
+
+    @JsonIgnore
+    @Override
     public String getImageFile() {
         return super.getImageFile();
     }

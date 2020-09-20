@@ -28,6 +28,12 @@ public class IlluminateResource extends Resource {
 
     @JsonIgnore
     @Override
+    public String getUuid() {
+        return super.getUuid();
+    }
+
+    @JsonIgnore
+    @Override
     public Date getLastUpdated() {
         return super.getLastUpdated();
     }

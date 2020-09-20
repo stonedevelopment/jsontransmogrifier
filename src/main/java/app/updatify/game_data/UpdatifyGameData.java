@@ -22,9 +22,12 @@ public class UpdatifyGameData extends GameData {
     private boolean hasUpdate = false;
 
     public UpdatifyGameData(JsonNode transmogrificationNode, JsonNode illuminationNode) {
-
-        super(transmogrificationNode);
+        super(convertTransmogrificationNode(transmogrificationNode));
         this.illuminationNode = illuminationNode;
+    }
+
+    private static JsonNode convertTransmogrificationNode(JsonNode transmogrificationNode) {
+        return JSONUtil.parseIn(cArkAssetsFilePath, transmogrificationNode.get(cFilePath).asText());
     }
 
     private JsonNode getTransmogNode() {
@@ -38,7 +41,7 @@ public class UpdatifyGameData extends GameData {
     /**
      * Helper method for top-level details to determine if whether or not information was updated
      *
-     * @return if information was updated
+     * @return if information has been updated
      */
     private boolean hasUpdated() {
         return hasUpdate;

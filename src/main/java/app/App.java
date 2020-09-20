@@ -18,11 +18,11 @@ public class App {
 //        transmogrify();
 
         //  convert transmogrified static UUIDs to separate readable/editable files
-//        illuminate();
+        illuminate();
 
         //  merge illuminated files into database-ready UUIDs pre-generated from Transmog
         //  nullified illuminated ids will be created on the fly
-        updatify();
+//        updatify();
     }
 
     private static void transmogrify() {

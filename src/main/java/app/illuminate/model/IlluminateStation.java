@@ -28,6 +28,12 @@ public class IlluminateStation extends Station {
 
     @JsonIgnore
     @Override
+    public String getUuid() {
+        return super.getUuid();
+    }
+
+    @JsonIgnore
+    @Override
     public String getSourceId() {
         return super.getSourceId();
     }
