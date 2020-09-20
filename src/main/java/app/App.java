@@ -18,24 +18,11 @@ public class App {
 //        transmogrify();
 
         //  convert transmogrified static UUIDs to separate readable/editable files
-        illuminate();
+//        illuminate();
 
-        //  merge illuminated files into database-ready UUIDs
-//        updatify();
-    }
-
-    private static void transmogrify() {
-        JsonNode inNode = JSONUtil.parseIn(cArkAssetsFilePath, cArkDataEditableFileName);
-        TransmogrifyApp transmogrifyApp = new TransmogrifyApp(inNode);
-        transmogrifyApp.start();
-        transmogrifyApp.export();
-    }
-
-    private static void illuminate() {
-        JsonNode inNode = JSONUtil.parseIn(cArkAssetsFilePath, cTransmogrificationFileName);
-        IlluminateApp illuminateApp = new IlluminateApp(inNode);
-        illuminateApp.start();
-        illuminateApp.export();
+        //  merge illuminated files into database-ready UUIDs pre-generated from Transmog
+        //  nullified illuminated ids will be created on the fly
+        updatify();
     }
 
     private static void updatify() {

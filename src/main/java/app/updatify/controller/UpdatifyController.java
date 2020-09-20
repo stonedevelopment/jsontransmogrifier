@@ -1,20 +1,16 @@
 package app.updatify.controller;
 
-import app.updatify.game_data.IlluminateUpdatifyGameData;
-import app.updatify.game_data.TransmogUpdatifyGameData;
+import app.updatify.game_data.UpdatifyGameData;
 import com.fasterxml.jackson.databind.JsonNode;
 
 public class UpdatifyController {
-    private final TransmogUpdatifyGameData transmogGameData;
-    private final IlluminateUpdatifyGameData illuminateGameData;
+    private final UpdatifyGameData gameData;
 
-    public UpdatifyController(JsonNode transmogrifiedNode, JsonNode illuminatedNode) {
-        this.transmogGameData = new TransmogUpdatifyGameData(transmogrifiedNode);
-        this.illuminateGameData = new IlluminateUpdatifyGameData(illuminatedNode);
+    public UpdatifyController(JsonNode transmogrifiedNode, JsonNode illuminationNode) {
+        this.gameData = new UpdatifyGameData(transmogrifiedNode, illuminationNode);
     }
 
     public void start() {
-        transmogGameData.mapGameDataFromJson();
-        illuminateGameData.mapGameDataFromJson();
+        gameData.mapGameDataFromJson();
     }
 }

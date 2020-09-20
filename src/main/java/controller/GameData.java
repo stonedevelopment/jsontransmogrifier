@@ -16,7 +16,7 @@ public abstract class GameData {
     protected static final boolean cDebug = false; // TODO: 4/26/2020 Set to FALSE when finalizing
 
     protected final ObjectMapper mapper;
-    protected final JsonNode inNode;
+    private final JsonNode inNode;
 
     //  name, uuid
     private final Map<String, String> resourceIdMap = new TreeMap<>();
@@ -52,6 +52,10 @@ public abstract class GameData {
     }
 
     protected abstract void createDetailsObject();
+
+    public JsonNode getInNode() {
+        return inNode;
+    }
 
     public Details getDetailsObject() {
         return details;

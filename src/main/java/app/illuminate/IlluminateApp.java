@@ -99,8 +99,7 @@ public class IlluminateApp {
         while (elements.hasNext()) {
             String fieldName = fieldNames.next();
             JsonNode resolvedNode = elements.next();
-            JsonNode prefixNode = mapper.createObjectNode().set(fieldName, resolvedNode);
-            addResolvedNodeToGameData(gameData, prefixNode, fieldName);
+            addResolvedNodeToGameData(gameData, resolvedNode, fieldName);
         }
     }
 
@@ -117,7 +116,7 @@ public class IlluminateApp {
         //  write illuminated node to json
         writeNodeToFile(illuminatedFilePath, illuminatedNode);
         //  add illuminated json file name for illumination write out
-        gameData.addIlluminatedFile(illuminatedFilePath);
+        gameData.addIlluminatedFile(type, illuminatedFilePath);
     }
 
     private void writeIllumination() {

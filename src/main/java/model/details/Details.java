@@ -2,6 +2,8 @@ package model.details;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.util.Date;
 import java.util.Objects;
@@ -34,6 +36,10 @@ public class Details {
         this.folderFile = folderFile;
         this.backFolderFile = backFolderFile;
         this.lastUpdated = new Date();
+    }
+
+    public static Details fromJson(JsonNode jsonNode) {
+        return new ObjectMapper().convertValue(jsonNode, Details.class);
     }
 
     public String getUuid() {

@@ -65,6 +65,7 @@ public class Constants {
     public static final String cNullUuid = "";
     public static final String cFrom = "from";
     public static final String cTo = "to";
+    public static final String cType = "type";
 
     //  json values
     public static final int cStationViewType = 0;

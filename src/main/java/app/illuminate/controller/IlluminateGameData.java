@@ -70,7 +70,7 @@ public abstract class IlluminateGameData extends GameData {
 
     @Override
     protected void mapFoldersFromJson() {
-        JsonNode foldersNode = inNode.get(cFolders);
+        JsonNode foldersNode = getInNode().get(cFolders);
         for (JsonNode folderNode : foldersNode) {
             IlluminateFolder folder = IlluminateFolder.fromJson(folderNode);
             addFolder(folder);
@@ -79,7 +79,7 @@ public abstract class IlluminateGameData extends GameData {
 
     @Override
     protected void mapResourcesFromJson() {
-        JsonNode resourcesNode = inNode.get(cResources);
+        JsonNode resourcesNode = getInNode().get(cResources);
         for (JsonNode resourceNode : resourcesNode) {
             IlluminateResource resource = IlluminateResource.fromJson(resourceNode);
             addResource(resource);
@@ -88,7 +88,7 @@ public abstract class IlluminateGameData extends GameData {
 
     @Override
     protected void mapEngramsFromJson() {
-        JsonNode engramsNode = inNode.get(cEngrams);
+        JsonNode engramsNode = getInNode().get(cEngrams);
         for (JsonNode engramNode : engramsNode) {
             IlluminateEngram engram = IlluminateEngram.fromJson(engramNode);
             addEngram(engram);
@@ -97,7 +97,7 @@ public abstract class IlluminateGameData extends GameData {
 
     @Override
     protected void mapStationsFromJson() {
-        JsonNode stationsNode = inNode.get(cStations);
+        JsonNode stationsNode = getInNode().get(cStations);
         for (JsonNode stationNode : stationsNode) {
             IlluminateStation station = IlluminateStation.fromJson(stationNode);
             addStation(station);
@@ -106,7 +106,7 @@ public abstract class IlluminateGameData extends GameData {
 
     @Override
     protected void mapCompositionFromJson() {
-        JsonNode compositionsNode = inNode.get(cComposition);
+        JsonNode compositionsNode = getInNode().get(cComposition);
         for (JsonNode compositionNode : compositionsNode) {
             IlluminateComposition composition = IlluminateComposition.fromJson(compositionNode);
             addComposition(composition);
@@ -114,7 +114,7 @@ public abstract class IlluminateGameData extends GameData {
     }
 
     protected void mapCompositesFromJson() {
-        JsonNode compositesNode = inNode.get(cComposites);
+        JsonNode compositesNode = getInNode().get(cComposites);
         for (JsonNode compositeNode : compositesNode) {
             IlluminateComposite composite = IlluminateComposite.fromJson(compositeNode);
             addComposite(composite);
@@ -123,7 +123,7 @@ public abstract class IlluminateGameData extends GameData {
 
     @Override
     protected void mapDirectoryFromJson() {
-        JsonNode directoryNode = inNode.get(cDirectory);
+        JsonNode directoryNode = getInNode().get(cDirectory);
         for (JsonNode directoryItemNode : directoryNode) {
             DirectoryItem directoryItem = DirectoryItem.fromJson(directoryItemNode);
             addDirectoryItem(directoryItem);
@@ -165,8 +165,8 @@ public abstract class IlluminateGameData extends GameData {
         return getDetailsObject().getIlluminatedFiles();
     }
 
-    public void addIlluminatedFile(String illuminatedFile) {
-        getDetailsObject().addIlluminatedFile(illuminatedFile);
+    public void addIlluminatedFile(String type, String illuminatedFile) {
+        getDetailsObject().addIlluminatedFile(type, illuminatedFile);
     }
 
     public String generateIlluminatedFilePath(String type) {

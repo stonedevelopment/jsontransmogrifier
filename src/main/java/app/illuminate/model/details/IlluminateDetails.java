@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import java.util.Date;
 
@@ -52,8 +53,11 @@ public class IlluminateDetails extends TransmogDetails {
         return illuminatedFiles;
     }
 
-    public void addIlluminatedFile(String illuminatedFile) {
-        illuminatedFiles.add(illuminatedFile);
+    public void addIlluminatedFile(String type, String illuminatedFile) {
+        ObjectNode illuminatedNode = new ObjectMapper().createObjectNode();
+        illuminatedNode.put(cType, type);
+        illuminatedNode.put(cFilePath, illuminatedFile);
+        illuminatedFiles.add(illuminatedNode);
     }
 
     @JsonIgnore

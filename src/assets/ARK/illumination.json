@@ -1,1 +1,91 @@
-{"Primary":{"name":"ARK:Survival Evolved","illuminatedFiles":["Primary/illuminated_details.json","Primary/illuminated_resources.json","Primary/illuminated_engrams.json","Primary/illuminated_folders.json","Primary/illuminated_stations.json","Primary/illuminated_directory.json"]},"DLC":[{"name":"Primitive Plus","illuminatedFiles":["DLC/Primitive Plus/illuminated_details.json","DLC/Primitive Plus/illuminated_resources.json","DLC/Primitive Plus/illuminated_engrams.json","DLC/Primitive Plus/illuminated_folders.json","DLC/Primitive Plus/illuminated_stations.json","DLC/Primitive Plus/illuminated_directory.json","DLC/Primitive Plus/illuminated_blacklist.json","DLC/Primitive Plus/illuminated_totalConversion.json"]},{"name":"Scorched Earth","illuminatedFiles":["DLC/Scorched Earth/illuminated_details.json","DLC/Scorched Earth/illuminated_resources.json","DLC/Scorched Earth/illuminated_engrams.json","DLC/Scorched Earth/illuminated_folders.json","DLC/Scorched Earth/illuminated_stations.json","DLC/Scorched Earth/illuminated_directory.json","DLC/Scorched Earth/illuminated_blacklist.json"]},{"name":"Aberration","illuminatedFiles":["DLC/Aberration/illuminated_details.json","DLC/Aberration/illuminated_resources.json","DLC/Aberration/illuminated_engrams.json","DLC/Aberration/illuminated_folders.json","DLC/Aberration/illuminated_stations.json","DLC/Aberration/illuminated_directory.json","DLC/Aberration/illuminated_blacklist.json"]},{"name":"Extinction","illuminatedFiles":["DLC/Extinction/illuminated_details.json","DLC/Extinction/illuminated_resources.json","DLC/Extinction/illuminated_engrams.json","DLC/Extinction/illuminated_folders.json","DLC/Extinction/illuminated_stations.json","DLC/Extinction/illuminated_directory.json","DLC/Extinction/illuminated_blacklist.json"]},{"name":"The Center","illuminatedFiles":["DLC/The Center/illuminated_details.json","DLC/The Center/illuminated_resources.json","DLC/The Center/illuminated_engrams.json","DLC/The Center/illuminated_folders.json","DLC/The Center/illuminated_stations.json","DLC/The Center/illuminated_directory.json","DLC/The Center/illuminated_blacklist.json"]},{"name":"Ragnarok","illuminatedFiles":["DLC/Ragnarok/illuminated_details.json","DLC/Ragnarok/illuminated_resources.json","DLC/Ragnarok/illuminated_engrams.json","DLC/Ragnarok/illuminated_folders.json","DLC/Ragnarok/illuminated_stations.json","DLC/Ragnarok/illuminated_directory.json","DLC/Ragnarok/illuminated_blacklist.json"]}]}
+{
+  "Primary": {
+    "name": "ARK:Survival Evolved",
+    "illuminatedFiles": [
+      "Primary/illuminated_details.json",
+      "Primary/illuminated_resources.json",
+      "Primary/illuminated_engrams.json",
+      "Primary/illuminated_folders.json",
+      "Primary/illuminated_stations.json",
+      "Primary/illuminated_directory.json"
+    ]
+  },
+  "DLC": [
+    {
+      "name": "Primitive Plus",
+      "illuminatedFiles": [
+        {
+          "type": "details",
+          "fileName": "DLC/Primitive Plus/illuminated_details.json"
+        },
+        "DLC/Primitive Plus/illuminated_resources.json",
+        "DLC/Primitive Plus/illuminated_engrams.json",
+        "DLC/Primitive Plus/illuminated_folders.json",
+        "DLC/Primitive Plus/illuminated_stations.json",
+        "DLC/Primitive Plus/illuminated_directory.json",
+        "DLC/Primitive Plus/illuminated_blacklist.json",
+        "DLC/Primitive Plus/illuminated_totalConversion.json"
+      ]
+    },
+    {
+      "name": "Scorched Earth",
+      "illuminatedFiles": [
+        "DLC/Scorched Earth/illuminated_details.json",
+        "DLC/Scorched Earth/illuminated_resources.json",
+        "DLC/Scorched Earth/illuminated_engrams.json",
+        "DLC/Scorched Earth/illuminated_folders.json",
+        "DLC/Scorched Earth/illuminated_stations.json",
+        "DLC/Scorched Earth/illuminated_directory.json",
+        "DLC/Scorched Earth/illuminated_blacklist.json"
+      ]
+    },
+    {
+      "name": "Aberration",
+      "illuminatedFiles": [
+        "DLC/Aberration/illuminated_details.json",
+        "DLC/Aberration/illuminated_resources.json",
+        "DLC/Aberration/illuminated_engrams.json",
+        "DLC/Aberration/illuminated_folders.json",
+        "DLC/Aberration/illuminated_stations.json",
+        "DLC/Aberration/illuminated_directory.json",
+        "DLC/Aberration/illuminated_blacklist.json"
+      ]
+    },
+    {
+      "name": "Extinction",
+      "illuminatedFiles": [
+        "DLC/Extinction/illuminated_details.json",
+        "DLC/Extinction/illuminated_resources.json",
+        "DLC/Extinction/illuminated_engrams.json",
+        "DLC/Extinction/illuminated_folders.json",
+        "DLC/Extinction/illuminated_stations.json",
+        "DLC/Extinction/illuminated_directory.json",
+        "DLC/Extinction/illuminated_blacklist.json"
+      ]
+    },
+    {
+      "name": "The Center",
+      "illuminatedFiles": [
+        "DLC/The Center/illuminated_details.json",
+        "DLC/The Center/illuminated_resources.json",
+        "DLC/The Center/illuminated_engrams.json",
+        "DLC/The Center/illuminated_folders.json",
+        "DLC/The Center/illuminated_stations.json",
+        "DLC/The Center/illuminated_directory.json",
+        "DLC/The Center/illuminated_blacklist.json"
+      ]
+    },
+    {
+      "name": "Ragnarok",
+      "illuminatedFiles": [
+        "DLC/Ragnarok/illuminated_details.json",
+        "DLC/Ragnarok/illuminated_resources.json",
+        "DLC/Ragnarok/illuminated_engrams.json",
+        "DLC/Ragnarok/illuminated_folders.json",
+        "DLC/Ragnarok/illuminated_stations.json",
+        "DLC/Ragnarok/illuminated_directory.json",
+        "DLC/Ragnarok/illuminated_blacklist.json"
+      ]
+    }
+  ]
+}
