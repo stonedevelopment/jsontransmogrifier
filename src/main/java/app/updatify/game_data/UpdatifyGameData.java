@@ -5,6 +5,7 @@ import app.illuminate.model.details.IlluminateDetails;
 import app.transmogrify.model.details.TransmogDetails;
 import app.updatify.model.*;
 import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 import controller.GameData;
 import model.*;
 import util.JSONUtil;
@@ -26,6 +27,11 @@ public class UpdatifyGameData extends GameData {
 
     private static JsonNode convertTransmogrificationNode(JsonNode transmogrificationNode) {
         return JSONUtil.parseIn(cArkAssetsFilePath, transmogrificationNode.get(cFilePath).asText());
+    }
+
+    @Override
+    public UpdatifyDetails getDetails() {
+        return (UpdatifyDetails) super.getDetails();
     }
 
     private JsonNode getTransmogNode() {
@@ -149,14 +155,14 @@ public class UpdatifyGameData extends GameData {
 
     @Override
     protected void mapEngramsFromJson() {
-        JsonNode jsonArray = getTransmogNode().get(cEngrams);
-        for (JsonNode jsonNode : jsonArray) {
-            addEngram(Engram.fromJson(jsonNode));
+        JsonNode tArray = getTransmogNode().get(cEngrams);
+        for (JsonNode tNode : tArray) {
+            addEngram(Engram.fromJson(tNode));
         }
 
         JsonNode iArray = getIlluminatedNode(cEngrams);
-        for (JsonNode jsonNode : iArray) {
-            IlluminateEngram iEngram = UpdatifyEngram.fromJson(jsonNode);
+        for (JsonNode iNode : iArray) {
+            IlluminateEngram iEngram = UpdatifyEngram.fromJson(iNode);
             Engram tEngram = getEngramByName(iEngram.getName());
 
             if (tEngram == null) {
@@ -190,9 +196,6 @@ public class UpdatifyGameData extends GameData {
             JsonNode compositesNode = compositionNode.get(cComposites);
 
             if (compositionId == null) {
-                // TODO: 9/20/2020
-                //      create new Composition
-                //      pull in Composite list, create new Composites
                 String engramId = getEngramUUIDByName(name);
                 Composition iComposition = UpdatifyComposition.createFrom(IlluminateComposition.with(engramId));
                 compositionId = iComposition.getUuid();
@@ -257,6 +260,31 @@ public class UpdatifyGameData extends GameData {
 
     @Override
     public JsonNode resolveToJson() {
-        return null;
+        ObjectNode outNode = mapper.createObjectNode();
+
+        outNode.set(cDetails, mapper.valueToTree(getDetails()));
+
+        //  add resources, without complex resources
+        outNode.set(cResources, mapper.valueToTree(transformResourceMap()));
+
+        //  add stations
+        outNode.set(cStations, mapper.valueToTree(transformStationMap()));
+
+        //  add folders
+        outNode.set(cFolders, mapper.valueToTree(transformFolderMap()));
+
+        //  add engrams
+        outNode.set(cEngrams, mapper.valueToTree(transformEngramMap()));
+
+        //  add composition
+        outNode.set(cComposition, mapper.valueToTree(transformCompositionMap()));
+
+        //  add composites
+        outNode.set(cComposites, flattenCompositeMapToJson(transformCompositeMap()));
+
+        //  add directory, traverse through tree, fill with uuids
+//        outNode.set(cDirectory, flattenDirectoryToJson(transformDirectory()));
+
+        return outNode;
     }
 }

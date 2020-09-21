@@ -117,11 +117,7 @@ public class Engram {
         return lastUpdated;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Engram engram = (Engram) o;
+    public boolean equals(Engram engram) {
         return level == engram.level &&
                 yield == engram.yield &&
                 points == engram.points &&
@@ -129,11 +125,6 @@ public class Engram {
                 name.equals(engram.name) &&
                 description.equals(engram.description) &&
                 imageFile.equals(engram.imageFile);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(name, description, imageFile, level, yield, points, xp);
     }
 
     @Override

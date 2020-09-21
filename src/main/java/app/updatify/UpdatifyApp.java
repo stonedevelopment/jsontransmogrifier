@@ -36,7 +36,7 @@ public class UpdatifyApp {
      * Export resolved data to database-ready json file
      */
     public void export() {
-
+        primaryController.export();
     }
 
     private void updatifyPrimary() {

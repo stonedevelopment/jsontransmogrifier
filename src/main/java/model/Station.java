@@ -6,7 +6,6 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.util.Date;
-import java.util.Objects;
 
 import static util.Constants.*;
 
@@ -62,19 +61,9 @@ public class Station {
         return lastUpdated;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Station station = (Station) o;
+    public boolean equals(Station station) {
         return name.equals(station.name) &&
-                imageFile.equals(station.imageFile) &&
-                sourceId.equals(station.sourceId);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(name, imageFile, sourceId);
+                imageFile.equals(station.imageFile);
     }
 
     @Override

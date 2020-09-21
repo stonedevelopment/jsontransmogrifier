@@ -7,6 +7,7 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import model.Engram;
 
 import java.util.Date;
+import java.util.Iterator;
 import java.util.UUID;
 
 import static util.Constants.cComposition;
@@ -20,11 +21,14 @@ public class UpdatifyEngram extends Engram {
     public static IlluminateEngram fromJson(JsonNode jsonNode) {
         ObjectNode outNode = new ObjectMapper().createObjectNode();
 
-        while (jsonNode.elements().hasNext()) {
-            String fieldName = jsonNode.fieldNames().next();
+        Iterator<String> fieldNames = jsonNode.fieldNames();
+        Iterator<JsonNode> elements = jsonNode.elements();
+
+        while (elements.hasNext()) {
+            String fieldName = fieldNames.next();
+            JsonNode element = elements.next();
             if (fieldName.equals(cComposition)) continue;
 
-            JsonNode element = jsonNode.elements().next();
             outNode.set(fieldName, element);
         }
 
