@@ -1,6 +1,5 @@
 package app.illuminate.model.details;
 
-import app.transmogrify.model.details.TransmogDetails;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -14,7 +13,7 @@ import java.util.Date;
 
 import static util.Constants.*;
 
-public class IlluminateDetails extends TransmogDetails {
+public class IlluminateDetails extends Details {
     private final ArrayNode illuminatedFiles = new ObjectMapper().createArrayNode();
 
     @JsonCreator
@@ -24,9 +23,8 @@ public class IlluminateDetails extends TransmogDetails {
                              @JsonProperty(cFilePath) String filePath,
                              @JsonProperty(cLogoFile) String logoFile,
                              @JsonProperty(cFolderFile) String folderFile,
-                             @JsonProperty(cBackFolderFile) String backFolderFile,
-                             @JsonProperty(cTransmogFile) String transmogFile) {
-        super(uuid, name, description, filePath, logoFile, folderFile, backFolderFile, transmogFile);
+                             @JsonProperty(cBackFolderFile) String backFolderFile) {
+        super(uuid, name, description, filePath, logoFile, folderFile, backFolderFile);
     }
 
     public static IlluminateDetails from(JsonNode jsonNode) {
@@ -47,12 +45,6 @@ public class IlluminateDetails extends TransmogDetails {
     @Override
     public Date getLastUpdated() {
         return super.getLastUpdated();
-    }
-
-    @JsonIgnore
-    @Override
-    public String getTransmogFile() {
-        return super.getTransmogFile();
     }
 
     @JsonIgnore

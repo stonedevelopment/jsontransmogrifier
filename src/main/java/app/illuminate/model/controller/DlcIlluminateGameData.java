@@ -47,7 +47,7 @@ public class DlcIlluminateGameData extends IlluminateGameData {
 
     @Override
     protected void createDetailsObject() {
-        this.details = DlcIlluminateDetails.from(getInNode().get(cDetails));
+        this.details = DlcIlluminateDetails.fromJson(getInNode().get(cDetails));
     }
 
     @Override

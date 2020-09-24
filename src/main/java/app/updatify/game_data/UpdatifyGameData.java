@@ -9,6 +9,7 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import controller.GameData;
 import model.*;
 import util.JSONUtil;
+import util.Log;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -82,7 +83,7 @@ public class UpdatifyGameData extends GameData {
     @Override
     protected void createDetailsObject() {
         //  instantiate
-        TransmogDetails tDetails = TransmogDetails.fromJson(getTransmogNode().get(cDetails));
+        UpdatifyDetails tDetails = UpdatifyDetails.fromJson(getTransmogNode().get(cDetails));
         setDetails(tDetails);
 
         //  compare
@@ -90,6 +91,8 @@ public class UpdatifyGameData extends GameData {
         if (!tDetails.equals(iDetails)) {
             updateDetails(UpdatifyDetails.convertToNew(tDetails, iDetails));
             setHasUpdate();
+        } else {
+            Log.d("No change to details for " + getDetails().getName());
         }
     }
 

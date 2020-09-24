@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import model.details.Details;
 
 import static util.Constants.*;
 
@@ -20,15 +21,14 @@ public class DlcIlluminateDetails extends IlluminateDetails {
                                 @JsonProperty(cLogoFile) String logoFile,
                                 @JsonProperty(cFolderFile) String folderFile,
                                 @JsonProperty(cBackFolderFile) String backFolderFile,
-                                @JsonProperty(cTransmogFile) String transmogFile,
                                 @JsonProperty(cTotalConversion) Boolean totalConversion,
                                 @JsonProperty(cGameId) String gameId) {
-        super(uuid, name, description, filePath, logoFile, folderFile, backFolderFile, transmogFile);
+        super(uuid, name, description, filePath, logoFile, folderFile, backFolderFile);
         this.totalConversion = totalConversion;
         this.gameId = gameId;
     }
 
-    public static DlcIlluminateDetails from(JsonNode jsonNode) {
+    public static DlcIlluminateDetails fromJson(JsonNode jsonNode) {
         return new ObjectMapper().convertValue(jsonNode, DlcIlluminateDetails.class);
     }
 

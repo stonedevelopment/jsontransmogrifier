@@ -2,7 +2,7 @@ package app.transmogrify.model.game_data;
 
 import app.transmogrify.controller.TransmogGameData;
 import app.transmogrify.model.details.TransmogDetails;
-import app.transmogrify.model.json.*;
+import app.transmogrify.model.json.JsonDlc;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
@@ -20,7 +20,7 @@ public class PrimaryTransmogGameData extends TransmogGameData {
 
     @Override
     protected void createDetailsObject() {
-        this.details = TransmogDetails.with(jsonDlc);
+        setDetails(TransmogDetails.createFrom(jsonDlc));
     }
 
     public String getUuid() {

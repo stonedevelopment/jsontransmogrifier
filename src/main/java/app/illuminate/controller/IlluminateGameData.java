@@ -139,7 +139,7 @@ public abstract class IlluminateGameData extends GameData {
         //  tie elements to their engram (source) id
         String uuid = composition.getUuid();
 
-        addCompositionToIdMap(engramId, uuid);
+        addCompositionToIdMap(uuid, engramId);
         addCompositionToMap(uuid, composition);
     }
 

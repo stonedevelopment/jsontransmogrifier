@@ -1,9 +1,10 @@
 package app.updatify.model;
 
-import app.illuminate.model.details.IlluminateDetails;
-import app.transmogrify.model.details.TransmogDetails;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import model.details.Details;
 
 import static util.Constants.*;
@@ -21,7 +22,7 @@ public class UpdatifyDetails extends Details {
         super(uuid, name, description, filePath, logoFile, folderFile, backFolderFile);
     }
 
-    public static UpdatifyDetails convertToNew(TransmogDetails oldDetails, IlluminateDetails newDetails) {
+    public static UpdatifyDetails convertToNew(Details oldDetails, Details newDetails) {
         return new UpdatifyDetails(oldDetails.getUuid(),
                 newDetails.getName(),
                 newDetails.getDescription(),
@@ -31,6 +32,11 @@ public class UpdatifyDetails extends Details {
                 newDetails.getBackFolderFile());
     }
 
+    public static UpdatifyDetails fromJson(JsonNode jsonNode) {
+        return new ObjectMapper().convertValue(jsonNode, UpdatifyDetails.class);
+    }
+
+    @JsonIgnore
     public String getUpdatifiedFilePath() {
         return getFilePath().concat(cUpdatifiedFileName);
     }

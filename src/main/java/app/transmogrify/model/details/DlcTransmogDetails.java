@@ -17,14 +17,13 @@ public class DlcTransmogDetails extends TransmogDetails {
                               @JsonProperty(cLogoFile) String logoFile,
                               @JsonProperty(cFolderFile) String folderFile,
                               @JsonProperty(cBackFolderFile) String backFolderFile,
-                              @JsonProperty(cTransmogFile) String transmogFile,
                               @JsonProperty(cTotalConversion) boolean totalConversion) {
-        super(uuid, name, description, filePath, logoFile, folderFile, backFolderFile, transmogFile);
+        super(uuid, name, description, filePath, logoFile, folderFile, backFolderFile);
         this.totalConversion = totalConversion;
     }
 
     public static DlcTransmogDetails with(JsonDlc jsonDlc) {
-        TransmogDetails details = TransmogDetails.with(jsonDlc);
+        TransmogDetails details = TransmogDetails.createFrom(jsonDlc);
 
         String uuid = details.getUuid();
         String name = details.getName();
@@ -33,11 +32,16 @@ public class DlcTransmogDetails extends TransmogDetails {
         String logoFile = details.getLogoFile();
         String folderFile = details.getFolderFile();
         String backFolderFile = details.getBackFolderFile();
-        String transmogFile = details.getTransmogFile();
         boolean totalConversion = isTotalConversion(jsonDlc.type);
 
-        return new DlcTransmogDetails(uuid, name, description, filePath, logoFile, folderFile, backFolderFile,
-                transmogFile, totalConversion);
+        return new DlcTransmogDetails(uuid,
+                name,
+                description,
+                filePath,
+                logoFile,
+                folderFile,
+                backFolderFile,
+                totalConversion);
     }
 
     private static boolean isTotalConversion(String type) {
