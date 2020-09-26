@@ -2,7 +2,6 @@ package app.updatify.game_data;
 
 import app.illuminate.model.*;
 import app.illuminate.model.details.IlluminateDetails;
-import app.transmogrify.model.details.TransmogDetails;
 import app.updatify.model.*;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
@@ -11,7 +10,9 @@ import model.*;
 import util.JSONUtil;
 import util.Log;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import static util.Constants.*;
@@ -19,6 +20,7 @@ import static util.Constants.*;
 public class UpdatifyGameData extends GameData {
     private final JsonNode illuminationNode;
     private final Map<String, JsonNode> illuminationMap = new HashMap<>();
+    private final List<String> uncheckedDirectoryItems = new ArrayList<>();
     private boolean hasUpdate = false;
 
     public UpdatifyGameData(JsonNode transmogrificationNode, JsonNode illuminationNode) {
@@ -41,6 +43,13 @@ public class UpdatifyGameData extends GameData {
 
     private JsonNode getIlluminatedNode(String type) {
         return illuminationMap.get(type);
+    }
+
+    private DirectoryItem getDirectoryItemByName(String name, String parentId) {
+        for (DirectoryItem directoryItem : getDirectoryItemListByParentUUID(parentId)) {
+            if (directoryItem.getName().equals(name)) return directoryItem;
+        }
+        return null;
     }
 
     /**
@@ -206,6 +215,7 @@ public class UpdatifyGameData extends GameData {
                 for (JsonNode compositeNode : compositesNode) {
                     IlluminateComposite iComposite = IlluminateComposite.fromJson(compositeNode);
                     String imageFile = getImageFileByName(name);
+                    Log.d("Adding Composite: " + iComposite.toString());
                     addComposite(UpdatifyComposite.createFrom(iComposite, imageFile, engramId, compositionId));
                 }
             } else {
@@ -215,6 +225,7 @@ public class UpdatifyGameData extends GameData {
                         Composite tComposite = getComposite(compositeId);
                         if (compositeId.equals(tComposite.getCompositionId())) {
                             if (!tComposite.equals(iComposite)) {
+                                Log.d("Updating Composite: " + iComposite.toString());
                                 updateComposite(UpdatifyComposite.updateToNew(tComposite, iComposite));
                             }
                         }
@@ -226,9 +237,68 @@ public class UpdatifyGameData extends GameData {
 
     @Override
     protected void mapDirectoryFromJson() {
-        JsonNode jsonArray = getTransmogNode().get(cDirectory);
-        for (JsonNode jsonNode : jsonArray) {
-            addDirectoryItem(DirectoryItem.fromJson(jsonNode));
+        JsonNode tArray = getTransmogNode().get(cDirectory);
+        for (JsonNode jsonNode : tArray) {
+            addUncheckedDirectoryItem(DirectoryItem.fromJson(jsonNode));
+        }
+
+        JsonNode iArray = getIlluminatedNode(cDirectory);
+        for (JsonNode iNode : iArray) {
+            String name = iNode.get(cName).asText();
+            DirectoryItem tDirectoryItem = getDirectoryItemByName(name, null);
+            if (tDirectoryItem == null) {
+                //  we have a new directory or a directory that was moved
+                // TODO: 9/26/2020 check if moved, treat as new for now
+                Station station = getStationByName(name);
+                tDirectoryItem = UpdatifyDirectoryItem.createFromStation(station, null);
+                addDirectoryItem(tDirectoryItem);
+            } else {
+                //  mapped directory
+                //  remove from uncheck list
+                removeUncheckedDirectoryItem(tDirectoryItem.getUuid());
+            }
+
+            //  map station's hierarchy
+            mapIlluminatedDirectory(iNode, tDirectoryItem.getUuid());
+        }
+
+        //  check for unchecked directory items, remove from lists
+        for (String uuid : uncheckedDirectoryItems) {
+            Log.d("Removing unchecked DirectoryItem: " + uuid);
+            // TODO: 9/26/2020 Remove unchecked DirectoryItems
+        }
+    }
+
+    private void mapIlluminatedDirectory(JsonNode iNode, String parentId) {
+        JsonNode folders = iNode.get(cFolders);
+        for (JsonNode folderNode : folders) {
+            String name = folderNode.get(cName).asText();
+            DirectoryItem fDirectoryItem = getDirectoryItemByName(name, parentId);
+            if (fDirectoryItem == null) {
+                Folder folder = getFolderByName(name);
+                fDirectoryItem = UpdatifyDirectoryItem.createFromFolder(folder, parentId);
+                Log.d("Adding Folder DirectoryItem: " + fDirectoryItem.toString());
+                addDirectoryItem(fDirectoryItem);
+            } else {
+                removeUncheckedDirectoryItem(fDirectoryItem.getUuid());
+            }
+
+            //  map folder's hierarchy
+            mapIlluminatedDirectory(folderNode, fDirectoryItem.getUuid());
+        }
+
+        JsonNode engrams = iNode.get(cEngrams);
+        for (JsonNode engramNode : engrams) {
+            String name = engramNode.asText();
+            DirectoryItem eDirectoryItem = getDirectoryItemByName(name, parentId);
+            if (eDirectoryItem == null) {
+                Engram engram = getEngramByName(name);
+                eDirectoryItem = UpdatifyDirectoryItem.createFromEngram(engram, parentId);
+                Log.d("Adding Engram DirectoryItem: " + eDirectoryItem.toString());
+                addDirectoryItem(eDirectoryItem);
+            } else {
+                removeUncheckedDirectoryItem(eDirectoryItem.getUuid());
+            }
         }
     }
 
@@ -239,6 +309,19 @@ public class UpdatifyGameData extends GameData {
     protected void addComposition(Composition composition) {
         String name = getEngramNameByUUID(composition.getEngramId());
         addComposition(name, composition);
+    }
+
+    /**
+     * Add DirectoryItem, as normal, but we add its UUID to an unchecked list for future reference.
+     * This list will be used to test if a directory item was moved or removed.
+     */
+    private void addUncheckedDirectoryItem(DirectoryItem directoryItem) {
+        uncheckedDirectoryItems.add(directoryItem.getUuid());
+        addDirectoryItem(directoryItem);
+    }
+
+    private void removeUncheckedDirectoryItem(String uuid) {
+        uncheckedDirectoryItems.remove(uuid);
     }
 
     private void updateResource(Resource resource) {
@@ -286,7 +369,7 @@ public class UpdatifyGameData extends GameData {
         outNode.set(cComposites, flattenCompositeMapToJson(transformCompositeMap()));
 
         //  add directory, traverse through tree, fill with uuids
-//        outNode.set(cDirectory, flattenDirectoryToJson(transformDirectory()));
+        outNode.set(cDirectory, flattenDirectoryToJson(transformDirectory()));
 
         return outNode;
     }

@@ -1,1 +1,1515 @@
-[{"name":"Beer Barrel","folders":[{"name":"Consumables","folders":[{"name":"Food","folders":[],"engrams":["Beer Jar"]}],"engrams":[]},{"name":"Refined","folders":[],"engrams":["Beer Liquid"]}],"engrams":[]},{"name":"Campfire","folders":[{"name":"Consumables","folders":[{"name":"Food","folders":[],"engrams":["Cooked Fish Meat","Cooked Lamb Chop","Cooked Meat","Cooked Prime Fish Meat","Cooked Prime Meat"]}],"engrams":[]},{"name":"Refined","folders":[],"engrams":["Charcoal"]}],"engrams":[]},{"name":"Catapult Turret","folders":[{"name":"Weapons","folders":[{"name":"Ammo","folders":[],"engrams":["Boulder"]}],"engrams":[]}],"engrams":[]},{"name":"Chemistry Bench","folders":[{"name":"Consumables","folders":[{"name":"Drugs","folders":[],"engrams":["Bug Repellant","Lesser Antidote","Narcotic","Stimulant"]}],"engrams":[]},{"name":"Refined","folders":[],"engrams":["Absorbent Substrate","Cementing Paste","Gunpowder","Sparkpowder"]}],"engrams":[]},{"name":"Compost Bin","folders":[{"name":"Refined","folders":[],"engrams":["Fertilizer"]}],"engrams":[]},{"name":"Cooking Pot","folders":[{"name":"Consumables","folders":[{"name":"Food","folders":[],"engrams":["Battle Tartare","Broth of Enlightenment","Calien Soup","Enduro Stew","Energy Brew","Focal Chili","Fria Curry","Lazarus Chowder","Medical Brew","Mindwipe Tonic","Shadow Steak Saute","Sweet Vegetable Cake"]}],"engrams":[]},{"name":"Dyes","folders":[],"engrams":["Black","Blue","Brick","Brown","Cantaloupe","Cyan","Forest","Green","Magenta","Mud","Navy","Olive","Orange","Parchment","Pink","Purple","Red","Royalty","Silver","Sky","Slate","Tan","Tangerine","White","Yellow"]},{"name":"Kibble","folders":[],"engrams":["Basic Kibble","Exceptional Kibble","Extraordinary Kibble","Regular Kibble","Simple Kibble","Superior Kibble"]},{"name":"Refined","folders":[],"engrams":["Charcoal","Soap"]}],"engrams":[]},{"name":"Fabricator","folders":[{"name":"Armor","folders":[{"name":"Metal","folders":[],"engrams":["Heavy Miner's Helmet"]},{"name":"Misc","folders":[],"engrams":["Gas Mask","Night Vision Goggles"]},{"name":"Riot","folders":[],"engrams":["Riot Boots","Riot Chestpiece","Riot Gauntlets","Riot Helmet","Riot Leggings"]},{"name":"SCUBA","folders":[],"engrams":["SCUBA Flippers","SCUBA Leggings","SCUBA Mask","SCUBA Tank"]},{"name":"Shields","folders":[],"engrams":["Riot Shield"]}],"engrams":[]},{"name":"Composite","folders":[],"engrams":["Electronics","Polymer"]},{"name":"Misc","folders":[],"engrams":["Canteen","Motorboat","Spray Painter"]},{"name":"Navigation","folders":[],"engrams":["GPS","Transponder Node","Transponder Tracker"]},{"name":"Structures","folders":[{"name":"Beds","folders":[],"engrams":["Bunk Bed"]},{"name":"Cooking","folders":[],"engrams":["Industrial Cooker","Industrial Grill"]},{"name":"Crafting","folders":[],"engrams":["Chemistry Bench","Industrial Forge","Industrial Grinder"]},{"name":"Defenses","folders":[],"engrams":["Homing Underwater Mine"]},{"name":"Electric","folders":[],"engrams":["Air Conditioner","Lamppost","Omnidirectional Lamppost","Refrigerator","Remote Keypad"]},{"name":"Electrical","folders":[{"name":"Defenses","folders":[],"engrams":["Auto Turret","Heavy Auto Turret"]},{"name":"Elevators","folders":[],"engrams":["Elevator Track","Large Elevator Platform","Medium Elevator Platform","Small Elevator Platform"]}],"engrams":["Electrical Cable - Inclined","Electrical Cable - Intersection","Electrical Cable - Straight","Electrical Cable - Vertical","Electrical Generator","Electrical Outlet"]},{"name":"Metal","folders":[],"engrams":["Minigun Turret","Rocket Turret"]}],"engrams":[]},{"name":"Weapons","folders":[{"name":"Ammo","folders":[],"engrams":["Advanced Bullet","Advanced Rifle Bullet","Advanced Sniper Bullet","C4 Charge","Metal Arrow","Pheromone Dart","Rocket Propelled Grenade","Shocking Tranquilizer Dart"]},{"name":"Attachments","folders":[],"engrams":["Flashlight Attachment","Holo-Scope Attachment","Laser Attachment"]},{"name":"Explosive","folders":[],"engrams":["C4 Remote Detonator","Poison Grenade"]},{"name":"Firearms","folders":[],"engrams":["Assault Rifle","Fabricated Pistol","Fabricated Sniper Rifle","Pump-Action Shotgun","Rocket Launcher"]},{"name":"Melee","folders":[],"engrams":["Electric Prod"]}],"engrams":[]}],"engrams":[]},{"name":"Industrial Cooker","folders":[{"name":"Consumables","folders":[{"name":"Food","folders":[],"engrams":["Battle Tartare","Broth of Enlightenment","Calien Soup","Enduro Stew","Energy Brew","Focal Chili","Fria Curry","Lazarus Chowder","Medical Brew","Mindwipe Tonic","Shadow Steak Saute","Sweet Vegetable Cake"]}],"engrams":[]},{"name":"Dyes","folders":[],"engrams":["Black","Blue","Brick","Brown","Cantaloupe","Cyan","Forest","Green","Magenta","Mud","Navy","Olive","Orange","Parchment","Pink","Purple","Red","Royalty","Silver","Sky","Slate","Tan","Tangerine","White","Yellow"]},{"name":"Kibble","folders":[],"engrams":["Basic Kibble","Exceptional Kibble","Extraordinary Kibble","Regular Kibble","Simple Kibble","Superior Kibble"]},{"name":"Refined","folders":[],"engrams":["Soap"]}],"engrams":[]},{"name":"Industrial Forge","folders":[{"name":"Refined","folders":[],"engrams":["Gasoline","Metal Ingot"]}],"engrams":[]},{"name":"Industrial Grill","folders":[{"name":"Consumables","folders":[{"name":"Food","folders":[],"engrams":["Cooked Fish Meat","Cooked Lamb Chop","Cooked Meat","Cooked Prime Fish Meat","Cooked Prime Meat"]}],"engrams":[]}],"engrams":[]},{"name":"Mortar and Pestle","folders":[{"name":"Consumables","folders":[{"name":"Drugs","folders":[],"engrams":["Bug Repellant","Lesser Antidote","Narcotic","Stimulant"]}],"engrams":[]},{"name":"Refined","folders":[],"engrams":["Cementing Paste","Gunpowder","Sparkpowder"]}],"engrams":[]},{"name":"Obelisk","folders":[{"name":"Boss Arenas","folders":[{"name":"Broodmother Arena","folders":[],"engrams":["Generate Broodmother (Alpha) Portal","Generate Broodmother (Beta) Portal","Generate Broodmother (Gamma) Portal"]},{"name":"Dragon Arena","folders":[],"engrams":["Generate Dragon (Alpha) Portal","Generate Dragon (Beta) Portal","Generate Dragon (Gamma) Portal"]},{"name":"Megapithecus Arena","folders":[],"engrams":["Generate Megapithecus (Alpha) Portal","Generate Megapithecus (Beta) Portal","Generate Megapithecus (Gamma) Portal"]}],"engrams":[]},{"name":"Structures","folders":[{"name":"Crafting","folders":[],"engrams":["Tek Replicator"]}],"engrams":[]}],"engrams":[]},{"name":"Preserving Bin","folders":[{"name":"Consumables","folders":[{"name":"Food","folders":[],"engrams":["Cooked Meat Jerky","Prime Meat Jerky"]}],"engrams":[]}],"engrams":[]},{"name":"Refining Forge","folders":[{"name":"Refined","folders":[],"engrams":["Charcoal","Gasoline","Metal Ingot"]}],"engrams":[]},{"name":"Self","folders":[{"name":"Armor","folders":[{"name":"Cloth","folders":[],"engrams":["Cloth Boots","Cloth Gloves","Cloth Hat","Cloth Pants","Cloth Shirt"]},{"name":"Ghillie","folders":[],"engrams":["Ghillie Boots","Ghillie Chestpiece","Ghillie Gauntlets","Ghillie Leggings","Ghillie Mask"]},{"name":"Hide","folders":[],"engrams":["Hide Boots","Hide Gloves","Hide Hat","Hide Pants","Hide Shirt"]},{"name":"Shields","folders":[],"engrams":["Wooden Shield"]}],"engrams":[]},{"name":"Misc","folders":[],"engrams":["Blood Extraction Syringe","Flare Gun","Magnifying Glass","Note","Paintbrush","Parachute","Spyglass","Water Jar","Waterskin","Wooden Raft"]},{"name":"Navigation","folders":[],"engrams":["Compass"]},{"name":"Saddles","folders":[],"engrams":["Araneo Saddle","Argentavis Saddle","Beelzebufo Saddle","Carbonemys Saddle","Dire Bear Saddle","Hyaenodon Meatpack","Ichthyosaurus Saddle","Kaprosuchus Saddle","Megalodon Saddle","Pachy Saddle","Pachyrhinosaurus Saddle","Parasaur Saddle","Pelagornis Saddle","Phiomia Saddle","Pteranodon Saddle","Pulmonoscorpius Saddle","Raptor Saddle","Sarco Saddle","Stego Saddle","Terror Bird Saddle","Trike Saddle"]},{"name":"Structures","folders":[{"name":"Beds","folders":[],"engrams":["Hide Sleeping Bag","Simple Bed"]},{"name":"Cooking","folders":[],"engrams":["Campfire","Cooking Pot"]},{"name":"Crafting","folders":[],"engrams":["Mortar and Pestle","Refining Forge","Smithy"]},{"name":"Farming","folders":[],"engrams":["Compost Bin","Large Crop Plot","Medium Crop Plot","Small Crop Plot"]},{"name":"Fridges","folders":[],"engrams":["Preserving Bin"]},{"name":"Furniture","folders":[{"name":"Stone","folders":[],"engrams":["Gravestone"]},{"name":"Wood","folders":[],"engrams":["War Drums","Wooden Bench","Wooden Chair","Wooden Table"]}],"engrams":[]},{"name":"Misc","folders":[],"engrams":["Multi-Panel Flag","Painting Canvas","Single-Panel Flag","Training Dummy","Trophy Wall-Mount","War Map"]},{"name":"Pipes","folders":[{"name":"Stone","folders":[],"engrams":["Stone Irrigation Pipe - Inclined","Stone Irrigation Pipe - Intake","Stone Irrigation Pipe - Intersection","Stone Irrigation Pipe - Straight","Stone Irrigation Pipe - Tap","Stone Irrigation Pipe - Vertical","Water Reservoir"]}],"engrams":[]},{"name":"Stone","folders":[],"engrams":["Reinforced Dinosaur Gate","Reinforced Trapdoor","Reinforced Window","Reinforced Wooden Door","Sloped Stone Roof","Sloped Stone Wall Left","Sloped Stone Wall Right","Stone Ceiling","Stone Dinosaur Gateway","Stone Doorframe","Stone Fence Foundation","Stone Fireplace","Stone Foundation","Stone Hatchframe","Stone Pillar","Stone Railing","Stone Staircase","Stone Wall","Stone Windowframe"]},{"name":"Thatch","folders":[],"engrams":["Sloped Thatch Roof","Sloped Thatch Wall Left","Sloped Thatch Wall Right","Thatch Door","Thatch Doorframe","Thatch Foundation","Thatch Roof","Thatch Wall"]},{"name":"Wood","folders":[{"name":"Signs","folders":[],"engrams":["Wooden Billboard","Wooden Sign","Wooden Wall Sign"]},{"name":"Storage","folders":[],"engrams":["Bookshelf","Feeding Trough","Large Storage Box","Storage Box"]}],"engrams":["Dinosaur Gate","Dinosaur Gateway","Rope Ladder","Sloped Wood Wall Left","Sloped Wood Wall Right","Sloped Wooden Roof","Standing Torch","Wooden Cage","Wooden Catwalk","Wooden Ceiling","Wooden Door","Wooden Doorframe","Wooden Fence Foundation","Wooden Foundation","Wooden Hatchframe","Wooden Ladder","Wooden Pillar","Wooden Railing","Wooden Ramp","Wooden Spike Wall","Wooden Staircase","Wooden Trapdoor","Wooden Wall","Wooden Window","Wooden Windowframe"]}],"engrams":[]},{"name":"Weapons","folders":[{"name":"Ammo","folders":[],"engrams":["Stone Arrow","Tranquilizer Arrow"]},{"name":"Explosive","folders":[],"engrams":["Smoke Grenade"]},{"name":"Primitive","folders":[{"name":"Melee","folders":[],"engrams":["Spear","Stone Hatchet","Stone Pick","Torch","Wooden Club"]},{"name":"Ranged","folders":[],"engrams":["Bola","Bow","Slingshot"]}],"engrams":[]},{"name":"Ranged","folders":[],"engrams":["Fishing Rod"]},{"name":"Tripwires","folders":[],"engrams":["Tripwire Alarm Trap","Tripwire Narcotic Trap"]}],"engrams":[]}],"engrams":[]},{"name":"Smithy","folders":[{"name":"Armor","folders":[{"name":"Chitin","folders":[],"engrams":["Chitin Boots","Chitin Chestpiece","Chitin Gauntlets","Chitin Helmet","Chitin Leggings"]},{"name":"Fur","folders":[],"engrams":["Fur Boots","Fur Cap","Fur Chestpiece","Fur Gauntlets","Fur Leggings"]},{"name":"Metal","folders":[],"engrams":["Flak Boots","Flak Chestpiece","Flak Gauntlets","Flak Helmet","Flak Leggings"]},{"name":"Shields","folders":[],"engrams":["Metal Shield"]}],"engrams":[]},{"name":"Communication","folders":[],"engrams":["Radio"]},{"name":"Misc","folders":[],"engrams":["Camera"]},{"name":"Navigation","folders":[],"engrams":["Compass"]},{"name":"Off-Hand","folders":[],"engrams":["Handcuffs"]},{"name":"Saddles","folders":[],"engrams":["Allosaurus Saddle","Ankylo Saddle","Arthropluera Saddle","Baryonyx Saddle","Basilosaurus Saddle","Bronto Platform Saddle","Bronto Saddle","Carno Saddle","Castoroides Saddle","Chalicotherium Saddle","Daeodon Saddle","Diplodocus Saddle","Doedicurus Saddle","Dunkleosteus Saddle","Equus Saddle","Gallimimus Saddle","Giganotosaurus Saddle","Iguanodon Saddle","Mammoth Saddle","Manta Saddle","Megalania Saddle","Megaloceros Saddle","Megalosaurus Saddle","Megatherium Saddle","Mosasaur Platform Saddle","Mosasaur Saddle","Paracer Platform Saddle","Paracer Saddle","Plesiosaur Platform Saddle","Plesiosaur Saddle","Procoptodon Saddle","Quetz Platform Saddle","Quetz Saddle","Rex Saddle","Sabertooth Saddle","Spino Saddle","Tapejara Saddle","Therizinosaurus Saddle","Thylacoleo Saddle","Titanosaur Platform Saddle","Tusoteuthis Saddle","Woolly Rhino Saddle","Yutyrannus Saddle"]},{"name":"Structures","folders":[{"name":"Cooking","folders":[],"engrams":["Beer Barrel"]},{"name":"Crafting","folders":[],"engrams":["Fabricator"]},{"name":"Defenses","folders":[],"engrams":["Bear Trap","Large Bear Trap"]},{"name":"Furniture","folders":[],"engrams":["Toilet"]},{"name":"Greenhouse","folders":[],"engrams":["Greenhouse Ceiling","Greenhouse Door","Greenhouse Doorframe","Greenhouse Wall","Greenhouse Window","Sloped Greenhouse Roof","Sloped Greenhouse Wall Left","Sloped Greenhouse Wall Right"]},{"name":"Metal","folders":[{"name":"Signs","folders":[],"engrams":["Metal Billboard","Metal Sign","Metal Wall Sign"]}],"engrams":["Ballista Turret","Behemoth Gate","Behemoth Gateway","Catapult Turret","Giant Metal Hatchframe","Giant Metal Trapdoor","Metal Catwalk","Metal Ceiling","Metal Dinosaur Gate","Metal Dinosaur Gateway","Metal Door","Metal Doorframe","Metal Fence Foundation","Metal Foundation","Metal Hatchframe","Metal Ladder","Metal Pillar","Metal Railing","Metal Ramp","Metal Spike Wall","Metal Staircase","Metal Trapdoor","Metal Tree Platform","Metal Wall","Metal Window","Metal Windowframe","Primitive Cannon","Sloped Metal Roof","Sloped Metal Wall Left","Sloped Metal Wall Right","Wall Torch"]},{"name":"Misc","folders":[],"engrams":["Tree Sap Tap","Trophy Base"]},{"name":"Pipes","folders":[{"name":"Metal","folders":[],"engrams":["Metal Irrigation Pipe - Inclined","Metal Irrigation Pipe - Intake","Metal Irrigation Pipe - Intersection","Metal Irrigation Pipe - Straight","Metal Irrigation Pipe - Tap","Metal Irrigation Pipe - Vertical","Metal Water Reservoir"]}],"engrams":[]},{"name":"Stone","folders":[],"engrams":["Behemoth Reinforced Dinosaur Gate","Behemoth Stone Dinosaur Gateway","Giant Reinforced Trapdoor","Giant Stone Hatchframe"]},{"name":"Wood","folders":[],"engrams":["Wooden Tree Platform"]}],"engrams":[]},{"name":"Weapons","folders":[{"name":"Ammo","folders":[],"engrams":["Cannon Ball","Chain Bola","Grappling Hook","Simple Bullet","Simple Rifle Ammo","Simple Shotgun Ammo","Spear Bolt","Tranq Spear Bolt","Tranquilizer Dart"]},{"name":"Attachments","folders":[],"engrams":["Scope Attachment","Silencer Attachment"]},{"name":"Explosive","folders":[],"engrams":["Grenade","Improvised Explosive Device"]},{"name":"Firearms","folders":[],"engrams":["Longneck Rifle","Shotgun","Simple Pistol"]},{"name":"Melee","folders":[],"engrams":["Lance","Metal Hatchet","Metal Pick","Metal Sickle","Pike"]},{"name":"Misc","folders":[],"engrams":["Scissors"]},{"name":"Primitive","folders":[{"name":"Melee","folders":[],"engrams":["Metal Sword"]}],"engrams":[]},{"name":"Ranged","folders":[],"engrams":["Crossbow","Harpoon Launcher"]}],"engrams":[]}],"engrams":[]},{"name":"Tek Replicator","folders":[{"name":"Armor","folders":[{"name":"Tek","folders":[],"engrams":["Tek Boots","Tek Chestpiece","Tek Gauntlets","Tek Helmet","Tek Leggings"]}],"engrams":[]},{"name":"Refined","folders":[],"engrams":["Element","Element Shard"]},{"name":"Saddles","folders":[{"name":"Tek","folders":[],"engrams":["Megalodon Tek Saddle","Mosasaur Tek Saddle","Rex Tek Saddle","Tapejara Tek Saddle"]}],"engrams":[]},{"name":"Structures","folders":[{"name":"Crafting","folders":[],"engrams":["Tek Transmitter"]},{"name":"Misc","folders":[],"engrams":["Tek Forcefield","Tek Generator","Tek Teleporter"]},{"name":"Tek","folders":[],"engrams":["Behemoth Tek Gate","Behemoth Tek Gateway","Cloning Chamber","Sloped Tek Roof","Sloped Tek Wall Left","Sloped Tek Wall Right","Tek Catwalk","Tek Ceiling","Tek Dinosaur Gate","Tek Dinosaur Gateway","Tek Door","Tek Doorframe","Tek Fence Foundation","Tek Foundation","Tek Hatchframe","Tek Ladder","Tek Pillar","Tek Railing","Tek Ramp","Tek Staircase","Tek Trapdoor","Tek Trough","Tek Turret","Tek Wall","Tek Window","Tek Windowframe","Vacuum Compartment","Vacuum Compartment Moonpool"]}],"engrams":[]},{"name":"Weapons","folders":[{"name":"Explosive","folders":[],"engrams":["Tek Grenade"]},{"name":"Firearms","folders":[{"name":"Tek","folders":[],"engrams":["Tek Rifle"]}],"engrams":[]}],"engrams":[]}],"engrams":[]},{"name":"Tek Terminal","folders":[{"name":"Boss Arenas","folders":[],"engrams":["Access Tek Cave (Alpha)","Access Tek Cave (Beta)","Access Tek Cave (Gamma)"]}],"engrams":[]}]
+[
+  {
+    "name": "Beer Barrel",
+    "folders": [
+      {
+        "name": "Consumables",
+        "folders": [
+          {
+            "name": "Food",
+            "folders": [],
+            "engrams": [
+              "Beer Jar"
+            ]
+          }
+        ],
+        "engrams": []
+      },
+      {
+        "name": "Refined",
+        "folders": [],
+        "engrams": [
+          "Beer Liquid"
+        ]
+      }
+    ],
+    "engrams": []
+  },
+  {
+    "name": "Campfire",
+    "folders": [
+      {
+        "name": "Consumables",
+        "folders": [
+          {
+            "name": "Food",
+            "folders": [],
+            "engrams": [
+              "Cooked Fish Meat",
+              "Cooked Lamb Chop",
+              "Cooked Meat",
+              "Cooked Prime Fish Meat",
+              "Cooked Prime Meat"
+            ]
+          }
+        ],
+        "engrams": []
+      },
+      {
+        "name": "Refined",
+        "folders": [],
+        "engrams": [
+          "Charcoal"
+        ]
+      }
+    ],
+    "engrams": []
+  },
+  {
+    "name": "Catapult Turret",
+    "folders": [
+      {
+        "name": "Weapons",
+        "folders": [
+          {
+            "name": "Ammo",
+            "folders": [],
+            "engrams": [
+              "Boulder"
+            ]
+          }
+        ],
+        "engrams": []
+      }
+    ],
+    "engrams": []
+  },
+  {
+    "name": "Chemistry Bench",
+    "folders": [
+      {
+        "name": "Consumables",
+        "folders": [
+          {
+            "name": "Drugs",
+            "folders": [],
+            "engrams": [
+              "Bug Repellant",
+              "Lesser Antidote",
+              "Narcotic",
+              "Stimulant"
+            ]
+          }
+        ],
+        "engrams": []
+      },
+      {
+        "name": "Refined",
+        "folders": [],
+        "engrams": [
+          "Absorbent Substrate",
+          "Cementing Paste",
+          "Gunpowder",
+          "Sparkpowder"
+        ]
+      }
+    ],
+    "engrams": []
+  },
+  {
+    "name": "Compost Bin",
+    "folders": [
+      {
+        "name": "Refined",
+        "folders": [],
+        "engrams": [
+          "Fertilizer"
+        ]
+      }
+    ],
+    "engrams": []
+  },
+  {
+    "name": "Cooking Pot",
+    "folders": [
+      {
+        "name": "Consumables",
+        "folders": [
+          {
+            "name": "Food",
+            "folders": [],
+            "engrams": [
+              "Battle Tartare",
+              "Broth of Enlightenment",
+              "Calien Soup",
+              "Enduro Stew",
+              "Energy Brew",
+              "Focal Chili",
+              "Fria Curry",
+              "Lazarus Chowder",
+              "Medical Brew",
+              "Mindwipe Tonic",
+              "Shadow Steak Saute",
+              "Sweet Vegetable Cake"
+            ]
+          }
+        ],
+        "engrams": []
+      },
+      {
+        "name": "Dyes",
+        "folders": [],
+        "engrams": [
+          "Black",
+          "Blue",
+          "Brick",
+          "Brown",
+          "Cantaloupe",
+          "Cyan",
+          "Forest",
+          "Green",
+          "Magenta",
+          "Mud",
+          "Navy",
+          "Olive",
+          "Orange",
+          "Parchment",
+          "Pink",
+          "Purple",
+          "Red",
+          "Royalty",
+          "Silver",
+          "Sky",
+          "Slate",
+          "Tan",
+          "Tangerine",
+          "White",
+          "Yellow"
+        ]
+      },
+      {
+        "name": "Kibble",
+        "folders": [],
+        "engrams": [
+          "Basic Kibble",
+          "Exceptional Kibble",
+          "Extraordinary Kibble",
+          "Regular Kibble",
+          "Simple Kibble",
+          "Superior Kibble"
+        ]
+      },
+      {
+        "name": "Refined",
+        "folders": [],
+        "engrams": [
+          "Charcoal",
+          "Soap"
+        ]
+      }
+    ],
+    "engrams": []
+  },
+  {
+    "name": "Fabricator",
+    "folders": [
+      {
+        "name": "Armor",
+        "folders": [
+          {
+            "name": "Metal",
+            "folders": [],
+            "engrams": [
+              "Heavy Miner's Helmet"
+            ]
+          },
+          {
+            "name": "Misc",
+            "folders": [],
+            "engrams": [
+              "Gas Mask",
+              "Night Vision Goggles"
+            ]
+          },
+          {
+            "name": "Riot",
+            "folders": [],
+            "engrams": [
+              "Riot Boots",
+              "Riot Chestpiece",
+              "Riot Gauntlets",
+              "Riot Helmet",
+              "Riot Leggings"
+            ]
+          },
+          {
+            "name": "SCUBA",
+            "folders": [],
+            "engrams": [
+              "SCUBA Flippers",
+              "SCUBA Leggings",
+              "SCUBA Mask",
+              "SCUBA Tank"
+            ]
+          },
+          {
+            "name": "Shields",
+            "folders": [],
+            "engrams": [
+              "Riot Shield"
+            ]
+          }
+        ],
+        "engrams": []
+      },
+      {
+        "name": "Composite",
+        "folders": [],
+        "engrams": [
+          "Electronics",
+          "Polymer"
+        ]
+      },
+      {
+        "name": "Misc",
+        "folders": [],
+        "engrams": [
+          "Canteen",
+          "Motorboat",
+          "Spray Painter"
+        ]
+      },
+      {
+        "name": "Navigation",
+        "folders": [],
+        "engrams": [
+          "GPS",
+          "Transponder Node",
+          "Transponder Tracker"
+        ]
+      },
+      {
+        "name": "Structures",
+        "folders": [
+          {
+            "name": "Beds",
+            "folders": [],
+            "engrams": [
+              "Bunk Bed"
+            ]
+          },
+          {
+            "name": "Cooking",
+            "folders": [],
+            "engrams": [
+              "Industrial Cooker",
+              "Industrial Grill"
+            ]
+          },
+          {
+            "name": "Crafting",
+            "folders": [],
+            "engrams": [
+              "Chemistry Bench",
+              "Industrial Forge",
+              "Industrial Grinder"
+            ]
+          },
+          {
+            "name": "Defenses",
+            "folders": [],
+            "engrams": [
+              "Homing Underwater Mine"
+            ]
+          },
+          {
+            "name": "Electric",
+            "folders": [],
+            "engrams": [
+              "Air Conditioner",
+              "Lamppost",
+              "Omnidirectional Lamppost",
+              "Refrigerator",
+              "Remote Keypad"
+            ]
+          },
+          {
+            "name": "Electrical",
+            "folders": [
+              {
+                "name": "Defenses",
+                "folders": [],
+                "engrams": [
+                  "Auto Turret",
+                  "Heavy Auto Turret"
+                ]
+              },
+              {
+                "name": "Elevators",
+                "folders": [],
+                "engrams": [
+                  "Elevator Track",
+                  "Large Elevator Platform",
+                  "Medium Elevator Platform",
+                  "Small Elevator Platform"
+                ]
+              }
+            ],
+            "engrams": [
+              "Electrical Cable - Inclined",
+              "Electrical Cable - Intersection",
+              "Electrical Cable - Straight",
+              "Electrical Cable - Vertical",
+              "Electrical Generator",
+              "Electrical Outlet"
+            ]
+          },
+          {
+            "name": "Metal",
+            "folders": [],
+            "engrams": [
+              "Minigun Turret",
+              "Rocket Turret"
+            ]
+          }
+        ],
+        "engrams": []
+      },
+      {
+        "name": "Weapons",
+        "folders": [
+          {
+            "name": "Ammo",
+            "folders": [],
+            "engrams": [
+              "Advanced Bullet",
+              "Advanced Rifle Bullet",
+              "Advanced Sniper Bullet",
+              "C4 Charge",
+              "Metal Arrow",
+              "Pheromone Dart",
+              "Rocket Propelled Grenade",
+              "Shocking Tranquilizer Dart"
+            ]
+          },
+          {
+            "name": "Attachments",
+            "folders": [],
+            "engrams": [
+              "Flashlight Attachment",
+              "Holo-Scope Attachment",
+              "Laser Attachment"
+            ]
+          },
+          {
+            "name": "Explosive",
+            "folders": [],
+            "engrams": [
+              "C4 Remote Detonator",
+              "Poison Grenade"
+            ]
+          },
+          {
+            "name": "Firearms",
+            "folders": [],
+            "engrams": [
+              "Assault Rifle",
+              "Fabricated Pistol",
+              "Fabricated Sniper Rifle",
+              "Pump-Action Shotgun",
+              "Rocket Launcher"
+            ]
+          },
+          {
+            "name": "Melee",
+            "folders": [],
+            "engrams": [
+              "Electric Prod"
+            ]
+          }
+        ],
+        "engrams": []
+      }
+    ],
+    "engrams": []
+  },
+  {
+    "name": "Industrial Cooker",
+    "folders": [
+      {
+        "name": "Consumables",
+        "folders": [
+          {
+            "name": "Food",
+            "folders": [],
+            "engrams": [
+              "Battle Tartare",
+              "Broth of Enlightenment",
+              "Calien Soup",
+              "Enduro Stew",
+              "Energy Brew",
+              "Focal Chili",
+              "Fria Curry",
+              "Lazarus Chowder",
+              "Medical Brew",
+              "Mindwipe Tonic",
+              "Shadow Steak Saute",
+              "Sweet Vegetable Cake"
+            ]
+          }
+        ],
+        "engrams": []
+      },
+      {
+        "name": "Dyes",
+        "folders": [],
+        "engrams": [
+          "Black",
+          "Blue",
+          "Brick",
+          "Brown",
+          "Cantaloupe",
+          "Cyan",
+          "Forest",
+          "Green",
+          "Magenta",
+          "Mud",
+          "Navy",
+          "Olive",
+          "Orange",
+          "Parchment",
+          "Pink",
+          "Purple",
+          "Red",
+          "Royalty",
+          "Silver",
+          "Sky",
+          "Slate",
+          "Tan",
+          "Tangerine",
+          "White",
+          "Yellow"
+        ]
+      },
+      {
+        "name": "Kibble",
+        "folders": [],
+        "engrams": [
+          "Basic Kibble",
+          "Exceptional Kibble",
+          "Extraordinary Kibble",
+          "Regular Kibble",
+          "Simple Kibble",
+          "Superior Kibble"
+        ]
+      },
+      {
+        "name": "Refined",
+        "folders": [],
+        "engrams": [
+          "Soap"
+        ]
+      }
+    ],
+    "engrams": []
+  },
+  {
+    "name": "Industrial Forge",
+    "folders": [
+      {
+        "name": "Refined",
+        "folders": [],
+        "engrams": [
+          "Gasoline",
+          "Metal Ingot"
+        ]
+      }
+    ],
+    "engrams": []
+  },
+  {
+    "name": "Industrial Grill",
+    "folders": [
+      {
+        "name": "Consumables",
+        "folders": [
+          {
+            "name": "Food",
+            "folders": [],
+            "engrams": [
+              "Cooked Fish Meat",
+              "Cooked Lamb Chop",
+              "Cooked Meat",
+              "Cooked Prime Fish Meat",
+              "Cooked Prime Meat"
+            ]
+          }
+        ],
+        "engrams": []
+      }
+    ],
+    "engrams": []
+  },
+  {
+    "name": "Mortar and Pestle",
+    "folders": [
+      {
+        "name": "Consumables",
+        "folders": [
+          {
+            "name": "Drugs",
+            "folders": [],
+            "engrams": [
+              "Bug Repellant",
+              "Lesser Antidote",
+              "Narcotic",
+              "Stimulant"
+            ]
+          }
+        ],
+        "engrams": []
+      },
+      {
+        "name": "Refined",
+        "folders": [],
+        "engrams": [
+          "Cementing Paste",
+          "Gunpowder",
+          "Sparkpowder"
+        ]
+      }
+    ],
+    "engrams": []
+  },
+  {
+    "name": "Obelisk",
+    "folders": [
+      {
+        "name": "Boss Arenas",
+        "folders": [
+          {
+            "name": "Broodmother Arena",
+            "folders": [],
+            "engrams": [
+              "Generate Broodmother (Alpha) Portal",
+              "Generate Broodmother (Beta) Portal",
+              "Generate Broodmother (Gamma) Portal"
+            ]
+          },
+          {
+            "name": "Dragon Arena",
+            "folders": [],
+            "engrams": [
+              "Generate Dragon (Alpha) Portal",
+              "Generate Dragon (Beta) Portal",
+              "Generate Dragon (Gamma) Portal"
+            ]
+          },
+          {
+            "name": "Megapithecus Arena",
+            "folders": [],
+            "engrams": [
+              "Generate Megapithecus (Alpha) Portal",
+              "Generate Megapithecus (Beta) Portal",
+              "Generate Megapithecus (Gamma) Portal"
+            ]
+          }
+        ],
+        "engrams": []
+      },
+      {
+        "name": "Structures",
+        "folders": [
+          {
+            "name": "Crafting",
+            "folders": [],
+            "engrams": [
+              "Tek Replicator"
+            ]
+          }
+        ],
+        "engrams": []
+      }
+    ],
+    "engrams": []
+  },
+  {
+    "name": "Preserving Bin",
+    "folders": [
+      {
+        "name": "Consumables",
+        "folders": [
+          {
+            "name": "Food",
+            "folders": [],
+            "engrams": [
+              "Cooked Meat Jerky",
+              "Prime Meat Jerky"
+            ]
+          }
+        ],
+        "engrams": []
+      }
+    ],
+    "engrams": []
+  },
+  {
+    "name": "Refining Forge",
+    "folders": [
+      {
+        "name": "Refined",
+        "folders": [],
+        "engrams": [
+          "Charcoal",
+          "Gasoline",
+          "Metal Ingot"
+        ]
+      }
+    ],
+    "engrams": []
+  },
+  {
+    "name": "Self",
+    "folders": [
+      {
+        "name": "Armor",
+        "folders": [
+          {
+            "name": "Cloth",
+            "folders": [],
+            "engrams": [
+              "Cloth Boots",
+              "Cloth Gloves",
+              "Cloth Hat",
+              "Cloth Pants",
+              "Cloth Shirt"
+            ]
+          },
+          {
+            "name": "Ghillie",
+            "folders": [],
+            "engrams": [
+              "Ghillie Boots",
+              "Ghillie Chestpiece",
+              "Ghillie Gauntlets",
+              "Ghillie Leggings",
+              "Ghillie Mask"
+            ]
+          },
+          {
+            "name": "Hide",
+            "folders": [],
+            "engrams": [
+              "Hide Boots",
+              "Hide Gloves",
+              "Hide Hat",
+              "Hide Pants",
+              "Hide Shirt"
+            ]
+          },
+          {
+            "name": "Shields",
+            "folders": [],
+            "engrams": [
+              "Wooden Shield"
+            ]
+          }
+        ],
+        "engrams": []
+      },
+      {
+        "name": "Misc",
+        "folders": [],
+        "engrams": [
+          "Blood Extraction Syringe",
+          "Flare Gun",
+          "Magnifying Glass",
+          "Note",
+          "Paintbrush",
+          "Parachute",
+          "Spyglass",
+          "Water Jar",
+          "Waterskin",
+          "Wooden Raft"
+        ]
+      },
+      {
+        "name": "Navigation",
+        "folders": [],
+        "engrams": [
+          "Compass"
+        ]
+      },
+      {
+        "name": "Saddles",
+        "folders": [],
+        "engrams": [
+          "Araneo Saddle",
+          "Argentavis Saddle",
+          "Beelzebufo Saddle",
+          "Carbonemys Saddle",
+          "Dire Bear Saddle",
+          "Hyaenodon Meatpack",
+          "Ichthyosaurus Saddle",
+          "Kaprosuchus Saddle",
+          "Megalodon Saddle",
+          "Pachy Saddle",
+          "Pachyrhinosaurus Saddle",
+          "Parasaur Saddle",
+          "Pelagornis Saddle",
+          "Phiomia Saddle",
+          "Pteranodon Saddle",
+          "Pulmonoscorpius Saddle",
+          "Raptor Saddle",
+          "Sarco Saddle",
+          "Stego Saddle",
+          "Terror Bird Saddle",
+          "Trike Saddle"
+        ]
+      },
+      {
+        "name": "Structures",
+        "folders": [
+          {
+            "name": "Beds",
+            "folders": [],
+            "engrams": [
+              "Hide Sleeping Bag",
+              "Simple Bed"
+            ]
+          },
+          {
+            "name": "Cooking",
+            "folders": [],
+            "engrams": [
+              "Campfire",
+              "Cooking Pot"
+            ]
+          },
+          {
+            "name": "Crafting",
+            "folders": [],
+            "engrams": [
+              "Mortar and Pestle",
+              "Refining Forge",
+              "Smithy"
+            ]
+          },
+          {
+            "name": "Farming",
+            "folders": [],
+            "engrams": [
+              "Compost Bin",
+              "Large Crop Plot",
+              "Medium Crop Plot",
+              "Small Crop Plot"
+            ]
+          },
+          {
+            "name": "Fridges",
+            "folders": [],
+            "engrams": [
+              "Preserving Bin"
+            ]
+          },
+          {
+            "name": "Furniture",
+            "folders": [
+              {
+                "name": "Stone",
+                "folders": [],
+                "engrams": [
+                  "Gravestone"
+                ]
+              },
+              {
+                "name": "Wood",
+                "folders": [],
+                "engrams": [
+                  "War Drums",
+                  "Wooden Bench",
+                  "Wooden Chair",
+                  "Wooden Table"
+                ]
+              }
+            ],
+            "engrams": []
+          },
+          {
+            "name": "Misc",
+            "folders": [],
+            "engrams": [
+              "Multi-Panel Flag",
+              "Painting Canvas",
+              "Single-Panel Flag",
+              "Training Dummy",
+              "Trophy Wall-Mount",
+              "War Map"
+            ]
+          },
+          {
+            "name": "Pipes",
+            "folders": [
+              {
+                "name": "Stone",
+                "folders": [],
+                "engrams": [
+                  "Stone Irrigation Pipe - Inclined",
+                  "Stone Irrigation Pipe - Intake",
+                  "Stone Irrigation Pipe - Intersection",
+                  "Stone Irrigation Pipe - Straight",
+                  "Stone Irrigation Pipe - Tap",
+                  "Stone Irrigation Pipe - Vertical",
+                  "Water Reservoir"
+                ]
+              }
+            ],
+            "engrams": []
+          },
+          {
+            "name": "Stone",
+            "folders": [],
+            "engrams": [
+              "Reinforced Dinosaur Gate",
+              "Reinforced Trapdoor",
+              "Reinforced Window",
+              "Reinforced Wooden Door",
+              "Sloped Stone Roof",
+              "Sloped Stone Wall Left",
+              "Sloped Stone Wall Right",
+              "Stone Ceiling",
+              "Stone Dinosaur Gateway",
+              "Stone Doorframe",
+              "Stone Fence Foundation",
+              "Stone Fireplace",
+              "Stone Foundation",
+              "Stone Hatchframe",
+              "Stone Pillar",
+              "Stone Railing",
+              "Stone Staircase",
+              "Stone Wall",
+              "Stone Windowframe"
+            ]
+          },
+          {
+            "name": "Thatch",
+            "folders": [],
+            "engrams": [
+              "Sloped Thatch Roof",
+              "Sloped Thatch Wall Left",
+              "Sloped Thatch Wall Right",
+              "Thatch Door",
+              "Thatch Doorframe",
+              "Thatch Foundation",
+              "Thatch Roof",
+              "Thatch Wall"
+            ]
+          },
+          {
+            "name": "Wood",
+            "folders": [
+              {
+                "name": "Signs",
+                "folders": [],
+                "engrams": [
+                  "Wooden Billboard",
+                  "Wooden Sign",
+                  "Wooden Wall Sign"
+                ]
+              },
+              {
+                "name": "Storage",
+                "folders": [],
+                "engrams": [
+                  "Bookshelf",
+                  "Feeding Trough",
+                  "Large Storage Box",
+                  "Storage Box"
+                ]
+              }
+            ],
+            "engrams": [
+              "Dinosaur Gate",
+              "Dinosaur Gateway",
+              "Rope Ladder",
+              "Sloped Wood Wall Left",
+              "Sloped Wood Wall Right",
+              "Sloped Wooden Roof",
+              "Standing Torch",
+              "Wooden Cage",
+              "Wooden Catwalk",
+              "Wooden Ceiling",
+              "Wooden Door",
+              "Wooden Doorframe",
+              "Wooden Fence Foundation",
+              "Wooden Foundation",
+              "Wooden Hatchframe",
+              "Wooden Ladder",
+              "Wooden Pillar",
+              "Wooden Railing",
+              "Wooden Ramp",
+              "Wooden Spike Wall",
+              "Wooden Staircase",
+              "Wooden Trapdoor",
+              "Wooden Wall",
+              "Wooden Window",
+              "Wooden Windowframe"
+            ]
+          }
+        ],
+        "engrams": []
+      },
+      {
+        "name": "Weapons",
+        "folders": [
+          {
+            "name": "Ammo",
+            "folders": [],
+            "engrams": [
+              "Stone Arrow",
+              "Tranquilizer Arrow"
+            ]
+          },
+          {
+            "name": "Explosive",
+            "folders": [],
+            "engrams": [
+              "Smoke Grenade"
+            ]
+          },
+          {
+            "name": "Primitive",
+            "folders": [
+              {
+                "name": "Melee",
+                "folders": [],
+                "engrams": [
+                  "Spear",
+                  "Stone Hatchet",
+                  "Stone Pick",
+                  "Torch",
+                  "Wooden Club"
+                ]
+              },
+              {
+                "name": "Ranged",
+                "folders": [],
+                "engrams": [
+                  "Bola",
+                  "Bow",
+                  "Slingshot"
+                ]
+              }
+            ],
+            "engrams": []
+          },
+          {
+            "name": "Ranged",
+            "folders": [],
+            "engrams": [
+              "Fishing Rod"
+            ]
+          },
+          {
+            "name": "Tripwires",
+            "folders": [],
+            "engrams": [
+              "Tripwire Alarm Trap",
+              "Tripwire Narcotic Trap"
+            ]
+          }
+        ],
+        "engrams": []
+      }
+    ],
+    "engrams": []
+  },
+  {
+    "name": "Smithy",
+    "folders": [
+      {
+        "name": "Armor",
+        "folders": [
+          {
+            "name": "Chitin",
+            "folders": [],
+            "engrams": [
+              "Chitin Boots",
+              "Chitin Chestpiece",
+              "Chitin Gauntlets",
+              "Chitin Helmet",
+              "Chitin Leggings"
+            ]
+          },
+          {
+            "name": "Fur",
+            "folders": [],
+            "engrams": [
+              "Fur Boots",
+              "Fur Cap",
+              "Fur Chestpiece",
+              "Fur Gauntlets",
+              "Fur Leggings"
+            ]
+          },
+          {
+            "name": "Metal",
+            "folders": [],
+            "engrams": [
+              "Flak Boots",
+              "Flak Chestpiece",
+              "Flak Gauntlets",
+              "Flak Helmet",
+              "Flak Leggings"
+            ]
+          },
+          {
+            "name": "Shields",
+            "folders": [],
+            "engrams": [
+              "Metal Shield"
+            ]
+          }
+        ],
+        "engrams": []
+      },
+      {
+        "name": "Communication",
+        "folders": [],
+        "engrams": [
+          "Radio"
+        ]
+      },
+      {
+        "name": "Misc",
+        "folders": [],
+        "engrams": [
+          "Camera"
+        ]
+      },
+      {
+        "name": "Navigation",
+        "folders": [],
+        "engrams": [
+          "Compass"
+        ]
+      },
+      {
+        "name": "Off-Hand",
+        "folders": [],
+        "engrams": [
+          "Handcuffs"
+        ]
+      },
+      {
+        "name": "Saddles",
+        "folders": [],
+        "engrams": [
+          "Allosaurus Saddle",
+          "Ankylo Saddle",
+          "Arthropluera Saddle",
+          "Baryonyx Saddle",
+          "Basilosaurus Saddle",
+          "Bronto Platform Saddle",
+          "Bronto Saddle",
+          "Carno Saddle",
+          "Castoroides Saddle",
+          "Chalicotherium Saddle",
+          "Daeodon Saddle",
+          "Diplodocus Saddle",
+          "Doedicurus Saddle",
+          "Dunkleosteus Saddle",
+          "Equus Saddle",
+          "Gallimimus Saddle",
+          "Giganotosaurus Saddle",
+          "Iguanodon Saddle",
+          "Mammoth Saddle",
+          "Manta Saddle",
+          "Megalania Saddle",
+          "Megaloceros Saddle",
+          "Megalosaurus Saddle",
+          "Megatherium Saddle",
+          "Mosasaur Platform Saddle",
+          "Mosasaur Saddle",
+          "Paracer Platform Saddle",
+          "Paracer Saddle",
+          "Plesiosaur Platform Saddle",
+          "Plesiosaur Saddle",
+          "Procoptodon Saddle",
+          "Quetz Platform Saddle",
+          "Quetz Saddle",
+          "Rex Saddle",
+          "Sabertooth Saddle",
+          "Spino Saddle",
+          "Tapejara Saddle",
+          "Therizinosaurus Saddle",
+          "Thylacoleo Saddle",
+          "Titanosaur Platform Saddle",
+          "Tusoteuthis Saddle",
+          "Woolly Rhino Saddle",
+          "Yutyrannus Saddle"
+        ]
+      },
+      {
+        "name": "Structures",
+        "folders": [
+          {
+            "name": "Cooking",
+            "folders": [],
+            "engrams": [
+              "Beer Barrel"
+            ]
+          },
+          {
+            "name": "Crafting",
+            "folders": [],
+            "engrams": [
+              "Fabricator"
+            ]
+          },
+          {
+            "name": "Defenses",
+            "folders": [],
+            "engrams": [
+              "Bear Trap",
+              "Large Bear Trap"
+            ]
+          },
+          {
+            "name": "Furniture",
+            "folders": [],
+            "engrams": [
+              "Toilet"
+            ]
+          },
+          {
+            "name": "Greenhouse",
+            "folders": [],
+            "engrams": [
+              "Greenhouse Ceiling",
+              "Greenhouse Door",
+              "Greenhouse Doorframe",
+              "Greenhouse Wall",
+              "Greenhouse Window",
+              "Sloped Greenhouse Roof",
+              "Sloped Greenhouse Wall Left",
+              "Sloped Greenhouse Wall Right"
+            ]
+          },
+          {
+            "name": "Metal",
+            "folders": [
+              {
+                "name": "Signs",
+                "folders": [],
+                "engrams": [
+                  "Metal Billboard",
+                  "Metal Sign",
+                  "Metal Wall Sign"
+                ]
+              }
+            ],
+            "engrams": [
+              "Ballista Turret",
+              "Behemoth Gate",
+              "Behemoth Gateway",
+              "Catapult Turret",
+              "Giant Metal Hatchframe",
+              "Giant Metal Trapdoor",
+              "Metal Catwalk",
+              "Metal Ceiling",
+              "Metal Dinosaur Gate",
+              "Metal Dinosaur Gateway",
+              "Metal Door",
+              "Metal Doorframe",
+              "Metal Fence Foundation",
+              "Metal Foundation",
+              "Metal Hatchframe",
+              "Metal Ladder",
+              "Metal Pillar",
+              "Metal Railing",
+              "Metal Ramp",
+              "Metal Spike Wall",
+              "Metal Staircase",
+              "Metal Trapdoor",
+              "Metal Tree Platform",
+              "Metal Wall",
+              "Metal Window",
+              "Metal Windowframe",
+              "Primitive Cannon",
+              "Sloped Metal Roof",
+              "Sloped Metal Wall Left",
+              "Sloped Metal Wall Right",
+              "Wall Torch"
+            ]
+          },
+          {
+            "name": "Misc",
+            "folders": [],
+            "engrams": [
+              "Tree Sap Tap",
+              "Trophy Base"
+            ]
+          },
+          {
+            "name": "Pipes",
+            "folders": [
+              {
+                "name": "Metal",
+                "folders": [],
+                "engrams": [
+                  "Metal Irrigation Pipe - Inclined",
+                  "Metal Irrigation Pipe - Intake",
+                  "Metal Irrigation Pipe - Intersection",
+                  "Metal Irrigation Pipe - Straight",
+                  "Metal Irrigation Pipe - Tap",
+                  "Metal Irrigation Pipe - Vertical",
+                  "Metal Water Reservoir"
+                ]
+              }
+            ],
+            "engrams": []
+          },
+          {
+            "name": "Stone",
+            "folders": [],
+            "engrams": [
+              "Behemoth Reinforced Dinosaur Gate",
+              "Behemoth Stone Dinosaur Gateway",
+              "Giant Reinforced Trapdoor",
+              "Giant Stone Hatchframe"
+            ]
+          },
+          {
+            "name": "Wood",
+            "folders": [],
+            "engrams": [
+              "Wooden Tree Platform"
+            ]
+          }
+        ],
+        "engrams": []
+      },
+      {
+        "name": "Weapons",
+        "folders": [
+          {
+            "name": "Ammo",
+            "folders": [],
+            "engrams": [
+              "Cannon Ball",
+              "Chain Bola",
+              "Grappling Hook",
+              "Simple Bullet",
+              "Simple Rifle Ammo",
+              "Simple Shotgun Ammo",
+              "Spear Bolt",
+              "Tranq Spear Bolt",
+              "Tranquilizer Dart"
+            ]
+          },
+          {
+            "name": "Attachments",
+            "folders": [],
+            "engrams": [
+              "Scope Attachment",
+              "Silencer Attachment"
+            ]
+          },
+          {
+            "name": "Explosive",
+            "folders": [],
+            "engrams": [
+              "Grenade",
+              "Improvised Explosive Device"
+            ]
+          },
+          {
+            "name": "Firearms",
+            "folders": [],
+            "engrams": [
+              "Longneck Rifle",
+              "Shotgun",
+              "Simple Pistol"
+            ]
+          },
+          {
+            "name": "Melee",
+            "folders": [],
+            "engrams": [
+              "Lance",
+              "Metal Hatchet",
+              "Metal Pick",
+              "Metal Sickle",
+              "Pike"
+            ]
+          },
+          {
+            "name": "Misc",
+            "folders": [],
+            "engrams": [
+              "Scissors"
+            ]
+          },
+          {
+            "name": "Primitive",
+            "folders": [
+              {
+                "name": "Melee",
+                "folders": [],
+                "engrams": [
+                  "Metal Sword"
+                ]
+              }
+            ],
+            "engrams": []
+          },
+          {
+            "name": "Ranged",
+            "folders": [],
+            "engrams": [
+              "Crossbow",
+              "Harpoon Launcher"
+            ]
+          }
+        ],
+        "engrams": []
+      }
+    ],
+    "engrams": []
+  },
+  {
+    "name": "Tek Replicator",
+    "folders": [
+      {
+        "name": "Armor",
+        "folders": [
+          {
+            "name": "Tek",
+            "folders": [],
+            "engrams": [
+              "Tek Boots",
+              "Tek Chestpiece",
+              "Tek Gauntlets",
+              "Tek Helmet",
+              "Tek Leggings"
+            ]
+          }
+        ],
+        "engrams": []
+      },
+      {
+        "name": "Refined",
+        "folders": [],
+        "engrams": [
+          "Element",
+          "Element Shard"
+        ]
+      },
+      {
+        "name": "Saddles",
+        "folders": [
+          {
+            "name": "Tek",
+            "folders": [],
+            "engrams": [
+              "Megalodon Tek Saddle",
+              "Mosasaur Tek Saddle",
+              "Rex Tek Saddle",
+              "Tapejara Tek Saddle"
+            ]
+          }
+        ],
+        "engrams": []
+      },
+      {
+        "name": "Structures",
+        "folders": [
+          {
+            "name": "Crafting",
+            "folders": [],
+            "engrams": [
+              "Tek Transmitter"
+            ]
+          },
+          {
+            "name": "Misc",
+            "folders": [],
+            "engrams": [
+              "Tek Forcefield",
+              "Tek Generator",
+              "Tek Teleporter"
+            ]
+          },
+          {
+            "name": "Tek",
+            "folders": [],
+            "engrams": [
+              "Behemoth Tek Gate",
+              "Behemoth Tek Gateway",
+              "Cloning Chamber",
+              "Sloped Tek Roof",
+              "Sloped Tek Wall Left",
+              "Sloped Tek Wall Right",
+              "Tek Catwalk",
+              "Tek Ceiling",
+              "Tek Dinosaur Gate",
+              "Tek Dinosaur Gateway",
+              "Tek Door",
+              "Tek Doorframe",
+              "Tek Fence Foundation",
+              "Tek Foundation",
+              "Tek Hatchframe",
+              "Tek Ladder",
+              "Tek Pillar",
+              "Tek Railing",
+              "Tek Ramp",
+              "Tek Staircase",
+              "Tek Trapdoor",
+              "Tek Trough",
+              "Tek Turret",
+              "Tek Wall",
+              "Tek Window",
+              "Tek Windowframe",
+              "Vacuum Compartment",
+              "Vacuum Compartment Moonpool"
+            ]
+          }
+        ],
+        "engrams": []
+      },
+      {
+        "name": "Weapons",
+        "folders": [
+          {
+            "name": "Explosive",
+            "folders": [],
+            "engrams": [
+              "Tek Grenade"
+            ]
+          },
+          {
+            "name": "Firearms",
+            "folders": [
+              {
+                "name": "Tek",
+                "folders": [],
+                "engrams": [
+                  "Tek Rifle"
+                ]
+              }
+            ],
+            "engrams": []
+          }
+        ],
+        "engrams": []
+      }
+    ],
+    "engrams": []
+  },
+  {
+    "name": "Tek Terminal",
+    "folders": [
+      {
+        "name": "Boss Arenas",
+        "folders": [],
+        "engrams": [
+          "Access Tek Cave (Alpha)",
+          "Access Tek Cave (Beta)",
+          "Access Tek Cave (Gamma)"
+        ]
+      }
+    ],
+    "engrams": []
+  }
+]

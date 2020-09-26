@@ -357,7 +357,7 @@ public abstract class GameData {
         directoryMap.put(uuid, directoryItem);
     }
 
-    private void addDirectoryItemToParentMap(String parentId, DirectoryItem directoryItem) {
+    protected void addDirectoryItemToParentMap(String parentId, DirectoryItem directoryItem) {
         List<DirectoryItem> directoryItemList = getDirectoryItemListByParentUUID(parentId);
         directoryItemList.add(directoryItem);
         directoryMapByParent.put(parentId, directoryItemList);
