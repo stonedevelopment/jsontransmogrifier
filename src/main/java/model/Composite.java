@@ -84,17 +84,10 @@ public class Composite {
         return compositionId;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Composite composite = (Composite) o;
+    public boolean equals(Composite composite) {
         return quantity == composite.quantity &&
                 isEngram == composite.isEngram &&
-                name.equals(composite.name) &&
-                imageFile.equals(composite.imageFile) &&
-                sourceId.equals(composite.sourceId) &&
-                compositionId.equals(composite.compositionId);
+                name.equals(composite.name);
     }
 
     @Override

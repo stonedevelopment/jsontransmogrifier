@@ -138,8 +138,10 @@ public class UpdatifyGameData extends GameData {
             Station tStation = getStationByName(iStation.getName());
 
             if (tStation == null) {
+                Log.d("Adding Station: " + iStation.toString());
                 addStation(UpdatifyStation.createFrom(iStation));
             } else if (!tStation.equals(iStation)) {
+                Log.d("Updating Station: " + iStation.toString());
                 updateStation(UpdatifyStation.updateToNew(tStation, iStation));
             }
         }
@@ -158,8 +160,10 @@ public class UpdatifyGameData extends GameData {
             Folder tFolder = getFolderByName(iFolder.getName());
 
             if (tFolder == null) {
+                Log.d("Adding Folder: " + iFolder.toString());
                 addFolder(UpdatifyFolder.createFrom(iFolder));
             } else if (!tFolder.equals(iFolder)) {
+                Log.d("Updating Folder: " + iFolder.toString());
                 updateFolder(UpdatifyFolder.updateToNew(tFolder, iFolder));
             }
         }
@@ -178,8 +182,10 @@ public class UpdatifyGameData extends GameData {
             Engram tEngram = getEngramByName(iEngram.getName());
 
             if (tEngram == null) {
+                Log.d("Adding Engram: " + iEngram.toString());
                 addEngram(UpdatifyEngram.createFrom(iEngram));
             } else if (!tEngram.equals(iEngram)) {
+                Log.d("Updating Engram: " + iEngram.toString());
                 updateEngram(UpdatifyEngram.updateToNew(tEngram, iEngram));
             }
         }
@@ -223,7 +229,7 @@ public class UpdatifyGameData extends GameData {
                     IlluminateComposite iComposite = IlluminateComposite.fromJson(compositeNode);
                     for (String compositeId : getCompositeUUIDListByName(iComposite.getName())) {
                         Composite tComposite = getComposite(compositeId);
-                        if (compositeId.equals(tComposite.getCompositionId())) {
+                        if (compositionId.equals(tComposite.getCompositionId())) {
                             if (!tComposite.equals(iComposite)) {
                                 Log.d("Updating Composite: " + iComposite.toString());
                                 updateComposite(UpdatifyComposite.updateToNew(tComposite, iComposite));
