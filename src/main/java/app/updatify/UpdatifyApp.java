@@ -8,7 +8,7 @@ import app.updatify.controller.UpdatifyController;
 import com.fasterxml.jackson.databind.JsonNode;
 import util.Log;
 
-import static util.Constants.cPrimary;
+import static util.Constants.*;
 
 /**
  * Converts Illuminated JSON files to importable data files with matching UUIDs.
@@ -30,6 +30,7 @@ public class UpdatifyApp {
      */
     public void start() {
         updatifyPrimary();
+        updatifyDlc();
     }
 
     /**
@@ -44,10 +45,17 @@ public class UpdatifyApp {
         JsonNode primaryIlluminatedNode = illuminationNode.get(cPrimary);
         primaryController = new UpdatifyController(primaryTransmogrifiedNode, primaryIlluminatedNode);
         primaryController.start();
+    }
 
-        //  map transmog
-        //  map illuminated
-        //  section by section, compare and update each difference
+    private void updatifyDlcList() {
+        JsonNode tNodes = transmogrificationNode.get(cDlc);
+        JsonNode iNodes = illuminationNode.get(cDlc);
+        for (JsonNode tNode : tNodes) {
+            String name = tNode.get(cName).asText();
+            for (JsonNode iNode : iNodes) {
+                // TODO: 9/26/2020 Check for Illuminated nodes by name, updatify!
+            }
+        }
     }
 
     private void updatifyDlc() {
