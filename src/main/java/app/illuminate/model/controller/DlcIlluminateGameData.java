@@ -2,7 +2,7 @@ package app.illuminate.model.controller;
 
 import app.illuminate.controller.IlluminateGameData;
 import app.illuminate.model.IlluminateReplacement;
-import app.illuminate.model.details.DlcIlluminateDetails;
+import app.illuminate.model.details.IlluminateDlcDetails;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
@@ -41,13 +41,13 @@ public class DlcIlluminateGameData extends IlluminateGameData {
     }
 
     @Override
-    public DlcIlluminateDetails getDetails() {
-        return (DlcIlluminateDetails) super.getDetails();
+    public IlluminateDlcDetails getDetails() {
+        return (IlluminateDlcDetails) super.getDetails();
     }
 
     @Override
     protected void createDetailsObject() {
-        this.details = DlcIlluminateDetails.fromJson(getInNode().get(cDetails));
+        this.details = IlluminateDlcDetails.fromJson(getInNode().get(cDetails));
     }
 
     @Override

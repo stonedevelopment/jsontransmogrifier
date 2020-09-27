@@ -1,7 +1,7 @@
 package app.transmogrify;
 
 import app.transmogrify.controller.TransmogGameData;
-import app.transmogrify.model.details.DlcTransmogDetails;
+import app.transmogrify.model.details.TransmogDlcDetails;
 import app.transmogrify.model.details.TransmogDetails;
 import app.transmogrify.model.game_data.DlcTransmogGameData;
 import app.transmogrify.model.game_data.PrimaryTransmogGameData;
@@ -98,7 +98,7 @@ public class TransmogrifyApp {
         ArrayNode outDlcArrayNode = mapper.createArrayNode();
         for (DlcTransmogGameData dlcGameData : dlcGameDataList) {
             ObjectNode dlcNode = mapper.createObjectNode();
-            DlcTransmogDetails dlcDetails = dlcGameData.getDetails();
+            TransmogDlcDetails dlcDetails = dlcGameData.getDetails();
             dlcNode.put(cName, dlcDetails.getName());
             dlcNode.put(cFilePath, dlcDetails.getTransmogFilePath());
             dlcNode.put(cLastUpdated, dlcDetails.getLastUpdated().getTime());

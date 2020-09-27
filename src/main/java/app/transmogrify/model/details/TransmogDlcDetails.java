@@ -6,11 +6,11 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import static util.Constants.*;
 
-public class DlcTransmogDetails extends TransmogDetails {
+public class TransmogDlcDetails extends TransmogDetails {
     private final Boolean totalConversion;
 
     @JsonCreator
-    public DlcTransmogDetails(@JsonProperty(cUuid) String uuid,
+    public TransmogDlcDetails(@JsonProperty(cUuid) String uuid,
                               @JsonProperty(cName) String name,
                               @JsonProperty(cDescription) String description,
                               @JsonProperty(cFilePath) String filePath,
@@ -22,7 +22,7 @@ public class DlcTransmogDetails extends TransmogDetails {
         this.totalConversion = totalConversion;
     }
 
-    public static DlcTransmogDetails with(JsonDlc jsonDlc) {
+    public static TransmogDlcDetails with(JsonDlc jsonDlc) {
         TransmogDetails details = TransmogDetails.createFrom(jsonDlc);
 
         String uuid = details.getUuid();
@@ -34,7 +34,7 @@ public class DlcTransmogDetails extends TransmogDetails {
         String backFolderFile = details.getBackFolderFile();
         boolean totalConversion = isTotalConversion(jsonDlc.type);
 
-        return new DlcTransmogDetails(uuid,
+        return new TransmogDlcDetails(uuid,
                 name,
                 description,
                 filePath,
@@ -48,7 +48,7 @@ public class DlcTransmogDetails extends TransmogDetails {
         return type.equals(cDlcTypeTotalConversion);
     }
 
-    public Boolean getTotalConversion() {
+    public Boolean isTotalConversion() {
         return totalConversion;
     }
 }

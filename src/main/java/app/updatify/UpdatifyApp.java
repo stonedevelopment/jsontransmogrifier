@@ -1,12 +1,8 @@
 package app.updatify;
 
-import app.illuminate.controller.IlluminateGameData;
-import app.illuminate.model.details.IlluminateDetails;
-import app.transmogrify.controller.TransmogGameData;
-import app.transmogrify.model.details.TransmogDetails;
 import app.updatify.controller.UpdatifyController;
+import app.updatify.controller.UpdatifyDlcController;
 import com.fasterxml.jackson.databind.JsonNode;
-import util.Log;
 
 import static util.Constants.*;
 
@@ -30,7 +26,7 @@ public class UpdatifyApp {
      */
     public void start() {
         updatifyPrimary();
-        updatifyDlc();
+        updatifyDlcList();
     }
 
     /**
@@ -47,32 +43,34 @@ public class UpdatifyApp {
         primaryController.start();
     }
 
+    /**
+     * Iterate through Illumination node
+     * Search for DLC name in Transmog node
+     * If not found, it's a new DLC
+     */
     private void updatifyDlcList() {
         JsonNode tNodes = transmogrificationNode.get(cDlc);
         JsonNode iNodes = illuminationNode.get(cDlc);
-        for (JsonNode tNode : tNodes) {
-            String name = tNode.get(cName).asText();
-            for (JsonNode iNode : iNodes) {
-                // TODO: 9/26/2020 Check for Illuminated nodes by name, updatify!
+        for (JsonNode iNode : iNodes) {
+            String iName = iNode.get(cName).asText();
+
+            boolean isNew = true;
+            for (JsonNode tNode : tNodes) {
+                String tName = tNode.get(cName).asText();
+                if (iName.equals(tName)) {
+                    updatifyDlc(tNode, iNode);
+                    isNew = false;
+                }
+            }
+
+            if (isNew) {
+                updatifyDlc(null, iNode);
             }
         }
     }
 
-    private void updatifyDlc() {
-
-    }
-
-    private void updatifyDetails(TransmogGameData transmogGameData, IlluminateGameData illuminateGameData) {
-        TransmogDetails transmogDetails = transmogGameData.getDetails();
-        IlluminateDetails illuminateDetails = illuminateGameData.getDetails();
-        if (transmogDetails.equals(illuminateDetails)) {
-            //  no change
-            Log.d("No change required.");
-            //  save to out node for output
-        } else {
-            //  create new details object
-            //  overwrite transmog details with illuminate details
-            Log.d("Something's different!");
-        }
+    private void updatifyDlc(JsonNode tNode, JsonNode iNode) {
+        UpdatifyDlcController dlcController = new UpdatifyDlcController(tNode, iNode, primaryController);
+        dlcController.start();
     }
 }

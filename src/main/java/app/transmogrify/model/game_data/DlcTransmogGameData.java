@@ -1,7 +1,7 @@
 package app.transmogrify.model.game_data;
 
 import app.transmogrify.controller.TransmogGameData;
-import app.transmogrify.model.details.DlcTransmogDetails;
+import app.transmogrify.model.details.TransmogDlcDetails;
 import app.transmogrify.model.json.JsonComposite;
 import app.transmogrify.model.json.JsonDlc;
 import app.transmogrify.model.json.JsonTotalConversion;
@@ -32,13 +32,13 @@ public class DlcTransmogGameData extends TransmogGameData {
     }
 
     @Override
-    public DlcTransmogDetails getDetails() {
-        return (DlcTransmogDetails) details;
+    public TransmogDlcDetails getDetails() {
+        return (TransmogDlcDetails) details;
     }
 
     @Override
     protected void createDetailsObject() {
-        this.details = DlcTransmogDetails.with(jsonDlc);
+        this.details = TransmogDlcDetails.with(jsonDlc);
     }
 
     @Override

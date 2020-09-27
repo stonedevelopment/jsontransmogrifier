@@ -5,16 +5,15 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import model.details.Details;
 
 import static util.Constants.*;
 
-public class DlcIlluminateDetails extends IlluminateDetails {
+public class IlluminateDlcDetails extends IlluminateDetails {
     private final boolean totalConversion;
     private final String gameId;
 
     @JsonCreator(mode = JsonCreator.Mode.PROPERTIES)
-    public DlcIlluminateDetails(@JsonProperty(cUuid) String uuid,
+    public IlluminateDlcDetails(@JsonProperty(cUuid) String uuid,
                                 @JsonProperty(cName) String name,
                                 @JsonProperty(cDescription) String description,
                                 @JsonProperty(cFilePath) String filePath,
@@ -28,8 +27,8 @@ public class DlcIlluminateDetails extends IlluminateDetails {
         this.gameId = gameId;
     }
 
-    public static DlcIlluminateDetails fromJson(JsonNode jsonNode) {
-        return new ObjectMapper().convertValue(jsonNode, DlcIlluminateDetails.class);
+    public static IlluminateDlcDetails fromJson(JsonNode jsonNode) {
+        return new ObjectMapper().convertValue(jsonNode, IlluminateDlcDetails.class);
     }
 
     public boolean isTotalConversion() {

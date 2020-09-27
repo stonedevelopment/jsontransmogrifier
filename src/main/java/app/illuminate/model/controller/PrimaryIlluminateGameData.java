@@ -24,6 +24,6 @@ public class PrimaryIlluminateGameData extends IlluminateGameData {
 
     @Override
     protected void createDetailsObject() {
-        this.details = IlluminateDetails.from(getInNode().get(cDetails));
+        this.details = IlluminateDetails.fromJson(getInNode().get(cDetails));
     }
 }

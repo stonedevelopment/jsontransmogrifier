@@ -27,7 +27,7 @@ public class IlluminateDetails extends Details {
         super(uuid, name, description, filePath, logoFile, folderFile, backFolderFile);
     }
 
-    public static IlluminateDetails from(JsonNode jsonNode) {
+    public static IlluminateDetails fromJson(JsonNode jsonNode) {
         return new ObjectMapper().convertValue(jsonNode, IlluminateDetails.class);
     }
 

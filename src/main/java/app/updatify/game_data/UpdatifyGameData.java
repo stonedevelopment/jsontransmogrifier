@@ -37,11 +37,11 @@ public class UpdatifyGameData extends GameData {
         return (UpdatifyDetails) super.getDetails();
     }
 
-    private JsonNode getTransmogNode() {
+    protected JsonNode getTransmogNode() {
         return getInNode();
     }
 
-    private JsonNode getIlluminatedNode(String type) {
+    protected JsonNode getIlluminatedNode(String type) {
         return illuminationMap.get(type);
     }
 
@@ -61,7 +61,7 @@ public class UpdatifyGameData extends GameData {
         return hasUpdate;
     }
 
-    private void setHasUpdate() {
+    protected void setHasUpdate() {
         this.hasUpdate = true;
     }
 
@@ -80,7 +80,7 @@ public class UpdatifyGameData extends GameData {
         mapDirectoryFromJson();
     }
 
-    private void mapIlluminationNode() {
+    protected void mapIlluminationNode() {
         for (JsonNode illuminatedFile : illuminationNode.get(cIlluminatedFiles)) {
             String type = illuminatedFile.get(cType).asText();
             String filePath = illuminatedFile.get(cFilePath).asText();
@@ -96,7 +96,7 @@ public class UpdatifyGameData extends GameData {
         setDetails(tDetails);
 
         //  compare
-        IlluminateDetails iDetails = IlluminateDetails.from(getIlluminatedNode(cDetails));
+        IlluminateDetails iDetails = IlluminateDetails.fromJson(getIlluminatedNode(cDetails));
         if (!tDetails.equals(iDetails)) {
             updateDetails(UpdatifyDetails.convertToNew(tDetails, iDetails));
             setHasUpdate();

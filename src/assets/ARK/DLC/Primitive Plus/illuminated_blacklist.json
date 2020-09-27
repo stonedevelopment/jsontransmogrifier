@@ -1,1 +1,13 @@
-{"resources":["Metal Ore","Raw Meat","Spoiled Meat"],"stations":[],"folders":[],"engrams":["Canteen","Metal Ingot"]}
+{
+  "resources": [
+    "Metal Ore",
+    "Raw Meat",
+    "Spoiled Meat"
+  ],
+  "stations": [],
+  "folders": [],
+  "engrams": [
+    "Canteen",
+    "Metal Ingot"
+  ]
+}
