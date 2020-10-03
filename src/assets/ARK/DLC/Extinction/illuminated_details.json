@@ -1,1 +1,9 @@
-{"name":"Extinction","description":"Finish your journey through the worlds of ARK in ‘Extinction’, where the story began and ends: on Earth itself! An Element-infested, ravaged planet filled with fantastical creatures both organic & technological, Earth holds both the secrets of the past and the keys to its salvation. As a veteran Survivor who has conquered all previous obstacles, your ultimate challenge awaits: can you defeat the gigantic roaming Titans which dominate the planet, and complete the ARK cycle to save Earth's future?","filePath":"DLC/Extinction/","logoFile":"logo.webp","folderFile":"folder.webp","backFolderFile":"backFolder.webp","totalConversion":false}
+{
+  "name": "Extinction",
+  "description": "Finish your journey through the worlds of ARK in ‘Extinction’, where the story began and ends: on Earth itself! An Element-infested, ravaged planet filled with fantastical creatures both organic & technological, Earth holds both the secrets of the past and the keys to its salvation. As a veteran Survivor who has conquered all previous obstacles, your ultimate challenge awaits: can you defeat the gigantic roaming Titans which dominate the planet, and complete the ARK cycle to save Earth's future?",
+  "filePath": "DLC/Extinction/",
+  "logoFile": "logo.webp",
+  "folderFile": "folder.webp",
+  "backFolderFile": "backFolder.webp",
+  "totalConversion": false
+}

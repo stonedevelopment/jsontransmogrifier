@@ -2,13 +2,14 @@ package app.updatify.game_data;
 
 import app.illuminate.model.details.IlluminateDlcDetails;
 import app.updatify.model.UpdatifyBlacklistItem;
+import app.updatify.model.UpdatifyDlcComposite;
 import app.updatify.model.UpdatifyDlcDetails;
 import app.updatify.model.UpdatifyTotalConversionItem;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import model.Composite;
 import model.Engram;
 import model.Folder;
-import model.Resource;
 import model.Station;
 import util.Log;
 
@@ -34,32 +35,33 @@ public class UpdatifyDlcGameData extends UpdatifyGameData {
         return (UpdatifyDlcDetails) super.getDetails();
     }
 
-    @Override
-    public Resource getResourceByName(String name) {
-        Resource resource = super.getResourceByName(name);
-        if (resource == null) resource = primaryGameData.getResourceByName(name);
-        return resource;
+
+    private Station getPrimaryStationByName(String name) {
+        return primaryGameData.getStationByName(name);
     }
 
-    @Override
-    public Station getStationByName(String name) {
-        Station station = super.getStationByName(name);
-        if (station == null) station = primaryGameData.getStationByName(name);
-        return station;
+    private Folder getPrimaryFolderByName(String name) {
+        return primaryGameData.getFolderByName(name);
     }
 
-    @Override
-    public Folder getFolderByName(String name) {
-        Folder folder = super.getFolderByName(name);
-        if (folder == null) folder = primaryGameData.getFolderByName(name);
-        return folder;
+    private Engram getPrimaryEngramByName(String name) {
+        return primaryGameData.getEngramByName(name);
     }
 
-    @Override
-    public Engram getEngramByName(String name) {
-        Engram engram = super.getEngramByName(name);
-        if (engram == null) engram = primaryGameData.getEngramByName(name);
-        return engram;
+    private List<String> getPrimaryCompositeUUIDListByName(String name) {
+        return primaryGameData.getCompositeUUIDListByName(name);
+    }
+
+    private Composite getPrimaryComposite(String uuid) {
+        return primaryGameData.getComposite(uuid);
+    }
+
+    private String getUUIDByName(String name) {
+        String uuid = getResourceUUIDByName(name);
+        if (uuid == null) {
+            uuid = getEngramUUIDByName(name);
+        }
+        return uuid;
     }
 
     private boolean isTotalConversion() {
@@ -100,28 +102,22 @@ public class UpdatifyDlcGameData extends UpdatifyGameData {
     private void mapBlackListFromJson() {
         JsonNode blacklistNode = getIlluminatedNode(cBlacklist);
 
-        //  map resource blacklist
-        blacklistNode.get(cResources).forEach((nameNode) -> {
-            String name = nameNode.asText();
-            addBlacklistItem(cResources, UpdatifyBlacklistItem.createFrom(name, getResourceByName(name).getUuid()));
-        });
-
         //  map station blacklist
         blacklistNode.get(cStations).forEach((nameNode) -> {
             String name = nameNode.asText();
-            addBlacklistItem(cStations, UpdatifyBlacklistItem.createFrom(name, getStationByName(name).getUuid()));
+            addBlacklistItem(cStations, UpdatifyBlacklistItem.createFrom(name, getPrimaryStationByName(name).getUuid()));
         });
 
         //  map folder blacklist
         blacklistNode.get(cFolders).forEach((nameNode) -> {
             String name = nameNode.asText();
-            addBlacklistItem(cFolders, UpdatifyBlacklistItem.createFrom(name, getFolderByName(name).getUuid()));
+            addBlacklistItem(cFolders, UpdatifyBlacklistItem.createFrom(name, getPrimaryFolderByName(name).getUuid()));
         });
 
         //  map engram blacklist
         blacklistNode.get(cEngrams).forEach((nameNode) -> {
             String name = nameNode.asText();
-            addBlacklistItem(cEngrams, UpdatifyBlacklistItem.createFrom(name, getEngramByName(name).getUuid()));
+            addBlacklistItem(cEngrams, UpdatifyBlacklistItem.createFrom(name, getPrimaryEngramByName(name).getUuid()));
         });
     }
 
@@ -137,12 +133,18 @@ public class UpdatifyDlcGameData extends UpdatifyGameData {
         JsonNode totalConversionNodes = getIlluminatedNode(cTotalConversion);
         for (JsonNode totalConversionNode : totalConversionNodes) {
             String fromName = totalConversionNode.get(cFrom).asText();
-            Resource fromResource = getResourceByName(fromName);
+            List<String> fromCompositeList = getPrimaryCompositeUUIDListByName(fromName);
 
             String toName = totalConversionNode.get(cTo).asText();
-            Resource toResource = getResourceByName(toName);
+            String toSourceId = getUUIDByName(toName);
 
-            addTotalConversionItem(UpdatifyTotalConversionItem.createFrom(fromResource, toResource));
+            //  convert compositions?
+            fromCompositeList.forEach((compositeId) -> {
+                Composite fromComposite = getPrimaryComposite(compositeId);
+                Composite toComposite = UpdatifyDlcComposite.convertTo(fromComposite, toName, toSourceId);
+                addTotalConversionItem(UpdatifyTotalConversionItem.createFrom(fromComposite, toComposite));
+            });
+
         }
     }
 
@@ -174,7 +176,6 @@ public class UpdatifyDlcGameData extends UpdatifyGameData {
 
     private JsonNode transformBlacklistMap() {
         ObjectNode outNode = mapper.createObjectNode();
-        outNode.set(cResources, mapper.createArrayNode().add((JsonNode) blacklistMap.get(cResources).stream().map((mapper::valueToTree))));
         outNode.set(cStations, mapper.createArrayNode().add((JsonNode) blacklistMap.get(cStations).stream().map((mapper::valueToTree))));
         outNode.set(cFolders, mapper.createArrayNode().add((JsonNode) blacklistMap.get(cFolders).stream().map((mapper::valueToTree))));
         outNode.set(cEngrams, mapper.createArrayNode().add((JsonNode) blacklistMap.get(cEngrams).stream().map((mapper::valueToTree))));

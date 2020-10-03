@@ -258,16 +258,11 @@ public class IlluminateDlcGameData extends IlluminateGameData {
     private JsonNode resolveRemovalsToBlacklist() {
         ObjectNode outNode = mapper.createObjectNode();
 
-        outNode.set(cResources, resolveRemoveResources());
         outNode.set(cStations, resolveRemoveStations());
         outNode.set(cFolders, resolveRemoveFolders());
         outNode.set(cEngrams, resolveRemoveEngrams());
 
         return outNode;
-    }
-
-    private JsonNode resolveRemoveResources() {
-        return mapper.valueToTree(removeResourcesIdMap.keySet());
     }
 
     private JsonNode resolveRemoveStations() {
