@@ -41,6 +41,10 @@ public class UpdatifyGameData extends GameData {
         return getInNode();
     }
 
+    protected JsonNode getTransmogNode(String type) {
+        return getTransmogNode().get(type);
+    }
+
     protected JsonNode getIlluminatedNode(String type) {
         return illuminationMap.get(type);
     }
@@ -81,12 +85,12 @@ public class UpdatifyGameData extends GameData {
     }
 
     protected void mapIlluminationNode() {
-        for (JsonNode illuminatedFile : illuminationNode.get(cIlluminatedFiles)) {
+        illuminationNode.get(cIlluminatedFiles).forEach((illuminatedFile) -> {
             String type = illuminatedFile.get(cType).asText();
             String filePath = illuminatedFile.get(cFilePath).asText();
             JsonNode illuminatedNode = JSONUtil.parseIn(cArkAssetsFilePath, filePath);
             addIlluminatedNode(type, illuminatedNode);
-        }
+        });
     }
 
     @Override
@@ -100,21 +104,19 @@ public class UpdatifyGameData extends GameData {
         if (!tDetails.equals(iDetails)) {
             updateDetails(UpdatifyDetails.convertToNew(tDetails, iDetails));
             setHasUpdate();
-        } else {
-            Log.d("No change to details for " + getDetails().getName());
         }
     }
 
     @Override
     protected void mapResourcesFromJson() {
-        JsonNode tArray = getTransmogNode().get(cResources);
-        for (JsonNode jsonNode : tArray) {
-            addResource(Resource.fromJson(jsonNode));
-        }
+        //  map raw data
+        getTransmogNode(cResources).forEach((tNode) -> {
+            addResource(Resource.fromJson(tNode));
+        });
 
-        JsonNode iArray = getIlluminatedNode(cResources);
-        for (JsonNode jsonNode : iArray) {
-            IlluminateResource iResource = IlluminateResource.fromJson(jsonNode);
+        //  map Illuminated data, updating if different
+        getIlluminatedNode(cResources).forEach((iNode -> {
+            IlluminateResource iResource = IlluminateResource.fromJson(iNode);
             Resource tResource = getResourceByName(iResource.getName());
 
             if (tResource == null) {
@@ -122,19 +124,19 @@ public class UpdatifyGameData extends GameData {
             } else if (!tResource.equals(iResource)) {
                 updateResource(UpdatifyResource.updateToNew(tResource, iResource));
             }
-        }
+        }));
     }
 
     @Override
     protected void mapStationsFromJson() {
-        JsonNode tArray = getTransmogNode().get(cStations);
-        for (JsonNode jsonNode : tArray) {
-            addStation(Station.fromJson(jsonNode));
-        }
+        //  map raw data
+        getTransmogNode(cStations).forEach((tNode) -> {
+            addStation(Station.fromJson(tNode));
+        });
 
-        JsonNode iArray = getIlluminatedNode(cStations);
-        for (JsonNode jsonNode : iArray) {
-            IlluminateStation iStation = IlluminateStation.fromJson(jsonNode);
+        //  map Illuminated data, updating if different
+        getIlluminatedNode(cStations).forEach((iNode -> {
+            IlluminateStation iStation = IlluminateStation.fromJson(iNode);
             Station tStation = getStationByName(iStation.getName());
 
             if (tStation == null) {
@@ -144,19 +146,19 @@ public class UpdatifyGameData extends GameData {
                 Log.d("Updating Station: " + iStation.toString());
                 updateStation(UpdatifyStation.updateToNew(tStation, iStation));
             }
-        }
+        }));
     }
 
     @Override
     protected void mapFoldersFromJson() {
-        JsonNode jsonArray = getTransmogNode().get(cFolders);
-        for (JsonNode jsonNode : jsonArray) {
-            addFolder(Folder.fromJson(jsonNode));
-        }
+        //  map raw data
+        getTransmogNode(cFolders).forEach((tNode) -> {
+            addFolder(Folder.fromJson(tNode));
+        });
 
-        JsonNode iArray = getIlluminatedNode(cFolders);
-        for (JsonNode jsonNode : iArray) {
-            IlluminateFolder iFolder = IlluminateFolder.fromJson(jsonNode);
+        //  map Illuminated data, updating if different
+        getIlluminatedNode(cFolders).forEach((iNode) -> {
+            IlluminateFolder iFolder = IlluminateFolder.fromJson(iNode);
             Folder tFolder = getFolderByName(iFolder.getName());
 
             if (tFolder == null) {
@@ -166,18 +168,18 @@ public class UpdatifyGameData extends GameData {
                 Log.d("Updating Folder: " + iFolder.toString());
                 updateFolder(UpdatifyFolder.updateToNew(tFolder, iFolder));
             }
-        }
+        });
     }
 
     @Override
     protected void mapEngramsFromJson() {
-        JsonNode tArray = getTransmogNode().get(cEngrams);
-        for (JsonNode tNode : tArray) {
+        //  map raw data
+        getTransmogNode(cEngrams).forEach((tNode) -> {
             addEngram(Engram.fromJson(tNode));
-        }
+        });
 
-        JsonNode iArray = getIlluminatedNode(cEngrams);
-        for (JsonNode iNode : iArray) {
+        //  map Illuminated data, updating if different
+        getIlluminatedNode(cEngrams).forEach((iNode) -> {
             IlluminateEngram iEngram = UpdatifyEngram.fromJson(iNode);
             Engram tEngram = getEngramByName(iEngram.getName());
 
@@ -188,46 +190,44 @@ public class UpdatifyGameData extends GameData {
                 Log.d("Updating Engram: " + iEngram.toString());
                 updateEngram(UpdatifyEngram.updateToNew(tEngram, iEngram));
             }
-        }
+        });
     }
 
     @Override
     protected void mapCompositionFromJson() {
-        JsonNode tArray = getTransmogNode().get(cComposition);
-        for (JsonNode jsonNode : tArray) {
-            addComposition(Composition.fromJson(jsonNode));
-        }
+        getTransmogNode(cComposition).forEach((tNode) -> {
+            addComposition(Composition.fromJson(tNode));
+        });
     }
 
     protected void mapCompositesFromJson() {
-        JsonNode jsonArray = getTransmogNode().get(cComposites);
-        for (JsonNode jsonNode : jsonArray) {
-            addComposite(Composite.fromJson(jsonNode));
-        }
+        //  map raw data
+        getTransmogNode(cComposites).forEach((tNode) -> {
+            addComposite(Composite.fromJson(tNode));
+        });
 
-        JsonNode iArray = getIlluminatedNode(cEngrams);
-        for (JsonNode jsonNode : iArray) {
-            String name = jsonNode.get(cName).asText();
+        //  map Illuminated data, updating if different
+        getIlluminatedNode(cEngrams).forEach((iNode) -> {
+            String name = iNode.get(cName).asText();
             String compositionId = getCompositionUUIDByName(name);
 
-            JsonNode compositionNode = jsonNode.get(cComposition);
+            JsonNode compositionNode = iNode.get(cComposition);
             JsonNode compositesNode = compositionNode.get(cComposites);
 
             if (compositionId == null) {
                 String engramId = getEngramUUIDByName(name);
                 Composition iComposition = UpdatifyComposition.createFrom(IlluminateComposition.with(engramId));
-                compositionId = iComposition.getUuid();
 
-                for (JsonNode compositeNode : compositesNode) {
+                compositesNode.forEach((compositeNode) -> {
                     IlluminateComposite iComposite = IlluminateComposite.fromJson(compositeNode);
                     String imageFile = getImageFileByName(name);
                     Log.d("Adding Composite: " + iComposite.toString());
-                    addComposite(UpdatifyComposite.createFrom(iComposite, imageFile, engramId, compositionId));
-                }
+                    addComposite(UpdatifyComposite.createFrom(iComposite, imageFile, engramId, iComposition.getUuid()));
+                });
             } else {
-                for (JsonNode compositeNode : compositesNode) {
+                compositesNode.forEach((compositeNode) -> {
                     IlluminateComposite iComposite = IlluminateComposite.fromJson(compositeNode);
-                    for (String compositeId : getCompositeUUIDListByName(iComposite.getName())) {
+                    getCompositeUUIDListByName(iComposite.getName()).forEach((compositeId) -> {
                         Composite tComposite = getComposite(compositeId);
                         if (compositionId.equals(tComposite.getCompositionId())) {
                             if (!tComposite.equals(iComposite)) {
@@ -235,21 +235,21 @@ public class UpdatifyGameData extends GameData {
                                 updateComposite(UpdatifyComposite.updateToNew(tComposite, iComposite));
                             }
                         }
-                    }
-                }
+                    });
+                });
             }
-        }
+        });
     }
 
     @Override
     protected void mapDirectoryFromJson() {
         JsonNode tArray = getTransmogNode().get(cDirectory);
-        for (JsonNode jsonNode : tArray) {
-            addUncheckedDirectoryItem(DirectoryItem.fromJson(jsonNode));
-        }
+        getTransmogNode(cDirectory).forEach((tNode) -> {
+            addUncheckedDirectoryItem(DirectoryItem.fromJson(tNode));
+        });
 
         JsonNode iArray = getIlluminatedNode(cDirectory);
-        for (JsonNode iNode : iArray) {
+        getIlluminatedNode(cDirectory).forEach((iNode) -> {
             String name = iNode.get(cName).asText();
             DirectoryItem tDirectoryItem = getDirectoryItemByName(name, null);
             if (tDirectoryItem == null) {
@@ -266,7 +266,7 @@ public class UpdatifyGameData extends GameData {
 
             //  map station's hierarchy
             mapIlluminatedDirectory(iNode, tDirectoryItem.getUuid());
-        }
+        });
 
         //  check for unchecked directory items, remove from lists
         for (String uuid : uncheckedDirectoryItems) {
@@ -276,8 +276,7 @@ public class UpdatifyGameData extends GameData {
     }
 
     private void mapIlluminatedDirectory(JsonNode iNode, String parentId) {
-        JsonNode folders = iNode.get(cFolders);
-        for (JsonNode folderNode : folders) {
+        iNode.get(cFolders).forEach((folderNode) -> {
             String name = folderNode.get(cName).asText();
             DirectoryItem fDirectoryItem = getDirectoryItemByName(name, parentId);
             if (fDirectoryItem == null) {
@@ -291,10 +290,9 @@ public class UpdatifyGameData extends GameData {
 
             //  map folder's hierarchy
             mapIlluminatedDirectory(folderNode, fDirectoryItem.getUuid());
-        }
+        });
 
-        JsonNode engrams = iNode.get(cEngrams);
-        for (JsonNode engramNode : engrams) {
+        iNode.get(cEngrams).forEach((engramNode) -> {
             String name = engramNode.asText();
             DirectoryItem eDirectoryItem = getDirectoryItemByName(name, parentId);
             if (eDirectoryItem == null) {
@@ -305,7 +303,7 @@ public class UpdatifyGameData extends GameData {
             } else {
                 removeUncheckedDirectoryItem(eDirectoryItem.getUuid());
             }
-        }
+        });
     }
 
     private void addIlluminatedNode(String type, JsonNode illuminatedNode) {
