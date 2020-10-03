@@ -8,7 +8,6 @@ import app.updatify.model.UpdatifyTotalConversionItem;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import model.*;
-import util.Log;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -87,8 +86,6 @@ public class UpdatifyDlcGameData extends UpdatifyGameData {
         if (!tDetails.equals(iDetails)) {
             updateDetails(UpdatifyDlcDetails.convertToNew(tDetails, iDetails));
             setHasUpdate();
-        } else {
-            Log.d("No change to details for " + getDetails().getName());
         }
     }
 
