@@ -6,7 +6,6 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.util.Date;
-import java.util.Objects;
 
 import static util.Constants.*;
 
@@ -30,7 +29,7 @@ public class Details {
                    @JsonProperty(cBackFolderFile) String backFolderFile) {
         this.uuid = uuid;
         this.name = name;
-        this.description = description;
+        this.description = description == null ? "" : description;
         this.filePath = filePath;
         this.logoFile = logoFile;
         this.folderFile = folderFile;
@@ -81,10 +80,5 @@ public class Details {
                 logoFile.equals(details.logoFile) &&
                 folderFile.equals(details.folderFile) &&
                 backFolderFile.equals(details.backFolderFile);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(name, description, filePath, logoFile, folderFile, backFolderFile);
     }
 }

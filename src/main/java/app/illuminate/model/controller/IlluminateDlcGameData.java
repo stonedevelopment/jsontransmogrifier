@@ -245,7 +245,7 @@ public class IlluminateDlcGameData extends IlluminateGameData {
     @Override
     public ObjectNode resolveToJson() {
         //  resolve maps to separate json files for easy editing
-        ObjectNode outNode = (ObjectNode) super.resolveToJson();
+        ObjectNode outNode = super.resolveToJson();
 
         outNode.set(cBlacklist, resolveRemovalsToBlacklist());
         if (isTotalConversion()) {
