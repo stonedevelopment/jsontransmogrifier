@@ -1,7 +1,7 @@
 package app.illuminate;
 
 import app.illuminate.controller.IlluminateGameData;
-import app.illuminate.model.controller.DlcIlluminateGameData;
+import app.illuminate.model.controller.IlluminateDlcGameData;
 import app.illuminate.model.controller.PrimaryIlluminateGameData;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -23,7 +23,7 @@ import static util.JSONUtil.writeOut;
  */
 public class IlluminateApp {
     private static final ObjectMapper mapper = new ObjectMapper();
-    private final List<DlcIlluminateGameData> dlcGameDataList = new ArrayList<>();
+    private final List<IlluminateDlcGameData> dlcGameDataList = new ArrayList<>();
     private final JsonNode inNode;
     private PrimaryIlluminateGameData primaryGameData;
 
@@ -45,7 +45,7 @@ public class IlluminateApp {
         return primaryGameData;
     }
 
-    public List<DlcIlluminateGameData> getDlcGameDataList() {
+    public List<IlluminateDlcGameData> getDlcGameDataList() {
         return dlcGameDataList;
     }
 
@@ -64,7 +64,7 @@ public class IlluminateApp {
         for (JsonNode dlcNode : dlcArrayNode) {
             String transmogrifiedFilePath = dlcNode.get(cFilePath).asText();
             JsonNode transmogrifiedNode = parseIn(cArkAssetsFilePath, transmogrifiedFilePath);
-            DlcIlluminateGameData dlcGameData = DlcIlluminateGameData.with(transmogrifiedNode, primaryGameData);
+            IlluminateDlcGameData dlcGameData = IlluminateDlcGameData.with(transmogrifiedNode, primaryGameData);
             dlcGameDataList.add(dlcGameData);
         }
     }
@@ -79,7 +79,7 @@ public class IlluminateApp {
     }
 
     private void writeDlcGameData() {
-        for (DlcIlluminateGameData dlcGameData : dlcGameDataList) {
+        for (IlluminateDlcGameData dlcGameData : dlcGameDataList) {
             writeGameDataToFile(dlcGameData);
         }
     }
@@ -118,7 +118,7 @@ public class IlluminateApp {
         outNode.set(cPrimary, generateIlluminationDetails(primaryGameData));
 
         ArrayNode outDlcArrayNode = mapper.createArrayNode();
-        for (DlcIlluminateGameData dlcGameData : dlcGameDataList) {
+        for (IlluminateDlcGameData dlcGameData : dlcGameDataList) {
             outDlcArrayNode.add(generateIlluminationDetails(dlcGameData));
         }
 

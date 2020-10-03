@@ -351,7 +351,7 @@ public abstract class IlluminateGameData extends GameData {
     }
 
     @Override
-    public JsonNode resolveToJson() {
+    public ObjectNode resolveToJson() {
         //  resolve maps to separate json files for easy editing
         ObjectNode outNode = mapper.createObjectNode();
 

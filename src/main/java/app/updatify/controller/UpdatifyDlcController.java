@@ -1,12 +1,19 @@
 package app.updatify.controller;
 
+import app.updatify.game_data.UpdatifyDlcGameData;
 import com.fasterxml.jackson.databind.JsonNode;
 
 public class UpdatifyDlcController extends UpdatifyController {
-    private final UpdatifyController primaryController;
+    public UpdatifyDlcController(UpdatifyDlcGameData gameData) {
+        super(gameData);
+    }
 
-    public UpdatifyDlcController(JsonNode transmogrificationNode, JsonNode illuminationNode, UpdatifyController primaryController) {
-        super(transmogrificationNode, illuminationNode);
-        this.primaryController = primaryController;
+    public static UpdatifyDlcController from(JsonNode tNode, JsonNode iNode, UpdatifyController primaryController) {
+        return new UpdatifyDlcController(new UpdatifyDlcGameData(tNode, iNode, primaryController.getGameData()));
+    }
+
+    @Override
+    public UpdatifyDlcGameData getGameData() {
+        return (UpdatifyDlcGameData) super.getGameData();
     }
 }

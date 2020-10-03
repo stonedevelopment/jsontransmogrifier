@@ -351,7 +351,7 @@ public class UpdatifyGameData extends GameData {
     }
 
     @Override
-    public JsonNode resolveToJson() {
+    public ObjectNode resolveToJson() {
         ObjectNode outNode = mapper.createObjectNode();
 
         outNode.set(cDetails, mapper.valueToTree(getDetails()));

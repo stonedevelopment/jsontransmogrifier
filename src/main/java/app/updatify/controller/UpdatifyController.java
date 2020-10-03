@@ -1,6 +1,5 @@
 package app.updatify.controller;
 
-import app.transmogrify.model.game_data.DlcTransmogGameData;
 import app.updatify.game_data.UpdatifyGameData;
 import com.fasterxml.jackson.databind.JsonNode;
 
@@ -10,16 +9,24 @@ import static util.JSONUtil.writeOut;
 public class UpdatifyController {
     private final UpdatifyGameData gameData;
 
-    public UpdatifyController(JsonNode transmogrificationNode, JsonNode illuminationNode) {
-        this.gameData = new UpdatifyGameData(transmogrificationNode, illuminationNode);
+    protected UpdatifyController(UpdatifyGameData gameData) {
+        this.gameData = gameData;
+    }
+
+    public static UpdatifyController from(JsonNode tNode, JsonNode iNode) {
+        return new UpdatifyController(new UpdatifyGameData(tNode, iNode));
     }
 
     public void start() {
-        gameData.mapGameDataFromJson();
+        getGameData().mapGameDataFromJson();
     }
 
     public void export() {
         writeGameDataToFile();
+    }
+
+    public UpdatifyGameData getGameData() {
+        return gameData;
     }
 
     private void writeGameDataToFile() {

@@ -37,9 +37,9 @@ public class UpdatifyApp {
     }
 
     private void updatifyPrimary() {
-        JsonNode primaryTransmogrifiedNode = transmogrificationNode.get(cPrimary);
-        JsonNode primaryIlluminatedNode = illuminationNode.get(cPrimary);
-        primaryController = new UpdatifyController(primaryTransmogrifiedNode, primaryIlluminatedNode);
+        JsonNode tNode = transmogrificationNode.get(cPrimary);
+        JsonNode iNode = illuminationNode.get(cPrimary);
+        primaryController = UpdatifyController.from(tNode, iNode);
         primaryController.start();
     }
 
@@ -70,7 +70,7 @@ public class UpdatifyApp {
     }
 
     private void updatifyDlc(JsonNode tNode, JsonNode iNode) {
-        UpdatifyDlcController dlcController = new UpdatifyDlcController(tNode, iNode, primaryController);
+        UpdatifyDlcController dlcController = UpdatifyDlcController.from(tNode, iNode, primaryController);
         dlcController.start();
     }
 }

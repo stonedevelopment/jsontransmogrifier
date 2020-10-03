@@ -15,7 +15,7 @@ import java.util.TreeMap;
 
 import static util.Constants.*;
 
-public class DlcIlluminateGameData extends IlluminateGameData {
+public class IlluminateDlcGameData extends IlluminateGameData {
 
     private final PrimaryIlluminateGameData primaryGameData;
 
@@ -28,7 +28,7 @@ public class DlcIlluminateGameData extends IlluminateGameData {
     //  uuid, object
     private final Map<String, IlluminateReplacement> replacementMap = new HashMap<>();
 
-    private DlcIlluminateGameData(JsonNode inNode, PrimaryIlluminateGameData primaryGameData) {
+    private IlluminateDlcGameData(JsonNode inNode, PrimaryIlluminateGameData primaryGameData) {
         super(inNode);
 
         this.primaryGameData = primaryGameData;
@@ -36,8 +36,8 @@ public class DlcIlluminateGameData extends IlluminateGameData {
         mapGameDataFromJson();
     }
 
-    public static DlcIlluminateGameData with(JsonNode inNode, PrimaryIlluminateGameData primaryGameData) {
-        return new DlcIlluminateGameData(inNode, primaryGameData);
+    public static IlluminateDlcGameData with(JsonNode inNode, PrimaryIlluminateGameData primaryGameData) {
+        return new IlluminateDlcGameData(inNode, primaryGameData);
     }
 
     @Override
@@ -243,7 +243,7 @@ public class DlcIlluminateGameData extends IlluminateGameData {
     }
 
     @Override
-    public JsonNode resolveToJson() {
+    public ObjectNode resolveToJson() {
         //  resolve maps to separate json files for easy editing
         ObjectNode outNode = (ObjectNode) super.resolveToJson();
 
