@@ -7,10 +7,7 @@ import app.updatify.model.UpdatifyDlcDetails;
 import app.updatify.model.UpdatifyTotalConversionItem;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import model.Composite;
-import model.Engram;
-import model.Folder;
-import model.Station;
+import model.*;
 import util.Log;
 
 import java.util.ArrayList;
@@ -42,6 +39,10 @@ public class UpdatifyDlcGameData extends UpdatifyGameData {
     public List<UpdatifyBlacklistItem> getBlacklistItemList(String type) {
         List<UpdatifyBlacklistItem> blacklistItemList = getBlacklistMap().get(type);
         return blacklistItemList == null ? new ArrayList<>() : blacklistItemList;
+    }
+
+    private Resource getPrimaryResourceByName(String name) {
+        return primaryGameData.getResourceByName(name);
     }
 
     private Station getPrimaryStationByName(String name) {
@@ -109,6 +110,11 @@ public class UpdatifyDlcGameData extends UpdatifyGameData {
      */
     private void mapBlackListFromJson() {
         JsonNode blacklistNode = getIlluminatedNode(cBlacklist);
+
+        //  map resource blacklist
+        blacklistNode.get(cResources).forEach((nameNode) -> {
+            addBlacklistItem(cResources, UpdatifyBlacklistItem.createFrom(getPrimaryResourceByName(nameNode.asText()).getUuid()));
+        });
 
         //  map station blacklist
         blacklistNode.get(cStations).forEach((nameNode) -> {
@@ -180,6 +186,7 @@ public class UpdatifyDlcGameData extends UpdatifyGameData {
 
     private JsonNode transformBlacklistMap() {
         ObjectNode outNode = mapper.createObjectNode();
+        outNode.set(cResources, mapper.valueToTree(getBlacklistItemList(cResources)));
         outNode.set(cStations, mapper.valueToTree(getBlacklistItemList(cStations)));
         outNode.set(cFolders, mapper.valueToTree(getBlacklistItemList(cFolders)));
         outNode.set(cEngrams, mapper.valueToTree(getBlacklistItemList(cEngrams)));
