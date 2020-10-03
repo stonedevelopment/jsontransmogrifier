@@ -135,8 +135,7 @@ public class UpdatifyDlcGameData extends UpdatifyGameData {
      * ]
      */
     private void mapTotalConversion() {
-        JsonNode totalConversionNodes = getIlluminatedNode(cTotalConversion);
-        for (JsonNode totalConversionNode : totalConversionNodes) {
+        getIlluminatedNode(cTotalConversion).forEach((totalConversionNode) -> {
             String fromName = totalConversionNode.get(cFrom).asText();
             List<String> fromCompositeList = getPrimaryCompositeUUIDListByName(fromName);
 
@@ -150,7 +149,7 @@ public class UpdatifyDlcGameData extends UpdatifyGameData {
                 addTotalConversionItem(UpdatifyTotalConversionItem.createFrom(fromComposite, toComposite));
             });
 
-        }
+        });
     }
 
     private void addBlacklistItem(String type, UpdatifyBlacklistItem blacklistItem) {
