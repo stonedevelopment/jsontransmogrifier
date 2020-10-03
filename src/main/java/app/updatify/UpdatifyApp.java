@@ -29,18 +29,12 @@ public class UpdatifyApp {
         updatifyDlcList();
     }
 
-    /**
-     * Export resolved data to database-ready json file
-     */
-    public void export() {
-        primaryController.export();
-    }
-
     private void updatifyPrimary() {
         JsonNode tNode = transmogrificationNode.get(cPrimary);
         JsonNode iNode = illuminationNode.get(cPrimary);
         primaryController = UpdatifyController.from(tNode, iNode);
         primaryController.start();
+        primaryController.export();
     }
 
     /**
@@ -72,5 +66,6 @@ public class UpdatifyApp {
     private void updatifyDlc(JsonNode tNode, JsonNode iNode) {
         UpdatifyDlcController dlcController = UpdatifyDlcController.from(tNode, iNode, primaryController);
         dlcController.start();
+        dlcController.export();
     }
 }

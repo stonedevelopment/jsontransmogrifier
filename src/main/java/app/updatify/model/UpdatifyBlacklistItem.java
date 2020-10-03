@@ -4,18 +4,15 @@ import java.util.UUID;
 
 public class UpdatifyBlacklistItem {
     private final String uuid;
-    private final String name;
     private final String sourceId;
 
-    public UpdatifyBlacklistItem(String uuid, String name, String sourceId) {
+    public UpdatifyBlacklistItem(String uuid, String sourceId) {
         this.uuid = uuid;
-        this.name = name;
         this.sourceId = sourceId;
     }
 
-    public static UpdatifyBlacklistItem createFrom(String name, String sourceId) {
+    public static UpdatifyBlacklistItem createFrom(String sourceId) {
         return new UpdatifyBlacklistItem(UUID.randomUUID().toString(),
-                name,
                 sourceId);
     }
 
@@ -23,7 +20,7 @@ public class UpdatifyBlacklistItem {
         return uuid;
     }
 
-    public String getName() {
-        return name;
+    public String getSourceId() {
+        return sourceId;
     }
 }

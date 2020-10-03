@@ -35,6 +35,14 @@ public class UpdatifyDlcGameData extends UpdatifyGameData {
         return (UpdatifyDlcDetails) super.getDetails();
     }
 
+    public Map<String, List<UpdatifyBlacklistItem>> getBlacklistMap() {
+        return blacklistMap;
+    }
+
+    public List<UpdatifyBlacklistItem> getBlacklistItemList(String type) {
+        List<UpdatifyBlacklistItem> blacklistItemList = getBlacklistMap().get(type);
+        return blacklistItemList == null ? new ArrayList<>() : blacklistItemList;
+    }
 
     private Station getPrimaryStationByName(String name) {
         return primaryGameData.getStationByName(name);
@@ -104,20 +112,17 @@ public class UpdatifyDlcGameData extends UpdatifyGameData {
 
         //  map station blacklist
         blacklistNode.get(cStations).forEach((nameNode) -> {
-            String name = nameNode.asText();
-            addBlacklistItem(cStations, UpdatifyBlacklistItem.createFrom(name, getPrimaryStationByName(name).getUuid()));
+            addBlacklistItem(cStations, UpdatifyBlacklistItem.createFrom(getPrimaryStationByName(nameNode.asText()).getUuid()));
         });
 
         //  map folder blacklist
         blacklistNode.get(cFolders).forEach((nameNode) -> {
-            String name = nameNode.asText();
-            addBlacklistItem(cFolders, UpdatifyBlacklistItem.createFrom(name, getPrimaryFolderByName(name).getUuid()));
+            addBlacklistItem(cFolders, UpdatifyBlacklistItem.createFrom(getPrimaryFolderByName(nameNode.asText()).getUuid()));
         });
 
         //  map engram blacklist
         blacklistNode.get(cEngrams).forEach((nameNode) -> {
-            String name = nameNode.asText();
-            addBlacklistItem(cEngrams, UpdatifyBlacklistItem.createFrom(name, getPrimaryEngramByName(name).getUuid()));
+            addBlacklistItem(cEngrams, UpdatifyBlacklistItem.createFrom(getPrimaryEngramByName(nameNode.asText()).getUuid()));
         });
     }
 
@@ -141,7 +146,7 @@ public class UpdatifyDlcGameData extends UpdatifyGameData {
             //  convert compositions?
             fromCompositeList.forEach((compositeId) -> {
                 Composite fromComposite = getPrimaryComposite(compositeId);
-                Composite toComposite = UpdatifyDlcComposite.convertTo(fromComposite, toName, toSourceId);
+                Composite toComposite = UpdatifyDlcComposite.convertToNew(fromComposite, toName, toSourceId);
                 addTotalConversionItem(UpdatifyTotalConversionItem.createFrom(fromComposite, toComposite));
             });
 
@@ -176,13 +181,13 @@ public class UpdatifyDlcGameData extends UpdatifyGameData {
 
     private JsonNode transformBlacklistMap() {
         ObjectNode outNode = mapper.createObjectNode();
-        outNode.set(cStations, mapper.createArrayNode().add((JsonNode) blacklistMap.get(cStations).stream().map((mapper::valueToTree))));
-        outNode.set(cFolders, mapper.createArrayNode().add((JsonNode) blacklistMap.get(cFolders).stream().map((mapper::valueToTree))));
-        outNode.set(cEngrams, mapper.createArrayNode().add((JsonNode) blacklistMap.get(cEngrams).stream().map((mapper::valueToTree))));
+        outNode.set(cStations, mapper.valueToTree(getBlacklistItemList(cStations)));
+        outNode.set(cFolders, mapper.valueToTree(getBlacklistItemList(cFolders)));
+        outNode.set(cEngrams, mapper.valueToTree(getBlacklistItemList(cEngrams)));
         return outNode;
     }
 
     private JsonNode transformTotalConversionList() {
-        return mapper.createArrayNode().add((JsonNode) totalConversionItemList.stream().map(mapper::valueToTree));
+        return mapper.valueToTree(totalConversionItemList);
     }
 }

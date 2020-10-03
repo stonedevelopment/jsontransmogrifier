@@ -48,7 +48,5 @@ public class App {
         UpdatifyApp updatifyApp = new UpdatifyApp(transmogrificationNode, illuminationNode);
         //  start app
         updatifyApp.start();
-        //  export resolved data to file
-        updatifyApp.export();
     }
 }
