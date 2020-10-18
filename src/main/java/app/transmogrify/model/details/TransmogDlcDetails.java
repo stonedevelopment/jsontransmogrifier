@@ -4,6 +4,8 @@ import app.transmogrify.model.json.JsonDlc;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.util.Date;
+
 import static util.Constants.*;
 
 public class TransmogDlcDetails extends TransmogDetails {
@@ -17,8 +19,9 @@ public class TransmogDlcDetails extends TransmogDetails {
                               @JsonProperty(cLogoFile) String logoFile,
                               @JsonProperty(cFolderFile) String folderFile,
                               @JsonProperty(cBackFolderFile) String backFolderFile,
+                              @JsonProperty(cLastUpdated) Date lastUpdated,
                               @JsonProperty(cTotalConversion) boolean totalConversion) {
-        super(uuid, name, description, filePath, logoFile, folderFile, backFolderFile);
+        super(uuid, name, description, filePath, logoFile, folderFile, backFolderFile, lastUpdated);
         this.totalConversion = totalConversion;
     }
 
@@ -41,6 +44,7 @@ public class TransmogDlcDetails extends TransmogDetails {
                 logoFile,
                 folderFile,
                 backFolderFile,
+                new Date(),
                 totalConversion);
     }
 

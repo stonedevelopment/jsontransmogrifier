@@ -8,6 +8,7 @@ public class Constants {
     public static final String cGamesFileName = "games.json";
     public static final String cTransmogrificationFileName = "transmogrification.json";
     public static final String cTransmogrifiedFileName = "transmogrified.json";
+    public static final String cUpdatificationFileName = "updatification.json";
     public static final String cUpdatifiedFileName = "updatified.json";
     public static final String cIlluminationFileName = "illumination.json";
     public static final String cIlluminatedFileNameFormat = "illuminated_%s.json";

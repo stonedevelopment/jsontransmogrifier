@@ -23,8 +23,9 @@ public class IlluminateDetails extends Details {
                              @JsonProperty(cFilePath) String filePath,
                              @JsonProperty(cLogoFile) String logoFile,
                              @JsonProperty(cFolderFile) String folderFile,
-                             @JsonProperty(cBackFolderFile) String backFolderFile) {
-        super(uuid, name, description, filePath, logoFile, folderFile, backFolderFile);
+                             @JsonProperty(cBackFolderFile) String backFolderFile,
+                             @JsonProperty(cLastUpdated) Date lastUpdated) {
+        super(uuid, name, description, filePath, logoFile, folderFile, backFolderFile, lastUpdated);
     }
 
     public static IlluminateDetails fromJson(JsonNode jsonNode) {

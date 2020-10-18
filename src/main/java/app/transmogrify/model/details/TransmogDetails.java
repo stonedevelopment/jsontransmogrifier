@@ -8,6 +8,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import model.details.Details;
 
+import java.util.Date;
 import java.util.UUID;
 
 import static util.Constants.*;
@@ -20,8 +21,9 @@ public class TransmogDetails extends Details {
                            @JsonProperty(cFilePath) String filePath,
                            @JsonProperty(cLogoFile) String logoFile,
                            @JsonProperty(cFolderFile) String folderFile,
-                           @JsonProperty(cBackFolderFile) String backFolderFile) {
-        super(uuid, name, description, filePath, logoFile, folderFile, backFolderFile);
+                           @JsonProperty(cBackFolderFile) String backFolderFile,
+                           @JsonProperty(cLastUpdated) Date lastUpdated) {
+        super(uuid, name, description, filePath, logoFile, folderFile, backFolderFile, lastUpdated);
     }
 
     public static TransmogDetails createFrom(JsonDlc jsonDlc) {
@@ -29,7 +31,14 @@ public class TransmogDetails extends Details {
         String name = jsonDlc.name;
         String description = jsonDlc.description;
         String filePath = jsonDlc.filePath;
-        return new TransmogDetails(uuid, name, description, filePath, cLogoFileName, cFolderFileName, cBackFolderFileName);
+        return new TransmogDetails(uuid,
+                name,
+                description,
+                filePath,
+                cLogoFileName,
+                cFolderFileName,
+                cBackFolderFileName,
+                new Date());
     }
 
     public static TransmogDetails fromJson(JsonNode jsonNode) {

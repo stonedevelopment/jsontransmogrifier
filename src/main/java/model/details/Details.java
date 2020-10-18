@@ -26,7 +26,8 @@ public class Details {
                    @JsonProperty(cFilePath) String filePath,
                    @JsonProperty(cLogoFile) String logoFile,
                    @JsonProperty(cFolderFile) String folderFile,
-                   @JsonProperty(cBackFolderFile) String backFolderFile) {
+                   @JsonProperty(cBackFolderFile) String backFolderFile,
+                   @JsonProperty(cLastUpdated) Date lastUpdated) {
         this.uuid = uuid;
         this.name = name;
         this.description = description == null ? "" : description;
@@ -34,7 +35,7 @@ public class Details {
         this.logoFile = logoFile;
         this.folderFile = folderFile;
         this.backFolderFile = backFolderFile;
-        this.lastUpdated = new Date();
+        this.lastUpdated = lastUpdated;
     }
 
     public static Details fromJson(JsonNode jsonNode) {

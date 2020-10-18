@@ -1,12 +1,12 @@
 package app.updatify.model;
 
 import app.illuminate.model.details.IlluminateDlcDetails;
-import app.transmogrify.model.details.TransmogDlcDetails;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import java.util.Date;
 
 import static util.Constants.*;
 
@@ -21,12 +21,13 @@ public class UpdatifyDlcDetails extends UpdatifyDetails {
                               @JsonProperty(cLogoFile) String logoFile,
                               @JsonProperty(cFolderFile) String folderFile,
                               @JsonProperty(cBackFolderFile) String backFolderFile,
+                              @JsonProperty(cLastUpdated) Date lastUpdated,
                               @JsonProperty(cTotalConversion) boolean totalConversion) {
-        super(uuid, name, description, filePath, logoFile, folderFile, backFolderFile);
+        super(uuid, name, description, filePath, logoFile, folderFile, backFolderFile, lastUpdated);
         this.totalConversion = totalConversion;
     }
 
-    public static UpdatifyDlcDetails convertToNew(TransmogDlcDetails oldDetails, TransmogDlcDetails newDetails) {
+    public static UpdatifyDlcDetails convertToNew(UpdatifyDlcDetails oldDetails, IlluminateDlcDetails newDetails) {
         return new UpdatifyDlcDetails(oldDetails.getUuid(),
                 newDetails.getName(),
                 newDetails.getDescription(),
@@ -34,6 +35,7 @@ public class UpdatifyDlcDetails extends UpdatifyDetails {
                 newDetails.getLogoFile(),
                 newDetails.getFolderFile(),
                 newDetails.getBackFolderFile(),
+                new Date(),
                 newDetails.isTotalConversion());
     }
 
@@ -43,11 +45,6 @@ public class UpdatifyDlcDetails extends UpdatifyDetails {
 
     public Boolean isTotalConversion() {
         return totalConversion;
-    }
-
-    @JsonIgnore
-    public String getUpdatifiedFilePath() {
-        return getFilePath().concat(cUpdatifiedFileName);
     }
 
     public boolean equals(IlluminateDlcDetails details) {

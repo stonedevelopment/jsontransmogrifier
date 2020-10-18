@@ -1,11 +1,14 @@
 package app.updatify.model;
 
+import app.illuminate.model.details.IlluminateDetails;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import model.details.Details;
+
+import java.util.Date;
 
 import static util.Constants.*;
 
@@ -18,18 +21,20 @@ public class UpdatifyDetails extends Details {
                            @JsonProperty(cFilePath) String filePath,
                            @JsonProperty(cLogoFile) String logoFile,
                            @JsonProperty(cFolderFile) String folderFile,
-                           @JsonProperty(cBackFolderFile) String backFolderFile) {
-        super(uuid, name, description, filePath, logoFile, folderFile, backFolderFile);
+                           @JsonProperty(cBackFolderFile) String backFolderFile,
+                           @JsonProperty(cLastUpdated) Date lastUpdated) {
+        super(uuid, name, description, filePath, logoFile, folderFile, backFolderFile, lastUpdated);
     }
 
-    public static UpdatifyDetails convertToNew(Details oldDetails, Details newDetails) {
+    public static UpdatifyDetails convertToNew(UpdatifyDetails oldDetails, IlluminateDetails newDetails) {
         return new UpdatifyDetails(oldDetails.getUuid(),
                 newDetails.getName(),
                 newDetails.getDescription(),
                 newDetails.getFilePath(),
                 newDetails.getLogoFile(),
                 newDetails.getFolderFile(),
-                newDetails.getBackFolderFile());
+                newDetails.getBackFolderFile(),
+                new Date());
     }
 
     public static UpdatifyDetails fromJson(JsonNode jsonNode) {
