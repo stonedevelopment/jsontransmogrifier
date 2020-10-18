@@ -5,20 +5,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import java.util.Objects;
+import java.util.Date;
 
-import static util.Constants.cEngramId;
-import static util.Constants.cUuid;
+import static util.Constants.*;
 
 public class Composition {
     private final String uuid;
     private final String engramId;
+    private final Date lastUpdated;
 
     @JsonCreator
     public Composition(@JsonProperty(cUuid) String uuid,
-                       @JsonProperty(cEngramId) String engramId) {
+                       @JsonProperty(cEngramId) String engramId,
+                       @JsonProperty(cLastUpdated) Date lastUpdated) {
         this.uuid = uuid;
         this.engramId = engramId;
+        this.lastUpdated = lastUpdated;
     }
 
     public static Composition fromJson(JsonNode node) {
@@ -26,7 +28,7 @@ public class Composition {
     }
 
     public static Composition comparable(String engramId) {
-        return new Composition(null, engramId);
+        return new Composition(null, engramId, new Date());
     }
 
     public String getUuid() {
@@ -37,17 +39,12 @@ public class Composition {
         return engramId;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Composition that = (Composition) o;
-        return engramId.equals(that.engramId);
+    public Date getLastUpdated() {
+        return lastUpdated;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(engramId);
+    public boolean equals(Composition composition) {
+        return engramId.equals(composition.engramId);
     }
 
     @Override
@@ -55,6 +52,7 @@ public class Composition {
         return "Composition{" +
                 "uuid='" + uuid + '\'' +
                 ", engramId='" + engramId + '\'' +
+                ", lastUpdated=" + lastUpdated +
                 '}';
     }
 }

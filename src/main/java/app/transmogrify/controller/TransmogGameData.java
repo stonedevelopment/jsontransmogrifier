@@ -304,6 +304,7 @@ public abstract class TransmogGameData extends GameData {
     protected Composition buildComposition(JsonEngram jsonEngram) {
         String uuid = !cDebug ? generateUUID() : jsonEngram.name;
         String engramId = getEngramUUIDByName(jsonEngram.name);
+        Date lastUpdated = new Date();
 
         for (JsonComposite jsonComposite : jsonEngram.composition) {
             if (isCompositeUnique(uuid, jsonComposite.resource_id, jsonComposite)) {
@@ -312,7 +313,7 @@ public abstract class TransmogGameData extends GameData {
             }
         }
 
-        return new Composition(uuid, engramId);
+        return new Composition(uuid, engramId, lastUpdated);
     }
 
     protected Composite buildComposite(String compositionId, JsonComposite jsonComposite) {
@@ -325,8 +326,9 @@ public abstract class TransmogGameData extends GameData {
         String imageFile = isEngram ? getEngramImageFileByUUID(engramId) : getResourceImageFileByUUID(resourceId);
         assert imageFile != null;
         int quantity = jsonComposite.quantity;
+        Date lastUpdated = new Date();
 
-        return new Composite(uuid, name, imageFile, quantity, sourceId, isEngram, compositionId);
+        return new Composite(uuid, name, imageFile, quantity, sourceId, isEngram, compositionId, lastUpdated);
     }
 
     protected void addFolder(long categoryId, Folder folder) {

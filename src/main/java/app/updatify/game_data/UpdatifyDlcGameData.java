@@ -110,22 +110,26 @@ public class UpdatifyDlcGameData extends UpdatifyGameData {
 
         //  map resource blacklist
         blacklistNode.get(cResources).forEach((nameNode) -> {
-            addBlacklistItem(cResources, UpdatifyBlacklistItem.createFrom(getPrimaryResourceByName(nameNode.asText()).getUuid()));
+            addBlacklistItem(cResources, UpdatifyBlacklistItem.createFrom(
+                    getPrimaryResourceByName(nameNode.asText()).getUuid(), getGameId()));
         });
 
         //  map station blacklist
         blacklistNode.get(cStations).forEach((nameNode) -> {
-            addBlacklistItem(cStations, UpdatifyBlacklistItem.createFrom(getPrimaryStationByName(nameNode.asText()).getUuid()));
+            addBlacklistItem(cStations, UpdatifyBlacklistItem.createFrom(
+                    getPrimaryStationByName(nameNode.asText()).getUuid(), getGameId()));
         });
 
         //  map folder blacklist
         blacklistNode.get(cFolders).forEach((nameNode) -> {
-            addBlacklistItem(cFolders, UpdatifyBlacklistItem.createFrom(getPrimaryFolderByName(nameNode.asText()).getUuid()));
+            addBlacklistItem(cFolders, UpdatifyBlacklistItem.createFrom(
+                    getPrimaryFolderByName(nameNode.asText()).getUuid(), getGameId()));
         });
 
         //  map engram blacklist
         blacklistNode.get(cEngrams).forEach((nameNode) -> {
-            addBlacklistItem(cEngrams, UpdatifyBlacklistItem.createFrom(getPrimaryEngramByName(nameNode.asText()).getUuid()));
+            addBlacklistItem(cEngrams, UpdatifyBlacklistItem.createFrom(
+                    getPrimaryEngramByName(nameNode.asText()).getUuid(), getGameId()));
         });
     }
 
@@ -148,8 +152,8 @@ public class UpdatifyDlcGameData extends UpdatifyGameData {
             //  convert compositions?
             fromCompositeList.forEach((compositeId) -> {
                 Composite fromComposite = getPrimaryComposite(compositeId);
-                Composite toComposite = UpdatifyDlcComposite.convertToNew(fromComposite, toName, toSourceId);
-                addTotalConversionItem(UpdatifyTotalConversionItem.createFrom(fromComposite, toComposite));
+                Composite toComposite = UpdatifyDlcComposite.convertToNew(fromComposite, toName, toSourceId, getGameId());
+                addTotalConversionItem(UpdatifyTotalConversionItem.createFrom(fromComposite, toComposite, getGameId()));
             });
 
         });

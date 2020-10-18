@@ -7,6 +7,8 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import model.Composite;
 
+import java.util.Date;
+
 import static util.Constants.*;
 
 public class IlluminateComposite extends Composite {
@@ -18,8 +20,9 @@ public class IlluminateComposite extends Composite {
                                @JsonProperty(cQuantity) int quantity,
                                @JsonProperty(cSourceId) String sourceId,
                                @JsonProperty(cIsEngram) boolean isEngram,
-                               @JsonProperty(cCompositionId) String compositionId) {
-        super(uuid, name, imageFile, quantity, sourceId, isEngram, compositionId);
+                               @JsonProperty(cCompositionId) String compositionId,
+                               @JsonProperty(cLastUpdated) Date lastUpdated) {
+        super(uuid, name, imageFile, quantity, sourceId, isEngram, compositionId, lastUpdated);
     }
 
     public static IlluminateComposite fromJson(JsonNode node) {

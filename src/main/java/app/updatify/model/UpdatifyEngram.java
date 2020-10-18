@@ -1,6 +1,8 @@
 package app.updatify.model;
 
 import app.illuminate.model.IlluminateEngram;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
@@ -10,12 +12,25 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.UUID;
 
-import static util.Constants.cComposition;
+import static util.Constants.*;
 
 public class UpdatifyEngram extends Engram {
+    private final String gameId;
 
-    public UpdatifyEngram(String uuid, String name, String description, String imageFile, int level, int yield, int points, int xp, int craftingTime, Date lastUpdated) {
+    @JsonCreator
+    public UpdatifyEngram(@JsonProperty(cUuid) String uuid,
+                          @JsonProperty(cName) String name,
+                          @JsonProperty(cDescription) String description,
+                          @JsonProperty(cImageFile) String imageFile,
+                          @JsonProperty(cLevel) int level,
+                          @JsonProperty(cYield) int yield,
+                          @JsonProperty(cPoints) int points,
+                          @JsonProperty(cXp) int xp,
+                          @JsonProperty(cCraftingTime) int craftingTime,
+                          @JsonProperty(cLastUpdated) Date lastUpdated,
+                          @JsonProperty(cGameId) String gameId) {
         super(uuid, name, description, imageFile, level, yield, points, xp, craftingTime, lastUpdated);
+        this.gameId = gameId;
     }
 
     public static IlluminateEngram fromJson(JsonNode jsonNode) {
@@ -35,8 +50,8 @@ public class UpdatifyEngram extends Engram {
         return IlluminateEngram.fromJson(outNode);
     }
 
-    public static Engram createFrom(IlluminateEngram iEngram) {
-        return new Engram(UUID.randomUUID().toString(),
+    public static UpdatifyEngram createFrom(IlluminateEngram iEngram, String gameId) {
+        return new UpdatifyEngram(UUID.randomUUID().toString(),
                 iEngram.getName(),
                 iEngram.getDescription(),
                 iEngram.getImageFile(),
@@ -45,11 +60,12 @@ public class UpdatifyEngram extends Engram {
                 iEngram.getPoints(),
                 iEngram.getXp(),
                 iEngram.getCraftingTime(),
-                new Date());
+                new Date(),
+                gameId);
     }
 
-    public static Engram updateToNew(Engram tEngram, IlluminateEngram iEngram) {
-        return new Engram(tEngram.getUuid(),
+    public static UpdatifyEngram updateToNew(Engram tEngram, IlluminateEngram iEngram, String gameId) {
+        return new UpdatifyEngram(tEngram.getUuid(),
                 iEngram.getName(),
                 iEngram.getDescription(),
                 iEngram.getImageFile(),
@@ -58,6 +74,25 @@ public class UpdatifyEngram extends Engram {
                 iEngram.getPoints(),
                 iEngram.getXp(),
                 iEngram.getCraftingTime(),
-                new Date());
+                new Date(),
+                gameId);
+    }
+
+    public static UpdatifyEngram with(Engram engram, String gameId) {
+        return new UpdatifyEngram(engram.getUuid(),
+                engram.getName(),
+                engram.getDescription(),
+                engram.getImageFile(),
+                engram.getLevel(),
+                engram.getYield(),
+                engram.getPoints(),
+                engram.getXp(),
+                engram.getCraftingTime(),
+                engram.getLastUpdated(),
+                gameId);
+    }
+
+    public String getGameId() {
+        return gameId;
     }
 }

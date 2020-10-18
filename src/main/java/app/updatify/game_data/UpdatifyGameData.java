@@ -37,6 +37,10 @@ public class UpdatifyGameData extends GameData {
         return (UpdatifyDetails) super.getDetails();
     }
 
+    public String getGameId() {
+        return getDetails().getUuid();
+    }
+
     protected JsonNode getTransmogNode() {
         return getInNode();
     }
@@ -113,7 +117,7 @@ public class UpdatifyGameData extends GameData {
     protected void mapResourcesFromJson() {
         //  map raw data
         getTransmogNode(cResources).forEach((tNode) -> {
-            addResource(Resource.fromJson(tNode));
+            addResource(UpdatifyResource.with(Resource.fromJson(tNode), getGameId()));
         });
 
         //  map Illuminated data, updating if different
@@ -123,10 +127,10 @@ public class UpdatifyGameData extends GameData {
 
             if (tResource == null) {
                 setHasUpdate();
-                addResource(UpdatifyResource.createFrom(iResource));
+                addResource(UpdatifyResource.createFrom(iResource, getGameId()));
             } else if (!tResource.equals(iResource)) {
                 setHasUpdate();
-                updateResource(UpdatifyResource.updateToNew(tResource, iResource));
+                updateResource(UpdatifyResource.updateToNew(tResource, iResource, getGameId()));
             }
         }));
     }
@@ -135,7 +139,7 @@ public class UpdatifyGameData extends GameData {
     protected void mapStationsFromJson() {
         //  map raw data
         getTransmogNode(cStations).forEach((tNode) -> {
-            addStation(Station.fromJson(tNode));
+            addStation(UpdatifyStation.with(Station.fromJson(tNode), getGameId()));
         });
 
         //  map Illuminated data, updating if different
@@ -145,10 +149,10 @@ public class UpdatifyGameData extends GameData {
 
             if (tStation == null) {
                 setHasUpdate();
-                addStation(UpdatifyStation.createFrom(iStation));
+                addStation(UpdatifyStation.createFrom(iStation, getGameId()));
             } else if (!tStation.equals(iStation)) {
                 setHasUpdate();
-                updateStation(UpdatifyStation.updateToNew(tStation, iStation));
+                updateStation(UpdatifyStation.updateToNew(tStation, iStation, getGameId()));
             }
         }));
     }
@@ -157,7 +161,7 @@ public class UpdatifyGameData extends GameData {
     protected void mapFoldersFromJson() {
         //  map raw data
         getTransmogNode(cFolders).forEach((tNode) -> {
-            addFolder(Folder.fromJson(tNode));
+            addFolder(UpdatifyFolder.with(Folder.fromJson(tNode), getGameId()));
         });
 
         //  map Illuminated data, updating if different
@@ -167,10 +171,10 @@ public class UpdatifyGameData extends GameData {
 
             if (tFolder == null) {
                 setHasUpdate();
-                addFolder(UpdatifyFolder.createFrom(iFolder));
+                addFolder(UpdatifyFolder.createFrom(iFolder, getGameId()));
             } else if (!tFolder.equals(iFolder)) {
                 setHasUpdate();
-                updateFolder(UpdatifyFolder.updateToNew(tFolder, iFolder));
+                updateFolder(UpdatifyFolder.updateToNew(tFolder, iFolder, getGameId()));
             }
         });
     }
@@ -179,7 +183,7 @@ public class UpdatifyGameData extends GameData {
     protected void mapEngramsFromJson() {
         //  map raw data
         getTransmogNode(cEngrams).forEach((tNode) -> {
-            addEngram(Engram.fromJson(tNode));
+            addEngram(UpdatifyEngram.with(Engram.fromJson(tNode), getGameId()));
         });
 
         //  map Illuminated data, updating if different
@@ -189,10 +193,10 @@ public class UpdatifyGameData extends GameData {
 
             if (tEngram == null) {
                 setHasUpdate();
-                addEngram(UpdatifyEngram.createFrom(iEngram));
+                addEngram(UpdatifyEngram.createFrom(iEngram, getGameId()));
             } else if (!tEngram.equals(iEngram)) {
                 setHasUpdate();
-                updateEngram(UpdatifyEngram.updateToNew(tEngram, iEngram));
+                updateEngram(UpdatifyEngram.updateToNew(tEngram, iEngram, getGameId()));
             }
         });
     }
@@ -200,14 +204,14 @@ public class UpdatifyGameData extends GameData {
     @Override
     protected void mapCompositionFromJson() {
         getTransmogNode(cComposition).forEach((tNode) -> {
-            addComposition(Composition.fromJson(tNode));
+            addComposition(UpdatifyComposition.with(Composition.fromJson(tNode), getGameId()));
         });
     }
 
     protected void mapCompositesFromJson() {
         //  map raw data
         getTransmogNode(cComposites).forEach((tNode) -> {
-            addComposite(Composite.fromJson(tNode));
+            addComposite(UpdatifyComposite.with(Composite.fromJson(tNode), getGameId()));
         });
 
         //  map Illuminated data, updating if different
@@ -220,13 +224,13 @@ public class UpdatifyGameData extends GameData {
 
             if (compositionId == null) {
                 String engramId = getEngramUUIDByName(name);
-                Composition iComposition = UpdatifyComposition.createFrom(IlluminateComposition.with(engramId));
+                Composition iComposition = UpdatifyComposition.createFrom(IlluminateComposition.with(engramId), getGameId());
 
                 compositesNode.forEach((compositeNode) -> {
                     setHasUpdate();
                     IlluminateComposite iComposite = IlluminateComposite.fromJson(compositeNode);
                     String imageFile = getImageFileByName(name);
-                    addComposite(UpdatifyComposite.createFrom(iComposite, imageFile, engramId, iComposition.getUuid()));
+                    addComposite(UpdatifyComposite.createFrom(iComposite, imageFile, engramId, iComposition.getUuid(), getGameId()));
                 });
             } else {
                 compositesNode.forEach((compositeNode) -> {
@@ -236,7 +240,7 @@ public class UpdatifyGameData extends GameData {
                         if (compositionId.equals(tComposite.getCompositionId())) {
                             if (!tComposite.equals(iComposite)) {
                                 setHasUpdate();
-                                updateComposite(UpdatifyComposite.updateToNew(tComposite, iComposite));
+                                updateComposite(UpdatifyComposite.updateToNew(tComposite, iComposite, getGameId()));
                             }
                         }
                     });
@@ -248,7 +252,7 @@ public class UpdatifyGameData extends GameData {
     @Override
     protected void mapDirectoryFromJson() {
         getTransmogNode(cDirectory).forEach((tNode) -> {
-            addUncheckedDirectoryItem(DirectoryItem.fromJson(tNode));
+            addUncheckedDirectoryItem(UpdatifyDirectoryItem.with(DirectoryItem.fromJson(tNode), getGameId()));
         });
 
         getIlluminatedNode(cDirectory).forEach((iNode) -> {
@@ -258,7 +262,7 @@ public class UpdatifyGameData extends GameData {
                 //  we have a new directory or a directory that was moved
                 // TODO: 9/26/2020 check if moved, treat as new for now
                 Station station = getStationByName(name);
-                tDirectoryItem = UpdatifyDirectoryItem.createFromStation(station, null);
+                tDirectoryItem = UpdatifyDirectoryItem.createFromStation(station, getGameId());
                 setHasUpdate();
                 addDirectoryItem(tDirectoryItem);
             } else {
@@ -284,7 +288,7 @@ public class UpdatifyGameData extends GameData {
             DirectoryItem fDirectoryItem = getDirectoryItemByName(name, parentId);
             if (fDirectoryItem == null) {
                 Folder folder = getFolderByName(name);
-                fDirectoryItem = UpdatifyDirectoryItem.createFromFolder(folder, parentId);
+                fDirectoryItem = UpdatifyDirectoryItem.createFromFolder(folder, parentId, getGameId());
                 Log.d("Adding Folder DirectoryItem: " + fDirectoryItem.toString());
                 setHasUpdate();
                 addDirectoryItem(fDirectoryItem);
@@ -301,7 +305,7 @@ public class UpdatifyGameData extends GameData {
             DirectoryItem eDirectoryItem = getDirectoryItemByName(name, parentId);
             if (eDirectoryItem == null) {
                 Engram engram = getEngramByName(name);
-                eDirectoryItem = UpdatifyDirectoryItem.createFromEngram(engram, parentId);
+                eDirectoryItem = UpdatifyDirectoryItem.createFromEngram(engram, parentId, getGameId());
                 Log.d("Adding Engram DirectoryItem: " + eDirectoryItem.toString());
                 setHasUpdate();
                 addDirectoryItem(eDirectoryItem);

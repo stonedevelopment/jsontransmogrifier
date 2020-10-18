@@ -58,6 +58,7 @@ public class UpdatifyApp {
 
     private void createPrimaryUpdatificationNode() {
         ObjectNode primaryNode = mapper.createObjectNode();
+        primaryNode.put(cUuid, primaryController.getUuid());
         primaryNode.put(cName, primaryController.getName());
         primaryNode.put(cFilePath, primaryController.getUpdatifiedFilePath());
         primaryNode.put(cLastUpdated, primaryController.getLastUpdated().getTime());
@@ -104,6 +105,7 @@ public class UpdatifyApp {
 
     private void createDlcUpdatificationNode(UpdatifyDlcController dlcController) {
         ObjectNode dlcNode = mapper.createObjectNode();
+        dlcNode.put(cUuid, dlcController.getUuid());
         dlcNode.put(cName, dlcController.getName());
         dlcNode.put(cFilePath, dlcController.getUpdatifiedFilePath());
         dlcNode.put(cLastUpdated, dlcController.getLastUpdated().getTime());

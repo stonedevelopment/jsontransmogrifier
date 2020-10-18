@@ -1,23 +1,42 @@
 package app.updatify.model;
 
 import app.illuminate.model.IlluminateComposition;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import model.Composition;
 
+import java.util.Date;
 import java.util.UUID;
 
+import static util.Constants.*;
+
 public class UpdatifyComposition extends Composition {
+    private final String gameId;
 
-    public UpdatifyComposition(String uuid, String engramId) {
-        super(uuid, engramId);
+    @JsonCreator
+    public UpdatifyComposition(@JsonProperty(cUuid) String uuid,
+                               @JsonProperty(cEngramId) String engramId,
+                               @JsonProperty(cLastUpdated) Date lastUpdated,
+                               @JsonProperty(cGameId) String gameId) {
+        super(uuid, engramId, lastUpdated);
+        this.gameId = gameId;
     }
 
-    public static Composition createFrom(IlluminateComposition iComposition) {
-        return new Composition(UUID.randomUUID().toString(),
-                iComposition.getEngramId());
+    public static UpdatifyComposition createFrom(IlluminateComposition iComposition, String gameId) {
+        return new UpdatifyComposition(UUID.randomUUID().toString(),
+                iComposition.getEngramId(),
+                iComposition.getLastUpdated(),
+                gameId);
     }
 
-    public static Composition updateToNew(Composition tComposition, IlluminateComposition iComposition) {
-        return new Composition(tComposition.getUuid(),
-                iComposition.getEngramId());
+    public static UpdatifyComposition with(Composition composition, String gameId) {
+        return new UpdatifyComposition(composition.getUuid(),
+                composition.getEngramId(),
+                composition.getLastUpdated(),
+                gameId);
+    }
+
+    public String getGameId() {
+        return gameId;
     }
 }

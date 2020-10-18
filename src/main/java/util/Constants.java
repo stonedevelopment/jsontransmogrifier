@@ -63,7 +63,9 @@ public class Constants {
     public static final String cRootParentId = "";
     public static final String cNullUuid = "";
     public static final String cFrom = "from";
+    public static final String cFromCompositeId = "fromCompositeId";
     public static final String cTo = "to";
+    public static final String cToCompositeId = "toCompositeId";
     public static final String cType = "type";
 
     //  json values

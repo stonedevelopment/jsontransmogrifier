@@ -36,6 +36,10 @@ public class UpdatifyController {
         return gameData.getDetails();
     }
 
+    public String getUuid() {
+        return getDetails().getUuid();
+    }
+
     public String getName() {
         return getDetails().getName();
     }

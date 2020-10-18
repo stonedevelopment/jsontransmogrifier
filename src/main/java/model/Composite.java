@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.util.Date;
 import java.util.Objects;
 
 import static util.Constants.*;
@@ -29,6 +30,7 @@ public class Composite {
     private final String sourceId;
     private final boolean isEngram;
     private final String compositionId;
+    private final Date lastUpdated;
 
     @JsonCreator
     public Composite(@JsonProperty(cUuid) String uuid,
@@ -37,7 +39,8 @@ public class Composite {
                      @JsonProperty(cQuantity) int quantity,
                      @JsonProperty(cSourceId) String sourceId,
                      @JsonProperty(cIsEngram) boolean isEngram,
-                     @JsonProperty(cCompositionId) String compositionId) {
+                     @JsonProperty(cCompositionId) String compositionId,
+                     @JsonProperty(cLastUpdated) Date lastUpdated) {
         this.uuid = uuid;
         this.name = name;
         this.imageFile = imageFile;
@@ -45,6 +48,7 @@ public class Composite {
         this.sourceId = sourceId;
         this.isEngram = isEngram;
         this.compositionId = compositionId;
+        this.lastUpdated = lastUpdated;
     }
 
     public static Composite fromJson(JsonNode node) {
@@ -52,7 +56,7 @@ public class Composite {
     }
 
     public static Composite comparable(String name, String imageFile, int quantity, String sourceId, boolean isEngram, String compositionId) {
-        return new Composite(null, name, imageFile, quantity, sourceId, isEngram, compositionId);
+        return new Composite(null, name, imageFile, quantity, sourceId, isEngram, compositionId, null);
     }
 
     public String getUuid() {
@@ -84,15 +88,14 @@ public class Composite {
         return compositionId;
     }
 
+    public Date getLastUpdated() {
+        return lastUpdated;
+    }
+
     public boolean equals(Composite composite) {
         return quantity == composite.quantity &&
                 isEngram == composite.isEngram &&
                 name.equals(composite.name);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(name, imageFile, quantity, sourceId, isEngram, compositionId);
     }
 
     @Override
@@ -105,6 +108,7 @@ public class Composite {
                 ", sourceId='" + sourceId + '\'' +
                 ", isEngram=" + isEngram +
                 ", compositionId='" + compositionId + '\'' +
+                ", lastUpdated=" + lastUpdated +
                 '}';
     }
 }

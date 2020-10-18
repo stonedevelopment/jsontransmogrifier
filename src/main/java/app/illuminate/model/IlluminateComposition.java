@@ -7,17 +7,18 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import model.Composition;
 
+import java.util.Date;
 import java.util.UUID;
 
-import static util.Constants.cEngramId;
-import static util.Constants.cUuid;
+import static util.Constants.*;
 
 public class IlluminateComposition extends Composition {
 
     @JsonCreator
     public IlluminateComposition(@JsonProperty(cUuid) String uuid,
-                                 @JsonProperty(cEngramId) String engramId) {
-        super(uuid, engramId);
+                                 @JsonProperty(cEngramId) String engramId,
+                                 @JsonProperty(cLastUpdated) Date lastUpdated) {
+        super(uuid, engramId, lastUpdated);
     }
 
     public static IlluminateComposition fromJson(JsonNode node) {
@@ -26,12 +27,18 @@ public class IlluminateComposition extends Composition {
 
     public static IlluminateComposition with(String engramId) {
         return new IlluminateComposition(UUID.randomUUID().toString(),
-                engramId);
+                engramId,
+                new Date());
     }
 
     @JsonIgnore
     @Override
     public String getEngramId() {
         return super.getEngramId();
+    }
+
+    @Override
+    public Date getLastUpdated() {
+        return super.getLastUpdated();
     }
 }
