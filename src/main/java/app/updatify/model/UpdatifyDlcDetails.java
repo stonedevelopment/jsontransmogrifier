@@ -12,6 +12,7 @@ import static util.Constants.*;
 
 public class UpdatifyDlcDetails extends UpdatifyDetails {
     private final Boolean totalConversion;
+    private final String gameId;
 
     @JsonCreator
     public UpdatifyDlcDetails(@JsonProperty(cUuid) String uuid,
@@ -22,12 +23,14 @@ public class UpdatifyDlcDetails extends UpdatifyDetails {
                               @JsonProperty(cFolderFile) String folderFile,
                               @JsonProperty(cBackFolderFile) String backFolderFile,
                               @JsonProperty(cLastUpdated) Date lastUpdated,
-                              @JsonProperty(cTotalConversion) boolean totalConversion) {
+                              @JsonProperty(cTotalConversion) boolean totalConversion,
+                              @JsonProperty(cGameId) String gameId) {
         super(uuid, name, description, filePath, logoFile, folderFile, backFolderFile, lastUpdated);
         this.totalConversion = totalConversion;
+        this.gameId = gameId;
     }
 
-    public static UpdatifyDlcDetails convertToNew(UpdatifyDlcDetails oldDetails, IlluminateDlcDetails newDetails) {
+    public static UpdatifyDlcDetails convertToNew(UpdatifyDlcDetails oldDetails, IlluminateDlcDetails newDetails, String gameId) {
         return new UpdatifyDlcDetails(oldDetails.getUuid(),
                 newDetails.getName(),
                 newDetails.getDescription(),
@@ -36,7 +39,7 @@ public class UpdatifyDlcDetails extends UpdatifyDetails {
                 newDetails.getFolderFile(),
                 newDetails.getBackFolderFile(),
                 new Date(),
-                newDetails.isTotalConversion());
+                newDetails.isTotalConversion(), gameId);
     }
 
     public static UpdatifyDlcDetails fromJson(JsonNode jsonNode) {

@@ -84,7 +84,7 @@ public class UpdatifyDlcGameData extends UpdatifyGameData {
         //  compare
         IlluminateDlcDetails iDetails = IlluminateDlcDetails.fromJson(getIlluminatedNode(cDetails));
         if (!tDetails.equals(iDetails)) {
-            updateDetails(UpdatifyDlcDetails.convertToNew(tDetails, iDetails));
+            updateDetails(UpdatifyDlcDetails.convertToNew(tDetails, iDetails, primaryGameData.getGameId()));
             setHasUpdate();
         }
     }
