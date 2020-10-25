@@ -40,7 +40,7 @@ public class Composition {
     }
 
     public Date getLastUpdated() {
-        return lastUpdated;
+        return lastUpdated == null ? new Date() : lastUpdated;
     }
 
     public boolean equals(Composition composition) {

@@ -63,7 +63,7 @@ public class DirectoryItem {
     }
 
     public String getParentId() {
-        return parentId;
+        return parentId == null ? "" : parentId;
     }
 
     public String getSourceId() {

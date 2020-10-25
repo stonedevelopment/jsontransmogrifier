@@ -89,7 +89,7 @@ public class Composite {
     }
 
     public Date getLastUpdated() {
-        return lastUpdated;
+        return lastUpdated == null ? new Date() : lastUpdated;
     }
 
     public boolean equals(Composite composite) {

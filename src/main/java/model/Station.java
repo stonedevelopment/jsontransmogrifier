@@ -54,7 +54,7 @@ public class Station {
     }
 
     public String getSourceId() {
-        return sourceId;
+        return sourceId == null ? "" : sourceId;
     }
 
     public Date getLastUpdated() {

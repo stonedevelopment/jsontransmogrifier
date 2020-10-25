@@ -270,7 +270,7 @@ public class UpdatifyGameData extends GameData {
 
         getIlluminatedNode(cDirectory).forEach((iNode) -> {
             String name = iNode.get(cName).asText();
-            DirectoryItem tDirectoryItem = getDirectoryItemByName(name, null);
+            DirectoryItem tDirectoryItem = getDirectoryItemByName(name, "");
             if (tDirectoryItem == null) {
                 //  we have a new directory or a directory that was moved
                 // TODO: 9/26/2020 check if moved, treat as new for now
