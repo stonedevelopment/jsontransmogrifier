@@ -44,6 +44,19 @@ public class UpdatifyDlcDetails extends UpdatifyDetails {
                 gameId);
     }
 
+    public static UpdatifyDlcDetails convertFrom(UpdatifyDlcDetails oldDetails, String gameId) {
+        return new UpdatifyDlcDetails(oldDetails.getUuid(),
+                oldDetails.getName(),
+                oldDetails.getDescription(),
+                oldDetails.getFilePath(),
+                oldDetails.getLogoFile(),
+                oldDetails.getFolderFile(),
+                oldDetails.getBackFolderFile(),
+                oldDetails.getLastUpdated(),
+                oldDetails.isTotalConversion(),
+                gameId);
+    }
+
     public static UpdatifyDlcDetails fromJson(JsonNode jsonNode) {
         return new ObjectMapper().convertValue(jsonNode, UpdatifyDlcDetails.class);
     }

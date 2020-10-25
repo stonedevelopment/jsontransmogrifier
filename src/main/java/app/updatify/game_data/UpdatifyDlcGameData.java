@@ -2,9 +2,7 @@ package app.updatify.game_data;
 
 import app.illuminate.model.*;
 import app.illuminate.model.details.IlluminateDlcDetails;
-import app.updatify.model.dlc.UpdatifyBlacklistItem;
 import app.updatify.model.UpdatifyEngram;
-import app.updatify.model.dlc.UpdatifyTotalConversionItem;
 import app.updatify.model.dlc.*;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
@@ -94,7 +92,7 @@ public class UpdatifyDlcGameData extends UpdatifyGameData {
     @Override
     protected void createDetailsObject() {
         UpdatifyDlcDetails tDetails = UpdatifyDlcDetails.fromJson(getTransmogNode().get(cDetails));
-        setDetails(tDetails);
+        setDetails(UpdatifyDlcDetails.convertFrom(tDetails, getPrimaryGameId()));
 
         //  compare
         IlluminateDlcDetails iDetails = IlluminateDlcDetails.fromJson(getIlluminatedNode(cDetails));
