@@ -17,7 +17,7 @@ public class UpdatifyStation extends Station {
     public UpdatifyStation(@JsonProperty(cUuid) String uuid,
                            @JsonProperty(cName) String name,
                            @JsonProperty(cImageFile) String imageFile,
-                           @JsonProperty(cEngramId) String sourceId,
+                           @JsonProperty(cSourceId) String sourceId,
                            @JsonProperty(cLastUpdated) Date lastUpdated,
                            @JsonProperty(cGameId) String gameId) {
         super(uuid, name, imageFile, sourceId, lastUpdated);

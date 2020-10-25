@@ -1288,145 +1288,145 @@
       "uuid": "94e5249f-d8ba-4a6f-b987-a9f795ec380f",
       "name": "Beer Barrel",
       "imageFile": "beer_barrel.webp",
+      "sourceId": "30207f3c-9a99-4c02-9bfc-d49092a3d887",
       "lastUpdated": 1600828557642,
-      "gameId": "783cdb00-dbef-4731-9b42-c2f3539d9a9c",
-      "sourceId": "30207f3c-9a99-4c02-9bfc-d49092a3d887"
+      "gameId": "783cdb00-dbef-4731-9b42-c2f3539d9a9c"
     },
     {
       "uuid": "f1b29ef7-e07d-43a5-ac4e-bc365d6744fc",
       "name": "Campfire",
       "imageFile": "campfire.webp",
+      "sourceId": "963efcfa-8171-4873-b701-5911204ff055",
       "lastUpdated": 1600828557642,
-      "gameId": "783cdb00-dbef-4731-9b42-c2f3539d9a9c",
-      "sourceId": "963efcfa-8171-4873-b701-5911204ff055"
+      "gameId": "783cdb00-dbef-4731-9b42-c2f3539d9a9c"
     },
     {
       "uuid": "a71b5ff3-c6fa-4308-9c1b-108912b9cf31",
       "name": "Catapult Turret",
       "imageFile": "catapult_turret.webp",
+      "sourceId": "8e2613d3-676a-4a4d-8269-f2f03c931371",
       "lastUpdated": 1600828557642,
-      "gameId": "783cdb00-dbef-4731-9b42-c2f3539d9a9c",
-      "sourceId": "8e2613d3-676a-4a4d-8269-f2f03c931371"
+      "gameId": "783cdb00-dbef-4731-9b42-c2f3539d9a9c"
     },
     {
       "uuid": "8fe8149b-f97f-4bb5-8f93-ca753b807eca",
       "name": "Chemistry Bench",
       "imageFile": "chemistry_bench.webp",
+      "sourceId": "3fbf2afc-f60b-46b0-becf-c3b19be19df8",
       "lastUpdated": 1600828557642,
-      "gameId": "783cdb00-dbef-4731-9b42-c2f3539d9a9c",
-      "sourceId": "3fbf2afc-f60b-46b0-becf-c3b19be19df8"
+      "gameId": "783cdb00-dbef-4731-9b42-c2f3539d9a9c"
     },
     {
       "uuid": "ddca8e7d-157e-4a25-8203-37949ac6202d",
       "name": "Compost Bin",
       "imageFile": "compost_bin.webp",
+      "sourceId": "b4760637-0c3b-4ca8-985a-daa78bea7bfe",
       "lastUpdated": 1600828557642,
-      "gameId": "783cdb00-dbef-4731-9b42-c2f3539d9a9c",
-      "sourceId": "b4760637-0c3b-4ca8-985a-daa78bea7bfe"
+      "gameId": "783cdb00-dbef-4731-9b42-c2f3539d9a9c"
     },
     {
       "uuid": "a9b06840-e92b-4ccc-b94a-e1e52b724aef",
       "name": "Cooking Pot",
       "imageFile": "cooking_pot.webp",
+      "sourceId": "199d5adf-e8ae-4a5b-9db4-e5e89d8d7ac1",
       "lastUpdated": 1600828557642,
-      "gameId": "783cdb00-dbef-4731-9b42-c2f3539d9a9c",
-      "sourceId": "199d5adf-e8ae-4a5b-9db4-e5e89d8d7ac1"
+      "gameId": "783cdb00-dbef-4731-9b42-c2f3539d9a9c"
     },
     {
       "uuid": "35a6519a-9c79-4390-86e2-e18d33ec02e7",
       "name": "Fabricator",
       "imageFile": "fabricator.webp",
+      "sourceId": "d49bccbb-4a30-4be2-841f-fb575c037478",
       "lastUpdated": 1600828557642,
-      "gameId": "783cdb00-dbef-4731-9b42-c2f3539d9a9c",
-      "sourceId": "d49bccbb-4a30-4be2-841f-fb575c037478"
+      "gameId": "783cdb00-dbef-4731-9b42-c2f3539d9a9c"
     },
     {
       "uuid": "edd8b378-57b2-4837-b606-e6376fc9522b",
       "name": "Industrial Cooker",
       "imageFile": "industrial_cooker.webp",
+      "sourceId": "513493fd-1100-4d4e-bf00-646ea356c73f",
       "lastUpdated": 1600828557642,
-      "gameId": "783cdb00-dbef-4731-9b42-c2f3539d9a9c",
-      "sourceId": "513493fd-1100-4d4e-bf00-646ea356c73f"
+      "gameId": "783cdb00-dbef-4731-9b42-c2f3539d9a9c"
     },
     {
       "uuid": "39da6373-1a09-4492-bb51-221b72bdb2f2",
       "name": "Industrial Forge",
       "imageFile": "industrial_forge.webp",
+      "sourceId": "3ad2b19f-5f84-4470-a45a-01b6c714319b",
       "lastUpdated": 1600828557642,
-      "gameId": "783cdb00-dbef-4731-9b42-c2f3539d9a9c",
-      "sourceId": "3ad2b19f-5f84-4470-a45a-01b6c714319b"
+      "gameId": "783cdb00-dbef-4731-9b42-c2f3539d9a9c"
     },
     {
       "uuid": "33db6908-02b7-447e-8d69-7c709fe1c60d",
       "name": "Industrial Grill",
       "imageFile": "industrial_grill.webp",
+      "sourceId": "cb83b27e-9f1e-4be0-aa5c-44b71d4365e3",
       "lastUpdated": 1600828557642,
-      "gameId": "783cdb00-dbef-4731-9b42-c2f3539d9a9c",
-      "sourceId": "cb83b27e-9f1e-4be0-aa5c-44b71d4365e3"
+      "gameId": "783cdb00-dbef-4731-9b42-c2f3539d9a9c"
     },
     {
       "uuid": "7e6cfbbb-f20e-4385-98c9-579aad9b644a",
       "name": "Mortar and Pestle",
       "imageFile": "mortar_and_pestle.webp",
+      "sourceId": "fbb3a52f-c8c1-4535-bcb3-7c298f29b843",
       "lastUpdated": 1600828557642,
-      "gameId": "783cdb00-dbef-4731-9b42-c2f3539d9a9c",
-      "sourceId": "fbb3a52f-c8c1-4535-bcb3-7c298f29b843"
+      "gameId": "783cdb00-dbef-4731-9b42-c2f3539d9a9c"
     },
     {
       "uuid": "af3d6ca1-2bf1-4a49-b3db-4b9a35ef5a8f",
       "name": "Obelisk",
       "imageFile": "obelisk.webp",
+      "sourceId": null,
       "lastUpdated": 1600828557644,
-      "gameId": "783cdb00-dbef-4731-9b42-c2f3539d9a9c",
-      "sourceId": null
+      "gameId": "783cdb00-dbef-4731-9b42-c2f3539d9a9c"
     },
     {
       "uuid": "9af3dfdb-f103-4cef-aaee-ff254d8cf7a0",
       "name": "Preserving Bin",
       "imageFile": "preserving_bin.webp",
+      "sourceId": "f93077f4-9c57-44d1-aabc-f837ea19971c",
       "lastUpdated": 1600828557642,
-      "gameId": "783cdb00-dbef-4731-9b42-c2f3539d9a9c",
-      "sourceId": "f93077f4-9c57-44d1-aabc-f837ea19971c"
+      "gameId": "783cdb00-dbef-4731-9b42-c2f3539d9a9c"
     },
     {
       "uuid": "70191779-2efb-47b2-8c9e-09ea75a5b46a",
       "name": "Refining Forge",
       "imageFile": "refining_forge.webp",
+      "sourceId": "649caf24-55e6-4899-84cc-4471c274135a",
       "lastUpdated": 1600828557642,
-      "gameId": "783cdb00-dbef-4731-9b42-c2f3539d9a9c",
-      "sourceId": "649caf24-55e6-4899-84cc-4471c274135a"
+      "gameId": "783cdb00-dbef-4731-9b42-c2f3539d9a9c"
     },
     {
       "uuid": "12088ccd-6912-46b9-b61a-96e0ae2f94f2",
       "name": "Self",
       "imageFile": "self.webp",
+      "sourceId": null,
       "lastUpdated": 1600828557641,
-      "gameId": "783cdb00-dbef-4731-9b42-c2f3539d9a9c",
-      "sourceId": null
+      "gameId": "783cdb00-dbef-4731-9b42-c2f3539d9a9c"
     },
     {
       "uuid": "fde6ff0e-289d-4960-b917-1fb2d06edbfb",
       "name": "Smithy",
       "imageFile": "smithy.webp",
+      "sourceId": "dec03097-5401-4a5a-9b00-efd2497165f6",
       "lastUpdated": 1600828557642,
-      "gameId": "783cdb00-dbef-4731-9b42-c2f3539d9a9c",
-      "sourceId": "dec03097-5401-4a5a-9b00-efd2497165f6"
+      "gameId": "783cdb00-dbef-4731-9b42-c2f3539d9a9c"
     },
     {
       "uuid": "e65e8e27-7d9f-47eb-b7e4-a4285be99351",
       "name": "Tek Replicator",
       "imageFile": "tek_replicator.webp",
+      "sourceId": "b171035e-14d4-42e1-858a-fab093207731",
       "lastUpdated": 1600828557644,
-      "gameId": "783cdb00-dbef-4731-9b42-c2f3539d9a9c",
-      "sourceId": "b171035e-14d4-42e1-858a-fab093207731"
+      "gameId": "783cdb00-dbef-4731-9b42-c2f3539d9a9c"
     },
     {
       "uuid": "49d205af-d61b-40bc-bd82-9ec48fcdb5a5",
       "name": "Tek Terminal",
       "imageFile": "obelisk.webp",
+      "sourceId": null,
       "lastUpdated": 1600828557644,
-      "gameId": "783cdb00-dbef-4731-9b42-c2f3539d9a9c",
-      "sourceId": null
+      "gameId": "783cdb00-dbef-4731-9b42-c2f3539d9a9c"
     }
   ],
   "folders": [

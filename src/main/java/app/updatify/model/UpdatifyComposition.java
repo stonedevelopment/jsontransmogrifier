@@ -38,7 +38,7 @@ public class UpdatifyComposition extends Composition {
                 gameId);
     }
 
-    public String getDlcId() {
+    public String getGameId() {
         return gameId;
     }
 }

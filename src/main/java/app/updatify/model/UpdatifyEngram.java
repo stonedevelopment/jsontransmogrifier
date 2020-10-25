@@ -96,7 +96,7 @@ public class UpdatifyEngram extends Engram {
                 gameId);
     }
 
-    public String getDlcId() {
+    public String getGameId() {
         return gameId;
     }
 }

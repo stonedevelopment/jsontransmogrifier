@@ -1,4 +1,4 @@
-package app.updatify.model;
+package app.updatify.model.dlc;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;

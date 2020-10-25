@@ -20,7 +20,7 @@ public class Station {
     public Station(@JsonProperty(cUuid) String uuid,
                    @JsonProperty(cName) String name,
                    @JsonProperty(cImageFile) String imageFile,
-                   @JsonProperty(cEngramId) String sourceId,
+                   @JsonProperty(cSourceId) String sourceId,
                    @JsonProperty(cLastUpdated) Date lastUpdated) {
         this.uuid = uuid;
         this.name = name;
@@ -72,7 +72,7 @@ public class Station {
                 "uuid='" + uuid + '\'' +
                 ", name='" + name + '\'' +
                 ", imageFile='" + imageFile + '\'' +
-                ", engramId='" + sourceId + '\'' +
+                ", sourceId='" + sourceId + '\'' +
                 ", lastUpdated=" + lastUpdated +
                 '}';
     }

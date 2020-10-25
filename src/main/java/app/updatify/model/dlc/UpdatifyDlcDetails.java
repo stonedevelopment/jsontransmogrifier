@@ -58,7 +58,6 @@ public class UpdatifyDlcDetails extends UpdatifyDetails {
 
     public boolean equals(IlluminateDlcDetails details) {
         return super.equals(details) &&
-                isTotalConversion() == details.isTotalConversion() &&
-                getGameId().equals(details.getGameId());
+                isTotalConversion() == details.isTotalConversion();
     }
 }

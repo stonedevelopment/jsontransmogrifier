@@ -70,7 +70,7 @@ public class UpdatifyComposite extends Composite {
                 gameId);
     }
 
-    public String getDlcId() {
+    public String getGameId() {
         return gameId;
     }
 }

@@ -51,7 +51,7 @@ public class UpdatifyResource extends Resource {
                 gameId);
     }
 
-    public String getDlcId() {
+    public String getGameId() {
         return gameId;
     }
 }
