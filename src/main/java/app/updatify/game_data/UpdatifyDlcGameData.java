@@ -276,25 +276,25 @@ public class UpdatifyDlcGameData extends UpdatifyGameData {
         //  map resource blacklist
         blacklistNode.get(cResources).forEach((nameNode) -> {
             addBlacklistItem(cResources, UpdatifyBlacklistItem.createFrom(
-                    getPrimaryResourceByName(nameNode.asText()).getUuid(), getGameId()));
+                    getPrimaryResourceByName(nameNode.asText()).getUuid(), getPrimaryGameId(), getGameId()));
         });
 
         //  map station blacklist
         blacklistNode.get(cStations).forEach((nameNode) -> {
             addBlacklistItem(cStations, UpdatifyBlacklistItem.createFrom(
-                    getPrimaryStationByName(nameNode.asText()).getUuid(), getGameId()));
+                    getPrimaryStationByName(nameNode.asText()).getUuid(), getPrimaryGameId(), getGameId()));
         });
 
         //  map folder blacklist
         blacklistNode.get(cFolders).forEach((nameNode) -> {
             addBlacklistItem(cFolders, UpdatifyBlacklistItem.createFrom(
-                    getPrimaryFolderByName(nameNode.asText()).getUuid(), getGameId()));
+                    getPrimaryFolderByName(nameNode.asText()).getUuid(), getPrimaryGameId(), getGameId()));
         });
 
         //  map engram blacklist
         blacklistNode.get(cEngrams).forEach((nameNode) -> {
             addBlacklistItem(cEngrams, UpdatifyBlacklistItem.createFrom(
-                    getPrimaryEngramByName(nameNode.asText()).getUuid(), getGameId()));
+                    getPrimaryEngramByName(nameNode.asText()).getUuid(), getPrimaryGameId(), getGameId()));
         });
     }
 
