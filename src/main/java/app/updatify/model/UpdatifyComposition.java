@@ -22,21 +22,23 @@ public class UpdatifyComposition extends Composition {
         this.gameId = gameId;
     }
 
-    public static UpdatifyComposition createFrom(IlluminateComposition iComposition, String gameId) {
+    public static UpdatifyComposition createFrom(IlluminateComposition iComposition,
+                                                 String gameId) {
         return new UpdatifyComposition(UUID.randomUUID().toString(),
                 iComposition.getEngramId(),
                 iComposition.getLastUpdated(),
                 gameId);
     }
 
-    public static UpdatifyComposition with(Composition composition, String gameId) {
+    public static UpdatifyComposition with(Composition composition,
+                                           String gameId) {
         return new UpdatifyComposition(composition.getUuid(),
                 composition.getEngramId(),
                 composition.getLastUpdated(),
                 gameId);
     }
 
-    public String getGameId() {
+    public String getDlcId() {
         return gameId;
     }
 }

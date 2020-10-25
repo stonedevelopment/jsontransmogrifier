@@ -50,7 +50,8 @@ public class UpdatifyEngram extends Engram {
         return IlluminateEngram.fromJson(outNode);
     }
 
-    public static UpdatifyEngram createFrom(IlluminateEngram iEngram, String gameId) {
+    public static UpdatifyEngram createFrom(IlluminateEngram iEngram,
+                                            String gameId) {
         return new UpdatifyEngram(UUID.randomUUID().toString(),
                 iEngram.getName(),
                 iEngram.getDescription(),
@@ -64,7 +65,9 @@ public class UpdatifyEngram extends Engram {
                 gameId);
     }
 
-    public static UpdatifyEngram updateToNew(Engram tEngram, IlluminateEngram iEngram, String gameId) {
+    public static UpdatifyEngram updateToNew(Engram tEngram,
+                                             IlluminateEngram iEngram,
+                                             String gameId) {
         return new UpdatifyEngram(tEngram.getUuid(),
                 iEngram.getName(),
                 iEngram.getDescription(),
@@ -78,7 +81,8 @@ public class UpdatifyEngram extends Engram {
                 gameId);
     }
 
-    public static UpdatifyEngram with(Engram engram, String gameId) {
+    public static UpdatifyEngram with(Engram engram,
+                                      String gameId) {
         return new UpdatifyEngram(engram.getUuid(),
                 engram.getName(),
                 engram.getDescription(),
@@ -92,7 +96,7 @@ public class UpdatifyEngram extends Engram {
                 gameId);
     }
 
-    public String getGameId() {
+    public String getDlcId() {
         return gameId;
     }
 }

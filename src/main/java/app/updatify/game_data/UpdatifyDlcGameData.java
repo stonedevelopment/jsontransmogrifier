@@ -1,14 +1,12 @@
 package app.updatify.game_data;
 
+import app.illuminate.model.IlluminateEngram;
 import app.illuminate.model.IlluminateFolder;
 import app.illuminate.model.IlluminateResource;
 import app.illuminate.model.IlluminateStation;
 import app.illuminate.model.details.IlluminateDlcDetails;
 import app.updatify.model.*;
-import app.updatify.model.dlc.UpdatifyDlcDetails;
-import app.updatify.model.dlc.UpdatifyDlcFolder;
-import app.updatify.model.dlc.UpdatifyDlcResource;
-import app.updatify.model.dlc.UpdatifyDlcStation;
+import app.updatify.model.dlc.*;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import model.*;
@@ -169,6 +167,35 @@ public class UpdatifyDlcGameData extends UpdatifyGameData {
                 setHasUpdate();
                 updateFolder(UpdatifyDlcFolder.updateToNew(tFolder, iFolder, getPrimaryGameId(), getGameId()));
             }
+        });
+    }
+
+    @Override
+    protected void mapEngramsFromJson() {
+        //  map raw data
+        getTransmogNode(cEngrams).forEach((tNode) -> {
+            addEngram(UpdatifyEngram.with(Engram.fromJson(tNode), getGameId()));
+        });
+
+        //  map Illuminated data, updating if different
+        getIlluminatedNode(cEngrams).forEach((iNode) -> {
+            IlluminateEngram iEngram = UpdatifyEngram.fromJson(iNode);
+            Engram tEngram = getEngramByName(iEngram.getName());
+
+            if (tEngram == null) {
+                setHasUpdate();
+                addEngram(UpdatifyDlcEngram.createFrom(iEngram, getPrimaryGameId(), getGameId()));
+            } else if (!tEngram.equals(iEngram)) {
+                setHasUpdate();
+                updateEngram(UpdatifyDlcEngram.updateToNew(tEngram, iEngram, getPrimaryGameId(), getGameId()));
+            }
+        });
+    }
+
+    @Override
+    protected void mapCompositionFromJson() {
+        getTransmogNode(cComposition).forEach((tNode) -> {
+            addComposition(UpdatifyDlcComposition.with(Composition.fromJson(tNode), getPrimaryGameId(), getGameId()));
         });
     }
 
