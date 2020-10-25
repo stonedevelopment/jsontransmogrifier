@@ -1,13 +1,12 @@
 package app.updatify.game_data;
 
 import app.illuminate.model.IlluminateResource;
+import app.illuminate.model.IlluminateStation;
 import app.illuminate.model.details.IlluminateDlcDetails;
-import app.updatify.model.UpdatifyBlacklistItem;
-import app.updatify.model.UpdatifyDlcComposite;
-import app.updatify.model.UpdatifyResource;
-import app.updatify.model.UpdatifyTotalConversionItem;
+import app.updatify.model.*;
 import app.updatify.model.dlc.UpdatifyDlcDetails;
 import app.updatify.model.dlc.UpdatifyDlcResource;
+import app.updatify.model.dlc.UpdatifyDlcStation;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import model.*;
@@ -123,6 +122,28 @@ public class UpdatifyDlcGameData extends UpdatifyGameData {
             } else if (!tResource.equals(iResource)) {
                 setHasUpdate();
                 updateResource(UpdatifyDlcResource.updateToNew(tResource, iResource, getPrimaryGameId(), getGameId()));
+            }
+        }));
+    }
+
+    @Override
+    protected void mapStationsFromJson() {
+        //  map raw data
+        getTransmogNode(cStations).forEach((tNode) -> {
+            addStation(UpdatifyStation.with(Station.fromJson(tNode), getGameId()));
+        });
+
+        //  map Illuminated data, updating if different
+        getIlluminatedNode(cStations).forEach((iNode -> {
+            IlluminateStation iStation = IlluminateStation.fromJson(iNode);
+            Station tStation = getStationByName(iStation.getName());
+
+            if (tStation == null) {
+                setHasUpdate();
+                addStation(UpdatifyDlcStation.createFrom(iStation, getPrimaryGameId(), getGameId()));
+            } else if (!tStation.equals(iStation)) {
+                setHasUpdate();
+                updateStation(UpdatifyDlcStation.updateToNew(tStation, iStation, getPrimaryGameId(), getGameId()));
             }
         }));
     }
