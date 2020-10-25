@@ -27,7 +27,11 @@ public class UpdatifyComposite extends Composite {
         this.gameId = gameId;
     }
 
-    public static UpdatifyComposite createFrom(IlluminateComposite iComposite, String imageFile, String sourceId, String compositionId, String gameId) {
+    public static UpdatifyComposite createFrom(IlluminateComposite iComposite,
+                                               String imageFile,
+                                               String sourceId,
+                                               String compositionId,
+                                               String gameId) {
         return new UpdatifyComposite(UUID.randomUUID().toString(),
                 iComposite.getName(),
                 imageFile,
@@ -39,7 +43,9 @@ public class UpdatifyComposite extends Composite {
                 gameId);
     }
 
-    public static UpdatifyComposite updateToNew(Composite tComposite, IlluminateComposite iComposite, String gameId) {
+    public static UpdatifyComposite updateToNew(Composite tComposite,
+                                                IlluminateComposite iComposite,
+                                                String gameId) {
         return new UpdatifyComposite(tComposite.getUuid(),
                 iComposite.getName(),
                 tComposite.getImageFile(),
@@ -51,7 +57,8 @@ public class UpdatifyComposite extends Composite {
                 gameId);
     }
 
-    public static UpdatifyComposite with(Composite composite, String gameId) {
+    public static UpdatifyComposite with(Composite composite,
+                                         String gameId) {
         return new UpdatifyComposite(composite.getUuid(),
                 composite.getName(),
                 composite.getImageFile(),
@@ -63,7 +70,7 @@ public class UpdatifyComposite extends Composite {
                 gameId);
     }
 
-    public String getGameId() {
+    public String getDlcId() {
         return gameId;
     }
 }

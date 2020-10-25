@@ -1,15 +1,15 @@
 package app.updatify.game_data;
 
-import app.illuminate.model.IlluminateEngram;
-import app.illuminate.model.IlluminateFolder;
-import app.illuminate.model.IlluminateResource;
-import app.illuminate.model.IlluminateStation;
+import app.illuminate.model.*;
 import app.illuminate.model.details.IlluminateDlcDetails;
-import app.updatify.model.*;
+import app.updatify.model.UpdatifyBlacklistItem;
+import app.updatify.model.UpdatifyEngram;
+import app.updatify.model.UpdatifyTotalConversionItem;
 import app.updatify.model.dlc.*;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import model.*;
+import util.Log;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -78,6 +78,15 @@ public class UpdatifyDlcGameData extends UpdatifyGameData {
         return uuid;
     }
 
+    @Override
+    public String getCompositionUUIDByName(String name) {
+        String uuid = super.getCompositionUUIDByName(name);
+        if (uuid == null) {
+            return primaryGameData.getCompositionUUIDByName(name);
+        }
+        return uuid;
+    }
+
     private boolean isTotalConversion() {
         return getDetails().isTotalConversion();
     }
@@ -108,7 +117,7 @@ public class UpdatifyDlcGameData extends UpdatifyGameData {
     protected void mapResourcesFromJson() {
         //  map raw data
         getTransmogNode(cResources).forEach((tNode) -> {
-            addResource(UpdatifyResource.with(Resource.fromJson(tNode), getGameId()));
+            addResource(UpdatifyDlcResource.with(Resource.fromJson(tNode), getPrimaryGameId(), getGameId()));
         });
 
         //  map Illuminated data, updating if different
@@ -130,7 +139,7 @@ public class UpdatifyDlcGameData extends UpdatifyGameData {
     protected void mapStationsFromJson() {
         //  map raw data
         getTransmogNode(cStations).forEach((tNode) -> {
-            addStation(UpdatifyStation.with(Station.fromJson(tNode), getGameId()));
+            addStation(UpdatifyDlcStation.with(Station.fromJson(tNode), getPrimaryGameId(), getGameId()));
         });
 
         //  map Illuminated data, updating if different
@@ -152,7 +161,7 @@ public class UpdatifyDlcGameData extends UpdatifyGameData {
     protected void mapFoldersFromJson() {
         //  map raw data
         getTransmogNode(cFolders).forEach((tNode) -> {
-            addFolder(UpdatifyFolder.with(Folder.fromJson(tNode), getGameId()));
+            addFolder(UpdatifyDlcFolder.with(Folder.fromJson(tNode), getPrimaryGameId(), getGameId()));
         });
 
         //  map Illuminated data, updating if different
@@ -174,7 +183,7 @@ public class UpdatifyDlcGameData extends UpdatifyGameData {
     protected void mapEngramsFromJson() {
         //  map raw data
         getTransmogNode(cEngrams).forEach((tNode) -> {
-            addEngram(UpdatifyEngram.with(Engram.fromJson(tNode), getGameId()));
+            addEngram(UpdatifyDlcEngram.with(Engram.fromJson(tNode), getPrimaryGameId(), getGameId()));
         });
 
         //  map Illuminated data, updating if different
@@ -194,8 +203,63 @@ public class UpdatifyDlcGameData extends UpdatifyGameData {
 
     @Override
     protected void mapCompositionFromJson() {
+        //  map raw data
         getTransmogNode(cComposition).forEach((tNode) -> {
             addComposition(UpdatifyDlcComposition.with(Composition.fromJson(tNode), getPrimaryGameId(), getGameId()));
+        });
+
+        //  illuminated data will map during the map composites method
+    }
+
+    protected void mapCompositesFromJson() {
+        //  map raw data
+        getTransmogNode(cComposites).forEach((tNode) -> {
+            addComposite(UpdatifyDlcComposite.with(Composite.fromJson(tNode), getPrimaryGameId(), getGameId()));
+        });
+
+        //  map Illuminated data, updating if different
+        getIlluminatedNode(cEngrams).forEach((iNode) -> {
+            String name = iNode.get(cName).asText();
+            String compositionId = getCompositionUUIDByName(name);
+
+            JsonNode compositionNode = iNode.get(cComposition);
+            JsonNode compositesNode = compositionNode.get(cComposites);
+
+            if (compositionId == null) {
+                Log.d("Composition not found: " + name);
+                //  flag for update
+                setHasUpdate();
+
+                //  create new composition
+                String engramId = getEngramUUIDByName(name);
+                UpdatifyDlcComposition composition = UpdatifyDlcComposition.createFrom(IlluminateComposition.with(engramId),
+                        getPrimaryGameId(), getGameId());
+                //  add composition to map
+                addComposition(composition);
+
+                //  iterate through composites node
+                compositesNode.forEach((compositeNode) -> {
+                    IlluminateComposite iComposite = IlluminateComposite.fromJson(compositeNode);
+                    String imageFile = getImageFileByName(name);
+                    addComposite(UpdatifyDlcComposite.createFrom(iComposite, imageFile, engramId, composition.getUuid(),
+                            getPrimaryGameId(), getGameId()));
+                });
+            } else {
+                //  iterate through composites node
+                compositesNode.forEach((compositeNode) -> {
+                    IlluminateComposite iComposite = IlluminateComposite.fromJson(compositeNode);
+                    getCompositeUUIDListByName(iComposite.getName()).forEach((compositeId) -> {
+                        Composite tComposite = getComposite(compositeId);
+                        if (compositionId.equals(tComposite.getCompositionId())) {
+                            if (!tComposite.equals(iComposite)) {
+                                setHasUpdate();
+                                updateComposite(UpdatifyDlcComposite.updateToNew(tComposite, iComposite,
+                                        getPrimaryGameId(), getGameId()));
+                            }
+                        }
+                    });
+                });
+            }
         });
     }
 
@@ -253,8 +317,8 @@ public class UpdatifyDlcGameData extends UpdatifyGameData {
             //  convert compositions?
             fromCompositeList.forEach((compositeId) -> {
                 Composite fromComposite = getPrimaryComposite(compositeId);
-                Composite toComposite = UpdatifyDlcComposite.convertToNew(fromComposite, toName, toSourceId, getGameId());
-                addTotalConversionItem(UpdatifyTotalConversionItem.createFrom(fromComposite, toComposite, getGameId()));
+                Composite toComposite = UpdatifyDlcComposite.convertToNew(fromComposite, toName, toSourceId, getPrimaryGameId(), getGameId());
+                addTotalConversionItem(UpdatifyTotalConversionItem.createFrom(fromComposite, toComposite, getPrimaryGameId(), getGameId()));
             });
 
         });

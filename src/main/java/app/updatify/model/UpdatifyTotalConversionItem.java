@@ -13,23 +13,30 @@ public class UpdatifyTotalConversionItem {
     private final String fromCompositeId;
     private final String toCompositeId;
     private final String gameId;
+    private final String dlcId;
 
     @JsonCreator
     public UpdatifyTotalConversionItem(@JsonProperty(cUuid) String uuid,
                                        @JsonProperty(cFromCompositeId) String fromCompositeId,
                                        @JsonProperty(cToCompositeId) String toCompositeId,
-                                       @JsonProperty(cGameId) String gameId) {
+                                       @JsonProperty(cGameId) String gameId,
+                                       @JsonProperty(cDlcId) String dlcId) {
         this.uuid = uuid;
         this.fromCompositeId = fromCompositeId;
         this.toCompositeId = toCompositeId;
         this.gameId = gameId;
+        this.dlcId = dlcId;
     }
 
-    public static UpdatifyTotalConversionItem createFrom(Composite fromComposite, Composite toComposite, String gameId) {
+    public static UpdatifyTotalConversionItem createFrom(Composite fromComposite,
+                                                         Composite toComposite,
+                                                         String gameId,
+                                                         String dlcId) {
         return new UpdatifyTotalConversionItem(UUID.randomUUID().toString(),
                 fromComposite.getUuid(),
                 toComposite.getUuid(),
-                gameId);
+                gameId,
+                dlcId);
     }
 
     public String getUuid() {
@@ -46,5 +53,9 @@ public class UpdatifyTotalConversionItem {
 
     public String getGameId() {
         return gameId;
+    }
+
+    public String getDlcId() {
+        return dlcId;
     }
 }

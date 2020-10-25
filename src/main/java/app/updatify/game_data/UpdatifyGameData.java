@@ -203,9 +203,12 @@ public class UpdatifyGameData extends GameData {
 
     @Override
     protected void mapCompositionFromJson() {
+        //  map raw data
         getTransmogNode(cComposition).forEach((tNode) -> {
             addComposition(UpdatifyComposition.with(Composition.fromJson(tNode), getGameId()));
         });
+
+        //  illuminated data will map during the map composites method
     }
 
     protected void mapCompositesFromJson() {
@@ -223,16 +226,26 @@ public class UpdatifyGameData extends GameData {
             JsonNode compositesNode = compositionNode.get(cComposites);
 
             if (compositionId == null) {
-                String engramId = getEngramUUIDByName(name);
-                Composition iComposition = UpdatifyComposition.createFrom(IlluminateComposition.with(engramId), getGameId());
+                Log.d("Composition not found: " + name);
+                //  flag for update
+                setHasUpdate();
 
+                //  create new composition
+                String engramId = getEngramUUIDByName(name);
+                Composition composition = UpdatifyComposition.createFrom(IlluminateComposition.with(engramId),
+                        getGameId());
+                //  add new composition to map
+                addComposition(composition);
+
+                //  iterate through composites node
                 compositesNode.forEach((compositeNode) -> {
-                    setHasUpdate();
                     IlluminateComposite iComposite = IlluminateComposite.fromJson(compositeNode);
                     String imageFile = getImageFileByName(name);
-                    addComposite(UpdatifyComposite.createFrom(iComposite, imageFile, engramId, iComposition.getUuid(), getGameId()));
+                    addComposite(UpdatifyComposite.createFrom(iComposite, imageFile, engramId, composition.getUuid(),
+                            getGameId()));
                 });
             } else {
+                //  iterate through composites node
                 compositesNode.forEach((compositeNode) -> {
                     IlluminateComposite iComposite = IlluminateComposite.fromJson(compositeNode);
                     getCompositeUUIDListByName(iComposite.getName()).forEach((compositeId) -> {
