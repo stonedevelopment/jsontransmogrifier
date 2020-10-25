@@ -3,8 +3,6 @@ package app.transmogrify;
 import app.transmogrify.model.game_data.PrimaryTransmogGameData;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import util.JSONUtil;
 
 import java.io.IOException;
@@ -17,12 +15,10 @@ public class TestTransmogrifyApp {
     private static JsonNode inNode;
     private static PrimaryTransmogGameData primaryGameData;
 
-    @BeforeAll
     static void init() throws IOException {
         inNode = JSONUtil.parseIn(cArkAssetsFilePath, cArkDataEditableFileName);
     }
 
-    @BeforeEach
     static void initEach() {
 
     }
