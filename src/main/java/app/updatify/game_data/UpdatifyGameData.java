@@ -337,23 +337,23 @@ public class UpdatifyGameData extends GameData {
         uncheckedDirectoryItems.remove(uuid);
     }
 
-    private void updateResource(Resource resource) {
+    protected void updateResource(Resource resource) {
         addResourceToMap(resource.getUuid(), resource);
     }
 
-    private void updateStation(Station station) {
+    protected void updateStation(Station station) {
         addStationToMap(station.getUuid(), station);
     }
 
-    private void updateFolder(Folder folder) {
+    protected void updateFolder(Folder folder) {
         addFolderToMap(folder.getUuid(), folder);
     }
 
-    private void updateEngram(Engram engram) {
+    protected void updateEngram(Engram engram) {
         addEngramToMap(engram.getUuid(), engram);
     }
 
-    private void updateComposite(Composite composite) {
+    protected void updateComposite(Composite composite) {
         addCompositeToMap(composite.getUuid(), composite);
     }
 

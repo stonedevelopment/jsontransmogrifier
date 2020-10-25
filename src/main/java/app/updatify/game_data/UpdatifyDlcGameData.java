@@ -1,10 +1,13 @@
 package app.updatify.game_data;
 
+import app.illuminate.model.IlluminateResource;
 import app.illuminate.model.details.IlluminateDlcDetails;
 import app.updatify.model.UpdatifyBlacklistItem;
 import app.updatify.model.UpdatifyDlcComposite;
-import app.updatify.model.UpdatifyDlcDetails;
+import app.updatify.model.UpdatifyResource;
 import app.updatify.model.UpdatifyTotalConversionItem;
+import app.updatify.model.dlc.UpdatifyDlcDetails;
+import app.updatify.model.dlc.UpdatifyDlcResource;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import model.*;
@@ -38,6 +41,10 @@ public class UpdatifyDlcGameData extends UpdatifyGameData {
     public List<UpdatifyBlacklistItem> getBlacklistItemList(String type) {
         List<UpdatifyBlacklistItem> blacklistItemList = getBlacklistMap().get(type);
         return blacklistItemList == null ? new ArrayList<>() : blacklistItemList;
+    }
+
+    public String getPrimaryGameId() {
+        return primaryGameData.getGameId();
     }
 
     private Resource getPrimaryResourceByName(String name) {
@@ -96,6 +103,28 @@ public class UpdatifyDlcGameData extends UpdatifyGameData {
         if (isTotalConversion()) {
             mapTotalConversion();
         }
+    }
+
+    @Override
+    protected void mapResourcesFromJson() {
+        //  map raw data
+        getTransmogNode(cResources).forEach((tNode) -> {
+            addResource(UpdatifyResource.with(Resource.fromJson(tNode), getGameId()));
+        });
+
+        //  map Illuminated data, updating if different
+        getIlluminatedNode(cResources).forEach((iNode -> {
+            IlluminateResource iResource = IlluminateResource.fromJson(iNode);
+            Resource tResource = getResourceByName(iResource.getName());
+
+            if (tResource == null) {
+                setHasUpdate();
+                addResource(UpdatifyDlcResource.createFrom(iResource, getPrimaryGameId(), getGameId()));
+            } else if (!tResource.equals(iResource)) {
+                setHasUpdate();
+                updateResource(UpdatifyDlcResource.updateToNew(tResource, iResource, getPrimaryGameId(), getGameId()));
+            }
+        }));
     }
 
     /**

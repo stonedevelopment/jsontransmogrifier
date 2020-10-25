@@ -1,6 +1,7 @@
-package app.updatify.model;
+package app.updatify.model.dlc;
 
 import app.illuminate.model.details.IlluminateDlcDetails;
+import app.updatify.model.UpdatifyDetails;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -39,7 +40,8 @@ public class UpdatifyDlcDetails extends UpdatifyDetails {
                 newDetails.getFolderFile(),
                 newDetails.getBackFolderFile(),
                 new Date(),
-                newDetails.isTotalConversion(), gameId);
+                newDetails.isTotalConversion(),
+                gameId);
     }
 
     public static UpdatifyDlcDetails fromJson(JsonNode jsonNode) {
@@ -50,8 +52,13 @@ public class UpdatifyDlcDetails extends UpdatifyDetails {
         return totalConversion;
     }
 
+    public String getGameId() {
+        return gameId;
+    }
+
     public boolean equals(IlluminateDlcDetails details) {
         return super.equals(details) &&
-                isTotalConversion() == details.isTotalConversion();
+                isTotalConversion() == details.isTotalConversion() &&
+                getGameId().equals(details.getGameId());
     }
 }

@@ -13,7 +13,6 @@ import java.util.Date;
 import static util.Constants.*;
 
 public class UpdatifyDetails extends Details {
-
     @JsonCreator
     public UpdatifyDetails(@JsonProperty(cUuid) String uuid,
                            @JsonProperty(cName) String name,

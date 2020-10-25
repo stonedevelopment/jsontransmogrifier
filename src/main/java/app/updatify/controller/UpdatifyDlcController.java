@@ -1,7 +1,7 @@
 package app.updatify.controller;
 
 import app.updatify.game_data.UpdatifyDlcGameData;
-import app.updatify.model.UpdatifyDlcDetails;
+import app.updatify.model.dlc.UpdatifyDlcDetails;
 import com.fasterxml.jackson.databind.JsonNode;
 
 public class UpdatifyDlcController extends UpdatifyController {
