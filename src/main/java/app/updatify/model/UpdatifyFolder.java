@@ -20,16 +20,26 @@ public class UpdatifyFolder extends Folder {
         this.gameId = gameId;
     }
 
-    public static UpdatifyFolder createFrom(IlluminateFolder iFolder, String gameId) {
-        return new UpdatifyFolder(UUID.randomUUID().toString(), iFolder.getName(), gameId);
+    public static UpdatifyFolder createFrom(IlluminateFolder iFolder,
+                                            String gameId) {
+        return new UpdatifyFolder(UUID.randomUUID().toString(),
+                iFolder.getName(),
+                gameId);
     }
 
-    public static UpdatifyFolder updateToNew(Folder tFolder, IlluminateFolder iFolder, String gameId) {
-        return new UpdatifyFolder(tFolder.getUuid(), iFolder.getName(), gameId);
+    public static UpdatifyFolder updateToNew(Folder tFolder,
+                                             IlluminateFolder iFolder,
+                                             String gameId) {
+        return new UpdatifyFolder(tFolder.getUuid(),
+                iFolder.getName(),
+                gameId);
     }
 
-    public static UpdatifyFolder with(Folder folder, String gameId) {
-        return new UpdatifyFolder(folder.getUuid(), folder.getName(), gameId);
+    public static UpdatifyFolder with(Folder folder,
+                                      String gameId) {
+        return new UpdatifyFolder(folder.getUuid(),
+                folder.getName(),
+                gameId);
     }
 
     public String getGameId() {

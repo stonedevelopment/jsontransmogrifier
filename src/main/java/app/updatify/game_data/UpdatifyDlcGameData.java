@@ -1,10 +1,12 @@
 package app.updatify.game_data;
 
+import app.illuminate.model.IlluminateFolder;
 import app.illuminate.model.IlluminateResource;
 import app.illuminate.model.IlluminateStation;
 import app.illuminate.model.details.IlluminateDlcDetails;
 import app.updatify.model.*;
 import app.updatify.model.dlc.UpdatifyDlcDetails;
+import app.updatify.model.dlc.UpdatifyDlcFolder;
 import app.updatify.model.dlc.UpdatifyDlcResource;
 import app.updatify.model.dlc.UpdatifyDlcStation;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -146,6 +148,28 @@ public class UpdatifyDlcGameData extends UpdatifyGameData {
                 updateStation(UpdatifyDlcStation.updateToNew(tStation, iStation, getPrimaryGameId(), getGameId()));
             }
         }));
+    }
+
+    @Override
+    protected void mapFoldersFromJson() {
+        //  map raw data
+        getTransmogNode(cFolders).forEach((tNode) -> {
+            addFolder(UpdatifyFolder.with(Folder.fromJson(tNode), getGameId()));
+        });
+
+        //  map Illuminated data, updating if different
+        getIlluminatedNode(cFolders).forEach((iNode) -> {
+            IlluminateFolder iFolder = IlluminateFolder.fromJson(iNode);
+            Folder tFolder = getFolderByName(iFolder.getName());
+
+            if (tFolder == null) {
+                setHasUpdate();
+                addFolder(UpdatifyDlcFolder.createFrom(iFolder, getPrimaryGameId(), getGameId()));
+            } else if (!tFolder.equals(iFolder)) {
+                setHasUpdate();
+                updateFolder(UpdatifyDlcFolder.updateToNew(tFolder, iFolder, getPrimaryGameId(), getGameId()));
+            }
+        });
     }
 
     /**
